@@ -25,6 +25,10 @@ DEBUG = logging.debug
 
 TEMPLATE_DATA = {}
 
+ANNOTATIONS = (
+    'rdf_type', 'rdfs_type', 'dct_creator', 'rdfs_label', 'rdfs_comment',
+    'dct_created', 'dct_description', 'rdfs_subclassof', 'rdfs_isDefinedBy')
+
 G = DataGraph()
 
 with open('./jinja2_resources/links_label.json', 'r') as fd:
@@ -75,16 +79,53 @@ def make_diagram(item):
     label = fragment_this(item.iri)
     dia.new_graph(label)
     dia.node_add_main(label)
+    DEBUG(item)
     for child in get_subclasses(item):
         dia.node_add_child(str(child))
-    if hasattr(item, 'rdfs_subClassOf'):
-        if type(item.rdfs_subClassOf) is list:
-            for parent in item.rdfs_subClassOf:
-                dia.node_add_ancestor(fragment_this(parent.iri))
-        else:
-            dia.node_add_ancestor(fragment_this(item.rdfs_subClassOf.iri))
-    data = dia.render_graph_svg()
-    return data
+    for k, v in item.metadata.items():
+        if k in ANNOTATIONS:
+            continue
+        if type(v) is list:
+            for vx in v:
+                DEBUG(f'property {k} {type(k)} {vx} {type(vx)}')
+                if type(vx) is not str:
+                    vx = prefix_this(vx)
+                dia.property_add_domain(k, vx)
+
+    if not hasattr(item, 'rdfs_subClassOf'):
+        return dia.render_graph_svg()
+
+    # add immediate parents
+    if type(item.rdfs_subClassOf) is list:
+        parents = item.rdfs_subClassOf
+    else:
+        parents = [item.rdfs_subClassOf]
+    DEBUG(f'link to parent {parents}')
+    for parent in parents:
+        dia.node_add_ancestor(fragment_this(parent.iri))
+        # get top-most ancestors from parents
+        if not hasattr(parent, 'rdfs_subClassOf'):
+            continue
+        ancestors = set()
+        ancestors.add(parent)
+        ancestors_top = set()
+        while(ancestors):
+            ancestor = ancestors.pop()
+            if hasattr(ancestor, 'rdfs_subClassOf'):
+                # ancestor has ancestors
+                if type(ancestor.rdfs_subClassOf) is list:
+                    ancestors.update(ancestor.rdfs_subClassOf)
+                else:
+                    ancestors.add(ancestor.rdfs_subClassOf)
+            else:
+                # no more ancestors, we're at the top
+                if ancestor not in ancestors_top:
+                    DEBUG(f'parent {parent} ;; ancestor {ancestor}')
+                    dia.node_add_ancestor(
+                        fragment_this(parent.iri), 
+                        fragment_this(ancestor.iri))
+                    ancestors_top.add(ancestor)
+    return dia.render_graph_svg()
 
 
 def saved_label(item):
