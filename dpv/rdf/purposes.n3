@@ -588,6 +588,23 @@ dpv:UserInterfacePersonalisation a rdfs:Class ;
     rdfs:subClassOf dpv:ServicePersonalization ;
     sw:term_status "accepted"@en .
 
+dpv:hasBeneficiary a rdf:Property ;
+    rdfs:label "has beneficiary"@en ;
+    dct:created ""^^xsd:date ;
+    dct:description "Cui bono? Who is the ultimate beneficiary of this purpose, here a stakeholder can be declared, e.g. the DataSubjects themselves or the Data Controller. ( --- under consideration --- )"@en ;
+    rdfs:comment "If we want ot be able to say something about the beneficiary of a purpose, we probably also need to say something about how the beneficiary benefits? - whether it is good for the controller or data subject"@en ;
+    rdfs:domain dpv:Benefit ;
+    rdfs:range dpv:Beneficiary ;
+    sw:term_status "proposed"@en .
+
+dpv:hasBenefit a rdf:Property ;
+    rdfs:label "has benefit"@en ;
+    dct:created "2021-01-06"^^xsd:date ;
+    dct:description "Indicates a concept has the specified benefit."@en ;
+    rdfs:domain dpv:Purpose ;
+    rdfs:range dpv:Benefit ;
+    sw:term_status "proposed"@en .
+
 dpv:hasContext a rdf:Property ;
     rdfs:label "has context"@en ;
     dct:created "2019-04-05"^^xsd:date ;

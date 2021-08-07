@@ -1,7 +1,8 @@
 {
-    "domains": {
-        "Context": "hasContext"
-    }, "ranges": {
-        
+    "nontransient": {
+        "domains": {
+            "PersonalDataHandling": ["hasDataController", "hasDataSubject", "hasPersonalDataCategory", "hasLegalBasis", "hasProcessing", "hasPurpose", "hasRecipient", "hasRisk", "hasTechnicalOrganisationalMeasure"]
+        }, "ranges": {
+        }
     }
 }

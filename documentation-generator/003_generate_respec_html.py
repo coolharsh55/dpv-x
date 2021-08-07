@@ -27,13 +27,16 @@ TEMPLATE_DATA = {}
 
 ANNOTATIONS = (
     'rdf_type', 'rdfs_type', 'dct_creator', 'rdfs_label', 'rdfs_comment',
-    'dct_created', 'dct_description', 'rdfs_subclassof', 'rdfs_isDefinedBy')
+    'dct_created', 'dct_description', 'rdfs_subClassOf', 'rdfs_isDefinedBy',
+    'rdfs_seeAlso')
 
 G = DataGraph()
 
 with open('./jinja2_resources/links_label.json', 'r') as fd:
     import json
     LINKS_LABELS = json.load(fd)
+with open('property_assertions.json', 'r') as fd:
+    PROPERTY_ASSERTIONS = json.load(fd)
 
 
 def load_data(label, filepath):
@@ -77,10 +80,23 @@ def get_properties(item):
     properties = G.properties(item)
     if properties is not None:
         domains, ranges = properties[0], properties[1]
-    # WIP: load JSON file with property assertions as hints
-    # to be displayed in diagrams
-    # with open('property_assertions.json', 'r') as fd:
-    #     json.load
+    return domains, ranges
+
+
+def get_suggested_properties(label):
+    domains = PROPERTY_ASSERTIONS['nontransient']['domains'].get(label, [])
+    domains_obj = []
+    for domain in domains:
+        entity = G.get_entity(f'dpv_{domain}')
+        if entity is not None:
+            domains_obj.append(entity)
+    ranges = PROPERTY_ASSERTIONS['nontransient']['ranges'].get(label, [])
+    ranges_obj = []
+    for range in ranges:
+        entity = G.get_entity(f'dpv_{range}')
+        if entity is not None:
+            ranges_obj.append(entity)
+    return domains_obj, ranges_obj
 
 
 def make_diagram(item):
@@ -89,33 +105,52 @@ def make_diagram(item):
     label = fragment_this(item.iri)
     dia.new_graph(label)
     dia.node_add_main(label)
-    # DEBUG(item)
+    DEBUG(item)
     for child in get_subclasses(item):
         dia.node_add_child(str(child))
-    for k, v in item.metadata.items():
-        if k in ANNOTATIONS:
-            continue
-        if type(v) is list:
-            for vx in v:
-                if type(vx) is not str:
-                    vx = prefix_this(vx)
-                dia.property_add_domain(k, vx)
+    # FIXME: add properties if directly specified on the object
+    # for k, v in item.metadata.items():
+    #     if k in ANNOTATIONS:
+    #         continue
+    #     DEBUG(f'k:{k} ;; v:{v}')
+    #     if type(v) is list:
+    #         for vx in v:
+    #             if type(vx) is not str:
+    #                 vx = prefix_this(vx)
+    #             dia.property_add_domain(k, vx)
 
     properties = get_properties(item)
     if properties is not None:
         domains, ranges = properties[0], properties[1]
         for domain in domains:
+            if str(domain) in ANNOTATIONS:
+                continue
             if 'rdfs_range' not in domain.metadata:
-                range = 'rdfs:Resource'
+                range = 'rdfs_Resource'
             else:
                 range = fragment_this(domain.rdfs_range.iri)
             dia.property_add_domain(prefix_this(domain.iri), range)
         for range in ranges:
+            if str(range) in ANNOTATIONS:
+                continue
             if 'rdfs_domain' not in range.metadata:
-                domain = 'rdfs:Resource'
+                domain = 'rdfs_Resource'
             else:
                 domain = fragment_this(range.rdfs_domain.iri)
             dia.property_add_range(prefix_this(range.iri), domain)
+    domains, ranges = get_suggested_properties(label)
+    for domain in domains:
+            if 'rdfs_range' not in domain.metadata:
+                range = 'rdfs_Resource'
+            else:
+                range = fragment_this(domain.rdfs_range.iri)
+            dia.property_suggestion(prefix_this(domain.iri), range)
+    for range in ranges:
+            if 'rdfs_domain' not in range.metadata:
+                domain = 'rdfs_Resource'
+            else:
+                domain = fragment_this(range.rdfs_domain.iri)
+            dia.property_suggestion(prefix_this(range.iri), domain)
 
     if not hasattr(item, 'rdfs_subClassOf'):
         return dia.render_graph_svg()
@@ -125,8 +160,8 @@ def make_diagram(item):
         parents = item.rdfs_subClassOf
     else:
         parents = [item.rdfs_subClassOf]
-    # DEBUG(f'link to parent {parents}')
     for parent in parents:
+        # parent_label = '_'.join(str(parent).split(' '))
         dia.node_add_ancestor(fragment_this(parent.iri))
         # get top-most ancestors from parents
         if not hasattr(parent, 'rdfs_subClassOf'):

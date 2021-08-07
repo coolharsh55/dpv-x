@@ -817,8 +817,8 @@ dpv:DataProcessor a rdfs:Class ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "A ‘processor’ means a natural or legal person, public authority, agency or other body which processes personal data on behalf of the controller."@en ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_8/oj> ;
-    rdfs:subClassOf dpv:Recipient ;
-    sw:term_status "accepted"@en .
+    rdfs:subClassOf dpv:LegalEntity ;
+    sw:term_status "proposed"@en .
 
 dpv:DataProtectionAuthority a rdfs:Class ;
     rdfs:label "Data Protection Authority"@en ;
@@ -3265,8 +3265,8 @@ dpv:ThirdParty a rdfs:Class ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "A ‘third party’ means a natural or legal person, public authority, agency or body other than the data subject, controller, processor and people who, under the direct authority of the controller or processor, are authorised to process personal data."@en ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_10/oj> ;
-    rdfs:subClassOf dpv:Recipient ;
-    sw:term_status "accepted"@en .
+    rdfs:subClassOf dpv:LegalEntity ;
+    sw:term_status "proposed"@en .
 
 dpv:Thought a rdfs:Class ;
     rdfs:label "Thought"@en ;
@@ -3468,6 +3468,23 @@ dpv:hasAlgorithmicLogic a rdf:Property ;
     dct:description "Indicates the logic used in processing such as for automated decision making"@en ;
     sw:term_status "accepted"@en .
 
+dpv:hasBeneficiary a rdf:Property ;
+    rdfs:label "has beneficiary"@en ;
+    dct:created ""^^xsd:date ;
+    dct:description "Cui bono? Who is the ultimate beneficiary of this purpose, here a stakeholder can be declared, e.g. the DataSubjects themselves or the Data Controller. ( --- under consideration --- )"@en ;
+    rdfs:comment "If we want ot be able to say something about the beneficiary of a purpose, we probably also need to say something about how the beneficiary benefits? - whether it is good for the controller or data subject"@en ;
+    rdfs:domain dpv:Benefit ;
+    rdfs:range dpv:Beneficiary ;
+    sw:term_status "proposed"@en .
+
+dpv:hasBenefit a rdf:Property ;
+    rdfs:label "has benefit"@en ;
+    dct:created "2021-01-06"^^xsd:date ;
+    dct:description "Indicates a concept has the specified benefit."@en ;
+    rdfs:domain dpv:Purpose ;
+    rdfs:range dpv:Benefit ;
+    sw:term_status "proposed"@en .
+
 dpv:hasConsentNotice a rdf:Property ;
     rdfs:label "has consent notice"@en ;
     dct:created "2019-04-05"^^xsd:date ;
@@ -3515,7 +3532,8 @@ dpv:hasDataController a rdf:Property ;
         "Mark Lizar"^^xsd:string ;
     dct:description "Indicates association with a Data Controller."@en ;
     dct:modified "2020-11-04"^^xsd:date ;
-    sw:term_status "accepted"@en .
+    rdfs:range dpv:DataController ;
+    sw:term_status "proposed"@en .
 
 dpv:hasDataSource a rdf:Property ;
     rdfs:label "has data source"@en ;
@@ -3536,7 +3554,8 @@ dpv:hasDataSubject a rdf:Property ;
         "Mark Lizar"^^xsd:string ;
     dct:description "Indicates association with a specific Data Subject or a group or category of Data Subjects."@en ;
     dct:modified "2020-11-04"^^xsd:date ;
-    sw:term_status "accepted"@en .
+    rdfs:range dpv:DataSubject ;
+    sw:term_status "proposed"@en .
 
 dpv:hasDuration a rdf:Property ;
     rdfs:label "has duration"@en ;
@@ -3607,7 +3626,8 @@ dpv:hasLegalBasis a rdf:Property ;
         "Javier Fernández"^^xsd:string ;
     dct:description "Indicates applicability of a Legal Basis."@en ;
     dct:modified "2020-11-04"^^xsd:date ;
-    sw:term_status "accepted"@en .
+    rdfs:range dpv:LegalBasis ;
+    sw:term_status "proposed"@en .
 
 dpv:hasLocation a rdf:Property ;
     rdfs:label "has location"@en ;
@@ -3641,7 +3661,8 @@ dpv:hasPersonalDataCategory a rdf:Property ;
     dct:description "Indicates association with a Personal Data Category."@en ;
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
-    sw:term_status "accepted"@en .
+    rdfs:range dpv:PersonalDataCategory ;
+    sw:term_status "proposed"@en .
 
 dpv:hasProcessing a rdf:Property ;
     rdfs:label "has processing"@en ;
@@ -3654,7 +3675,8 @@ dpv:hasProcessing a rdf:Property ;
     dct:description "Indicates association with a Processing (of personal data) instance or category."@en ;
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
-    sw:term_status "accepted"@en .
+    rdfs:range dpv:Processing ;
+    sw:term_status "proposed"@en .
 
 dpv:hasProvisionBy a rdf:Property ;
     rdfs:label "has provision by"@en ;
@@ -3708,7 +3730,8 @@ dpv:hasPurpose a rdf:Property ;
     dct:description "Indicates association with a Purpose (of processing personal data)."@en ;
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
-    sw:term_status "accepted"@en .
+    rdfs:range dpv:Purpose ;
+    sw:term_status "proposed"@en .
 
 dpv:hasRecipient a rdf:Property ;
     rdfs:label "has recipient"@en ;
@@ -3721,7 +3744,8 @@ dpv:hasRecipient a rdf:Property ;
     dct:description "Indicates a recipient of personal data."@en ;
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
-    sw:term_status "accepted"@en .
+    rdfs:range dpv:Recipient ;
+    sw:term_status "proposed"@en .
 
 dpv:hasRepresentative a rdf:Property ;
     rdfs:label "has representative"@en ;
@@ -3738,14 +3762,16 @@ dpv:hasRight a rdf:Property ;
     dct:created "2020-11-18"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Indicates applicability of a Right."@en ;
-    sw:term_status "accepted"@en .
+    rdfs:range dpv:Right ;
+    sw:term_status "proposed"@en .
 
 dpv:hasRisk a rdf:Property ;
     rdfs:label "has risk"@en ;
     dct:created "2020-11-18"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Indicates applicability of a Risk."@en ;
-    sw:term_status "accepted"@en .
+    rdfs:range dpv:Risk ;
+    sw:term_status "proposed"@en .
 
 dpv:hasSector a rdf:Property ;
     rdfs:label "has sector"@en ;
@@ -3776,7 +3802,8 @@ dpv:hasTechnicalOrganisationalMeasure a rdf:Property ;
         "Mark Lizar"^^xsd:string ;
     dct:description "Indicates use of a Technical or Organisational measure."@en ;
     dct:modified "2020-11-04"^^xsd:date ;
-    sw:term_status "accepted"@en .
+    rdfs:range dpv:TechnicalOrganisationalMeasure ;
+    sw:term_status "proposed"@en .
 
 dpv:hasWithdrawalBy a rdf:Property ;
     rdfs:label "has withdrawal by"@en ;

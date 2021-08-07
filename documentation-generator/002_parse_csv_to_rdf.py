@@ -116,7 +116,6 @@ def extract_terms_from_csv(filepath, Class):
     # it relies on the internal data structure of a namedtuple
     attributes = Class.__dict__
     attributes = len(attributes['_fields'])
-    DE
     with open(filepath) as fd:
         csvreader = csv.reader(fd)
         next(csvreader)
@@ -240,7 +239,7 @@ def add_triples_for_properties(properties, graph):
 
     for prop in properties:
         # only record accepted classes
-        if prop.sw_termstatus != "accepted":
+        if prop.sw_termstatus not in ("accepted", "proposed"):
             continue
         # rdf:type
         graph.add((BASE[f'{prop.term}'], RDF.type, RDF.Property))
