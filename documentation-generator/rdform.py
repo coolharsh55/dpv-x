@@ -306,6 +306,54 @@ class DataGraph(object):
             return_list.append(entity)
         return return_list
 
+    def properties(self, classname):
+        """returns properties for given term"""
+
+        if type(classname) is RDFS_Resource:
+            # if classname is a RDFS_Resource object, just get its iri
+            classname = classname.iri
+        elif type(classname) is str:
+            # otherwise check if it is a string
+            # if yes, then check if it already exists in list of objects
+            # if not, it could be prefixed key:value syntax
+            # try to derive iri from prefix
+            # if all fails, return None
+            if classname not in self.objects:
+                if '_' not in classname:
+                    # prefix_label syntax
+                    # DEBUG('classname is not prefixed')
+                    return None
+                # classname is prefixed
+                classname = self._get_iri_from_prefix(classname)
+                if classname is None:
+                    # DEBUG('iri could not be generated from prefix')
+                    return None
+        else:
+            # DEBUG('classname is neither rdfs object nor string')
+            return None
+        if classname not in self.objects:
+            # DEBUG('classname could not be found in objects')
+            return None
+
+        # at this point, classname is definitely in self.objects
+        domains = set()
+        ranges = set()
+        class_obj = self.objects[classname]
+        if class_obj is None:
+            # DEBUG('classname could not be found in objects')
+            return None
+        # go over each object, check if it has a rdf_type whose value
+        # matches the object ; if yes, collect it
+        # DEBUG(f'class: {class_obj}')
+        for obj in self.objects.values():
+            # DEBUG(f'term: {obj} keys: {obj.metadata.keys()}')
+            if 'rdfs_domain' in obj.metadata and obj.rdfs_domain is class_obj:
+                domains.add(obj)
+            if 'rdfs_range' in obj.metadata and obj.rdfs_range is class_obj:
+                ranges.add(obj)
+
+        return (domains, ranges)
+
     def subclasses(self, classname):
         """returns subclasses of given term"""
 

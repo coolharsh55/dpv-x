@@ -73,13 +73,23 @@ def get_subclasses(item):
     return G.subclasses(item)
 
 
+def get_properties(item):
+    properties = G.properties(item)
+    if properties is not None:
+        domains, ranges = properties[0], properties[1]
+    # WIP: load JSON file with property assertions as hints
+    # to be displayed in diagrams
+    # with open('property_assertions.json', 'r') as fd:
+    #     json.load
+
+
 def make_diagram(item):
     """create a diagrammatic representation of concept overview
     for embedding in HTML as SVG image"""
     label = fragment_this(item.iri)
     dia.new_graph(label)
     dia.node_add_main(label)
-    DEBUG(item)
+    # DEBUG(item)
     for child in get_subclasses(item):
         dia.node_add_child(str(child))
     for k, v in item.metadata.items():
@@ -87,10 +97,25 @@ def make_diagram(item):
             continue
         if type(v) is list:
             for vx in v:
-                DEBUG(f'property {k} {type(k)} {vx} {type(vx)}')
                 if type(vx) is not str:
                     vx = prefix_this(vx)
                 dia.property_add_domain(k, vx)
+
+    properties = get_properties(item)
+    if properties is not None:
+        domains, ranges = properties[0], properties[1]
+        for domain in domains:
+            if 'rdfs_range' not in domain.metadata:
+                range = 'rdfs:Resource'
+            else:
+                range = fragment_this(domain.rdfs_range.iri)
+            dia.property_add_domain(prefix_this(domain.iri), range)
+        for range in ranges:
+            if 'rdfs_domain' not in range.metadata:
+                domain = 'rdfs:Resource'
+            else:
+                domain = fragment_this(range.rdfs_domain.iri)
+            dia.property_add_range(prefix_this(range.iri), domain)
 
     if not hasattr(item, 'rdfs_subClassOf'):
         return dia.render_graph_svg()
@@ -100,7 +125,7 @@ def make_diagram(item):
         parents = item.rdfs_subClassOf
     else:
         parents = [item.rdfs_subClassOf]
-    DEBUG(f'link to parent {parents}')
+    # DEBUG(f'link to parent {parents}')
     for parent in parents:
         dia.node_add_ancestor(fragment_this(parent.iri))
         # get top-most ancestors from parents
@@ -120,7 +145,7 @@ def make_diagram(item):
             else:
                 # no more ancestors, we're at the top
                 if ancestor not in ancestors_top:
-                    DEBUG(f'parent {parent} ;; ancestor {ancestor}')
+                    # DEBUG(f'parent {parent} ;; ancestor {ancestor}')
                     dia.node_add_ancestor(
                         fragment_this(parent.iri), 
                         fragment_this(ancestor.iri))

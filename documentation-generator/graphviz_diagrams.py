@@ -33,7 +33,7 @@ def export_graph(filepath='graph'):
 
 def render_graph_svg():
     """Render the graph in SVG"""
-    print(graph.source)
+    # print(graph.source)
     return graph.pipe(format='svg').decode('utf-8')
 
 

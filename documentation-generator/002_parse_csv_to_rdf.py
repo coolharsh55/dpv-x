@@ -116,7 +116,7 @@ def extract_terms_from_csv(filepath, Class):
     # it relies on the internal data structure of a namedtuple
     attributes = Class.__dict__
     attributes = len(attributes['_fields'])
-    DEBUG(f'extracting terms from {filepath}')
+    DE
     with open(filepath) as fd:
         csvreader = csv.reader(fd)
         next(csvreader)
