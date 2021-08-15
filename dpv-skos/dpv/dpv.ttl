@@ -1,0 +1,3937 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dpv: <http://www.w3.org/ns/dpv#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix spl: <http://www.specialprivacy.eu/langs/usage-policy#> .
+@prefix svd: <http://www.specialprivacy.eu/vocabs/data#> .
+@prefix svpr: <http://www.specialprivacy.eu/vocabs/processing#> .
+@prefix svpu: <http://www.specialprivacy.eu/vocabs/purposes#> .
+@prefix sw: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dpv:AutomatedDecisionMaking a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string,
+        "Piero Bonatti"^^xsd:string ;
+    dct:description "Processing that involves automated decision making"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "Automated Decision Making"@en .
+
+dpv:Consent a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:description "Consent of the data subject regarding processing of their personal data"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_11/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "Consent"@en .
+
+dpv:DataSource a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "The source or origin of data"@en ;
+    rdfs:comment "Source is direct point of data collection; 'origin' would indicate the original/others points of where the data originates from"@en ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "Data Source"@en .
+
+dpv:EvaluationScoring a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string,
+        "Piero Bonatti"^^xsd:string ;
+    dct:description "Processing that involves evaluation and scoring of individuals"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "Evaluation and Scoring"@en .
+
+dpv:InnovativeUseOfNewTechnologies a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string,
+        "Piero Bonatti"^^xsd:string ;
+    dct:description "Processing that involves use of innovative and new technologies"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "Innovative Use of New Technologies"@en .
+
+dpv:LargeScaleProcessing a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string,
+        "Piero Bonatti"^^xsd:string ;
+    dct:description "Processing that takes place at large scales"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "Large Scale Processing"@en .
+
+dpv:LegalBasis a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:description "The Legal basis used to justify processing of personal data"@en ;
+    dct:modified "2020-11-04"^^xsd:date ;
+    rdfs:comment "Legal basis (plural: legal bases) are defined by legislations and regulations, whose applicability is usually restricted to specific jurisdictions."@en ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "Legal Basis"@en .
+
+dpv:MatchingCombining a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string,
+        "Piero Bonatti"^^xsd:string ;
+    dct:description "Processing that involves matching and combining of personal data"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "Matching and Combining"@en .
+
+dpv:PersonalDataHandling a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Javier Fernández"^^xsd:string ;
+    dct:description "A high-level Class to describe 'data handling'. This can consist of personal data being processed for a purpose, involving entities, using technical and organisational measures, applicable risks, rights, and legal basis."@en ;
+    dct:modified "2020-11-04"^^xsd:date ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "Personal Data Handling"@en .
+
+dpv:Risk a skos:Concept ;
+    dct:created "2020-11-18"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "A risk or possibility or uncertainty of negative effects, impacts, or consequences."@en ;
+    rdfs:comment "Risks can be associated with one or more different concepts such as purpose, processing, personal data, technical or organisational measure."@en ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "Risk"@en .
+
+dpv:SystematicMonitoring a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string,
+        "Piero Bonatti"^^xsd:string ;
+    dct:description "Processing that involves systematic monitoring of individuals"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "Systematic Monitoring"@en .
+
+dpv:hasAddress a rdf:Property ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J.Pandit"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "Specifies address of a legal entity such as street address or pin code"@en ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "has address"@en .
+
+dpv:hasAlgorithmicLogic a rdf:Property ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Georg P. Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "Indicates the logic used in processing such as for automated decision making"@en ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "has algorithmic logic"@en .
+
+dpv:hasConsentNotice a rdf:Property ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Bud Bruegger"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string ;
+    dct:description "Specifies the notice provided in context of consent"@en ;
+    rdfs:comment "The actual notice that the Data Subject received to consent to, either a text or link to a document, which should be usable to decide whether the form or consent was compliant to legislation, e.g. documenting how the user has been informed about rights and implications (such as, right to data portability,right to recitffy, right to erasure, right to restrict processing, right to object, rights regarding automated decision making or profiling, processors, third parties, sub-processors, outside-EEA transfers, automated decision-making, or other necessary details of the privacy-policy). Can be TextOrDocumentOrURI."@en ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "has consent notice"@en .
+
+dpv:hasConsequences a rdf:Property ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Georg P. Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "Indicates consequences of processing such as those for Data Subjects in relation to automated decision making"@en ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "has consequences"@en .
+
+dpv:hasContact a rdf:Property ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J.Pandit"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "Specifies contact details of a legal entity such as phone  or email"@en ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "has contact"@en .
+
+dpv:hasContext a rdf:Property ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:description "Indicates a purpose is restricted to the specified context(s)"@en ;
+    rdfs:domain dpv:Purpose ;
+    rdfs:range dpv:Context ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "has context"@en .
+
+dpv:hasDataController a rdf:Property ;
+    dct:created "2019-04-04"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Bud Bruegger"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernández"^^xsd:string,
+        "Mark Lizar"^^xsd:string ;
+    dct:description "Indicates association with a Data Controller."@en ;
+    dct:modified "2020-11-04"^^xsd:date ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "has data controller"@en .
+
+dpv:hasDataSource a rdf:Property ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Georg P. Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "Indicates the source or origin of data being processed"@en ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "has data source"@en .
+
+dpv:hasDataSubject a rdf:Property ;
+    dct:created "2019-04-04"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Bud Bruegger"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernández"^^xsd:string,
+        "Mark Lizar"^^xsd:string ;
+    dct:description "Indicates association with a specific Data Subject or a group or category of Data Subjects."@en ;
+    dct:modified "2020-11-04"^^xsd:date ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "has data subject"@en .
+
+dpv:hasDuration a rdf:Property ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string,
+        "Rob Brennan"^^xsd:string ;
+    dct:description "Indicates information about duration"@en ;
+    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "has duration"@en .
+
+dpv:hasExpiry a rdf:Property ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Bud Bruegger"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string ;
+    dct:description "Generic property specifying when or under which condition(s) the consent will expire"@en ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "has expiry"@en .
+
+dpv:hasExpiryCondition a rdf:Property ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Bud Bruegger"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string ;
+    dct:description "Specifies the condition or event that determines the expiry of consent"@en ;
+    rdfs:comment "Can be TextOrDocumentOrURI"@en ;
+    rdfs:subPropertyOf dpv:expiry ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "has expiry condition"@en .
+
+dpv:hasExpiryTime a rdf:Property ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Bud Bruegger"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string ;
+    dct:description "Specifies the expiry time or duration for consent"@en ;
+    rdfs:range time:TemporalEntity ;
+    rdfs:subPropertyOf dpv:expiry ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "has expiry time"@en .
+
+dpv:hasHumanInvolvement a rdf:Property ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Georg P. Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "Indicates Involvement of humans in processing such as within automated decision making process"@en ;
+    rdfs:comment "Human involvement is also relevant to 'human in the loop'"@en ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "has human involvement"@en .
+
+dpv:hasIdentifier a rdf:Property ;
+    dct:created "2020-11-25"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J.Pandit"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "Specifies an identifier for the entity such as registeration number or official ID"@en ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "has identifier"@en .
+
+dpv:hasLegalBasis a rdf:Property ;
+    dct:created "2019-04-04"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Javier Fernández"^^xsd:string ;
+    dct:description "Indicates applicability of a Legal Basis."@en ;
+    dct:modified "2020-11-04"^^xsd:date ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "has legal basis"@en .
+
+dpv:hasLocation a rdf:Property ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string,
+        "Rob Brennan"^^xsd:string ;
+    dct:description "Indicates information about location"@en ;
+    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "has location"@en .
+
+dpv:hasName a rdf:Property ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J.Pandit"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "Specifies name of a legal entity"@en ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "has name"@en .
+
+dpv:hasPersonalDataCategory a rdf:Property ;
+    dct:created "2019-04-04"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Bud Bruegger"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernández"^^xsd:string,
+        "Mark Lizar"^^xsd:string ;
+    dct:description "Indicates association with a Personal Data Category."@en ;
+    dct:modified "2020-11-04"^^xsd:date ;
+    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "has personal data category"@en .
+
+dpv:hasProcessing a rdf:Property ;
+    dct:created "2019-04-04"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Bud Bruegger"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernández"^^xsd:string,
+        "Mark Lizar"^^xsd:string ;
+    dct:description "Indicates association with a Processing (of personal data) instance or category."@en ;
+    dct:modified "2020-11-04"^^xsd:date ;
+    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "has processing"@en .
+
+dpv:hasProvisionBy a rdf:Property ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Bud Bruegger"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string ;
+    dct:description "Specifies the entity that provisioned or provided consent"@en ;
+    rdfs:comment "Normally this would be the dataSubject, but in some exceptional cases, the consent might be given on behalf by someone else, e.g. parents of minors."@en ;
+    rdfs:range dpv:LegalEntity ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "has provision by"@en .
+
+dpv:hasProvisionByJustification a rdf:Property ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Bud Bruegger"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string ;
+    dct:description "Specifies the justification for entity providing consent"@en ;
+    rdfs:comment "This field can be used to proivde a justification why the provision was provided by another DataSubject or legal entity,  e.g. declariing the relationship (parent, guardian), in combination with the field provisionBy"@en ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "has provision by justification"@en .
+
+dpv:hasProvisionMethod a rdf:Property ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Bud Bruegger"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string ;
+    dct:description "Specifies the method by which consent was provisioned or provided"@en ;
+    rdfs:comment "Can be used to record information of how consent was provided e.g. by a click to a form, in writing, etc., by logging into a system and confirm per email, or with some additional authentication, etc."@en ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "has provision method"@en .
+
+dpv:hasProvisionTime a rdf:Property ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Bud Bruegger"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string ;
+    dct:description "Specifies the instant in time when consent was given"@en ;
+    rdfs:range time:Instant ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "has provision time"@en .
+
+dpv:hasPurpose a rdf:Property ;
+    dct:created "2019-04-04"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Bud Bruegger"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernández"^^xsd:string,
+        "Mark Lizar"^^xsd:string ;
+    dct:description "Indicates association with a Purpose (of processing personal data)."@en ;
+    dct:modified "2020-11-04"^^xsd:date ;
+    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "has purpose"@en .
+
+dpv:hasRecipient a rdf:Property ;
+    dct:created "2019-04-04"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Bud Bruegger"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernández"^^xsd:string,
+        "Mark Lizar"^^xsd:string ;
+    dct:description "Indicates a recipient of personal data."@en ;
+    dct:modified "2020-11-04"^^xsd:date ;
+    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "has recipient"@en .
+
+dpv:hasRepresentative a rdf:Property ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J.Pandit"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "Specifies representative of the legal entity"@en ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "has representative"@en .
+
+dpv:hasRight a rdf:Property ;
+    dct:created "2020-11-18"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "Indicates applicability of a Right."@en ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "has right"@en .
+
+dpv:hasRisk a rdf:Property ;
+    dct:created "2020-11-18"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "Indicates applicability of a Risk."@en ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "has risk"@en .
+
+dpv:hasSector a rdf:Property ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:description "Indicates the purpose is associated with activities in the indicated (Economic) Sector(s)"@en ;
+    rdfs:domain dpv:Context ;
+    rdfs:range dpv:Sector ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "has sector"@en .
+
+dpv:hasStorage a rdf:Property ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string,
+        "Rob Brennan"^^xsd:string ;
+    dct:description "Indicates information about storage"@en ;
+    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "has storage"@en .
+
+dpv:hasTechnicalOrganisationalMeasure a rdf:Property ;
+    dct:created "2019-04-04"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Bud Bruegger"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernández"^^xsd:string,
+        "Mark Lizar"^^xsd:string ;
+    dct:description "Indicates use of a Technical or Organisational measure."@en ;
+    dct:modified "2020-11-04"^^xsd:date ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "has technical and organisational measure"@en .
+
+dpv:hasWithdrawalBy a rdf:Property ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Bud Bruegger"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string ;
+    dct:description "Specifies the entity that withdrew consent"@en ;
+    rdfs:comment "Normally this would be the dataSubject, but in some exceptional cases, the consent might be withdraawn on behalf by someone else, e.g. parents of minors."@en ;
+    rdfs:range dpv:LegalEntity ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "has withdrawal by"@en .
+
+dpv:hasWithdrawalByJustification a rdf:Property ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Bud Bruegger"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string ;
+    dct:description "Specifies the justification for entity withdrawing consent"@en ;
+    rdfs:comment "This field can be used to proivde a justification why the weithdrawal was done by another DataSubject or legal entity, e.g. declariing the relationship (parent, guardian), in combination with the field withdrawalBy"@en ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "has withdrawal by justification"@en .
+
+dpv:hasWithdrawalMethod a rdf:Property ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Bud Bruegger"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string ;
+    dct:description "Specifries the method by which consent can be/has been withdrawn"@en ;
+    rdfs:comment "Can be used to record information of how to withdraw consent, e.g. by a click to a form, in writing, etc., by logging into a system and confirm per email, or with some additional authentication, etc."@en ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "has withdrawal method"@en .
+
+dpv:hasWithdrawalTime a rdf:Property ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Bud Bruegger"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string ;
+    dct:description "Specifies the instant in time when consent was withdrawn"@en ;
+    rdfs:range time:Instant ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "has withdrawal time"@en .
+
+dpv:isExplicit a rdf:Property ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Bud Bruegger"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string ;
+    dct:description "Specifies consent is 'explicit'"@en ;
+    rdfs:comment "The conditions for what is considered 'explicit consent' differ by norms and laws."@en ;
+    rdfs:range xsd:boolean ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "is explicit"@en .
+
+dpv:measureImplementedBy a rdf:Property ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string ;
+    dct:description "a generic Property to describe how the measure is implemented"@en ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "measure implemented by"@en .
+
+dpv:mitigatesRisk a rdf:Property ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "Indicates mitigation of risk(s)"@en ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "mitigates risk"@en .
+
+dpv:AcademicResearch a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Elmar Kiesling"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernandez"^^xsd:string,
+        "Simon Steyskal"^^xsd:string ;
+    dct:description "conduct or assist with research conducted in an academic context e.g. within universities"@en ;
+    rdfs:seeAlso svpu:Education ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:ResearchAndDevelopment ;
+    skos:prefLabel "Academic Research"@en .
+
+dpv:Accent a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about linguistic and speech accents."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Language ;
+    skos:prefLabel "Accent"@en .
+
+dpv:AccessControl a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Elmar Kiesling"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernandez"^^xsd:string,
+        "Simon Steyskal"^^xsd:string ;
+    dct:description "conduct or enforce access control"@en ;
+    rdfs:seeAlso svpu:Login ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Security ;
+    skos:prefLabel "Access Control"@en .
+
+dpv:AccessControlMethod a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string,
+        "Rob Brennan"^^xsd:string ;
+    dct:description "Methods which restrict access to a place or resource"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:TechnicalMeasure ;
+    skos:prefLabel "Access Control Method"@en .
+
+dpv:Acquantaince a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about acquaintainces in a social network."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:SocialNetwork ;
+    skos:prefLabel "Acquantaince"@en .
+
+dpv:Acquire a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to come into possession or control of the data"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Obtain ;
+    skos:prefLabel "Acquire"@en .
+
+dpv:Adapt a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to modify the data, often rewritten into a new form for a new use"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Transform ;
+    skos:prefLabel "Adapt"@en .
+
+dpv:Age a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about age"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:PhysicalCharacteristic ;
+    skos:prefLabel "Age"@en .
+
+dpv:Align a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to adjust the data to be in relation to another data"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Transform ;
+    skos:prefLabel "Align"@en .
+
+dpv:Alter a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to change the data without changing it into something else"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Transform ;
+    skos:prefLabel "Alter"@en .
+
+dpv:Analyse a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to study or examine the data in detail"@en ;
+    rdfs:isDefinedBy <https://www.specialprivacy.eu/vocabs/processing> ;
+    rdfs:seeAlso svpr:Analyse ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Use ;
+    skos:prefLabel "Analyse"@en .
+
+dpv:Anonymise a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to irreversibly alter personal data in such a way that an unique data subject can no longer be identified directly or indirectly or in combination with other data"@en ;
+    rdfs:isDefinedBy <https://www.specialprivacy.eu/vocabs/processing> ;
+    rdfs:seeAlso svpr:Anonymize ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Transform ;
+    skos:prefLabel "Anonymise"@en .
+
+dpv:Anonymization a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string,
+        "Rob Brennan"^^xsd:string ;
+    dct:description "Altering personal data irreversibly such that a data subject can no longer be identified directly or indirectly, either by the data controller alone or in collaboration with any other party"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_5/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:PseudoAnonymization ;
+    skos:prefLabel "Anonymization"@en .
+
+dpv:ApartmentOwned a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about apartment(s) owned and its history"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:HouseOwned ;
+    skos:prefLabel "Apartment Owned"@en .
+
+dpv:Association a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about associations in a social network with other individuals, groups, or entities e.g. friend of a friend"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:SocialNetwork ;
+    skos:prefLabel "Association"@en .
+
+dpv:Attitude a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about attitude."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Behavioral ;
+    skos:prefLabel "Attitude"@en .
+
+dpv:AuthenticationHistory a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Georg P Krog"^^xsd:string ;
+    dct:description "Information about prior authentication and its outcomes such as login attempts or location."@en ;
+    rdfs:isDefinedBy <https://www.w3.org/community/dpvcg/> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Behavioral ;
+    skos:prefLabel "Authentication History"@en .
+
+dpv:AuthorisationProcedure a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string,
+        "Rob Brennan"^^xsd:string ;
+    dct:description "Procedures for determining authorisation through permission or authority"@en ;
+    rdfs:comment "non-technical authorisation procedures: How is it described on an organisational level, who gets access to the data"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:OrganisationalMeasure ;
+    skos:prefLabel "Authorisation Procedure"@en .
+
+dpv:BankAccount a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about bank accounts."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:FinancialAccount ;
+    skos:prefLabel "Bank Account"@en .
+
+dpv:BloodType a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about blood type."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:MedicalHealth ;
+    skos:prefLabel "Blood Type"@en .
+
+dpv:BrowserFingerprint a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about the web browser which is used as a 'fingerprint'"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:DeviceBased ;
+    skos:prefLabel "Browser Fingerprint"@en .
+
+dpv:BrowsingBehavior a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about browsing behavior."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:seeAlso svd:OnlineActivity ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Behavioral ;
+    skos:prefLabel "Browsing Behavior"@en .
+
+dpv:BrowsingBehaviour skos:narrower dpv:BrowsingReferral .
+
+dpv:BrowsingReferral a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Georg P Krog"^^xsd:string ;
+    dct:description "Information about web browsing referrer or referral, which can be based on location, targeted referrals, direct, organic search, social media or actions, campaigns."@en ;
+    rdfs:isDefinedBy <https://www.w3.org/community/dpvcg/> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:BrowsingBehaviour ;
+    skos:prefLabel "Browsing Referral"@en .
+
+dpv:CallLog a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about the calls that an individual has made."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Behavioral ;
+    skos:prefLabel "Call Log"@en .
+
+dpv:CarOwned a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about cars ownership and ownership history."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Ownership ;
+    skos:prefLabel "Car Owned"@en .
+
+dpv:Certification a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string,
+        "Rob Brennan"^^xsd:string ;
+    dct:description "Certification mechanisms, seals, and marks for the purpose of demonstrating compliance"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:CertificationSeal ;
+    skos:prefLabel "Certification"@en .
+
+dpv:Character a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about character in the public sphere"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:PublicLife ;
+    skos:prefLabel "Character"@en .
+
+dpv:Child a skos:Concept ;
+    dct:created "2020-11-25"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "A 'child' is a natural legal person who is below a certain legal age depending on the legal jurisdiction."@en ;
+    rdfs:comment "The legality of age defining a child varies by jurisdiction. In addition, 'child' is distinct from a 'minor'. For example, the legal age drinking alcohol can be 21, which makes a person of age 20 a 'minor' in this context. In other cases, 'minor' and 'child' are used interchangeably to refer to a person below some legally defined age."@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:DataSubject ;
+    skos:prefLabel "Child"@en .
+
+dpv:CodeOfConduct a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string,
+        "Rob Brennan"^^xsd:string ;
+    dct:description "A set of rules or procedures outlining the norms and practices for conducting activities"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:GuidelinesPrinciple ;
+    skos:prefLabel "Code of Conduct"@en .
+
+dpv:Collect a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to gather data from someone"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj>,
+        <https://www.specialprivacy.eu/vocabs/processing> ;
+    rdfs:seeAlso svpr:Collect ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Obtain ;
+    skos:prefLabel "Collect"@en .
+
+dpv:Combine a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to join or merge data"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj>,
+        <https://www.specialprivacy.eu/vocabs/processing> ;
+    rdfs:seeAlso svpr:Aggregate ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Transform ;
+    skos:prefLabel "Combine"@en .
+
+dpv:CommercialResearch a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Elmar Kiesling"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernandez"^^xsd:string,
+        "Simon Steyskal"^^xsd:string ;
+    dct:description "conduct research in a commercial setting e.g. in a company"@en ;
+    rdfs:seeAlso svpu:Develop ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:ResearchAndDevelopment ;
+    skos:prefLabel "Commercial Research"@en .
+
+dpv:CommunicationForCustomerCare a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "communicate with users via email, phone, sms, chat or push messages regarding your requests."@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:CustomerCare ;
+    skos:prefLabel "Communication for Customer Care"@en .
+
+dpv:CommunicationsMetadata a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about communication metadata in the public sphere"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:seeAlso svd:Interactive ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:PublicLife ;
+    skos:prefLabel "Communications Metadata"@en .
+
+dpv:Connection a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about and including connections in a social network"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:SocialNetwork ;
+    skos:prefLabel "Connection"@en .
+
+dpv:Consult a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to consult or query data"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj>,
+        <https://www.specialprivacy.eu/vocabs/processing> ;
+    rdfs:seeAlso svpr:Query ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Use ;
+    skos:prefLabel "Consult"@en .
+
+dpv:ConsultationWithAuthority a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "Consultation with an authority or authoritative entity"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Consultation ;
+    skos:prefLabel "Consultation with Authority"@en .
+
+dpv:Contract a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string,
+        "Rob Brennan"^^xsd:string ;
+    dct:description "Contractual terms governing data handling within the data controller"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:LegalAgreement ;
+    skos:prefLabel "Contract"@en .
+
+dpv:Copy a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to produce an exact reprodution of the data"@en ;
+    rdfs:isDefinedBy <https://www.specialprivacy.eu/vocabs/processing> ;
+    rdfs:seeAlso svpr:Copy ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Processing ;
+    skos:prefLabel "Copy"@en .
+
+dpv:Country a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about country e.g. residence, travel."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Location ;
+    skos:prefLabel "Country"@en .
+
+dpv:CreateEventRecommendations a skos:Concept ;
+    dct:created "2019-11-26"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string,
+        "Rudy Jacob"^^xsd:string ;
+    dct:description "create and provide personalised recommendations for events"@en ;
+    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:CreatePersonalizedRecommendations ;
+    skos:prefLabel "Create Event Recommendations"@en .
+
+dpv:CreateProductRecommendations a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Elmar Kiesling"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernandez"^^xsd:string,
+        "Simon Steyskal"^^xsd:string ;
+    dct:description "create product recommendations e.g. suggest similar products"@en ;
+    rdfs:seeAlso svpu:Marketing ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:CreatePersonalizedRecommendations ;
+    skos:prefLabel "Create Product Recommendations"@en .
+
+dpv:CreditCapacity a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about credit capacity."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Credit ;
+    skos:prefLabel "Credit Capacity"@en .
+
+dpv:CreditCardNumber a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about credit card number"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:PaymentCardNumber ;
+    skos:prefLabel "Credit Card Number"@en .
+
+dpv:CreditRecord a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about credit record."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Credit ;
+    skos:prefLabel "Credit Record"@en .
+
+dpv:CreditScore a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about credit score."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:CreditWorthiness ;
+    skos:prefLabel "Credit Score"@en .
+
+dpv:CreditStanding a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about credit standing."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Credit ;
+    skos:prefLabel "Credit Standing"@en .
+
+dpv:CriminalCharge a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about criminal charges."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Criminal ;
+    skos:prefLabel "Criminal Charge"@en .
+
+dpv:CriminalConviction a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about criminal convictions."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Criminal ;
+    skos:prefLabel "Criminal Conviction"@en .
+
+dpv:CriminalPardon a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about criminal pardons."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Criminal ;
+    skos:prefLabel "Criminal Pardon"@en .
+
+dpv:DNACode a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about DNA."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:MedicalHealth ;
+    skos:prefLabel "DNA Code"@en .
+
+dpv:DPIA a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "A DPIA involves determining the potential and actual impact of processing activities on individuals or groups of individuals"@en ;
+    rdfs:comment "Top class: Impact Assessment, and DPIA is sub-class"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:ImpactAssessment ;
+    skos:prefLabel "Data Protection Impact Assessment (DPIA)"@en .
+
+dpv:DataController a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Javier Fernández"^^xsd:string ;
+    dct:description "The individual or organisation that decides (or controls) the purpose(s) of processing personal data."@en ;
+    dct:modified "2020-11-04"^^xsd:date ;
+    rdfs:comment "The terms 'Controller' is usually the more common form of indicating a Data Controller. In ISO/IEC the term 'PII Controller' is used."@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_7/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:LegalEntity ;
+    skos:prefLabel "Data Controller"@en .
+
+dpv:DataProtectionAuthority a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Georg Krog"^^xsd:string,
+        "Harshvardhan Pandit"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "An authority tasked with overseeing legal compliance regarding privacy and data protection laws."@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Authority ;
+    skos:prefLabel "Data Protection Authority"@en .
+
+dpv:DataProtectionOfficer a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Georg Krog"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "An entity within or authorised by an organisation to monitor internal compliance, inform and advise on data protection obligations and act as a contact point for data subjects and the supervisory authority."@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_37/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:LegalEntity ;
+    skos:prefLabel "Data Protection Officer"@en .
+
+dpv:DataSubProcessor a skos:Concept ;
+    dct:created "2020-11-25"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "A 'sub-processor' is a processor engaged by another processor"@en ;
+    rdfs:comment "sub-processor' is a commonly used term similar to 'sub-contractor' and does not have a specific legal definition"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:DataProcessor ;
+    skos:prefLabel "Data Sub-Processor"@en .
+
+dpv:DataSubjectRight a skos:Concept ;
+    dct:created "2020-11-18"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan Pandit"^^xsd:string ;
+    dct:description "The rights applicable or provided to a Data Subject"@en ;
+    rdfs:comment "Based on use of definitions, the notion of 'Data Subject Right' can be equivalent to 'Individual Right' or 'Right of a Person'"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Right ;
+    skos:prefLabel "Data Subject Right"@en .
+
+dpv:DeIdentification a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string,
+        "Rob Brennan"^^xsd:string ;
+    dct:description "Conversion of identifiable personal data (PII) to un-identifiable personal data"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:PseudoAnonymization ;
+    skos:prefLabel "De-Identification"@en .
+
+dpv:DeliveryOfGoods a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Elmar Kiesling"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernandez"^^xsd:string,
+        "Simon Steyskal"^^xsd:string ;
+    dct:description "deliver goods and services"@en ;
+    rdfs:seeAlso svpu:Delivery ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:RequestedServiceProvision ;
+    skos:prefLabel "Delivery of Goods"@en .
+
+dpv:Demeanor a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about demeanor."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Behavioral ;
+    skos:prefLabel "Demeanor"@en .
+
+dpv:Derive a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to create new derivative data from the original data"@en ;
+    rdfs:isDefinedBy <https://www.specialprivacy.eu/vocabs/processing> ;
+    rdfs:seeAlso svpr:Derive ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Transform ;
+    skos:prefLabel "Derive"@en .
+
+dpv:DerivedPersonalData a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Derived data is data that is obtained or derived from other data."@en ;
+    rdfs:isDefinedBy <https://www.w3.org/community/dpvcg/> ;
+    rdfs:seeAlso svd:Derived ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:PersonalDataCategory ;
+    skos:prefLabel "Derived Personal Data"@en .
+
+dpv:DesignStandard a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string,
+        "Rob Brennan"^^xsd:string ;
+    dct:description "A set of rules or guidelines outlining criterias for design"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:GuidelinesPrinciple ;
+    skos:prefLabel "Design Standard"@en .
+
+dpv:Destruct a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to process data in a way it no longer exists or cannot be repaired"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Remove ;
+    skos:prefLabel "Destruct"@en .
+
+dpv:DeviceApplications a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "Information about applications or application-like software on a device."@en ;
+    rdfs:isDefinedBy <https://www.w3.org/community/dpvcg/> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:DeviceSoftware ;
+    skos:prefLabel "Device Applications"@en .
+
+dpv:DeviceOperatingSystem a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "Information about the operating system (OS) or system software that manages hardware or software resources."@en ;
+    rdfs:isDefinedBy <https://www.w3.org/community/dpvcg/> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:DeviceSoftware ;
+    skos:prefLabel "Device Operating System"@en .
+
+dpv:Dialect a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about linguistic dialects."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Language ;
+    skos:prefLabel "Dialect"@en .
+
+dpv:DirectMarketing a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "carry out direct marketing i.e. marketing communicated directly to the individual"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Marketing ;
+    skos:prefLabel "Direct Marketing"@en .
+
+dpv:Disability a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about disabilities."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:MedicalHealth ;
+    skos:prefLabel "Disability"@en .
+
+dpv:DisciplinaryAction a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about disciplinary actions and its history"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Professional ;
+    skos:prefLabel "Disciplinary Action"@en .
+
+dpv:DiscloseByTransmission a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to disclose data by means of transmission"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Disclose ;
+    skos:prefLabel "Disclose by Transmission"@en .
+
+dpv:Dislike a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about dislikes or preferences regarding repulsions."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Interest ;
+    skos:prefLabel "Dislike"@en .
+
+dpv:Disseminate a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to spread data throughout"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Disclose ;
+    skos:prefLabel "Disseminate"@en .
+
+dpv:Divorce a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about divorce(s)."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:FamilyStructure ;
+    skos:prefLabel "Divorce"@en .
+
+dpv:DrugTestResult a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about drug test results."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:MedicalHealth ;
+    skos:prefLabel "Drug Test Result"@en .
+
+dpv:EmailAddress a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about Email address."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Contact ;
+    skos:prefLabel "Email Address"@en .
+
+dpv:EmailContent a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about the contents of Emails sent or received"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Communication ;
+    skos:prefLabel "Email Content"@en .
+
+dpv:EmploymentHistory a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about employment history"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Professional ;
+    skos:prefLabel "Employment History"@en .
+
+dpv:EncryptionInRest a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string,
+        "Rob Brennan"^^xsd:string ;
+    dct:description "Encryption of data when being stored (persistent encryption)"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:PseudonymisationEncryption ;
+    skos:prefLabel "Encryption in Rest"@en .
+
+dpv:EncryptionInTransfer a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string,
+        "Rob Brennan"^^xsd:string ;
+    dct:description "Encryption of data in transit e.g. when being transferred from one location to another, including sharing"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:PseudonymisationEncryption ;
+    skos:prefLabel "Encryption in Transfer"@en .
+
+dpv:Erase a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to delete data"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Remove ;
+    skos:prefLabel "Erase"@en .
+
+dpv:FamilyHealthHistory a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about family health history."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:HealthHistory ;
+    skos:prefLabel "Family Health History"@en .
+
+dpv:FavoriteColor a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about favorite color."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Favorite ;
+    skos:prefLabel "Favorite Color"@en .
+
+dpv:FavoriteFood a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about favorite food."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Favorite ;
+    skos:prefLabel "Favorite Food"@en .
+
+dpv:FavoriteMusic a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about favorite music."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Favorite ;
+    skos:prefLabel "Favorite Music"@en .
+
+dpv:Fetish a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information an individual's sexual fetishes"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Sexual ;
+    skos:prefLabel "Fetish"@en .
+
+dpv:FinancialAccountNumber a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about financial account number"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:AccountIdentifier ;
+    skos:prefLabel "Financial Account Number"@en .
+
+dpv:Fingerprint a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about fingerprint used for biometric purposes."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Biometric ;
+    skos:prefLabel "Fingerprint"@en .
+
+dpv:FraudPreventionAndDetection a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Elmar Kiesling"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernandez"^^xsd:string,
+        "Simon Steyskal"^^xsd:string ;
+    dct:description "detect and prevent fraud"@en ;
+    rdfs:seeAlso svpu:Government ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Security ;
+    skos:prefLabel "Fraud Prevention and Detection"@en .
+
+dpv:Friend a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about friends in a social network, including aspects of friendships such as years together or nature of friendship."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:SocialNetwork ;
+    skos:prefLabel "Friend"@en .
+
+dpv:GPSCoordinate a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about location expressed using Global Position System coordinates (GPS)"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Location ;
+    skos:prefLabel "GPS Coordinate"@en .
+
+dpv:Gender a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about gender"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:PhysicalCharacteristic ;
+    skos:prefLabel "Gender"@en .
+
+dpv:GeneralReputation a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about reputation in the public sphere"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:PublicLife ;
+    skos:prefLabel "General Reputation"@en .
+
+dpv:Geographic a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about location or based on geography (e.g. home address)"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Demographic ;
+    skos:prefLabel "Geographic"@en .
+
+dpv:GroupMembership a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about groups and memberships included or associated with a social network"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:SocialNetwork ;
+    skos:prefLabel "Group Membership"@en .
+
+dpv:HairColor a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about hair color"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:PhysicalCharacteristic ;
+    skos:prefLabel "Hair Color"@en .
+
+dpv:HealthRecord a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about health record."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:MedicalHealth ;
+    skos:prefLabel "Health Record"@en .
+
+dpv:Height a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about physical height"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:PhysicalCharacteristic ;
+    skos:prefLabel "Height"@en .
+
+dpv:IPAddress a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about the Internet protocol (IP) address of a device"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:DeviceBased ;
+    skos:prefLabel "IP Address"@en .
+
+dpv:IdentityVerification a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Elmar Kiesling"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernandez"^^xsd:string,
+        "Simon Steyskal"^^xsd:string ;
+    dct:description "verify and authorise identity"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Security ;
+    skos:prefLabel "Identity Verification"@en .
+
+dpv:ImproveExistingProductsAndServices a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Elmar Kiesling"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernandez"^^xsd:string,
+        "Simon Steyskal"^^xsd:string ;
+    dct:description "improve existing products and services"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:OptimisationForController ;
+    skos:prefLabel "Improve Existing Products and Services"@en .
+
+dpv:ImproveInternalCRMProcesses a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Elmar Kiesling"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernandez"^^xsd:string,
+        "Simon Steyskal"^^xsd:string ;
+    dct:description "improve customer-relationship management (CRM) processes"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:OptimisationForController ;
+    skos:prefLabel "Improve Internal CRM Processes"@en .
+
+dpv:Income a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about financial income e.g. for individual or household or family"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Transactional ;
+    skos:prefLabel "Income"@en .
+
+dpv:IncomeBracket a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about income bracket."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Demographic ;
+    skos:prefLabel "Income Bracket"@en .
+
+dpv:IncreaseServiceRobustness a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Elmar Kiesling"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernandez"^^xsd:string,
+        "Simon Steyskal"^^xsd:string ;
+    dct:description "improve the robustness and resilience of services"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:OptimisationForController ;
+    skos:prefLabel "Increase Service Robustness"@en .
+
+dpv:IndividualHealthHistory a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about information health history."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:HealthHistory ;
+    skos:prefLabel "Individual Health History"@en .
+
+dpv:Intention a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about intentions"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Preference ;
+    skos:prefLabel "Intention"@en .
+
+dpv:Interaction a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about interactions in the public sphere"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:PublicLife ;
+    skos:prefLabel "Interaction"@en .
+
+dpv:InternalResourceOptimisation a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Elmar Kiesling"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernandez"^^xsd:string,
+        "Simon Steyskal"^^xsd:string ;
+    dct:description "optimise internal resources used by the organisation e.g. resource usage"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:OptimisationForController ;
+    skos:prefLabel "Internal Resource Optimisation"@en .
+
+dpv:Job a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about professional jobs"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Professional ;
+    skos:prefLabel "Job"@en .
+
+dpv:LegalCompliance a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "fulfill obligations or requirements towards achieving compliance with law or regulations."@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Purpose ;
+    skos:prefLabel "Legal Compliance"@en .
+
+dpv:LifeHistory a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about personal history regarding events or activities - including  their occurrences that might be directly related or have had an influence (e.g. World War, 9/11)"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Historical ;
+    skos:prefLabel "Life History"@en .
+
+dpv:Like a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about likes or preferences regarding attractions."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Interest ;
+    skos:prefLabel "Like"@en .
+
+dpv:LinkClicked a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about the links that an individual has clicked."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:seeAlso svd:Navigation ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Behavioral ;
+    skos:prefLabel "LinkClicked"@en .
+
+dpv:LoanRecord a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about loans, whether applied, provided or rejected, and its history"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Transactional ;
+    skos:prefLabel "Loan Record"@en .
+
+dpv:MACAddress a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about the Media Access Control (MAC) address of a device"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:DeviceBased ;
+    skos:prefLabel "MAC Address"@en .
+
+dpv:MakeAvailable a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to transform or publish data to be used"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Disclose ;
+    skos:prefLabel "Make Available"@en .
+
+dpv:MaritalStatus a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about marital status and history"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:PublicLife ;
+    skos:prefLabel "Marital Status"@en .
+
+dpv:Marriage a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about marriage(s)."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:FamilyStructure ;
+    skos:prefLabel "Marriage"@en .
+
+dpv:MentalHealth a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about mental health."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Health ;
+    skos:prefLabel "Mental Health"@en .
+
+dpv:Move a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to move data from one location to another including deleting the original copy"@en ;
+    rdfs:isDefinedBy <https://www.specialprivacy.eu/vocabs/processing> ;
+    rdfs:seeAlso svpr:Move ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Transfer ;
+    skos:prefLabel "Move"@en .
+
+dpv:NDA a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string,
+        "Rob Brennan"^^xsd:string ;
+    dct:description "Non-disclosure Agreements e.g. preserving confidentiality of information"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:LegalAgreement ;
+    skos:prefLabel "Non-Disclosure Agreement (NDA)"@en .
+
+dpv:Name a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about names associated or used as given name or nickname."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Identifying ;
+    skos:prefLabel "Name"@en .
+
+dpv:NonCommercialResearch a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Elmar Kiesling"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernandez"^^xsd:string,
+        "Simon Steyskal"^^xsd:string ;
+    dct:description "conduct research in a non-commercial setting e.g. for a non-profit-organisation (NGO)"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:ResearchAndDevelopment ;
+    skos:prefLabel "Non-Commercial Research"@en .
+
+dpv:OfficialID a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about an official identifier or identification document"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:seeAlso svd:Government ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Identifying ;
+    skos:prefLabel "Official ID"@en .
+
+dpv:Offspring a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about offspring(s)."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:FamilyStructure ;
+    skos:prefLabel "Offspring"@en .
+
+dpv:Opinion a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about opinions"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Preference ;
+    skos:prefLabel "Opinion"@en .
+
+dpv:OptimiseUserInterface a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Elmar Kiesling"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernandez"^^xsd:string,
+        "Simon Steyskal"^^xsd:string ;
+    dct:description "optimise interfaces presented to the user"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:OptimisationForConsumer ;
+    skos:prefLabel "Optimise User Interface"@en .
+
+dpv:PIA a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "Carrying out an impact assessment regarding privacy risks"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:ImpactAssessment ;
+    skos:prefLabel "Privacy Impact Assessment"@en .
+
+dpv:PINCode a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about Personal identification number (PIN), which is usually used in the process of authenticating the individual as an user accessing a system."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Authenticating ;
+    skos:prefLabel "PIN Code"@en .
+
+dpv:Parent a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about parent(s)."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:FamilyStructure ;
+    skos:prefLabel "Parent"@en .
+
+dpv:Password a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about password used in the process of authenticating the individual as an user accessing a system."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Authenticating ;
+    skos:prefLabel "Password"@en .
+
+dpv:Payment a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "process users’ payment transactions."@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:ServiceProvision ;
+    skos:prefLabel "Payment"@en .
+
+dpv:PaymentCardExpiry a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Georg P Krog"^^xsd:string ;
+    dct:description "Information about payment card expiry such as a date."@en ;
+    rdfs:isDefinedBy <https://www.w3.org/community/dpvcg/> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:PaymentCard ;
+    skos:prefLabel "Payment Card Expiry"@en .
+
+dpv:PersonalPossession a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about personal possessions."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Ownership ;
+    skos:prefLabel "Personal Possession"@en .
+
+dpv:PersonalisedBenefits a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Elmar Kiesling"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernandez"^^xsd:string,
+        "Simon Steyskal"^^xsd:string ;
+    dct:description "personalise benefits received by the user"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:ServicePersonalization ;
+    skos:prefLabel "Personalised Benefits"@en .
+
+dpv:Personality a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about personality (e.g., categorization in terms of the Big Five personality traits)"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Behavioral ;
+    skos:prefLabel "Personality"@en .
+
+dpv:PhysicalAddress a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about physical address."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Contact ;
+    skos:prefLabel "Physical Address"@en .
+
+dpv:PhysicalHealth a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about physical health."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Health ;
+    skos:prefLabel "Physical Health"@en .
+
+dpv:PhysicalTrait a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about defining traits or features regarding the body."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Demographic ;
+    skos:prefLabel "Physical Trait"@en .
+
+dpv:Picture a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about visual representation or image e.g. profile photo."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Identifying ;
+    skos:prefLabel "Picture"@en .
+
+dpv:Piercing a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about piercings"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:PhysicalCharacteristic ;
+    skos:prefLabel "Piercing"@en .
+
+dpv:Prescription a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about medical and pharmaceutical prescriptions"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:MedicalHealth ;
+    skos:prefLabel "Prescription"@en .
+
+dpv:PrivacyByDefault a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string,
+        "Rob Brennan"^^xsd:string ;
+    dct:description "Practices regarding selecting appropriate data protection and privacy measures as the 'default' in an activity or service"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:GuidelinesPrinciple ;
+    skos:prefLabel "Privacy by Default"@en .
+
+dpv:PrivacyByDesign a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string,
+        "Rob Brennan"^^xsd:string ;
+    dct:description "Practices regarding incorporating data protection and privacy in the design of information and services"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:RiskManagementProcedure ;
+    skos:prefLabel "Privacy by Design"@en .
+
+dpv:PrivacyPreference a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about privacy preferences"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Preference ;
+    skos:prefLabel "Privacy Preference"@en .
+
+dpv:Proclivitie a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about proclivities in a sexual context"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Sexual ;
+    skos:prefLabel "Proclivitie"@en .
+
+dpv:ProfessionalCertification a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about professional certifications"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Professional ;
+    skos:prefLabel "Professional Certification"@en .
+
+dpv:ProfessionalEvaluation a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about professional evaluations"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Professional ;
+    skos:prefLabel "Professional Evaluation"@en .
+
+dpv:ProfessionalInterview a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about professional interviews"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Professional ;
+    skos:prefLabel "Professional Interview"@en .
+
+dpv:Profiling a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to create a profile that describes or represents a person"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Use ;
+    skos:prefLabel "Profiling"@en .
+
+dpv:PseudoAnonymise a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to replace personal identifiable information by artificial identifiers"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Transform ;
+    skos:prefLabel "Pseudo-Anonymise"@en .
+
+dpv:Purchase a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about purchases such as items bought e.g. grocery or clothing"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:seeAlso svd:Purchase ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Transactional ;
+    skos:prefLabel "Purchase"@en .
+
+dpv:PurchasesAndSpendingHabit a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about analysis of purchases made and money spent expressed as a habit e.g. monthly shopping trends"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Transactional ;
+    skos:prefLabel "Purchases and Spending Habit"@en .
+
+dpv:Record a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to make a record (especially media)"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Obtain ;
+    skos:prefLabel "Record"@en .
+
+dpv:Reference a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about references in the professional context"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Professional ;
+    skos:prefLabel "Reference"@en .
+
+dpv:RegistrationAuthentication a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "register, authenticate, and identify in context of a service."@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:ServiceProvision ;
+    skos:prefLabel "Registration and Authentication"@en .
+
+dpv:RegularityOfRecertification a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string,
+        "Rob Brennan"^^xsd:string ;
+    dct:description "Policy regarding repetition or renewal of existing certification(s)"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:RiskManagementProcedure ;
+    skos:prefLabel "Regularity of Re-certification"@en .
+
+dpv:Relationship a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about relationships and relationship history."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Family ;
+    skos:prefLabel "Relationship"@en .
+
+dpv:Representative a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "A representative of a legal entity"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_27/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:LegalEntity ;
+    skos:prefLabel "Representative"@en .
+
+dpv:RequestedServiceProvision skos:narrower dpv:DeliveryOfGoods .
+
+dpv:Restrict a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to apply a restriction on the processsing of specific records"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Transform ;
+    skos:prefLabel "Restrict"@en .
+
+dpv:Retina a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about retina and the retinal patterns."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Biometric ;
+    skos:prefLabel "Retina"@en .
+
+dpv:Retrieve a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to retrieve data, often in an automated manner"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Use ;
+    skos:prefLabel "Retrieve"@en .
+
+dpv:Right a skos:Concept ;
+    dct:created "2020-11-18"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J Pandit"^^xsd:string ;
+    dct:description "The right(s) applicable, provided, or expected."@en ;
+    rdfs:comment "A 'right' is a legal, social, or ethical principle of freedom or entitlement which dictate the norms regarding what is allowed or owed.. Rights as a concept encompass a broad area of norms and entities, and are not specific to Individuals or Data Protection / Privacy. For individual specific rights, see dpv:DataSubjectRight"@en ;
+    sw:term_status "accepted"@en ;
+    skos:narrower dpv:DataSubjectRight ;
+    skos:prefLabel "Right"@en .
+
+dpv:RiskMitigationMeasure a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "Measures intended to mitigate, minimise, or prevent risk."@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:TechnicalOrganisationalMeasure ;
+    skos:prefLabel "Risk Mitigation Measure"@en .
+
+dpv:RoomNumber a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about location expressed as Room number or similar numbering systems"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Location ;
+    skos:prefLabel "Room Number"@en .
+
+dpv:Salary a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about salary"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Professional ;
+    skos:prefLabel "Salary"@en .
+
+dpv:Sale a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about sales e.g. selling of goods or services"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Transactional ;
+    skos:prefLabel "Sale"@en .
+
+dpv:School a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about school such as name of school, conduct, or grades obtained."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Professional ;
+    skos:prefLabel "School"@en .
+
+dpv:Seal a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string,
+        "Rob Brennan"^^xsd:string ;
+    dct:description "A seal or a mark indicating proof of certification to some certification or standard"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:CertificationSeal ;
+    skos:prefLabel "Seal"@en .
+
+dpv:SecretText a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about secret text used in the process of authenticating the individual as an user accessing a system, e.g., when recovering a lost password."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Authenticating ;
+    skos:prefLabel "Secret Text"@en .
+
+dpv:Sector a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Elmar Kiesling"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernandez"^^xsd:string,
+        "Simon Steyskal"^^xsd:string ;
+    dct:description "The 'sector' or 'domain' of a purpose e.g. Agriculture, Advertising"@en ;
+    rdfs:comment "There are various sector codes used commonly to indicate the domain of an organisation or business. Examples include NACE (EU), ISIC (UN), SIC and NAICS (USA)."@en ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "Sector"@en .
+
+dpv:SellDataToThirdParties a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Elmar Kiesling"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernandez"^^xsd:string,
+        "Simon Steyskal"^^xsd:string ;
+    dct:description "sell data or information to third parties"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:CommercialInterest ;
+    skos:prefLabel "Sell Data to Third Parties"@en .
+
+dpv:SellInsightsFromData a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Elmar Kiesling"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernandez"^^xsd:string,
+        "Simon Steyskal"^^xsd:string ;
+    dct:description "sell or commercially provide insights obtained from analysis of data"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:CommercialInterest ;
+    skos:prefLabel "Sell Insights from Data"@en .
+
+dpv:SellProductsToDataSubject a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Elmar Kiesling"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernandez"^^xsd:string,
+        "Simon Steyskal"^^xsd:string ;
+    dct:description "sell products or services"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:CommercialInterest ;
+    skos:prefLabel "Sell Products to Data Subject"@en .
+
+dpv:SellTargettedAdvertisements a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Elmar Kiesling"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernandez"^^xsd:string,
+        "Simon Steyskal"^^xsd:string ;
+    dct:description "sell or provide targetted advertisements"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:CommercialInterest ;
+    skos:prefLabel "Sell Targetted Advertisements"@en .
+
+dpv:SexualHistory a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about sexual history"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Sexual ;
+    skos:prefLabel "Sexual History"@en .
+
+dpv:SexualPreference a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about sexual preferences"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Sexual ;
+    skos:prefLabel "Sexual Preference"@en .
+
+dpv:Share a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to give data (or a portion of it) to others"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Disclose ;
+    skos:prefLabel "Share"@en .
+
+dpv:Sibling a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about sibling(s)."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:FamilyStructure ;
+    skos:prefLabel "Sibling"@en .
+
+dpv:SingleSignOn a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "Use of credentials or processes that enable using one set of credentials to authenticate multiple contexts."@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:AuthenticationProtocols ;
+    skos:prefLabel "Single Sign On"@en .
+
+dpv:SkinTone a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about skin tone"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:PhysicalCharacteristic ;
+    skos:prefLabel "Skin Tone"@en .
+
+dpv:SocialMediaCommunication a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about social media communication, including the communication itself and metadata."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:seeAlso svd:Social ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Communication ;
+    skos:prefLabel "Social Media Communication"@en .
+
+dpv:SocialMediaMarketing a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "market through and on social media."@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Marketing ;
+    skos:prefLabel "Social Media"@en .
+
+dpv:SocialStatus a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about social status"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:PublicLife ;
+    skos:prefLabel "Social Status"@en .
+
+dpv:StaffTraining a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string,
+        "Rob Brennan"^^xsd:string ;
+    dct:description "Practices and policies regarding training of staff members"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:RiskManagementProcedure ;
+    skos:prefLabel "Staff Training"@en .
+
+dpv:StorageDeletion a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string,
+        "Rob Brennan"^^xsd:string ;
+    dct:description "Deletion or Erasure of data including any deletion guarantees"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:StorageRestriction ;
+    skos:prefLabel "Storage Deletion"@en .
+
+dpv:StorageDuration a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string,
+        "Rob Brennan"^^xsd:string ;
+    dct:description "Duration or temporal entity denoting limitation on storage of personal data"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:StorageRestriction ;
+    skos:prefLabel "Storage Duration"@en .
+
+dpv:StorageLocation a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string,
+        "Rob Brennan"^^xsd:string ;
+    dct:description "Location or geospatial scope where the data is stored"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:StorageRestriction ;
+    skos:prefLabel "Storage Location"@en .
+
+dpv:StorageRestoration a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string,
+        "Rob Brennan"^^xsd:string ;
+    dct:description "Regularity and temporal span of data restoration/backup mechanisms that guarantee that data is preserved"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:StorageRestriction ;
+    skos:prefLabel "Storage Restoration"@en .
+
+dpv:Store a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to keep data for future use"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Processing ;
+    skos:prefLabel "Store"@en .
+
+dpv:Structure a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to arrange data according to a structure"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Organise ;
+    skos:prefLabel "Structure"@en .
+
+dpv:TVViewingBehavior a skos:Concept ;
+    dct:created "2019-11-26"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string,
+        "Rudy Jacob"^^xsd:string ;
+    dct:description "Information about TV viewing behavior, such as timestamps of channel change, duration of viewership, content consumed"@en ;
+    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:ServiceConsumptionBehavior ;
+    skos:prefLabel "TV Viewing Behavior"@en .
+
+dpv:Tattoo a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about tattoos"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:PhysicalCharacteristic ;
+    skos:prefLabel "Tattoo"@en .
+
+dpv:Tax a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about financial tax e.g. tax records or tax due"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Transactional ;
+    skos:prefLabel "Tax"@en .
+
+dpv:TelephoneNumber a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about telephone number."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Contact ;
+    skos:prefLabel "Telephone Number"@en .
+
+dpv:ThirdParty a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "A ‘third party’ means a natural or legal person, public authority, agency or body other than the data subject, controller, processor and people who, under the direct authority of the controller or processor, are authorised to process personal data."@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_10/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Recipient ;
+    skos:prefLabel "Third Party"@en .
+
+dpv:Thought a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about thoughts"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:KnowledgeBelief ;
+    skos:prefLabel "Thought"@en .
+
+dpv:Transaction a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about financial transactions e.g. bank transfers"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Transactional ;
+    skos:prefLabel "Transaction"@en .
+
+dpv:Transmit a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to send out data"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Disclose ;
+    skos:prefLabel "Transmit"@en .
+
+dpv:UID a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about unique identifiers."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:seeAlso svd:UniqueId ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Identifying ;
+    skos:prefLabel "UID"@en .
+
+dpv:UsageAnalytics a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "calculate, analyse, and report user behaviour and events for a service or product."@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:ServiceProvision ;
+    skos:prefLabel "Analytics"@en .
+
+dpv:UserInterfacePersonalisation a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Elmar Kiesling"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernandez"^^xsd:string,
+        "Simon Steyskal"^^xsd:string ;
+    dct:description "personalise interfaces presented to the user"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:ServicePersonalization ;
+    skos:prefLabel "User Interface Personalisation"@en .
+
+dpv:Username a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about usernames."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Identifying ;
+    skos:prefLabel "Username"@en .
+
+dpv:VoiceCommunicationRecording a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about vocal recorded communication (e.g. telephony, VoIP)"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Communication ;
+    skos:prefLabel "Voice Communication Recording"@en .
+
+dpv:VoiceMail a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about voice mail messages."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Communication ;
+    skos:prefLabel "Voice Mail"@en .
+
+dpv:VulnerableDataSubject a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Georg Krog"^^xsd:string,
+        "Harshvardhan Pandit"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "Data Subjects which should be considered 'vulnerable' and therefore would require additional measures and safeguards"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:DataSubject ;
+    skos:prefLabel "Vulnerable Data Subject"@en .
+
+dpv:Weight a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about physical weight"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:PhysicalCharacteristic ;
+    skos:prefLabel "Weight"@en .
+
+dpv:WorkHistory a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about work history in a professional context"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Professional ;
+    skos:prefLabel "Work History"@en .
+
+dpv:Advertising a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "carry out advertising i.e. process or artefact used to call attention to a product, service, etc. through announcements, notices, or other forms of communication."@en ;
+    rdfs:comment "Advertising is a subset of Marketing. Advertising by itself does not indicate 'personalisation' i.e. personalised ads."@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Marketing ;
+    skos:narrower dpv:PersonalisedAdvertising ;
+    skos:prefLabel "Advertising"@en .
+
+dpv:AuthenticationProtocols a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string,
+        "Rob Brennan"^^xsd:string ;
+    dct:description "Protocols involving validation of identity i.e. authentication of a person or information"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:TechnicalMeasure ;
+    skos:narrower dpv:SingleSignOn ;
+    skos:prefLabel "Authentication Protocols"@en .
+
+dpv:Authority a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Georg Krog"^^xsd:string,
+        "Harshvardhan Pandit"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "An authority with the power to create or enforce laws, or determine their compliance."@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:LegalEntity ;
+    skos:narrower dpv:DataProtectionAuthority ;
+    skos:prefLabel "Authority"@en .
+
+dpv:Consultation a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "Consultation is a process of receiving feedback, advice, or opinion from an external agency"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:OrganisationalMeasure ;
+    skos:narrower dpv:ConsultationWithAuthority ;
+    skos:prefLabel "Consultation"@en .
+
+dpv:Context a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Elmar Kiesling"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernandez"^^xsd:string,
+        "Simon Steyskal"^^xsd:string ;
+    dct:description "The 'context' or 'scope' of the purpose, e.g. restriction to a certain business sector"@en ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "Context"@en .
+
+dpv:CreditWorthiness a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about credit worthiness."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Credit ;
+    skos:narrower dpv:CreditScore ;
+    skos:prefLabel "Credit Worthiness"@en .
+
+dpv:CustomerCare a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Elmar Kiesling"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernandez"^^xsd:string,
+        "Simon Steyskal"^^xsd:string ;
+    dct:description "provide assistance for customer complaints and satisfaction"@en ;
+    rdfs:seeAlso svpu:Feedback ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:ServiceProvision ;
+    skos:narrower dpv:CommunicationForCustomerCare ;
+    skos:prefLabel "Customer Care"@en .
+
+dpv:DataProcessor a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "A ‘processor’ means a natural or legal person, public authority, agency or other body which processes personal data on behalf of the controller."@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_8/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Recipient ;
+    skos:narrower dpv:DataSubProcessor ;
+    skos:prefLabel "Data Processor"@en .
+
+dpv:EthnicOrigin a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about ethnic origin"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Ethnicity,
+        dpv:SpecialCategoryPersonalData ;
+    skos:prefLabel "Ethnic Origin"@en .
+
+dpv:Historical a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about historical data related to or relevant regarding history or past events"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:PersonalDataCategory ;
+    skos:narrower dpv:LifeHistory ;
+    skos:prefLabel "Historical"@en .
+
+dpv:HouseOwned a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about house(s) owned and ownership history."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Ownership ;
+    skos:narrower dpv:ApartmentOwned ;
+    skos:prefLabel "House Owned"@en .
+
+dpv:OptimisationForConsumer a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Elmar Kiesling"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernandez"^^xsd:string,
+        "Simon Steyskal"^^xsd:string ;
+    dct:description "optimise activities and services for the consumer or user"@en ;
+    rdfs:seeAlso svpu:Custom ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:ServiceOptimization ;
+    skos:narrower dpv:OptimiseUserInterface ;
+    skos:prefLabel "Optimisation for Consumer"@en .
+
+dpv:Organise a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to organize data for arranging or classifying"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Processing ;
+    skos:narrower dpv:Structure ;
+    skos:prefLabel "Organise"@en .
+
+dpv:PersonalisedAdvertising a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "provide personalised advertising"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Advertising,
+        dpv:ServicePersonalization ;
+    skos:prefLabel "Personalised Advertising"@en .
+
+dpv:PhilosophicalBelief a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about philosophical beliefs."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:KnowledgeBelief,
+        dpv:SpecialCategoryPersonalData ;
+    skos:prefLabel "Philosophical Belief"@en .
+
+dpv:PoliticalAffiliation a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about political affiliation and history"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:seeAlso svd:Political ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:PublicLife,
+        dpv:SpecialCategoryPersonalData ;
+    skos:prefLabel "Political Affiliation"@en .
+
+dpv:Race a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about race or racial history."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Ethnicity,
+        dpv:SpecialCategoryPersonalData ;
+    skos:prefLabel "Race"@en .
+
+dpv:Religion a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about religion, religious inclinations, and religious history."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:PublicLife,
+        dpv:SpecialCategoryPersonalData ;
+    skos:prefLabel "Religion"@en .
+
+dpv:ReligiousBelief a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about religion and religious beliefs."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:KnowledgeBelief,
+        dpv:SpecialCategoryPersonalData ;
+    skos:prefLabel "Religious Belief"@en .
+
+dpv:ServiceConsumptionBehavior a skos:Concept ;
+    dct:created "2019-11-26"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string,
+        "Rudy Jacob"^^xsd:string ;
+    dct:description "Information about the consumption of a service, e.g. time and duration of consumption."@en ;
+    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Behavioral ;
+    skos:narrower dpv:TVViewingBehavior ;
+    skos:prefLabel "Service Consumption Behavior"@en .
+
+dpv:Transfer a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to move data from one place to another"@en ;
+    rdfs:isDefinedBy <https://www.specialprivacy.eu/vocabs/processing> ;
+    rdfs:seeAlso svpr:Transfer ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Processing ;
+    skos:narrower dpv:Move ;
+    skos:prefLabel "Transfer"@en .
+
+dpv:AccountIdentifier a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about financial account identifier."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:FinancialAccount ;
+    skos:narrower dpv:FinancialAccountNumber,
+        dpv:PaymentCardNumber ;
+    skos:prefLabel "Account Identifier"@en .
+
+dpv:CertificationSeal a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string,
+        "Rob Brennan"^^xsd:string ;
+    dct:description "Certifications, seals, and marks indicating compliance to regulations or practices"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:OrganisationalMeasure ;
+    skos:narrower dpv:Certification,
+        dpv:Seal ;
+    skos:prefLabel "Certification and Seal"@en .
+
+dpv:CreatePersonalizedRecommendations a skos:Concept ;
+    dct:created "2019-11-26"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string,
+        "Rudy Jacob"^^xsd:string ;
+    dct:description "create and provide personalised recommendations"@en ;
+    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:ServicePersonalization ;
+    skos:narrower dpv:CreateEventRecommendations,
+        dpv:CreateProductRecommendations ;
+    skos:prefLabel "Create Personalized Recommendations"@en .
+
+dpv:DataSubject a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Javier Fernández"^^xsd:string ;
+    dct:description "The individual (or category of individuals) whose personal data is being processed"@en ;
+    dct:modified "2020-11-04"^^xsd:date ;
+    rdfs:comment "The term 'data subject' is specific to the GDPR, but is functionally equivalent to the term 'individual' and the ISO/IEC term 'PII Principle'."@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_1/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:LegalEntity ;
+    skos:narrower dpv:Child,
+        dpv:VulnerableDataSubject ;
+    skos:prefLabel "Data Subject"@en .
+
+dpv:DeviceSoftware a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "Information about software on or related to a device."@en ;
+    rdfs:isDefinedBy <https://www.w3.org/community/dpvcg/> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:DeviceBased ;
+    skos:narrower dpv:DeviceApplications,
+        dpv:DeviceOperatingSystem ;
+    skos:prefLabel "Device Software"@en .
+
+dpv:Family a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about family and relationships"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Social ;
+    skos:narrower dpv:FamilyStructure,
+        dpv:Relationship ;
+    skos:prefLabel "Family"@en .
+
+dpv:Health a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about health."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:seeAlso svd:Health ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:MedicalHealth ;
+    skos:narrower dpv:MentalHealth,
+        dpv:PhysicalHealth ;
+    skos:prefLabel "Health"@en .
+
+dpv:HealthHistory a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about health history."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:MedicalHealth ;
+    skos:narrower dpv:FamilyHealthHistory,
+        dpv:IndividualHealthHistory ;
+    skos:prefLabel "Health History"@en .
+
+dpv:ImpactAssessment a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "Calculating or determining the likelihood of impact of an existing or proposed process, which can involve risks or detriments."@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:OrganisationalMeasure ;
+    skos:narrower dpv:DPIA,
+        dpv:PIA ;
+    skos:prefLabel "Impact Assessment"@en .
+
+dpv:Interest a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about interests"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Preference ;
+    skos:narrower dpv:Dislike,
+        dpv:Like ;
+    skos:prefLabel "Interest"@en .
+
+dpv:Language a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about language and lingual history."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Ethnicity ;
+    skos:narrower dpv:Accent,
+        dpv:Dialect ;
+    skos:prefLabel "Language"@en .
+
+dpv:LegalAgreement a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string,
+        "Rob Brennan"^^xsd:string ;
+    dct:description "A legally binding agreement"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:OrganisationalMeasure ;
+    skos:narrower dpv:Contract,
+        dpv:NDA ;
+    skos:prefLabel "Legal Agreement"@en .
+
+dpv:PaymentCard a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "Information about payment card such as Credit Card, Debit Card."@en ;
+    rdfs:isDefinedBy <https://www.w3.org/community/dpvcg/> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:FinancialAccount ;
+    skos:narrower dpv:PaymentCardExpiry,
+        dpv:PaymentCardNumber ;
+    skos:prefLabel "Payment Card"@en .
+
+dpv:PaymentCardNumber a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Georg P Krog"^^xsd:string ;
+    dct:description "Information about payment card number."@en ;
+    rdfs:isDefinedBy <https://www.w3.org/community/dpvcg/> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:AccountIdentifier,
+        dpv:PaymentCard ;
+    skos:narrower dpv:CreditCardNumber ;
+    skos:prefLabel "Payment Card Number"@en .
+
+dpv:PseudoAnonymization a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string,
+        "Rob Brennan"^^xsd:string ;
+    dct:description "PseudoAnonmyization or 'pseudonymisation’ means the processing of personal data in such a manner that the personal data can no longer be attributed to a specific data subject without the use of additional information, provided that such additional information is kept separately and is subject to technical and organisational measures to ensure that the personal data are not attributed to an identified or identifiable natural person;"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_5/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:PseudonymisationEncryption ;
+    skos:narrower dpv:Anonymization,
+        dpv:DeIdentification ;
+    skos:prefLabel "Pseudo-Anonymization"@en .
+
+dpv:Recipient a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Javier Fernández"^^xsd:string ;
+    dct:description "Entities that receive personal data"@en ;
+    dct:modified "2020-11-04"^^xsd:date ;
+    rdfs:comment "A recipient of personal data can be used to indicate any entity that receives personal data. This can be a Third Party, Processor (GDPR), or even a Controller."@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_9/oj>,
+        <https://www.specialprivacy.eu/> ;
+    rdfs:seeAlso spl:AnyRecipient ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:LegalEntity ;
+    skos:narrower dpv:DataProcessor,
+        dpv:ThirdParty ;
+    skos:prefLabel "Recipient"@en .
+
+dpv:Remove a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to destruct or erase data"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Processing ;
+    skos:narrower dpv:Destruct,
+        dpv:Erase ;
+    skos:prefLabel "Remove"@en .
+
+dpv:ServiceOptimization a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Elmar Kiesling"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernandez"^^xsd:string,
+        "Simon Steyskal"^^xsd:string ;
+    dct:description "optimise service or activity"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Purpose ;
+    skos:narrower dpv:OptimisationForConsumer,
+        dpv:OptimisationForController ;
+    skos:prefLabel "Service Optimization"@en .
+
+dpv:TechnicalOrganisationalMeasure a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Bud Bruegger"^^xsd:string ;
+    dct:description "The Technical and Organisational measures used."@en ;
+    dct:modified "2020-11-04"^^xsd:date ;
+    sw:term_status "accepted"@en ;
+    skos:narrower dpv:OrganisationalMeasure,
+        dpv:RiskMitigationMeasure,
+        dpv:TechnicalMeasure ;
+    skos:prefLabel "Technical and Organisational Measure"@en .
+
+dpv:Authenticating a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about authentication and information used for authenticating"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Internal ;
+    skos:narrower dpv:PINCode,
+        dpv:Password,
+        dpv:SecretText ;
+    skos:prefLabel "Authenticating"@en .
+
+dpv:Biometric a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about biometrics and biometric characteristics."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Identifying,
+        dpv:SpecialCategoryPersonalData ;
+    skos:narrower dpv:Fingerprint,
+        dpv:Retina ;
+    skos:prefLabel "Biometric"@en .
+
+dpv:Contact a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about contacts or used for contacting e.g. email address or phone number"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:seeAlso svd:Physical ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Tracking ;
+    skos:narrower dpv:EmailAddress,
+        dpv:PhysicalAddress,
+        dpv:TelephoneNumber ;
+    skos:prefLabel "Contact"@en .
+
+dpv:Criminal a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about criminal activity e.g. criminal convictions or jail time"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:seeAlso svd:Judicial ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Social ;
+    skos:narrower dpv:CriminalCharge,
+        dpv:CriminalConviction,
+        dpv:CriminalPardon ;
+    skos:prefLabel "Criminal"@en .
+
+dpv:Demographic a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about demography and demographic characteristics"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:External ;
+    skos:narrower dpv:Geographic,
+        dpv:IncomeBracket,
+        dpv:PhysicalTrait ;
+    skos:prefLabel "Demographic"@en .
+
+dpv:Ethnicity a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about ethnic origins and lineage"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:External ;
+    skos:narrower dpv:EthnicOrigin,
+        dpv:Language,
+        dpv:Race ;
+    skos:prefLabel "Ethnicity"@en .
+
+dpv:Favorite a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about favorites"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Preference ;
+    skos:narrower dpv:FavoriteColor,
+        dpv:FavoriteFood,
+        dpv:FavoriteMusic ;
+    skos:prefLabel "Favorite"@en .
+
+dpv:Financial a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about finance including monetary characteristics and transactions"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:seeAlso svd:Financial ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:PersonalDataCategory ;
+    skos:narrower dpv:FinancialAccount,
+        dpv:Ownership,
+        dpv:Transactional ;
+    skos:prefLabel "Financial"@en .
+
+dpv:FinancialAccount a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about financial accounts."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Financial ;
+    skos:narrower dpv:AccountIdentifier,
+        dpv:BankAccount,
+        dpv:PaymentCard ;
+    skos:prefLabel "Financial Account"@en .
+
+dpv:GuidelinesPrinciple a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string,
+        "Rob Brennan"^^xsd:string ;
+    dct:description "Guidelines or Principles regarding processing and operational measures"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:OrganisationalMeasure ;
+    skos:narrower dpv:CodeOfConduct,
+        dpv:DesignStandard,
+        dpv:PrivacyByDefault ;
+    skos:prefLabel "GuidelinesPrinciple"@en .
+
+dpv:Internal a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Informatoin about internal characteristics that cannot be seen or observed"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:PersonalDataCategory ;
+    skos:narrower dpv:Authenticating,
+        dpv:KnowledgeBelief,
+        dpv:Preference ;
+    skos:prefLabel "Internal"@en .
+
+dpv:KnowledgeBelief a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about knowledge and beliefs"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Internal ;
+    skos:narrower dpv:PhilosophicalBelief,
+        dpv:ReligiousBelief,
+        dpv:Thought ;
+    skos:prefLabel "Knowledge and Beliefs"@en .
+
+dpv:Location a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about location"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:seeAlso svd:Location ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Tracking ;
+    skos:narrower dpv:Country,
+        dpv:GPSCoordinate,
+        dpv:RoomNumber ;
+    skos:prefLabel "Location"@en .
+
+dpv:Marketing a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "carry out marketing i.e. promoting, selling, and distributing a product or service"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:CommercialInterest ;
+    skos:narrower dpv:Advertising,
+        dpv:DirectMarketing,
+        dpv:SocialMediaMarketing ;
+    skos:prefLabel "Marketing"@en .
+
+dpv:Obtain a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to solicit or gather data from someone"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Processing ;
+    skos:narrower dpv:Acquire,
+        dpv:Collect,
+        dpv:Record ;
+    skos:prefLabel "Obtain"@en .
+
+dpv:Ownership a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about ownership and history, including renting, borrowing, possessions."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Financial ;
+    skos:narrower dpv:CarOwned,
+        dpv:HouseOwned,
+        dpv:PersonalPossession ;
+    skos:prefLabel "Ownership"@en .
+
+dpv:PseudonymisationEncryption a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string,
+        "Rob Brennan"^^xsd:string ;
+    dct:description "Technical measures consisting of pseudoanonymization and encryption"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:TechnicalMeasure ;
+    skos:narrower dpv:EncryptionInRest,
+        dpv:EncryptionInTransfer,
+        dpv:PseudoAnonymization ;
+    skos:prefLabel "Pseudonymisation and Encryption"@en .
+
+dpv:ResearchAndDevelopment a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Elmar Kiesling"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernandez"^^xsd:string,
+        "Simon Steyskal"^^xsd:string ;
+    dct:description "conduct research and development for new methods, products, or services"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Purpose ;
+    skos:narrower dpv:AcademicResearch,
+        dpv:CommercialResearch,
+        dpv:NonCommercialResearch ;
+    skos:prefLabel "Research and Development"@en .
+
+dpv:RiskManagementProcedure a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string,
+        "Rob Brennan"^^xsd:string ;
+    dct:description "Risk management refers to a coordinated set of activities and methods that is used to direct an organization and to control the many risks that can affect its ability to achieve objectives.  The term risk management also refers to the programme that is used to manage risk. This programme includes risk management principles, a risk management framework, and a risk management process."@en ;
+    rdfs:comment "Data Protection Impact Assessments as per GDPR art 35, other Privacy Impact Assessments, threat severity assessment https://www.cnil.fr/en/privacy-impact-assessment-pia"@en ;
+    rdfs:isDefinedBy <https://www.iso.org/iso-31000-risk-management.html> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:OrganisationalMeasure ;
+    skos:narrower dpv:PrivacyByDesign,
+        dpv:RegularityOfRecertification,
+        dpv:StaffTraining ;
+    skos:prefLabel "Risk Management Procedure"@en .
+
+dpv:Security a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Elmar Kiesling"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernandez"^^xsd:string,
+        "Simon Steyskal"^^xsd:string ;
+    dct:description "ensure and enforce security e.g. of data"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Purpose ;
+    skos:narrower dpv:AccessControl,
+        dpv:FraudPreventionAndDetection,
+        dpv:IdentityVerification ;
+    skos:prefLabel "Security"@en .
+
+dpv:Tracking a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information used to track an individual or group e.g. location or email"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:PersonalDataCategory ;
+    skos:narrower dpv:Contact,
+        dpv:DeviceBased,
+        dpv:Location ;
+    skos:prefLabel "Tracking"@en .
+
+dpv:Communication a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information communicated from or to an individual"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Social ;
+    skos:narrower dpv:EmailContent,
+        dpv:SocialMediaCommunication,
+        dpv:VoiceCommunicationRecording,
+        dpv:VoiceMail ;
+    skos:prefLabel "Communication"@en .
+
+dpv:Credit a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about reputation with regards to money"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Transactional ;
+    skos:narrower dpv:CreditCapacity,
+        dpv:CreditRecord,
+        dpv:CreditStanding,
+        dpv:CreditWorthiness ;
+    skos:prefLabel "Credit"@en .
+
+dpv:DeviceBased a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about devices"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:seeAlso svd:Computer ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Tracking ;
+    skos:narrower dpv:BrowserFingerprint,
+        dpv:DeviceSoftware,
+        dpv:IPAddress,
+        dpv:MACAddress ;
+    skos:prefLabel "Device Based"@en .
+
+dpv:OptimisationForController a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Elmar Kiesling"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernandez"^^xsd:string,
+        "Simon Steyskal"^^xsd:string ;
+    dct:description "optimise activities and services for the Controller"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:ServiceOptimization ;
+    skos:narrower dpv:ImproveExistingProductsAndServices,
+        dpv:ImproveInternalCRMProcesses,
+        dpv:IncreaseServiceRobustness,
+        dpv:InternalResourceOptimisation ;
+    skos:prefLabel "Optimisation for Controller"@en .
+
+dpv:ServicePersonalization a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Elmar Kiesling"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernandez"^^xsd:string,
+        "Simon Steyskal"^^xsd:string ;
+    dct:description "personalise service or activity"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Purpose ;
+    skos:narrower dpv:CreatePersonalizedRecommendations,
+        dpv:PersonalisedAdvertising,
+        dpv:PersonalisedBenefits,
+        dpv:UserInterfacePersonalisation ;
+    skos:prefLabel "Service Personalization"@en .
+
+dpv:ServiceProvision a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Elmar Kiesling"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernandez"^^xsd:string,
+        "Simon Steyskal"^^xsd:string ;
+    dct:description "provide service or activity"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Purpose ;
+    skos:narrower dpv:CustomerCare,
+        dpv:Payment,
+        dpv:RegistrationAuthentication,
+        dpv:UsageAnalytics ;
+    skos:prefLabel "Service Provision"@en .
+
+dpv:StorageRestriction a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string,
+        "Rob Brennan"^^xsd:string ;
+    dct:description "Restrictions required or followed regarding storage of data"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:TechnicalMeasure ;
+    skos:narrower dpv:StorageDeletion,
+        dpv:StorageDuration,
+        dpv:StorageLocation,
+        dpv:StorageRestoration ;
+    skos:prefLabel "Storage Restriction"@en .
+
+dpv:TechnicalMeasure a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string,
+        "Rob Brennan"^^xsd:string ;
+    dct:description "Technical measures required/followed when processing data of the declared category"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:TechnicalOrganisationalMeasure ;
+    skos:narrower dpv:AccessControlMethod,
+        dpv:AuthenticationProtocols,
+        dpv:PseudonymisationEncryption,
+        dpv:StorageRestriction ;
+    skos:prefLabel "Technical Measure"@en .
+
+dpv:Use a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to use data"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Processing ;
+    skos:narrower dpv:Analyse,
+        dpv:Consult,
+        dpv:Profiling,
+        dpv:Retrieve ;
+    skos:prefLabel "Use"@en .
+
+dpv:CommercialInterest a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Elmar Kiesling"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernandez"^^xsd:string,
+        "Simon Steyskal"^^xsd:string ;
+    dct:description "carry out activities with a commercial interest i.e. of profit or benefit to the Controller"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Purpose ;
+    skos:narrower dpv:Marketing,
+        dpv:SellDataToThirdParties,
+        dpv:SellInsightsFromData,
+        dpv:SellProductsToDataSubject,
+        dpv:SellTargettedAdvertisements ;
+    skos:prefLabel "Commercial Interest"@en .
+
+dpv:Disclose a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to make data known"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Processing ;
+    skos:narrower dpv:DiscloseByTransmission,
+        dpv:Disseminate,
+        dpv:MakeAvailable,
+        dpv:Share,
+        dpv:Transmit ;
+    skos:prefLabel "Disclose"@en .
+
+dpv:FamilyStructure a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about family and familial structure."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Family ;
+    skos:narrower dpv:Divorce,
+        dpv:Marriage,
+        dpv:Offspring,
+        dpv:Parent,
+        dpv:Sibling ;
+    skos:prefLabel "Family Structure"@en .
+
+dpv:Preference a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about preferences or interests"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:seeAlso svd:Preference ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Internal ;
+    skos:narrower dpv:Favorite,
+        dpv:Intention,
+        dpv:Interest,
+        dpv:Opinion,
+        dpv:PrivacyPreference ;
+    skos:prefLabel "Preference"@en .
+
+dpv:Sexual a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about sexuality and sexual history"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:External,
+        dpv:SpecialCategoryPersonalData ;
+    skos:narrower dpv:Fetish,
+        dpv:Proclivitie,
+        dpv:SexualHistory,
+        dpv:SexualPreference ;
+    skos:prefLabel "Sexual"@en .
+
+dpv:SocialNetwork a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about friends or connections expressed as a social network"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Social ;
+    skos:narrower dpv:Acquantaince,
+        dpv:Association,
+        dpv:Connection,
+        dpv:Friend,
+        dpv:GroupMembership ;
+    skos:prefLabel "Social Network"@en .
+
+dpv:Identifying a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information that uniquely or semi-uniquely identifies an individual or a group"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:External ;
+    skos:narrower dpv:Biometric,
+        dpv:Name,
+        dpv:OfficialID,
+        dpv:Picture,
+        dpv:UID,
+        dpv:Username ;
+    skos:prefLabel "Identifying"@en .
+
+dpv:Social a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about social aspects such as family, public life, or professional networks."@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:PersonalDataCategory ;
+    skos:narrower dpv:Communication,
+        dpv:Criminal,
+        dpv:Family,
+        dpv:Professional,
+        dpv:PublicLife,
+        dpv:SocialNetwork ;
+    skos:prefLabel "Social"@en .
+
+dpv:External a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about external characteristics that can be observed"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:PersonalDataCategory ;
+    skos:narrower dpv:Behavioral,
+        dpv:Demographic,
+        dpv:Ethnicity,
+        dpv:Identifying,
+        dpv:MedicalHealth,
+        dpv:PhysicalCharacteristic,
+        dpv:Sexual ;
+    skos:prefLabel "External"@en .
+
+dpv:LegalEntity a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:description "A human or non-human that constitute as a legally defined entity"@en ;
+    sw:term_status "accepted"@en ;
+    skos:narrower dpv:Authority,
+        dpv:DataController,
+        dpv:DataProtectionOfficer,
+        dpv:DataSubject,
+        dpv:Recipient,
+        dpv:Representative ;
+    skos:prefLabel "Legal Entity"@en .
+
+dpv:OrganisationalMeasure a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string,
+        "Rob Brennan"^^xsd:string ;
+    dct:description "Organisational measures required/followed when processing data of the declared category"@en ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:TechnicalOrganisationalMeasure ;
+    skos:narrower dpv:AuthorisationProcedure,
+        dpv:CertificationSeal,
+        dpv:Consultation,
+        dpv:GuidelinesPrinciple,
+        dpv:ImpactAssessment,
+        dpv:LegalAgreement,
+        dpv:RiskManagementProcedure ;
+    skos:prefLabel "Organisational Measure"@en .
+
+dpv:PersonalDataCategory a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Harshvardhan Pandit"^^xsd:string ;
+    dct:description "A category of personal data"@en ;
+    dct:modified "2020-11-04"^^xsd:date ;
+    rdfs:comment "For a formal legal definition of personal data, see GDPR Art.4-1. An informal definition consists of any data directly or indirectly associated or related to an individual. This definition is equivalent to ISO/IEC definition of Personally Identifiable Information (PII)."@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_1/oj>,
+        <https://www.specialprivacy.eu/> ;
+    rdfs:seeAlso spl:AnyData ;
+    sw:term_status "accepted"@en ;
+    skos:narrower dpv:DerivedPersonalData,
+        dpv:External,
+        dpv:Financial,
+        dpv:Historical,
+        dpv:Internal,
+        dpv:Social,
+        dpv:SpecialCategoryPersonalData,
+        dpv:Tracking ;
+    skos:prefLabel "Personal Data Category"@en .
+
+dpv:Purpose a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Javier Fernández"^^xsd:string ;
+    dct:description "The purpose of processing personal data"@en ;
+    dct:modified "2020-11-04"^^xsd:date ;
+    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+    rdfs:seeAlso spl:AnyPurpose ;
+    sw:term_status "accepted"@en ;
+    skos:narrower dpv:CommercialInterest,
+        dpv:LegalCompliance,
+        dpv:ResearchAndDevelopment,
+        dpv:Security,
+        dpv:ServiceOptimization,
+        dpv:ServicePersonalization,
+        dpv:ServiceProvision ;
+    skos:prefLabel "Purpose"@en .
+
+dpv:Behavioral a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about behavior or activity"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:seeAlso svd:Activity ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:External ;
+    skos:narrower dpv:Attitude,
+        dpv:AuthenticationHistory,
+        dpv:BrowsingBehavior,
+        dpv:CallLog,
+        dpv:Demeanor,
+        dpv:LinkClicked,
+        dpv:Personality,
+        dpv:ServiceConsumptionBehavior ;
+    skos:prefLabel "Behavioral"@en .
+
+dpv:PhysicalCharacteristic a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about physical characteristics"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:seeAlso svd:Demographic ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:External ;
+    skos:narrower dpv:Age,
+        dpv:Gender,
+        dpv:HairColor,
+        dpv:Height,
+        dpv:Piercing,
+        dpv:SkinTone,
+        dpv:Tattoo,
+        dpv:Weight ;
+    skos:prefLabel "PhysicalCharacteristic"@en .
+
+dpv:Processing a skos:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Javier Fernández"^^xsd:string ;
+    dct:description "The processing performed on personal data"@en ;
+    dct:modified "2020-11-04"^^xsd:date ;
+    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+    rdfs:seeAlso spl:AnyProcessing ;
+    sw:term_status "accepted"@en ;
+    skos:narrower dpv:Copy,
+        dpv:Disclose,
+        dpv:Obtain,
+        dpv:Organise,
+        dpv:Remove,
+        dpv:Store,
+        dpv:Transfer,
+        dpv:Transform,
+        dpv:Use ;
+    skos:prefLabel "Processing"@en .
+
+dpv:PublicLife a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about public life"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Social ;
+    skos:narrower dpv:Character,
+        dpv:CommunicationsMetadata,
+        dpv:GeneralReputation,
+        dpv:Interaction,
+        dpv:MaritalStatus,
+        dpv:PoliticalAffiliation,
+        dpv:Religion,
+        dpv:SocialStatus ;
+    skos:prefLabel "Public Life"@en .
+
+dpv:Transactional a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about a purchasing, spending or income"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Financial ;
+    skos:narrower dpv:Credit,
+        dpv:Income,
+        dpv:LoanRecord,
+        dpv:Purchase,
+        dpv:PurchasesAndSpendingHabit,
+        dpv:Sale,
+        dpv:Tax,
+        dpv:Transaction ;
+    skos:prefLabel "Transactional"@en .
+
+dpv:Transform a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to change the form or nature of data"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Processing ;
+    skos:narrower dpv:Adapt,
+        dpv:Align,
+        dpv:Alter,
+        dpv:Anonymise,
+        dpv:Combine,
+        dpv:Derive,
+        dpv:PseudoAnonymise,
+        dpv:Restrict ;
+    skos:prefLabel "Transform"@en .
+
+dpv:MedicalHealth a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about health, medical conditions or health care"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:External,
+        dpv:SpecialCategoryPersonalData ;
+    skos:narrower dpv:BloodType,
+        dpv:DNACode,
+        dpv:Disability,
+        dpv:DrugTestResult,
+        dpv:Health,
+        dpv:HealthHistory,
+        dpv:HealthRecord,
+        dpv:Prescription ;
+    skos:prefLabel "MedicalHealth"@en .
+
+dpv:SpecialCategoryPersonalData a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Personal data belonging to one of 'special categories' that are more sensitive and require additional measures"@en ;
+    rdfs:comment "trade union membership, which is explicitly included in the taxative listing in GDPR Art. 9 (1), is not covered yet."@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_9/par_1/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:PersonalDataCategory ;
+    skos:narrower dpv:Biometric,
+        dpv:EthnicOrigin,
+        dpv:MedicalHealth,
+        dpv:PhilosophicalBelief,
+        dpv:PoliticalAffiliation,
+        dpv:Race,
+        dpv:Religion,
+        dpv:ReligiousBelief,
+        dpv:Sexual ;
+    skos:prefLabel "Special Category Personal Data"@en .
+
+dpv:Professional a skos:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Information about educational or professional career"@en ;
+    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Social ;
+    skos:narrower dpv:DisciplinaryAction,
+        dpv:EmploymentHistory,
+        dpv:Job,
+        dpv:ProfessionalCertification,
+        dpv:ProfessionalEvaluation,
+        dpv:ProfessionalInterview,
+        dpv:Reference,
+        dpv:Salary,
+        dpv:School,
+        dpv:WorkHistory ;
+    skos:prefLabel "Professional"@en .
+

@@ -1,0 +1,420 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dpv: <http://www.w3.org/ns/dpv#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix svpr: <http://www.specialprivacy.eu/vocabs/processing#> .
+@prefix sw: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dpv:AutomatedDecisionMaking a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string,
+        "Piero Bonatti"^^xsd:string ;
+    dct:description "Processing that involves automated decision making"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "Automated Decision Making"@en .
+
+dpv:DataSource a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "The source or origin of data"@en ;
+    rdfs:comment "Source is direct point of data collection; 'origin' would indicate the original/others points of where the data originates from"@en ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "Data Source"@en .
+
+dpv:EvaluationScoring a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string,
+        "Piero Bonatti"^^xsd:string ;
+    dct:description "Processing that involves evaluation and scoring of individuals"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "Evaluation and Scoring"@en .
+
+dpv:InnovativeUseOfNewTechnologies a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string,
+        "Piero Bonatti"^^xsd:string ;
+    dct:description "Processing that involves use of innovative and new technologies"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "Innovative Use of New Technologies"@en .
+
+dpv:LargeScaleProcessing a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string,
+        "Piero Bonatti"^^xsd:string ;
+    dct:description "Processing that takes place at large scales"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "Large Scale Processing"@en .
+
+dpv:MatchingCombining a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string,
+        "Piero Bonatti"^^xsd:string ;
+    dct:description "Processing that involves matching and combining of personal data"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "Matching and Combining"@en .
+
+dpv:SystematicMonitoring a skos:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string,
+        "Piero Bonatti"^^xsd:string ;
+    dct:description "Processing that involves systematic monitoring of individuals"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "Systematic Monitoring"@en .
+
+dpv:hasAlgorithmicLogic a rdf:Property ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Georg P. Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "Indicates the logic used in processing such as for automated decision making"@en ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "has algorithmic logic"@en .
+
+dpv:hasConsequences a rdf:Property ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Georg P. Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "Indicates consequences of processing such as those for Data Subjects in relation to automated decision making"@en ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "has consequences"@en .
+
+dpv:hasDataSource a rdf:Property ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Georg P. Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "Indicates the source or origin of data being processed"@en ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "has data source"@en .
+
+dpv:hasHumanInvolvement a rdf:Property ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Georg P. Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "Indicates Involvement of humans in processing such as within automated decision making process"@en ;
+    rdfs:comment "Human involvement is also relevant to 'human in the loop'"@en ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "has human involvement"@en .
+
+dpv:Acquire a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to come into possession or control of the data"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Obtain ;
+    skos:prefLabel "Acquire"@en .
+
+dpv:Adapt a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to modify the data, often rewritten into a new form for a new use"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Transform ;
+    skos:prefLabel "Adapt"@en .
+
+dpv:Align a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to adjust the data to be in relation to another data"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Transform ;
+    skos:prefLabel "Align"@en .
+
+dpv:Alter a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to change the data without changing it into something else"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Transform ;
+    skos:prefLabel "Alter"@en .
+
+dpv:Analyse a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to study or examine the data in detail"@en ;
+    rdfs:isDefinedBy <https://www.specialprivacy.eu/vocabs/processing> ;
+    rdfs:seeAlso svpr:Analyse ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Use ;
+    skos:prefLabel "Analyse"@en .
+
+dpv:Anonymise a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to irreversibly alter personal data in such a way that an unique data subject can no longer be identified directly or indirectly or in combination with other data"@en ;
+    rdfs:isDefinedBy <https://www.specialprivacy.eu/vocabs/processing> ;
+    rdfs:seeAlso svpr:Anonymize ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Transform ;
+    skos:prefLabel "Anonymise"@en .
+
+dpv:Collect a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to gather data from someone"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj>,
+        <https://www.specialprivacy.eu/vocabs/processing> ;
+    rdfs:seeAlso svpr:Collect ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Obtain ;
+    skos:prefLabel "Collect"@en .
+
+dpv:Combine a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to join or merge data"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj>,
+        <https://www.specialprivacy.eu/vocabs/processing> ;
+    rdfs:seeAlso svpr:Aggregate ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Transform ;
+    skos:prefLabel "Combine"@en .
+
+dpv:Consult a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to consult or query data"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj>,
+        <https://www.specialprivacy.eu/vocabs/processing> ;
+    rdfs:seeAlso svpr:Query ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Use ;
+    skos:prefLabel "Consult"@en .
+
+dpv:Copy a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to produce an exact reprodution of the data"@en ;
+    rdfs:isDefinedBy <https://www.specialprivacy.eu/vocabs/processing> ;
+    rdfs:seeAlso svpr:Copy ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Processing ;
+    skos:prefLabel "Copy"@en .
+
+dpv:Derive a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to create new derivative data from the original data"@en ;
+    rdfs:isDefinedBy <https://www.specialprivacy.eu/vocabs/processing> ;
+    rdfs:seeAlso svpr:Derive ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Transform ;
+    skos:prefLabel "Derive"@en .
+
+dpv:Destruct a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to process data in a way it no longer exists or cannot be repaired"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Remove ;
+    skos:prefLabel "Destruct"@en .
+
+dpv:DiscloseByTransmission a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to disclose data by means of transmission"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Disclose ;
+    skos:prefLabel "Disclose by Transmission"@en .
+
+dpv:Disseminate a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to spread data throughout"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Disclose ;
+    skos:prefLabel "Disseminate"@en .
+
+dpv:Erase a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to delete data"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Remove ;
+    skos:prefLabel "Erase"@en .
+
+dpv:MakeAvailable a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to transform or publish data to be used"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Disclose ;
+    skos:prefLabel "Make Available"@en .
+
+dpv:Move a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to move data from one location to another including deleting the original copy"@en ;
+    rdfs:isDefinedBy <https://www.specialprivacy.eu/vocabs/processing> ;
+    rdfs:seeAlso svpr:Move ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Transfer ;
+    skos:prefLabel "Move"@en .
+
+dpv:Profiling a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to create a profile that describes or represents a person"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Use ;
+    skos:prefLabel "Profiling"@en .
+
+dpv:PseudoAnonymise a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to replace personal identifiable information by artificial identifiers"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Transform ;
+    skos:prefLabel "Pseudo-Anonymise"@en .
+
+dpv:Record a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to make a record (especially media)"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Obtain ;
+    skos:prefLabel "Record"@en .
+
+dpv:Restrict a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to apply a restriction on the processsing of specific records"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Transform ;
+    skos:prefLabel "Restrict"@en .
+
+dpv:Retrieve a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to retrieve data, often in an automated manner"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Use ;
+    skos:prefLabel "Retrieve"@en .
+
+dpv:Share a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to give data (or a portion of it) to others"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Disclose ;
+    skos:prefLabel "Share"@en .
+
+dpv:Store a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to keep data for future use"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Processing ;
+    skos:prefLabel "Store"@en .
+
+dpv:Structure a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to arrange data according to a structure"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Organise ;
+    skos:prefLabel "Structure"@en .
+
+dpv:Transmit a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to send out data"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Disclose ;
+    skos:prefLabel "Transmit"@en .
+
+dpv:Organise a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to organize data for arranging or classifying"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Processing ;
+    skos:narrower dpv:Structure ;
+    skos:prefLabel "Organise"@en .
+
+dpv:Transfer a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to move data from one place to another"@en ;
+    rdfs:isDefinedBy <https://www.specialprivacy.eu/vocabs/processing> ;
+    rdfs:seeAlso svpr:Transfer ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Processing ;
+    skos:narrower dpv:Move ;
+    skos:prefLabel "Transfer"@en .
+
+dpv:Remove a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to destruct or erase data"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Processing ;
+    skos:narrower dpv:Destruct,
+        dpv:Erase ;
+    skos:prefLabel "Remove"@en .
+
+dpv:Obtain a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to solicit or gather data from someone"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Processing ;
+    skos:narrower dpv:Acquire,
+        dpv:Collect,
+        dpv:Record ;
+    skos:prefLabel "Obtain"@en .
+
+dpv:Use a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to use data"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Processing ;
+    skos:narrower dpv:Analyse,
+        dpv:Consult,
+        dpv:Profiling,
+        dpv:Retrieve ;
+    skos:prefLabel "Use"@en .
+
+dpv:Disclose a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to make data known"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Processing ;
+    skos:narrower dpv:DiscloseByTransmission,
+        dpv:Disseminate,
+        dpv:MakeAvailable,
+        dpv:Share,
+        dpv:Transmit ;
+    skos:prefLabel "Disclose"@en .
+
+dpv:Processing skos:narrower dpv:Copy,
+        dpv:Disclose,
+        dpv:Obtain,
+        dpv:Organise,
+        dpv:Remove,
+        dpv:Store,
+        dpv:Transfer,
+        dpv:Transform,
+        dpv:Use .
+
+dpv:Transform a skos:Concept ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:description "to change the form or nature of data"@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:Processing ;
+    skos:narrower dpv:Adapt,
+        dpv:Align,
+        dpv:Alter,
+        dpv:Anonymise,
+        dpv:Combine,
+        dpv:Derive,
+        dpv:PseudoAnonymise,
+        dpv:Restrict ;
+    skos:prefLabel "Transform"@en .
+
