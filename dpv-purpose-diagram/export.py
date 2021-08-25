@@ -9,11 +9,23 @@ GOOGLE_EXPORT_LINK = (
 
 # The document *must* be publicly viewable (minimum permissions)
 # The document ID is found within the URL
-DPV_DOCUMENT_ID = '1ppLJDWCIyU4VhaqerQpVaNv2uKmr742O3YVy-NE3Gk8'
+# working copy
+# DPV_DOCUMENT_ID = '1ppLJDWCIyU4VhaqerQpVaNv2uKmr742O3YVy-NE3Gk8'
+# primary / main 
+DPV_DOCUMENT_ID = '11bjy424zwC_j4bj9pnhmmI8o7RgrJfX4NgsZ31iR3Wo'
 
 DPV_SHEETS = (
-    # DPV
-    'DPV',
+    ## DPV
+    # 'BaseOntology',
+    # 'PersonalDataCategory',
+    'Purpose',
+    # 'Processing',
+    # 'TechnicalOrganisationalMeasure',
+    # 'Entities',
+    # 'Consent',
+    ## DPV-GDPR
+    # 'GDPR_LegalBasis',
+    # 'GDPR_LegalRights',
     )
 
 from urllib import request
@@ -63,7 +75,7 @@ def extract_terms_from_csv(filepath, Class):
 def generate_diagram(concepts):
     dot = []
     terms = {}
-    for node, parent, status, source in concepts:
+    for node, parent, status in concepts:
             if not node:
                 node = "Thing"
             if not parent:
@@ -73,8 +85,16 @@ def generate_diagram(concepts):
             parents = parent.split(',')
             for parent in parents:
                 dot.append(f'"{parent}" -> "{node}" ;\n')
+            if status == "accepted":
+                color = "aquamarine"
+            elif status == "proposed":
+                color = "lightblue"
+            elif status == "changed":
+                color = "gold"
+            else:
+                color = "gray"
             if node not in terms:
-                terms[node] = f'{node} [color=black,fillcolor={"aquamarine" if status == "accepted" else "lightblue"}, style=filled] ;\n'
+                terms[node] = f'{node} [color={color}, style=filled] ;\n'
     with open('graph.dot', 'w') as fd:
         fd.write('digraph G { rankdir = LR ;')
         for node in terms.values():
@@ -95,5 +115,5 @@ if __name__ == '__main__':
     terms = []
     for sheet in DPV_SHEETS:
         terms += extract_terms_from_csv(f'{sheet}.csv', DPV_Class)
-    generate_diagram((n.term, n.rdfs_subclassof, n.sw_termstatus, n.rdfs_isdefinedby) for n in terms)
+    generate_diagram((n.term, n.rdfs_subclassof, n.sw_termstatus) for n in terms)
     # print(terms)
