@@ -1,4 +1,6 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dpv: <http://www.w3.org/ns/dpv#> .
+@prefix dpv-gdpr: <http://www.w3.org/ns/dpv-gdpr#> .
 @prefix dpv-juris: <https://w3id.org/dpv/juris#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -18,11 +20,6 @@ dpv-juris:Algeria a dpv:Country ;
     dpv-juris:iso3166_apha2 "DZ"^^xsd:string ;
     dpv-juris:iso3166_apha3 "DZA"^^xsd:string .
 
-dpv-juris:Andorra a dpv:Country ;
-    rdfs:label "Andorra"^^xsd:string ;
-    dpv-juris:iso3166_apha2 "AD"^^xsd:string ;
-    dpv-juris:iso3166_apha3 "AND"^^xsd:string .
-
 dpv-juris:Angola a dpv:Country ;
     rdfs:label "Angola"^^xsd:string ;
     dpv-juris:iso3166_apha2 "AO"^^xsd:string ;
@@ -32,11 +29,6 @@ dpv-juris:AntiguaBarbuda a dpv:Country ;
     rdfs:label "Antigua and Barbuda"^^xsd:string ;
     dpv-juris:iso3166_apha2 "AG"^^xsd:string ;
     dpv-juris:iso3166_apha3 "ATG"^^xsd:string .
-
-dpv-juris:Argentina a dpv:Country ;
-    rdfs:label "Argentina"^^xsd:string ;
-    dpv-juris:iso3166_apha2 "AR"^^xsd:string ;
-    dpv-juris:iso3166_apha3 "ARG"^^xsd:string .
 
 dpv-juris:Armenia a dpv:Country ;
     rdfs:label "Armenia"^^xsd:string ;
@@ -138,11 +130,6 @@ dpv-juris:Cameroon a dpv:Country ;
     dpv-juris:iso3166_apha2 "CM"^^xsd:string ;
     dpv-juris:iso3166_apha3 "CMR"^^xsd:string .
 
-dpv-juris:Canada a dpv:Country ;
-    rdfs:label "Canada"^^xsd:string ;
-    dpv-juris:iso3166_apha2 "CA"^^xsd:string ;
-    dpv-juris:iso3166_apha3 "CAN"^^xsd:string .
-
 dpv-juris:CapeVerde a dpv:Country ;
     rdfs:label "Cape Verde"^^xsd:string ;
     dpv-juris:iso3166_apha2 "CV"^^xsd:string ;
@@ -210,6 +197,105 @@ dpv-juris:DominicanRepublic a dpv:Country ;
     rdfs:label "Dominican Republic"^^xsd:string ;
     dpv-juris:iso3166_apha2 "DO"^^xsd:string ;
     dpv-juris:iso3166_apha3 "DOM"^^xsd:string .
+
+dpv-juris:EUAdequacyAD a dpv-gdpr:A45-3 ;
+    rdfs:label "EU Adequacy Decision for Andorra" ;
+    rdfs:seeAlso "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32010D0625?"^^xsd:anyURI ;
+    dcat:temporal [ a dcat:PeriodOfTime ;
+            dcat:startDate "2010-10-21"^^xsd:date ] ;
+    dpv:hasCountry dpv-juris:Andorra .
+
+dpv-juris:EUAdequacyAR a dpv-gdpr:A45-3 ;
+    rdfs:label "EU Adequacy Decision for Argentina" ;
+    rdfs:seeAlso "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32003D0490"^^xsd:anyURI ;
+    dcat:temporal [ a dcat:PeriodOfTime ;
+            dcat:startDate "2003-07-05"^^xsd:date ] ;
+    dpv:hasCountry dpv-juris:Argentina .
+
+dpv-juris:EUAdequacyCA a dpv-gdpr:A45-3 ;
+    rdfs:label "EU Adequacy Decision for Canada (commercial organisations)" ;
+    rdfs:seeAlso "https://eur-lex.europa.eu/legal-content/en/TXT/?uri=CELEX%3A32002D0002"^^xsd:anyURI ;
+    dcat:temporal [ a dcat:PeriodOfTime ;
+            dcat:startDate "2002-01-04"^^xsd:date ] ;
+    dpv:hasCountry dpv-juris:Canada .
+
+dpv-juris:EUAdequacyCH a dpv-gdpr:A45-3 ;
+    rdfs:label "EU Adequacy Decision for Switzerland" ;
+    rdfs:seeAlso "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32000D0518"^^xsd:anyURI ;
+    dcat:temporal [ a dcat:PeriodOfTime ;
+            dcat:startDate "2000-08-25"^^xsd:date ] ;
+    dpv:hasCountry dpv-juris:Switzerland .
+
+dpv-juris:EUAdequacyFO a dpv-gdpr:A45-3 ;
+    rdfs:label "EU Adequacy Decision for Faroe Islands" ;
+    rdfs:seeAlso "https://eur-lex.europa.eu/legal-content/en/ALL/?uri=CELEX%3A32010D0146"^^xsd:anyURI ;
+    dcat:temporal [ a dcat:PeriodOfTime ;
+            dcat:startDate "2010-03-09"^^xsd:date ] ;
+    dpv:hasCountry dpv-juris:FaroeIslands .
+
+dpv-juris:EUAdequacyGG a dpv-gdpr:A45-3 ;
+    rdfs:label "EU Adequacy Decision for Guernsey" ;
+    rdfs:seeAlso "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32003D0821"^^xsd:anyURI ;
+    dcat:temporal [ a dcat:PeriodOfTime ;
+            dcat:startDate "2003-11-21"^^xsd:date ] ;
+    dpv:hasCountry dpv-juris:Guernsey .
+
+dpv-juris:EUAdequacyIL a dpv-gdpr:A45-3 ;
+    rdfs:label "EU Adequacy Decision for Israel" ;
+    rdfs:seeAlso "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32011D0061"^^xsd:anyURI ;
+    dcat:temporal [ a dcat:PeriodOfTime ;
+            dcat:startDate "2011-02-01"^^xsd:date ] ;
+    dpv:hasCountry dpv-juris:Israel .
+
+dpv-juris:EUAdequacyIM a dpv-gdpr:A45-3 ;
+    rdfs:label "EU Adequacy Decision for Isle of Man" ;
+    rdfs:seeAlso "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32004D0411"^^xsd:anyURI ;
+    dcat:temporal [ a dcat:PeriodOfTime ;
+            dcat:startDate "2004-04-30"^^xsd:date ] ;
+    dpv:hasCountry dpv-juris:IsleOfMan .
+
+dpv-juris:EUAdequacyJE a dpv-gdpr:A45-3 ;
+    rdfs:label "EU Adequacy Decision for Jersey" ;
+    rdfs:seeAlso "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32008D0393"^^xsd:anyURI ;
+    dcat:temporal [ a dcat:PeriodOfTime ;
+            dcat:startDate "2008-05-26"^^xsd:date ] ;
+    dpv:hasCountry dpv-juris:Jersey .
+
+dpv-juris:EUAdequacyJP a dpv-gdpr:A45-3 ;
+    rdfs:label "EU Adequacy Decision for Japan" ;
+    rdfs:seeAlso "http://data.europa.eu/eli/dec_impl/2019/419/oj"^^xsd:anyURI ;
+    dcat:temporal [ a dcat:PeriodOfTime ;
+            dcat:startDate "2019-01-23"^^xsd:date ] ;
+    dpv:hasCountry dpv-juris:Japan .
+
+dpv-juris:EUAdequacyNZ a dpv-gdpr:A45-3 ;
+    rdfs:label "EU Adequacy Decision for New Zealand" ;
+    rdfs:seeAlso "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32013D0065"^^xsd:anyURI ;
+    dcat:temporal [ a dcat:PeriodOfTime ;
+            dcat:startDate "2012-12-20"^^xsd:date ] ;
+    dpv:hasCountry dpv-juris:NewZealand .
+
+dpv-juris:EUAdequacyUK a dpv-gdpr:A45-3 ;
+    rdfs:label "EU Adequacy Decision for United Kingdom" ;
+    rdfs:seeAlso "https://ec.europa.eu/info/files/decision-adequate-protection-personal-data-united-kingdom-general-data-protection-regulation_en"^^xsd:anyURI ;
+    dcat:temporal [ a dcat:PeriodOfTime ;
+            dcat:startDate "2021-06-28"^^xsd:date ] ;
+    dpv:hasCountry dpv-juris:UK .
+
+dpv-juris:EUAdequacyUY a dpv-gdpr:A45-3 ;
+    rdfs:label "EU Adequacy Decision for Uruguay" ;
+    rdfs:seeAlso "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32012D0484"^^xsd:anyURI ;
+    dcat:temporal [ a dcat:PeriodOfTime ;
+            dcat:startDate "2012-08-22"^^xsd:date ] ;
+    dpv:hasCountry dpv-juris:Uruguay .
+
+dpv-juris:EUSCCControllersProcessors a dpv-gdpr:SCCByCommission ;
+    rdfs:label "Standard contractual clauses for controllers and processors in the EU/EEA" ;
+    rdfs:seeAlso "https://ec.europa.eu/info/law/law-topic/data-protection/publications/standard-contractual-clauses-controllers-and-processors"^^xsd:anyURI .
+
+dpv-juris:EUSCCInternationalTransfers a dpv-gdpr:SCCByCommission ;
+    rdfs:label "Standard contractual clauses for international transfers" ;
+    rdfs:seeAlso "https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection/standard-contractual-clauses-scc/standard-contractual-clauses-international-transfers_en"^^xsd:anyURI .
 
 dpv-juris:Ecuador a dpv:Country ;
     rdfs:label "Ecuador"^^xsd:string ;
@@ -326,11 +412,6 @@ dpv-juris:Iraq a dpv:Country ;
     dpv-juris:iso3166_apha2 "IQ"^^xsd:string ;
     dpv-juris:iso3166_apha3 "IRQ"^^xsd:string .
 
-dpv-juris:Israel a dpv:Country ;
-    rdfs:label "Israel"^^xsd:string ;
-    dpv-juris:iso3166_apha2 "IL"^^xsd:string ;
-    dpv-juris:iso3166_apha3 "ISR"^^xsd:string .
-
 dpv-juris:IvoryCoast a dpv:Country ;
     rdfs:label "Côte d'Ivoire"^^xsd:string ;
     dpv-juris:iso3166_apha2 "CI"^^xsd:string ;
@@ -340,11 +421,6 @@ dpv-juris:Jamaica a dpv:Country ;
     rdfs:label "Jamaica"^^xsd:string ;
     dpv-juris:iso3166_apha2 "JM"^^xsd:string ;
     dpv-juris:iso3166_apha3 "JAM"^^xsd:string .
-
-dpv-juris:Japan a dpv:Country ;
-    rdfs:label "Japan"^^xsd:string ;
-    dpv-juris:iso3166_apha2 "JP"^^xsd:string ;
-    dpv-juris:iso3166_apha3 "JPN"^^xsd:string .
 
 dpv-juris:Jordan a dpv:Country ;
     rdfs:label "Jordan"^^xsd:string ;
@@ -500,11 +576,6 @@ dpv-juris:Nepal a dpv:Country ;
     rdfs:label "Nepal"^^xsd:string ;
     dpv-juris:iso3166_apha2 "NP"^^xsd:string ;
     dpv-juris:iso3166_apha3 "NPL"^^xsd:string .
-
-dpv-juris:NewZealand a dpv:Country ;
-    rdfs:label "New Zealand"^^xsd:string ;
-    dpv-juris:iso3166_apha2 "NZ"^^xsd:string ;
-    dpv-juris:iso3166_apha3 "NZL"^^xsd:string .
 
 dpv-juris:Nicaragua a dpv:Country ;
     rdfs:label "Nicaragua"^^xsd:string ;
@@ -686,12 +757,6 @@ dpv-juris:Suriname a dpv:Country ;
     dpv-juris:iso3166_apha2 "SR"^^xsd:string ;
     dpv-juris:iso3166_apha3 "SUR"^^xsd:string .
 
-dpv-juris:Switzerland a dpv:Country ;
-    rdfs:label "Switzerland"^^xsd:string ;
-    dpv-juris:isMemberOf dpv-juris:EEA ;
-    dpv-juris:iso3166_apha2 "CH"^^xsd:string ;
-    dpv-juris:iso3166_apha3 "CHE"^^xsd:string .
-
 dpv-juris:Syria a dpv:Country ;
     rdfs:label "Syria"^^xsd:string ;
     dpv-juris:iso3166_apha2 "SY"^^xsd:string ;
@@ -777,11 +842,6 @@ dpv-juris:Ukraine a dpv:Country ;
     dpv-juris:iso3166_apha2 "UA"^^xsd:string ;
     dpv-juris:iso3166_apha3 "UKR"^^xsd:string .
 
-dpv-juris:Uruguay a dpv:Country ;
-    rdfs:label "Uruguay"^^xsd:string ;
-    dpv-juris:iso3166_apha2 "UY"^^xsd:string ;
-    dpv-juris:iso3166_apha3 "URY"^^xsd:string .
-
 dpv-juris:Uzbekistan a dpv:Country ;
     rdfs:label "Uzbekistan"^^xsd:string ;
     dpv-juris:iso3166_apha2 "UZ"^^xsd:string ;
@@ -826,6 +886,16 @@ dpv-juris:AT-DPA a dpv:DataProtectionAuthority ;
     rdfs:label "Austrian Data Protection Authority"^^xsd:string ;
     rdfs:seeAlso "https://dsb.gv.at"^^xsd:anyURI ;
     dpv:hasJurisdiction dpv-juris:Austria .
+
+dpv-juris:Andorra a dpv:Country ;
+    rdfs:label "Andorra"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "AD"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "AND"^^xsd:string .
+
+dpv-juris:Argentina a dpv:Country ;
+    rdfs:label "Argentina"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "AR"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "ARG"^^xsd:string .
 
 dpv-juris:Austria a dpv:Country ;
     rdfs:label "Austria"^^xsd:string ;
@@ -872,6 +942,11 @@ dpv-juris:CZ-DPA a dpv:DataProtectionAuthority ;
     rdfs:label "Office for Personal Data Protection"^^xsd:string ;
     rdfs:seeAlso "https://www.uoou.cz/"^^xsd:anyURI ;
     dpv:hasJurisdiction dpv-juris:CzechRepublic .
+
+dpv-juris:Canada a dpv:Country ;
+    rdfs:label "Canada"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "CA"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "CAN"^^xsd:string .
 
 dpv-juris:Croatia a dpv:Country ;
     rdfs:label "Croatia"^^xsd:string ;
@@ -953,6 +1028,11 @@ dpv-juris:FR-DPA a dpv:DataProtectionAuthority ;
     rdfs:seeAlso "https://www.cnil.fr/"^^xsd:anyURI ;
     dpv:hasJurisdiction dpv-juris:France .
 
+dpv-juris:FaroeIslands a dpv:Country ;
+    rdfs:label "Faroe Islands"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "FO"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "FRO"^^xsd:string .
+
 dpv-juris:Finland a dpv:Country ;
     rdfs:label "Finland"^^xsd:string ;
     dpv:hasAuthority dpv-juris:FI-DPA ;
@@ -989,6 +1069,11 @@ dpv-juris:Greece a dpv:Country ;
         dpv-juris:EU ;
     dpv-juris:iso3166_apha2 "GR"^^xsd:string ;
     dpv-juris:iso3166_apha3 "GRC"^^xsd:string .
+
+dpv-juris:Guernsey a dpv:Country ;
+    rdfs:label "Guernsey"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "GG"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "GGY"^^xsd:string .
 
 dpv-juris:HR-DPA a dpv:DataProtectionAuthority ;
     rdfs:label "Croatian Personal Data Protection Agency"^^xsd:string ;
@@ -1038,6 +1123,16 @@ dpv-juris:Ireland a dpv:Country ;
     dpv-juris:iso3166_apha2 "IE"^^xsd:string ;
     dpv-juris:iso3166_apha3 "IRL"^^xsd:string .
 
+dpv-juris:IsleOfMan a dpv:Country ;
+    rdfs:label "Isle of Man"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "IM"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "IMN"^^xsd:string .
+
+dpv-juris:Israel a dpv:Country ;
+    rdfs:label "Israel"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "IL"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "ISR"^^xsd:string .
+
 dpv-juris:Italy a dpv:Country ;
     rdfs:label "Italy"^^xsd:string ;
     dpv:hasAuthority dpv-juris:IT-DPA ;
@@ -1045,6 +1140,16 @@ dpv-juris:Italy a dpv:Country ;
         dpv-juris:EU ;
     dpv-juris:iso3166_apha2 "IT"^^xsd:string ;
     dpv-juris:iso3166_apha3 "ITA"^^xsd:string .
+
+dpv-juris:Japan a dpv:Country ;
+    rdfs:label "Japan"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "JP"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "JPN"^^xsd:string .
+
+dpv-juris:Jersey a dpv:Country ;
+    rdfs:label "Jersey"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "JE"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "JEY"^^xsd:string .
 
 dpv-juris:LI-DPA a dpv:DataProtectionAuthority ;
     rdfs:label "Data Protection Authority, Principality of Liechtenstein"^^xsd:string ;
@@ -1127,6 +1232,11 @@ dpv-juris:Netherlands a dpv:Country ;
         dpv-juris:EU ;
     dpv-juris:iso3166_apha2 "NL"^^xsd:string ;
     dpv-juris:iso3166_apha3 "NLD"^^xsd:string .
+
+dpv-juris:NewZealand a dpv:Country ;
+    rdfs:label "New Zealand"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "NZ"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "NZL"^^xsd:string .
 
 dpv-juris:Norway a dpv:Country ;
     rdfs:label "Norway"^^xsd:string ;
@@ -1221,16 +1331,27 @@ dpv-juris:Sweden a dpv:Country ;
     dpv-juris:iso3166_apha2 "SE"^^xsd:string ;
     dpv-juris:iso3166_apha3 "SWE"^^xsd:string .
 
-dpv-juris:UK a dpv:Country ;
-    rdfs:label "United Kingdom"^^xsd:string ;
-    dpv:hasAuthority dpv-juris:UK-DPA ;
-    dpv-juris:iso3166_apha2 "GB"^^xsd:string ;
-    dpv-juris:iso3166_apha3 "GBR"^^xsd:string .
+dpv-juris:Switzerland a dpv:Country ;
+    rdfs:label "Switzerland"^^xsd:string ;
+    dpv-juris:isMemberOf dpv-juris:EEA ;
+    dpv-juris:iso3166_apha2 "CH"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "CHE"^^xsd:string .
 
 dpv-juris:UK-DPA a dpv:DataProtectionAuthority ;
     rdfs:label "Information Commissioner's Office"^^xsd:string ;
     rdfs:seeAlso "https://ico.org.uk/"^^xsd:anyURI ;
     dpv:hasJurisdiction dpv-juris:UK .
+
+dpv-juris:Uruguay a dpv:Country ;
+    rdfs:label "Uruguay"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "UY"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "URY"^^xsd:string .
+
+dpv-juris:UK a dpv:Country ;
+    rdfs:label "United Kingdom"^^xsd:string ;
+    dpv:hasAuthority dpv-juris:UK-DPA ;
+    dpv-juris:iso3166_apha2 "GB"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "GBR"^^xsd:string .
 
 dpv-juris:EU a dpv:SupraNationalUnion ;
     rdfs:label "European Union"^^xsd:string ;
