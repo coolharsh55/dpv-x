@@ -1,4 +1,4 @@
-"Term","Label","Description","domain","range","ParentProperty","RelatedTerms","Relation","Comment","Source","Created","Modified","Status","Contributos","Resolution","","","","","","","","","","","","",""
+"Term","Label","Description","domain","range","ParentProperty","RelatedTerms","Relation","Comment","Source","Created","Modified","Status","Contributors","Resolution","","","","","","","","","","","","",""
 "hasPersonalDataCategory","has personal data category","Indicates association with a Personal Data Category.","","","","","","","(SPECIAL Project,https://www.specialprivacy.eu/)","2019-04-04","2020-11-04","accepted","Axel Polleres, Javier Fernández, Harshvardhan J. Pandit, Mark Lizar, Bud Bruegger
 ","https://www.w3.org/2019/04/05-dpvcg-minutes.html","","","","","","","","","","","","",""
 "hasProcessing","has processing","Indicates association with a Processing (of personal data) instance or category.","","","","","","","(SPECIAL Project,https://www.specialprivacy.eu/)","2019-04-04","2020-11-04","accepted","Axel Polleres, Javier Fernández, Harshvardhan J. Pandit, Mark Lizar, Bud Bruegger
@@ -16,3 +16,4 @@
 ","https://www.w3.org/2019/04/05-dpvcg-minutes.html","","","","","","","","","","","","",""
 "hasRight","has right","Indicates applicability of a Right.","","","","","","","","2020-11-18","","accepted","Harshvardhan J. Pandit","https://www.w3.org/2020/11/18-dpvcg-minutes.html","","","","","","","","","","","","",""
 "hasRisk","has risk","Indicates applicability of a Risk.","","","","","","","","2020-11-18","","accepted","Harshvardhan J. Pandit","https://www.w3.org/2020/11/18-dpvcg-minutes.html","","","","","","","","","","","","",""
+"hasPersonalDataHandling","has personal data handling","Indicates association with a personal data handling instance or category","","","","","","","","2021-10-13","","proposed","Harshvardhan J. Pandit, Georg P Krog","","","","","","","","","","","","","",""

@@ -1,4 +1,4 @@
-"Term","Label","Description","domain","range","ParentProperty","RelatedTerms","Relation","Comment","Source","CreationDate","Modified","Status","Contributos","Resolution","","","","","","","","","","","","",""
+"Term","Label","Description","domain","range","ParentProperty","RelatedTerms","Relation","Comment","Source","CreationDate","Modified","Status","Contributors","Resolution","","","","","","","","","","","","",""
 "hasExpiry","has expiry","Generic property specifying when or under which condition(s) the consent will expire","","","","","","","","2019-04-05","","accepted","Harshvardhan J. Pandit, Mark Lizar, Bud Bruegger
 ","https://www.w3.org/2019/04/05-dpvcg-minutes.html","","","","","","","","","","","","",""
 "hasExpiryTime","has expiry time","Specifies the expiry time or duration for consent","","time:TemporalEntity","dpv:expiry","","","","","2019-04-05","","accepted","Harshvardhan J. Pandit, Mark Lizar, Bud Bruegger

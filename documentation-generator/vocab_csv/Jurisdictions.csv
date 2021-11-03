@@ -1,0 +1,5 @@
+"Term","Label","Description","ParentTerm","RelatedTerms","Relation","Comment","Source","Created","Modified","Status","Contributors","Resolution","","","","","","","","","","","","",""
+"Jurisdiction","Jurisdiction","Jurisdiction indicates the extent or applicability of laws or legal frameworks to geographic or virtual areas","","","","","","2021-10-13","","proposed","Harshvardhan J. Pandit","","","","","","","","","","","","","",""
+"Country_clashPDC","Country","A political entity indicative of a sovereign or non-sovereign territorial state comprising of distinct geographical areas","dpv:Jurisdiction","","","","","2021-10-13","","proposed","Harshvardhan J. Pandit, Georg P Krog","","","","","","","","","","","","","",""
+"SupraNationalUnion","","","","","","","","","","proposed","","","","","","","","","","","","","","",""
+"EconomicUnion","","","","","","","","","","proposed","","","","","","","","","","","","","","",""

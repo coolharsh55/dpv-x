@@ -1,0 +1,4 @@
+"Term","Label","Description","domain","range","ParentProperty","RelatedTerms","Relation","Comment","Source","CreationDate","Modified","Status","Contributors","Resolution","","","","","","","","","","","","",""
+"hasJurisdiction","has jurisdiction","Indicates applicability of specified jurisdiction","","dpv:Jurisdiction","","","","","","2021-10-13","","proposed","Harshvardhan J. Pandit","","","","","","","","","","","","","",""
+"hasCountry","has country","Indicates applicability of specified country","","dpv:Country","","","","","","2021-10-13","","proposed","Harshvardhan J. Pandit, Georg P Krog","","","","","","","","","","","","","",""
+"hasAuthority","hasAuthority","Indicates applicability of authority for a jurisdiction","dpv:Jurisdiction","dpv:Authority","","","","","","2021-10-13","","proposed","Harshvardhan J. Pandit, Georg P Krog","","","","","","","","","","","","","",""
