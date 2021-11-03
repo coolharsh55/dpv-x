@@ -1,0 +1,1242 @@
+@prefix dpv: <http://www.w3.org/ns/dpv#> .
+@prefix dpv-juris: <https://w3id.org/dpv/juris#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dpv-juris:Afghanistan a dpv:Country ;
+    rdfs:label "Afghanistan"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "AF"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "AFG"^^xsd:string .
+
+dpv-juris:Albania a dpv:Country ;
+    rdfs:label "Albania"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "AL"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "ALB"^^xsd:string .
+
+dpv-juris:Algeria a dpv:Country ;
+    rdfs:label "Algeria"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "DZ"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "DZA"^^xsd:string .
+
+dpv-juris:Andorra a dpv:Country ;
+    rdfs:label "Andorra"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "AD"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "AND"^^xsd:string .
+
+dpv-juris:Angola a dpv:Country ;
+    rdfs:label "Angola"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "AO"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "AGO"^^xsd:string .
+
+dpv-juris:AntiguaBarbuda a dpv:Country ;
+    rdfs:label "Antigua and Barbuda"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "AG"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "ATG"^^xsd:string .
+
+dpv-juris:Argentina a dpv:Country ;
+    rdfs:label "Argentina"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "AR"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "ARG"^^xsd:string .
+
+dpv-juris:Armenia a dpv:Country ;
+    rdfs:label "Armenia"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "AM"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "ARM"^^xsd:string .
+
+dpv-juris:Australia a dpv:Country ;
+    rdfs:label "Australia"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "AU"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "AUS"^^xsd:string .
+
+dpv-juris:Azerbaijan a dpv:Country ;
+    rdfs:label "Azerbaijan"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "AZ"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "AZE"^^xsd:string .
+
+dpv-juris:Bahamas a dpv:Country ;
+    rdfs:label "The Bahamas"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "BS"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "BHS"^^xsd:string .
+
+dpv-juris:Bahrain a dpv:Country ;
+    rdfs:label "Bahrain"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "BH"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "BHR"^^xsd:string .
+
+dpv-juris:Bangladesh a dpv:Country ;
+    rdfs:label "Bangladesh"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "BD"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "BGD"^^xsd:string .
+
+dpv-juris:Barbados a dpv:Country ;
+    rdfs:label "Barbados"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "BB"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "BRB"^^xsd:string .
+
+dpv-juris:Belarus a dpv:Country ;
+    rdfs:label "Belarus"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "BY"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "BLR"^^xsd:string .
+
+dpv-juris:Belize a dpv:Country ;
+    rdfs:label "Belize"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "BZ"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "BLZ"^^xsd:string .
+
+dpv-juris:Benin a dpv:Country ;
+    rdfs:label "Benin"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "BJ"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "BEN"^^xsd:string .
+
+dpv-juris:Bhutan a dpv:Country ;
+    rdfs:label "Bhutan"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "BT"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "BTN"^^xsd:string .
+
+dpv-juris:Bolivia a dpv:Country ;
+    rdfs:label "Bolivia"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "BO"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "BOL"^^xsd:string .
+
+dpv-juris:BosniaHerzegovina a dpv:Country ;
+    rdfs:label "Bosnia and Herzegovina"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "BA"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "BIH"^^xsd:string .
+
+dpv-juris:Botswana a dpv:Country ;
+    rdfs:label "Botswana"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "BW"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "BWA"^^xsd:string .
+
+dpv-juris:Brazil a dpv:Country ;
+    rdfs:label "Brazil"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "BR"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "BRA"^^xsd:string .
+
+dpv-juris:Brunei a dpv:Country ;
+    rdfs:label "Brunei"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "BN"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "BRN"^^xsd:string .
+
+dpv-juris:BurkinaFaso a dpv:Country ;
+    rdfs:label "Burkina Faso"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "BF"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "BFA"^^xsd:string .
+
+dpv-juris:Burundi a dpv:Country ;
+    rdfs:label "Burundi"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "BI"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "BDI"^^xsd:string .
+
+dpv-juris:Cambodia a dpv:Country ;
+    rdfs:label "Cambodia"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "KH"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "KHM"^^xsd:string .
+
+dpv-juris:Cameroon a dpv:Country ;
+    rdfs:label "Cameroon"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "CM"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "CMR"^^xsd:string .
+
+dpv-juris:Canada a dpv:Country ;
+    rdfs:label "Canada"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "CA"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "CAN"^^xsd:string .
+
+dpv-juris:CapeVerde a dpv:Country ;
+    rdfs:label "Cape Verde"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "CV"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "CPV"^^xsd:string .
+
+dpv-juris:CentralAfricanRepublic a dpv:Country ;
+    rdfs:label "Central African Republic"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "CF"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "CAF"^^xsd:string .
+
+dpv-juris:Chad a dpv:Country ;
+    rdfs:label "Chad"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "TD"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "TCD"^^xsd:string .
+
+dpv-juris:Chile a dpv:Country ;
+    rdfs:label "Chile"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "CL"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "CHL"^^xsd:string .
+
+dpv-juris:China a dpv:Country ;
+    rdfs:label "People's Republic of China"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "CN"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "CHN"^^xsd:string .
+
+dpv-juris:Colombia a dpv:Country ;
+    rdfs:label "Colombia"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "CO"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "COL"^^xsd:string .
+
+dpv-juris:Comoros a dpv:Country ;
+    rdfs:label "Comoros"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "KM"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "COM"^^xsd:string .
+
+dpv-juris:Congo a dpv:Country ;
+    rdfs:label "Democratic Republic of the Congo"^^xsd:string,
+        "Republic of the Congo"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "CD"^^xsd:string,
+        "CG"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "COD"^^xsd:string,
+        "COG"^^xsd:string .
+
+dpv-juris:CostaRica a dpv:Country ;
+    rdfs:label "Costa Rica"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "CR"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "CRI"^^xsd:string .
+
+dpv-juris:Cuba a dpv:Country ;
+    rdfs:label "Cuba"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "CU"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "CUB"^^xsd:string .
+
+dpv-juris:Djibouti a dpv:Country ;
+    rdfs:label "Djibouti"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "DJ"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "DJI"^^xsd:string .
+
+dpv-juris:Dominica a dpv:Country ;
+    rdfs:label "Dominica"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "DM"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "DMA"^^xsd:string .
+
+dpv-juris:DominicanRepublic a dpv:Country ;
+    rdfs:label "Dominican Republic"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "DO"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "DOM"^^xsd:string .
+
+dpv-juris:Ecuador a dpv:Country ;
+    rdfs:label "Ecuador"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "EC"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "ECU"^^xsd:string .
+
+dpv-juris:Egypt a dpv:Country ;
+    rdfs:label "Egypt"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "EG"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "EGY"^^xsd:string .
+
+dpv-juris:ElSalvador a dpv:Country ;
+    rdfs:label "El Salvador"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "SV"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "SLV"^^xsd:string .
+
+dpv-juris:EquatorialGuinea a dpv:Country ;
+    rdfs:label "Equatorial Guinea"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "GQ"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "GNQ"^^xsd:string .
+
+dpv-juris:Eritrea a dpv:Country ;
+    rdfs:label "Eritrea"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "ER"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "ERI"^^xsd:string .
+
+dpv-juris:Eswatini a dpv:Country ;
+    rdfs:label "Eswatini"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "SZ"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "SWZ"^^xsd:string .
+
+dpv-juris:Ethiopia a dpv:Country ;
+    rdfs:label "Ethiopia"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "ET"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "ETH"^^xsd:string .
+
+dpv-juris:Fiji a dpv:Country ;
+    rdfs:label "Fiji"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "FJ"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "FJI"^^xsd:string .
+
+dpv-juris:Gabon a dpv:Country ;
+    rdfs:label "Gabon"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "GA"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "GAB"^^xsd:string .
+
+dpv-juris:Gambia a dpv:Country ;
+    rdfs:label "The Gambia"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "GM"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "GMB"^^xsd:string .
+
+dpv-juris:Georgia a dpv:Country ;
+    rdfs:label "Georgia"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "GE"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "GEO"^^xsd:string .
+
+dpv-juris:Ghana a dpv:Country ;
+    rdfs:label "Ghana"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "GH"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "GHA"^^xsd:string .
+
+dpv-juris:Grenada a dpv:Country ;
+    rdfs:label "Grenada"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "GD"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "GRD"^^xsd:string .
+
+dpv-juris:Guatemala a dpv:Country ;
+    rdfs:label "Guatemala"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "GT"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "GTM"^^xsd:string .
+
+dpv-juris:Guinea a dpv:Country ;
+    rdfs:label "Guinea"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "GN"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "GIN"^^xsd:string .
+
+dpv-juris:GuineaBissau a dpv:Country ;
+    rdfs:label "Guinea-Bissau"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "GW"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "GNB"^^xsd:string .
+
+dpv-juris:Guyana a dpv:Country ;
+    rdfs:label "Guyana"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "GY"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "GUY"^^xsd:string .
+
+dpv-juris:Haiti a dpv:Country ;
+    rdfs:label "Haiti"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "HT"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "HTI"^^xsd:string .
+
+dpv-juris:Honduras a dpv:Country ;
+    rdfs:label "Honduras"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "HN"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "HND"^^xsd:string .
+
+dpv-juris:India a dpv:Country ;
+    rdfs:label "India"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "IN"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "IND"^^xsd:string .
+
+dpv-juris:Indonesia a dpv:Country ;
+    rdfs:label "Indonesia"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "ID"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "IDN"^^xsd:string .
+
+dpv-juris:Iran a dpv:Country ;
+    rdfs:label "Iran"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "IR"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "IRN"^^xsd:string .
+
+dpv-juris:Iraq a dpv:Country ;
+    rdfs:label "Iraq"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "IQ"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "IRQ"^^xsd:string .
+
+dpv-juris:Israel a dpv:Country ;
+    rdfs:label "Israel"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "IL"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "ISR"^^xsd:string .
+
+dpv-juris:IvoryCoast a dpv:Country ;
+    rdfs:label "Côte d'Ivoire"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "CI"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "CIV"^^xsd:string .
+
+dpv-juris:Jamaica a dpv:Country ;
+    rdfs:label "Jamaica"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "JM"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "JAM"^^xsd:string .
+
+dpv-juris:Japan a dpv:Country ;
+    rdfs:label "Japan"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "JP"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "JPN"^^xsd:string .
+
+dpv-juris:Jordan a dpv:Country ;
+    rdfs:label "Jordan"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "JO"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "JOR"^^xsd:string .
+
+dpv-juris:Kazakhstan a dpv:Country ;
+    rdfs:label "Kazakhstan"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "KZ"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "KAZ"^^xsd:string .
+
+dpv-juris:Kenya a dpv:Country ;
+    rdfs:label "Kenya"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "KE"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "KEN"^^xsd:string .
+
+dpv-juris:Kiribati a dpv:Country ;
+    rdfs:label "Kiribati"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "KI"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "KIR"^^xsd:string .
+
+dpv-juris:Kuwait a dpv:Country ;
+    rdfs:label "Kuwait"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "KW"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "KWT"^^xsd:string .
+
+dpv-juris:Kyrgyzstan a dpv:Country ;
+    rdfs:label "Kyrgyzstan"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "KG"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "KGZ"^^xsd:string .
+
+dpv-juris:Laos a dpv:Country ;
+    rdfs:label "Laos"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "LA"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "LAO"^^xsd:string .
+
+dpv-juris:Lebanon a dpv:Country ;
+    rdfs:label "Lebanon"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "LB"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "LBN"^^xsd:string .
+
+dpv-juris:Lesotho a dpv:Country ;
+    rdfs:label "Lesotho"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "LS"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "LSO"^^xsd:string .
+
+dpv-juris:Liberia a dpv:Country ;
+    rdfs:label "Liberia"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "LR"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "LBR"^^xsd:string .
+
+dpv-juris:Libya a dpv:Country ;
+    rdfs:label "Libya"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "LY"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "LBY"^^xsd:string .
+
+dpv-juris:Madagascar a dpv:Country ;
+    rdfs:label "Madagascar"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "MG"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "MDG"^^xsd:string .
+
+dpv-juris:Malawi a dpv:Country ;
+    rdfs:label "Malawi"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "MW"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "MWI"^^xsd:string .
+
+dpv-juris:Malaysia a dpv:Country ;
+    rdfs:label "Malaysia"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "MY"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "MYS"^^xsd:string .
+
+dpv-juris:Maldives a dpv:Country ;
+    rdfs:label "Maldives"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "MV"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "MDV"^^xsd:string .
+
+dpv-juris:Mali a dpv:Country ;
+    rdfs:label "Mali"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "ML"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "MLI"^^xsd:string .
+
+dpv-juris:MarshallIslands a dpv:Country ;
+    rdfs:label "Marshall Islands"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "MH"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "MHL"^^xsd:string .
+
+dpv-juris:Mauritania a dpv:Country ;
+    rdfs:label "Mauritania"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "MR"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "MRT"^^xsd:string .
+
+dpv-juris:Mauritius a dpv:Country ;
+    rdfs:label "Mauritius"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "MU"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "MUS"^^xsd:string .
+
+dpv-juris:Mexico a dpv:Country ;
+    rdfs:label "Mexico"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "MX"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "MEX"^^xsd:string .
+
+dpv-juris:Micronesia a dpv:Country ;
+    rdfs:label "Federated States of Micronesia"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "FM"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "FSM"^^xsd:string .
+
+dpv-juris:Moldova a dpv:Country ;
+    rdfs:label "Moldova"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "MD"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "MDA"^^xsd:string .
+
+dpv-juris:Monaco a dpv:Country ;
+    rdfs:label "Monaco"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "MC"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "MCO"^^xsd:string .
+
+dpv-juris:Mongolia a dpv:Country ;
+    rdfs:label "Mongolia"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "MN"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "MNG"^^xsd:string .
+
+dpv-juris:Montenegro a dpv:Country ;
+    rdfs:label "Montenegro"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "ME"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "MNE"^^xsd:string .
+
+dpv-juris:Morocco a dpv:Country ;
+    rdfs:label "Morocco"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "MA"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "MAR"^^xsd:string .
+
+dpv-juris:Mozambique a dpv:Country ;
+    rdfs:label "Mozambique"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "MZ"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "MOZ"^^xsd:string .
+
+dpv-juris:Myanmar a dpv:Country ;
+    rdfs:label "Myanmar"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "MM"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "MMR"^^xsd:string .
+
+dpv-juris:Namibia a dpv:Country ;
+    rdfs:label "Namibia"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "NA"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "NAM"^^xsd:string .
+
+dpv-juris:Nauru a dpv:Country ;
+    rdfs:label "Nauru"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "NR"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "NRU"^^xsd:string .
+
+dpv-juris:Nepal a dpv:Country ;
+    rdfs:label "Nepal"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "NP"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "NPL"^^xsd:string .
+
+dpv-juris:NewZealand a dpv:Country ;
+    rdfs:label "New Zealand"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "NZ"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "NZL"^^xsd:string .
+
+dpv-juris:Nicaragua a dpv:Country ;
+    rdfs:label "Nicaragua"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "NI"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "NIC"^^xsd:string .
+
+dpv-juris:Niger a dpv:Country ;
+    rdfs:label "Niger"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "NE"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "NER"^^xsd:string .
+
+dpv-juris:Nigeria a dpv:Country ;
+    rdfs:label "Nigeria"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "NG"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "NGA"^^xsd:string .
+
+dpv-juris:NorthKorea a dpv:Country ;
+    rdfs:label "North Korea"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "KP"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "PRK"^^xsd:string .
+
+dpv-juris:NorthMacedonia a dpv:Country ;
+    rdfs:label "North Macedonia"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "MK"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "MKD"^^xsd:string .
+
+dpv-juris:Oman a dpv:Country ;
+    rdfs:label "Oman"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "OM"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "OMN"^^xsd:string .
+
+dpv-juris:Pakistan a dpv:Country ;
+    rdfs:label "Pakistan"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "PK"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "PAK"^^xsd:string .
+
+dpv-juris:Palau a dpv:Country ;
+    rdfs:label "Palau"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "PW"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "PLW"^^xsd:string .
+
+dpv-juris:Panama a dpv:Country ;
+    rdfs:label "Panama"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "PA"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "PAN"^^xsd:string .
+
+dpv-juris:PapuaNewGuinea a dpv:Country ;
+    rdfs:label "Papua New Guinea"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "PG"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "PNG"^^xsd:string .
+
+dpv-juris:Paraguay a dpv:Country ;
+    rdfs:label "Paraguay"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "PY"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "PRY"^^xsd:string .
+
+dpv-juris:Peru a dpv:Country ;
+    rdfs:label "Peru"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "PE"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "PER"^^xsd:string .
+
+dpv-juris:Philippines a dpv:Country ;
+    rdfs:label "Philippines"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "PH"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "PHL"^^xsd:string .
+
+dpv-juris:Qatar a dpv:Country ;
+    rdfs:label "Qatar"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "QA"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "QAT"^^xsd:string .
+
+dpv-juris:Russia a dpv:Country ;
+    rdfs:label "Russia"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "RU"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "RUS"^^xsd:string .
+
+dpv-juris:Rwanda a dpv:Country ;
+    rdfs:label "Rwanda"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "RW"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "RWA"^^xsd:string .
+
+dpv-juris:SaintKittsNevis a dpv:Country ;
+    rdfs:label "Saint Kitts and Nevis"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "KN"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "KNA"^^xsd:string .
+
+dpv-juris:SaintLucia a dpv:Country ;
+    rdfs:label "Saint Lucia"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "LC"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "LCA"^^xsd:string .
+
+dpv-juris:SaintThomasPrince a dpv:Country ;
+    rdfs:label "São Tomé and Príncipe"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "ST"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "STP"^^xsd:string .
+
+dpv-juris:SaintVincentGrenadines a dpv:Country ;
+    rdfs:label "Saint Vincent and the Grenadines"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "VC"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "VCT"^^xsd:string .
+
+dpv-juris:Samoa a dpv:Country ;
+    rdfs:label "Samoa"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "WS"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "WSM"^^xsd:string .
+
+dpv-juris:SanMarino a dpv:Country ;
+    rdfs:label "San Marino"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "SM"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "SMR"^^xsd:string .
+
+dpv-juris:SaudiArabia a dpv:Country ;
+    rdfs:label "Saudi Arabia"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "SA"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "SAU"^^xsd:string .
+
+dpv-juris:Senegal a dpv:Country ;
+    rdfs:label "Senegal"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "SN"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "SEN"^^xsd:string .
+
+dpv-juris:Serbia a dpv:Country ;
+    rdfs:label "Serbia"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "RS"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "SRB"^^xsd:string .
+
+dpv-juris:Seychelles a dpv:Country ;
+    rdfs:label "Seychelles"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "SC"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "SYC"^^xsd:string .
+
+dpv-juris:SierraLeone a dpv:Country ;
+    rdfs:label "Sierra Leone"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "SL"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "SLE"^^xsd:string .
+
+dpv-juris:Singapore a dpv:Country ;
+    rdfs:label "Singapore"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "SG"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "SGP"^^xsd:string .
+
+dpv-juris:SolomonIslands a dpv:Country ;
+    rdfs:label "Solomon Islands"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "SB"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "SLB"^^xsd:string .
+
+dpv-juris:Somalia a dpv:Country ;
+    rdfs:label "Somalia"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "SO"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "SOM"^^xsd:string .
+
+dpv-juris:SouthAfrica a dpv:Country ;
+    rdfs:label "South Africa"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "ZA"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "ZAF"^^xsd:string .
+
+dpv-juris:SouthKorea a dpv:Country ;
+    rdfs:label "South Korea"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "KR"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "KOR"^^xsd:string .
+
+dpv-juris:SouthSudan a dpv:Country ;
+    rdfs:label "South Sudan"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "SS"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "SSD"^^xsd:string .
+
+dpv-juris:SriLanka a dpv:Country ;
+    rdfs:label "Sri Lanka"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "LK"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "LKA"^^xsd:string .
+
+dpv-juris:Sudan a dpv:Country ;
+    rdfs:label "Sudan"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "SD"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "SDN"^^xsd:string .
+
+dpv-juris:Suriname a dpv:Country ;
+    rdfs:label "Suriname"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "SR"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "SUR"^^xsd:string .
+
+dpv-juris:Switzerland a dpv:Country ;
+    rdfs:label "Switzerland"^^xsd:string ;
+    dpv-juris:isMemberOf dpv-juris:EEA ;
+    dpv-juris:iso3166_apha2 "CH"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "CHE"^^xsd:string .
+
+dpv-juris:Syria a dpv:Country ;
+    rdfs:label "Syria"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "SY"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "SYR"^^xsd:string .
+
+dpv-juris:Taiwan a dpv:Country ;
+    rdfs:label "Taiwan"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "TW"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "TWN"^^xsd:string .
+
+dpv-juris:Tajikistan a dpv:Country ;
+    rdfs:label "Tajikistan"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "TJ"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "TJK"^^xsd:string .
+
+dpv-juris:Tanzania a dpv:Country ;
+    rdfs:label "Tanzania"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "TZ"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "TZA"^^xsd:string .
+
+dpv-juris:Thailand a dpv:Country ;
+    rdfs:label "Thailand"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "TH"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "THA"^^xsd:string .
+
+dpv-juris:TimorLeste a dpv:Country ;
+    rdfs:label "Timor-Leste"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "TL"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "TLS"^^xsd:string .
+
+dpv-juris:Togo a dpv:Country ;
+    rdfs:label "Togo"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "TG"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "TGO"^^xsd:string .
+
+dpv-juris:Tonga a dpv:Country ;
+    rdfs:label "Tonga"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "TO"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "TON"^^xsd:string .
+
+dpv-juris:TrinidadTobago a dpv:Country ;
+    rdfs:label "Trinidad and Tobago"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "TT"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "TTO"^^xsd:string .
+
+dpv-juris:Tunisia a dpv:Country ;
+    rdfs:label "Tunisia"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "TN"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "TUN"^^xsd:string .
+
+dpv-juris:Turkey a dpv:Country ;
+    rdfs:label "Turkey"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "TR"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "TUR"^^xsd:string .
+
+dpv-juris:Turkmenistan a dpv:Country ;
+    rdfs:label "Turkmenistan"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "TM"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "TKM"^^xsd:string .
+
+dpv-juris:Tuvalu a dpv:Country ;
+    rdfs:label "Tuvalu"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "TV"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "TUV"^^xsd:string .
+
+dpv-juris:UAE a dpv:Country ;
+    rdfs:label "United Arab Emirates"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "AE"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "ARE"^^xsd:string .
+
+dpv-juris:USA a dpv:Country ;
+    rdfs:label "United States of America"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "US"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "USA"^^xsd:string .
+
+dpv-juris:Uganda a dpv:Country ;
+    rdfs:label "Uganda"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "UG"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "UGA"^^xsd:string .
+
+dpv-juris:Ukraine a dpv:Country ;
+    rdfs:label "Ukraine"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "UA"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "UKR"^^xsd:string .
+
+dpv-juris:Uruguay a dpv:Country ;
+    rdfs:label "Uruguay"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "UY"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "URY"^^xsd:string .
+
+dpv-juris:Uzbekistan a dpv:Country ;
+    rdfs:label "Uzbekistan"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "UZ"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "UZB"^^xsd:string .
+
+dpv-juris:Vanuatu a dpv:Country ;
+    rdfs:label "Vanuatu"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "VU"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "VUT"^^xsd:string .
+
+dpv-juris:VaticanCity a dpv:Country ;
+    rdfs:label "Vatican City"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "VA"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "VAT"^^xsd:string .
+
+dpv-juris:Venezuela a dpv:Country ;
+    rdfs:label "Venezuela"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "VE"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "VEN"^^xsd:string .
+
+dpv-juris:Vietnam a dpv:Country ;
+    rdfs:label "Vietnam"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "VN"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "VNM"^^xsd:string .
+
+dpv-juris:Yemen a dpv:Country ;
+    rdfs:label "Yemen"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "YE"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "YEM"^^xsd:string .
+
+dpv-juris:Zambia a dpv:Country ;
+    rdfs:label "Zambia"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "ZM"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "ZMB"^^xsd:string .
+
+dpv-juris:Zimbabwe a dpv:Country ;
+    rdfs:label "Zimbabwe"^^xsd:string ;
+    dpv-juris:iso3166_apha2 "ZW"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "ZWE"^^xsd:string .
+
+dpv-juris:AT-DPA a dpv:DataProtectionAuthority ;
+    rdfs:label "Austrian Data Protection Authority"^^xsd:string ;
+    rdfs:seeAlso "https://dsb.gv.at"^^xsd:anyURI ;
+    dpv:hasJurisdiction dpv-juris:Austria .
+
+dpv-juris:Austria a dpv:Country ;
+    rdfs:label "Austria"^^xsd:string ;
+    dpv:hasAuthority dpv-juris:AT-DPA ;
+    dpv-juris:isMemberOf dpv-juris:EEA,
+        dpv-juris:EU ;
+    dpv-juris:iso3166_apha2 "AT"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "AUT"^^xsd:string .
+
+dpv-juris:BE-DPA a dpv:DataProtectionAuthority ;
+    rdfs:label "Data Protection Authority"^^xsd:string ;
+    rdfs:seeAlso "https://www.autoriteprotectiondonnees.be/"^^xsd:anyURI,
+        "https://www.dataprotectionauthority.be/"^^xsd:anyURI,
+        "https://www.gegevensbeschermingsautoriteit.be/"^^xsd:anyURI ;
+    dpv:hasJurisdiction dpv-juris:Belgium .
+
+dpv-juris:BG-DPA a dpv:DataProtectionAuthority ;
+    rdfs:label "Commission for Personal Data Protection"^^xsd:string ;
+    rdfs:seeAlso "https://www.cpdp.bg/"^^xsd:anyURI ;
+    dpv:hasJurisdiction dpv-juris:Bulgaria .
+
+dpv-juris:Belgium a dpv:Country ;
+    rdfs:label "Belgium"^^xsd:string ;
+    dpv:hasAuthority dpv-juris:BE-DPA ;
+    dpv-juris:isMemberOf dpv-juris:EEA,
+        dpv-juris:EU ;
+    dpv-juris:iso3166_apha2 "BE"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "BEL"^^xsd:string .
+
+dpv-juris:Bulgaria a dpv:Country ;
+    rdfs:label "Bulgaria"^^xsd:string ;
+    dpv:hasAuthority dpv-juris:BG-DPA ;
+    dpv-juris:isMemberOf dpv-juris:EEA,
+        dpv-juris:EU ;
+    dpv-juris:iso3166_apha2 "BG"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "BGR"^^xsd:string .
+
+dpv-juris:CY-DPA a dpv:DataProtectionAuthority ;
+    rdfs:label "Commissioner for Personal Data Protection"^^xsd:string ;
+    rdfs:seeAlso "http://www.dataprotection.gov.cy/"^^xsd:anyURI ;
+    dpv:hasJurisdiction dpv-juris:Cyprus .
+
+dpv-juris:CZ-DPA a dpv:DataProtectionAuthority ;
+    rdfs:label "Office for Personal Data Protection"^^xsd:string ;
+    rdfs:seeAlso "https://www.uoou.cz/"^^xsd:anyURI ;
+    dpv:hasJurisdiction dpv-juris:CzechRepublic .
+
+dpv-juris:Croatia a dpv:Country ;
+    rdfs:label "Croatia"^^xsd:string ;
+    dpv:hasAuthority dpv-juris:HR-DPA ;
+    dpv-juris:isMemberOf dpv-juris:EEA,
+        dpv-juris:EU ;
+    dpv-juris:iso3166_apha2 "HR"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "HRV"^^xsd:string .
+
+dpv-juris:Cyprus a dpv:Country ;
+    rdfs:label "Cyprus"^^xsd:string ;
+    dpv:hasAuthority dpv-juris:CY-DPA ;
+    dpv-juris:isMemberOf dpv-juris:EEA,
+        dpv-juris:EU ;
+    dpv-juris:iso3166_apha2 "CY"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "CYP"^^xsd:string .
+
+dpv-juris:CzechRepublic a dpv:Country ;
+    rdfs:label "Czech Republic"^^xsd:string ;
+    dpv:hasAuthority dpv-juris:CZ-DPA ;
+    dpv-juris:isMemberOf dpv-juris:EEA,
+        dpv-juris:EU ;
+    dpv-juris:iso3166_apha2 "CZ"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "CZE"^^xsd:string .
+
+dpv-juris:DE-DPA a dpv:DataProtectionAuthority ;
+    rdfs:label "The Federal Commissioner for Data Protection and Freedom of Information "^^xsd:string ;
+    rdfs:seeAlso "http://www.bfdi.bund.de/"^^xsd:anyURI ;
+    dpv:hasJurisdiction dpv-juris:Germany .
+
+dpv-juris:DK-DPA a dpv:DataProtectionAuthority ;
+    rdfs:label "Danish Data Protection Agency"^^xsd:string ;
+    rdfs:seeAlso "http://www.datatilsynet.dk/"^^xsd:anyURI ;
+    dpv:hasJurisdiction dpv-juris:Denmark .
+
+dpv-juris:Denmark a dpv:Country ;
+    rdfs:label "Denmark"^^xsd:string ;
+    dpv:hasAuthority dpv-juris:DK-DPA ;
+    dpv-juris:isMemberOf dpv-juris:EEA,
+        dpv-juris:EU ;
+    dpv-juris:iso3166_apha2 "DK"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "DNK"^^xsd:string .
+
+dpv-juris:EDPB a dpv:DataProtectionAuthority ;
+    rdfs:label "European Data Protection Board"^^xsd:string ;
+    rdfs:seeAlso "https://edpb.europa.eu/"^^xsd:anyURI ;
+    dpv:hasJurisdiction dpv-juris:EU .
+
+dpv-juris:EDPS a dpv:DataProtectionAuthority ;
+    rdfs:label "European Data Protection Supervisor"^^xsd:string ;
+    rdfs:seeAlso "https://edps.europa.eu/"^^xsd:anyURI ;
+    dpv:hasJurisdiction dpv-juris:EU .
+
+dpv-juris:EE-DPA a dpv:DataProtectionAuthority ;
+    rdfs:label "Estonian Data Protection Inspectorate"^^xsd:string ;
+    rdfs:seeAlso "http://www.aki.ee/"^^xsd:anyURI ;
+    dpv:hasJurisdiction dpv-juris:Estonia .
+
+dpv-juris:ES-DPA a dpv:DataProtectionAuthority ;
+    rdfs:label "Spanish Data Protection Agency"^^xsd:string ;
+    rdfs:seeAlso "https://www.aepd.es/"^^xsd:anyURI ;
+    dpv:hasJurisdiction dpv-juris:Spain .
+
+dpv-juris:Estonia a dpv:Country ;
+    rdfs:label "Estonia"^^xsd:string ;
+    dpv:hasAuthority dpv-juris:EE-DPA ;
+    dpv-juris:isMemberOf dpv-juris:EEA,
+        dpv-juris:EU ;
+    dpv-juris:iso3166_apha2 "EE"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "EST"^^xsd:string .
+
+dpv-juris:FI-DPA a dpv:DataProtectionAuthority ;
+    rdfs:label "Office of the Data Protection Ombudsman"^^xsd:string ;
+    rdfs:seeAlso "https://tietosuoja.fi/"^^xsd:anyURI ;
+    dpv:hasJurisdiction dpv-juris:Finland .
+
+dpv-juris:FR-DPA a dpv:DataProtectionAuthority ;
+    rdfs:label "National Commission on Informatics and Liberty"^^xsd:string ;
+    rdfs:seeAlso "https://www.cnil.fr/"^^xsd:anyURI ;
+    dpv:hasJurisdiction dpv-juris:France .
+
+dpv-juris:Finland a dpv:Country ;
+    rdfs:label "Finland"^^xsd:string ;
+    dpv:hasAuthority dpv-juris:FI-DPA ;
+    dpv-juris:isMemberOf dpv-juris:EEA,
+        dpv-juris:EU ;
+    dpv-juris:iso3166_apha2 "FI"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "FIN"^^xsd:string .
+
+dpv-juris:France a dpv:Country ;
+    rdfs:label "France"^^xsd:string ;
+    dpv:hasAuthority dpv-juris:FR-DPA ;
+    dpv-juris:isMemberOf dpv-juris:EEA,
+        dpv-juris:EU ;
+    dpv-juris:iso3166_apha2 "FR"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "FRA"^^xsd:string .
+
+dpv-juris:GR-DPA a dpv:DataProtectionAuthority ;
+    rdfs:label "Hellenic Data Protection Authority"^^xsd:string ;
+    rdfs:seeAlso "http://dpa.gr"^^xsd:anyURI ;
+    dpv:hasJurisdiction dpv-juris:Greece .
+
+dpv-juris:Germany a dpv:Country ;
+    rdfs:label "Germany"^^xsd:string ;
+    dpv:hasAuthority dpv-juris:DE-DPA ;
+    dpv-juris:isMemberOf dpv-juris:EEA,
+        dpv-juris:EU ;
+    dpv-juris:iso3166_apha2 "DE"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "DEU"^^xsd:string .
+
+dpv-juris:Greece a dpv:Country ;
+    rdfs:label "Greece"^^xsd:string ;
+    dpv:hasAuthority dpv-juris:GR-DPA ;
+    dpv-juris:isMemberOf dpv-juris:EEA,
+        dpv-juris:EU ;
+    dpv-juris:iso3166_apha2 "GR"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "GRC"^^xsd:string .
+
+dpv-juris:HR-DPA a dpv:DataProtectionAuthority ;
+    rdfs:label "Croatian Personal Data Protection Agency"^^xsd:string ;
+    rdfs:seeAlso "http://www.azop.hr/"^^xsd:anyURI ;
+    dpv:hasJurisdiction dpv-juris:Croatia .
+
+dpv-juris:HU-DPA a dpv:DataProtectionAuthority ;
+    rdfs:label "Hungarian National Authority for Data Protection and Freedom of Information"^^xsd:string ;
+    rdfs:seeAlso "http://www.naih.hu/"^^xsd:anyURI ;
+    dpv:hasJurisdiction dpv-juris:Hungary .
+
+dpv-juris:Hungary a dpv:Country ;
+    rdfs:label "Hungary"^^xsd:string ;
+    dpv:hasAuthority dpv-juris:HU-DPA ;
+    dpv-juris:isMemberOf dpv-juris:EEA,
+        dpv-juris:EU ;
+    dpv-juris:iso3166_apha2 "HU"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "HUN"^^xsd:string .
+
+dpv-juris:IE-DPA a dpv:DataProtectionAuthority ;
+    rdfs:label "Data Protection Commission"^^xsd:string ;
+    rdfs:seeAlso "http://www.dataprotection.ie"^^xsd:anyURI ;
+    dpv:hasJurisdiction dpv-juris:Ireland .
+
+dpv-juris:IS-DPA a dpv:DataProtectionAuthority ;
+    rdfs:label "Icelandic Data Protection Authority"^^xsd:string ;
+    rdfs:seeAlso "https://www.dpa.is/"^^xsd:anyURI,
+        "https://www.personuvernd.is/"^^xsd:anyURI ;
+    dpv:hasJurisdiction dpv-juris:Iceland .
+
+dpv-juris:IT-DPA a dpv:DataProtectionAuthority ;
+    rdfs:label "Garante per la protezione dei dati personali"^^xsd:string ;
+    rdfs:seeAlso "https://www.garanteprivacy.it/"^^xsd:anyURI ;
+    dpv:hasJurisdiction dpv-juris:Italy .
+
+dpv-juris:Iceland a dpv:Country ;
+    rdfs:label "Iceland"^^xsd:string ;
+    dpv:hasAuthority dpv-juris:IS-DPA ;
+    dpv-juris:isMemberOf dpv-juris:EEA ;
+    dpv-juris:iso3166_apha2 "IS"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "ISL"^^xsd:string .
+
+dpv-juris:Ireland a dpv:Country ;
+    rdfs:label "Ireland"^^xsd:string ;
+    dpv:hasAuthority dpv-juris:IE-DPA ;
+    dpv-juris:isMemberOf dpv-juris:EU ;
+    dpv-juris:iso3166_apha2 "IE"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "IRL"^^xsd:string .
+
+dpv-juris:Italy a dpv:Country ;
+    rdfs:label "Italy"^^xsd:string ;
+    dpv:hasAuthority dpv-juris:IT-DPA ;
+    dpv-juris:isMemberOf dpv-juris:EEA,
+        dpv-juris:EU ;
+    dpv-juris:iso3166_apha2 "IT"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "ITA"^^xsd:string .
+
+dpv-juris:LI-DPA a dpv:DataProtectionAuthority ;
+    rdfs:label "Data Protection Authority, Principality of Liechtenstein"^^xsd:string ;
+    rdfs:seeAlso "https://www.datenschutzstelle.li/"^^xsd:anyURI ;
+    dpv:hasJurisdiction dpv-juris:Liechtenstein .
+
+dpv-juris:LT-DPA a dpv:DataProtectionAuthority ;
+    rdfs:label "State Data Protection Inspectorate"^^xsd:string ;
+    rdfs:seeAlso "https://ada.lt"^^xsd:anyURI ;
+    dpv:hasJurisdiction dpv-juris:Lithuania .
+
+dpv-juris:LU-DPA a dpv:DataProtectionAuthority ;
+    rdfs:label "National Commission for Data Protection"^^xsd:string ;
+    rdfs:seeAlso "https://cnpd.public.lu"^^xsd:anyURI ;
+    dpv:hasJurisdiction dpv-juris:Luxembourg .
+
+dpv-juris:LV-DPA a dpv:DataProtectionAuthority ;
+    rdfs:label "Data State Inspectorate"^^xsd:string ;
+    rdfs:seeAlso "http://www.dvi.gov.lv/"^^xsd:anyURI ;
+    dpv:hasJurisdiction dpv-juris:Latvia .
+
+dpv-juris:Latvia a dpv:Country ;
+    rdfs:label "Latvia"^^xsd:string ;
+    dpv:hasAuthority dpv-juris:LV-DPA ;
+    dpv-juris:isMemberOf dpv-juris:EEA,
+        dpv-juris:EU ;
+    dpv-juris:iso3166_apha2 "LV"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "LVA"^^xsd:string .
+
+dpv-juris:Liechtenstein a dpv:Country ;
+    rdfs:label "Liechtenstein"^^xsd:string ;
+    dpv:hasAuthority dpv-juris:LI-DPA ;
+    dpv-juris:isMemberOf dpv-juris:EEA ;
+    dpv-juris:iso3166_apha2 "LI"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "LIE"^^xsd:string .
+
+dpv-juris:Lithuania a dpv:Country ;
+    rdfs:label "Lithuania"^^xsd:string ;
+    dpv:hasAuthority dpv-juris:LT-DPA ;
+    dpv-juris:isMemberOf dpv-juris:EEA,
+        dpv-juris:EU ;
+    dpv-juris:iso3166_apha2 "LT"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "LTU"^^xsd:string .
+
+dpv-juris:Luxembourg a dpv:Country ;
+    rdfs:label "Luxembourg"^^xsd:string ;
+    dpv:hasAuthority dpv-juris:LU-DPA ;
+    dpv-juris:isMemberOf dpv-juris:EEA,
+        dpv-juris:EU ;
+    dpv-juris:iso3166_apha2 "LU"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "LUX"^^xsd:string .
+
+dpv-juris:MT-DPA a dpv:DataProtectionAuthority ;
+    rdfs:label "Office of the Information and Data Protection Commissioner"^^xsd:string ;
+    rdfs:seeAlso "https://idpc.org.mt"^^xsd:anyURI ;
+    dpv:hasJurisdiction dpv-juris:Malta .
+
+dpv-juris:Malta a dpv:Country ;
+    rdfs:label "Malta"^^xsd:string ;
+    dpv:hasAuthority dpv-juris:MT-DPA ;
+    dpv-juris:isMemberOf dpv-juris:EEA,
+        dpv-juris:EU ;
+    dpv-juris:iso3166_apha2 "MT"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "MLT"^^xsd:string .
+
+dpv-juris:NL-DPA a dpv:DataProtectionAuthority ;
+    rdfs:label "Dutch Data Protection Authority"^^xsd:string ;
+    rdfs:seeAlso "https://autoriteitpersoonsgegevens.nl"^^xsd:anyURI ;
+    dpv:hasJurisdiction dpv-juris:Netherlands .
+
+dpv-juris:NO-DPA a dpv:DataProtectionAuthority ;
+    rdfs:label "Datatilsynet"^^xsd:string ;
+    rdfs:seeAlso "https://www.datatilsynet.no/"^^xsd:anyURI ;
+    dpv:hasJurisdiction dpv-juris:Norway .
+
+dpv-juris:Netherlands a dpv:Country ;
+    rdfs:label "Kingdom of the Netherlands"^^xsd:string ;
+    dpv:hasAuthority dpv-juris:NL-DPA ;
+    dpv-juris:isMemberOf dpv-juris:EEA,
+        dpv-juris:EU ;
+    dpv-juris:iso3166_apha2 "NL"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "NLD"^^xsd:string .
+
+dpv-juris:Norway a dpv:Country ;
+    rdfs:label "Norway"^^xsd:string ;
+    dpv:hasAuthority dpv-juris:NO-DPA ;
+    dpv-juris:isMemberOf dpv-juris:EEA ;
+    dpv-juris:iso3166_apha2 "NO"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "NOR"^^xsd:string .
+
+dpv-juris:PL-DPA a dpv:DataProtectionAuthority ;
+    rdfs:label "Personal Data Protection Office"^^xsd:string ;
+    rdfs:seeAlso "https://uodo.gov.pl/"^^xsd:anyURI ;
+    dpv:hasJurisdiction dpv-juris:Poland .
+
+dpv-juris:PT-DPA a dpv:DataProtectionAuthority ;
+    rdfs:label "Comissão Nacional de Protecção de Dados"^^xsd:string ;
+    rdfs:seeAlso "https://www.cnpd.pt"^^xsd:anyURI ;
+    dpv:hasJurisdiction dpv-juris:Portugal .
+
+dpv-juris:Poland a dpv:Country ;
+    rdfs:label "Poland"^^xsd:string ;
+    dpv:hasAuthority dpv-juris:PL-DPA ;
+    dpv-juris:isMemberOf dpv-juris:EEA,
+        dpv-juris:EU ;
+    dpv-juris:iso3166_apha2 "PL"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "POL"^^xsd:string .
+
+dpv-juris:Portugal a dpv:Country ;
+    rdfs:label "Portugal"^^xsd:string ;
+    dpv:hasAuthority dpv-juris:PT-DPA ;
+    dpv-juris:isMemberOf dpv-juris:EEA,
+        dpv-juris:EU ;
+    dpv-juris:iso3166_apha2 "PT"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "PRT"^^xsd:string .
+
+dpv-juris:RO-DPA a dpv:DataProtectionAuthority ;
+    rdfs:label "National Supervisory Authority for Personal Data Processing"^^xsd:string ;
+    rdfs:seeAlso "http://www.dataprotection.ro/"^^xsd:anyURI ;
+    dpv:hasJurisdiction dpv-juris:Romania .
+
+dpv-juris:Romania a dpv:Country ;
+    rdfs:label "Romania"^^xsd:string ;
+    dpv:hasAuthority dpv-juris:RO-DPA ;
+    dpv-juris:isMemberOf dpv-juris:EEA,
+        dpv-juris:EU ;
+    dpv-juris:iso3166_apha2 "RO"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "ROU"^^xsd:string .
+
+dpv-juris:SE-DPA a dpv:DataProtectionAuthority ;
+    rdfs:label "Swedish Authority for Privacy Protection"^^xsd:string ;
+    rdfs:seeAlso "https://www.imy.se/"^^xsd:anyURI ;
+    dpv:hasJurisdiction dpv-juris:Sweden .
+
+dpv-juris:SI-DPA a dpv:DataProtectionAuthority ;
+    rdfs:label "Information Commissioner of the Republic of Slovenia"^^xsd:string ;
+    rdfs:seeAlso "https://www.ip-rs.si/"^^xsd:anyURI ;
+    dpv:hasJurisdiction dpv-juris:Slovenia .
+
+dpv-juris:SK-DPA a dpv:DataProtectionAuthority ;
+    rdfs:label "Office for Personal Data Protection of the Slovak Republic"^^xsd:string ;
+    rdfs:seeAlso "http://www.dataprotection.gov.sk/"^^xsd:anyURI ;
+    dpv:hasJurisdiction dpv-juris:Slovakia .
+
+dpv-juris:Slovakia a dpv:Country ;
+    rdfs:label "Slovakia"^^xsd:string ;
+    dpv:hasAuthority dpv-juris:SK-DPA ;
+    dpv-juris:isMemberOf dpv-juris:EEA,
+        dpv-juris:EU ;
+    dpv-juris:iso3166_apha2 "SK"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "SVK"^^xsd:string .
+
+dpv-juris:Slovenia a dpv:Country ;
+    rdfs:label "Slovenia"^^xsd:string ;
+    dpv:hasAuthority dpv-juris:SI-DPA ;
+    dpv-juris:isMemberOf dpv-juris:EEA,
+        dpv-juris:EU ;
+    dpv-juris:iso3166_apha2 "SI"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "SVN"^^xsd:string .
+
+dpv-juris:Spain a dpv:Country ;
+    rdfs:label "Spain"^^xsd:string ;
+    dpv:hasAuthority dpv-juris:ES-DPA ;
+    dpv-juris:isMemberOf dpv-juris:EEA,
+        dpv-juris:EU ;
+    dpv-juris:iso3166_apha2 "ES"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "ESP"^^xsd:string .
+
+dpv-juris:Sweden a dpv:Country ;
+    rdfs:label "Sweden"^^xsd:string ;
+    dpv:hasAuthority dpv-juris:SE-DPA ;
+    dpv-juris:isMemberOf dpv-juris:EEA,
+        dpv-juris:EU ;
+    dpv-juris:iso3166_apha2 "SE"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "SWE"^^xsd:string .
+
+dpv-juris:UK a dpv:Country ;
+    rdfs:label "United Kingdom"^^xsd:string ;
+    dpv:hasAuthority dpv-juris:UK-DPA ;
+    dpv-juris:iso3166_apha2 "GB"^^xsd:string ;
+    dpv-juris:iso3166_apha3 "GBR"^^xsd:string .
+
+dpv-juris:UK-DPA a dpv:DataProtectionAuthority ;
+    rdfs:label "Information Commissioner's Office"^^xsd:string ;
+    rdfs:seeAlso "https://ico.org.uk/"^^xsd:anyURI ;
+    dpv:hasJurisdiction dpv-juris:UK .
+
+dpv-juris:EU a dpv:SupraNationalUnion ;
+    rdfs:label "European Union"^^xsd:string ;
+    dpv:hasAuthority dpv-juris:EDPB,
+        dpv-juris:EDPS .
+
+dpv-juris:EEA a dpv:EconomicUnion ;
+    rdfs:label "European Economic Area"^^xsd:string .
+
