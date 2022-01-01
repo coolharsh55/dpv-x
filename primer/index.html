@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Primer</title>
+  <meta http-equiv='Content-Type' content='text/html;charset=utf-8' />
+  <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer></script>
+  <script type="text/javascript" class="remove">
+  var respecConfig = {
+    title: "Primer",
+    subtitle: "for Data Privacy Vocabulary (DPV)",
+    shortName: "dpv-primer",
+    specStatus: "CG-DRAFT",
+    group: "dpvcg",
+    edDraftURI: "https://harshp.com/dpv-x/primer",
+    latestVersion: "https://harshp.com/dpv-x/primer",
+    publishDate: "2022-01-01",
+    subjectPrefix: "[dpv]",
+    maxTocLevel: 4,
+    doJsonLd: true,
+    // github: "https://github.com/w3c/dpv/",
+    github: {
+      repoURL: "https://github.com/<coolharsh55/dpv-x",
+      branch: "master"
+    },
+    includePermalinks: false,
+    canonicalUri: "https://w3.org/ns/dpv-primer", // TODO
+    editors: [{
+      name: "Harshvardhan J. Pandit",
+      url: "https://harshp.com/",
+      company: "Trinity College Dublin",
+      companyURL: "https://tcd.ie/"
+    }],
+    authors: [{
+      name: "Harshvardhan J. Pandit",
+      url: "https://harshp.com/",
+      company: "Trinity College Dublin",
+      companyURL: "https://tcd.ie/"
+    }],
+    localBiblio: {
+      "DPV": {
+        href: "https://www.w3.org/ns/dpv",
+        title: "Data Privacy Vocabulary (DPV)"
+      },
+      "DPV-GDPR": {
+        href: "https://www.w3.org/ns/dpv-gdpr",
+        title: "GDPR Extension for Data Privacy Vocabulary (DPV-GDPR)"
+      },
+      "DPV-NACE": {
+        href: "https://www.w3.org/ns/dpv-nace",
+        title: "NACE Taxonomy serialised in RDFS"
+      },
+      "DPV-PD": {
+        href: "https://www.w3.org/ns/dpv-pd",
+        title: "Personal Data Categories Extension for Data Privacy Vocabulary (DPV-PD)"
+      },
+      "DPVCG": {
+        href: "https://www.w3.org/community/dpvcg/",
+        title: "W3C Data Privacy Vocabularies and Controls Community Group (DPVCG)"
+      },
+      "GDPR": {
+        href: "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+        title: "General Data Protection Regulation (GDPR)"
+      },
+      "SPECIAL": {
+        href: "https://www.specialprivacy.eu/",
+        title: "SPECIAL H2020 Project"
+      },
+      "RDF": {
+        href: "https://www.w3.org/TR/rdf11-concepts/",
+        title: "RDF 1.1 Concepts and Abstract Syntax"
+      },
+      "RDFS": {
+        href: "https://www.w3.org/TR/rdf-schema/",
+        title: "RDF Schema 1.1"
+      },
+      "OWL" :{
+        href: "https://www.w3.org/TR/owl2-overview/",
+        title: "OWL 2 Web Ontology Language Document Overview (Second Edition)"
+      },
+      "SKOS": {
+        href: "https://www.w3.org/TR/skos-reference/",
+        title: "SKOS Simple Knowledge Organization System"
+      },
+      "DPV-ADOPTION": {
+        href: "",
+        title: "Listing of DPV adoption and applications"
+      },
+      "NACE": {
+        href: "https://ec.europa.eu/eurostat/ramon/nomenclatures/index.cfm?TargetUrl=LST_NOM_DTL&StrNom=NACE_REV2",
+        title: "Statistical Classification of Economic Activities in the European Community (NACE)"
+      },
+      "NAICS": {
+        href: "https://www.census.gov/eos/www/naics/",
+        title: "North American Industry Classification System (NAICS)"
+      },
+      "ISIC": {
+        href: "https://unstats.un.org/unsd/classifications",
+        title: "International Standard Industrial Classification of All Economic Activities (ISIC)"
+      },
+      "GICS": {
+        href: "https://www.msci.com/gics",
+        title: "Global Industry Classification Standard (GICS)"
+      },
+      "NACE-NAICS": {
+        href: "https://ec.europa.eu/eurostat/ramon/nomenclatures/index.cfm?TargetUrl=LST_NOM_DTL&StrNom=NACE_REV2",
+        title: "NACE to NAICS mapping"
+      },
+      "EnterPrivacy": {
+        href: "https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf",
+        title: "Taxonomy of Personal Data Categories"
+      },
+      "TIME": {
+        href: "https://www.w3.org/TR/owl-time/",
+        title: "Time Ontology in OWL"
+      },
+      "ISO-27017": {
+        href: "https://www.iso.org/standard/43757.html",
+        title: "ISO/IEC 27017:2015 Information technology — Security techniques — Code of practice for information security controls based on ISO/IEC 27002 for cloud services"
+      }
+    }
+  };
+  </script>
+  <style type="text/css">
+  .head img[src*="logos/W3C"] {
+    display: inherit !important;
+  }
+  
+  .head a:hover > img[src*=<i>ogc</i>] {
+    opacity: 0.8;
+  }
+  /* Table styles, March 2016 */
+  
+  table {
+    border-collapse: collapse
+  }
+  
+  th,
+  td {
+    border: thin solid black;
+    padding: 0.3em;
+  }
+  
+  .inlineCode {
+    FONT-FAMILY: "courier new";
+    BACKGROUND-COLOR: #ddf
+  }
+  
+  PRE.code {
+    BORDER-RIGHT: #999999 1pt solid;
+    PADDING-RIGHT: 0.5em;
+    BORDER-TOP: #999999 1pt solid;
+    PADDING-LEFT: 0.5em;
+    PADDING-BOTTOM: 0.5em;
+    BORDER-LEFT: #999999 1pt solid;
+    PADDING-TOP: 0.5em;
+    BORDER-BOTTOM: #999999 1pt solid;
+    FONT-FAMILY: "courier new";
+    BACKGROUND-COLOR: #eef
+  }
+  
+  PRE.code2 {
+    BORDER-RIGHT: #999999 1pt solid;
+    PADDING-RIGHT: 0.5em;
+    BORDER-TOP: #999999 1pt solid;
+    PADDING-LEFT: 0.5em;
+    PADDING-BOTTOM: 0.5em;
+    BORDER-LEFT: #999999 1pt solid;
+    PADDING-TOP: 0.5em;
+    BORDER-BOTTOM: #999999 1pt solid;
+    FONT-FAMILY: "courier new";
+    BACKGROUND-COLOR: #ffa
+  }
+  
+  .ednote {
+    FONT-STYLE: italic;
+  }
+  
+  PRE.clientmsg {
+    BORDER-RIGHT: #999 1px solid;
+    PADDING-RIGHT: 2px;
+    BORDER-TOP: #999 1px solid;
+    PADDING-LEFT: 2px;
+    BACKGROUND: #eee;
+    PADDING-BOTTOM: 2px;
+    MARGIN: 0px;
+    BORDER-LEFT: #999 1px solid;
+    PADDING-TOP: 2px;
+    BORDER-BOTTOM: #999 1px solid
+  }
+  
+  PRE.servermsg {
+    BORDER-RIGHT: #999 1px solid;
+    PADDING-RIGHT: 2px;
+    BORDER-TOP: #999 1px solid;
+    PADDING-LEFT: 2px;
+    BACKGROUND: #eee;
+    PADDING-BOTTOM: 2px;
+    MARGIN: 5px 0px 0px;
+    BORDER-LEFT: #999 1px solid;
+    PADDING-TOP: 2px;
+    BORDER-BOTTOM: #999 1px solid;
+    TEXT-ALIGN: left
+  }
+  
+  P.msg {
+    PADDING-RIGHT: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-BOTTOM: 0px;
+    MARGIN: 0px;
+    PADDING-TOP: 0px;
+    TEXT-ALIGN: center
+  }
+  
+  DIV.interaction {
+    BORDER-RIGHT: #999 1px solid;
+    PADDING-RIGHT: 5px;
+    BORDER-TOP: #999 1px solid;
+    PADDING-LEFT: 5px;
+    PADDING-BOTTOM: 5px;
+    BORDER-LEFT: #999 1px solid;
+    PADDING-TOP: 5px;
+    BORDER-BOTTOM: #999 1px solid
+  }
+  
+  DIV.interaction H4 {
+    MARGIN: 0px 0px 10px
+  }
+  
+  DIV.interaction P {
+    MARGIN: 0px
+  }
+  
+  DIV.test {
+    BORDER-RIGHT: #999 1px solid;
+    PADDING-RIGHT: 5px;
+    BORDER-TOP: #999 1px solid;
+    PADDING-LEFT: 5px;
+    PADDING-BOTTOM: 5px;
+    BORDER-LEFT: #999 1px solid;
+    PADDING-TOP: 5px;
+    BORDER-BOTTOM: #999 1px solid
+  }
+  
+  DIV.test H4 {
+    MARGIN: 0px 0px 10px
+  }
+  
+  .todo {
+    display: block;
+    background-color: #F99;
+    margin: 5px;
+    padding-left: 5px;
+    border: 2px solid #633;
+  }
+  
+  .todo::before {
+    content: "TODO: ";
+    font-weight: bold;
+  }
+  
+  figure {
+    margin: 2px;
+    padding: 2px;
+    border: 1px solid black;
+  }
+  
+  .overview-diagram {
+    display: flex;
+  }
+  
+  .overview-diagram > svg {
+    display: block;
+    max-height: 50%;
+    max-width: 100%;
+  }
+  </style>
+</head>
+
+<body>
+  <section id="abstract">
+    <p>The Data Privacy Vocabulary [[DPV]] enables expressing machine-readable metadata about the use and processing of personal data based on legislative requirements such as the General Data Protection Regulation [[GDPR]]. This document acts as a ‘Primer’ for the DPV by introducing its fundamental concepts and providing examples of use-cases and applications. It is intended to be a starting point for those wishing to use the DPV and an orientation for people from all disciplines. The canonical URL for DPV is <a href="https://www.w3.org/ns/dpv">https://www.w3.org/ns/dpv</a> which also contains its documentation and specification.</p>
+    <p>This primer document aims to ease adoption of DPV by providing:</p>
+    <ul>
+      <li>A high-level conceptual explanation of the DPV and its modelling of concepts;</li>
+      <li>Self-contained examples that illustrate how the concepts and data models provided by DPV can represent information associated with personal data handling; and</li>
+      <li>Guidance towards application of DPV in use-cases and technologies.</li>
+    </ul>
+    <p><strong>Related Documents</strong></p>
+    <ul>
+      <li>
+        <p>This document only serves as the primer. Interested readers and adopters should reference the <a href="http://w3.org/ns/dpv">[[DPV]] Specification</a> for a formal and normative description of DPV and its concepts.</p>
+      </li>
+      <li>
+        <p>For a general overview of the Data Protection Vocabularies and Controls Community Group [[DPVCG]], its history, deliverables, and activities - refer to <a href="https://www.w3.org/community/dpvcg/"><u>DPVCG Website</u></a>.</p>
+      </li>
+      <li>
+        <p>The peer-reviewed article “<a href="https://link.springer.com/chapter/10.1007%2F978-3-030-33246-4_44"><u>Creating A Vocabulary for Data Privacy</u></a>” presents a historical overview of the DPVCG, and describes the methodology and structure of the DPV along with describing its creation. An open-access version can be accessed <a href="http://hdl.handle.net/2262/91581"><u>here</u></a>, <a href="http://doras.dcu.ie/23801/"><u>here</u></a>, and <a href="https://aic.ai.wu.ac.at/~polleres/publications/pand-etal-2019ODBASE.pdf"><u>here</u></a>.</p>
+      </li>
+    </ul>
+    <div class="note">
+      <p><strong>Contributing to DPV</strong> The DPVCG welcomes participation regarding the DPV, including suggestions for primer, expansion or refinement of DPV terms, addressing open issues, and other relevant matters.</p>
+      <p>While we welcome participation via any and all mediums - e.g., via <a href="https://github.com/dpvcg/dpv">Github</a> pull requests or issues, <a href="https://lists.w3.org/Archives/Public/public-dpvcg/">emails</a>, papers, or reports - the formal resolution of contributions takes place only through the DPVCG meeting calls and mailing lists. We therefore suggest joining the group to participate in these discussions for formal approval.</p>
+      <p>For contributions to the DPV, please see <a href="https://github.com/dpvcg/dpv#contribution--participation">the section on GitHub</a>. The current list of open issues and their discussions to date can be found at <a href="https://www.w3.org/community/dpvcg/track/issues/open">DPVCG issue tracker</a> as well as <a href="https://github.com/dpvcg/dpv/issues">GitHub issues</a>.</p>
+    </div>
+  </section>
+  <section id="sotd">
+    <p>This document is a 'draft version' and is intended for feedback and comments.</p>
+  </section>
+  <section id="introduction">
+    <h2>Introduction</h2>
+    <p>The <a href="https://www.w3.org/community/dpvcg/">[[[DPVCG]]]</a> was formed in 2018 through  <a href="https://www.specialprivacy.eu/">[[[SPECIAL]]]</a> with the ambition of providing a machine-readable and interoperable vocabulary for representing information about the use and processing of personal data, whilst inviting perspectives and contributions from a diverse set of stakeholders across computer science, IT, law, soiology, philosophy – representing academia, industry, policy-makers, and activists. It identified the following issues through the <a href="https://www.w3.org/2018/vocabws/report">W3C Workshop on Privacy and Linked Data</a>:
+      <ol type="a">
+        <li>lack of standardised vocabularies to represent information about use and processing of personal data;</li>
+        <li>lack of descriptive taxonomies that describe purposes of processing personal data which are not restricted to a particular domain or use-case; and</li>
+        <li>lack of machine-readable representations of concepts that can be used for technical interoperability of information.</li>
+      </ol>
+    </p>
+    <p>The outcome of addressing these resulted in the creation of the <a href="https://www.w3.org/ns/dpv">[[[DPV]]]</a>, which provides a vocabulary and ontology for expressing information related to processing of personal data, entities involved and their roles, details of technologies utilised, relation to laws and legal justifications permitting its use, and other relevant concepts based on privacy and data protection. It uses the EU’s [[[GDPR]]] as a guiding document for the creation and interpretation of concepts, owing to its origin within [[[SPECIAL]]] and the involvement of stakeholders with interest in the GDPR.</p>
+    <p>People, organisations, laws, and use-cases have different perspectives and interpretations of concepts and requirements which cannot be modelled into a single coherent universal vocabulary. The aim of DPV is to act as a core framework of ‘common concepts’ that can extended to represent specific laws, domains, or applications. This lets any two entities agree that a term, for example, <a href="https://www.w3.org/ns/dpv#PersonalData"><code>PersonalData</code></a>, refers to the same semantic concept, even though they might interpret or model it differently within their own use-cases.</p>
+    <p>The DPV is serialised using [[RDF]] (along with [[RDFS]] and [[OWL]]) to enable its use as a machine-readable and interoperable vocabulary. The intention of utilising RDF is to have a cohesive and standardised expression of the inherent semantics and relations between concepts (e.g. hierarchies). While DPV is a ‘semantic web ontology’, it is possible to use the DPV as a simple dictionary (i.e. as a flat list) or other representations (such as JSON) based on the needs of an use-case.</p>
+  </section>
+  <section id="where-can-dpv-be-used">
+    <h2>Where can DPV be used?</h2>
+    <p>DPV is primarily a vocabulary and an ontology for describing information about personal data and its processing. As such, it is intended to be utilised or applied as a vocabulary providing concepts for any application where information regarding processing of personal data is needed to be represented.</p>
+    <p>The following is an illustrative, but non-exhaustive list of applications possible with the DPV:</p>
+    <ul>
+      <li>
+        <p>document annotation - identifying and annotating concepts within documents such as privacy policies, legal compliance documentation, web pages</p>
+      </li>
+      <li>
+        <p>records or logs – maintaining ex-ante (i.e. plans) or ex-post (i.e. logs) records of how personal data is processed, interactions and activities between entities (e.g. contracts and consent)</p>
+      </li>
+      <li>
+        <p>policies – expressing policies for how personal data should be ‘handled’, policies for describing an use-cases’ use of personal data</p>
+      </li>
+      <li>
+        <p>rules expression – creating and utilising rules for expressing constraints or obligations regarding the use of personal data, checking conformance with obligations such as for legal compliance</p>
+      </li>
+    </ul>
+    <p>For more concrete uses, see the community maintained <a href="https://www.w3.org/community/dpvcg/wiki/Adoption_of_DPVCG">[[[DPV-ADOPTION]]]</a> in its wiki.</p>
+    <div class="issue" title="update adoption list in wiki">
+      <ul>
+        <li>
+          <p>Collect known applications, use-cases</p>
+          <ul>
+            <li>
+              <p>SPECIAL partners</p>
+            </li>
+            <li>
+              <p>Signatu</p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p>Specify additional ones</p>
+          <ul>
+            <li>
+              <p>Represent privacy policies</p>
+            </li>
+            <li>
+              <p>Legal compliance evaluations</p>
+            </li>
+            <li>
+              <p>Provenance of organisations’s personal data handling practices</p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p>Link to page with testimonials/documented use-case from adopters</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section id="core-concepts">
+    <h2>Core Concepts</h2>
+    <section id="core-taxonomy">
+      <h3>Taxonomical Approach</h3>
+    <p>DPV can be viewed as a hierarchical taxonomy of concepts where each <dfn><code>core concept</code></dfn> represents the top-most abstract concept in a tree and each of its children provide a lesser abstract or more concrete concept. For example, consider the concept of <a href="https://www.w3.org/ns/dpv#PersonalData"><code>PersonalData</code></a> which is the abstract representation of <em>personal data</em>. It can be further <i>refined</i> or <i>extended</i> as <code>ContactInformation</code>, which itself can be further extended into concepts related to <code>Email</code>, <code>Telephone</code> and so on.</p>
+    <p>From this perspective, the top-most abstract concepts are collectively referred to as the <i>core vocabulary</i> within DPV. The goal of the DPV is to provide a rich collection of concepts for each of top concepts so as to enable their application within real-world use-cases. The identification of what constitutes a core concept is based on the need to represent information about it in a modular and independent form, such as that required for legal compliance.</p>
+    <p>Each core concept is intended to be independent from other core concepts. For example, the <a href="https://www.w3.org/ns/dpv#Purpose"><code>Purpose</code></a> (e.g. <a href="https://www.w3.org/ns/dpv">Optimisation</a>) refers only to the <i>purpose of why personal data is processed</i> and is independent as a concept from the <a href="https://www.w3.org/ns/dpv#PersonalData"><code>PersonalData</code></a> (e.g. <a href="https://www.w3.org/ns/dpv-pd#Location"><code>Location</code></a>) or the <a href="https://www.w3.org/ns/dpv#Processing"><code>Processing</code></a> activities (e.g. <a href="https://www.w3.org/ns/dpv#Collect"><code>collect</code></a>, <a href="https://www.w3.org/ns/dpv#Store"><code>store</code></a>) involved to carry out that purpose. Such separation is necessary in order to represent and answer questions such as:</p>
+    <ul>
+      <li><i>Q:</i> What data is being processed? <i>Ans:</i> CurrentLocation</li>
+      <li><i>Q:</i> What is being done with the data? <i>Ans:</i> collect, store</li>
+      <li><i>Q:</i> Why is the data being processed? <i>Ans:</i> Optimisation</li>
+    </ul>
+    <p>The separation of concepts creates a <i>modular</i> structure for concept hierarchies within DPV, which in turn allows an adopter to use one particular concept taxonomy or module (e.g. list of purposes) independently without reusing the others, or to select only those taxonomies which are needed for their particular use-case. The separation also permits greater flexibility of representation and usage while still enabling differing combinations of core concepts for individual use-cases. The modular approach also makes it possible to define domain and jurisdiction specific concepts in a separate namespace - such as the [[[DPV-NACE]]] purpose taxonomy</u></a> providing a way for <code>Purpose</code> to indicate sectors using NACE taxonomy, and the [[[DPV-GDPR]]] for using <code>LegalBasis</code> to represent the legal bases provided by GDPR.</p>
+  </section>
+  <section id="core-concepts-overview">
+    <h3>Overview of Core Concepts</h3>
+    <p><a href="https://www.w3.org/ns/dpv#PersonalData"><dfn>PersonalData</dfn></a>: ‘Personal data’ refers to any data about a natural person that can be used to identify them directly or, in combination with other information, indirectly. ‘Personal data’ is also referred to as ‘personally identifiable information (PII)’, a term that is mainly used in the United States of America. However the terms should not be interchangeably used as ‘personal data’, as it is defined in the GDPR, is a broader term than PII, as PII is usually used to refer <u>only</u> to information that can directly identify a person. DPV’s definition of personal data is therefore based on the GDPR concept as it covers a wider range of information considered ‘personal data’. Personal data can be declared as a category, such as ‘Email’, or an instance, such as ‘x@y.z’.</p>
+    <p><a href="https://www.w3.org/ns/dpv#Purpose"><dfn>Purpose</dfn></a>: Representing the <em>purpose</em> for which personal data is processed, for e.g. ‘Personalisation’ as a broad category of purpose</p>
+    <p><a href="https://www.w3.org/ns/dpv#Processing"><dfn>Processing</dfn></a>: representing <em>processing</em> as in the actions or operations over personal data, for e.g. collect, use, share, store.</p>
+    <p><a href="https://www.w3.org/ns/dpv#LegalBasis"><dfn>LegalBasis</dfn></a>: A legal basis is a law or a clause in a law that justifies or permits the processing of personal data in the specified manner. It is a jurisdictional concept given the scoping of laws to specified countries or regions, as well as a domain-specific concept given the specific laws enacted scoped to particular domains. Every processing of personal data must be justified with a legal basis to ensure it is lawful, and to further assess its correctness, accountability, and impact based on the laws it aims to follow. However, what is considered a legal basis varies greatly across cultures, domains, use-cases, and laws themselves. The aim of DPV is therefore to provide an upper-level abstract taxonomy of categories of legal bases that can be customised and applied as needed.</p>
+    <p><a href="https://www.w3.org/ns/dpv#LegalEntity"><dfn>LegalEntity</dfn></a>: representing the ‘entities’ or ‘actors’ involved in the processing of personal data. DPV provides a broad categorisation of entities, with the following three representing the most common ones:</p>
+    <p><a href="https://www.w3.org/ns/dpv#DataController"><dfn>DataController</dfn></a>: representing the organisation(s) responsible for processing the personal data</p>
+    <p><a href="https://www.w3.org/ns/dpv#DataSubject"><dfn>Data Subject</dfn></a>: representing the categories or groups (e.g. Users of a Service), or instances (e.g. Jane Doe) of individual(s) whose personal data is being processed</p>
+    <p><a href="https://www.w3.org/ns/dpv#Recipient"><dfn>Recipient</dfn></a>: represents the entities that receive personal data, e.g. when it is shared</p>
+    <p><a href="https://www.w3.org/ns/dpv#TechnicalOrganisationalMeasure"><dfn>Technical and Organisational Measure</dfn></a>: Technical and Organisational measures consist of activities, processes, or procedures used in connection with ensuring data protection, carrying out processing in a secure manner, and complying with legal obligations. Such measures are required by regulations depending on the context of processing involving personal data. For example, GDPR (Article 32) states implementing appropriate measures by taking into account the state of the art, the costs of implementation and the nature, scope, context and purposes of processing, as well as risks, rights and freedoms. Specific examples of measures in the article include:</p>
+    <ul>
+      <li>
+        <p>the pseudonymisation and encryption of personal data</p>
+      </li>
+      <li>
+        <p>the ability to ensure the ongoing confidentiality, integrity, availability and resilience of processing systems and services</p>
+      </li>
+      <li>
+        <p>the ability to restore the availability and access to personal data in a timely manner in the event of a physical or technical incident</p>
+      </li>
+      <li>
+        <p>a process for regularly testing, assessing and evaluating the effectiveness of technical and organisational measures for ensuring the security of the processing</p>
+      </li>
+    </ul>
+    <p><a href="https://www.w3.org/ns/dpv#Right"><dfn>Right</dfn></a>: representing the rights available, applicable, or afforded by a law or regulation, either to data subjects or data controllers, or other entities</p>
+    <p><a href="https://www.w3.org/ns/dpv#Risk"><dfn>Risk</dfn></a>: representing risk(s) associated with a concept, for e.g. risk of unauthorised data disclosure related to processing, technical measure, or vulnerability of data subjects</p>
+  </section>
+  <section id="personal-data-handling">
+    <h3>Personal Data Handling</h3>
+    <p>In legal terminology, it is common to refer to all information about how personal data is being processed using the colloquial term <i>processing</i>. This results in confusion between the use of <i>processing</i> as a concept referring to all information (i.e. purposes, personal data), and [=processing=] as a concept referring to the specific actions or operations (e.g. collect, use).</p>
+    <p>To avoid this, DPV defines a new concept called <dfn>PersonalDataHandling</dfn> for representing how the [=core concepts=] are related or apply to each other for a particular use-case. To connect or relate each core concept with an instance of <code>PersonalDataHandling</code>, relationships or properties are provided. These relationships are expressed using semantic web best practices so as to enable easier comprehension by humans, for e.g. naming the relationship <code>hasPurpose</code> to indicate the applicability of a <code>Purpose</code>. Generally, properties in DPV follow the convention of <code>has&lt;SomeConcept&gt;</code> to indicate applicability of <code>&lt;SomeConcept&gt;</code>. The core concepts and their relations are depicted in the following diagram.</p>
+    <p><img src="https://w3c.github.io/dpv/dpv/diagrams/personaldatahandling.png" style="width: 100%; height: auto" /></p>
+    <p>For an example of how <code>PersonalDataHandling</code> brings together the core concepts, the following diagram and RDF code block indicates <code>Acme</code> is a <code>DataController</code> that uses <code>Email</code> personal data for <code>Marketing</code> by performing <code>Collect</code> and <code>Use</code> processing actions.</p>
+    <pre class="example" title="Personal Data Handling tying together core concepts">
+ex:AcmeMarketing a dpv:PersonalDataHandling ;
+  dpv:hasPersonalDataCategory dpv:EmailAddress ;
+  dpv:hasProcessing dpv:Collect, dpv:Use ;
+  dpv:hasPurpose dpv:Marketing ;
+  dpv:hasDataController ex:Acme .
+</pre>
+    <p>The use of <code>PersonalDataHandling</code> can be nested, which means one instance can contain other instances, much like a box with several smaller boxes inside. This permits breaking down complex or dense use-cases into more granular ones and representing them in a more precise and granular fashion. For example, in the above example, consider the following figure outlining its separation into two distinct use-cases where, (i) data is stored using a data processor, (ii) data is used for Marketing. While it is certainly possible to represent all of this information within one single instance of <code>PersonalDataHandling</code>, the adopter may decide to create separate instances of <code>PersonalDataHandling</code> based on required such as reflecting similar separations for legal documentation or accountability purposes.</p>
+    <p>Note that <code>PersonalDataHandling</code> is intended to provide a convenient concept for tying the core concepts together, and DPV does not make its use binding, nor does it constrain the relationships to only be defined between <code>PersonalDataHandling</code> and the other core concepts. This is so as to permit using DPV in alternate or differing models. For example, where a central concept already exists, such as when describing relevant information for a smartphone app, the concept for <code>App</code> can be a replacement for <code>PersonalDataHandling</code> based on statements such as <code>&lt;App hasPurpose SomePurpose&gt;</code>. Even in such cases, <code>PersonalDataHandling</code> can provide granular expression thereby enabling description of different contexts within which the app uses personal data, such as for registration or complaint resolution.</p>
+    <p>Another instance where one may not wish to utilise <code>PersonalDataHandling</code> is where the adopter or use-case wants to indicate a different method for relating concepts together. For example, instead of relating personal data and purpose through a <code>PersonalDataHandling</code> instance, the alternate model could directly indicate the applicability of personal data to a purpose by using the relevant property as: <code>&lt;SomePurpose hasPersonalData SomePersonalData&gt;</code>. Similarly, another instance for such alternate use of concepts is to associate a legal basis directly with the purpose by using the <code>hasLegalBasis</code> relationship. To support such uses, DPV does not explicitly declare restrictions on the properties in terms of what concepts they can be used with (e.g it does not provide domain assertions). In case an adopter needs such explicit declarations, they can utilise or import the separate file declaring them. The following figures indicate some commonly encountered alternate models which do not use <code>PersonalDataHandling</code> as a central concept.</p>
+    <div class="issue" title="separate file declaring axioms for property and class assertions">
+      Create a separate file providing property domains and ranges, and for classes declare disjoint for relevant and known disjoint concepts.
+    </div>
+    <div class="issue" title="diagram for alternative models to PersonalDataHandling">
+      Some alternatives, such as using <code>Purpose</code> instead of <code>PersonalDataHandling</code>, or creating ad-hoc concepts such as <code>App</code> or <code>Policy</code> as per use-case.
+    </div>
+    <div class="note" title="Consequences of using a different model than PersonalDataHandling">
+    <p>When using alternate models, it is important to note the consequences such models can have on interpretations and interoperability of data defined using DPV. For example, consider a compliance assessment tool that takes data defined using DPV as input. If the tool only operates over <code>PersonalDataHandling</code> to perform its assessments, using other alternate models and relationships can produce invalid or incorrect results. To avoid this, we recommend:</p>
+    <ol type="1">
+      <li>
+        <p>Documenting alternate models as deviations from the DPV specification to indicate its difference from DPV in terms of semantics and interpretations;</p>
+      </li>
+      <li>
+        <p>Where possible, ensuring and providing mappings between the alternate models and the DPV’s specification, so that data can be transformed for interoperability;</p>
+      </li>
+      <li>
+        <p>Consider contributing the alternate model to DPVCG to create a ‘library of alternate models’ to enable better understanding of adopters needs and influencing future developments within DPVCG.</p>
+      </li>
+    </ol>
+  </div>
+  </section>
+</section>
+  <section id="semantics-of-dpv">
+    <h2>Semantics of DPV</h2>
+    <p>DPV uses the semantics provided by [[RDF]] (along with [[RDFS]] and [[OWL]]) to define <em>concepts</em>. The following section provides a brief overview of how concepts and relationships within DPV should be interpreted.</p>
+    <section id="classes-hierarchies-and-instances">
+    <h3>Classes, Hierarchies, and Instances</h3>
+    <p>A ‘class’ is a set of information associated with a particular concept, represented by the class label or description. For example, the class <code>Email</code> refers to information about <em>emails</em>. This information may contain <i>email addresses, aliases, signatures</i>, and so on. While an intuitive use of <code>Email</code> may be taken to only refer to <i>email address</i>, within DPV the concepts are structured as a hierarchy of concepts where each <i>parent concept</i> represents a broad set of information and its <i>children concepts</i> represent parts of that set. For <code>Email</code>, this is represented in the following diagram where <code>Email</code> is a larger set and contains several smaller sets for different categories of information within the broad label of <i>email</i>.</p>
+
+    <div class="issue" title="Diagram for Email as parent and email attributes as children"></div>
+
+    <p>The relationship between a child concept and its parent concept is defined using the RDFS semantic property <code>isSubClassOf</code> to express <i>subclass</i> or <i>subset</i> relationship. For example, the statement <code>&lt;EmailID rdfs:subClassOf Email&gt;</code> indicates that the <code>EmailID</code> is a subset of <code>Email</code>. This leads to the interpretation where indicating the broader set’s (e.g. <code>Email</code>) involvement implies  its subsets (e.g. <code>EmailID</code>) are also involved. Conversely, a smaller set’s involvement does not imply the larger set’s involvement (i.e. specifying <code>EmailID</code> is involved does not entail all of <code>Email</code> to be involved). Therefore, when using DPV, it is strongly advised to use the appropriate subclass rather than the broader classes so as to be specific about the involvement of concepts and their scope.</p>
+    <p>A <i>class</i> is a set representing a collection of information represented by a concept. An <i>instance</i> is a member of that set representing a specific <em>instance</em> of that concept. For example, <code>EmailID</code> is a class of all email identifiers (or addresses), and <code>x@y.z</code> is an instance of an email identifier. In this case, <code>x@y.z</code> is also an instance or member of the class/set <code>Email</code> based on the relationship between <code>EmailID</code> and <code>Email</code>.</p>
+    
+    <div class="note" title="Caution against ambigious interpretation of terms in practice">
+      <p>In the real-world, <i>email</i> is used as a <i>catch-all term</i> or <i>broad concept</i> for referring to any and all of: email address, email contents, email exchange timelines and specifics, or even all 'emails'. Concepts in DPV are intended to support such broad usage of terms by modeling them as abstract classes or sets, within which each attribute or contents can be granularly further defined.</p>
+      <p>To better reflect a use-case and to ensure accuracy of interpretation, it is strongly recommended to either choose a more detailed concept from the DPV taxonomies, and/or to find a suitable concept and extend it to reflect the specifics as accurately as possible.</p>
+    </div>
+  </section>
+  <section id="extending-concepts-for-use-case">
+    <h3>Extending Concepts for Use-Case</h3>
+    <p>Most of the concepts within DPV are provided as hierarchies of classes representing categories of information, which are generic or abstract or broad so as to permit their application across a diverse and varied landscape of real-world use-cases. In order to accurately reflect the particulars of an use-case, concepts within DPV should (most likely) be extended. The specifics for how this should be done depend on the manner in which DPV is utilised. For example, if using [[RDFS]] or [[OWL]] semantics, extending concepts is straightforward using the subclass relationship or by creating instances of a concept. In these, a <i>subclass</i> represents a subset or category which can contain several instances, whereas an instance is an exact and specific instantiation of a concept. For example, <code>WorkEmail</code> is a category of work related emails and <code>office@example.com</code> is an instance of a work email.</p>
+    <p>Where an exact concept is not present within the DPV and a broad concept exists for representing the same information, one should subclass or extend that broad concept to define the required information. For example, DPV defines the broad concept <a href="https://www.w3.org/ns/dpv#Marketing"><code>Marketing</code></a> in its <code>Purpose</code> hierarchy to represent information about (purposes related to) marketing activities and topics. For a use-case which requires representing purposes (note: plural) related to <i>marketing of new products</i>, the broad <code>Marketing</code> class should be extended to create a new <i>child</i> or <i>subclass</i> representing the intended group of purposes. If instead of a group or category of purposes, the use-case only requires a single purpose to be defined, it can be directly defined as an instance of an existing concept. Using RDFS, this is expressed as follows:</p>
+      <pre class="example" title="Extending Market concept to represent granular and accurate Purposes">
+# Case1: Where further categories are requried to 'group' related purposes
+# creating a new subclass or category of Marketing for use-case
+ex:MarketingOfNewProducts rdfs:subClassOf dpv:Marketing ;
+    rdfs:label “Marketing of New Products” .
+
+# instances of purposes under purpose group ‘Marketing of New Products’
+ex:NewslettersOffers a ex:MarketingOfNewProducts ;
+    rdfs:label “Newsletters about Offers” .
+ex:EmailsSeasonalOffers a ex:MarketingOfNewProducts ;
+    rdfs:label “Emails about Seasonal Offers” .
+
+# Case2: Where only a single purpose needs to be represented without any grouping
+ex:MarketingSeasonalOffer a dpv:Marketing ;
+    rdfs:label "Sending Email Newsletters with Seasonal Offers" .
+  </pre>
+
+    <p>The mechanism for extending concepts (via both subclasses and instances) is useful to align existing concepts or vocabularies with the DPV taxonomies, such as by declaring them as subclasses of a particular concept. This permits the creation of domain or jurisdiction specific <i>extensions</i>, such as [[DPV-GDPR]] for expressing the legal bases provided by GDPR.</p>
+    <p>DPV is a top-down hierarchy, which means that the concepts at the <i>top</i> are broader and more abstract, and as one goes down the <i>tree</i> they get more narrow and specific.</p>
+    <p>Extensions also permit more accurate representations of a use-case by extending from multiple concepts to refine and scope the interpretation. This means each concept can have multiple parents representing the intersection of their respective sets. For example, in the following example use-case, an activity simultaneously uses the data while collecting it. The first repersentation (<code>ActivityA</code>) models them separately - which is not accurate as it is ambigious in terms of whether collection and usage happen idependently or in what order. Instead, by extending the concepts to create a new concept <code>CollectAndUse</code>, the use-case can accurately declare that they both occur together concurrently along with additional information, such as technologies involved, implementation details, etc.</p>
+    <pre class="example" title="Extending multiple concepts">
+# Method 1: Ambigious regarding independence of Collect and Use
+ex:ActivityA a dpv:PersonalDataHandling ;
+    dpv:hasProcessing ex:Collect, ex:Use .
+
+# Method 2: Accuracy regarding combination of Collect and Use
+ex:CollectAndUse a ex:Collect, ex:Use ;
+    rdfs:label “Collect and Use data using User Device” .
+ex:Activity a dpv:PersonalDataHandling ;
+    dpv:hasProcessing ex:CollectAndUse .</pre>
+
+    <div class="note" title="Clarity on combining, extending, and instantiating concepts">
+    <p>Is is not necessary to extend concepts unless one wishes to depict use-case specific information. For example, if in a use-case if it is sufficient to (only) say some information is collected, then <code>dpv:Collect</code> can be directly used. However, where more specific information is needed, such as also specifying a method of collection (e.g. <code>CollectViaWebForm</code>), then it is recommended to extend the concept, for example as <code>&lt;CollectViaWebForm a dpv:Collect&gt;</code>. If there are lots of forms and they need to be 'grouped' together as collection methods, then one would subclass <code>Collect</code> as <code>CollectViaWebForm</code> and create instances of it for each form to be represented.</p>
+    <p>Though this example used a web form as a method of collection by directly mentioning it within the concept as <code>CollectViaWebForm</code>, this may not always be desirable. For example, that same web form may also need to be represented separately for logging purposes. DPV is exploring the provision of a <code>Technology</code> concept to assist in representing information regarding how concepts are implemented and the use of specific technological artifacts such as web forms, databases, along with their functions such as data storage and retrieval.</p>
+  </div>
+  </section>
+
+  <section id="interoperability-of-extended-concepts">
+    <h3>Interoperability of Extended Concepts </h3>
+    <p>DPV intends to provide a base or foundational framework for different entities to exchange information and interpret concepts for interoperability. When an adopter (e.g. an organisation using DPV) extends concepts to refine them for their own use-case, the concept is still (weakly) interoperable by relying on DPV’s broad taxonomies to provide a common point of reference. For example, two TV companies (<code>AliceCo</code> and <code>BobCo</code>) extend the concept <code>Optimisation</code> to reflect their respective purposes as follows:</p>
+    <pre class="example" title="Interoperability of extended concepts across use-cases">
+# AliceCo’s optimisation related to better services for users’ infrastructure
+ex:TVServiceOptimision a dpv:OptimisationForConsumer ;
+    rdfs:label “Optimise Service for Users’ Infrastructure” .
+
+# BobCo’s optimisation related to more efficient signals for users’ TV sets
+ex:TVSignalOptimisation a dpv:OptimisationForConsumer ;
+    rdfs:label “Optimise Signal for Consumer TV Set” .</pre>
+
+    <p>When exchanging information about their use-cases with each other (or with a third party), by following the chain of use-case specific concepts it is possible to deduce that both <code>AliceCo</code> and <code>BobCo</code> are doing optimisations for consumers. Thus a common language or interface can be developed based on using DPV as a point of interoperability and commonality which can be used by adopters to define the specifics of their use-case. For example, in the above use-case, a common notice generation algorithm could be created and used to inform users of both services the purposes each company is using data for.</p>
+  </section>
+</section>
+
+  <section id="taxonomies-of-key-concepts">
+    <h2>Taxonomies of Key Concepts</h2>
+    <p>The following sections provides an overview of the taxonomies (i.e. hierarchies of concepts) provided by DPV for its core concepts.</p>
+    <section id="purpose">
+      <h3>Purpose</h3>
+      <p><img src="https://w3c.github.io/dpv/dpv/diagrams/purpose.png" style="width:100%;height:auto;" /></p>
+    <p>DPV’s taxonomy of purposes is used to represent the <em>reason</em> or <em>justification</em> for processing of personal data. For this, purposes are organised within DPV based on how they relate to the processing of personal data in terms of several factors, such as: management functions related to information (e.g. records, account, finance), fulfilment of objectives (e.g. delivery of goods), providing goods and services (e.g. service provision), intended benefits (e.g. optimisations for service provider or consumer), and legal compliance.</p>
+    <div class="note" title="Purposes do not have a strict structure as used in real-world use-cases">
+      <p>It is important to note the following in terms of how purposes are discussed within the real-world:</p>
+    <ol type="1">
+      <li>
+        <p>There is no universal definition for what constitutes a ’purpose’ or what attributes are associated with it.</p>
+      </li>
+      <li>
+        <p>There are several distinct ways to model purposes, e.g. as a ‘goal’ such as ‘Delivery of Ordered Goods’; or as a statement explaining the processing of personal data, e.g. ‘Sending newsletters to Email’.</p>
+      </li>
+      <li>
+        <p>The requirements for a ‘valid purpose’ are defined externally, e.g. [[GDPR]] Article.5-1b requires purposes to be ‘explicit and legitimate’ based on specific conditions which should be met</p>
+      </li>
+      <li>
+        <p>Purposes have contextual interpretations within their application (i.e. where they are used in an use-case), e.g. purposes related to marketing are quite distinct from purposes related to health and safety even if they use the same wording.</p>
+      </li>
+    </ol>
+  </div>
+    <p>Following from the above, most use-cases would need to extend one of the concepts within DPV’s purpose taxonomy to ensure its purpose descriptions are specific and understandable to the context of that use-case. We therefore suggest to adopters, where possible and appropriate, to create their own purposes as required within their use-cases by either declaring the purpose being used as an instance or subclass of one or several purpose categories within DPV and to provide a human readable description to assist in its accurate interpretation (e.g. for RDF, using <code>rdfs:label</code> and <code>rdfs:comment</code>).</p>
+    <aside class="example" title="Combining Purposes and adding human-readable descriptions">
+      <p>In this example, a new purpose is created as an instance of <a href="https://www.w3.org/ns/dpv#DeliveryOfGoods"><code>dpv:DeliveryOfGoods</code></a> and <a href="https://www.w3.org/ns/dpv#FraudPreventionAndDetection"><code>FraudPreventionAndDetection</code></a>, and is accompanied with human-readable information. The interpretation of this purpose is to be taken as being the intersection or combination of the two purpose categories, i.e. the purpose is to achieve both the delivery of goods as well as fraud prevention and detection.</p>
+      <pre>
+ex:CombinedNewPurpose a dpv:DeliveryOfGoods, dpv:FraudPreventionAndDetection ;
+  rdfs:label “Deliver Goods and Fraud Prevention" ;
+  rdfs:comment "Inteded delivery of goods with fraud prevention” .</pre></aside>
+
+    <h4 id="sector-of-purpose-application">Sector of Purpose Application</h4>
+    <p>To further clarify how purposes should be interpreted, DPV provides several concepts such as <a href="https://www.w3.org/ns/dpv#Sector"><code>Sector</code></a> and <a href="https://www.w3.org/ns/dpv#Context"><code>Context</code></a>. <code>Sector</code>, used with the <a href="https://www.w3.org/ns/dpv#hasSector"><code>hasSector</code></a> property, can denote <i>sector</i> or <i>domain</i> of operation, such as Manufacturing. This can be used alongside existing official sector taxonomies such as [[NACE]] (EU), [[NAICS]] (USA), or [[ISIC]] (UN), as well as commercial industry taxonomies such as [[GICS]] maintained by organisations MSCI and S&amp;P. Multiple classifications can be used through mappings between sector codes such as the [[[NACE-NAICS]]] provided by EU.</p>
+
+    <div class="note" title="DPVCG provides a DPV-compatible NACE extension">
+      <p>DPVCG provides an interpretation of the NACE revision 2 codes which uses <code>rdfs:subClassOf</code> to specify the hierarchy between sector concepts. It is available as [[DPV-NACE]]. The NACE codes within this extension have the namespace <code>dpv-nace</code> and are represented as <code>dpv-nace:NACE-CODE</code>.</p>
+      <p>We are working on further alignments between the NACE codes and DPV's purpose taxonomy, and welcome contributions for the same.</p>
+    </div>
+
+    <aside class="example" title="Using NACE codes to restrict Purposes">
+      <p>For example, the following purpose concerns implementing access control with the domain specified as scientific research using its corresponding NACE code <code>M72</code>:</p>
+      <pre>
+:LimitAccess a dpv:AccessControl ;
+  rdfs:label “Limit access to lab" ;
+  dpv:hasSector dpv-nace:M72 .</pre></aside>
+
+    <h4 id="context-of-purpose-application">Context of Purpose Application</h4>
+    <p>While the use of sector codes for restricting (personal data processing) purposes is an uncommon and undocumented practice in terms of legal enforcement, we provide this feature as the use of sector code can assist with identification and interpretation of information as well as legal or organisational obligations and policies. For example, indicating some purpose is to be implemented within manufacturing or scientific research facilities (e.g. medical centres) can assist in ensuring specific types of access control and policies are defined and implemented.</p>
+    <p>For association additional information for how the purposes can be further restricted or interpreted, the <a href="https://www.w3.org/ns/dpv#Context"><code>Context</code></a> concept along with the <a href="https://www.w3.org/ns/dpv#hasContext"><code>hasContext</code></a> property can be used. <code>Context</code> refers to a generic <em>context</em> of how that purpose is applied and is intended to be expanded as required and applicable within an use-case or domain. Context enables associating information not possible to be represented or otherwise associated using the other concepts available within DPV. For example, indicating who developed that purpose or documentation about its application.</p>
+    <div class="issue" title="Example of purpose and context"></div>
+  </section>
+
+  <section id="processing-categories">
+    <h3>Processing Categories</h3>
+    <p><img src="https://w3c.github.io/dpv/dpv/diagrams/processing.png" style="width:100%;height:auto;" /></p>
+    <p>DPV’s taxonomy of processing concepts reflects the variety of terms used to denote processing activities or operations involving personal data, such as those from [[GDPR]] Article.4-2 definition of <i>processing</i>. Real-world use of terms associated with processing rarely uses this same wording or terms, except in cases of specific domains and in legal documentation. On the other hand, common terms associated with processing are generally restricted to: collect, use, store, share, and delete.</p>
+    <p>DPV provides a taxonomy that aligns both the legal terminologies such as those defined by GDPR with those commonly used. For this, concepts are organised based on whether they subsume other concepts, e.g. <a href="https://www.w3.org/ns/dpv#Use"><code>Use</code></a> is a broad concept indicating data is used, which DPV extends to define specific processing concepts for <a href="https://www.w3.org/ns/dpv#Analyse"><code>Analyse</code></a>, <a href="https://www.w3.org/ns/dpv#Consult"><code>Consult</code></a>, <a href="https://www.w3.org/ns/dpv#Profiling"><code>Profiling</code></a>, and <a href="https://www.w3.org/ns/dpv#Retrieving"><code>Retrieving</code></a>. Through this mechanism, whenever an use-case indicates it <i>consults</i> some data, it can be inferred that it also <i>uses</i> that data.</p>
+    <div class="note" title="Need for ensuring accuracy of processing terms in an use-case">
+      <p>The definitions for what each processing concept are taken from general language dictionaries (pre-dominantly Oxford English), use of the term within legal documents (e.g. GDPR case law), and technology-specific interpretations such as for IT systems. Despite these, there may be distinct interpretations for what a term represents based on differences in practices, culture, language, and domains. In case an adopter or a use-case foresees such ambiguity or confusion, it is advisable to extend the relevant concepts and define them as needed, or create a separate extension.</p>
+    </div>
+
+    <h4 id="indicating-processing-location-and-duration">Indicating Processing Location, and Duration</h4>
+    <p>For indicating where processing is taking place in terms of location and duration, DPV provides the properties <a href="https://www.w3.org/ns/dpv#hasLocation"><code>hasLocation</code></a> and <a href="https://www.w3.org/ns/dpv#hasDuration"><code>hasDuration</code></a>. While DPV also provides the concepts <a href="https://www.w3.org/ns/dpv#ProcessingLocation"><code>ProcessingLocation</code></a> and <a href="https://www.w3.org/ns/dpv#ProcessingDuration"><code>ProcessingDuration</code></a> for use with these properties, their use is not obligatory as an use-case may want to follow its own conventions, such as use of plain-text strings, e.g. <code>"EU"</code> to indicate location, or the use of external vocabularies, e.g. [[[TIME]]] to denote duration. Where possible, it is recommended to utilise common vocabularies and methods of specifications to promote interoperability of information and information. In the earlier example, the <code>"EU"</code> string could be replaced with the a vocabulary providing jurisdictional concepts for representing the EU.</p>
+    <div class="issue" title="Jurisdictional Extension for DPV"></div>
+
+    <h4 id="indicating-storage-and-source-of-data">Indicating Storage and Source of Data</h4>
+    <p>The DPV processing taxonomy provides the concept <a href="https://www.w3.org/ns/dpv#Store"><code>Store</code></a> to indicate data is being stored. To specify where the data is being stored, the property <a href="https://www.w3.org/ns/dpv#hasLocation"><code>hasLocation</code></a> can be used alongside <code>Store</code> class. Similarly, the <a href="https://www.w3.org/ns/dpv#hasDuration"><code>hasDuration</code></a> property can be used to denote duration of storage of data. In addition to these, the <a href="https://www.w3.org/ns/dpv#StorageDeletion"><code>StorageDeletion</code></a> class complements the duration declaration by explicitly referring to a deletion policy, such as for deletion guarentees.</p>
+    <div class="issue" title="Harmonisation of Restriction classes and extension to other types of restrictions beyond Storage"></div>
+    <div class="issue" title="Example for Data Storage"></div>
+    
+    <p>For declaring the source of data, the <a href="https://www.w3.org/ns/dpv#DataSource"><code>DataSource</code></a> class along with <a href="https://www.w3.org/ns/dpv#hasDataSource"><code>hasDataSource</code></a> property can be used. This enables declaring where the data is collected or acquired from. For example, data can be obtained from the data subject directly (e.g. given via forms) or indirectly (e.g observed from activity, or inferred from existing data), or from another entity such as a third party.</p>
+    <p class="issue" title="Example for Data Source"></p>
+    
+    <h4 id="indicating-impact-based-on-scale-automation-consequences">Indicating Impact based on Scale, Automation, Consequences</h4>
+    <p>For indicating attributes which affect how processing should be considered in terms of impact or carry additional legal obligations, DPV provides concepts based on [[GDPR]] Article.35 regarding Data Protection Impact Assessments (DPIA) for representing whether processing is carried out at large scale, consists of systematic monitoring (of data subjects), is performed for evaluation or scoring (of data subjects), matching and/or combining existing datasets, utilizes automated decision making, or involves innovative use of new technologies. These concepts provide a way to indicate their applicability for specific processing activities, such as specifying collection happens at large scale or that data is used for/with automated decision making.</p>
+    <p class="issue" title="Example of Scale"></p>
+
+    <p>For indicating consequences of a processing, the property hasConsequences can be used. Consequences could be non-material or material, and may or may not be impactful to the Data Subjects. While the consequence concept is described here in the processing section, an use-case may choose to utilize it in concepts other than processing, such as for purpose or processing.</p>
+    <p class="issue" title="Example of Automation, Consequences"></p>
+
+    <h4 id="indicating-algorithmic-logic-and-human-involvement">Indicating Algorithmic Logic, and Human Involvement</h4>
+    <p>For indicating the algorithmic logic or human involvement for a specific processing operation , the properties hasAlgorithmicLogic and hasHumanInvolvement are available respectively. Using these, it is possible to describe the algorithms or point to an external resource or document providing more details, such as how a human moderator was involved in a particular step.</p>
+    <p class="issue" title="Example of Algorithmic Logic and Human Involvement"></p>
+  </section>
+
+  <section id="personal-data">
+    <h3>Personal Data</h3>
+    <p class="issue" title="Diagram for Personal Data"></p>
+    <p>DPV’s provides the concept <a href="https://www.w3.org/ns/dpv#PersonalData"><code>PersonalData</code></a> and the property <a href="https://www.w3.org/ns/dpv#hasPersonalData"><code>hasPersonalData</code></a> to indicate what categories or instances of personal data are being processed. As described earlier, common use of personal data concepts in the real-world consists of specifying as concepts both categories (e.g. <i>Location</i>) and instances (e.g. your <i>exact location right now</i>). DPV’s concepts represent categories of personal data, which are expected to be further extended to reflect the actual categories or instances required in an use-case.</p>
+    <div class="note" title="Clarity on Personal Data concepts being Categories and Instances">
+      <p>Real-world and common usage of <i>personal data</i> is at both an abstract level as well as specific level. For example, consider the sentence "We use your Email information...", which uses "<i>Email</i>" to represent a reference to what personal data is involved. Here, one may interpret <i>Email</i> as representing only the <i>email address</i>, or as a broad set of possible information related to emails, such as <i>email address, email senders and recipients list, email service provider, email usage statistics</i> and so on.</p>
+      <p>For ensuring clarity and resolving any potential ambiguity, DPV recommends being as specific as possible. This means where there is ambiguity as to what the information may be associated with or within a concept, it is advisable to resolve that ambiguity - either by choosing a more accurate concept from the taxonomy and/or by creating one through extension of an existing concept.</p>
+    </div>
+    <div class="note" title="Extension providing Personal Data Categories">
+      <p>Prior versions of DPV (i.e. from v0.1 to v0.3) contained a taxonomy of personal data categories (provided under term <code>PersonalDataCategory</code>), which were removed to avoid ambiguity and confusion between concepts which could be considered as personal data and also as other concepts associated with its processing. For example, <code>Location</code> was defined as a personal data category, but was also relevant when describing other location-based concepts such as <code>StorageLocation</code>.</p>
+      <p>The taxonomy of personal data categories is now provided as [[[DPV-PD]]], with DPV retaining only a few important concepts necessary for providing the abstract concepts related to personal data. An adopter can choose to use the extension providing categories of personal data, or use another external vocabulary, or define their own categories. In addition to removal of the taxonomy, the class <code>PersonalDataCategory</code> and its associated property were changed to <a href="https://www.w3.org/ns/dpv#PersonalData"><code>PersonalData</code></a> for reflecting the necessity to represent both categories and instances of personal data using DPV.</p>
+    </div>
+    <p>For indicating personal data which is sensitive, the class <a href="https://www.w3.org/ns/dpv#SensitivePersonalData"><code>SensitivePersonalData</code></a> is provided. For indicating special categories of data, the class <a href="https://www.w3.org/ns/dpv#SpecialCategoryPersonalData"><code>SpecialCategoryPersonalData</code></a> is provided. In this, the concept <i>sensitive</i> indicates that the data needs additional considerations (and perhaps caution) when processing, such as by increasing its security, reducing usage, or performing impact assessments. <i>Special categories</i> are a subset of sensitive personal data which require additional or separate legal justifications in order to process them. For example, [[GDPR]] Article 9 defines several special categories of personal data which are prohibited from being processed unless an appropriate legal basis from Article 9 is (also) used.</p>
+    <p>For indicating a category is sensitive or special, it is subclassed from the appropriate class within DPV. While work is ongoing within DPV to identify and provide a reference list of sensitive and special categories, a use-case can indicate some personal data categories to be sensitive or special by extending the concept and subclassing it.</p>
+    <p class="issue" title="Example of Sensitive and Special Category Personal Data"></p>
+
+    <p>For indicating personal data is derived or inferred from other personal data, the concepts <a href="https://www.w3.org/ns/dpv#DerivedPersonalData"><code>DerivedPersonalData</code></a> and <a href="https://www.w3.org/ns/dpv#InferredPersonalData"><code>InferredPersonalData</code></a> are provided. These allow expressing which personal data has been derived or inferred within a use-case. In DPV, the method for derivation or inference is considered to be part of the processing concept and therefore should be declared using the appropriate processing concepts rather. However, an adopter can choose an alternate model for declaring information about how data was derived or inferred, such as by using PROV to model data as inputs or outputs of activities.</p>
+    <p class="issue" title="Example of Dervied and Inferred PersonalData"></p>
+
+    <div class="note" title="Challenges in representing Personal Data concepts accurately">
+      <p>It is challenging to accurately represent involvement of personal data due to the extreme variance in intended interpretations of how concepts function within real-world use. For example, the DPVCG debated the modeling of personal data categories based on the scenario where a picture of passport is initially collected, and from it various information is extracted, such as name, address, and photo. For representing this, merely stating the personal data category as ‘passport photograph’ might be misleading as there is additional information within that photograph.</p>
+      <p>A compromise was established whereby the use-case is expected to declare what information it intends to collect or use through the mechanism of extensions or subclasses. For the passport photograph scenario, the use-case would declare the class <code>PassportPhoto</code> with subclasses representing <code>Name</code>, <code>Age</code>, and so on. However, one may wish to use another method for explicitly declaring information, such as by creating additional properties (e.g. <code>containsData</code>) or reusing existing ones (e.g. <code>skos:narrower</code>) to indicate the photo <em>contains</em> information related to name, age, etc. We welcome contributions and proposals regarding both these methods.</p>
+    </div>
+  </section>
+
+  <section id="technical-and-organisational-measures">
+    <h3>Technical and Organisational Measures</h3>
+    <p><img src="https://w3c.github.io/dpv/dpv/diagrams/technicalorganisationalmeasures.png" style="width:100%;height:auto;" /></p>
+
+    <p>DPV provides a taxonomy of technical and organisational measures for representing information about how the processing of personal data is technically and organisationally protected, safeguarded, or otherwise implemented. This is distinct from what technology is used for carrying out processing, and instead refers to what <i>measures</i> are in place (i.e. what the technology intends to provide in terms of features). Some examples of common technical measures are use of encryption and access control for security, and for organisational measures include staff training, having guiding policies, and certifications.</p>
+    <p>DPV provides a taxonomy of concepts which can be structured into two group of technical and organisatioal measures respectively. The technical measures, represented by the concept <a href="https://www.w3.org/ns/dpv#TechnicalMeasure"><code>TechnicalMeasure</code></a>, concern measures primarily achieved using some technology. By contrast the organisational measures, represented by <a href="https://www.w3.org/ns/dpv#OrganisationalMeasure">OrganisationalMeasure</a></p>, are carried out through activities and processes at the management and organisational levels, which may or may not be assisted by technology.</p>
+    <p>Similar to the other taxonomies, it is advised for an adopter to extend the relevant concept through subclass or instance mechanisms to represent the measure relevant to the use-case. For example, to indicate data is encrypted using the <a href="https://en.wikipedia.org/wiki/RSA_(cryptosystem)">Rivest-Shamir-Adleman (RSA) method</a>, one would extend the <a href="https://www.w3.org/ns/dpv#Encryption"><code>Encryption</code></a> concept within DPV to represent <code>RSA</code>, and then instantiate it with the specific implementation used (e.g. to indicate key size).</p>
+    <p class="issue" title="Example of RSA Encryption as Technical Measure"></p>
+
+    <h4 id="implementation-of-measure">Implementation of Measure</h4>
+    <p>To indicate how a measure is implemented, the property <a href="https://www.w3.org/ns/dpv#measureImplementedBy"><code>measureImplementedBy</code></a> can be used. This permits associating a particular technology, documentation, or entity with the measure to provide information on how it is used, applied, implemented, or deployed within the use-case. The property can be used for both technical as well as organisational measures to indicate the implementation as a document outlining procedures, guidelines, or a software product.</p>
+    <p class="issue" title="Example of measure implementation property"></p>
+    <div class="note" title="Representing Technologies">
+      <p>The DPV intends to represent commonly utilised technologies (e.g. database) and their use in processes (e.g. querying) for use as implementation of technical and organisational measures. We welcome contributions for the same.</p>
+    </div>
+
+    <h4 id="restrictions-for-storage-location-and-duration">Restrictions for Storage, Location, and Duration</h4>
+      <p>The technical and organisational measures can be annotated with information in terms of their storage, location, and duration using the properties <a href="https://www.w3.org/ns/dpv#hasStorage"><code>hasStorage</code></a>, <a href="https://www.w3.org/ns/dpv#hasLocation"><code>hasLocation</code></a>, and <a href="https://www.w3.org/ns/dpv#hasDuration"><code>hasDuration</code></a>. This is similar to how processing concepts can utilise these concepts to indicate, for e.g. data is collected from a particular location.</p>
+      <p class="issue" title="Example of storage, location, duration for measures"></p>
+
+      <p>In addition to these, additional restrictions for storage, represented under <a href="https://www.w3.org/ns/dpv#StorageRestriction"><code>StorageRestriction</code></a>, can be used to define information about duration (as <a href="https://www.w3.org/ns/dpv#StorageDuration"><code>StorageDuration</code></a>), location (as <a href="https://www.w3.org/ns/dpv#StorageLocation"><code>StorageLocation</code></a>), and deletion (as <a href="https://www.w3.org/ns/dpv#StorageDeletion"><code>StorageDeletion</code></a>). These classes complement the properties for storage, duration, and location.</p>
+      <p class="issue" title="Example of location, duration, and deletion for measures"></p>
+
+    <h4 id="using-existing-standards">Using Existing Standards</h4>
+    <p>Technical and organisational measures are the subject of standardisation efforts at national as well as international levels through organisations such as ISO, NIST, CEN/CENELC and ENISA. Such standards can be expressed within DPV by extending the appropriate concepts and describing the application of that standard within the use-case. For example, for indicating the access control measure follows the guidelines of the [[ISO-27017]] standard for security implemented by cloud service providers, the instance of <a href="https://www.w3.org/ns/dpv#AccessControlMethod"><code>AccessControlMethod</code></a> used in the use-case can be annotated with a reference to the standard by using <a href="https://www.w3.org/ns/dpv#measureImplementedBy"><code>measureImplementedBy</code></a>.</p>
+    <p class="issue" title="Example of expressing ISO 27017 as implemented standard"></p>
+    <div class="note" title="Representing Standards and Specifications">
+      <p>The DPV intends to represent commonly utilised standards (e.g. ISO) and specifications (e.g. W3C) for use as technical and organisational measures. We welcome contributions for the same.</p>
+    </div>
+
+    <h4 id="risk-and-risk-mitigation">Risk and Risk Mitigation</h4>
+    <p>For risk management, DPV provides the class <a href="https://www.w3.org/ns/dpv#Risk"><code>Risk</code></a> and property <a href="https://www.w3.org/ns/dpv#hasRisk"><code>hasRisk</code></a> to indicate applicability or existence of a risk, and the class <a href="https://www.w3.org/ns/dpv#RiskMitigationMeasure"><code>RiskMitigationMeasure</code></a> and property <a href="https://www.w3.org/ns/dpv#mitigatesRisk"><code>mitigatesRisk</code></a> to indicate mitigation. <i>Risk</i>, as a concept, can be associated with any other concept given its broad existence and applicability, whereas its mitigation is defined as a technical and organisational measure. Through this, the implemented or adopted technical and organisational measures can be annotated with the risks they address or mitigate. For example, the implementation of access control methods mitigates the risks of unauthorised access. While these concepts provide a rudimentary level of association between DPV concepts and risk management, it is important to note that the DPV is not a risk management vocabulary per se.</p>
+    <p class="issue" title="Example of risk and risk mitigation"></p>
+  </section>
+
+  <section id="legal-basis">
+    <h3>Legal Basis</h3>
+    <p class="issue" title="Diagram for legal basis"></p>
+    <p>DPV provides the following categories of legal bases based on [[GDPR]] Article 6: consent of the data subject, contract, compliance with legal obligation, protecting vital interests of individuals, legitimate interests, public interest, and official authorities. Though derived from GDPR, these concepts are represented as an abstract legal basis and can be applied for other jurisdictions and use-cases. The legal bases are represented by the concept <a href="https://www.w3.org/ns/dpv#LegalBasis"><code>LegalBasis</code></a> and associated using the property <a href="https://www.w3.org/ns/dpv#hasLegalBasis"><code>hasLegalBasis</code></a>.</p>
+    <p class="issue" title="Example of legal basis"></p>
+
+    <p>When declaring a legal basis, it is important to denote under what law or jurisdiction that legal basis applies. For instance, using <code>Consent</code> as a legal basis has different obligations and requirements in EU (i.e. [[GDPR]]) as compared to other jurisidictions. Therefore, DPV recommends indicating the specific law or legal clause associated with the legal basis so as to scope its interpretation. For GDPR, DPVCG provides the [[[DPV-GDPR]]] which defines the legal bases within [[GDPR]] by extending them from relevant concepts within the DPV. We welcome similar contributions for extending the GDPR extension as well as creating extensions for other laws and domains.</p>
+    <p class="issue" title="Example of legal basis in GDPR"></p>
+
+    <h4 id="legal-bases-for-cross-border-data-transfers">Legal Bases for Cross-Border Data Transfers</h4>
+    <p>Given the importance of data transfers or movement across jurisdictional borders, DPV also defines the concept <a href="https://www.w3.org/ns/dpv#DataTransferLegalBasis"><code>DataTransferLegalBasis</code></a> to represent the category of legal bases applicable for justifying such cross-border data flows. For GDPR, these involve Articles 45, 46, and 49, and are defined within the [[DPV-GDPR]] extension. When representing such cross-border data flows, concepts such as jurisdiction and countries are also required so as to indicate which laws apply, and whether political treaties exist between regions. We welcome contributions for expressing this information within the framework of the DPV.</p>
+    <p class="issue" title="Example of legal basis for data transfer"></p>
+  </section>
+
+  <section id="consent">
+    <h3>Consent</h3>
+    <p class="issue" title="Diagram for consent"></p>
+    <p><a href="https://www.w3.org/ns/dpv#Consent"><code>Consent</code></a> is a specific (and perhaps special) legal basis given its emphasis on individual empowerment and control, as well as the attention and relevance it receives from being in front of the individuals via ubiquitous consent dialogues throughout the web. DPV provides concepts for representing information about how consent, as a legal basis, was collected (by the Controller) or given (by the Data Subject), how long it is considered to be valid (its duration), and how it can be withdrawn. This information can be utilised in applications associated with consent, such as creating a ‘record’ of consent for compliance.</p>
+    <p>Given the reliance of consent as a legal bases whose validity is associated with requirements and obligations based on jurisdictional laws, DPV does not dictate what constitute a ‘valid’ consent and only provides a way to declare information about it. Such information concerning compliance obligations and requirements is within the scope of the DPVCG, and we welcome contributions on how this can be represented in a coherent manner within an extension that is compaible with the rest of DPV.</p>
+    <p>The class <a href="https://www.w3.org/ns/dpv#Consent"><code>Consent</code></a> represents the concept of <i>consent</i>, with the DPV classes and properties used to associate the relevant information it is about. If using <a href="https://www.w3.org/ns/dpv#PersonalDataHandling"><code>PersonalDataHandling</code></a>, the use of consent can be indicated through the <a href="https://www.w3.org/ns/dpv#hasLegalBasis"><code>hasLegalBasis</code></a> property, and the relevant information associated using properties, such as <a href="https://www.w3.org/ns/dpv#hasPurpose"><code>hasPurpose</code></a> and <a href="https://www.w3.org/ns/dpv#Purpose"><code>Purpose</code></a>. Conversely, one can also create alternate forms of <i>consent as a policy</i> where the purpose and other information is directly associated with Consent using the generic properties.</p>
+    <p class="issue" title="Example of consent as legal basis with personal data handling and other alternative data models"></p>
+
+    <p>To specify additional information, DPV specifies provenance properties of <a href="https://www.w3.org/ns/dpv#hasProvisionTime"><code>hasProvisionTime</code> and <a href="https://www.w3.org/ns/dpv#hasProvisionMethod"><code>hasProvisionMethod</code></a> for how consent was given, and <a href="https://www.w3.org/ns/dpv#hasWithdrawalTime"><code>hasWithdrawalTime</code></a> and <a href="https://www.w3.org/ns/dpv#hasWithdrawalMethod"><code>hasWithdrawalMethod</code></a> to indicate how consent was withdrawn. The expiry of consent can be specified using the property <a href="https://www.w3.org/ns/dpv#hasExpiry"><code>hasExpiry</code></a>, with sub-properties provided to define expiry as a temporal entity using <a href="https://www.w3.org/ns/dpv#hasExpiryTime"><code>hasExpiryTime</code></a> or as a condition/event using <a href="https://www.w3.org/ns/dpv#hasExpiryCondition"><code>hasExpiryCondition</code></a>.</p>
+    <p>Example</p>
+    <p>Requirements for <i>informed</i> consent require provision of information before the consent is obtained so as to inform the individual. This information is typically provided through a <i>notice</i>, which can be specified using the property <a href="https://www.w3.org/ns/dpv#hasConsentNotice"><code>hasConsentNotice</code></a>. Similarly, <i>explicit</i> consent is a specific form of consent where the action of giving consent carries additional obligations of being explicitly performed by the individual. To represent this, the boolean property <a href="https://www.w3.org/ns/dpv#isExplicit"><code>isExplicit</code></a> is provided.</p>
+    <p class="issue" title="Example of consent notice and explicit consent"></p>
+
+    <div class="note" title="DPV does not dictate or specify requirements for valid consent">
+      <p>The specific conditions under which consent can be considered valid, or informed, or explicit as defined under jurisdictional law. The terms provided within the DPV are generic concepts for representing these <i>types</i> of consent. For using specific jurisdictional requirements and use of consent as a legal basis, it is advisable to declare such jurisdictional concepts in a separate extension to the DPV. For specific use of consent as a legal basis defined within GDPR, we provide [[DPV-GDPR]].</p>
+    </div>
+    <p>To specify consent provided by delegation, such as in the case of a parent or guardian providing consent for a child, the properties <a href="https://www.w3.org/ns/dpv#hasProvisionByJustification"><code>hasProvisionByJustification</code></a> and <a href="https://www.w3.org/ns/dpv#hasWithdrawalByJustification"><code>hasWithdrawalByJustification</code></a> can be used to capture the nature of such ‘delegation’, with the fields <a href="https://www.w3.org/ns/dpv#hasProvisionBy"><code>hasProvisionBy</code></a> and <a href="https://www.w3.org/ns/dpv#hasWithdrawalBy"><code>hasWithdrawalBy</code></a> representing the legal entity who provided the consent. By default, the consent can be assumed to be provided by the associated Data Subject.</p>
+    <p class="issue" title="Example of consent by delegation"></p>
+  </section>
+
+  <section id="legal-entities">
+    <h3>Legal Entities</h3>
+    <p><img src="https://w3c.github.io/dpv/dpv/diagrams/legalentities.png" style="width:100%;height:auto;" /></p>
+    <p>A ‘legal entity’ is an entity whose role is defined legally or within legal norms. DPV provides a taxonomy of entities based on their application within laws and use-cases. Alongside <a href="https://www.w3.org/ns/dpv#DataController"><code>DataController</code></a> and <a href="https://www.w3.org/ns/dpv#DataSubject"><code>DataSubject</code></a> entities, the DPV also defines other types of entities involved in the processing of personal data. The class of entities that are recipients of personal data is represented by the class <a href="https://www.w3.org/ns/dpv#Recipient"><code>Recipient</code></a> and property <a href="https://www.w3.org/ns/dpv#hasRecipient"><code>hasRecipient</code></a>. The <a href="https://www.w3.org/ns/dpv#DataProcessor"><code>DataProcessor</code></a> is a recipient which is contracted by the Data Controller to carry out processing, and the <a href="https://www.w3.org/ns/dpv#DataSubProcessor"><code>DataSubProcessor</code></a> is a Data Processor which is contracted by (another) Data Processor. A <a href="https://www.w3.org/ns/dpv#ThirdParty"><code>ThirdParty</code></a> is an entity other than the data subject, data controller, and data processor that is a recipient of personal data.</p>
+    <p class="issue" title="Example of specifying different legal entity types"></p>
+
+    <p>To represent a data subject is a minor or a child, the concept <a href="https://www.w3.org/ns/dpv#Child"><code>Child</code></a> is defined. Note that the definition of age for what constitutes a minor or a child is based on jurisdiction. To represent data subjects are to be considered a vulnerable group, the concept <a href="https://www.w3.org/ns/dpv#VulnerableDataSubject"><code>VulnerableDataSubject</code></a> is provided. This permits indicating that a group of data subjects (e.g. minorities) are considered vulnerable in a given use-case.</p>
+    <p class="issue" title="Example of specifying child and vulnerable data subject categories"></p>
+
+    <p>To indicate the authorities, the concept <a href="https://www.w3.org/ns/dpv#Authority"><code>Authority</code></a> and its subclass <a href="https://www.w3.org/ns/dpv#DataProtectionAuthority"><code>DataProtectionAuthority</code></a> are defined. To indicate representatives, the class <a href="https://www.w3.org/ns/dpv#Representative"><code>Representative</code></a> and property <a href="https://www.w3.org/ns/dpv#hasRepresentative"><code>hasRepresentative</code></a> are provided. These permit associating a representative, such as a person or a law firm, with another entity. A <a href="https://www.w3.org/ns/dpv#DataProtectionOfficer"><code>DataProtectionOfficer</code></a> class is defined as a specific category of representatives responsible for carrying out data protection functions within the organisation.</p>
+    <p class="issue" title="Example of specifying authority, representative, and DPO"></p>
+
+    <p>For indicating how organisations act within the context of data transfer, especially regarding cross-border data flows, the concepts <a href="https://www.w3.org/ns/dpv#DataImporter"><code>DataImporter</code></a> and <a href="https://www.w3.org/ns/dpv#DataExporter"><code>DataExporter</code></a> are defined. These are based on the guidelines issued by the EDPB regarding GDPR’s application for cross-border data flows, where a data exporter is an entity that ‘exports’ or transfer data outside the jurisdiction, whereas a data importer is an entity that ‘imports’ or receives a data transfer from outside the jurisdiction. Note that the exporter and importer roles are independent from those of controllers and processors, i.e. a controller or a processor can be an exporter or an importer.</p>
+    <p class="issue" title="Example of specifying data importer and exporter for data transfer"></p>
+  </section>
+
+  <section id="rights">
+    <h3>Rights</h3>
+    <p>For representing the rights available or applicable in the use-case, the class <a href="https://www.w3.org/ns/dpv#Right"><code>Right</code></a> is provided. Note that rights are not exclusive to the data subjects, but can also be available to the other entities, such as data controllers and processors. For specifically referring to data subject rights, the class <a href="https://www.w3.org/ns/dpv#DataSubjectRight"><code>DataSubjectRight</code></a> is defined. Rights can be associated with relevant concepts using the property <a href="https://www.w3.org/ns/dpv#hasRight"><code>hasRight</code></a>. Since rights are defined by laws which are bound by the jurisdictions within which they operate, the DPV does not provide a taxnomies of specific rights. The DPV-GDPR, representing the application of DPV concepts for GDPR, specifies the rights provided within GDPR by extending the <a href="https://www.w3.org/ns/dpv#DataSubjectRight"><code>DataSubjectRight</code></a> concept.</p>
+    <p>To indicate a right is applicable within a particular use-case, one can use the property <a href="https://www.w3.org/ns/dpv#hasRight"><code>hasRight</code></a> with the <a href="https://www.w3.org/ns/dpv#PersonalDataHandling"><code>PersonalDataHandling</code></a> instance. Or for cases where a right is needed to be associated with a particular personal data category or a processing operation, it can be similarly associated with that concept.</p>
+    <p class="issue" title="Example of rights applicable and associated with PersonalDataHandling and any other concept"></p>
+  </section>
+</section>
+
+  <section>
+    <h2 id="using-dpv">Using DPV</h2>
+    <p>The DPV is serialised using [[RDF]] and uses [[RDFS]] and [[OWL]] semantics to define the hierarchy and relationships between its concepts. While this enables its use as a semantic web ontology, the DPV can also be used without semantic web by either utilising a serialisation such as [[JSON-LD]] which retains the semantics but provides convenience of using known notations, or using other methods which strip the semantic information out, such as a CSV or a flat-list of concepts. This section provides an overview of such approaches where DPV can be used both with and without semantic web.</p>
+    <section id="rdfs-owl-skos">
+      <h3>RDFS, OWL, SKOS</h3>
+    <p>DPV, as it is serialised by default, uses both [[RDFS]] and [[OWL]] semantics. An adopter’s use-case may be using only one of these, and they may wish to retain this structure. Similarly, another adopter may prefer the semantics of [[SKOS]] which has a simpler mechanism for utilising the concepts as a vocabulary. For such use-cases, DPV provides ‘variants’ or ‘flavours’ for semantics associated with [[RDFS]], [[OWL]], and [[SKOS]]. These are available here.</p>
+    <p>In addition to these, another common requirement for use-cases is to have domain and range assertions, which are absent from the (default) DPV to permit a wider applicability of its concepts. For use-cases that require such assertions, these are available in a separate file, available here, which can be imported or combined with DPV within the use-case. It defines domain and range assertions for properties, and disjoint declarations for classes.</p>
+    <p class="issue" title="Guidance and example on using DPV as RDFS vocab"></p>
+    <p class="issue" title="Guidance and example on using DPV as OWL vocab"></p>
+  </section>
+  <section id="json-ld">
+    <h3>JSON-LD</h3>
+    <p>For applications which wish to retain the DPV semantics but do not wish to (explicitly) use [[RDF]], the [[JSON-LD]] serialisation offers the best of both words. [[JSON-LD]] is a format for expressing [[RDF]] semantics while being compatible with JSON – which is a widely interpreted language for expressing data. When expressed using [[JSON-LD]], the data retains the human-readability and the ability to be extended.</p>
+    <p class="issue" title="Guidance and example on using DPV as JSON-LD vocab"></p>
+  </section>
+  <section id="csv-and-flat-lists">
+    <h3>CSV and Flat Lists</h3>
+    <p>In use-cases where DPV is to be used but without the RDF semantics, the concepts are provided in a CSV file as well as flat lists for each of its taxonomies. For example, an use-case may wish to use all of DPV’s purpose taxonomies without any of the other concepts and without requiring use of RDF. For such cases, a CSV representation of DPV taxonomies is provided where only the hierarchical relationships (i.e. parent-child) are included. When using DPV in such a manner, it is advised to retain its IRI by either using the entire IRI (e.g. <a href="https://w3.org/ns/dpv#Purpose">https://w3.org/ns/dpv#Purpose</a>) or the suffixed portion after the namespace (i.e. <em>Purpose</em>). Doing this ensures that the data remains compatible and interoperable with the other uses and application of DPV.</p>
+    <p class="issue" title="Guidance and example on using DPV as CSV vocab"></p>
+  </section>
+</section>
+  <section>
+    <h2 id="contributing-to-dpv">Contributing to DPV</h2>
+    <p>The DPVCG welcomes participation regarding the DPV, including expansion or refinement of its terms, addressing open issues, and welcomes suggestions on their resolution or mitigation.</p>
+    <p>While we welcome participation via any and all mediums - e.g., via Github pull requests or issues, emails, papers, or reports - the formal resolution of contributions takes place only through the DPVCG meeting calls and mailing lists. We therefore suggest joining the group to participate in these discussions for formal approval.</p>
+    <p>For contributions to the DPV, please see the section on GitHub. The current list of open issues and their discussions to date can be found at GitHub issues. Note, GitHub Issues are preferred for discussion of concepts and proposals.</p>
+    <p>To suggest a new term, we request following information:</p>
+    <ol type="1">
+      <li>
+        <p>term</p>
+      </li>
+      <li>
+        <p>description of the term</p>
+      </li>
+      <li>
+        <p>whether it should be a class or a property</p>
+      </li>
+      <li>
+        <p>relation to existing term(s) in DPV e.g. through sub-classes</p>
+      </li>
+      <li>
+        <p>source (where applicable)</p>
+      </li>
+      <li>
+        <p>justification or relevance of why this term should be added (where not obvious)</p>
+      </li>
+    </ol>
+  </section>
+  <section id="working-notes">
+    <h3>Notes</h3>
+    <p>This document is based on inspiration from the following:</p>
+    <ul>
+      <li>
+        <p>RDF 1.1 Primer <a href="https://www.w3.org/TR/rdf11-primer/"><u>https://www.w3.org/TR/rdf11-primer/</u></a></p>
+      </li>
+      <li>
+        <p>OWL 2 Primer <a href="https://www.w3.org/TR/owl2-primer/"><u>https://www.w3.org/TR/owl2-primer/</u></a></p>
+      </li>
+      <li>
+        <p>PROV Model Primer <a href="https://www.w3.org/TR/prov-primer/"><u>https://www.w3.org/TR/prov-primer/</u></a></p>
+      </li>
+    </ul>
+  </section>
+  <section class="appendix" id="issue-summary">
+  </section>
+</body>
+
+</html>
