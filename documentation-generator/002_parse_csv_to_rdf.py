@@ -315,6 +315,10 @@ DPV_CSV_FILES = {
         'classes': f'{IMPORT_CSV_PATH}/TechnicalOrganisationalMeasure.csv',
         'properties': f'{IMPORT_CSV_PATH}/TechnicalOrganisationalMeasure_properties.csv',
         },
+    'jurisdictions': {
+        'classes': f'{IMPORT_CSV_PATH}/Jurisdictions.csv',
+        'properties': f'{IMPORT_CSV_PATH}/Jurisdictions_properties.csv'
+        },
     'entities': {
         'classes': f'{IMPORT_CSV_PATH}/Entities.csv',
         'properties': f'{IMPORT_CSV_PATH}/Entities_properties.csv'

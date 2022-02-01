@@ -11,7 +11,7 @@
    var respecConfig = {
     shortName: "dpv",
     title: "Data Privacy Vocabulary (DPV)",
-    subtitle: "version 0.3",
+    subtitle: "version 0.4",
     specStatus: "CG-DRAFT",
     group: "dpvcg",
     edDraftURI: "https://w3.org/ns/dpv",
@@ -29,12 +29,12 @@
         data: [
           { value: "Changelog", href: 'changelog.html' },
           {
-            value: "v0.3 (this version)",
-            href: "https://w3.org/ns/dpv/versions/v0.3"
+            value: "v0.4 (this version)",
+            href: "https://w3.org/ns/dpv/versions/v0.4"
           },
           {
-            value: "v0.2 (previous version)",
-            href: "https://w3.org/ns/dpv/versions/v0.2"
+            value: "v0.3 (this version)",
+            href: "https://w3.org/ns/dpv/versions/v0.3"
           }
         ]
       }
@@ -437,8 +437,8 @@
       </thead>
       <tbody>
         <tr>
-          <td>[=PersonalDataCategory=]</td>
-          <td>[=hasPersonalDataCategory=]</td>
+          <td>[=PersonalData=]</td>
+          <td>[=hasPersonalData=]</td>
           <td>Personal data categories</td>
         </tr>
         <tr>
@@ -492,7 +492,7 @@
       
     </ul>
     <p>Along with these, the DPV defines the concept of [=PersonalDataHandling=] for representing a 'policy' associating the top-level concepts with one another. For example, using [=PersonalDataHandling=] it is possible to indicate the application of a specific purpose and processing to categories of personal data relating to data subjects (or individual), along with the data controller responsible, the recipients of data, legal basis used, the technical and organisational measures involved, rights provided, and the possibility of risks.</p>
-    <p class="note">The DPV does not mandate the use of [=PersonalDataHandling=]. Adopters can define their own interpretation of what concepts personal data handling involves, or define a separate concept similar to [=PersonalDataHandling=]. For example, one may specify that a [=PersonalDataHandling=] is only associated with [=Purpose=], [=Processing=], [=PersonalDataCategory=], and [=Recipient=] where the legal basis and technical and organisational measures are either assumed or defined externally. In continuation of this, the DPV also does not provide any constraints on the inclusion or exclusion of concepts used to define an instance of [=PersonalDataHandling=]. Possibilities for specifying such constraints include use of OWL2 semantics and SHACL to specify mandatory concepts. For example, requiring every instance of [=PersonalDataHandling=] must have at least one Personal Data Category, Controller, Purpose, and Legal Basis.</p>
+    <p class="note">The DPV does not mandate the use of [=PersonalDataHandling=]. Adopters can define their own interpretation of what concepts personal data handling involves, or define a separate concept similar to [=PersonalDataHandling=]. For example, one may specify that a [=PersonalDataHandling=] is only associated with [=Purpose=], [=Processing=], [=PersonalData=], and [=Recipient=] where the legal basis and technical and organisational measures are either assumed or defined externally. In continuation of this, the DPV also does not provide any constraints on the inclusion or exclusion of concepts used to define an instance of [=PersonalDataHandling=]. Possibilities for specifying such constraints include use of OWL2 semantics and SHACL to specify mandatory concepts. For example, requiring every instance of [=PersonalDataHandling=] must have at least one Personal Data Category, Controller, Purpose, and Legal Basis.</p>
   {% if core_classes %}
   <section id="baseontology-classes">
     {{ table_classes(core_classes) }}
@@ -531,7 +531,7 @@
       </thead>
       <tbody>
         <tr>
-          <td>[=PersonalDataCategory=]</td>
+          <td>[=PersonalData=]</td>
           <td>Category of Personal Data</td>
         </tr>
         <tr>
@@ -732,7 +732,7 @@
       <figcaption>Concepts for Technical and Organisational Measures in DPV</figcaption>
     </figure>
     <p>To represent these requirements, the DPV defines a hierarchical taxonomy of technical and organisational measures through the top-level concept of [=TechnicalOrganisationalMeasure=], which is further distinguished as [=TechnicalMeasure=] and [=OrganisationalMeasure=]. A technical measure is an implementation detail or technology used to achieve a specific goal or objective, such as an authentication protocol used to validate identity. In contrast, an organisational measure is a process or procedure used by the organisation, for example an authorisation procedure to decide who should be granted access within an organisation.</p>
-    <p>Measures can be associated using the generic property [=measureImplementedBy=]. The value or object of this property can be an IRI (or URL) representing a specific measure or standard used to implement it, or a String representing relevant information.</p>
+    <p>Measures can be associated using the generic property [=isImplementedUsingTechnology=]. The value or object of this property can be an IRI (or URL) representing a specific measure or standard used to implement it, or a String representing relevant information.</p>
     <p class="note">In the future, we plan to provide a collection of terms and URIs for specifying standards (e.g. ISO) and best practices (e.g. certifications, seals). Whether this should be provided within the DPV itself or as a separate extension similar to DPV-GDPR is to be decided. We welcome participation and contributions for this work.</p>
     <p>DPV provides specific measures for storage of personal data in the form of [=StorageRestriction=], with specialised variants for duration as [=StorageDuration=], location as [=StorageLocation=], deletion as [=StorageDeletion=], and restoration as [=StorageRestoration=].</p>
     <p>The generic properties [=hasStorage=], [=hasLocation=], and [=hasDuration=] enable representing information about storage, location, and duration respectively. These can be used to specify restrictions or conditions, such as for storage of personal data, its processing, or information about recipients.</p>
@@ -754,7 +754,7 @@
         </tr>
         <tr>
           <td></td>
-          <td>[=measureImplementedBy=]</td>
+          <td>[=isImplementedUsingTechnology=]</td>
           <td>Specifies the implementation details of measure</td>
         </tr>
         <tr>
@@ -833,6 +833,34 @@
     {{ table_properties(entities_properties) }}
   </section>
   {% endif %}
+</section>
+
+<section id="vocab-entities-data-subjects">
+  <h2>Data Subjects</h2>
+  {% if entities_data_subjects_classes %}
+  <section id="entities-data-subjects-classes">
+    {{ table_classes(entities_data_subjects_classes) }}
+  </section>
+  {% endif %}
+  {% if entities_data_subjects_properties %}
+  <section id="entities-data-subjects-properties">
+    {{ table_properties(entities_data_subjects_properties) }}
+  </section>
+  {% endif %}
+</section>
+
+<section id="vocab-jurisdictions">
+    <h2>Jurisdictions</h2>
+    {% if jurisdictions_classes %}
+    <section id="jurisdictions-classes">
+      {{ table_classes(jurisdictions_classes) }}
+    </section>
+    {% endif %}
+    {% if jurisdictions_properties %}
+    <section id="jurisdictions-properties">
+      {{ table_properties(jurisdictions_properties) }}
+    </section>
+    {% endif %}
 </section>
 
 <section id="vocab-legal-basis">

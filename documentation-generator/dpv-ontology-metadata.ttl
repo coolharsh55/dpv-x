@@ -30,4 +30,4 @@
     dct:title "Data Privacy Vocabulary"@en ;
     vann:preferredNamespacePrefix "dpv" ;
     vann:preferredNamespaceUri "https://w3.org/ns/dpv"^^xsd:string ;
-    owl:versionInfo "0.2"^^xsd:string .
+    owl:versionInfo "0.4"^^xsd:string .

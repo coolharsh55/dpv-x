@@ -391,6 +391,16 @@ dpv:Copy a rdfs:Class ;
     rdfs:subClassOf dpv:Processing ;
     sw:term_status "accepted"@en .
 
+dpv:Country a rdfs:Class ;
+    rdfs:label "Country"@en ;
+    dct:created "2022-01-19"^^xsd:date ;
+    dct:creator "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "A political entity indicative of a sovereign or non-sovereign territorial state comprising of distinct geographical areas"@en ;
+    rdfs:comment "The definition of country is not intended for political interpretation. DPVCG welcomes alternate definitions based in existing sources with global scope, such as UN or ISO."@en ;
+    rdfs:subClassOf dpv:Location ;
+    sw:term_status "accepted"@en .
+
 dpv:CreateEventRecommendations a rdfs:Class ;
     rdfs:label "Create Event Recommendations"@en ;
     dct:created "2019-11-26"^^xsd:date ;
@@ -756,6 +766,14 @@ dpv:Disseminate a rdfs:Class ;
     rdfs:subClassOf dpv:Disclose ;
     sw:term_status "accepted"@en .
 
+dpv:EconomicUnion a rdfs:Class ;
+    rdfs:label "EconomicUnion"@en ;
+    dct:created "2022-01-19"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "A political union of two or more countries based on economic or trade agreements"@en ;
+    rdfs:subClassOf dpv:Location ;
+    sw:term_status "accepted"@en .
+
 dpv:EncryptionInRest a rdfs:Class ;
     rdfs:label "Encryption in Rest"@en ;
     dct:created "2019-04-05"^^xsd:date ;
@@ -996,6 +1014,13 @@ dpv:LargeScaleProcessing a rdfs:Class ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     sw:term_status "accepted"@en .
 
+dpv:Law a rdfs:Class ;
+    rdfs:label "Law"@en ;
+    dct:created "2022-01-19"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "A law is a set of rules created by government or authorities"@en ;
+    sw:term_status "accepted"@en .
+
 dpv:LegalAgreement a rdfs:Class ;
     rdfs:label "Legal Agreement"@en ;
     dct:created "2019-04-05"^^xsd:date ;
@@ -1076,6 +1101,14 @@ dpv:LegitimateInterestOfThirdParty a rdfs:Class ;
         "Paul Ryan"^^xsd:string ;
     dct:description "Legitimate Interests of a Third Party in conducting specified processing"@en ;
     rdfs:subClassOf dpv:LegitimateInterest ;
+    sw:term_status "accepted"@en .
+
+dpv:Location a rdfs:Class ;
+    rdfs:label "Location"@en ;
+    dct:created "2022-01-19"^^xsd:date ;
+    dct:description "A location is a position, site, or area where something is located"@en ;
+    rdfs:comment "Location may be geographic, physical, or virtual."@en ;
+    rdfs:subClassOf dpv:Data ;
     sw:term_status "accepted"@en .
 
 dpv:MakeAvailable a rdfs:Class ;
@@ -1557,6 +1590,14 @@ dpv:RecordsOfActivities a rdfs:Class ;
     rdfs:subClassOf dpv:OrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
+dpv:Region a rdfs:Class ;
+    rdfs:label "Region"@en ;
+    dct:created "2022-01-19"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "A region is an area or site that is considered a location"@en ;
+    rdfs:subClassOf dpv:Location ;
+    sw:term_status "accepted"@en .
+
 dpv:RegisterOfProcessingActivities a rdfs:Class ;
     rdfs:label "Register of Processing Activities"@en ;
     dct:created "2021-09-08"^^xsd:date ;
@@ -1986,6 +2027,14 @@ dpv:SubProcessorAgreement a rdfs:Class ;
     rdfs:subClassOf "DataProcessingAgreement"^^xsd:string ;
     sw:term_status "accepted"@en .
 
+dpv:SupraNationalUnion a rdfs:Class ;
+    rdfs:label "SupraNationalUnion"@en ;
+    dct:created "2022-01-19"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "A political union of two or more countries with an establishment of common authority"@en ;
+    rdfs:subClassOf dpv:Location ;
+    sw:term_status "accepted"@en .
+
 dpv:SystematicMonitoring a rdfs:Class ;
     rdfs:label "Systematic Monitoring"@en ;
     dct:created "2020-11-04"^^xsd:date ;
@@ -2182,6 +2231,23 @@ dpv:hasAlgorithmicLogic a rdf:Property ;
     dct:description "Indicates the logic used in processing such as for automated decision making"@en ;
     sw:term_status "accepted"@en .
 
+dpv:hasApplicableLaw a rdf:Property ;
+    rdfs:label "has applicable law"@en ;
+    dct:created "2022-01-19"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "Indicates applicability of a Law"@en ;
+    sw:term_status "accepted"@en .
+
+dpv:hasAuthority a rdf:Property ;
+    rdfs:label "has authority"@en ;
+    dct:created "2022-01-19"^^xsd:date ;
+    dct:creator "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "Indicates applicability of authority for a jurisdiction"@en ;
+    rdfs:domain dpv:Jurisdiction ;
+    rdfs:range dpv:Authority ;
+    sw:term_status "accepted"@en .
+
 dpv:hasConsentNotice a rdf:Property ;
     rdfs:label "has consent notice"@en ;
     dct:created "2019-04-05"^^xsd:date ;
@@ -2219,6 +2285,16 @@ dpv:hasContext a rdf:Property ;
     dct:description "Indicates a purpose is restricted to the specified context(s)"@en ;
     rdfs:domain dpv:Purpose ;
     rdfs:range dpv:Context ;
+    sw:term_status "accepted"@en .
+
+dpv:hasCountry a rdf:Property ;
+    rdfs:label "has country"@en ;
+    dct:created "2022-01-19"^^xsd:date ;
+    dct:creator "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "Indicates applicability of specified country"@en ;
+    rdfs:range dpv:Country ;
+    rdfs:subPropertyOf dpv:hasLocation ;
     sw:term_status "accepted"@en .
 
 dpv:hasDataController a rdf:Property ;
@@ -2314,6 +2390,14 @@ dpv:hasIdentifier a rdf:Property ;
         "Harshvardhan J.Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Specifies an identifier for the entity such as registeration number or official ID"@en ;
+    sw:term_status "accepted"@en .
+
+dpv:hasJurisdiction a rdf:Property ;
+    rdfs:label "has jurisdiction"@en ;
+    dct:created "2022-01-19"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "Indicates applicability of specified jurisdiction"@en ;
+    rdfs:range dpv:Jurisdiction ;
     sw:term_status "accepted"@en .
 
 dpv:hasLegalBasis a rdf:Property ;
@@ -2522,6 +2606,14 @@ dpv:hasWithdrawalTime a rdf:Property ;
     rdfs:range time:Instant ;
     sw:term_status "accepted"@en .
 
+dpv:isAuthorityFor a rdf:Property ;
+    rdfs:label "is authority for"@en ;
+    dct:created "2022-01-19"^^xsd:date ;
+    dct:creator "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "Indicates area, scope, or applicability of an Authority"@en ;
+    sw:term_status "accepted"@en .
+
 dpv:isExplicit a rdf:Property ;
     rdfs:label "is explicit"@en ;
     dct:created "2019-04-05"^^xsd:date ;
@@ -2592,12 +2684,23 @@ dpv:mitigatesRisk a rdf:Property ;
     dct:creator "Axel Polleres",
         "Harshvardhan J. Pandit" ;
     dct:description "The Data Privacy Vocabulary (DPV) provides terms (classes and properties) to represent information about legally compliant personal data handling, which includes purposes, processing, personal data, technical and organisational measures."@en ;
-    dct:modified "2021-01-14"^^xsd:date ;
+    dct:modified "2022-02-01"^^xsd:date ;
     dct:source <https://www.w3.org/community/dpvcg/> ;
     dct:title "Data Privacy Vocabulary"@en ;
     vann:preferredNamespacePrefix "dpv" ;
     vann:preferredNamespaceUri "https://w3.org/ns/dpv"^^xsd:string ;
-    owl:versionInfo "0.2"^^xsd:string .
+    owl:versionInfo "0.4"^^xsd:string .
+
+dpv:hasLocation a rdf:Property ;
+    rdfs:label "has location"@en ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string,
+        "Rob Brennan"^^xsd:string ;
+    dct:description "Indicates information about location"@en ;
+    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+    sw:term_status "accepted"@en .
 
 dpv:hasTechnicalOrganisationalMeasure a rdf:Property ;
     rdfs:label "has technical and organisational measure"@en ;

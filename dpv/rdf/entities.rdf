@@ -19,56 +19,6 @@
     <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul Ryan</dct:creator>
     <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan Pandit</dct:creator>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#hasRepresentative">
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:label xml:lang="en">has representative</rdfs:label>
-    <dct:description xml:lang="en">Specifies representative of the legal entity</dct:description>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-11-04</dct:created>
-    <sw:term_status xml:lang="en">accepted</sw:term_status>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J.Pandit</dct:creator>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Georg P Krog</dct:creator>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul Ryan</dct:creator>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beatriz Esteves</dct:creator>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#DataProtectionOfficer">
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Representative"/>
-    <rdfs:label xml:lang="en">Data Protection Officer</rdfs:label>
-    <dct:description xml:lang="en">An entity within or authorised by an organisation to monitor internal compliance, inform and advise on data protection obligations and act as a contact point for data subjects and the supervisory authority.</dct:description>
-    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_37/oj"/>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-11-04</dct:created>
-    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-12-08</dct:modified>
-    <sw:term_status xml:lang="en">modified</sw:term_status>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Georg Krog</dct:creator>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul Ryan</dct:creator>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#DataImporter">
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Recipient"/>
-    <rdfs:label xml:lang="en">Data Importer</rdfs:label>
-    <dct:description xml:lang="en">An entity that 'imports' data where importing is considered a form of data transfer</dct:description>
-    <rdfs:comment xml:lang="en">The EU, in particular the EDPB, uses data importing the context of cross-border data transfers/flows. These concepts are not bound by jurisdictional or geopolitical scopes within DPV and can thus be used for any notion of importing</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="https://edpb.europa.eu/our-work-tools/our-documents/recommendations/recommendations-012020-measures-supplement-transfer_en"/>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-09-08</dct:created>
-    <sw:term_status xml:lang="en">accepted</sw:term_status>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Hickey</dct:creator>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Georg Krog</dct:creator>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul Ryan</dct:creator>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan Pandit</dct:creator>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Representative">
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#LegalEntity"/>
-    <rdfs:label xml:lang="en">Representative</rdfs:label>
-    <dct:description xml:lang="en">A representative of a legal entity</dct:description>
-    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_27/oj"/>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-11-04</dct:created>
-    <sw:term_status xml:lang="en">accepted</sw:term_status>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Georg Krog</dct:creator>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul Ryan</dct:creator>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beatriz Esteves</dct:creator>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/dpv#ThirdParty">
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Recipient"/>
@@ -79,15 +29,16 @@
     <sw:term_status xml:lang="en">accepted</sw:term_status>
     <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#DataSubProcessor">
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Authority">
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#DataProcessor"/>
-    <rdfs:label xml:lang="en">Data Sub-Processor</rdfs:label>
-    <dct:description xml:lang="en">A 'sub-processor' is a processor engaged by another processor</dct:description>
-    <rdfs:comment xml:lang="en">sub-processor' is a commonly used term similar to 'sub-contractor' and does not have a specific legal definition</rdfs:comment>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-11-25</dct:created>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#LegalEntity"/>
+    <rdfs:label xml:lang="en">Authority</rdfs:label>
+    <dct:description xml:lang="en">An authority with the power to create or enforce laws, or determine their compliance.</dct:description>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-11-04</dct:created>
     <sw:term_status xml:lang="en">accepted</sw:term_status>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Georg Krog</dct:creator>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul Ryan</dct:creator>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan Pandit</dct:creator>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/dpv#hasIdentifier">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -100,29 +51,10 @@
     <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul Ryan</dct:creator>
     <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beatriz Esteves</dct:creator>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#LegalEntity">
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:label xml:lang="en">Legal Entity</rdfs:label>
-    <dct:description xml:lang="en">A human or non-human that constitute as a legally defined entity</dct:description>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-04-05</dct:created>
-    <sw:term_status xml:lang="en">accepted</sw:term_status>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#DataProtectionAuthority">
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Authority"/>
-    <rdfs:label xml:lang="en">Data Protection Authority</rdfs:label>
-    <dct:description xml:lang="en">An authority tasked with overseeing legal compliance regarding privacy and data protection laws.</dct:description>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-11-04</dct:created>
-    <sw:term_status xml:lang="en">accepted</sw:term_status>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Georg Krog</dct:creator>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul Ryan</dct:creator>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan Pandit</dct:creator>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#hasName">
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#hasAddress">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:label xml:lang="en">has name</rdfs:label>
-    <dct:description xml:lang="en">Specifies name of a legal entity</dct:description>
+    <rdfs:label xml:lang="en">has address</rdfs:label>
+    <dct:description xml:lang="en">Specifies address of a legal entity such as street address or pin code</dct:description>
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-11-04</dct:created>
     <sw:term_status xml:lang="en">accepted</sw:term_status>
     <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J.Pandit</dct:creator>
@@ -141,6 +73,19 @@
     <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul Ryan</dct:creator>
     <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beatriz Esteves</dct:creator>
   </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Representative">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#LegalEntity"/>
+    <rdfs:label xml:lang="en">Representative</rdfs:label>
+    <dct:description xml:lang="en">A representative of a legal entity</dct:description>
+    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_27/oj"/>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-11-04</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Georg Krog</dct:creator>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul Ryan</dct:creator>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beatriz Esteves</dct:creator>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/dpv#DataProcessor">
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Recipient"/>
@@ -151,10 +96,10 @@
     <sw:term_status xml:lang="en">accepted</sw:term_status>
     <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#hasAddress">
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#hasRepresentative">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:label xml:lang="en">has address</rdfs:label>
-    <dct:description xml:lang="en">Specifies address of a legal entity such as street address or pin code</dct:description>
+    <rdfs:label xml:lang="en">has representative</rdfs:label>
+    <dct:description xml:lang="en">Specifies representative of the legal entity</dct:description>
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-11-04</dct:created>
     <sw:term_status xml:lang="en">accepted</sw:term_status>
     <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J.Pandit</dct:creator>
@@ -162,15 +107,70 @@
     <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul Ryan</dct:creator>
     <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beatriz Esteves</dct:creator>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Authority">
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#LegalEntity">
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#LegalEntity"/>
-    <rdfs:label xml:lang="en">Authority</rdfs:label>
-    <dct:description xml:lang="en">An authority with the power to create or enforce laws, or determine their compliance.</dct:description>
+    <rdfs:label xml:lang="en">Legal Entity</rdfs:label>
+    <dct:description xml:lang="en">A human or non-human that constitute as a legally defined entity</dct:description>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-04-05</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#DataImporter">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Recipient"/>
+    <rdfs:label xml:lang="en">Data Importer</rdfs:label>
+    <dct:description xml:lang="en">An entity that 'imports' data where importing is considered a form of data transfer</dct:description>
+    <rdfs:comment xml:lang="en">The EU, in particular the EDPB, uses data importing the context of cross-border data transfers/flows. These concepts are not bound by jurisdictional or geopolitical scopes within DPV and can thus be used for any notion of importing</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://edpb.europa.eu/our-work-tools/our-documents/recommendations/recommendations-012020-measures-supplement-transfer_en"/>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-09-08</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Hickey</dct:creator>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Georg Krog</dct:creator>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul Ryan</dct:creator>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan Pandit</dct:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#DataProtectionAuthority">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Authority"/>
+    <rdfs:label xml:lang="en">Data Protection Authority</rdfs:label>
+    <dct:description xml:lang="en">An authority tasked with overseeing legal compliance regarding privacy and data protection laws.</dct:description>
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-11-04</dct:created>
     <sw:term_status xml:lang="en">accepted</sw:term_status>
     <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Georg Krog</dct:creator>
     <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul Ryan</dct:creator>
     <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan Pandit</dct:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#DataSubProcessor">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#DataProcessor"/>
+    <rdfs:label xml:lang="en">Data Sub-Processor</rdfs:label>
+    <dct:description xml:lang="en">A 'sub-processor' is a processor engaged by another processor</dct:description>
+    <rdfs:comment xml:lang="en">sub-processor' is a commonly used term similar to 'sub-contractor' and does not have a specific legal definition</rdfs:comment>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-11-25</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#hasName">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en">has name</rdfs:label>
+    <dct:description xml:lang="en">Specifies name of a legal entity</dct:description>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-11-04</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J.Pandit</dct:creator>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Georg P Krog</dct:creator>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul Ryan</dct:creator>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beatriz Esteves</dct:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#DataProtectionOfficer">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Representative"/>
+    <rdfs:label xml:lang="en">Data Protection Officer</rdfs:label>
+    <dct:description xml:lang="en">An entity within or authorised by an organisation to monitor internal compliance, inform and advise on data protection obligations and act as a contact point for data subjects and the supervisory authority.</dct:description>
+    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_37/oj"/>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-11-04</dct:created>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-12-08</dct:modified>
+    <sw:term_status xml:lang="en">modified</sw:term_status>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Georg Krog</dct:creator>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul Ryan</dct:creator>
   </rdf:Description>
 </rdf:RDF>
