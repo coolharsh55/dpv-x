@@ -32,7 +32,7 @@ RDF_SERIALIZATIONS = {
     'jsonld': 'json-ld'
     }
 
-VOCAB_TERM_ACCEPT = ('accepted', 'changed')
+VOCAB_TERM_ACCEPT = ('accepted', 'changed', 'modified')
 VOCAB_TERM_REJECT = ('deprecated', 'removed')
 
 import csv
@@ -300,8 +300,8 @@ DPV_CSV_FILES = {
         'classes': f'{IMPORT_CSV_PATH}/BaseOntology.csv',
         'properties': f'{IMPORT_CSV_PATH}/BaseOntology_properties.csv',
         },
-    'personal_data_categories': {
-        'classes': f'{IMPORT_CSV_PATH}/PersonalDataCategory.csv',
+    'personal_data': {
+        'classes': f'{IMPORT_CSV_PATH}/PersonalData.csv',
         },
     'purposes': {
         'classes': f'{IMPORT_CSV_PATH}/Purpose.csv',
@@ -318,6 +318,9 @@ DPV_CSV_FILES = {
     'entities': {
         'classes': f'{IMPORT_CSV_PATH}/Entities.csv',
         'properties': f'{IMPORT_CSV_PATH}/Entities_properties.csv'
+        },
+    'entities_data_subjects': {
+        'classes': f'{IMPORT_CSV_PATH}/Entities_DataSubjects.csv',
         },
     'legal_basis': {
         'classes': f'{IMPORT_CSV_PATH}/LegalBasis.csv',

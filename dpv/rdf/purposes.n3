@@ -221,7 +221,7 @@ dpv:EnforceAccessControl a rdfs:Class ;
     rdfs:comment "Was previously \"Access Control\". Prefixed to distinguish from Technical Measure."@en ;
     rdfs:seeAlso svpu:Login ;
     rdfs:subClassOf dpv:EnforceSecurity ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv:EnforceSecurity a rdfs:Class ;
     rdfs:label "Enforce Security"@en ;
@@ -235,7 +235,7 @@ dpv:EnforceSecurity a rdfs:Class ;
     dct:description "Ensure and enforce security e.g. of data, personnel"@en ;
     rdfs:comment "Was previous \"Security\". Prefixed to distinguish from TechOrg measures."@en ;
     rdfs:subClassOf dpv:Purpose ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv:FraudPreventionAndDetection a rdfs:Class ;
     rdfs:label "Fraud Prevention and Detection"@en ;
@@ -350,7 +350,7 @@ dpv:Marketing a rdfs:Class ;
     dct:description "Conduct marketing in relation to organisation or products or services e.g. promoting, selling, and distributing"@en ;
     rdfs:comment "Was commercial interest, changed to consider Marketing a separate Purpose category by itself"@en ;
     rdfs:subClassOf dpv:Purpose ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv:MemberPartnerManagement a rdfs:Class ;
     rdfs:label "Members and Partners Management"@en ;
@@ -572,7 +572,7 @@ dpv:SellDataToThirdParties a rdfs:Class ;
     dct:description "Sell data or information to third parties"@en ;
     rdfs:comment "Sell here means exchange, submit, or provide in return for direct or indirect compensation. Was subclass of commercial interest, changed to reflect selling something"@en ;
     rdfs:subClassOf dpv:SellProducts ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv:SellInsightsFromData a rdfs:Class ;
     rdfs:label "Sell Insights from Data"@en ;
@@ -586,7 +586,7 @@ dpv:SellInsightsFromData a rdfs:Class ;
     dct:description "Sell data or information relevant to insights obtained from analysis of data"@en ;
     rdfs:comment "Sell here means exchange, submit, or provide in return for direct or indirect compensation. Was subclass of commercial interest, changed to reflect selling something"@en ;
     rdfs:subClassOf dpv:SellProducts ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv:SellProducts a rdfs:Class ;
     rdfs:label "Sell Products"@en ;
@@ -608,7 +608,7 @@ dpv:SellProductsToDataSubject a rdfs:Class ;
     dct:description "Sell products or services to the user, consumer, or data subjects"@en ;
     rdfs:comment "Was subclass of commercial interest, changed to reflect selling something"@en ;
     rdfs:subClassOf dpv:SellProducts ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv:ServiceOptimization a rdfs:Class ;
     rdfs:label "Service Optimization"@en ;
@@ -622,7 +622,7 @@ dpv:ServiceOptimization a rdfs:Class ;
     dct:description "Optimise services or activities"@en ;
     rdfs:comment "Subclass of ServiceProvision since optimisation is usually considered part of providing services"@en ;
     rdfs:subClassOf dpv:ServiceProvision ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv:ServicePersonalization a rdfs:Class ;
     rdfs:label "Service Personalization"@en ;
@@ -637,7 +637,7 @@ dpv:ServicePersonalization a rdfs:Class ;
     rdfs:comment "Subclass of ServiceProvision since personalisation is usually considered part of providing services"@en ;
     rdfs:subClassOf dpv:Personalisation,
         dpv:ServiceProvision ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv:ServiceProvision a rdfs:Class ;
     rdfs:label "Service Provision"@en ;
@@ -668,7 +668,7 @@ dpv:ServiceUsageAnalytics a rdfs:Class ;
     dct:description "Conduct analysis and reporting related to usage of services or products"@en ;
     rdfs:comment "Was \"UsageAnalytics\", prefixed with Service to better reflect scope"@en ;
     rdfs:subClassOf dpv:ServiceProvision ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv:SocialMediaMarketing a rdfs:Class ;
     rdfs:label "Social Media"@en ;

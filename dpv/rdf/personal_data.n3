@@ -1,0 +1,83 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dpv: <http://www.w3.org/ns/dpv#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix svd: <http://www.specialprivacy.eu/vocabs/data#> .
+@prefix sw: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dpv:AnonymisedData a rdfs:Class ;
+    rdfs:label "Anonymised Data"@en ;
+    dct:created "2022-01-19"^^xsd:date ;
+    dct:creator "Piero Bonatti"^^xsd:string ;
+    dct:description "Personal Data that has been (fully and completely) anonymised so that it is no longer considered Personal Data"@en ;
+    rdfs:comment "It is advised to carefully consider indicating data is fully or completely anonymised by determining whether the data by itself or in combination with other data can identify a person. Failing this condition, the data should be denoted as PseudoAnonymisedData. To indicate data is anonymised only for a specified entity (e.g. within an organisation), the concept AnonymisedDataWithinScope (as subclass of PseudoAnonymisedData) should be used instead of AnonymisedData."@en ;
+    rdfs:subClassOf dpv:NonPersonalData ;
+    sw:term_status "accepted"@en .
+
+dpv:Data a rdfs:Class ;
+    rdfs:label "Data"@en ;
+    dct:created "2022-01-19"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "A broad concept representing  'data' or 'information'"@en ;
+    sw:term_status "accepted"@en .
+
+dpv:DerivedPersonalData a rdfs:Class ;
+    rdfs:label "Derived Personal Data"@en ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Personal Data that is obtained or derived from other data"@en ;
+    dct:modified "2022-01-19"^^xsd:date ;
+    rdfs:comment "Derived Data is data that is obtained through processing of existing data, e.g. deriving first name from full name. To indicate data that is derived but which was not present or evident within the source data, InferredPersonalData should be used."@en ;
+    rdfs:isDefinedBy <https://www.w3.org/community/dpvcg/> ;
+    rdfs:seeAlso svd:Derived ;
+    rdfs:subClassOf dpv:PersonalData ;
+    sw:term_status "accepted"@en .
+
+dpv:InferredPersonalData a rdfs:Class ;
+    rdfs:label "Inferred Personal Data"@en ;
+    dct:created "2022-01-19"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "Personal Data that is obtained through inference from other data"@en ;
+    rdfs:comment "Inferred Data is data that is derived from existing data, but which did not originally exist within it, e.g. inferring demographics from browsing history."@en ;
+    rdfs:subClassOf dpv:DerivedData ;
+    sw:term_status "accepted"@en .
+
+dpv:NonPersonalData a rdfs:Class ;
+    rdfs:label "Non-Personal Data"@en ;
+    dct:created "2022-01-19"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "Data that is not Personal Data"@en ;
+    rdfs:comment "The term NonPersonalData is provided to distinguish between PersonalData and other data, e.g. for indicating which data is regulated by privacy laws. To specify personal data that has been anonymised, the concept AnonymisedData should be used."@en ;
+    rdfs:subClassOf dpv:Data ;
+    sw:term_status "accepted"@en .
+
+dpv:PseudoAnonymisedData a rdfs:Class ;
+    rdfs:label "Pseudo-anonymised Data"@en ;
+    dct:created "2022-01-19"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "Personal Data that has undergone a partial (incomplete) anonymisation process such that it is still considered Personal Data"@en ;
+    rdfs:subClassOf dpv:PersonalData ;
+    sw:term_status "accepted"@en .
+
+dpv:SensitivePersonalData a rdfs:Class ;
+    rdfs:label "SensitivePersonalData"@en ;
+    dct:created "2022-01-19"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "Personal data that is considered 'sensitive' in terms of privacy and/or impact, and therefore requires additional considerations and/or protection"@en ;
+    rdfs:comment "Sensitivity' is a matter of context, and may be defined within legal frameworks. For GDPR, Special categories of personal data are considered a subset of sensitive data. To illustrate the difference between the two, consider the situation where Location data is collected, and which is considered 'sensitive' but not 'special'. As a probable rule, sensitive data require additional considerations whereas special category data requires additional legal basis / justifications."@en ;
+    rdfs:subClassOf dpv:PersonalData ;
+    sw:term_status "accepted"@en .
+
+dpv:SpecialCategoryPersonalData a rdfs:Class ;
+    rdfs:label "Special Category Personal Data"@en ;
+    dct:created "2019-05-07"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:description "Sensitive Personal Data whose use requires specific legal permission or justification"@en ;
+    dct:modified "2022-01-19"^^xsd:date ;
+    rdfs:comment "The term 'special category' is based on GDPR Art.9, but should not be considered as exlusive to it. DPV considers all Special Categories to also be Sensitive, but whose use is either prohibited or regulated and therefore requires additional legal basis for justification."@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_9/par_1/oj> ;
+    rdfs:subClassOf dpv:SensitivePersonalData ;
+    sw:term_status "modified"@en .
+

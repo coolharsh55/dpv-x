@@ -8,3 +8,5 @@
 "DigitalService","","","Service","","","","","","","proposed","Harshvardhan J. Pandit","","","","","","","","","","","","","","","",""
 "OnlineService","","","DigitalService","","","","","","","proposed","Harshvardhan J. Pandit","","","","","","","","","","","","","","","",""
 "DataBreach","","","Event","","","","","","","proposed","Harshvardhan J. Pandit","","","","","","","","","","","","","","","",""
+"Beneficiary","Beneficiary","Beneficiary in context of purpose and its resulting benefits","","","","This needs further details, the group is asking feedback about whether Beneficiaries of a specific purposes hould be specified separately or not. self.DataSubject, self.DataController, society ? ( --- under consideration ---)","","2019-04-05","","proposed","Axel Polleres","https://www.w3.org/2019/04/05-dpvcg-minutes.html","","","","","","","","","","","","","","",""
+"Benefit","Benefit","The benefits obtained or derived or provided from a purpose","","","","","","2021-01-06","","proposed","","https://www.w3.org/2021/01/06-dpvcg-minutes.html","","","","","","","","","","","","","","",""

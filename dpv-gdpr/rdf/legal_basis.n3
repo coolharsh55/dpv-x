@@ -14,7 +14,7 @@ dpv-gdpr:A45-3 a rdfs:Class ;
     rdfs:comment "Transfer from EU to a third country. Third country has Adequacy Decision."@en ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_45/par_3/oj> ;
     rdfs:subClassOf dpv:DataTransferLegalBasis ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv-gdpr:A46-2-a a rdfs:Class ;
     rdfs:label "Art 46(2-a)"@en ;
@@ -25,7 +25,7 @@ dpv-gdpr:A46-2-a a rdfs:Class ;
     rdfs:comment "Transfer from EU to a third country. Third country has no Adequacy Decision. Third country has appropriate safeguards. Transfer does not require specific authorisation from a Supervisor Authority."@en ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_46/par_2/pnt_a/oj> ;
     rdfs:subClassOf dpv:DataTransferLegalBasis ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv-gdpr:A46-2-b a rdfs:Class ;
     rdfs:label "Art 46(2-b)"@en ;
@@ -37,7 +37,7 @@ dpv-gdpr:A46-2-b a rdfs:Class ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_46/par_2/pnt_b/oj> ;
     rdfs:subClassOf dpv:DataTransferLegalBasis,
         dpv-gdpr:BindingCorporateRules ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv-gdpr:A46-2-c a rdfs:Class ;
     rdfs:label "Art 46(2-c)"@en ;
@@ -49,7 +49,7 @@ dpv-gdpr:A46-2-c a rdfs:Class ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_46/par_2/pnt_c/oj> ;
     rdfs:subClassOf dpv:DataTransferLegalBasis,
         dpv-gdpr:SCCByCommission ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv-gdpr:A46-2-d a rdfs:Class ;
     rdfs:label "Art 46(2-d)"@en ;
@@ -61,7 +61,7 @@ dpv-gdpr:A46-2-d a rdfs:Class ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_46/par_2/pnt_d/oj> ;
     rdfs:subClassOf dpv:DataTransferLegalBasis,
         dpv-gdpr:SCCBySupervisoryAuthority ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv-gdpr:A46-2-e a rdfs:Class ;
     rdfs:label "Art 46(2-e)"@en ;
@@ -72,7 +72,7 @@ dpv-gdpr:A46-2-e a rdfs:Class ;
     rdfs:comment "Transfer from EU to a third country. Third country has no Adequacy Decision. Third country has appropriate safeguards. Transfer does not require specific authorisation from a Supervisor Authority."@en ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_46/par_2/pnt_e/oj> ;
     rdfs:subClassOf dpv:DataTransferLegalBasis ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv-gdpr:A46-2-f a rdfs:Class ;
     rdfs:label "Art 46(2-f)"@en ;
@@ -83,7 +83,7 @@ dpv-gdpr:A46-2-f a rdfs:Class ;
     rdfs:comment "Transfer from EU to a third country. Third country has no Adequacy Decision. Third country has appropriate safeguards. Transfer does not require specific authorisation from a Supervisor Authority."@en ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_46/par_2/pnt_f/oj> ;
     rdfs:subClassOf dpv:DataTransferLegalBasis ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv-gdpr:A46-3-a a rdfs:Class ;
     rdfs:label "Art 46(3-a)"@en ;
@@ -94,7 +94,7 @@ dpv-gdpr:A46-3-a a rdfs:Class ;
     rdfs:comment "Transfer from EU to a third country. Third country has no Adequacy Decision. Appropriate safeguards exist. Transfer does requires specific authorisation from a Supervisor Authority."@en ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_46/par_3/pnt_a/oj> ;
     rdfs:subClassOf dpv:DataTransferLegalBasis ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv-gdpr:A46-3-b a rdfs:Class ;
     rdfs:label "Art 46(3-b)"@en ;
@@ -105,7 +105,7 @@ dpv-gdpr:A46-3-b a rdfs:Class ;
     rdfs:comment "Transfer from EU to a third country. Third country has no Adequacy Decision. Appropriate safeguards exist. Transfer does requires specific authorisation from a Supervisor Authority."@en ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_46/par_3/pnt_b/oj> ;
     rdfs:subClassOf dpv:DataTransferLegalBasis ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv-gdpr:A49-1-a a rdfs:Class ;
     rdfs:label "Art 49(1-a)"@en ;
@@ -117,7 +117,7 @@ dpv-gdpr:A49-1-a a rdfs:Class ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_49/par_1/pnt_a/oj> ;
     rdfs:subClassOf dpv:Consent,
         dpv:DataTransferLegalBasis ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv-gdpr:A49-1-b a rdfs:Class ;
     rdfs:label "Art 49(1-b)"@en ;
@@ -129,7 +129,7 @@ dpv-gdpr:A49-1-b a rdfs:Class ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_49/par_1/pnt_b/oj> ;
     rdfs:subClassOf dpv:Contract,
         dpv:DataTransferLegalBasis ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv-gdpr:A49-1-c a rdfs:Class ;
     rdfs:label "Art 49(1-c)"@en ;
@@ -141,7 +141,7 @@ dpv-gdpr:A49-1-c a rdfs:Class ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_49/par_1/pnt_c/oj> ;
     rdfs:subClassOf dpv:Contract,
         dpv:DataTransferLegalBasis ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv-gdpr:A49-1-d a rdfs:Class ;
     rdfs:label "Art 49(1-d)"@en ;
@@ -153,7 +153,7 @@ dpv-gdpr:A49-1-d a rdfs:Class ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_49/par_1/pnt_d/oj> ;
     rdfs:subClassOf dpv:DataTransferLegalBasis,
         dpv:PublicInterest ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv-gdpr:A49-1-e a rdfs:Class ;
     rdfs:label "Art 49(1-e)"@en ;
@@ -164,7 +164,7 @@ dpv-gdpr:A49-1-e a rdfs:Class ;
     rdfs:comment "Transfer from EU to a third country. Third country has no Adequacy Decision. Appropriate safeguards do not exist."@en ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_49/par_1/pnt_e/oj> ;
     rdfs:subClassOf dpv:DataTransferLegalBasis ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv-gdpr:A49-1-f a rdfs:Class ;
     rdfs:label "Art 49(1-f)"@en ;
@@ -176,7 +176,7 @@ dpv-gdpr:A49-1-f a rdfs:Class ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_49/par_1/pnt_f/oj> ;
     rdfs:subClassOf dpv:DataTransferLegalBasis,
         dpv:VitalInterestOfNatualPerson ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv-gdpr:A49-1-g a rdfs:Class ;
     rdfs:label "Art 49(1-g)"@en ;
@@ -187,7 +187,7 @@ dpv-gdpr:A49-1-g a rdfs:Class ;
     rdfs:comment "Transfer from EU to a third country. Third country has not Adequacy Decision. Appropriate safeguards do not exist."@en ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_49/par_1/pnt_g/oj> ;
     rdfs:subClassOf dpv:DataTransferLegalBasis ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv-gdpr:A49-2 a rdfs:Class ;
     rdfs:label "Art 49(2)"@en ;
@@ -199,7 +199,7 @@ dpv-gdpr:A49-2 a rdfs:Class ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_49/par_2/oj> ;
     rdfs:subClassOf dpv:DataTransferLegalBasis,
         dpv:LegitimateInterest ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv-gdpr:A6-1-a-explicit-consent a rdfs:Class ;
     rdfs:label "Art 6(1-a) explicit consent"@en ;
@@ -213,7 +213,7 @@ dpv-gdpr:A6-1-a-explicit-consent a rdfs:Class ;
     rdfs:comment "Valid consent in this case would have requirements for being 'explicit' in addition to requirements defined by A4-11. This is also mentioned in the Article 29 Working Party document \"Guidelines on Consent under Regulation 2016/679 (wp259rev.01)\""@en ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_a/oj> ;
     rdfs:subClassOf dpv:Consent ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv-gdpr:A6-1-a-non-explicit-consent a rdfs:Class ;
     rdfs:label "Art.6(1-a) regular consent"@en ;
@@ -227,7 +227,7 @@ dpv-gdpr:A6-1-a-non-explicit-consent a rdfs:Class ;
     rdfs:comment "Definition of consent: A data subject's unambigious/clear affirmative action that signifies an agreement to process their personal data (Rigo Wenning) . What is referred to as 'non-explicit consent' here is also termed as 'regular' consent in the Article 29 Working Party document \"Guidelines on Consent under Regulation 2016/679 (wp259rev.01)\". This is the legal basis that requires consent but not at the level of being 'explicit'."@en ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_a/oj> ;
     rdfs:subClassOf dpv:Consent ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv-gdpr:A6-1-b a rdfs:Class ;
     rdfs:label "Art 6(1-b)"@en ;
@@ -238,7 +238,7 @@ dpv-gdpr:A6-1-b a rdfs:Class ;
     dct:modified "2021-09-08"^^xsd:date ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_b/oj> ;
     rdfs:subClassOf dpv:Contract ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv-gdpr:A6-1-c a rdfs:Class ;
     rdfs:label "Art 6(1-c)"@en ;
@@ -249,7 +249,7 @@ dpv-gdpr:A6-1-c a rdfs:Class ;
     dct:modified "2021-09-08"^^xsd:date ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_c/oj> ;
     rdfs:subClassOf dpv:LegalObligation ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv-gdpr:A6-1-d a rdfs:Class ;
     rdfs:label "Art 6(1-d)"@en ;
@@ -260,7 +260,7 @@ dpv-gdpr:A6-1-d a rdfs:Class ;
     dct:modified "2021-09-08"^^xsd:date ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_d/oj> ;
     rdfs:subClassOf dpv:VitalInterest ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv-gdpr:A6-1-e a rdfs:Class ;
     rdfs:label "Art 6(1-e)"@en ;
@@ -272,7 +272,7 @@ dpv-gdpr:A6-1-e a rdfs:Class ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_e/oj> ;
     rdfs:subClassOf dpv:OfficialAuthorityOfController,
         dpv:PublicInterest ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv-gdpr:A6-1-f a rdfs:Class ;
     rdfs:label "Art 6(1-f)"@en ;
@@ -283,7 +283,7 @@ dpv-gdpr:A6-1-f a rdfs:Class ;
     dct:modified "2021-09-08"^^xsd:date ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_f/oj> ;
     rdfs:subClassOf dpv:LegitimateInterest ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv-gdpr:A9-2-a a rdfs:Class ;
     rdfs:label "Art 9(2-a)"@en ;
@@ -294,7 +294,7 @@ dpv-gdpr:A9-2-a a rdfs:Class ;
     dct:modified "2021-09-08"^^xsd:date ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_9/par_2/pnt_a/oj> ;
     rdfs:subClassOf dpv:Consent ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv-gdpr:A9-2-b a rdfs:Class ;
     rdfs:label "Art 9(2-b)"@en ;
@@ -315,7 +315,7 @@ dpv-gdpr:A9-2-c a rdfs:Class ;
     dct:modified "2021-09-08"^^xsd:date ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_9/par_2/pnt_c/oj> ;
     rdfs:subClassOf dpv:VitalInterest ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv-gdpr:A9-2-d a rdfs:Class ;
     rdfs:label "Art 9(2-d)"@en ;
@@ -326,7 +326,7 @@ dpv-gdpr:A9-2-d a rdfs:Class ;
     dct:modified "2021-09-08"^^xsd:date ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_9/par_2/pnt_d/oj> ;
     rdfs:subClassOf dpv:LegitimateInterest ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv-gdpr:A9-2-e a rdfs:Class ;
     rdfs:label "Art 9(2-e)"@en ;
@@ -357,7 +357,7 @@ dpv-gdpr:A9-2-g a rdfs:Class ;
     dct:modified "2021-09-08"^^xsd:date ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_9/par_2/pnt_g/oj> ;
     rdfs:subClassOf dpv:PublicInterest ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv-gdpr:A9-2-h a rdfs:Class ;
     rdfs:label "Art 9(2-h)"@en ;
@@ -378,7 +378,7 @@ dpv-gdpr:A9-2-i a rdfs:Class ;
     dct:modified "2021-09-08"^^xsd:date ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_9/par_2/pnt_i/oj> ;
     rdfs:subClassOf dpv:PublicInterest ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv-gdpr:A9-2-j a rdfs:Class ;
     rdfs:label "Art 9(2-j)"@en ;
@@ -389,5 +389,5 @@ dpv-gdpr:A9-2-j a rdfs:Class ;
     dct:modified "2021-09-08"^^xsd:date ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_9/par_2/pnt_j/oj> ;
     rdfs:subClassOf dpv:PublicInterest ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 

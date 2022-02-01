@@ -96,11 +96,12 @@ template_env.filters.update(JINJA2_FILTERS)
 
 # LOAD DATA
 load_data('core', f'{IMPORT_DPV_MODULES_PATH}/base.ttl')
-load_data('personaldata', f'{IMPORT_DPV_MODULES_PATH}/personal_data_categories.ttl')
+load_data('personaldata', f'{IMPORT_DPV_MODULES_PATH}/personal_data.ttl')
 load_data('purpose', f'{IMPORT_DPV_MODULES_PATH}/purposes.ttl')
 load_data('processing', f'{IMPORT_DPV_MODULES_PATH}/processing.ttl')
 load_data('technical_organisational_measures', f'{IMPORT_DPV_MODULES_PATH}/technical_organisational_measures.ttl')
 load_data('entities', f'{IMPORT_DPV_MODULES_PATH}/entities.ttl')
+load_data('entities_data_subjects', f'{IMPORT_DPV_MODULES_PATH}/entities_data_subjects.ttl')
 load_data('legal_basis', f'{IMPORT_DPV_MODULES_PATH}/legal_basis.ttl')
 load_data('consent', f'{IMPORT_DPV_MODULES_PATH}/consent.ttl')
 g = Graph()

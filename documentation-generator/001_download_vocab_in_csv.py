@@ -17,7 +17,8 @@ DPV_SHEETS = (
     # DPV
     'BaseOntology',
     'BaseOntology_properties',
-    'PersonalDataCategory',
+    'PersonalData',
+    'dpv-pd',
     'Purpose',
     'Purpose_properties',
     'Processing',
@@ -27,6 +28,7 @@ DPV_SHEETS = (
     'TechnicalOrganisationalMeasure_properties',
     'Technology',
     'Entities',
+    'Entities_DataSubjects',
     'Entities_properties',
     'Jurisdictions',
     'Jurisdictions_properties',

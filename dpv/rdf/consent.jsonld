@@ -1,6 +1,6 @@
 [
   {
-    "@id": "http://www.w3.org/ns/dpv#hasWithdrawalByJustification",
+    "@id": "http://www.w3.org/ns/dpv#hasExpiryCondition",
     "@type": [
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     ],
@@ -24,19 +24,24 @@
     "http://purl.org/dc/terms/description": [
       {
         "@language": "en",
-        "@value": "Specifies the justification for entity withdrawing consent"
+        "@value": "Specifies the condition or event that determines the expiry of consent"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "This field can be used to proivde a justification why the weithdrawal was done by another DataSubject or legal entity, e.g. declariing the relationship (parent, guardian), in combination with the field withdrawalBy"
+        "@value": "Can be TextOrDocumentOrURI"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "has withdrawal by justification"
+        "@value": "has expiry condition"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.w3.org/ns/dpv#expiry"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -141,7 +146,7 @@
     ]
   },
   {
-    "@id": "http://www.w3.org/ns/dpv#hasExpiryTime",
+    "@id": "http://www.w3.org/ns/dpv#isExplicit",
     "@type": [
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     ],
@@ -165,70 +170,24 @@
     "http://purl.org/dc/terms/description": [
       {
         "@language": "en",
-        "@value": "Specifies the expiry time or duration for consent"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "has expiry time"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2006/time#TemporalEntity"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://www.w3.org/ns/dpv#expiry"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/ns/dpv#hasWithdrawalMethod",
-    "@type": [
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2019-04-05"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Harshvardhan J. Pandit"
-      },
-      {
-        "@value": "Mark Lizar"
-      },
-      {
-        "@value": "Bud Bruegger"
-      }
-    ],
-    "http://purl.org/dc/terms/description": [
-      {
-        "@language": "en",
-        "@value": "Specifries the method by which consent can be/has been withdrawn"
+        "@value": "Specifies consent is 'explicit'"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Can be used to record information of how to withdraw consent, e.g. by a click to a form, in writing, etc., by logging into a system and confirm per email, or with some additional authentication, etc."
+        "@value": "The conditions for what is considered 'explicit consent' differ by norms and laws."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "has withdrawal method"
+        "@value": "is explicit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#boolean"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -239,7 +198,7 @@
     ]
   },
   {
-    "@id": "http://www.w3.org/ns/dpv#hasExpiryCondition",
+    "@id": "http://www.w3.org/ns/dpv#hasWithdrawalByJustification",
     "@type": [
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     ],
@@ -263,24 +222,19 @@
     "http://purl.org/dc/terms/description": [
       {
         "@language": "en",
-        "@value": "Specifies the condition or event that determines the expiry of consent"
+        "@value": "Specifies the justification for entity withdrawing consent"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Can be TextOrDocumentOrURI"
+        "@value": "This field can be used to proivde a justification why the weithdrawal was done by another DataSubject or legal entity, e.g. declariing the relationship (parent, guardian), in combination with the field withdrawalBy"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "has expiry condition"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://www.w3.org/ns/dpv#expiry"
+        "@value": "has withdrawal by justification"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -291,7 +245,7 @@
     ]
   },
   {
-    "@id": "http://www.w3.org/ns/dpv#hasProvisionBy",
+    "@id": "http://www.w3.org/ns/dpv#hasProvisionByJustification",
     "@type": [
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     ],
@@ -315,70 +269,19 @@
     "http://purl.org/dc/terms/description": [
       {
         "@language": "en",
-        "@value": "Specifies the entity that provisioned or provided consent"
+        "@value": "Specifies the justification for entity providing consent"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Normally this would be the dataSubject, but in some exceptional cases, the consent might be given on behalf by someone else, e.g. parents of minors."
+        "@value": "This field can be used to proivde a justification why the provision was provided by another DataSubject or legal entity,  e.g. declariing the relationship (parent, guardian), in combination with the field provisionBy"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "has provision by"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/ns/dpv#LegalEntity"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/ns/dpv#hasWithdrawalTime",
-    "@type": [
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2019-04-05"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Harshvardhan J. Pandit"
-      },
-      {
-        "@value": "Mark Lizar"
-      },
-      {
-        "@value": "Bud Bruegger"
-      }
-    ],
-    "http://purl.org/dc/terms/description": [
-      {
-        "@language": "en",
-        "@value": "Specifies the instant in time when consent was withdrawn"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "has withdrawal time"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2006/time#Instant"
+        "@value": "has provision by justification"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -441,7 +344,7 @@
     ]
   },
   {
-    "@id": "http://www.w3.org/ns/dpv#isExplicit",
+    "@id": "http://www.w3.org/ns/dpv#hasProvisionBy",
     "@type": [
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     ],
@@ -465,24 +368,24 @@
     "http://purl.org/dc/terms/description": [
       {
         "@language": "en",
-        "@value": "Specifies consent is 'explicit'"
+        "@value": "Specifies the entity that provisioned or provided consent"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "The conditions for what is considered 'explicit consent' differ by norms and laws."
+        "@value": "Normally this would be the dataSubject, but in some exceptional cases, the consent might be given on behalf by someone else, e.g. parents of minors."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "is explicit"
+        "@value": "has provision by"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "http://www.w3.org/2001/XMLSchema#boolean"
+        "@id": "http://www.w3.org/ns/dpv#LegalEntity"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -524,6 +427,57 @@
       {
         "@language": "en",
         "@value": "has expiry"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/dpv#hasExpiryTime",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2019-04-05"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
+      },
+      {
+        "@value": "Mark Lizar"
+      },
+      {
+        "@value": "Bud Bruegger"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "Specifies the expiry time or duration for consent"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has expiry time"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2006/time#TemporalEntity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.w3.org/ns/dpv#expiry"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -580,7 +534,7 @@
     ]
   },
   {
-    "@id": "http://www.w3.org/ns/dpv#hasProvisionByJustification",
+    "@id": "http://www.w3.org/ns/dpv#hasWithdrawalMethod",
     "@type": [
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     ],
@@ -604,19 +558,65 @@
     "http://purl.org/dc/terms/description": [
       {
         "@language": "en",
-        "@value": "Specifies the justification for entity providing consent"
+        "@value": "Specifries the method by which consent can be/has been withdrawn"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "This field can be used to proivde a justification why the provision was provided by another DataSubject or legal entity,  e.g. declariing the relationship (parent, guardian), in combination with the field provisionBy"
+        "@value": "Can be used to record information of how to withdraw consent, e.g. by a click to a form, in writing, etc., by logging into a system and confirm per email, or with some additional authentication, etc."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "has provision by justification"
+        "@value": "has withdrawal method"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/dpv#hasWithdrawalTime",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2019-04-05"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
+      },
+      {
+        "@value": "Mark Lizar"
+      },
+      {
+        "@value": "Bud Bruegger"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "Specifies the instant in time when consent was withdrawn"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has withdrawal time"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2006/time#Instant"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
