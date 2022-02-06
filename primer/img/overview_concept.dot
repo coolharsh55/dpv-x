@@ -1,0 +1,229 @@
+# PD
+
+digraph G {
+    rankdir=LR;
+    bgcolor=transparent;
+    node [shape=rect];
+    PD [label="Personal Data",style=filled,fillcolor=yellow];
+    SPD [label="Sensitive Personal Data",style=filled,fillcolor=yellow];
+    SCPD [label="Special Category Personal Data",style=filled,fillcolor=yellow];
+    Thing -> PD [label=" hasPersonalData"];
+    PD -> SPD -> SCPD [arrowhead=onormal] ;
+}
+
+# Purpose
+# http://www.graphviz.org/content/cluster
+
+digraph G {
+    rankdir=LR;
+    bgcolor=transparent;
+    node [shape=rect];
+    PD [label="Purpose",style=filled,fillcolor=yellow];
+    Thing -> PD [label=" hasPurpose"];
+    N2 [label="Sector", style=filled, fillcolor=yellow];
+    PD -> N2 [label=" hasSector"];
+    N3 [label="Context", style=filled, fillcolor=yellow];
+    PD -> N3 [label=" hasContext"];
+# N4 [label="Sector", style=filled, fillcolor=yellow];
+# PD -> N3 [label=" hasPurpose"];
+}
+
+# Processing
+# http://www.graphviz.org/content/cluster
+
+digraph G {
+    rankdir=LR;
+    bgcolor=transparent;
+    node [shape=rect];
+    PD [label="Processing",style=filled,fillcolor=yellow];
+    Thing -> PD [label=" hasProcessing"];
+    N2 [label="Source", style=filled, fillcolor=yellow];
+    PD -> N2 [label=" hasDataSource"];
+    N3c [label="Context", style=filled, fillcolor=yellow];
+    N3 [label="ProcessingContext", style=filled, fillcolor=yellow];
+    N3 -> N3c [arrowhead=onormal];
+    PD -> N3 [label=" hasProcessingContext"];
+# N4 [label="Sector", style=filled, fillcolor=yellow];
+# PD -> N3 [label=" hasPurpose"];
+}
+
+
+# LegalBasis
+# http://www.graphviz.org/content/cluster
+
+digraph G {
+    rankdir=LR;
+    bgcolor=transparent;
+    node [shape=rect];
+    PD [label="LegalBasis",style=filled,fillcolor=yellow];
+    Thing -> PD [label=" hasLegalBasis"];
+
+}
+
+
+# Entities
+# http://www.graphviz.org/content/cluster
+
+digraph G {
+#  rankdir=LR;
+    bgcolor=transparent;
+    node [shape=rect];
+    PD [label="LegalEntity",style=filled,fillcolor=yellow];
+    N1 [label="DataController",style=filled,fillcolor=yellow];
+    N1 -> PD [arrowhead=onormal];
+    N2 [label="DataProcessor",style=filled,fillcolor=yellow];
+    N2 -> PD [arrowhead=onormal];
+    N3 [label="ThirdParty",style=filled,fillcolor=yellow];
+    N3 -> PD [arrowhead=onormal];
+    N4 [label="DataSubject",style=filled,fillcolor=yellow];
+    N4 -> PD [arrowhead=onormal];
+    N5 [label="Authority",style=filled,fillcolor=yellow];
+    N5 -> PD [arrowhead=onormal];
+    N6 [label="Representative",style=filled,fillcolor=yellow];
+    N6 -> PD [arrowhead=onormal];
+
+    Thing -> N1 [label="hasDataController"];
+    Thing -> N2 [label="hasDataProcessor"];
+    Thing -> N3 [label="hasRecipient"];
+    Thing -> N4 [label="hasDataSubject"];
+    Thing -> N5 [label="hasAuthority"];
+    Thing -> N6 [label="hasRepresentative"];
+}
+
+
+# Data Controller
+digraph G {
+    rankdir=LR;
+    bgcolor=transparent;
+    node [shape=rect];
+
+    N1 [label="DataController",style=filled,fillcolor=yellow];
+    N6 [label="Representative",style=filled,fillcolor=yellow];
+    DataProtectionOfficer [label="Data Protection Officer",style=filled,fillcolor=yellow];
+    DataProtectionOfficer -> N6 [arrowhead=onormal];
+
+    Thing -> N1 [label="hasDataController"];
+    N1 -> DataProtectionOfficer [label="hasRepresentative"];
+}
+
+
+# Data Subject
+
+attp://www.graphviz.org/content/cluster
+de [shape=rect];
+
+N1 [label="DataSubject",style=filled,fillcolor=yellow];
+N2 [label="Vulnerable Data Subject",style=filled,fillcolor=yellow];
+N3 [label="Child",style=filled,fillcolor=yellow];
+N1 -> N2,N3 [arrowtail=onormal,arrowhead=none,dir=both];
+
+Thing -> N1 [label="hasDataSubject"];
+}
+
+# Recipient
+
+
+attp://www.graphviz.org/content/cluster
+de [shape=rect];
+
+N1 [label="Recipient",style=filled,fillcolor=yellow];
+N2 [label="DataController",style=filled,fillcolor=yellow];
+N3 [label="DataProcessor",style=filled,fillcolor=yellow];
+N4 [label="ThirdParty",style=filled,fillcolor=yellow];
+N2,N3,N4 -> N1 [arrowhead=onormal];
+
+Thing -> N1 [label="hasRecipient"];
+Thing -> N3 [label="hasDataProcessor"];
+Thing -> N2 [label="hasRecipientDataController"];
+Thing -> N4 [label="hasThirdPartyDataController"];
+}
+
+# Tech/Org Measure
+
+=ttp://www.gnsparent;
+node [shape=rect];
+
+N1 [label="Tech/Org Measure",style=filled,fillcolor=yellow];
+N2 [label="Tech Measure",style=filled,fillcolor=yellow];
+N3 [label="Org Measure",style=filled,fillcolor=yellow];
+N1 -> N2,N3 [arrowtail=onormal,arrowhead=none,dir=both];
+
+Thing -> N1 [label="hasTechnicalOrganisationalMeasure"];
+}
+# Right
+
+digraph G {
+    rankdir=LR;
+    bgcolor=transparent;
+    node [shape=rect];
+
+    N1 [label="Right",style=filled,fillcolor=yellow];
+    N2 [label="Data Subject Right",style=filled,fillcolor=yellow];
+#N3 [label="Org Measure",style=filled,fillcolor=yellow];
+    N1 -> N2 [arrowtail=onormal,arrowhead=none,dir=both];
+
+    Thing -> N1 [label="hasRight"];
+}
+
+
+# Risk
+digraph G {
+    rankdir=LR;
+    bgcolor=transparent;
+    node [shape=rect];
+
+    N1 [label="Risk",style=filled,fillcolor=yellow];
+    N2 [label="RiskMitigationMeasure",style=filled,fillcolor=yellow];
+    N3 [label="Tech/Org Measure",style=filled,fillcolor=yellow];
+    N2 -> N3 [arrowhead=onormal];
+    N1 -> N2 [label="mitigatesRisk"arrowtail=normal,arrowhead=none,dir=both];
+    Thing -> N1 [label="hasRisk"];
+}
+
+# Technology
+digraph G {
+    rankdir=LR;
+    bgcolor=transparent;
+    node [shape=rect];
+
+    N1 [label="Technology",style=filled,fillcolor=yellow];
+    Thing -> N1 [label="isImplementedUsingTechnology"];
+    Thing -> N1 [label="isImplementedByEntity",arrowtail=normal,arrowhead=none,dir=both];
+
+}
+
+# Location
+digraph G {
+#rankdir=LR;
+    bgcolor=transparent;
+    node [shape=rect];
+    node [style=filled,fillcolor=yellow]
+        Thing [style=normal] ;
+    N2 [label="Duration",style=filled,fillcolor=yellow];
+    Thing -> N2 [label="hasDuration"];
+    Thing -> StorageDeletion, StorageDuration, StorageLocation, StorageRestoration, StorageRestriction [label="hasStorage"];
+    N2 -> StorageDuration [arrowtail=onormal,arrowhead=none,dir=both] ;
+    Thing -> Location [label="hasLocation"];
+    Location -> StorageLocation [arrowtail=onormal,arrowhead=none,dir=both] ;
+}
+
+# Jurisdiction
+digraph G {
+    rankdir=LR;
+    bgcolor=transparent;
+    node [shape=rect];
+    node [style=filled,fillcolor=yellow]
+        Thing [style=normal] ;
+    N1 [label="Location",style=filled,fillcolor=yellow];
+    N2 [label="Country",style=filled,fillcolor=yellow];
+    N3 [label="Authority",style=filled,fillcolor=yellow];
+    N4 [label="Law",style=filled,fillcolor=yellow];
+    Thing -> N1 [label="hasJurisdiction"] ;
+    N1 -> N2 [arrowtail=onormal,arrowhead=none,dir=both];
+    Thing -> N2 [label="hasCountry"];
+    Thing -> N3 [label="hasAuthority"];
+    N3 -> Thing [label="isAuthorityFor"];
+    N1 -> N4 [label="hasApplicableLaw"];
+}
+
+

@@ -1,0 +1,33 @@
+digraph G {
+
+  bgcolor=transparent;
+
+  subgraph cluster_0 {
+    node [style=filled,color=black,fillcolor=lightblue];
+    PD -> PII -> SensitivePD -> SpecialPD ;
+  }
+  subgraph cluster_1 {
+    node [style=filled,color=black,fillcolor=lemonchiffon];
+    P -> ServiceProvision -> SellProducts ;
+  }
+  subgraph cluster_2 {
+    node [style=filled,color=black,fillcolor=palegreen];
+    LB -> LegitimateInterest -> LI_DataController ;
+  }
+  subgraph cluster_3 {
+    node [style=filled,color=black,fillcolor=lightsalmon];
+    TO -> Technical -> Encryption ;
+    TO -> Organisational -> CodeOfConduct ;
+  }
+
+  DPV -> PD;
+  DPV -> P;
+  DPV -> LB;
+  DPV -> TO;
+  
+  DPV [shape=box3d, color=blue]
+  PD [label="Personal Data",shape=component];
+  P [label="Purpose",shape=component];
+  LB [label="Legal Basis",shape=component];
+  TO [label="Tech/Org Measures",shape=component];
+}
