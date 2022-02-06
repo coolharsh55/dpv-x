@@ -18,9 +18,9 @@ DPV_SHEETS = (
     ## DPV
     # 'BaseOntology',
     # 'PersonalDataCategory',
-    'Purpose',
+    # 'Purpose',
     # 'Processing',
-    # 'TechnicalOrganisationalMeasure',
+    'TechnicalOrganisationalMeasure',
     # 'Entities',
     # 'Consent',
     ## DPV-GDPR
@@ -116,4 +116,4 @@ if __name__ == '__main__':
     for sheet in DPV_SHEETS:
         terms += extract_terms_from_csv(f'{sheet}.csv', DPV_Class)
     generate_diagram((n.term, n.rdfs_subclassof, n.sw_termstatus) for n in terms)
-    # print(terms)
+    print(terms)
