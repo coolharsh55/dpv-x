@@ -1,62 +1,85 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
    xmlns:dct="http://purl.org/dc/terms/"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:sw="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#LargeScaleProcessing">
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Transfer">
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:label xml:lang="en">Large Scale Processing</rdfs:label>
-    <dct:description xml:lang="en">Processing that takes place at large scales</dct:description>
-    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-11-04</dct:created>
-    <sw:term_status xml:lang="en">accepted</sw:term_status>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Piero Bonatti</dct:creator>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Erase">
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Remove"/>
-    <rdfs:label xml:lang="en">Erase</rdfs:label>
-    <dct:description xml:lang="en">to delete data</dct:description>
-    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Processing"/>
+    <rdfs:label xml:lang="en">Transfer</rdfs:label>
+    <dct:description xml:lang="en">to move data from one place to another</dct:description>
+    <rdfs:seeAlso rdf:resource="http://www.specialprivacy.eu/vocabs/processing#Transfer"/>
+    <rdfs:isDefinedBy rdf:resource="https://www.specialprivacy.eu/vocabs/processing"/>
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
     <sw:term_status xml:lang="en">accepted</sw:term_status>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#DiscloseByTransmission">
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Disclose"/>
-    <rdfs:label xml:lang="en">Disclose by Transmission</rdfs:label>
-    <dct:description xml:lang="en">to disclose data by means of transmission</dct:description>
-    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
-    <sw:term_status xml:lang="en">accepted</sw:term_status>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Share">
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Disclose"/>
-    <rdfs:label xml:lang="en">Share</rdfs:label>
-    <dct:description xml:lang="en">to give data (or a portion of it) to others</dct:description>
-    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
-    <sw:term_status xml:lang="en">accepted</sw:term_status>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#EvaluationScoring">
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:label xml:lang="en">Evaluation and Scoring</rdfs:label>
-    <dct:description xml:lang="en">Processing that involves evaluation and scoring of individuals</dct:description>
-    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-11-04</dct:created>
-    <sw:term_status xml:lang="en">accepted</sw:term_status>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Piero Bonatti</dct:creator>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Structure">
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Organise"/>
     <rdfs:label xml:lang="en">Structure</rdfs:label>
     <dct:description xml:lang="en">to arrange data according to a structure</dct:description>
+    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#InnovativeUseOfNewTechnologies">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label xml:lang="en">Innovative Use of New Technologies</rdfs:label>
+    <dct:description xml:lang="en">Processing that involves use of innovative and new technologies</dct:description>
+    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-11-04</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Piero Bonatti</dct:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Record">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Obtain"/>
+    <rdfs:label xml:lang="en">Record</rdfs:label>
+    <dct:description xml:lang="en">to make a record (especially media)</dct:description>
+    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Obtain">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Processing"/>
+    <rdfs:label xml:lang="en">Obtain</rdfs:label>
+    <dct:description xml:lang="en">to solicit or gather data from someone</dct:description>
+    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Derive">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Transform"/>
+    <rdfs:label xml:lang="en">Derive</rdfs:label>
+    <dct:description xml:lang="en">to create new derivative data from the original data</dct:description>
+    <rdfs:seeAlso rdf:resource="http://www.specialprivacy.eu/vocabs/processing#Derive"/>
+    <rdfs:isDefinedBy rdf:resource="https://www.specialprivacy.eu/vocabs/processing"/>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#NonPublicDataSource">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#DataSource"/>
+    <rdfs:label xml:lang="en">Non-Public Data Source</rdfs:label>
+    <dct:description xml:lang="en">A source of data that is not publicly accessible or available</dct:description>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-01-26</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Georg P Krog</dct:creator>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beatriz Esteves</dct:creator>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul Ryan</dct:creator>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Julian Flake</dct:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Align">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Transform"/>
+    <rdfs:label xml:lang="en">Align</rdfs:label>
+    <dct:description xml:lang="en">to adjust the data to be in relation to another data</dct:description>
     <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
     <sw:term_status xml:lang="en">accepted</sw:term_status>
@@ -71,91 +94,11 @@
     <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul Ryan</dct:creator>
     <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#hasConsequence">
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:label xml:lang="en">has consequence</rdfs:label>
-    <dct:description xml:lang="en">Indicates consequences of processing such as those for Data Subjects in relation to automated decision making</dct:description>
-    <rdfs:comment xml:lang="en">Removed plural suffix for consistency</rdfs:comment>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-11-04</dct:created>
-    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-09-21</dct:modified>
-    <sw:term_status xml:lang="en">changed</sw:term_status>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Georg P. Krog</dct:creator>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul Ryan</dct:creator>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Anonymise">
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#DiscloseByTransmission">
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Transform"/>
-    <rdfs:label xml:lang="en">Anonymise</rdfs:label>
-    <dct:description xml:lang="en">to irreversibly alter personal data in such a way that an unique data subject can no longer be identified directly or indirectly or in combination with other data</dct:description>
-    <rdfs:seeAlso rdf:resource="http://www.specialprivacy.eu/vocabs/processing#Anonymize"/>
-    <rdfs:isDefinedBy rdf:resource="https://www.specialprivacy.eu/vocabs/processing"/>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
-    <sw:term_status xml:lang="en">accepted</sw:term_status>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Disclose">
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Processing"/>
-    <rdfs:label xml:lang="en">Disclose</rdfs:label>
-    <dct:description xml:lang="en">to make data known</dct:description>
-    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
-    <sw:term_status xml:lang="en">accepted</sw:term_status>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Move">
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Transfer"/>
-    <rdfs:label xml:lang="en">Move</rdfs:label>
-    <dct:description xml:lang="en">to move data from one location to another including deleting the original copy</dct:description>
-    <rdfs:seeAlso rdf:resource="http://www.specialprivacy.eu/vocabs/processing#Move"/>
-    <rdfs:isDefinedBy rdf:resource="https://www.specialprivacy.eu/vocabs/processing"/>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
-    <sw:term_status xml:lang="en">accepted</sw:term_status>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Destruct">
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Remove"/>
-    <rdfs:label xml:lang="en">Destruct</rdfs:label>
-    <dct:description xml:lang="en">to process data in a way it no longer exists or cannot be repaired</dct:description>
-    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
-    <sw:term_status xml:lang="en">accepted</sw:term_status>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#AutomatedDecisionMaking">
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:label xml:lang="en">Automated Decision Making</rdfs:label>
-    <dct:description xml:lang="en">Processing that involves automated decision making</dct:description>
-    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-11-04</dct:created>
-    <sw:term_status xml:lang="en">accepted</sw:term_status>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Piero Bonatti</dct:creator>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Combine">
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Transform"/>
-    <rdfs:label xml:lang="en">Combine</rdfs:label>
-    <dct:description xml:lang="en">to join or merge data</dct:description>
-    <rdfs:seeAlso rdf:resource="http://www.specialprivacy.eu/vocabs/processing#Aggregate"/>
-    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
-    <rdfs:isDefinedBy rdf:resource="https://www.specialprivacy.eu/vocabs/processing"/>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
-    <sw:term_status xml:lang="en">accepted</sw:term_status>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Alter">
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Transform"/>
-    <rdfs:label xml:lang="en">Alter</rdfs:label>
-    <dct:description xml:lang="en">to change the data without changing it into something else</dct:description>
-    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
-    <sw:term_status xml:lang="en">accepted</sw:term_status>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Acquire">
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Obtain"/>
-    <rdfs:label xml:lang="en">Acquire</rdfs:label>
-    <dct:description xml:lang="en">to come into possession or control of the data</dct:description>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Disclose"/>
+    <rdfs:label xml:lang="en">Disclose by Transmission</rdfs:label>
+    <dct:description xml:lang="en">to disclose data by means of transmission</dct:description>
     <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
     <sw:term_status xml:lang="en">accepted</sw:term_status>
@@ -170,20 +113,45 @@
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
     <sw:term_status xml:lang="en">accepted</sw:term_status>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Disseminate">
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Consult">
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Disclose"/>
-    <rdfs:label xml:lang="en">Disseminate</rdfs:label>
-    <dct:description xml:lang="en">to spread data throughout</dct:description>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Use"/>
+    <rdfs:label xml:lang="en">Consult</rdfs:label>
+    <dct:description xml:lang="en">to consult or query data</dct:description>
+    <rdfs:seeAlso rdf:resource="http://www.specialprivacy.eu/vocabs/processing#Query"/>
+    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
+    <rdfs:isDefinedBy rdf:resource="https://www.specialprivacy.eu/vocabs/processing"/>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#PublicDataSource">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#DataSource"/>
+    <rdfs:label xml:lang="en">Public Data Source</rdfs:label>
+    <dct:description xml:lang="en">A source of data that is publicly accessible or available</dct:description>
+    <rdfs:comment xml:lang="en">The term 'Public' is used here in a broad sense. Actual consideration of what is 'Public Data' can vary based on several contextual or jurisdictional factors such as  definition of open, methods of access, permissions and licenses.</rdfs:comment>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-01-26</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Georg P Krog</dct:creator>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beatriz Esteves</dct:creator>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul Ryan</dct:creator>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Julian Flake</dct:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Use">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Processing"/>
+    <rdfs:label xml:lang="en">Use</rdfs:label>
+    <dct:description xml:lang="en">to use data</dct:description>
     <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
     <sw:term_status xml:lang="en">accepted</sw:term_status>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Record">
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Erase">
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Obtain"/>
-    <rdfs:label xml:lang="en">Record</rdfs:label>
-    <dct:description xml:lang="en">to make a record (especially media)</dct:description>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Remove"/>
+    <rdfs:label xml:lang="en">Erase</rdfs:label>
+    <dct:description xml:lang="en">to delete data</dct:description>
     <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
     <sw:term_status xml:lang="en">accepted</sw:term_status>
@@ -192,44 +160,6 @@
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
     <rdfs:label xml:lang="en">Matching and Combining</rdfs:label>
     <dct:description xml:lang="en">Processing that involves matching and combining of personal data</dct:description>
-    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-11-04</dct:created>
-    <sw:term_status xml:lang="en">accepted</sw:term_status>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Piero Bonatti</dct:creator>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Adapt">
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Transform"/>
-    <rdfs:label xml:lang="en">Adapt</rdfs:label>
-    <dct:description xml:lang="en">to modify the data, often rewritten into a new form for a new use</dct:description>
-    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
-    <sw:term_status xml:lang="en">accepted</sw:term_status>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Organise">
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Processing"/>
-    <rdfs:label xml:lang="en">Organise</rdfs:label>
-    <dct:description xml:lang="en">to organize data for arranging or classifying</dct:description>
-    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
-    <sw:term_status xml:lang="en">accepted</sw:term_status>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Transfer">
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Processing"/>
-    <rdfs:label xml:lang="en">Transfer</rdfs:label>
-    <dct:description xml:lang="en">to move data from one place to another</dct:description>
-    <rdfs:seeAlso rdf:resource="http://www.specialprivacy.eu/vocabs/processing#Transfer"/>
-    <rdfs:isDefinedBy rdf:resource="https://www.specialprivacy.eu/vocabs/processing"/>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
-    <sw:term_status xml:lang="en">accepted</sw:term_status>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#SystematicMonitoring">
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:label xml:lang="en">Systematic Monitoring</rdfs:label>
-    <dct:description xml:lang="en">Processing that involves systematic monitoring of individuals</dct:description>
     <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-11-04</dct:created>
     <sw:term_status xml:lang="en">accepted</sw:term_status>
@@ -247,16 +177,51 @@
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
     <sw:term_status xml:lang="en">accepted</sw:term_status>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#DataSource">
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Disclose">
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:label xml:lang="en">Data Source</rdfs:label>
-    <dct:description xml:lang="en">The source or origin of data</dct:description>
-    <rdfs:comment xml:lang="en">Source is direct point of data collection; 'origin' would indicate the original/others points of where the data originates from</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Processing"/>
+    <rdfs:label xml:lang="en">Disclose</rdfs:label>
+    <dct:description xml:lang="en">to make data known</dct:description>
+    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#EvaluationScoring">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label xml:lang="en">Evaluation and Scoring</rdfs:label>
+    <dct:description xml:lang="en">Processing that involves evaluation and scoring of individuals</dct:description>
+    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-11-04</dct:created>
     <sw:term_status xml:lang="en">accepted</sw:term_status>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Georg P Krog</dct:creator>
     <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beatriz Esteves</dct:creator>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Piero Bonatti</dct:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#ConsequenceOfProcessing">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label xml:lang="en">Consequence of Processing</rdfs:label>
+    <dct:description xml:lang="en">The consequence(s) possible or arising from processing</dct:description>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-01-26</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Adapt">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Transform"/>
+    <rdfs:label xml:lang="en">Adapt</rdfs:label>
+    <dct:description xml:lang="en">to modify the data, often rewritten into a new form for a new use</dct:description>
+    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Anonymise">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Transform"/>
+    <rdfs:label xml:lang="en">Anonymise</rdfs:label>
+    <dct:description xml:lang="en">to irreversibly alter personal data in such a way that an unique data subject can no longer be identified directly or indirectly or in combination with other data</dct:description>
+    <rdfs:seeAlso rdf:resource="http://www.specialprivacy.eu/vocabs/processing#Anonymize"/>
+    <rdfs:isDefinedBy rdf:resource="https://www.specialprivacy.eu/vocabs/processing"/>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/dpv#hasAlgorithmicLogic">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -268,21 +233,31 @@
     <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul Ryan</dct:creator>
     <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Use">
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#PseudoAnonymise">
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Processing"/>
-    <rdfs:label xml:lang="en">Use</rdfs:label>
-    <dct:description xml:lang="en">to use data</dct:description>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Transform"/>
+    <rdfs:label xml:lang="en">Pseudo-Anonymise</rdfs:label>
+    <dct:description xml:lang="en">to replace personal identifiable information by artificial identifiers</dct:description>
     <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
     <sw:term_status xml:lang="en">accepted</sw:term_status>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Derive">
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#LargeScaleProcessing">
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Transform"/>
-    <rdfs:label xml:lang="en">Derive</rdfs:label>
-    <dct:description xml:lang="en">to create new derivative data from the original data</dct:description>
-    <rdfs:seeAlso rdf:resource="http://www.specialprivacy.eu/vocabs/processing#Derive"/>
+    <rdfs:label xml:lang="en">Large Scale Processing</rdfs:label>
+    <dct:description xml:lang="en">Processing that takes place at large scales</dct:description>
+    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-11-04</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Piero Bonatti</dct:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Move">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Transfer"/>
+    <rdfs:label xml:lang="en">Move</rdfs:label>
+    <dct:description xml:lang="en">to move data from one location to another including deleting the original copy</dct:description>
+    <rdfs:seeAlso rdf:resource="http://www.specialprivacy.eu/vocabs/processing#Move"/>
     <rdfs:isDefinedBy rdf:resource="https://www.specialprivacy.eu/vocabs/processing"/>
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
     <sw:term_status xml:lang="en">accepted</sw:term_status>
@@ -298,15 +273,6 @@
     <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul Ryan</dct:creator>
     <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Remove">
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Processing"/>
-    <rdfs:label xml:lang="en">Remove</rdfs:label>
-    <dct:description xml:lang="en">to destruct or erase data</dct:description>
-    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
-    <sw:term_status xml:lang="en">accepted</sw:term_status>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Profiling">
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Use"/>
@@ -316,11 +282,11 @@
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
     <sw:term_status xml:lang="en">accepted</sw:term_status>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Transmit">
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#MakeAvailable">
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Disclose"/>
-    <rdfs:label xml:lang="en">Transmit</rdfs:label>
-    <dct:description xml:lang="en">to send out data</dct:description>
+    <rdfs:label xml:lang="en">Make Available</rdfs:label>
+    <dct:description xml:lang="en">to transform or publish data to be used</dct:description>
     <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
     <sw:term_status xml:lang="en">accepted</sw:term_status>
@@ -335,71 +301,50 @@
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
     <sw:term_status xml:lang="en">accepted</sw:term_status>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Restrict">
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#HumanInvolvement">
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Transform"/>
-    <rdfs:label xml:lang="en">Restrict</rdfs:label>
-    <dct:description xml:lang="en">to apply a restriction on the processsing of specific records</dct:description>
-    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
-    <sw:term_status xml:lang="en">accepted</sw:term_status>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Consult">
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Use"/>
-    <rdfs:label xml:lang="en">Consult</rdfs:label>
-    <dct:description xml:lang="en">to consult or query data</dct:description>
-    <rdfs:seeAlso rdf:resource="http://www.specialprivacy.eu/vocabs/processing#Query"/>
-    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
-    <rdfs:isDefinedBy rdf:resource="https://www.specialprivacy.eu/vocabs/processing"/>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
-    <sw:term_status xml:lang="en">accepted</sw:term_status>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Align">
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Transform"/>
-    <rdfs:label xml:lang="en">Align</rdfs:label>
-    <dct:description xml:lang="en">to adjust the data to be in relation to another data</dct:description>
-    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
-    <sw:term_status xml:lang="en">accepted</sw:term_status>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Obtain">
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Processing"/>
-    <rdfs:label xml:lang="en">Obtain</rdfs:label>
-    <dct:description xml:lang="en">to solicit or gather data from someone</dct:description>
-    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
-    <sw:term_status xml:lang="en">accepted</sw:term_status>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Transform">
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Processing"/>
-    <rdfs:label xml:lang="en">Transform</rdfs:label>
-    <dct:description xml:lang="en">to change the form or nature of data</dct:description>
-    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
-    <sw:term_status xml:lang="en">accepted</sw:term_status>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#PseudoAnonymise">
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Transform"/>
-    <rdfs:label xml:lang="en">Pseudo-Anonymise</rdfs:label>
-    <dct:description xml:lang="en">to replace personal identifiable information by artificial identifiers</dct:description>
-    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
-    <sw:term_status xml:lang="en">accepted</sw:term_status>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#InnovativeUseOfNewTechnologies">
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:label xml:lang="en">Innovative Use of New Technologies</rdfs:label>
-    <dct:description xml:lang="en">Processing that involves use of innovative and new technologies</dct:description>
-    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-11-04</dct:created>
+    <rdfs:label xml:lang="en">Human Involvement</rdfs:label>
+    <dct:description xml:lang="en">The involvement of humans as a factor or agent in processing</dct:description>
+    <rdfs:comment xml:lang="en">Human Involvement here broadly refers to any involvement by a human in the context of carrying out processing. This may include verification of outcomes, providing input data for making decisions, or overseeing activities.</rdfs:comment>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-01-26</dct:created>
     <sw:term_status xml:lang="en">accepted</sw:term_status>
     <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Piero Bonatti</dct:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Destruct">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Remove"/>
+    <rdfs:label xml:lang="en">Destruct</rdfs:label>
+    <dct:description xml:lang="en">to process data in a way it no longer exists or cannot be repaired</dct:description>
+    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Transmit">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Disclose"/>
+    <rdfs:label xml:lang="en">Transmit</rdfs:label>
+    <dct:description xml:lang="en">to send out data</dct:description>
+    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Share">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Disclose"/>
+    <rdfs:label xml:lang="en">Share</rdfs:label>
+    <dct:description xml:lang="en">to give data (or a portion of it) to others</dct:description>
+    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Acquire">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Obtain"/>
+    <rdfs:label xml:lang="en">Acquire</rdfs:label>
+    <dct:description xml:lang="en">to come into possession or control of the data</dct:description>
+    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Store">
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
@@ -410,11 +355,62 @@
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
     <sw:term_status xml:lang="en">accepted</sw:term_status>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#MakeAvailable">
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#AlgorithmicLogicOfProcessing">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label xml:lang="en">Algorithmic Logic of Processing</rdfs:label>
+    <dct:description xml:lang="en">The algorithmic logic applied or used for processing</dct:description>
+    <rdfs:comment xml:lang="en">Algorithmic Logic is intended as a broad concept for explaining the use of algorithms and automated decisions making within Processing. To describe the actual algorithm, see the Algorithm concept.</rdfs:comment>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-01-26</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#SystematicMonitoring">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label xml:lang="en">Systematic Monitoring</rdfs:label>
+    <dct:description xml:lang="en">Processing that involves systematic monitoring of individuals</dct:description>
+    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-11-04</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Piero Bonatti</dct:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#hasConsequence">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en">has consequence</rdfs:label>
+    <dct:description xml:lang="en">Indicates consequences of processing such as those for Data Subjects in relation to automated decision making</dct:description>
+    <rdfs:comment xml:lang="en">Removed plural suffix for consistency</rdfs:comment>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-11-04</dct:created>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-09-21</dct:modified>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Georg P. Krog</dct:creator>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul Ryan</dct:creator>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#DataSource">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label xml:lang="en">Data Source</rdfs:label>
+    <dct:description xml:lang="en">The source or origin of data</dct:description>
+    <rdfs:comment xml:lang="en">Source' is the direct point of data collection; 'origin' would indicate the original/others points of where the data originates from.</rdfs:comment>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-11-04</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Georg P Krog</dct:creator>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beatriz Esteves</dct:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Alter">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Transform"/>
+    <rdfs:label xml:lang="en">Alter</rdfs:label>
+    <dct:description xml:lang="en">to change the data without changing it into something else</dct:description>
+    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Disseminate">
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Disclose"/>
-    <rdfs:label xml:lang="en">Make Available</rdfs:label>
-    <dct:description xml:lang="en">to transform or publish data to be used</dct:description>
+    <rdfs:label xml:lang="en">Disseminate</rdfs:label>
+    <dct:description xml:lang="en">to spread data throughout</dct:description>
     <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
     <sw:term_status xml:lang="en">accepted</sw:term_status>
@@ -424,6 +420,63 @@
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Use"/>
     <rdfs:label xml:lang="en">Retrieve</rdfs:label>
     <dct:description xml:lang="en">to retrieve data, often in an automated manner</dct:description>
+    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Combine">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Transform"/>
+    <rdfs:label xml:lang="en">Combine</rdfs:label>
+    <dct:description xml:lang="en">to join or merge data</dct:description>
+    <rdfs:seeAlso rdf:resource="http://www.specialprivacy.eu/vocabs/processing#Aggregate"/>
+    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
+    <rdfs:isDefinedBy rdf:resource="https://www.specialprivacy.eu/vocabs/processing"/>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Restrict">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Transform"/>
+    <rdfs:label xml:lang="en">Restrict</rdfs:label>
+    <dct:description xml:lang="en">to apply a restriction on the processsing of specific records</dct:description>
+    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Organise">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Processing"/>
+    <rdfs:label xml:lang="en">Organise</rdfs:label>
+    <dct:description xml:lang="en">to organize data for arranging or classifying</dct:description>
+    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#AutomatedDecisionMaking">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label xml:lang="en">Automated Decision Making</rdfs:label>
+    <dct:description xml:lang="en">Processing that involves automated decision making</dct:description>
+    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-11-04</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Piero Bonatti</dct:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Transform">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Processing"/>
+    <rdfs:label xml:lang="en">Transform</rdfs:label>
+    <dct:description xml:lang="en">to change the form or nature of data</dct:description>
+    <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/dpv#Remove">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Processing"/>
+    <rdfs:label xml:lang="en">Remove</rdfs:label>
+    <dct:description xml:lang="en">to destruct or erase data</dct:description>
     <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj"/>
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-07</dct:created>
     <sw:term_status xml:lang="en">accepted</sw:term_status>

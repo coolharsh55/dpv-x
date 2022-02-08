@@ -1,15 +1,14 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix dpv: <http://www.w3.org/ns/dpv#> .
-@prefix ns1: <http://purl.org/vocab/vann/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix spl: <http://www.specialprivacy.eu/langs/usage-policy#> .
-@prefix svd: <http://www.specialprivacy.eu/vocabs/data#> .
 @prefix svpr: <http://www.specialprivacy.eu/vocabs/processing#> .
 @prefix svpu: <http://www.specialprivacy.eu/vocabs/purposes#> .
 @prefix sw: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix time: <http://www.w3.org/2006/time#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 dpv:AcademicResearch a rdfs:Class ;
@@ -26,14 +25,13 @@ dpv:AcademicResearch a rdfs:Class ;
     rdfs:subClassOf dpv:ResearchAndDevelopment ;
     sw:term_status "accepted"@en .
 
-dpv:Accent a rdfs:Class ;
-    rdfs:label "Accent"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about linguistic and speech accents."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Language ;
+dpv:AcademicScientificOrganisation a rdfs:Class ;
+    rdfs:label "AcademicScientificOrganisation"@en ;
+    dct:created "2022-02-02"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "Universities, Schools, Research Bodies"@en ;
+    rdfs:isDefinedBy <http://purl.org/adms> ;
+    rdfs:subClassOf dpv:Organisation ;
     sw:term_status "accepted"@en .
 
 dpv:AccessControlMethod a rdfs:Class ;
@@ -47,31 +45,11 @@ dpv:AccessControlMethod a rdfs:Class ;
     rdfs:subClassOf dpv:TechnicalMeasure ;
     sw:term_status "accepted"@en .
 
-dpv:AccountIdentifier a rdfs:Class ;
-    rdfs:label "Account Identifier"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about financial account identifier."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:FinancialAccount ;
-    sw:term_status "accepted"@en .
-
 dpv:AccountManagement a rdfs:Class ;
     rdfs:label "Account Management"@en ;
     dct:created "2021-09-08"^^xsd:date ;
     dct:description "Create, maintain, and manage accounts for purposes of providing services"@en ;
     rdfs:subClassOf dpv:Purpose ;
-    sw:term_status "accepted"@en .
-
-dpv:Acquantaince a rdfs:Class ;
-    rdfs:label "Acquantaince"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about acquaintainces in a social network."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:SocialNetwork ;
     sw:term_status "accepted"@en .
 
 dpv:Acquire a rdfs:Class ;
@@ -101,14 +79,12 @@ dpv:Advertising a rdfs:Class ;
     rdfs:subClassOf dpv:Marketing ;
     sw:term_status "accepted"@en .
 
-dpv:Age a rdfs:Class ;
-    rdfs:label "Age"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about age"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:PhysicalCharacteristic ;
+dpv:AlgorithmicLogicOfProcessing a rdfs:Class ;
+    rdfs:label "Algorithmic Logic of Processing"@en ;
+    dct:created "2022-01-26"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "The algorithmic logic applied or used for processing"@en ;
+    rdfs:comment "Algorithmic Logic is intended as a broad concept for explaining the use of algorithms and automated decisions making within Processing. To describe the actual algorithm, see the Algorithm concept."@en ;
     sw:term_status "accepted"@en .
 
 dpv:Align a rdfs:Class ;
@@ -157,61 +133,12 @@ dpv:Anonymization a rdfs:Class ;
     rdfs:subClassOf dpv:PseudoAnonymization ;
     sw:term_status "accepted"@en .
 
-dpv:ApartmentOwned a rdfs:Class ;
-    rdfs:label "Apartment Owned"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about apartment(s) owned and its history"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:HouseOwned ;
-    sw:term_status "accepted"@en .
-
 dpv:Assessment a rdfs:Class ;
     rdfs:label "Assessment"@en ;
     dct:created "2021-09-08"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "The document, plan, or process for assessment or determination towards a purpose e.g. assessment of legality or impact assessments"@en ;
     rdfs:subClassOf dpv:OrganisationalMeasure ;
-    sw:term_status "accepted"@en .
-
-dpv:Association a rdfs:Class ;
-    rdfs:label "Association"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about associations in a social network with other individuals, groups, or entities e.g. friend of a friend"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:SocialNetwork ;
-    sw:term_status "accepted"@en .
-
-dpv:Attitude a rdfs:Class ;
-    rdfs:label "Attitude"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about attitude."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Behavioral ;
-    sw:term_status "accepted"@en .
-
-dpv:Authenticating a rdfs:Class ;
-    rdfs:label "Authenticating"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about authentication and information used for authenticating"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Internal ;
-    sw:term_status "accepted"@en .
-
-dpv:AuthenticationHistory a rdfs:Class ;
-    rdfs:label "Authentication History"@en ;
-    dct:created "2020-11-04"^^xsd:date ;
-    dct:creator "Georg P Krog"^^xsd:string ;
-    dct:description "Information about prior authentication and its outcomes such as login attempts or location."@en ;
-    rdfs:isDefinedBy <https://www.w3.org/community/dpvcg/> ;
-    rdfs:subClassOf dpv:Behavioral ;
     sw:term_status "accepted"@en .
 
 dpv:AuthenticationProtocols a rdfs:Class ;
@@ -256,98 +183,6 @@ dpv:AutomatedDecisionMaking a rdfs:Class ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     sw:term_status "accepted"@en .
 
-dpv:BankAccount a rdfs:Class ;
-    rdfs:label "Bank Account"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about bank accounts."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:FinancialAccount ;
-    sw:term_status "accepted"@en .
-
-dpv:Behavioral a rdfs:Class ;
-    rdfs:label "Behavioral"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about behavior or activity"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:seeAlso svd:Activity ;
-    rdfs:subClassOf dpv:External ;
-    sw:term_status "accepted"@en .
-
-dpv:Biometric a rdfs:Class ;
-    rdfs:label "Biometric"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about biometrics and biometric characteristics."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Identifying,
-        dpv:SpecialCategoryPersonalData ;
-    sw:term_status "accepted"@en .
-
-dpv:BloodType a rdfs:Class ;
-    rdfs:label "Blood Type"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about blood type."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:MedicalHealth ;
-    sw:term_status "accepted"@en .
-
-dpv:BrowserFingerprint a rdfs:Class ;
-    rdfs:label "Browser Fingerprint"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about the web browser which is used as a 'fingerprint'"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:DeviceBased ;
-    sw:term_status "accepted"@en .
-
-dpv:BrowsingBehavior a rdfs:Class ;
-    rdfs:label "Browsing Behavior"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about browsing behavior."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:seeAlso svd:OnlineActivity ;
-    rdfs:subClassOf dpv:Behavioral ;
-    sw:term_status "accepted"@en .
-
-dpv:BrowsingReferral a rdfs:Class ;
-    rdfs:label "Browsing Referral"@en ;
-    dct:created "2020-11-04"^^xsd:date ;
-    dct:creator "Georg P Krog"^^xsd:string ;
-    dct:description "Information about web browsing referrer or referral, which can be based on location, targeted referrals, direct, organic search, social media or actions, campaigns."@en ;
-    rdfs:isDefinedBy <https://www.w3.org/community/dpvcg/> ;
-    rdfs:subClassOf dpv:BrowsingBehaviour ;
-    sw:term_status "accepted"@en .
-
-dpv:CallLog a rdfs:Class ;
-    rdfs:label "Call Log"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about the calls that an individual has made."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Behavioral ;
-    sw:term_status "accepted"@en .
-
-dpv:CarOwned a rdfs:Class ;
-    rdfs:label "Car Owned"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about cars ownership and ownership history."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Ownership ;
-    sw:term_status "accepted"@en .
-
 dpv:Certification a rdfs:Class ;
     rdfs:label "Certification"@en ;
     dct:created "2019-04-05"^^xsd:date ;
@@ -368,25 +203,6 @@ dpv:CertificationSeal a rdfs:Class ;
         "Rob Brennan"^^xsd:string ;
     dct:description "Certifications, seals, and marks indicating compliance to regulations or practices"@en ;
     rdfs:subClassOf dpv:OrganisationalMeasure ;
-    sw:term_status "accepted"@en .
-
-dpv:Character a rdfs:Class ;
-    rdfs:label "Character"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about character in the public sphere"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:PublicLife ;
-    sw:term_status "accepted"@en .
-
-dpv:Child a rdfs:Class ;
-    rdfs:label "Child"@en ;
-    dct:created "2020-11-25"^^xsd:date ;
-    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:description "A 'child' is a natural legal person who is below a certain legal age depending on the legal jurisdiction."@en ;
-    rdfs:comment "The legality of age defining a child varies by jurisdiction. In addition, 'child' is distinct from a 'minor'. For example, the legal age drinking alcohol can be 21, which makes a person of age 20 a 'minor' in this context. In other cases, 'minor' and 'child' are used interchangeably to refer to a person below some legally defined age."@en ;
-    rdfs:subClassOf dpv:DataSubject ;
     sw:term_status "accepted"@en .
 
 dpv:CodeOfConduct a rdfs:Class ;
@@ -434,16 +250,6 @@ dpv:CommercialResearch a rdfs:Class ;
     rdfs:subClassOf dpv:ResearchAndDevelopment ;
     sw:term_status "accepted"@en .
 
-dpv:Communication a rdfs:Class ;
-    rdfs:label "Communication"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information communicated from or to an individual"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Social ;
-    sw:term_status "accepted"@en .
-
 dpv:CommunicationForCustomerCare a rdfs:Class ;
     rdfs:label "Communication for Customer Care"@en ;
     dct:created "2020-11-04"^^xsd:date ;
@@ -467,33 +273,19 @@ dpv:CommunicationManagement a rdfs:Class ;
     rdfs:subClassOf dpv:Purpose ;
     sw:term_status "accepted"@en .
 
-dpv:CommunicationsMetadata a rdfs:Class ;
-    rdfs:label "Communications Metadata"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about communication metadata in the public sphere"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:seeAlso svd:Interactive ;
-    rdfs:subClassOf dpv:PublicLife ;
-    sw:term_status "accepted"@en .
-
-dpv:Connection a rdfs:Class ;
-    rdfs:label "Connection"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about and including connections in a social network"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:SocialNetwork ;
-    sw:term_status "accepted"@en .
-
 dpv:Consent a rdfs:Class ;
     rdfs:label "Consent"@en ;
     dct:created "2021-04-07"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Consent of the Data Subject for specified processing"@en ;
     rdfs:subClassOf dpv:LegalBasis ;
+    sw:term_status "accepted"@en .
+
+dpv:ConsequenceOfProcessing a rdfs:Class ;
+    rdfs:label "Consequence of Processing"@en ;
+    dct:created "2022-01-26"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "The consequence(s) possible or arising from processing"@en ;
     sw:term_status "accepted"@en .
 
 dpv:Consult a rdfs:Class ;
@@ -524,17 +316,6 @@ dpv:ConsultationWithAuthority a rdfs:Class ;
         "Paul Ryan"^^xsd:string ;
     dct:description "Consultation with an authority or authoritative entity"@en ;
     rdfs:subClassOf dpv:Consultation ;
-    sw:term_status "accepted"@en .
-
-dpv:Contact a rdfs:Class ;
-    rdfs:label "Contact"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about contacts or used for contacting e.g. email address or phone number"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:seeAlso svd:Physical ;
-    rdfs:subClassOf dpv:Tracking ;
     sw:term_status "accepted"@en .
 
 dpv:Context a rdfs:Class ;
@@ -577,7 +358,19 @@ dpv:ContractualTerms a rdfs:Class ;
         "Rob Brennan"^^xsd:string ;
     dct:description "Contractual terms governing data handling within the data controller"@en ;
     rdfs:subClassOf dpv:LegalAgreement ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
+
+dpv:ControllerProcessorAgreement a rdfs:Class ;
+    rdfs:label "Controller-Processor Agreement"@en ;
+    dct:created "2022-01-26"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "An agreement outlining conditions, criteria, obligations, responsibilities, and specifics for carrying out processing of personal data between a Data Controller and a Data Processor"@en ;
+    rdfs:subClassOf "DataProcessingAgreement"^^xsd:string ;
+    sw:term_status "accepted"@en .
 
 dpv:Copy a rdfs:Class ;
     rdfs:label "Copy"@en ;
@@ -586,16 +379,6 @@ dpv:Copy a rdfs:Class ;
     rdfs:isDefinedBy <https://www.specialprivacy.eu/vocabs/processing> ;
     rdfs:seeAlso svpr:Copy ;
     rdfs:subClassOf dpv:Processing ;
-    sw:term_status "accepted"@en .
-
-dpv:Country a rdfs:Class ;
-    rdfs:label "Country"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about country e.g. residence, travel."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Location ;
     sw:term_status "accepted"@en .
 
 dpv:CreateEventRecommendations a rdfs:Class ;
@@ -630,117 +413,6 @@ dpv:CreateProductRecommendations a rdfs:Class ;
     dct:description "Create and provide product recommendations e.g. suggest similar products"@en ;
     rdfs:seeAlso svpu:Marketing ;
     rdfs:subClassOf dpv:CreatePersonalizedRecommendations ;
-    sw:term_status "accepted"@en .
-
-dpv:Credit a rdfs:Class ;
-    rdfs:label "Credit"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about reputation with regards to money"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Transactional ;
-    sw:term_status "accepted"@en .
-
-dpv:CreditCapacity a rdfs:Class ;
-    rdfs:label "Credit Capacity"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about credit capacity."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Credit ;
-    sw:term_status "accepted"@en .
-
-dpv:CreditCardNumber a rdfs:Class ;
-    rdfs:label "Credit Card Number"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about credit card number"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:PaymentCardNumber ;
-    sw:term_status "accepted"@en .
-
-dpv:CreditRecord a rdfs:Class ;
-    rdfs:label "Credit Record"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about credit record."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Credit ;
-    sw:term_status "accepted"@en .
-
-dpv:CreditScore a rdfs:Class ;
-    rdfs:label "Credit Score"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about credit score."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:CreditWorthiness ;
-    sw:term_status "accepted"@en .
-
-dpv:CreditStanding a rdfs:Class ;
-    rdfs:label "Credit Standing"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about credit standing."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Credit ;
-    sw:term_status "accepted"@en .
-
-dpv:CreditWorthiness a rdfs:Class ;
-    rdfs:label "Credit Worthiness"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about credit worthiness."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Credit ;
-    sw:term_status "accepted"@en .
-
-dpv:Criminal a rdfs:Class ;
-    rdfs:label "Criminal"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about criminal activity e.g. criminal convictions or jail time"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:seeAlso svd:Judicial ;
-    rdfs:subClassOf dpv:Social ;
-    sw:term_status "accepted"@en .
-
-dpv:CriminalCharge a rdfs:Class ;
-    rdfs:label "Criminal Charge"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about criminal charges."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Criminal ;
-    sw:term_status "accepted"@en .
-
-dpv:CriminalConviction a rdfs:Class ;
-    rdfs:label "Criminal Conviction"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about criminal convictions."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Criminal ;
-    sw:term_status "accepted"@en .
-
-dpv:CriminalPardon a rdfs:Class ;
-    rdfs:label "Criminal Pardon"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about criminal pardons."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Criminal ;
     sw:term_status "accepted"@en .
 
 dpv:CustomerCare a rdfs:Class ;
@@ -798,16 +470,6 @@ dpv:CustomerSolvencyMonitoring a rdfs:Class ;
     rdfs:subClassOf dpv:CustomerManagement ;
     sw:term_status "accepted"@en .
 
-dpv:DNACode a rdfs:Class ;
-    rdfs:label "DNA Code"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about DNA."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:MedicalHealth ;
-    sw:term_status "accepted"@en .
-
 dpv:DPIA a rdfs:Class ;
     rdfs:label "Data Protection Impact Assessment (DPIA)"@en ;
     dct:created "2020-11-04"^^xsd:date ;
@@ -857,6 +519,19 @@ dpv:DataImporter a rdfs:Class ;
     rdfs:subClassOf dpv:Recipient ;
     sw:term_status "accepted"@en .
 
+dpv:DataProcessingAgreement a rdfs:Class ;
+    rdfs:label "Data Processing Agreement"@en ;
+    dct:created "2022-01-26"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "An agreement outlining conditions, criteria, obligations, responsibilities, and specifics for carrying out processing of personal data"@en ;
+    rdfs:comment "For specific role-based data processing agreements, see concepts for Processors and JointDataController agreements."@en ;
+    rdfs:subClassOf dpv:LegalAgreement ;
+    sw:term_status "accepted"@en .
+
 dpv:DataProcessingRecords a rdfs:Class ;
     rdfs:label "Data Processing Records"@en ;
     dct:created "2021-09-08"^^xsd:date ;
@@ -884,16 +559,6 @@ dpv:DataProtectionAuthority a rdfs:Class ;
     rdfs:subClassOf dpv:Authority ;
     sw:term_status "accepted"@en .
 
-dpv:DataProtectionOfficer a rdfs:Class ;
-    rdfs:label "Data Protection Officer"@en ;
-    dct:created "2020-11-04"^^xsd:date ;
-    dct:creator "Georg Krog"^^xsd:string,
-        "Paul Ryan"^^xsd:string ;
-    dct:description "An entity within or authorised by an organisation to monitor internal compliance, inform and advise on data protection obligations and act as a contact point for data subjects and the supervisory authority."@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_37/oj> ;
-    rdfs:subClassOf dpv:LegalEntity ;
-    sw:term_status "accepted"@en .
-
 dpv:DataSource a rdfs:Class ;
     rdfs:label "Data Source"@en ;
     dct:created "2020-11-04"^^xsd:date ;
@@ -901,7 +566,7 @@ dpv:DataSource a rdfs:Class ;
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "The source or origin of data"@en ;
-    rdfs:comment "Source is direct point of data collection; 'origin' would indicate the original/others points of where the data originates from"@en ;
+    rdfs:comment "Source' is the direct point of data collection; 'origin' would indicate the original/others points of where the data originates from."@en ;
     sw:term_status "accepted"@en .
 
 dpv:DataSubProcessor a rdfs:Class ;
@@ -980,26 +645,6 @@ dpv:DeliveryOfGoods a rdfs:Class ;
     rdfs:subClassOf dpv:RequestedServiceProvision ;
     sw:term_status "accepted"@en .
 
-dpv:Demeanor a rdfs:Class ;
-    rdfs:label "Demeanor"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about demeanor."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Behavioral ;
-    sw:term_status "accepted"@en .
-
-dpv:Demographic a rdfs:Class ;
-    rdfs:label "Demographic"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about demography and demographic characteristics"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:External ;
-    sw:term_status "accepted"@en .
-
 dpv:Derive a rdfs:Class ;
     rdfs:label "Derive"@en ;
     dct:created "2019-05-07"^^xsd:date ;
@@ -1007,17 +652,6 @@ dpv:Derive a rdfs:Class ;
     rdfs:isDefinedBy <https://www.specialprivacy.eu/vocabs/processing> ;
     rdfs:seeAlso svpr:Derive ;
     rdfs:subClassOf dpv:Transform ;
-    sw:term_status "accepted"@en .
-
-dpv:DerivedPersonalData a rdfs:Class ;
-    rdfs:label "Derived Personal Data"@en ;
-    dct:created "2019-05-07"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Derived data is data that is obtained or derived from other data."@en ;
-    rdfs:isDefinedBy <https://www.w3.org/community/dpvcg/> ;
-    rdfs:seeAlso svd:Derived ;
-    rdfs:subClassOf dpv:PersonalDataCategory ;
     sw:term_status "accepted"@en .
 
 dpv:DesignStandard a rdfs:Class ;
@@ -1039,63 +673,6 @@ dpv:Destruct a rdfs:Class ;
     rdfs:subClassOf dpv:Remove ;
     sw:term_status "accepted"@en .
 
-dpv:DeviceApplications a rdfs:Class ;
-    rdfs:label "Device Applications"@en ;
-    dct:created "2020-11-04"^^xsd:date ;
-    dct:creator "Beatriz Esteves"^^xsd:string,
-        "Georg P Krog"^^xsd:string,
-        "Harshvardhan J. Pandit"^^xsd:string,
-        "Paul Ryan"^^xsd:string ;
-    dct:description "Information about applications or application-like software on a device."@en ;
-    rdfs:isDefinedBy <https://www.w3.org/community/dpvcg/> ;
-    rdfs:subClassOf dpv:DeviceSoftware ;
-    sw:term_status "accepted"@en .
-
-dpv:DeviceBased a rdfs:Class ;
-    rdfs:label "Device Based"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about devices"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:seeAlso svd:Computer ;
-    rdfs:subClassOf dpv:Tracking ;
-    sw:term_status "accepted"@en .
-
-dpv:DeviceOperatingSystem a rdfs:Class ;
-    rdfs:label "Device Operating System"@en ;
-    dct:created "2020-11-04"^^xsd:date ;
-    dct:creator "Beatriz Esteves"^^xsd:string,
-        "Georg P Krog"^^xsd:string,
-        "Harshvardhan J. Pandit"^^xsd:string,
-        "Paul Ryan"^^xsd:string ;
-    dct:description "Information about the operating system (OS) or system software that manages hardware or software resources."@en ;
-    rdfs:isDefinedBy <https://www.w3.org/community/dpvcg/> ;
-    rdfs:subClassOf dpv:DeviceSoftware ;
-    sw:term_status "accepted"@en .
-
-dpv:DeviceSoftware a rdfs:Class ;
-    rdfs:label "Device Software"@en ;
-    dct:created "2020-11-04"^^xsd:date ;
-    dct:creator "Beatriz Esteves"^^xsd:string,
-        "Georg P Krog"^^xsd:string,
-        "Harshvardhan J. Pandit"^^xsd:string,
-        "Paul Ryan"^^xsd:string ;
-    dct:description "Information about software on or related to a device."@en ;
-    rdfs:isDefinedBy <https://www.w3.org/community/dpvcg/> ;
-    rdfs:subClassOf dpv:DeviceBased ;
-    sw:term_status "accepted"@en .
-
-dpv:Dialect a rdfs:Class ;
-    rdfs:label "Dialect"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about linguistic dialects."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Language ;
-    sw:term_status "accepted"@en .
-
 dpv:DirectMarketing a rdfs:Class ;
     rdfs:label "Direct Marketing"@en ;
     dct:created "2020-11-04"^^xsd:date ;
@@ -1104,26 +681,6 @@ dpv:DirectMarketing a rdfs:Class ;
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Conduct direct marketing i.e. marketing communicated directly to the individual"@en ;
     rdfs:subClassOf dpv:Marketing ;
-    sw:term_status "accepted"@en .
-
-dpv:Disability a rdfs:Class ;
-    rdfs:label "Disability"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about disabilities."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:MedicalHealth ;
-    sw:term_status "accepted"@en .
-
-dpv:DisciplinaryAction a rdfs:Class ;
-    rdfs:label "Disciplinary Action"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about disciplinary actions and its history"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Professional ;
     sw:term_status "accepted"@en .
 
 dpv:Disclose a rdfs:Class ;
@@ -1142,16 +699,6 @@ dpv:DiscloseByTransmission a rdfs:Class ;
     rdfs:subClassOf dpv:Disclose ;
     sw:term_status "accepted"@en .
 
-dpv:Dislike a rdfs:Class ;
-    rdfs:label "Dislike"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about dislikes or preferences regarding repulsions."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Interest ;
-    sw:term_status "accepted"@en .
-
 dpv:DisputeManagement a rdfs:Class ;
     rdfs:label "Dispute Management"@en ;
     dct:created "2021-09-08"^^xsd:date ;
@@ -1166,56 +713,6 @@ dpv:Disseminate a rdfs:Class ;
     dct:description "to spread data throughout"@en ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     rdfs:subClassOf dpv:Disclose ;
-    sw:term_status "accepted"@en .
-
-dpv:Divorce a rdfs:Class ;
-    rdfs:label "Divorce"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about divorce(s)."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:FamilyStructure ;
-    sw:term_status "accepted"@en .
-
-dpv:DrugTestResult a rdfs:Class ;
-    rdfs:label "Drug Test Result"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about drug test results."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:MedicalHealth ;
-    sw:term_status "accepted"@en .
-
-dpv:EmailAddress a rdfs:Class ;
-    rdfs:label "Email Address"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about Email address."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Contact ;
-    sw:term_status "accepted"@en .
-
-dpv:EmailContent a rdfs:Class ;
-    rdfs:label "Email Content"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about the contents of Emails sent or received"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Communication ;
-    sw:term_status "accepted"@en .
-
-dpv:EmploymentHistory a rdfs:Class ;
-    rdfs:label "Employment History"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about employment history"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Professional ;
     sw:term_status "accepted"@en .
 
 dpv:EncryptionInRest a rdfs:Class ;
@@ -1253,7 +750,7 @@ dpv:EnforceAccessControl a rdfs:Class ;
     rdfs:comment "Was previously \"Access Control\". Prefixed to distinguish from Technical Measure."@en ;
     rdfs:seeAlso svpu:Login ;
     rdfs:subClassOf dpv:EnforceSecurity ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv:EnforceSecurity a rdfs:Class ;
     rdfs:label "Enforce Security"@en ;
@@ -1267,7 +764,7 @@ dpv:EnforceSecurity a rdfs:Class ;
     dct:description "Ensure and enforce security e.g. of data, personnel"@en ;
     rdfs:comment "Was previous \"Security\". Prefixed to distinguish from TechOrg measures."@en ;
     rdfs:subClassOf dpv:Purpose ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv:EnterIntoContract a rdfs:Class ;
     rdfs:label "Enter Into Contract"@en ;
@@ -1287,27 +784,6 @@ dpv:Erase a rdfs:Class ;
     rdfs:subClassOf dpv:Remove ;
     sw:term_status "accepted"@en .
 
-dpv:EthnicOrigin a rdfs:Class ;
-    rdfs:label "Ethnic Origin"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about ethnic origin"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Ethnicity,
-        dpv:SpecialCategoryPersonalData ;
-    sw:term_status "accepted"@en .
-
-dpv:Ethnicity a rdfs:Class ;
-    rdfs:label "Ethnicity"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about ethnic origins and lineage"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:External ;
-    sw:term_status "accepted"@en .
-
 dpv:EvaluationScoring a rdfs:Class ;
     rdfs:label "Evaluation and Scoring"@en ;
     dct:created "2020-11-04"^^xsd:date ;
@@ -1317,135 +793,12 @@ dpv:EvaluationScoring a rdfs:Class ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     sw:term_status "accepted"@en .
 
-dpv:External a rdfs:Class ;
-    rdfs:label "External"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about external characteristics that can be observed"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:PersonalDataCategory ;
-    sw:term_status "accepted"@en .
-
-dpv:Family a rdfs:Class ;
-    rdfs:label "Family"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about family and relationships"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Social ;
-    sw:term_status "accepted"@en .
-
-dpv:FamilyHealthHistory a rdfs:Class ;
-    rdfs:label "Family Health History"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about family health history."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:HealthHistory ;
-    sw:term_status "accepted"@en .
-
-dpv:FamilyStructure a rdfs:Class ;
-    rdfs:label "Family Structure"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about family and familial structure."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Family ;
-    sw:term_status "accepted"@en .
-
-dpv:Favorite a rdfs:Class ;
-    rdfs:label "Favorite"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about favorites"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Preference ;
-    sw:term_status "accepted"@en .
-
-dpv:FavoriteColor a rdfs:Class ;
-    rdfs:label "Favorite Color"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about favorite color."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Favorite ;
-    sw:term_status "accepted"@en .
-
-dpv:FavoriteFood a rdfs:Class ;
-    rdfs:label "Favorite Food"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about favorite food."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Favorite ;
-    sw:term_status "accepted"@en .
-
-dpv:FavoriteMusic a rdfs:Class ;
-    rdfs:label "Favorite Music"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about favorite music."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Favorite ;
-    sw:term_status "accepted"@en .
-
-dpv:Fetish a rdfs:Class ;
-    rdfs:label "Fetish"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information an individual's sexual fetishes"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Sexual ;
-    sw:term_status "accepted"@en .
-
-dpv:Financial a rdfs:Class ;
-    rdfs:label "Financial"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about finance including monetary characteristics and transactions"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:seeAlso svd:Financial ;
-    rdfs:subClassOf dpv:PersonalDataCategory ;
-    sw:term_status "accepted"@en .
-
-dpv:FinancialAccount a rdfs:Class ;
-    rdfs:label "Financial Account"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about financial accounts."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Financial ;
-    sw:term_status "accepted"@en .
-
-dpv:FinancialAccountNumber a rdfs:Class ;
-    rdfs:label "Financial Account Number"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about financial account number"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:AccountIdentifier ;
-    sw:term_status "accepted"@en .
-
-dpv:Fingerprint a rdfs:Class ;
-    rdfs:label "Fingerprint"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about fingerprint used for biometric purposes."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Biometric ;
+dpv:ForProfitOrganisation a rdfs:Class ;
+    rdfs:label "ForProfitOrganisation"@en ;
+    dct:created "2022-02-02"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description ""@en ;
+    rdfs:subClassOf dpv:Organisation ;
     sw:term_status "accepted"@en .
 
 dpv:FraudPreventionAndDetection a rdfs:Class ;
@@ -1462,64 +815,12 @@ dpv:FraudPreventionAndDetection a rdfs:Class ;
     rdfs:subClassOf dpv:EnforceSecurity ;
     sw:term_status "accepted"@en .
 
-dpv:Friend a rdfs:Class ;
-    rdfs:label "Friend"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about friends in a social network, including aspects of friendships such as years together or nature of friendship."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:SocialNetwork ;
-    sw:term_status "accepted"@en .
-
-dpv:GPSCoordinate a rdfs:Class ;
-    rdfs:label "GPS Coordinate"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about location expressed using Global Position System coordinates (GPS)"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Location ;
-    sw:term_status "accepted"@en .
-
-dpv:Gender a rdfs:Class ;
-    rdfs:label "Gender"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about gender"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:PhysicalCharacteristic ;
-    sw:term_status "accepted"@en .
-
-dpv:GeneralReputation a rdfs:Class ;
-    rdfs:label "General Reputation"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about reputation in the public sphere"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:PublicLife ;
-    sw:term_status "accepted"@en .
-
-dpv:Geographic a rdfs:Class ;
-    rdfs:label "Geographic"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about location or based on geography (e.g. home address)"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Demographic ;
-    sw:term_status "accepted"@en .
-
-dpv:GroupMembership a rdfs:Class ;
-    rdfs:label "Group Membership"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about groups and memberships included or associated with a social network"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:SocialNetwork ;
+dpv:GovernmentalOrganisation a rdfs:Class ;
+    rdfs:label "GovernmentalOrganisation"@en ;
+    dct:created "2022-02-02"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "e.g. tax department ; should DPA go under these?"@en ;
+    rdfs:subClassOf dpv:Organisation ;
     sw:term_status "accepted"@en .
 
 dpv:GuidelinesPrinciple a rdfs:Class ;
@@ -1533,75 +834,12 @@ dpv:GuidelinesPrinciple a rdfs:Class ;
     rdfs:subClassOf dpv:OrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
-dpv:HairColor a rdfs:Class ;
-    rdfs:label "Hair Color"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about hair color"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:PhysicalCharacteristic ;
-    sw:term_status "accepted"@en .
-
-dpv:Health a rdfs:Class ;
-    rdfs:label "Health"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about health."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:seeAlso svd:Health ;
-    rdfs:subClassOf dpv:MedicalHealth ;
-    sw:term_status "accepted"@en .
-
-dpv:HealthHistory a rdfs:Class ;
-    rdfs:label "Health History"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about health history."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:MedicalHealth ;
-    sw:term_status "accepted"@en .
-
-dpv:HealthRecord a rdfs:Class ;
-    rdfs:label "Health Record"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about health record."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:MedicalHealth ;
-    sw:term_status "accepted"@en .
-
-dpv:Height a rdfs:Class ;
-    rdfs:label "Height"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about physical height"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:PhysicalCharacteristic ;
-    sw:term_status "accepted"@en .
-
-dpv:Historical a rdfs:Class ;
-    rdfs:label "Historical"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about historical data related to or relevant regarding history or past events"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:PersonalDataCategory ;
-    sw:term_status "accepted"@en .
-
-dpv:HouseOwned a rdfs:Class ;
-    rdfs:label "House Owned"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about house(s) owned and ownership history."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Ownership ;
+dpv:HumanInvolvement a rdfs:Class ;
+    rdfs:label "Human Involvement"@en ;
+    dct:created "2022-01-26"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "The involvement of humans as a factor or agent in processing"@en ;
+    rdfs:comment "Human Involvement here broadly refers to any involvement by a human in the context of carrying out processing. This may include verification of outcomes, providing input data for making decisions, or overseeing activities."@en ;
     sw:term_status "accepted"@en .
 
 dpv:HumanResourceManagement a rdfs:Class ;
@@ -1616,26 +854,6 @@ dpv:HumanResourceManagement a rdfs:Class ;
     rdfs:comment "HR is a broad concept. Its management includes, amongst others - recruiting employees and intermediaries e.g. brokers, independent representatives; payroll administration, remunerations, commissions, and wages; and application of social legislation."@en ;
     rdfs:isDefinedBy <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
     rdfs:subClassOf dpv:Purpose ;
-    sw:term_status "accepted"@en .
-
-dpv:IPAddress a rdfs:Class ;
-    rdfs:label "IP Address"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about the Internet protocol (IP) address of a device"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:DeviceBased ;
-    sw:term_status "accepted"@en .
-
-dpv:Identifying a rdfs:Class ;
-    rdfs:label "Identifying"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information that uniquely or semi-uniquely identifies an individual or a group"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:External ;
     sw:term_status "accepted"@en .
 
 dpv:IdentityVerification a rdfs:Class ;
@@ -1688,26 +906,6 @@ dpv:ImproveInternalCRMProcesses a rdfs:Class ;
         dpv:OptimisationForController ;
     sw:term_status "accepted"@en .
 
-dpv:Income a rdfs:Class ;
-    rdfs:label "Income"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about financial income e.g. for individual or household or family"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Transactional ;
-    sw:term_status "accepted"@en .
-
-dpv:IncomeBracket a rdfs:Class ;
-    rdfs:label "Income Bracket"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about income bracket."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Demographic ;
-    sw:term_status "accepted"@en .
-
 dpv:IncreaseServiceRobustness a rdfs:Class ;
     rdfs:label "Increase Service Robustness"@en ;
     dct:created "2019-04-05"^^xsd:date ;
@@ -1721,14 +919,13 @@ dpv:IncreaseServiceRobustness a rdfs:Class ;
     rdfs:subClassOf dpv:OptimisationForController ;
     sw:term_status "accepted"@en .
 
-dpv:IndividualHealthHistory a rdfs:Class ;
-    rdfs:label "Individual Health History"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about information health history."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:HealthHistory ;
+dpv:IndustryConsortium a rdfs:Class ;
+    rdfs:label "IndustryConsortium"@en ;
+    dct:created "2022-02-02"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description ""@en ;
+    rdfs:isDefinedBy <http://purl.org/adms> ;
+    rdfs:subClassOf dpv:Organisation ;
     sw:term_status "accepted"@en .
 
 dpv:InnovativeUseOfNewTechnologies a rdfs:Class ;
@@ -1738,46 +935,6 @@ dpv:InnovativeUseOfNewTechnologies a rdfs:Class ;
         "Piero Bonatti"^^xsd:string ;
     dct:description "Processing that involves use of innovative and new technologies"@en ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
-    sw:term_status "accepted"@en .
-
-dpv:Intention a rdfs:Class ;
-    rdfs:label "Intention"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about intentions"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Preference ;
-    sw:term_status "accepted"@en .
-
-dpv:Interaction a rdfs:Class ;
-    rdfs:label "Interaction"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about interactions in the public sphere"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:PublicLife ;
-    sw:term_status "accepted"@en .
-
-dpv:Interest a rdfs:Class ;
-    rdfs:label "Interest"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about interests"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Preference ;
-    sw:term_status "accepted"@en .
-
-dpv:Internal a rdfs:Class ;
-    rdfs:label "Internal"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Informatoin about internal characteristics that cannot be seen or observed"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:PersonalDataCategory ;
     sw:term_status "accepted"@en .
 
 dpv:InternalResourceOptimisation a rdfs:Class ;
@@ -1793,34 +950,26 @@ dpv:InternalResourceOptimisation a rdfs:Class ;
     rdfs:subClassOf dpv:OptimisationForController ;
     sw:term_status "accepted"@en .
 
-dpv:Job a rdfs:Class ;
-    rdfs:label "Job"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about professional jobs"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Professional ;
+dpv:JointDataControllers a rdfs:Class ;
+    rdfs:label "Joint Data Controllers"@en ;
+    dct:created "2022-02-02"^^xsd:date ;
+    dct:creator "Georg Krog"^^xsd:string,
+        "Harshvardhan Pandit"^^xsd:string ;
+    dct:description "A group of Data Controllers that jointly determine the purposes and means of processing"@en ;
+    rdfs:comment "To indicate the membership, hasDataController may be used"@en ;
+    rdfs:subClassOf dpv:DataController ;
     sw:term_status "accepted"@en .
 
-dpv:KnowledgeBelief a rdfs:Class ;
-    rdfs:label "Knowledge and Beliefs"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about knowledge and beliefs"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Internal ;
-    sw:term_status "accepted"@en .
-
-dpv:Language a rdfs:Class ;
-    rdfs:label "Language"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about language and lingual history."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Ethnicity ;
+dpv:JointDataControllersAgreement a rdfs:Class ;
+    rdfs:label "Joint Data Controllers Agreement"@en ;
+    dct:created "2022-01-26"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "An agreement outlining conditions, criteria, obligations, responsibilities, and specifics for carrying out processing of personal data between Controllers within a Joint Controllers relationship"@en ;
+    rdfs:subClassOf "DataProcessingAgreement"^^xsd:string ;
     sw:term_status "accepted"@en .
 
 dpv:LargeScaleProcessing a rdfs:Class ;
@@ -1876,6 +1025,14 @@ dpv:LegalObligation a rdfs:Class ;
     rdfs:subClassOf dpv:LegalBasis ;
     sw:term_status "accepted"@en .
 
+dpv:LegalRole a rdfs:Class ;
+    rdfs:label "Legal Role"@en ;
+    dct:created "2022-02-02"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "Represents the 'role' played by an entity"@en ;
+    rdfs:comment "concepts are both legal entity and legal roles"@en ;
+    sw:term_status "accepted"@en .
+
 dpv:LegitimateInterest a rdfs:Class ;
     rdfs:label "Legitimate Interest"@en ;
     dct:created "2021-05-19"^^xsd:date ;
@@ -1914,84 +1071,12 @@ dpv:LegitimateInterestOfThirdParty a rdfs:Class ;
     rdfs:subClassOf dpv:LegitimateInterest ;
     sw:term_status "accepted"@en .
 
-dpv:LifeHistory a rdfs:Class ;
-    rdfs:label "Life History"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about personal history regarding events or activities - including  their occurrences that might be directly related or have had an influence (e.g. World War, 9/11)"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Historical ;
-    sw:term_status "accepted"@en .
-
-dpv:Like a rdfs:Class ;
-    rdfs:label "Like"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about likes or preferences regarding attractions."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Interest ;
-    sw:term_status "accepted"@en .
-
-dpv:LinkClicked a rdfs:Class ;
-    rdfs:label "LinkClicked"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about the links that an individual has clicked."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:seeAlso svd:Navigation ;
-    rdfs:subClassOf dpv:Behavioral ;
-    sw:term_status "accepted"@en .
-
-dpv:LoanRecord a rdfs:Class ;
-    rdfs:label "Loan Record"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about loans, whether applied, provided or rejected, and its history"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Transactional ;
-    sw:term_status "accepted"@en .
-
-dpv:Location a rdfs:Class ;
-    rdfs:label "Location"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about location"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:seeAlso svd:Location ;
-    rdfs:subClassOf dpv:Tracking ;
-    sw:term_status "accepted"@en .
-
-dpv:MACAddress a rdfs:Class ;
-    rdfs:label "MAC Address"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about the Media Access Control (MAC) address of a device"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:DeviceBased ;
-    sw:term_status "accepted"@en .
-
 dpv:MakeAvailable a rdfs:Class ;
     rdfs:label "Make Available"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to transform or publish data to be used"@en ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     rdfs:subClassOf dpv:Disclose ;
-    sw:term_status "accepted"@en .
-
-dpv:MaritalStatus a rdfs:Class ;
-    rdfs:label "Marital Status"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about marital status and history"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:PublicLife ;
     sw:term_status "accepted"@en .
 
 dpv:Marketing a rdfs:Class ;
@@ -2003,16 +1088,6 @@ dpv:Marketing a rdfs:Class ;
     dct:description "Conduct marketing in relation to organisation or products or services e.g. promoting, selling, and distributing"@en ;
     rdfs:comment "Was commercial interest, changed to consider Marketing a separate Purpose category by itself"@en ;
     rdfs:subClassOf dpv:Purpose ;
-    sw:term_status "changed"@en .
-
-dpv:Marriage a rdfs:Class ;
-    rdfs:label "Marriage"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about marriage(s)."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:FamilyStructure ;
     sw:term_status "accepted"@en .
 
 dpv:MatchingCombining a rdfs:Class ;
@@ -2022,17 +1097,6 @@ dpv:MatchingCombining a rdfs:Class ;
         "Piero Bonatti"^^xsd:string ;
     dct:description "Processing that involves matching and combining of personal data"@en ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
-    sw:term_status "accepted"@en .
-
-dpv:MedicalHealth a rdfs:Class ;
-    rdfs:label "MedicalHealth"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about health, medical conditions or health care"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:External,
-        dpv:SpecialCategoryPersonalData ;
     sw:term_status "accepted"@en .
 
 dpv:MemberPartnerManagement a rdfs:Class ;
@@ -2045,16 +1109,6 @@ dpv:MemberPartnerManagement a rdfs:Class ;
     dct:description "Maintain registry of shareholders, members, or partners for governance, administration, and management functions"@en ;
     rdfs:isDefinedBy <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
     rdfs:subClassOf dpv:OrganisationGovernance ;
-    sw:term_status "accepted"@en .
-
-dpv:MentalHealth a rdfs:Class ;
-    rdfs:label "Mental Health"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about mental health."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Health ;
     sw:term_status "accepted"@en .
 
 dpv:Move a rdfs:Class ;
@@ -2077,14 +1131,14 @@ dpv:NDA a rdfs:Class ;
     rdfs:subClassOf dpv:LegalAgreement ;
     sw:term_status "accepted"@en .
 
-dpv:Name a rdfs:Class ;
-    rdfs:label "Name"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about names associated or used as given name or nickname."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Identifying ;
+dpv:NationalAuthority a rdfs:Class ;
+    rdfs:label "NationalAuthority"@en ;
+    dct:created "2022-02-02"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "e.g. DPA, but not all \"DPA\" are national authority e.g. EDPS and EDPB"@en ;
+    rdfs:isDefinedBy <http://purl.org/adms> ;
+    rdfs:subClassOf dpv:Authority,
+        dpv:GovernmentalOrganisation ;
     sw:term_status "accepted"@en .
 
 dpv:NonCommercialResearch a rdfs:Class ;
@@ -2098,6 +1152,36 @@ dpv:NonCommercialResearch a rdfs:Class ;
         "Simon Steyskal"^^xsd:string ;
     dct:description "Conduct research in a non-commercial setting e.g. for a non-profit-organisation (NGO)"@en ;
     rdfs:subClassOf dpv:ResearchAndDevelopment ;
+    sw:term_status "accepted"@en .
+
+dpv:NonGovernmentalOrganisation a rdfs:Class ;
+    rdfs:label "NonGovernmentalOrganisation"@en ;
+    dct:created "2022-02-02"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description ""@en ;
+    rdfs:isDefinedBy <http://purl.org/adms> ;
+    rdfs:subClassOf dpv:Organisation ;
+    sw:term_status "accepted"@en .
+
+dpv:NonProfitOrganisation a rdfs:Class ;
+    rdfs:label "NonProfitOrganisation"@en ;
+    dct:created "2022-02-02"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description ""@en ;
+    rdfs:isDefinedBy <http://purl.org/adms> ;
+    rdfs:subClassOf dpv:Organisation ;
+    sw:term_status "accepted"@en .
+
+dpv:NonPublicDataSource a rdfs:Class ;
+    rdfs:label "Non-Public Data Source"@en ;
+    dct:created "2022-01-26"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "A source of data that is not publicly accessible or available"@en ;
+    rdfs:subClassOf dpv:DataSource ;
     sw:term_status "accepted"@en .
 
 dpv:Notice a rdfs:Class ;
@@ -2127,37 +1211,6 @@ dpv:OfficialAuthorityOfController a rdfs:Class ;
         "Paul Ryan"^^xsd:string ;
     dct:description "Processing necessary or authorised through the official authority granted to or vested in the Data Controller"@en ;
     rdfs:subClassOf dpv:LegalBasis ;
-    sw:term_status "accepted"@en .
-
-dpv:OfficialID a rdfs:Class ;
-    rdfs:label "Official ID"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about an official identifier or identification document"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:seeAlso svd:Government ;
-    rdfs:subClassOf dpv:Identifying ;
-    sw:term_status "accepted"@en .
-
-dpv:Offspring a rdfs:Class ;
-    rdfs:label "Offspring"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about offspring(s)."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:FamilyStructure ;
-    sw:term_status "accepted"@en .
-
-dpv:Opinion a rdfs:Class ;
-    rdfs:label "Opinion"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about opinions"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Preference ;
     sw:term_status "accepted"@en .
 
 dpv:OptimisationForConsumer a rdfs:Class ;
@@ -2198,6 +1251,14 @@ dpv:OptimiseUserInterface a rdfs:Class ;
         "Simon Steyskal"^^xsd:string ;
     dct:description "Optimize interfaces presented to the user"@en ;
     rdfs:subClassOf dpv:OptimisationForConsumer ;
+    sw:term_status "accepted"@en .
+
+dpv:Organisation a rdfs:Class ;
+    rdfs:label ""@en ;
+    dct:created "2022-02-02"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description ""@en ;
+    rdfs:subClassOf dpv:LegalEntity ;
     sw:term_status "accepted"@en .
 
 dpv:OrganisationComplianceManagement a rdfs:Class ;
@@ -2253,16 +1314,6 @@ dpv:Organise a rdfs:Class ;
     rdfs:subClassOf dpv:Processing ;
     sw:term_status "accepted"@en .
 
-dpv:Ownership a rdfs:Class ;
-    rdfs:label "Ownership"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about ownership and history, including renting, borrowing, possessions."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Financial ;
-    sw:term_status "accepted"@en .
-
 dpv:PIA a rdfs:Class ;
     rdfs:label "Privacy Impact Assessment"@en ;
     dct:created "2020-11-04"^^xsd:date ;
@@ -2271,36 +1322,6 @@ dpv:PIA a rdfs:Class ;
         "Paul Ryan"^^xsd:string ;
     dct:description "Carrying out an impact assessment regarding privacy risks"@en ;
     rdfs:subClassOf dpv:ImpactAssessment ;
-    sw:term_status "accepted"@en .
-
-dpv:PINCode a rdfs:Class ;
-    rdfs:label "PIN Code"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about Personal identification number (PIN), which is usually used in the process of authenticating the individual as an user accessing a system."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Authenticating ;
-    sw:term_status "accepted"@en .
-
-dpv:Parent a rdfs:Class ;
-    rdfs:label "Parent"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about parent(s)."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:FamilyStructure ;
-    sw:term_status "accepted"@en .
-
-dpv:Password a rdfs:Class ;
-    rdfs:label "Password"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about password used in the process of authenticating the individual as an user accessing a system."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Authenticating ;
     sw:term_status "accepted"@en .
 
 dpv:Payment a rdfs:Class ;
@@ -2313,45 +1334,16 @@ dpv:Payment a rdfs:Class ;
     rdfs:subClassOf dpv:ServiceProvision ;
     sw:term_status "accepted"@en .
 
-dpv:PaymentCard a rdfs:Class ;
-    rdfs:label "Payment Card"@en ;
-    dct:created "2020-11-04"^^xsd:date ;
-    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:description "Information about payment card such as Credit Card, Debit Card."@en ;
-    rdfs:isDefinedBy <https://www.w3.org/community/dpvcg/> ;
-    rdfs:subClassOf dpv:FinancialAccount ;
-    sw:term_status "accepted"@en .
-
-dpv:PaymentCardExpiry a rdfs:Class ;
-    rdfs:label "Payment Card Expiry"@en ;
-    dct:created "2020-11-04"^^xsd:date ;
-    dct:creator "Georg P Krog"^^xsd:string ;
-    dct:description "Information about payment card expiry such as a date."@en ;
-    rdfs:isDefinedBy <https://www.w3.org/community/dpvcg/> ;
-    rdfs:subClassOf dpv:PaymentCard ;
-    sw:term_status "accepted"@en .
-
-dpv:PaymentCardNumber a rdfs:Class ;
-    rdfs:label "Payment Card Number"@en ;
-    dct:created "2020-11-04"^^xsd:date ;
-    dct:creator "Georg P Krog"^^xsd:string ;
-    dct:description "Information about payment card number."@en ;
-    rdfs:isDefinedBy <https://www.w3.org/community/dpvcg/> ;
-    rdfs:subClassOf dpv:AccountIdentifier,
-        dpv:PaymentCard ;
-    sw:term_status "accepted"@en .
-
-dpv:PersonalDataCategory a rdfs:Class ;
-    rdfs:label "Personal Data Category"@en ;
+dpv:PersonalData a rdfs:Class ;
+    rdfs:label "Personal Data"@en ;
     dct:created "2019-04-05"^^xsd:date ;
-    dct:creator "Axel Polleres"^^xsd:string,
-        "Harshvardhan Pandit"^^xsd:string ;
-    dct:description "A category of personal data"@en ;
-    dct:modified "2020-11-04"^^xsd:date ;
-    rdfs:comment "For a formal legal definition of personal data, see GDPR Art.4-1. An informal definition consists of any data directly or indirectly associated or related to an individual. This definition is equivalent to ISO/IEC definition of Personally Identifiable Information (PII)."@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_1/oj>,
-        <https://www.specialprivacy.eu/> ;
+    dct:creator "Harshvardhan Pandit"^^xsd:string ;
+    dct:description "Data directly or indirectly associated or related to an individual."@en ;
+    dct:modified "2022-01-19"^^xsd:date ;
+    rdfs:comment "This definition of personal data encompasses the concepts used in GDPR Art.4-1 for 'personal data' and ISO/IEC 2700 for 'personally identifiable information (PII)'."@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_1/oj> ;
     rdfs:seeAlso spl:AnyData ;
+    rdfs:subClassOf dpv:Data ;
     sw:term_status "accepted"@en .
 
 dpv:PersonalDataHandling a rdfs:Class ;
@@ -2361,16 +1353,6 @@ dpv:PersonalDataHandling a rdfs:Class ;
         "Javier Fernández"^^xsd:string ;
     dct:description "A high-level Class to describe 'data handling'. This can consist of personal data being processed for a purpose, involving entities, using technical and organisational measures, applicable risks, rights, and legal basis."@en ;
     dct:modified "2020-11-04"^^xsd:date ;
-    sw:term_status "accepted"@en .
-
-dpv:PersonalPossession a rdfs:Class ;
-    rdfs:label "Personal Possession"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about personal possessions."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Ownership ;
     sw:term_status "accepted"@en .
 
 dpv:Personalisation a rdfs:Class ;
@@ -2406,88 +1388,6 @@ dpv:PersonalisedBenefits a rdfs:Class ;
     rdfs:subClassOf dpv:ServicePersonalization ;
     sw:term_status "accepted"@en .
 
-dpv:Personality a rdfs:Class ;
-    rdfs:label "Personality"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about personality (e.g., categorization in terms of the Big Five personality traits)"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Behavioral ;
-    sw:term_status "accepted"@en .
-
-dpv:PhilosophicalBelief a rdfs:Class ;
-    rdfs:label "Philosophical Belief"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about philosophical beliefs."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:KnowledgeBelief,
-        dpv:SpecialCategoryPersonalData ;
-    sw:term_status "accepted"@en .
-
-dpv:PhysicalAddress a rdfs:Class ;
-    rdfs:label "Physical Address"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about physical address."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Contact ;
-    sw:term_status "accepted"@en .
-
-dpv:PhysicalCharacteristic a rdfs:Class ;
-    rdfs:label "PhysicalCharacteristic"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about physical characteristics"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:seeAlso svd:Demographic ;
-    rdfs:subClassOf dpv:External ;
-    sw:term_status "accepted"@en .
-
-dpv:PhysicalHealth a rdfs:Class ;
-    rdfs:label "Physical Health"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about physical health."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Health ;
-    sw:term_status "accepted"@en .
-
-dpv:PhysicalTrait a rdfs:Class ;
-    rdfs:label "Physical Trait"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about defining traits or features regarding the body."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Demographic ;
-    sw:term_status "accepted"@en .
-
-dpv:Picture a rdfs:Class ;
-    rdfs:label "Picture"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about visual representation or image e.g. profile photo."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Identifying ;
-    sw:term_status "accepted"@en .
-
-dpv:Piercing a rdfs:Class ;
-    rdfs:label "Piercing"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about piercings"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:PhysicalCharacteristic ;
-    sw:term_status "accepted"@en .
-
 dpv:Policy a rdfs:Class ;
     rdfs:label "Policy"@en ;
     dct:created "2021-09-08"^^xsd:date ;
@@ -2497,39 +1397,6 @@ dpv:Policy a rdfs:Class ;
         "Paul Ryan"^^xsd:string ;
     dct:description "A guidance document outlining any of: procedures, plans, principles, decisions, intent, or protocols."@en ;
     rdfs:subClassOf dpv:OrganisationalMeasure ;
-    sw:term_status "accepted"@en .
-
-dpv:PoliticalAffiliation a rdfs:Class ;
-    rdfs:label "Political Affiliation"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about political affiliation and history"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:seeAlso svd:Political ;
-    rdfs:subClassOf dpv:PublicLife,
-        dpv:SpecialCategoryPersonalData ;
-    sw:term_status "accepted"@en .
-
-dpv:Preference a rdfs:Class ;
-    rdfs:label "Preference"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about preferences or interests"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:seeAlso svd:Preference ;
-    rdfs:subClassOf dpv:Internal ;
-    sw:term_status "accepted"@en .
-
-dpv:Prescription a rdfs:Class ;
-    rdfs:label "Prescription"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about medical and pharmaceutical prescriptions"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:MedicalHealth ;
     sw:term_status "accepted"@en .
 
 dpv:PrivacyByDefault a rdfs:Class ;
@@ -2565,16 +1432,6 @@ dpv:PrivacyNotice a rdfs:Class ;
     rdfs:subClassOf dpv:Notice ;
     sw:term_status "accepted"@en .
 
-dpv:PrivacyPreference a rdfs:Class ;
-    rdfs:label "Privacy Preference"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about privacy preferences"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Preference ;
-    sw:term_status "accepted"@en .
-
 dpv:Processing a rdfs:Class ;
     rdfs:label "Processing"@en ;
     dct:created "2019-04-05"^^xsd:date ;
@@ -2584,56 +1441,6 @@ dpv:Processing a rdfs:Class ;
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
     rdfs:seeAlso spl:AnyProcessing ;
-    sw:term_status "accepted"@en .
-
-dpv:Proclivitie a rdfs:Class ;
-    rdfs:label "Proclivitie"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about proclivities in a sexual context"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Sexual ;
-    sw:term_status "accepted"@en .
-
-dpv:Professional a rdfs:Class ;
-    rdfs:label "Professional"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about educational or professional career"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Social ;
-    sw:term_status "accepted"@en .
-
-dpv:ProfessionalCertification a rdfs:Class ;
-    rdfs:label "Professional Certification"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about professional certifications"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Professional ;
-    sw:term_status "accepted"@en .
-
-dpv:ProfessionalEvaluation a rdfs:Class ;
-    rdfs:label "Professional Evaluation"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about professional evaluations"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Professional ;
-    sw:term_status "accepted"@en .
-
-dpv:ProfessionalInterview a rdfs:Class ;
-    rdfs:label "Professional Interview"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about professional interviews"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Professional ;
     sw:term_status "accepted"@en .
 
 dpv:Profiling a rdfs:Class ;
@@ -2675,22 +1482,25 @@ dpv:PseudonymisationEncryption a rdfs:Class ;
     rdfs:subClassOf dpv:TechnicalMeasure ;
     sw:term_status "accepted"@en .
 
+dpv:PublicDataSource a rdfs:Class ;
+    rdfs:label "Public Data Source"@en ;
+    dct:created "2022-01-26"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "A source of data that is publicly accessible or available"@en ;
+    rdfs:comment "The term 'Public' is used here in a broad sense. Actual consideration of what is 'Public Data' can vary based on several contextual or jurisdictional factors such as  definition of open, methods of access, permissions and licenses."@en ;
+    rdfs:subClassOf dpv:DataSource ;
+    sw:term_status "accepted"@en .
+
 dpv:PublicInterest a rdfs:Class ;
     rdfs:label "Public Interest"@en ;
     dct:created "2021-04-21"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Processing is necessary or beneficial for interest of the public or society at large"@en ;
     rdfs:subClassOf dpv:LegalBasis ;
-    sw:term_status "accepted"@en .
-
-dpv:PublicLife a rdfs:Class ;
-    rdfs:label "Public Life"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about public life"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Social ;
     sw:term_status "accepted"@en .
 
 dpv:PublicRelations a rdfs:Class ;
@@ -2705,27 +1515,6 @@ dpv:PublicRelations a rdfs:Class ;
     rdfs:subClassOf dpv:Marketing ;
     sw:term_status "accepted"@en .
 
-dpv:Purchase a rdfs:Class ;
-    rdfs:label "Purchase"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about purchases such as items bought e.g. grocery or clothing"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:seeAlso svd:Purchase ;
-    rdfs:subClassOf dpv:Transactional ;
-    sw:term_status "accepted"@en .
-
-dpv:PurchasesAndSpendingHabit a rdfs:Class ;
-    rdfs:label "Purchases and Spending Habit"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about analysis of purchases made and money spent expressed as a habit e.g. monthly shopping trends"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Transactional ;
-    sw:term_status "accepted"@en .
-
 dpv:Purpose a rdfs:Class ;
     rdfs:label "Purpose"@en ;
     dct:created "2019-04-05"^^xsd:date ;
@@ -2735,17 +1524,6 @@ dpv:Purpose a rdfs:Class ;
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
     rdfs:seeAlso spl:AnyPurpose ;
-    sw:term_status "accepted"@en .
-
-dpv:Race a rdfs:Class ;
-    rdfs:label "Race"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about race or racial history."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Ethnicity,
-        dpv:SpecialCategoryPersonalData ;
     sw:term_status "accepted"@en .
 
 dpv:Recipient a rdfs:Class ;
@@ -2791,14 +1569,14 @@ dpv:RecordsOfActivities a rdfs:Class ;
     rdfs:subClassOf dpv:OrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
-dpv:Reference a rdfs:Class ;
-    rdfs:label "Reference"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about references in the professional context"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Professional ;
+dpv:RegionalAuthority a rdfs:Class ;
+    rdfs:label "RegionalAuthority"@en ;
+    dct:created "2022-02-02"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "e.g. regional DPA in DE / US-CA"@en ;
+    rdfs:isDefinedBy <http://purl.org/adms> ;
+    rdfs:subClassOf dpv:Authority,
+        dpv:GovernmentalOrganisation ;
     sw:term_status "accepted"@en .
 
 dpv:RegisterOfProcessingActivities a rdfs:Class ;
@@ -2831,38 +1609,6 @@ dpv:RegularityOfRecertification a rdfs:Class ;
         "Rob Brennan"^^xsd:string ;
     dct:description "Policy regarding repetition or renewal of existing certification(s)"@en ;
     rdfs:subClassOf dpv:RiskManagementProcedure ;
-    sw:term_status "accepted"@en .
-
-dpv:Relationship a rdfs:Class ;
-    rdfs:label "Relationship"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about relationships and relationship history."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Family ;
-    sw:term_status "accepted"@en .
-
-dpv:Religion a rdfs:Class ;
-    rdfs:label "Religion"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about religion, religious inclinations, and religious history."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:PublicLife,
-        dpv:SpecialCategoryPersonalData ;
-    sw:term_status "accepted"@en .
-
-dpv:ReligiousBelief a rdfs:Class ;
-    rdfs:label "Religious Belief"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about religion and religious beliefs."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:KnowledgeBelief,
-        dpv:SpecialCategoryPersonalData ;
     sw:term_status "accepted"@en .
 
 dpv:Remove a rdfs:Class ;
@@ -2911,16 +1657,6 @@ dpv:Restrict a rdfs:Class ;
     dct:description "to apply a restriction on the processsing of specific records"@en ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     rdfs:subClassOf dpv:Transform ;
-    sw:term_status "accepted"@en .
-
-dpv:Retina a rdfs:Class ;
-    rdfs:label "Retina"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about retina and the retinal patterns."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Biometric ;
     sw:term_status "accepted"@en .
 
 dpv:Retrieve a rdfs:Class ;
@@ -2972,16 +1708,6 @@ dpv:RiskMitigationMeasure a rdfs:Class ;
     rdfs:subClassOf dpv:TechnicalOrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
-dpv:RoomNumber a rdfs:Class ;
-    rdfs:label "Room Number"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about location expressed as Room number or similar numbering systems"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Location ;
-    sw:term_status "accepted"@en .
-
 dpv:Safeguard a rdfs:Class ;
     rdfs:label "Safeguard"@en ;
     dct:created "2021-09-22"^^xsd:date ;
@@ -3005,36 +1731,6 @@ dpv:SafeguardForDataTransfer a rdfs:Class ;
     rdfs:subClassOf dpv:Safeguard ;
     sw:term_status "accepted"@en .
 
-dpv:Salary a rdfs:Class ;
-    rdfs:label "Salary"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about salary"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Professional ;
-    sw:term_status "accepted"@en .
-
-dpv:Sale a rdfs:Class ;
-    rdfs:label "Sale"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about sales e.g. selling of goods or services"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Transactional ;
-    sw:term_status "accepted"@en .
-
-dpv:School a rdfs:Class ;
-    rdfs:label "School"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about school such as name of school, conduct, or grades obtained."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Professional ;
-    sw:term_status "accepted"@en .
-
 dpv:Seal a rdfs:Class ;
     rdfs:label "Seal"@en ;
     dct:created "2019-04-05"^^xsd:date ;
@@ -3044,16 +1740,6 @@ dpv:Seal a rdfs:Class ;
         "Rob Brennan"^^xsd:string ;
     dct:description "A seal or a mark indicating proof of certification to some certification or standard"@en ;
     rdfs:subClassOf dpv:CertificationSeal ;
-    sw:term_status "accepted"@en .
-
-dpv:SecretText a rdfs:Class ;
-    rdfs:label "Secret Text"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about secret text used in the process of authenticating the individual as an user accessing a system, e.g., when recovering a lost password."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Authenticating ;
     sw:term_status "accepted"@en .
 
 dpv:Sector a rdfs:Class ;
@@ -3081,7 +1767,7 @@ dpv:SellDataToThirdParties a rdfs:Class ;
     dct:description "Sell data or information to third parties"@en ;
     rdfs:comment "Sell here means exchange, submit, or provide in return for direct or indirect compensation. Was subclass of commercial interest, changed to reflect selling something"@en ;
     rdfs:subClassOf dpv:SellProducts ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv:SellInsightsFromData a rdfs:Class ;
     rdfs:label "Sell Insights from Data"@en ;
@@ -3095,7 +1781,7 @@ dpv:SellInsightsFromData a rdfs:Class ;
     dct:description "Sell data or information relevant to insights obtained from analysis of data"@en ;
     rdfs:comment "Sell here means exchange, submit, or provide in return for direct or indirect compensation. Was subclass of commercial interest, changed to reflect selling something"@en ;
     rdfs:subClassOf dpv:SellProducts ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv:SellProducts a rdfs:Class ;
     rdfs:label "Sell Products"@en ;
@@ -3117,16 +1803,6 @@ dpv:SellProductsToDataSubject a rdfs:Class ;
     dct:description "Sell products or services to the user, consumer, or data subjects"@en ;
     rdfs:comment "Was subclass of commercial interest, changed to reflect selling something"@en ;
     rdfs:subClassOf dpv:SellProducts ;
-    sw:term_status "changed"@en .
-
-dpv:ServiceConsumptionBehavior a rdfs:Class ;
-    rdfs:label "Service Consumption Behavior"@en ;
-    dct:created "2019-11-26"^^xsd:date ;
-    dct:creator "Harshvardhan J. Pandit"^^xsd:string,
-        "Rudy Jacob"^^xsd:string ;
-    dct:description "Information about the consumption of a service, e.g. time and duration of consumption."@en ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
-    rdfs:subClassOf dpv:Behavioral ;
     sw:term_status "accepted"@en .
 
 dpv:ServiceOptimization a rdfs:Class ;
@@ -3141,7 +1817,7 @@ dpv:ServiceOptimization a rdfs:Class ;
     dct:description "Optimise services or activities"@en ;
     rdfs:comment "Subclass of ServiceProvision since optimisation is usually considered part of providing services"@en ;
     rdfs:subClassOf dpv:ServiceProvision ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv:ServicePersonalization a rdfs:Class ;
     rdfs:label "Service Personalization"@en ;
@@ -3156,7 +1832,7 @@ dpv:ServicePersonalization a rdfs:Class ;
     rdfs:comment "Subclass of ServiceProvision since personalisation is usually considered part of providing services"@en ;
     rdfs:subClassOf dpv:Personalisation,
         dpv:ServiceProvision ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv:ServiceProvision a rdfs:Class ;
     rdfs:label "Service Provision"@en ;
@@ -3187,37 +1863,6 @@ dpv:ServiceUsageAnalytics a rdfs:Class ;
     dct:description "Conduct analysis and reporting related to usage of services or products"@en ;
     rdfs:comment "Was \"UsageAnalytics\", prefixed with Service to better reflect scope"@en ;
     rdfs:subClassOf dpv:ServiceProvision ;
-    sw:term_status "changed"@en .
-
-dpv:Sexual a rdfs:Class ;
-    rdfs:label "Sexual"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about sexuality and sexual history"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:External,
-        dpv:SpecialCategoryPersonalData ;
-    sw:term_status "accepted"@en .
-
-dpv:SexualHistory a rdfs:Class ;
-    rdfs:label "Sexual History"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about sexual history"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Sexual ;
-    sw:term_status "accepted"@en .
-
-dpv:SexualPreference a rdfs:Class ;
-    rdfs:label "Sexual Preference"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about sexual preferences"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Sexual ;
     sw:term_status "accepted"@en .
 
 dpv:Share a rdfs:Class ;
@@ -3226,16 +1871,6 @@ dpv:Share a rdfs:Class ;
     dct:description "to give data (or a portion of it) to others"@en ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     rdfs:subClassOf dpv:Disclose ;
-    sw:term_status "accepted"@en .
-
-dpv:Sibling a rdfs:Class ;
-    rdfs:label "Sibling"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about sibling(s)."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:FamilyStructure ;
     sw:term_status "accepted"@en .
 
 dpv:SingleSignOn a rdfs:Class ;
@@ -3248,37 +1883,6 @@ dpv:SingleSignOn a rdfs:Class ;
     rdfs:subClassOf dpv:AuthenticationProtocols ;
     sw:term_status "accepted"@en .
 
-dpv:SkinTone a rdfs:Class ;
-    rdfs:label "Skin Tone"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about skin tone"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:PhysicalCharacteristic ;
-    sw:term_status "accepted"@en .
-
-dpv:Social a rdfs:Class ;
-    rdfs:label "Social"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about social aspects such as family, public life, or professional networks."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:PersonalDataCategory ;
-    sw:term_status "accepted"@en .
-
-dpv:SocialMediaCommunication a rdfs:Class ;
-    rdfs:label "Social Media Communication"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about social media communication, including the communication itself and metadata."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:seeAlso svd:Social ;
-    rdfs:subClassOf dpv:Communication ;
-    sw:term_status "accepted"@en .
-
 dpv:SocialMediaMarketing a rdfs:Class ;
     rdfs:label "Social Media"@en ;
     dct:created "2020-11-04"^^xsd:date ;
@@ -3287,37 +1891,6 @@ dpv:SocialMediaMarketing a rdfs:Class ;
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Conduct marketing through social media"@en ;
     rdfs:subClassOf dpv:Marketing ;
-    sw:term_status "accepted"@en .
-
-dpv:SocialNetwork a rdfs:Class ;
-    rdfs:label "Social Network"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about friends or connections expressed as a social network"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Social ;
-    sw:term_status "accepted"@en .
-
-dpv:SocialStatus a rdfs:Class ;
-    rdfs:label "Social Status"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about social status"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:PublicLife ;
-    sw:term_status "accepted"@en .
-
-dpv:SpecialCategoryPersonalData a rdfs:Class ;
-    rdfs:label "Special Category Personal Data"@en ;
-    dct:created "2019-05-07"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Personal data belonging to one of 'special categories' that are more sensitive and require additional measures"@en ;
-    rdfs:comment "trade union membership, which is explicitly included in the taxative listing in GDPR Art. 9 (1), is not covered yet."@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_9/par_1/oj> ;
-    rdfs:subClassOf dpv:PersonalDataCategory ;
     sw:term_status "accepted"@en .
 
 dpv:StaffTraining a rdfs:Class ;
@@ -3402,6 +1975,28 @@ dpv:Structure a rdfs:Class ;
     rdfs:subClassOf dpv:Organise ;
     sw:term_status "accepted"@en .
 
+dpv:SubProcessorAgreement a rdfs:Class ;
+    rdfs:label "Sub-Processor Agreement"@en ;
+    dct:created "2022-01-26"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "An agreement outlining conditions, criteria, obligations, responsibilities, and specifics for carrying out processing of personal data between a Data Processor and a Data (Sub-)Processor"@en ;
+    rdfs:subClassOf "DataProcessingAgreement"^^xsd:string ;
+    sw:term_status "accepted"@en .
+
+dpv:SupraNationalAuthority a rdfs:Class ;
+    rdfs:label "SupraNationalAuthority"@en ;
+    dct:created "2022-02-02"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "e.g. EU, EDPB"@en ;
+    rdfs:isDefinedBy <http://purl.org/adms> ;
+    rdfs:subClassOf dpv:Authority,
+        dpv:GovernmentalOrganisation ;
+    sw:term_status "accepted"@en .
+
 dpv:SystematicMonitoring a rdfs:Class ;
     rdfs:label "Systematic Monitoring"@en ;
     dct:created "2020-11-04"^^xsd:date ;
@@ -3409,36 +2004,6 @@ dpv:SystematicMonitoring a rdfs:Class ;
         "Piero Bonatti"^^xsd:string ;
     dct:description "Processing that involves systematic monitoring of individuals"@en ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
-    sw:term_status "accepted"@en .
-
-dpv:TVViewingBehavior a rdfs:Class ;
-    rdfs:label "TV Viewing Behavior"@en ;
-    dct:created "2019-11-26"^^xsd:date ;
-    dct:creator "Harshvardhan J. Pandit"^^xsd:string,
-        "Rudy Jacob"^^xsd:string ;
-    dct:description "Information about TV viewing behavior, such as timestamps of channel change, duration of viewership, content consumed"@en ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
-    rdfs:subClassOf dpv:ServiceConsumptionBehavior ;
-    sw:term_status "accepted"@en .
-
-dpv:Tattoo a rdfs:Class ;
-    rdfs:label "Tattoo"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about tattoos"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:PhysicalCharacteristic ;
-    sw:term_status "accepted"@en .
-
-dpv:Tax a rdfs:Class ;
-    rdfs:label "Tax"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about financial tax e.g. tax records or tax due"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Transactional ;
     sw:term_status "accepted"@en .
 
 dpv:TechnicalMeasure a rdfs:Class ;
@@ -3468,16 +2033,6 @@ dpv:TechnicalServiceProvision a rdfs:Class ;
     rdfs:subClassOf dpv:ServiceProvision ;
     sw:term_status "accepted"@en .
 
-dpv:TelephoneNumber a rdfs:Class ;
-    rdfs:label "Telephone Number"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about telephone number."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Contact ;
-    sw:term_status "accepted"@en .
-
 dpv:ThirdParty a rdfs:Class ;
     rdfs:label "Third Party"@en ;
     dct:created "2019-06-04"^^xsd:date ;
@@ -3485,46 +2040,6 @@ dpv:ThirdParty a rdfs:Class ;
     dct:description "A ‘third party’ means a natural or legal person, public authority, agency or body other than the data subject, controller, processor and people who, under the direct authority of the controller or processor, are authorised to process personal data."@en ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_10/oj> ;
     rdfs:subClassOf dpv:Recipient ;
-    sw:term_status "accepted"@en .
-
-dpv:Thought a rdfs:Class ;
-    rdfs:label "Thought"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about thoughts"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:KnowledgeBelief ;
-    sw:term_status "accepted"@en .
-
-dpv:Tracking a rdfs:Class ;
-    rdfs:label "Tracking"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information used to track an individual or group e.g. location or email"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:PersonalDataCategory ;
-    sw:term_status "accepted"@en .
-
-dpv:Transaction a rdfs:Class ;
-    rdfs:label "Transaction"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about financial transactions e.g. bank transfers"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Transactional ;
-    sw:term_status "accepted"@en .
-
-dpv:Transactional a rdfs:Class ;
-    rdfs:label "Transactional"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about a purchasing, spending or income"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Financial ;
     sw:term_status "accepted"@en .
 
 dpv:Transfer a rdfs:Class ;
@@ -3552,17 +2067,6 @@ dpv:Transmit a rdfs:Class ;
     rdfs:subClassOf dpv:Disclose ;
     sw:term_status "accepted"@en .
 
-dpv:UID a rdfs:Class ;
-    rdfs:label "UID"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about unique identifiers."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:seeAlso svd:UniqueId ;
-    rdfs:subClassOf dpv:Identifying ;
-    sw:term_status "accepted"@en .
-
 dpv:Use a rdfs:Class ;
     rdfs:label "Use"@en ;
     dct:created "2019-05-07"^^xsd:date ;
@@ -3582,16 +2086,6 @@ dpv:UserInterfacePersonalisation a rdfs:Class ;
         "Simon Steyskal"^^xsd:string ;
     dct:description "Personalise interfaces presented to the user"@en ;
     rdfs:subClassOf dpv:ServicePersonalization ;
-    sw:term_status "accepted"@en .
-
-dpv:Username a rdfs:Class ;
-    rdfs:label "Username"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about usernames."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Identifying ;
     sw:term_status "accepted"@en .
 
 dpv:VendorManagement a rdfs:Class ;
@@ -3670,56 +2164,6 @@ dpv:VitalInterestOfNaturalPerson a rdfs:Class ;
     rdfs:subClassOf dpv:VitalInterest ;
     sw:term_status "accepted"@en .
 
-dpv:VoiceCommunicationRecording a rdfs:Class ;
-    rdfs:label "Voice Communication Recording"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about vocal recorded communication (e.g. telephony, VoIP)"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Communication ;
-    sw:term_status "accepted"@en .
-
-dpv:VoiceMail a rdfs:Class ;
-    rdfs:label "Voice Mail"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about voice mail messages."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Communication ;
-    sw:term_status "accepted"@en .
-
-dpv:VulnerableDataSubject a rdfs:Class ;
-    rdfs:label "Vulnerable Data Subject"@en ;
-    dct:created "2020-11-04"^^xsd:date ;
-    dct:creator "Georg Krog"^^xsd:string,
-        "Harshvardhan Pandit"^^xsd:string,
-        "Paul Ryan"^^xsd:string ;
-    dct:description "Data Subjects which should be considered 'vulnerable' and therefore would require additional measures and safeguards"@en ;
-    rdfs:subClassOf dpv:DataSubject ;
-    sw:term_status "accepted"@en .
-
-dpv:Weight a rdfs:Class ;
-    rdfs:label "Weight"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about physical weight"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:PhysicalCharacteristic ;
-    sw:term_status "accepted"@en .
-
-dpv:WorkHistory a rdfs:Class ;
-    rdfs:label "Work History"@en ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:description "Information about work history in a professional context"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:subClassOf dpv:Professional ;
-    sw:term_status "accepted"@en .
-
 dpv:hasAddress a rdf:Property ;
     rdfs:label "has address"@en ;
     dct:created "2020-11-04"^^xsd:date ;
@@ -3758,7 +2202,7 @@ dpv:hasConsequence a rdf:Property ;
     dct:description "Indicates consequences of processing such as those for Data Subjects in relation to automated decision making"@en ;
     dct:modified "2021-09-21"^^xsd:date ;
     rdfs:comment "Removed plural suffix for consistency"@en ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv:hasContact a rdf:Property ;
     rdfs:label "has contact"@en ;
@@ -3786,7 +2230,7 @@ dpv:hasDataController a rdf:Property ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernández"^^xsd:string,
         "Mark Lizar"^^xsd:string ;
-    dct:description "Indicates association with a Data Controller."@en ;
+    dct:description "Indicates association with Data Controller"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
     sw:term_status "accepted"@en .
 
@@ -3807,7 +2251,7 @@ dpv:hasDataSubject a rdf:Property ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernández"^^xsd:string,
         "Mark Lizar"^^xsd:string ;
-    dct:description "Indicates association with a specific Data Subject or a group or category of Data Subjects."@en ;
+    dct:description "Indicates association with Data Subject"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
     sw:term_status "accepted"@en .
 
@@ -3878,19 +2322,8 @@ dpv:hasLegalBasis a rdf:Property ;
     dct:created "2019-04-04"^^xsd:date ;
     dct:creator "Axel Polleres"^^xsd:string,
         "Javier Fernández"^^xsd:string ;
-    dct:description "Indicates applicability of a Legal Basis."@en ;
+    dct:description "Indicates use or applicability of a Legal Basis"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
-    sw:term_status "accepted"@en .
-
-dpv:hasLocation a rdf:Property ;
-    rdfs:label "has location"@en ;
-    dct:created "2019-04-05"^^xsd:date ;
-    dct:creator "Axel Polleres"^^xsd:string,
-        "Harshvardhan J. Pandit"^^xsd:string,
-        "Mark Lizar"^^xsd:string,
-        "Rob Brennan"^^xsd:string ;
-    dct:description "Indicates information about location"@en ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
     sw:term_status "accepted"@en .
 
 dpv:hasName a rdf:Property ;
@@ -3903,17 +2336,27 @@ dpv:hasName a rdf:Property ;
     dct:description "Specifies name of a legal entity"@en ;
     sw:term_status "accepted"@en .
 
-dpv:hasPersonalDataCategory a rdf:Property ;
-    rdfs:label "has personal data category"@en ;
-    dct:created "2019-04-04"^^xsd:date ;
-    dct:creator "Axel Polleres"^^xsd:string,
-        "Bud Bruegger"^^xsd:string,
-        "Harshvardhan J. Pandit"^^xsd:string,
-        "Javier Fernández"^^xsd:string,
-        "Mark Lizar"^^xsd:string ;
-    dct:description "Indicates association with a Personal Data Category."@en ;
-    dct:modified "2020-11-04"^^xsd:date ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+dpv:hasPersonalData a rdf:Property ;
+    rdfs:label "has personal data"@en ;
+    dct:created "2022-01-19"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "Indicates association with Personal Data"@en ;
+    sw:term_status "accepted"@en .
+
+dpv:hasPersonalDataHandling a rdf:Property ;
+    rdfs:label "has personal data handling"@en ;
+    dct:created "2022-01-19"^^xsd:date ;
+    dct:creator "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "Indicates association with Personal Data Handling"@en ;
+    sw:term_status "accepted"@en .
+
+dpv:hasPolicy a rdf:Property ;
+    rdfs:label "has policy"@en ;
+    dct:created "2022-01-26"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "Indicates policy applicable or used"@en ;
+    rdfs:subPropertyOf dpv:hasTechnicalOrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
 dpv:hasProcessing a rdf:Property ;
@@ -3924,7 +2367,7 @@ dpv:hasProcessing a rdf:Property ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernández"^^xsd:string,
         "Mark Lizar"^^xsd:string ;
-    dct:description "Indicates association with a Processing (of personal data) instance or category."@en ;
+    dct:description "Indicates association with Processing"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
     sw:term_status "accepted"@en .
@@ -3978,7 +2421,7 @@ dpv:hasPurpose a rdf:Property ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernández"^^xsd:string,
         "Mark Lizar"^^xsd:string ;
-    dct:description "Indicates association with a Purpose (of processing personal data)."@en ;
+    dct:description "Indicates association with Purpose"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
     sw:term_status "accepted"@en .
@@ -3991,7 +2434,7 @@ dpv:hasRecipient a rdf:Property ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernández"^^xsd:string,
         "Mark Lizar"^^xsd:string ;
-    dct:description "Indicates a recipient of personal data."@en ;
+    dct:description "Indicates Recipient of Personal Data"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
     sw:term_status "accepted"@en .
@@ -4010,14 +2453,14 @@ dpv:hasRight a rdf:Property ;
     rdfs:label "has right"@en ;
     dct:created "2020-11-18"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:description "Indicates applicability of a Right."@en ;
+    dct:description "Indicates use or applicability of Right"@en ;
     sw:term_status "accepted"@en .
 
 dpv:hasRisk a rdf:Property ;
     rdfs:label "has risk"@en ;
     dct:created "2020-11-18"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:description "Indicates applicability of a Risk."@en ;
+    dct:description "Indicates applicability of Risk"@en ;
     sw:term_status "accepted"@en .
 
 dpv:hasSector a rdf:Property ;
@@ -4037,18 +2480,6 @@ dpv:hasStorage a rdf:Property ;
         "Rob Brennan"^^xsd:string ;
     dct:description "Indicates information about storage"@en ;
     rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
-    sw:term_status "accepted"@en .
-
-dpv:hasTechnicalOrganisationalMeasure a rdf:Property ;
-    rdfs:label "has technical and organisational measure"@en ;
-    dct:created "2019-04-04"^^xsd:date ;
-    dct:creator "Axel Polleres"^^xsd:string,
-        "Bud Bruegger"^^xsd:string,
-        "Harshvardhan J. Pandit"^^xsd:string,
-        "Javier Fernández"^^xsd:string,
-        "Mark Lizar"^^xsd:string ;
-    dct:description "Indicates use of a Technical or Organisational measure."@en ;
-    dct:modified "2020-11-04"^^xsd:date ;
     sw:term_status "accepted"@en .
 
 dpv:hasWithdrawalBy a rdf:Property ;
@@ -4103,11 +2534,22 @@ dpv:isExplicit a rdf:Property ;
     rdfs:range xsd:boolean ;
     sw:term_status "accepted"@en .
 
-dpv:measureImplementedBy a rdf:Property ;
-    rdfs:label "measure implemented by"@en ;
-    dct:created "2019-05-07"^^xsd:date ;
-    dct:creator "Axel Polleres"^^xsd:string ;
-    dct:description "a generic Property to describe how the measure is implemented"@en ;
+dpv:isImplementedUsingTechnology a rdf:Property ;
+    rdfs:label "is implemented using technology"@en ;
+    dct:created "2022-01-26"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "Indicates implementation details such as technologies or processes"@en ;
+    rdfs:comment "The term 'technology' is inclusive of technologies, processes, and methods."@en ;
+    sw:term_status "accepted"@en .
+
+dpv:isPolicyFor a rdf:Property ;
+    rdfs:label "is policy for"@en ;
+    dct:created "2022-01-26"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "Indicates the context or application of policy"@en ;
     sw:term_status "accepted"@en .
 
 dpv:mitigatesRisk a rdf:Property ;
@@ -4141,7 +2583,19 @@ dpv:mitigatesRisk a rdf:Property ;
     dct:modified "2021-01-14"^^xsd:date ;
     dct:source <https://www.w3.org/community/dpvcg/> ;
     dct:title "Data Privacy Vocabulary"@en ;
-    ns1:preferredNamespacePrefix "dpv" ;
-    ns1:preferredNamespaceUri "https://w3.org/ns/dpv"^^xsd:string ;
+    vann:preferredNamespacePrefix "dpv" ;
+    vann:preferredNamespaceUri "https://w3.org/ns/dpv"^^xsd:string ;
     owl:versionInfo "0.2"^^xsd:string .
+
+dpv:hasTechnicalOrganisationalMeasure a rdf:Property ;
+    rdfs:label "has technical and organisational measure"@en ;
+    dct:created "2019-04-04"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Bud Bruegger"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernández"^^xsd:string,
+        "Mark Lizar"^^xsd:string ;
+    dct:description "Indicates use or applicability of Technical or Organisational measure"@en ;
+    dct:modified "2020-11-04"^^xsd:date ;
+    sw:term_status "accepted"@en .
 

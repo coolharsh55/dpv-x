@@ -5,6 +5,15 @@
 @prefix sw: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+dpv:AcademicScientificOrganisation a rdfs:Class ;
+    rdfs:label "AcademicScientificOrganisation"@en ;
+    dct:created "2022-02-02"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "Universities, Schools, Research Bodies"@en ;
+    rdfs:isDefinedBy <http://purl.org/adms> ;
+    rdfs:subClassOf dpv:Organisation ;
+    sw:term_status "accepted"@en .
+
 dpv:Authority a rdfs:Class ;
     rdfs:label "Authority"@en ;
     dct:created "2020-11-04"^^xsd:date ;
@@ -13,15 +22,6 @@ dpv:Authority a rdfs:Class ;
         "Paul Ryan"^^xsd:string ;
     dct:description "An authority with the power to create or enforce laws, or determine their compliance."@en ;
     rdfs:subClassOf dpv:LegalEntity ;
-    sw:term_status "accepted"@en .
-
-dpv:Child a rdfs:Class ;
-    rdfs:label "Child"@en ;
-    dct:created "2020-11-25"^^xsd:date ;
-    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:description "A 'child' is a natural legal person who is below a certain legal age depending on the legal jurisdiction."@en ;
-    rdfs:comment "The legality of age defining a child varies by jurisdiction. In addition, 'child' is distinct from a 'minor'. For example, the legal age drinking alcohol can be 21, which makes a person of age 20 a 'minor' in this context. In other cases, 'minor' and 'child' are used interchangeably to refer to a person below some legally defined age."@en ;
-    rdfs:subClassOf dpv:DataSubject ;
     sw:term_status "accepted"@en .
 
 dpv:DataExporter a rdfs:Class ;
@@ -69,16 +69,6 @@ dpv:DataProtectionAuthority a rdfs:Class ;
     rdfs:subClassOf dpv:Authority ;
     sw:term_status "accepted"@en .
 
-dpv:DataProtectionOfficer a rdfs:Class ;
-    rdfs:label "Data Protection Officer"@en ;
-    dct:created "2020-11-04"^^xsd:date ;
-    dct:creator "Georg Krog"^^xsd:string,
-        "Paul Ryan"^^xsd:string ;
-    dct:description "An entity within or authorised by an organisation to monitor internal compliance, inform and advise on data protection obligations and act as a contact point for data subjects and the supervisory authority."@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_37/oj> ;
-    rdfs:subClassOf dpv:LegalEntity ;
-    sw:term_status "accepted"@en .
-
 dpv:DataSubProcessor a rdfs:Class ;
     rdfs:label "Data Sub-Processor"@en ;
     dct:created "2020-11-25"^^xsd:date ;
@@ -88,11 +78,100 @@ dpv:DataSubProcessor a rdfs:Class ;
     rdfs:subClassOf dpv:DataProcessor ;
     sw:term_status "accepted"@en .
 
+dpv:ForProfitOrganisation a rdfs:Class ;
+    rdfs:label "ForProfitOrganisation"@en ;
+    dct:created "2022-02-02"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description ""@en ;
+    rdfs:subClassOf dpv:Organisation ;
+    sw:term_status "accepted"@en .
+
+dpv:GovernmentalOrganisation a rdfs:Class ;
+    rdfs:label "GovernmentalOrganisation"@en ;
+    dct:created "2022-02-02"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "e.g. tax department ; should DPA go under these?"@en ;
+    rdfs:subClassOf dpv:Organisation ;
+    sw:term_status "accepted"@en .
+
+dpv:IndustryConsortium a rdfs:Class ;
+    rdfs:label "IndustryConsortium"@en ;
+    dct:created "2022-02-02"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description ""@en ;
+    rdfs:isDefinedBy <http://purl.org/adms> ;
+    rdfs:subClassOf dpv:Organisation ;
+    sw:term_status "accepted"@en .
+
+dpv:JointDataControllers a rdfs:Class ;
+    rdfs:label "Joint Data Controllers"@en ;
+    dct:created "2022-02-02"^^xsd:date ;
+    dct:creator "Georg Krog"^^xsd:string,
+        "Harshvardhan Pandit"^^xsd:string ;
+    dct:description "A group of Data Controllers that jointly determine the purposes and means of processing"@en ;
+    rdfs:comment "To indicate the membership, hasDataController may be used"@en ;
+    rdfs:subClassOf dpv:DataController ;
+    sw:term_status "accepted"@en .
+
 dpv:LegalEntity a rdfs:Class ;
     rdfs:label "Legal Entity"@en ;
     dct:created "2019-04-05"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "A human or non-human that constitute as a legally defined entity"@en ;
+    sw:term_status "accepted"@en .
+
+dpv:LegalRole a rdfs:Class ;
+    rdfs:label "Legal Role"@en ;
+    dct:created "2022-02-02"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "Represents the 'role' played by an entity"@en ;
+    rdfs:comment "concepts are both legal entity and legal roles"@en ;
+    sw:term_status "accepted"@en .
+
+dpv:NationalAuthority a rdfs:Class ;
+    rdfs:label "NationalAuthority"@en ;
+    dct:created "2022-02-02"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "e.g. DPA, but not all \"DPA\" are national authority e.g. EDPS and EDPB"@en ;
+    rdfs:isDefinedBy <http://purl.org/adms> ;
+    rdfs:subClassOf dpv:Authority,
+        dpv:GovernmentalOrganisation ;
+    sw:term_status "accepted"@en .
+
+dpv:NonGovernmentalOrganisation a rdfs:Class ;
+    rdfs:label "NonGovernmentalOrganisation"@en ;
+    dct:created "2022-02-02"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description ""@en ;
+    rdfs:isDefinedBy <http://purl.org/adms> ;
+    rdfs:subClassOf dpv:Organisation ;
+    sw:term_status "accepted"@en .
+
+dpv:NonProfitOrganisation a rdfs:Class ;
+    rdfs:label "NonProfitOrganisation"@en ;
+    dct:created "2022-02-02"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description ""@en ;
+    rdfs:isDefinedBy <http://purl.org/adms> ;
+    rdfs:subClassOf dpv:Organisation ;
+    sw:term_status "accepted"@en .
+
+dpv:Organisation a rdfs:Class ;
+    rdfs:label ""@en ;
+    dct:created "2022-02-02"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description ""@en ;
+    rdfs:subClassOf dpv:LegalEntity ;
+    sw:term_status "accepted"@en .
+
+dpv:RegionalAuthority a rdfs:Class ;
+    rdfs:label "RegionalAuthority"@en ;
+    dct:created "2022-02-02"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "e.g. regional DPA in DE / US-CA"@en ;
+    rdfs:isDefinedBy <http://purl.org/adms> ;
+    rdfs:subClassOf dpv:Authority,
+        dpv:GovernmentalOrganisation ;
     sw:term_status "accepted"@en .
 
 dpv:Representative a rdfs:Class ;
@@ -107,6 +186,16 @@ dpv:Representative a rdfs:Class ;
     rdfs:subClassOf dpv:LegalEntity ;
     sw:term_status "accepted"@en .
 
+dpv:SupraNationalAuthority a rdfs:Class ;
+    rdfs:label "SupraNationalAuthority"@en ;
+    dct:created "2022-02-02"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "e.g. EU, EDPB"@en ;
+    rdfs:isDefinedBy <http://purl.org/adms> ;
+    rdfs:subClassOf dpv:Authority,
+        dpv:GovernmentalOrganisation ;
+    sw:term_status "accepted"@en .
+
 dpv:ThirdParty a rdfs:Class ;
     rdfs:label "Third Party"@en ;
     dct:created "2019-06-04"^^xsd:date ;
@@ -114,16 +203,6 @@ dpv:ThirdParty a rdfs:Class ;
     dct:description "A ‘third party’ means a natural or legal person, public authority, agency or body other than the data subject, controller, processor and people who, under the direct authority of the controller or processor, are authorised to process personal data."@en ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_10/oj> ;
     rdfs:subClassOf dpv:Recipient ;
-    sw:term_status "accepted"@en .
-
-dpv:VulnerableDataSubject a rdfs:Class ;
-    rdfs:label "Vulnerable Data Subject"@en ;
-    dct:created "2020-11-04"^^xsd:date ;
-    dct:creator "Georg Krog"^^xsd:string,
-        "Harshvardhan Pandit"^^xsd:string,
-        "Paul Ryan"^^xsd:string ;
-    dct:description "Data Subjects which should be considered 'vulnerable' and therefore would require additional measures and safeguards"@en ;
-    rdfs:subClassOf dpv:DataSubject ;
     sw:term_status "accepted"@en .
 
 dpv:hasAddress a rdf:Property ;

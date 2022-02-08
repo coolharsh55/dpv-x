@@ -121,7 +121,19 @@ dpv:ContractualTerms a rdfs:Class ;
         "Rob Brennan"^^xsd:string ;
     dct:description "Contractual terms governing data handling within the data controller"@en ;
     rdfs:subClassOf dpv:LegalAgreement ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
+
+dpv:ControllerProcessorAgreement a rdfs:Class ;
+    rdfs:label "Controller-Processor Agreement"@en ;
+    dct:created "2022-01-26"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "An agreement outlining conditions, criteria, obligations, responsibilities, and specifics for carrying out processing of personal data between a Data Controller and a Data Processor"@en ;
+    rdfs:subClassOf "DataProcessingAgreement"^^xsd:string ;
+    sw:term_status "accepted"@en .
 
 dpv:DPIA a rdfs:Class ;
     rdfs:label "Data Protection Impact Assessment (DPIA)"@en ;
@@ -132,6 +144,19 @@ dpv:DPIA a rdfs:Class ;
     dct:description "A DPIA involves determining the potential and actual impact of processing activities on individuals or groups of individuals"@en ;
     rdfs:comment "Top class: Impact Assessment, and DPIA is sub-class"@en ;
     rdfs:subClassOf dpv:ImpactAssessment ;
+    sw:term_status "accepted"@en .
+
+dpv:DataProcessingAgreement a rdfs:Class ;
+    rdfs:label "Data Processing Agreement"@en ;
+    dct:created "2022-01-26"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "An agreement outlining conditions, criteria, obligations, responsibilities, and specifics for carrying out processing of personal data"@en ;
+    rdfs:comment "For specific role-based data processing agreements, see concepts for Processors and JointDataController agreements."@en ;
+    rdfs:subClassOf dpv:LegalAgreement ;
     sw:term_status "accepted"@en .
 
 dpv:DataProcessingRecords a rdfs:Class ;
@@ -215,6 +240,18 @@ dpv:ImpactAssessment a rdfs:Class ;
         "Paul Ryan"^^xsd:string ;
     dct:description "Calculating or determining the likelihood of impact of an existing or proposed process, which can involve risks or detriments."@en ;
     rdfs:subClassOf dpv:Assessment ;
+    sw:term_status "accepted"@en .
+
+dpv:JointDataControllersAgreement a rdfs:Class ;
+    rdfs:label "Joint Data Controllers Agreement"@en ;
+    dct:created "2022-01-26"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "An agreement outlining conditions, criteria, obligations, responsibilities, and specifics for carrying out processing of personal data between Controllers within a Joint Controllers relationship"@en ;
+    rdfs:subClassOf "DataProcessingAgreement"^^xsd:string ;
     sw:term_status "accepted"@en .
 
 dpv:LegalAgreement a rdfs:Class ;
@@ -513,6 +550,18 @@ dpv:StorageRestriction a rdfs:Class ;
     rdfs:subClassOf dpv:TechnicalMeasure ;
     sw:term_status "accepted"@en .
 
+dpv:SubProcessorAgreement a rdfs:Class ;
+    rdfs:label "Sub-Processor Agreement"@en ;
+    dct:created "2022-01-26"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "An agreement outlining conditions, criteria, obligations, responsibilities, and specifics for carrying out processing of personal data between a Data Processor and a Data (Sub-)Processor"@en ;
+    rdfs:subClassOf "DataProcessingAgreement"^^xsd:string ;
+    sw:term_status "accepted"@en .
+
 dpv:TechnicalMeasure a rdfs:Class ;
     rdfs:label "Technical Measure"@en ;
     dct:created "2019-04-05"^^xsd:date ;
@@ -535,15 +584,12 @@ dpv:hasDuration a rdf:Property ;
     rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
     sw:term_status "accepted"@en .
 
-dpv:hasLocation a rdf:Property ;
-    rdfs:label "has location"@en ;
-    dct:created "2019-04-05"^^xsd:date ;
-    dct:creator "Axel Polleres"^^xsd:string,
-        "Harshvardhan J. Pandit"^^xsd:string,
-        "Mark Lizar"^^xsd:string,
-        "Rob Brennan"^^xsd:string ;
-    dct:description "Indicates information about location"@en ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+dpv:hasPolicy a rdf:Property ;
+    rdfs:label "has policy"@en ;
+    dct:created "2022-01-26"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "Indicates policy applicable or used"@en ;
+    rdfs:subPropertyOf dpv:hasTechnicalOrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
 dpv:hasStorage a rdf:Property ;
@@ -557,11 +603,22 @@ dpv:hasStorage a rdf:Property ;
     rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
     sw:term_status "accepted"@en .
 
-dpv:measureImplementedBy a rdf:Property ;
-    rdfs:label "measure implemented by"@en ;
-    dct:created "2019-05-07"^^xsd:date ;
-    dct:creator "Axel Polleres"^^xsd:string ;
-    dct:description "a generic Property to describe how the measure is implemented"@en ;
+dpv:isImplementedUsingTechnology a rdf:Property ;
+    rdfs:label "is implemented using technology"@en ;
+    dct:created "2022-01-26"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "Indicates implementation details such as technologies or processes"@en ;
+    rdfs:comment "The term 'technology' is inclusive of technologies, processes, and methods."@en ;
+    sw:term_status "accepted"@en .
+
+dpv:isPolicyFor a rdf:Property ;
+    rdfs:label "is policy for"@en ;
+    dct:created "2022-01-26"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "Indicates the context or application of policy"@en ;
     sw:term_status "accepted"@en .
 
 dpv:mitigatesRisk a rdf:Property ;

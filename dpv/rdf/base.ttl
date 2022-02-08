@@ -49,17 +49,16 @@ dpv:LegalBasis a rdfs:Class ;
     rdfs:comment "Legal basis (plural: legal bases) are defined by legislations and regulations, whose applicability is usually restricted to specific jurisdictions."@en ;
     sw:term_status "accepted"@en .
 
-dpv:PersonalDataCategory a rdfs:Class ;
-    rdfs:label "Personal Data Category"@en ;
+dpv:PersonalData a rdfs:Class ;
+    rdfs:label "Personal Data"@en ;
     dct:created "2019-04-05"^^xsd:date ;
-    dct:creator "Axel Polleres"^^xsd:string,
-        "Harshvardhan Pandit"^^xsd:string ;
-    dct:description "A category of personal data"@en ;
-    dct:modified "2020-11-04"^^xsd:date ;
-    rdfs:comment "For a formal legal definition of personal data, see GDPR Art.4-1. An informal definition consists of any data directly or indirectly associated or related to an individual. This definition is equivalent to ISO/IEC definition of Personally Identifiable Information (PII)."@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_1/oj>,
-        <https://www.specialprivacy.eu/> ;
+    dct:creator "Harshvardhan Pandit"^^xsd:string ;
+    dct:description "Data directly or indirectly associated or related to an individual."@en ;
+    dct:modified "2022-01-19"^^xsd:date ;
+    rdfs:comment "This definition of personal data encompasses the concepts used in GDPR Art.4-1 for 'personal data' and ISO/IEC 2700 for 'personally identifiable information (PII)'."@en ;
+    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_1/oj> ;
     rdfs:seeAlso spl:AnyData ;
+    rdfs:subClassOf dpv:Data ;
     sw:term_status "accepted"@en .
 
 dpv:PersonalDataHandling a rdfs:Class ;
@@ -141,7 +140,7 @@ dpv:hasDataController a rdf:Property ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernández"^^xsd:string,
         "Mark Lizar"^^xsd:string ;
-    dct:description "Indicates association with a Data Controller."@en ;
+    dct:description "Indicates association with Data Controller"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
     sw:term_status "accepted"@en .
 
@@ -153,7 +152,7 @@ dpv:hasDataSubject a rdf:Property ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernández"^^xsd:string,
         "Mark Lizar"^^xsd:string ;
-    dct:description "Indicates association with a specific Data Subject or a group or category of Data Subjects."@en ;
+    dct:description "Indicates association with Data Subject"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
     sw:term_status "accepted"@en .
 
@@ -162,21 +161,23 @@ dpv:hasLegalBasis a rdf:Property ;
     dct:created "2019-04-04"^^xsd:date ;
     dct:creator "Axel Polleres"^^xsd:string,
         "Javier Fernández"^^xsd:string ;
-    dct:description "Indicates applicability of a Legal Basis."@en ;
+    dct:description "Indicates use or applicability of a Legal Basis"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
     sw:term_status "accepted"@en .
 
-dpv:hasPersonalDataCategory a rdf:Property ;
-    rdfs:label "has personal data category"@en ;
-    dct:created "2019-04-04"^^xsd:date ;
-    dct:creator "Axel Polleres"^^xsd:string,
-        "Bud Bruegger"^^xsd:string,
-        "Harshvardhan J. Pandit"^^xsd:string,
-        "Javier Fernández"^^xsd:string,
-        "Mark Lizar"^^xsd:string ;
-    dct:description "Indicates association with a Personal Data Category."@en ;
-    dct:modified "2020-11-04"^^xsd:date ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+dpv:hasPersonalData a rdf:Property ;
+    rdfs:label "has personal data"@en ;
+    dct:created "2022-01-19"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "Indicates association with Personal Data"@en ;
+    sw:term_status "accepted"@en .
+
+dpv:hasPersonalDataHandling a rdf:Property ;
+    rdfs:label "has personal data handling"@en ;
+    dct:created "2022-01-19"^^xsd:date ;
+    dct:creator "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "Indicates association with Personal Data Handling"@en ;
     sw:term_status "accepted"@en .
 
 dpv:hasProcessing a rdf:Property ;
@@ -187,7 +188,7 @@ dpv:hasProcessing a rdf:Property ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernández"^^xsd:string,
         "Mark Lizar"^^xsd:string ;
-    dct:description "Indicates association with a Processing (of personal data) instance or category."@en ;
+    dct:description "Indicates association with Processing"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
     sw:term_status "accepted"@en .
@@ -200,7 +201,7 @@ dpv:hasPurpose a rdf:Property ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernández"^^xsd:string,
         "Mark Lizar"^^xsd:string ;
-    dct:description "Indicates association with a Purpose (of processing personal data)."@en ;
+    dct:description "Indicates association with Purpose"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
     sw:term_status "accepted"@en .
@@ -213,7 +214,7 @@ dpv:hasRecipient a rdf:Property ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernández"^^xsd:string,
         "Mark Lizar"^^xsd:string ;
-    dct:description "Indicates a recipient of personal data."@en ;
+    dct:description "Indicates Recipient of Personal Data"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
     sw:term_status "accepted"@en .
@@ -222,14 +223,14 @@ dpv:hasRight a rdf:Property ;
     rdfs:label "has right"@en ;
     dct:created "2020-11-18"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:description "Indicates applicability of a Right."@en ;
+    dct:description "Indicates use or applicability of Right"@en ;
     sw:term_status "accepted"@en .
 
 dpv:hasRisk a rdf:Property ;
     rdfs:label "has risk"@en ;
     dct:created "2020-11-18"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:description "Indicates applicability of a Risk."@en ;
+    dct:description "Indicates applicability of Risk"@en ;
     sw:term_status "accepted"@en .
 
 dpv:hasTechnicalOrganisationalMeasure a rdf:Property ;
@@ -240,7 +241,7 @@ dpv:hasTechnicalOrganisationalMeasure a rdf:Property ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernández"^^xsd:string,
         "Mark Lizar"^^xsd:string ;
-    dct:description "Indicates use of a Technical or Organisational measure."@en ;
+    dct:description "Indicates use or applicability of Technical or Organisational measure"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
     sw:term_status "accepted"@en .
 

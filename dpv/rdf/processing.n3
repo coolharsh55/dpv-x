@@ -22,6 +22,14 @@ dpv:Adapt a rdfs:Class ;
     rdfs:subClassOf dpv:Transform ;
     sw:term_status "accepted"@en .
 
+dpv:AlgorithmicLogicOfProcessing a rdfs:Class ;
+    rdfs:label "Algorithmic Logic of Processing"@en ;
+    dct:created "2022-01-26"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "The algorithmic logic applied or used for processing"@en ;
+    rdfs:comment "Algorithmic Logic is intended as a broad concept for explaining the use of algorithms and automated decisions making within Processing. To describe the actual algorithm, see the Algorithm concept."@en ;
+    sw:term_status "accepted"@en .
+
 dpv:Align a rdfs:Class ;
     rdfs:label "Align"@en ;
     dct:created "2019-05-07"^^xsd:date ;
@@ -85,6 +93,13 @@ dpv:Combine a rdfs:Class ;
     rdfs:subClassOf dpv:Transform ;
     sw:term_status "accepted"@en .
 
+dpv:ConsequenceOfProcessing a rdfs:Class ;
+    rdfs:label "Consequence of Processing"@en ;
+    dct:created "2022-01-26"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "The consequence(s) possible or arising from processing"@en ;
+    sw:term_status "accepted"@en .
+
 dpv:Consult a rdfs:Class ;
     rdfs:label "Consult"@en ;
     dct:created "2019-05-07"^^xsd:date ;
@@ -111,7 +126,7 @@ dpv:DataSource a rdfs:Class ;
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "The source or origin of data"@en ;
-    rdfs:comment "Source is direct point of data collection; 'origin' would indicate the original/others points of where the data originates from"@en ;
+    rdfs:comment "Source' is the direct point of data collection; 'origin' would indicate the original/others points of where the data originates from."@en ;
     sw:term_status "accepted"@en .
 
 dpv:Derive a rdfs:Class ;
@@ -172,6 +187,14 @@ dpv:EvaluationScoring a rdfs:Class ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     sw:term_status "accepted"@en .
 
+dpv:HumanInvolvement a rdfs:Class ;
+    rdfs:label "Human Involvement"@en ;
+    dct:created "2022-01-26"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "The involvement of humans as a factor or agent in processing"@en ;
+    rdfs:comment "Human Involvement here broadly refers to any involvement by a human in the context of carrying out processing. This may include verification of outcomes, providing input data for making decisions, or overseeing activities."@en ;
+    sw:term_status "accepted"@en .
+
 dpv:InnovativeUseOfNewTechnologies a rdfs:Class ;
     rdfs:label "Innovative Use of New Technologies"@en ;
     dct:created "2020-11-04"^^xsd:date ;
@@ -216,6 +239,18 @@ dpv:Move a rdfs:Class ;
     rdfs:subClassOf dpv:Transfer ;
     sw:term_status "accepted"@en .
 
+dpv:NonPublicDataSource a rdfs:Class ;
+    rdfs:label "Non-Public Data Source"@en ;
+    dct:created "2022-01-26"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "A source of data that is not publicly accessible or available"@en ;
+    rdfs:subClassOf dpv:DataSource ;
+    sw:term_status "accepted"@en .
+
 dpv:Obtain a rdfs:Class ;
     rdfs:label "Obtain"@en ;
     dct:created "2019-05-07"^^xsd:date ;
@@ -246,6 +281,19 @@ dpv:PseudoAnonymise a rdfs:Class ;
     dct:description "to replace personal identifiable information by artificial identifiers"@en ;
     rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     rdfs:subClassOf dpv:Transform ;
+    sw:term_status "accepted"@en .
+
+dpv:PublicDataSource a rdfs:Class ;
+    rdfs:label "Public Data Source"@en ;
+    dct:created "2022-01-26"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "A source of data that is publicly accessible or available"@en ;
+    rdfs:comment "The term 'Public' is used here in a broad sense. Actual consideration of what is 'Public Data' can vary based on several contextual or jurisdictional factors such as  definition of open, methods of access, permissions and licenses."@en ;
+    rdfs:subClassOf dpv:DataSource ;
     sw:term_status "accepted"@en .
 
 dpv:Record a rdfs:Class ;
@@ -364,7 +412,7 @@ dpv:hasConsequence a rdf:Property ;
     dct:description "Indicates consequences of processing such as those for Data Subjects in relation to automated decision making"@en ;
     dct:modified "2021-09-21"^^xsd:date ;
     rdfs:comment "Removed plural suffix for consistency"@en ;
-    sw:term_status "changed"@en .
+    sw:term_status "accepted"@en .
 
 dpv:hasDataSource a rdf:Property ;
     rdfs:label "has data source"@en ;
