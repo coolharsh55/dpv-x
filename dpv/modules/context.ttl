@@ -13,7 +13,6 @@ dpv:ContextConcepts a skos:Collection ;
         dpv:Duration,
         dpv:HumanInvolvement,
         dpv:Importance,
-        dpv:Location,
         dpv:Necessity,
         dpv:NotRequired,
         dpv:Optional,
@@ -27,7 +26,6 @@ dpv:ContextConcepts a skos:Collection ;
         dpv:hasDuration,
         dpv:hasHumanInvolvement,
         dpv:hasIdentifier,
-        dpv:hasLocation,
         dpv:isImplementedUsingTechnology .
 
 dpv:isInstanceOf rdfs:subPropertyOf skos:semanticRelation ;
@@ -44,7 +42,6 @@ dpv:hasAlgorithmicLogic a skos:Concept,
         "Paul Ryan"^^xsd:string ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:AlgorithmicLogic ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates the logic used in processing such as for automated decision making"@en ;
     skos:prefLabel "has algorithmic logic"@en .
@@ -58,7 +55,6 @@ dpv:hasConsequence a skos:Concept,
     dct:modified "2021-09-21"^^xsd:date ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:Consequence ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates consequences of processing such as those for Data Subjects in relation to automated decision making"@en ;
     skos:note "Removed plural suffix for consistency"@en ;
@@ -69,7 +65,6 @@ dpv:hasContext a skos:Concept,
     dct:created "2019-04-05"^^xsd:date ;
     rdfs:domain dpv:Purpose ;
     rdfs:range dpv:Context ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates a purpose is restricted to the specified context(s)"@en ;
     skos:prefLabel "has context"@en .
@@ -83,7 +78,6 @@ dpv:hasDuration a skos:Concept,
         "Rob Brennan"^^xsd:string ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:Duration ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates information about duration"@en ;
     skos:prefLabel "has duration"@en ;
@@ -97,7 +91,6 @@ dpv:hasHumanInvolvement a skos:Concept,
         "Paul Ryan"^^xsd:string ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:HumanInvolvement ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates Involvement of humans in processing such as within automated decision making process"@en ;
     skos:note "Human involvement is also relevant to 'human in the loop'"@en ;
@@ -112,25 +105,9 @@ dpv:hasIdentifier a skos:Concept,
         "Paul Ryan"^^xsd:string ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:Concept ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates an identifier associated for identification or reference"@en ;
     skos:prefLabel "has identifier"@en .
-
-dpv:hasLocation a skos:Concept,
-        dpv:Relation ;
-    dct:created "2019-04-05"^^xsd:date ;
-    dct:creator "Axel Polleres"^^xsd:string,
-        "Harshvardhan J. Pandit"^^xsd:string,
-        "Mark Lizar"^^xsd:string,
-        "Rob Brennan"^^xsd:string ;
-    rdfs:domain dpv:Concept ;
-    rdfs:range dpv:Location ;
-    rdfs:subPropertyOf dpv:Relation ;
-    sw:term_status "accepted"@en ;
-    skos:definition "Indicates information about location"@en ;
-    skos:prefLabel "has location"@en ;
-    skos:scopeNote <https://www.specialprivacy.eu/> .
 
 dpv:isImplementedUsingTechnology a skos:Concept,
         dpv:Relation ;
@@ -141,7 +118,6 @@ dpv:isImplementedUsingTechnology a skos:Concept,
         "Paul Ryan"^^xsd:string ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:Technology ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates implementation details such as technologies or processes"@en ;
     skos:note "The term 'technology' is inclusive of technologies, processes, and methods."@en ;
@@ -153,15 +129,6 @@ dpv:Duration a skos:Concept,
     sw:term_status "accepted"@en ;
     skos:definition "The duration or temporal limitation"@en ;
     skos:prefLabel "Duration"@en .
-
-dpv:Location a skos:Concept,
-        dpv:Concept ;
-    dct:created "2022-01-19"^^xsd:date ;
-    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    sw:term_status "accepted"@en ;
-    skos:definition "A location is a position, site, or area where something is located"@en ;
-    skos:note "Location may be geographic, physical, or virtual."@en ;
-    skos:prefLabel "Location"@en .
 
 dpv:NotRequired a skos:Concept,
         dpv:Concept ;

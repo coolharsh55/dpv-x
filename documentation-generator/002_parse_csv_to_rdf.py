@@ -297,6 +297,8 @@ def add_triples_for_properties(properties, graph):
                 if parent.startswith('http'):
                     graph.add((BASE[f'{prop.term}'], RDFS.subPropertyOf, URIRef(parent)))
                 elif ':' in parent:
+                    if parent == "dpv:Relation":
+                        continue
                     # assuming something like rdfs:Resource
                     prefix, term = parent.split(':')
                     # gets the namespace from registered ones and create URI
@@ -374,7 +376,7 @@ DPV_CSV_FILES = {
         },
     'legal_basis': {
         'classes': f'{IMPORT_CSV_PATH}/LegalBasis.csv',
-        'properties': f'{IMPORT_CSV_PATH}/Jurisdictions_properties.csv',
+        'properties': f'{IMPORT_CSV_PATH}/LegalBasis_properties.csv',
         'model': 'taxonomy',
         'topconcept': DPV.LegalBasis,
     },

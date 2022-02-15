@@ -27,13 +27,15 @@ dpv:isSubTypeOf rdfs:subPropertyOf skos:broaderTransitive ;
 
 dpv:DerivedData skos:narrowerTransitive dpv:InferredPersonalData .
 
+dpv:Relation rdfs:subPropertyOf skos:semanticRelation ;
+    skos:prefLabel "Relation"@en .
+
 dpv:hasPersonalData a skos:Concept,
         dpv:Relation ;
     dct:created "2022-01-19"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:PersonalData ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates association with Personal Data"@en ;
     skos:prefLabel "has personal data"@en .
@@ -80,9 +82,6 @@ dpv:PseudoAnonymisedData a skos:Concept,
     skos:definition "Personal Data that has undergone a partial (incomplete) anonymisation process such that it is still considered Personal Data"@en ;
     skos:prefLabel "Pseudo-anonymised Data"@en ;
     dpv:isSubTypeOf dpv:PersonalData .
-
-dpv:Relation rdfs:subPropertyOf skos:semanticRelation ;
-    skos:prefLabel "Relation"@en .
 
 dpv:SensitivePersonalData a skos:Concept,
         dpv:Concept ;

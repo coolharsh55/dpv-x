@@ -8,11 +8,10 @@
   <script type="text/javascript" class="remove">
   var respecConfig = {
     title: "Primer",
-    subtitle: "Data Privacy Vocabulary (DPV) v0.4",
+    subtitle: "Data Privacy Vocabulary (DPV) v0.4 (published 2022-02-15)",
     shortName: "dpv-primer",
     specStatus: "CG-DRAFT",
     group: "dpvcg",
-    edDraftURI: "https://harshp.com/dpv-x/primer",
     latestVersion: "https://w3id.org/dpv/primer",
     publishDate: "2022-02-09",
     // isPreview: true,
@@ -299,7 +298,7 @@
 
 <body>
   <section id="abstract">
-    <p>The Data Privacy Vocabulary [[DPV]] enables expressing machine-readable metadata about the use and processing of personal data based on legislative requirements such as the General Data Protection Regulation [[GDPR]]. This document acts as a ‘Primer’ for the DPV by introducing its fundamental concepts and providing examples of use-cases and applications. It is intended to be a starting point for those wishing to use the DPV and an orientation for people from all disciplines. The canonical URL for DPV is <a href="https://www.w3.org/ns/dpv">https://www.w3.org/ns/dpv</a> which contains its specification.</p>
+    <p>The Data Privacy Vocabulary [[DPV]] enables expressing machine-readable metadata about the use and processing of personal data based on legislative requirements such as the General Data Protection Regulation [[GDPR]]. This document acts as a ‘Primer’ for the DPV by introducing its fundamental concepts and providing examples of use-cases and applications. It is intended to be a starting point for those wishing to use the DPV and an orientation for people from all disciplines. The canonical URL for DPV is <a href="https://w3id.org/dpv">https://w3id.org/dpv#</a> which contains its specification.</p>
     <p>This primer document aims to ease adoption of DPV by providing:</p>
     <ul>
       <li>A high-level conceptual explanation of the DPV and its modelling of concepts;</li>
@@ -308,12 +307,14 @@
     </ul>
     <p><strong>DPV Family of Documents</strong></p>
     <ul>
-      <li>[[DPV-Primer]]: (This document) serves as the primer and introduction to DPV and its concepts.</li>
-      <li>[[DPV]]: The DPV Specification is the formal and normative description of DPV and its concepts. It provides a serialisation of the concepts as a taxonomy using SKOS.</li>
-      <li>[[DPV-SKOS]]: A serialisation of the DPV using [[RDFS]] and [[SKOS]] to enable its use as a schema or ontology.</li>
-      <li>[[DPV-OWL]]: is a serialisation of the DPV using [[OWL]] to enable its use as an ontology.</li>
-      <li>[[DPV-GDPR]]: Extension to the DPV providing concepts relevant to [[GDPR]].</li>
-      <li>[[DPV-PD]]: Extension to the DPV providing a taxonomy of personal data categories.</li>
+      <li>[[DPV-Primer]]: The Primer serves as an introductory document to DPV and provides an overview of its concepts.</li>
+      <li>[[DPV]]: (This document) The DPV Specification is the formal and normative description of DPV and its concepts. It provides a serialisation of the concepts as a taxonomy using SKOS.</li>
+      <li>Extensions to Concepts: <ul>
+        <li>[[DPV-GDPR]]: Extension to the DPV providing concepts relevant to [[GDPR]].</li>
+        <li>[[DPV-PD]]: Extension to the DPV providing a taxonomy of personal data categories.</li>
+      <li>Serialisations of DPV: <ul>
+        <li>[[DPV-SKOS]]: A serialisation of the DPV using [[RDFS]] and [[SKOS]] to enable its use as a schema or ontology.</li></ul></li>
+        <li>[[DPV-OWL]]: is a serialisation of the DPV using [[OWL]] to enable its use as an ontology.</li></ul></li>
       <li>[[DPV-NACE]]: [[NACE]] taxonomy serialised in RDFS</li>
     </ul>
     <p><strong>Related Links</strong></p>
@@ -470,13 +471,13 @@
         </tr>
         <tr>
           <td>is subtype of</td>
-          <td><code>dpv:subTypeOf</code>
+          <td><code>dpv:isSubTypeOf</code>
           </td><td><code>skos:broaderTransitive</code></td>
           <td><code>owl:subClassOf</code></td>
         </tr>
         <tr>
           <td>is instance of</td>
-          <td><code>dpv:instanceOf</code>
+          <td><code>dpv:isInstanceOf</code>
           </td><td><code>rdf:type</code></td>
           <td><code>rdf:type</code></td>
         </tr>

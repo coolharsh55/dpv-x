@@ -126,7 +126,6 @@ dpv:hasRisk a skos:Concept,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:Risk ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates applicability of Risk"@en ;
     skos:prefLabel "has risk"@en .
@@ -159,7 +158,6 @@ dpv:isPolicyFor a skos:Concept,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     rdfs:domain dpv:Policy ;
     rdfs:range dpv:Concept ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates the context or application of policy"@en ;
     skos:prefLabel "is policy for"@en .
@@ -170,7 +168,6 @@ dpv:mitigatesRisk a skos:Concept,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     rdfs:domain dpv:RiskMitigationMeasure ;
     rdfs:range dpv:Risk ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates mitigation of risk(s)"@en ;
     skos:prefLabel "mitigates risk"@en .
@@ -752,7 +749,6 @@ dpv:hasTechnicalOrganisationalMeasure a skos:Concept,
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:TechnicalOrganisationalMeasure ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates use or applicability of Technical or Organisational measure"@en ;
     skos:prefLabel "has technical and organisational measure"@en .

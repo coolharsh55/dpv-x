@@ -93,7 +93,6 @@ dpv:hasPurpose a skos:Concept,
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:Purpose ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates association with Purpose"@en ;
     skos:prefLabel "has purpose"@en ;
@@ -104,7 +103,6 @@ dpv:hasSector a skos:Concept,
     dct:created "2019-04-05"^^xsd:date ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:Sector ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates the purpose is associated with activities in the indicated (Economic) Sector(s)"@en ;
     skos:prefLabel "has sector"@en .
@@ -474,6 +472,9 @@ dpv:RegistrationAuthentication a skos:Concept,
     skos:prefLabel "Registration and Authentication"@en ;
     dpv:isSubTypeOf dpv:ServiceProvision .
 
+dpv:Relation rdfs:subPropertyOf skos:semanticRelation ;
+    skos:prefLabel "Relation"@en .
+
 dpv:Sector a skos:Concept,
         dpv:Concept ;
     dct:created "2019-04-05"^^xsd:date ;
@@ -769,9 +770,6 @@ dpv:Personalisation a skos:Concept,
     skos:note "This term is a blanket purpose category for indicating personalisation of some other purpose, e.g. by creating a subclass of the other concept and Personalisation"@en ;
     skos:prefLabel "Personalisation"@en ;
     dpv:isSubTypeOf dpv:Purpose .
-
-dpv:Relation rdfs:subPropertyOf skos:semanticRelation ;
-    skos:prefLabel "Relation"@en .
 
 dpv:ServiceOptimization a skos:Concept,
         dpv:Concept ;

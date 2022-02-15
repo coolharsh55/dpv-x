@@ -122,7 +122,7 @@ INFO - serialize_graph :: 316 - wrote ../dpv/modules/purposes.n3
 INFO - serialize_graph :: 316 - wrote ../dpv/modules/purposes.jsonld
 DEBUG - <module> :: 392 - ------
 DEBUG - <module> :: 393 - Processing context module
-DEBUG - <module> :: 398 - there are 25 classes in context
+DEBUG - <module> :: 398 - there are 24 classes in context
 DEBUG - add_triples_for_classes :: 234 - Context
 DEBUG - add_triples_for_classes :: 234 - Importance
 DEBUG - add_triples_for_classes :: 234 - PrimaryImportance
@@ -135,15 +135,13 @@ DEBUG - add_triples_for_classes :: 234 - Technology
 DEBUG - add_triples_for_classes :: 234 - AlgorithmicLogic
 DEBUG - add_triples_for_classes :: 234 - Consequence
 DEBUG - add_triples_for_classes :: 234 - HumanInvolvement
-DEBUG - add_triples_for_classes :: 234 - Location
 DEBUG - add_triples_for_classes :: 234 - Duration
-DEBUG - <module> :: 402 - there are 14 properties in context
+DEBUG - <module> :: 402 - there are 13 properties in context
 DEBUG - add_triples_for_properties :: 273 - hasContext
 DEBUG - add_triples_for_properties :: 273 - isImplementedUsingTechnology
 DEBUG - add_triples_for_properties :: 273 - hasAlgorithmicLogic
 DEBUG - add_triples_for_properties :: 273 - hasConsequence
 DEBUG - add_triples_for_properties :: 273 - hasHumanInvolvement
-DEBUG - add_triples_for_properties :: 273 - hasLocation
 DEBUG - add_triples_for_properties :: 273 - hasDuration
 DEBUG - add_triples_for_properties :: 273 - hasIdentifier
 INFO - serialize_graph :: 316 - wrote ../dpv/modules/context.rdf

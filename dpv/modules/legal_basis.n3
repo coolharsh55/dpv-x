@@ -32,6 +32,9 @@ dpv:isSubTypeOf rdfs:subPropertyOf skos:broaderTransitive ;
 
 dpv:LegalAgreement skos:narrowerTransitive dpv:Contract .
 
+dpv:Relation rdfs:subPropertyOf skos:semanticRelation ;
+    skos:prefLabel "Relation"@en .
+
 dpv:hasLegalBasis a skos:Concept,
         dpv:Relation ;
     dct:created "2019-04-04"^^xsd:date ;
@@ -40,7 +43,6 @@ dpv:hasLegalBasis a skos:Concept,
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:LegalBasis ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates use or applicability of a Legal Basis"@en ;
     skos:prefLabel "has legal basis"@en .
@@ -136,9 +138,6 @@ dpv:PublicInterest a skos:Concept,
     skos:definition "Processing is necessary or beneficial for interest of the public or society at large"@en ;
     skos:prefLabel "Public Interest"@en ;
     dpv:isSubTypeOf dpv:LegalBasis .
-
-dpv:Relation rdfs:subPropertyOf skos:semanticRelation ;
-    skos:prefLabel "Relation"@en .
 
 dpv:VitalInterestOfDataSubject a skos:Concept,
         dpv:Concept ;

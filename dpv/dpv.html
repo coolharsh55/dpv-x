@@ -9,17 +9,17 @@
    var respecConfig = {
     shortName: "dpv",
     title: "Data Privacy Vocabulary (DPV)",
-    subtitle: "version 0.4",
+    subtitle: "version 0.4 (published 2022-02-15)",
     specStatus: "CG-DRAFT",
     group: "dpvcg",
-    edDraftURI: "https://w3id.org/dpv",
     latestVersion: "https://w3id.org/dpv",
-    github: {
-      repoURL: "https://github.com/w3c/dpv",
-      branch: "master"
-    },
+    // github: {
+    //   repoURL: "https://github.com/w3c/dpv",
+    //   branch: "master"
+    // },
     subjectPrefix: "[dpv]",
     doJsonLd: true,
+    lint: { "no-unused-dfns": false },
     canonicalUri: "https://w3id.org/dpv",
     otherLinks: [
       {
@@ -128,6 +128,70 @@
       }
     ],
     localBiblio: {
+      "DPV": {
+        href: "https://www.w3.org/ns/dpv",
+        title: "Data Privacy Vocabulary (DPV)"
+      },
+      "DPV-GDPR": {
+        href: "https://www.w3.org/ns/dpv/dpv-gdpr",
+        title: "GDPR Extension for Data Privacy Vocabulary (DPV-GDPR)"
+      },
+      "DPV-NACE": {
+        href: "https://www.w3.org/ns/dpv/dpv-nace",
+        title: "NACE Taxonomy serialised in RDFS"
+      },
+      "DPV-PD": {
+        href: "https://www.w3.org/ns/dpv/pd",
+        title: "Personal Data Categories Extension for Data Privacy Vocabulary (DPV-PD)"
+      },
+      "DPV-SKOS": {
+        href: "https://www.w3.org/ns/dpv/dpv-skos",
+        title: "Data Privacy Vocabulary serialised using SKOS+RDFS (DPV-SKOS)"
+      },
+      "DPV-OWL": {
+        href: "https://www.w3.org/ns/dpv/dpv-owl",
+        title: "Data Privacy Vocabulary serialised using OWL2 (DPV-OWL)"
+      },
+      "DPV-Primer": {
+        href: "https://www.w3.org/ns/dpv/dpv-primer",
+        title: "Primer for Data Privacy Vocabulary"
+      },
+      "DPVCG": {
+        href: "https://www.w3.org/community/dpvcg/",
+        title: "W3C Data Privacy Vocabularies and Controls Community Group (DPVCG)"
+      },
+      "GDPR": {
+        href: "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+        title: "General Data Protection Regulation (GDPR)"
+      },
+      "SPECIAL": {
+        href: "https://www.specialprivacy.eu/",
+        title: "SPECIAL H2020 Project"
+      },
+      "RDF": {
+        href: "https://www.w3.org/TR/rdf11-concepts/",
+        title: "RDF 1.1 Concepts and Abstract Syntax"
+      },
+      "RDFS": {
+        href: "https://www.w3.org/TR/rdf-schema/",
+        title: "RDF Schema 1.1"
+      },
+      "OWL" :{
+        href: "https://www.w3.org/TR/owl2-overview/",
+        title: "OWL 2 Web Ontology Language Document Overview (Second Edition)"
+      },
+      "SKOS": {
+        href: "https://www.w3.org/TR/skos-reference/",
+        title: "SKOS Simple Knowledge Organization System"
+      },
+      "DPV-ADOPTION": {
+        href: "https://www.w3.org/community/dpvcg/wiki/Adoption_of_DPVCG",
+        title: "Listing of DPV adoption and applications"
+      },
+      "DPV GUIDES": {
+          href: "https://w3id.org/dpv/guides",
+          title: "Guidelines for Adoption and Use of DPV"
+      },
       "NACE": {
         href: "https://ec.europa.eu/eurostat/ramon/nomenclatures/index.cfm?TargetUrl=LST_NOM_DTL&StrNom=NACE_REV2",
         title: "Statistical Classification of Economic Activities in the European Community (NACE)"
@@ -151,6 +215,14 @@
       "EnterPrivacy": {
         href: "https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf",
         title: "Taxonomy of Personal Data Categories"
+      },
+      "TIME": {
+        href: "https://www.w3.org/TR/owl-time/",
+        title: "Time Ontology in OWL"
+      },
+      "ISO-27017": {
+        href: "https://www.iso.org/standard/43757.html",
+        title: "ISO/IEC 27017:2015 Information technology — Security techniques — Code of practice for information security controls based on ISO/IEC 27002 for cloud services"
       }
     }
   };
@@ -223,16 +295,95 @@
 </style>
 </head>
 <body>
-   <section id="abstract"></section>
-   <section id="sotd"><p></p></section>
+    <section id="abstract">
+      <p>The Data Privacy Vocabulary [[DPV]] enables expressing machine-readable metadata about the use and processing of personal data based on legislative requirements such as the General Data Protection Regulation [[GDPR]]. This document acts as a ‘Primer’ for the DPV by introducing its fundamental concepts and providing examples of use-cases and applications. It is intended to be a starting point for those wishing to use the DPV and an orientation for people from all disciplines. The canonical URL for DPV is <a href="https://w3id.org/dpv">https://w3id.org/dpv#</a> which contains (this) specification.</p>
+      <p>The namespace for DPV terms is <a href="https://w3id.org/dpv#"><code>https://w3id.org/dpv#</code></a>, the suggested prefix for is <code>dpv</code>, and this document along with its various serializations are available on <a href="https://github.com/w3c/dpv">GitHub</a>.
+      <p class="note">Newcomers to the DPV are <strong>strongly recommended to first read through the [[[DPV-Primer]]]</strong> to familiarise themselves with the semantics, concepts, their place within DPV.</p>
+
+      <p><strong>DPV Family of Documents</strong></p>
+    <ul>
+      <li>[[DPV-Primer]]: The Primer serves as an introductory document to DPV and provides an overview of its concepts.</li>
+      <li>[[DPV]]: (This document) The DPV Specification is the formal and normative description of DPV and its concepts. It provides a serialisation of the concepts as a taxonomy using SKOS.</li>
+      <li>Extensions to Concepts: <ul>
+        <li>[[DPV-GDPR]]: Extension to the DPV providing concepts relevant to [[GDPR]].</li>
+        <li>[[DPV-PD]]: Extension to the DPV providing a taxonomy of personal data categories.</li></ul></li>
+      <li>Serialisations of DPV: <ul>
+        <li>[[DPV-SKOS]]: A serialisation of the DPV using [[RDFS]] and [[SKOS]] to enable its use as a schema or ontology.</li>
+        <li>[[DPV-OWL]]: is a serialisation of the DPV using [[OWL]] to enable its use as an ontology.</li></ul></li>
+      <li>[[DPV-NACE]]: [[NACE]] taxonomy serialised in RDFS</li>
+    </ul>
+    <p>The table provides an overview of the expression of concepts across the three DPV serialisations.</p>
+    <table>
+      <thead>
+        <th>Concept</th>
+        <th>[[DPV]]</th>
+        <th>[[DPV-SKOS]]</th>
+        <th>[[DPV-OWL]]</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Concept</td>
+          <td><code>dpv:Concept</code>
+          </td><td><code>skos:Concept</code></td>
+          <td><code>owl:Class</code></td>
+        </tr>
+        <tr>
+          <td>is subtype of</td>
+          <td><code>dpv:subTypeOf</code>
+          </td><td><code>skos:broaderTransitive</code></td>
+          <td><code>owl:subClassOf</code></td>
+        </tr>
+        <tr>
+          <td>is instance of</td>
+          <td><code>dpv:instanceOf</code>
+          </td><td><code>rdf:type</code></td>
+          <td><code>rdf:type</code></td>
+        </tr>
+        <tr>
+          <td>has concept</td>
+          <td><code>dpv:Relation</code>
+          </td><td><code>rdf:Property</code></td>
+          <td><code>owl:ObjectProperty</code></td>
+        </tr>
+        <tr>
+          <td>relationship domain</td>
+          <td><code>dpv:domain</code>
+          </td><td><code>rdfs:domain</code></td>
+          <td><code>rdfs:domain</code></td>
+        </tr>
+        <tr>
+          <td>relationship range</td>
+          <td><code>dpv:range</code>
+          </td><td><code>rdfs:range</code></td>
+          <td><code>rdfs:range</code></td>
+        </tr>
+      </tbody>
+    </table>
+    <p><strong>Related Links</strong></p>
+    <ul>
+      <li>For a general overview of the Data Protection Vocabularies and Controls Community Group [[DPVCG]], its history, deliverables, and activities - refer to <a href="https://www.w3.org/community/dpvcg/"><u>DPVCG Website</u></a>.</p>
+      </li>
+      <li>
+        <p>The peer-reviewed article “<a href="https://link.springer.com/chapter/10.1007%2F978-3-030-33246-4_44"><u>Creating A Vocabulary for Data Privacy</u></a>” presents a historical overview of the DPVCG, and describes the methodology and structure of the DPV along with describing its creation. An open-access version can be accessed <a href="http://hdl.handle.net/2262/91581"><u>here</u></a>, <a href="http://doras.dcu.ie/23801/"><u>here</u></a>, and <a href="https://aic.ai.wu.ac.at/~polleres/publications/pand-etal-2019ODBASE.pdf"><u>here</u></a>.</p>
+      </li>
+    </ul>
+    </section>
+    <section id="sotd">
+      <!-- sotd: Status of this document -->
+      <p>This document is published by the <a href="https://www.w3.org/community/dpvcg/">Data Privacy Vocabularies and Controls Community Group (DPVCG)</a> as a deliverable and report of its work in creating and maintaining the Data Privacy Vocabulary (DPV).</p>
+      <div class="note">
+        <p><strong>Contributing to the DPV and its extensions</strong> The DPVCG welcomes participation regarding the DPV, including expansion or refinement of its terms, addressing open issues, and welcomes suggestions on their resolution or mitigation.</p>
+        <p>For contributions to the DPV, please see <a href="https://github.com/w3c/dpv#contribution--participation">the section on GitHub</a>. The current list of open issues and their discussions to date can be found at <a href="https://github.com/w3c/dpv/issues">GitHub issues</a>.</p>
+      </div>
+      <p>Serialisations of DPV and its modules are available on <a href="https://github.com/w3c/dpv">GitHub</a>.</p>
+    </section>
   <section id="vocab-base">
     <h2>Base Vocabulary</h2>
-    <p style="text-align: center;">Concepts in the Base vocabulary are available as an individual module <a href="https://github.com/w3c/dpv/tree/master/rdf">here</a>.</p>
     <figure>
       <img title="DPV Base Vocabulary" alt="DPV base vocabulary" src="diagrams/personaldatahandling.png">
       <figcaption>Base Vocabulary</figcaption>
     </figure>
-    <p>The 'Base' or 'Core' vocabulary describes the top-level classes required for  defining a 'policy' for personal data handling. Classes and properties for each top-level class are further elaborated using sub-vocabularies, for example a taxonomy of personal data categories. While all concepts within the vocabulary share a single namespace, the modular approach makes it possible to use only the specific taxonomies or sub-vocabularies, for example to refer only to purposes. The DPV provides the following as top-level concepts and generic properties to associate them with other concepts:</p>
+    <p>The 'Base' or 'Core' concepts in DPV represent the most relevant concepts for representing information regarding the what, how, where, who, why of personal data and its processing. Each of these concepts is further elaborated as a taxonomy of concepts in a hierarchical fashion. The DPV provides the following as 'top-level' concepts and relations to associate them with other concepts:</p>
     <table>
       <thead>
         <tr>
@@ -283,7 +434,7 @@
           <td>Legal bases or justifications for processing</td>
         </tr>
         <tr>
-          <td>[=Right=] and [=DataSubjectRight=]</td>
+          <td>[=Right=]</td>
           <td>[=hasRight=]</td>
           <td>Rights applicable or provided</td>
         </tr>
@@ -292,16 +443,20 @@
           <td>[=hasRisk=]</td>
           <td>Risks applicable or probable regarding processing</td>
         </tr>
+        <tr>
+          <td>[=PersonalDataHandling=]</td>
+          <td>[=hasPersonalDataHandling=]</td>
+          <td>A concept for associating the other core concepts as a 'group, 'policy', or 'set' - so as to express different use-cases and combinations</td>
+        </tr>
       </tbody>
     </table>
+    <p>DPV provides taxonomies for all core concepts except the ones specified below:</p>
     <ul>
-      
+      <li data-dfn-for="PersonalDataHandling"><dfn>PersonalDataHandling</dfn>: DPV defines the concept of  for representing a 'policy' or 'grouping' that associates the top-level concepts with one another. The relation <span data-dfn-for="hasPersonalDataHandling"><dfn>hasPersonalDataHandling</dfn> provides a relation to associate a <code>PersonalDataHandling</code> with other concepts, including like itself.</span></li>
+      <li><span data-dfn-for="Right"><dfn>Right</dfn>: The concept <code>Right</code> represents a generic rights provided or recognised by some law or convention.</span> The relation <span data-dfn-for="hasRight"><dfn>hasRight</dfn> provides the relation to associate a <code>Right</code> with concepts.</span>. In addition, <span data-dfn-for="DataSubjectRight"><dfn>DataSubjectRight</dfn> refers to rights specifically available to applicable for Data Subjects.</span></li>
+      <li data-dfn-for="Risk"><dfn>Risk</dfn> represents the generic concept of <i>Risk</i> that can be associated with other concepts using [=hasRisk=].</li>
     </ul>
-    <p>Along with these, the DPV defines the concept of [=PersonalDataHandling=] for representing a 'policy' associating the top-level concepts with one another. For example, using [=PersonalDataHandling=] it is possible to indicate the application of a specific purpose and processing to categories of personal data relating to data subjects (or individual), along with the data controller responsible, the recipients of data, legal basis used, the technical and organisational measures involved, rights provided, and the possibility of risks.</p>
-    <p class="note">The DPV does not mandate the use of [=PersonalDataHandling=]. Adopters can define their own interpretation of what concepts personal data handling involves, or define a separate concept similar to [=PersonalDataHandling=]. For example, one may specify that a [=PersonalDataHandling=] is only associated with [=Purpose=], [=Processing=], [=PersonalData=], and [=Recipient=] where the legal basis and technical and organisational measures are either assumed or defined externally. In continuation of this, the DPV also does not provide any constraints on the inclusion or exclusion of concepts used to define an instance of [=PersonalDataHandling=]. Possibilities for specifying such constraints include use of OWL2 semantics and SHACL to specify mandatory concepts. For example, requiring every instance of [=PersonalDataHandling=] must have at least one Personal Data Category, Controller, Purpose, and Legal Basis.</p>
-    <section data-dfn-for="PersonalDataHandling"><dfn>PersonalDataHandling</dfn></section>
-    <section data-dfn-for="Right"><dfn>Right</dfn></section>
-    <section data-dfn-for="DataSubjectRight"><dfn>DataSubjectRight</dfn></section>
+
   <section id="baseontology-classes">
       <h3>Classes</h3>
     <p>
@@ -316,7 +471,7 @@
       <code><a href="#base-Recipient">Recipient</a></code> |
       <code><a href="#base-Right">Right</a></code> |
       <code><a href="#base-Risk">Risk</a></code> |
-      <code><a href="#base-TechnicalOrganisationalMeasure">Technical and Organisational Measure</a></code> |
+      <code><a href="#base-TechnicalOrganisationalMeasure">Technical and Organisational Measure</a></code>
     </p>
 
     <section >
@@ -810,17 +965,15 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
+            <td>Indicates association with Data Controller</td>
           </tr>
           <tr>
-            <td>Sub-Property Of:</td>
-            <td>
-              <a href="https://w3id.org/dpv#Relation">https://w3id.org/dpv#Relation</a>
-            </td>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
           </tr>
           <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#DataController"><code>dpv:DataController</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -849,17 +1002,15 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
+            <td>Indicates association with Data Subject</td>
           </tr>
           <tr>
-            <td>Sub-Property Of:</td>
-            <td>
-              <a href="https://w3id.org/dpv#Relation">https://w3id.org/dpv#Relation</a>
-            </td>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
           </tr>
           <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#DataSubject"><code>dpv:DataSubject</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -888,17 +1039,15 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
+            <td>Indicates use or applicability of a Legal Basis</td>
           </tr>
           <tr>
-            <td>Sub-Property Of:</td>
-            <td>
-              <a href="https://w3id.org/dpv#Relation">https://w3id.org/dpv#Relation</a>
-            </td>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
           </tr>
           <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#LegalBasis"><code>dpv:LegalBasis</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -924,17 +1073,15 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
+            <td>Indicates association with Personal Data</td>
           </tr>
           <tr>
-            <td>Sub-Property Of:</td>
-            <td>
-              <a href="https://w3id.org/dpv#Relation">https://w3id.org/dpv#Relation</a>
-            </td>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
           </tr>
           <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#PersonalData"><code>dpv:PersonalData</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -959,17 +1106,15 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
+            <td>Indicates association with Personal Data Handling</td>
           </tr>
           <tr>
-            <td>Sub-Property Of:</td>
-            <td>
-              <a href="https://w3id.org/dpv#Relation">https://w3id.org/dpv#Relation</a>
-            </td>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
           </tr>
           <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#PersonalDataHandling"><code>dpv:PersonalDataHandling</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -995,23 +1140,21 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Sub-Property Of:</td>
-            <td>
-              <a href="https://w3id.org/dpv#Relation">https://w3id.org/dpv#Relation</a>
-            </td>
-          </tr>
-          <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Indicates association with Processing</td>
           </tr>
           <tr>
             <td>Source:</td>
             <td>
               <a href="https://www.specialprivacy.eu/">SPECIAL Project</a>
             </td>
+          </tr>
+          <tr>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#Processing"><code>dpv:Processing</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -1040,23 +1183,21 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Sub-Property Of:</td>
-            <td>
-              <a href="https://w3id.org/dpv#Relation">https://w3id.org/dpv#Relation</a>
-            </td>
-          </tr>
-          <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Indicates association with Purpose</td>
           </tr>
           <tr>
             <td>Source:</td>
             <td>
               <a href="https://www.specialprivacy.eu/">SPECIAL Project</a>
             </td>
+          </tr>
+          <tr>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#Purpose"><code>dpv:Purpose</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -1085,23 +1226,21 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Sub-Property Of:</td>
-            <td>
-              <a href="https://w3id.org/dpv#Relation">https://w3id.org/dpv#Relation</a>
-            </td>
-          </tr>
-          <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Indicates Recipient of Personal Data</td>
           </tr>
           <tr>
             <td>Source:</td>
             <td>
               <a href="https://www.specialprivacy.eu/">SPECIAL Project</a>
             </td>
+          </tr>
+          <tr>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#Recipient"><code>dpv:Recipient</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -1130,17 +1269,15 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
+            <td>Indicates use or applicability of Right</td>
           </tr>
           <tr>
-            <td>Sub-Property Of:</td>
-            <td>
-              <a href="https://w3id.org/dpv#Relation">https://w3id.org/dpv#Relation</a>
-            </td>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
           </tr>
           <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#Right"><code>dpv:Right</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -1165,17 +1302,15 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
+            <td>Indicates applicability of Risk</td>
           </tr>
           <tr>
-            <td>Sub-Property Of:</td>
-            <td>
-              <a href="https://w3id.org/dpv#Relation">https://w3id.org/dpv#Relation</a>
-            </td>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
           </tr>
           <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#Risk"><code>dpv:Risk</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -1200,17 +1335,15 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
+            <td>Indicates use or applicability of Technical or Organisational measure</td>
           </tr>
           <tr>
-            <td>Sub-Property Of:</td>
-            <td>
-              <a href="https://w3id.org/dpv#Relation">https://w3id.org/dpv#Relation</a>
-            </td>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
           </tr>
           <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#TechnicalOrganisationalMeasure"><code>dpv:TechnicalOrganisationalMeasure</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -1263,7 +1396,7 @@
       <code><a href="#Representative">Representative</a></code> |
       <code><a href="#SupraNationalAuthority">SupraNationalAuthority</a></code> |
       <code><a href="#ThirdParty">Third Party</a></code> |
-      <code><a href="#VulnerableDataSubject">Vulnerable Data Subject</a></code> |
+      <code><a href="#VulnerableDataSubject">Vulnerable Data Subject</a></code>
     </p>
 
     <section data-dfn-for="AcademicScientificOrganisation">
@@ -2259,17 +2392,15 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
+            <td>Specifies address of a legal entity such as street address or pin code</td>
           </tr>
           <tr>
-            <td>Sub-Property Of:</td>
-            <td>
-              <a href="https://w3id.org/dpv#Relation">https://w3id.org/dpv#Relation</a>
-            </td>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Entity"><code>dpv:Entity</code></a></td>
           </tr>
           <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -2297,17 +2428,15 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
+            <td>Specifies contact details of a legal entity such as phone  or email</td>
           </tr>
           <tr>
-            <td>Sub-Property Of:</td>
-            <td>
-              <a href="https://w3id.org/dpv#Relation">https://w3id.org/dpv#Relation</a>
-            </td>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Entity"><code>dpv:Entity</code></a></td>
           </tr>
           <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -2335,17 +2464,21 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
+            <td>Indicates association with Data Controller</td>
           </tr>
           <tr>
             <td>Sub-Property Of:</td>
             <td>
-              <a href="https://w3id.org/dpv#hasEntity">https://w3id.org/dpv#hasEntity</a>
+              <a href="https://w3id.org/dpv#hasEntity">dpv:hasEntity</a>
             </td>
           </tr>
           <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#DataController"><code>dpv:DataController</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -2374,17 +2507,21 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
+            <td>Indiciates inclusion or applicability of a LegalEntity in the role of Data Exporter</td>
           </tr>
           <tr>
             <td>Sub-Property Of:</td>
             <td>
-              <a href="https://w3id.org/dpv#hasEntity">https://w3id.org/dpv#hasEntity</a>
+              <a href="https://w3id.org/dpv#hasEntity">dpv:hasEntity</a>
             </td>
           </tr>
           <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#DataExporter"><code>dpv:DataExporter</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -2403,17 +2540,21 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
+            <td>Indiciates inclusion or applicability of a LegalEntity in the role of Data Importer</td>
           </tr>
           <tr>
             <td>Sub-Property Of:</td>
             <td>
-              <a href="https://w3id.org/dpv#hasRecipient">https://w3id.org/dpv#hasRecipient</a>
+              <a href="https://w3id.org/dpv#hasRecipient">dpv:hasRecipient</a>
             </td>
           </tr>
           <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#DataImporter"><code>dpv:DataImporter</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -2432,17 +2573,21 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
+            <td>Indiciates inclusion or applicability of a Data Processor</td>
           </tr>
           <tr>
             <td>Sub-Property Of:</td>
             <td>
-              <a href="https://w3id.org/dpv#hasRecipient">https://w3id.org/dpv#hasRecipient</a>
+              <a href="https://w3id.org/dpv#hasRecipient">dpv:hasRecipient</a>
             </td>
           </tr>
           <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#DataProcessor"><code>dpv:DataProcessor</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -2461,17 +2606,21 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
+            <td>Indicates association with Data Subject</td>
           </tr>
           <tr>
             <td>Sub-Property Of:</td>
             <td>
-              <a href="https://w3id.org/dpv#hasEntity">https://w3id.org/dpv#hasEntity</a>
+              <a href="https://w3id.org/dpv#hasEntity">dpv:hasEntity</a>
             </td>
           </tr>
           <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#DataSubject"><code>dpv:DataSubject</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -2500,17 +2649,15 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
+            <td>Indicates inclusion or applicability of an entity to some concept</td>
           </tr>
           <tr>
-            <td>Sub-Property Of:</td>
-            <td>
-              <a href="https://w3id.org/dpv#Relation">https://w3id.org/dpv#Relation</a>
-            </td>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
           </tr>
           <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#Entity"><code>dpv:Entity</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -2529,17 +2676,21 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
+            <td>Indicates inclusion or applicability of a Joint Data Controller</td>
           </tr>
           <tr>
             <td>Sub-Property Of:</td>
             <td>
-              <a href="https://w3id.org/dpv#hasDataController">https://w3id.org/dpv#hasDataController</a>
+              <a href="https://w3id.org/dpv#hasDataController">dpv:hasDataController</a>
             </td>
           </tr>
           <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#JointDataController"><code>dpv:JointDataController</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -2558,17 +2709,15 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
+            <td>Specifies name of a legal entity</td>
           </tr>
           <tr>
-            <td>Sub-Property Of:</td>
-            <td>
-              <a href="https://w3id.org/dpv#Relation">https://w3id.org/dpv#Relation</a>
-            </td>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Entity"><code>dpv:Entity</code></a></td>
           </tr>
           <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -2596,23 +2745,27 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
+            <td>Indicates Recipient of Personal Data</td>
           </tr>
           <tr>
             <td>Sub-Property Of:</td>
             <td>
-              <a href="https://w3id.org/dpv#hasEntity">https://w3id.org/dpv#hasEntity</a>
+              <a href="https://w3id.org/dpv#hasEntity">dpv:hasEntity</a>
             </td>
-          </tr>
-          <tr>
-            <td>Status:</td>
-            <td>accepted</td>
           </tr>
           <tr>
             <td>Source:</td>
             <td>
               <a href="https://www.specialprivacy.eu/">SPECIAL Project</a>
             </td>
+          </tr>
+          <tr>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#Recipient"><code>dpv:Recipient</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -2641,17 +2794,21 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
+            <td>Indiciates inclusion or applicability of a Data Controller as a Recipient of persona data</td>
           </tr>
           <tr>
             <td>Sub-Property Of:</td>
             <td>
-              <a href="https://w3id.org/dpv#hasRecipient">https://w3id.org/dpv#hasRecipient</a>
+              <a href="https://w3id.org/dpv#hasRecipient">dpv:hasRecipient</a>
             </td>
           </tr>
           <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#DataController"><code>dpv:DataController</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -2670,17 +2827,21 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
+            <td>Indiciates inclusion or applicability of a Third Party as a Recipient of persona data</td>
           </tr>
           <tr>
             <td>Sub-Property Of:</td>
             <td>
-              <a href="https://w3id.org/dpv#hasRecipient">https://w3id.org/dpv#hasRecipient</a>
+              <a href="https://w3id.org/dpv#hasRecipient">dpv:hasRecipient</a>
             </td>
           </tr>
           <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#ThirdParty"><code>dpv:ThirdParty</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -2699,17 +2860,21 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
+            <td>Specifies representative of the legal entity</td>
           </tr>
           <tr>
             <td>Sub-Property Of:</td>
             <td>
-              <a href="https://w3id.org/dpv#hasEntity">https://w3id.org/dpv#hasEntity</a>
+              <a href="https://w3id.org/dpv#hasEntity">dpv:hasEntity</a>
             </td>
           </tr>
           <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Entity"><code>dpv:Entity</code></a></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#Representative"><code>dpv:Representative</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -2732,7 +2897,7 @@
 </section>
 
 <section id="vocab-purpose">
-  <h2>Entities</h2>
+  <h2>Purposes</h2>
   <section id="purpose-classes">
       <h3>Classes</h3>
     <p>
@@ -2799,7 +2964,7 @@
       <code><a href="#VendorManagement">Vendor Management</a></code> |
       <code><a href="#VendorPayment">Vendor Payment</a></code> |
       <code><a href="#VendorRecordsManagement">Vendor Records Management</a></code> |
-      <code><a href="#VendorSelectionAssessment">Vendor Selection Assessment</a></code> |
+      <code><a href="#VendorSelectionAssessment">Vendor Selection Assessment</a></code>
     </p>
 
     <section data-dfn-for="AcademicResearch">
@@ -5148,23 +5313,21 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Sub-Property Of:</td>
-            <td>
-              <a href="https://w3id.org/dpv#Relation">https://w3id.org/dpv#Relation</a>
-            </td>
-          </tr>
-          <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Indicates association with Purpose</td>
           </tr>
           <tr>
             <td>Source:</td>
             <td>
               <a href="https://www.specialprivacy.eu/">SPECIAL Project</a>
             </td>
+          </tr>
+          <tr>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#Purpose"><code>dpv:Purpose</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -5193,17 +5356,15 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
+            <td>Indicates the purpose is associated with activities in the indicated (Economic) Sector(s)</td>
           </tr>
           <tr>
-            <td>Sub-Property Of:</td>
-            <td>
-              <a href="https://w3id.org/dpv#Relation">https://w3id.org/dpv#Relation</a>
-            </td>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
           </tr>
           <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#Sector"><code>dpv:Sector</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -5217,7 +5378,7 @@
 </section>
 
 <section id="vocab-processing">
-  <h2>Entities</h2>
+  <h2>Processing</h2>
   <section id="processing-classes">
       <h3>Classes</h3>
     <p>
@@ -5254,7 +5415,7 @@
       <code><a href="#Transfer">Transfer</a></code> |
       <code><a href="#Transform">Transform</a></code> |
       <code><a href="#Transmit">Transmit</a></code> |
-      <code><a href="#Use">Use</a></code> |
+      <code><a href="#Use">Use</a></code>
     </p>
 
     <section data-dfn-for="Acquire">
@@ -6397,23 +6558,21 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Sub-Property Of:</td>
-            <td>
-              <a href="https://w3id.org/dpv#Relation">https://w3id.org/dpv#Relation</a>
-            </td>
-          </tr>
-          <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Indicates association with Processing</td>
           </tr>
           <tr>
             <td>Source:</td>
             <td>
               <a href="https://www.specialprivacy.eu/">SPECIAL Project</a>
             </td>
+          </tr>
+          <tr>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#Processing"><code>dpv:Processing</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -6437,7 +6596,7 @@
 </section>
 
 <section id="vocab-personaldata">
-  <h2>Entities</h2>
+  <h2>Personal Data</h2>
   <section id="personaldata-classes">
       <h3>Classes</h3>
     <p>
@@ -6448,7 +6607,7 @@
       <code><a href="#NonPersonalData">Non-Personal Data</a></code> |
       <code><a href="#PersonalData">Personal Data</a></code> |
       <code><a href="#PseudoAnonymisedData">Pseudo-anonymised Data</a></code> |
-      <code><a href="#SensitivePersonalData">SensitivePersonalData</a></code> |
+      <code><a href="#SensitivePersonalData">SensitivePersonalData</a></code>
     </p>
 
     <section data-dfn-for="AnonymisedData">
@@ -6768,17 +6927,15 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
+            <td>Indicates association with Personal Data</td>
           </tr>
           <tr>
-            <td>Sub-Property Of:</td>
-            <td>
-              <a href="https://w3id.org/dpv#Relation">https://w3id.org/dpv#Relation</a>
-            </td>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
           </tr>
           <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#PersonalData"><code>dpv:PersonalData</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -6798,7 +6955,7 @@
 </section>
 
 <section id="vocab-technical_organisational_measures">
-  <h2>Entities</h2>
+  <h2>Tech/Org Measures</h2>
   <section id="technical_organisational_measures-classes">
       <h3>Classes</h3>
     <p>
@@ -6851,7 +7008,7 @@
       <code><a href="#SubProcessorAgreement">Sub-Processor Agreement</a></code> |
       <code><a href="#TechnicalMeasure">Technical Measure</a></code> |
       <code><a href="#TechnicalOrganisationalMeasure">Technical and Organisational Measure</a></code> |
-      <code><a href="#ThirdPartyAgreement">Third-Party Agreement</a></code> |
+      <code><a href="#ThirdPartyAgreement">Third-Party Agreement</a></code>
     </p>
 
     <section data-dfn-for="AccessControlMethod">
@@ -8597,17 +8754,21 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
+            <td>Indicates use or applicability of Organisational measure</td>
           </tr>
           <tr>
             <td>Sub-Property Of:</td>
             <td>
-              <a href="https://w3id.org/dpv#hasTechnicalOrganisationalMeasure">https://w3id.org/dpv#hasTechnicalOrganisationalMeasure</a>
+              <a href="https://w3id.org/dpv#hasTechnicalOrganisationalMeasure">dpv:hasTechnicalOrganisationalMeasure</a>
             </td>
           </tr>
           <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#OrganisationalMeasure"><code>dpv:OrganisationalMeasure</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -8632,17 +8793,21 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
+            <td>Indicates policy applicable or used</td>
           </tr>
           <tr>
             <td>Sub-Property Of:</td>
             <td>
-              <a href="https://w3id.org/dpv#hasTechnicalOrganisationalMeasure">https://w3id.org/dpv#hasTechnicalOrganisationalMeasure</a>
+              <a href="https://w3id.org/dpv#hasTechnicalOrganisationalMeasure">dpv:hasTechnicalOrganisationalMeasure</a>
             </td>
           </tr>
           <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#Policy"><code>dpv:Policy</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -8667,17 +8832,15 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
+            <td>Indicates applicability of Risk</td>
           </tr>
           <tr>
-            <td>Sub-Property Of:</td>
-            <td>
-              <a href="https://w3id.org/dpv#Relation">https://w3id.org/dpv#Relation</a>
-            </td>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
           </tr>
           <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#Risk"><code>dpv:Risk</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -8702,17 +8865,21 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
+            <td>Indicates use or applicability of Technical measure</td>
           </tr>
           <tr>
             <td>Sub-Property Of:</td>
             <td>
-              <a href="https://w3id.org/dpv#hasTechnicalOrganisationalMeasure">https://w3id.org/dpv#hasTechnicalOrganisationalMeasure</a>
+              <a href="https://w3id.org/dpv#hasTechnicalOrganisationalMeasure">dpv:hasTechnicalOrganisationalMeasure</a>
             </td>
           </tr>
           <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#TechnicalMeasure"><code>dpv:TechnicalMeasure</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -8737,17 +8904,15 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
+            <td>Indicates use or applicability of Technical or Organisational measure</td>
           </tr>
           <tr>
-            <td>Sub-Property Of:</td>
-            <td>
-              <a href="https://w3id.org/dpv#Relation">https://w3id.org/dpv#Relation</a>
-            </td>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
           </tr>
           <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#TechnicalOrganisationalMeasure"><code>dpv:TechnicalOrganisationalMeasure</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -8776,17 +8941,21 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
+            <td>Indicate a risk is mitigated by specified measure</td>
           </tr>
           <tr>
             <td>Sub-Property Of:</td>
             <td>
-              <a href="https://w3id.org/dpv#hasTechnicalOrganisationalMeasure">https://w3id.org/dpv#hasTechnicalOrganisationalMeasure</a>
+              <a href="https://w3id.org/dpv#hasTechnicalOrganisationalMeasure">dpv:hasTechnicalOrganisationalMeasure</a>
             </td>
           </tr>
           <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Risk"><code>dpv:Risk</code></a></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#RiskMitigationMeasure"><code>dpv:RiskMitigationMeasure</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -8811,17 +8980,15 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
+            <td>Indicates the context or application of policy</td>
           </tr>
           <tr>
-            <td>Sub-Property Of:</td>
-            <td>
-              <a href="https://w3id.org/dpv#Relation">https://w3id.org/dpv#Relation</a>
-            </td>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Policy"><code>dpv:Policy</code></a></td>
           </tr>
           <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -8846,17 +9013,15 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
+            <td>Indicates mitigation of risk(s)</td>
           </tr>
           <tr>
-            <td>Sub-Property Of:</td>
-            <td>
-              <a href="https://w3id.org/dpv#Relation">https://w3id.org/dpv#Relation</a>
-            </td>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#RiskMitigationMeasure"><code>dpv:RiskMitigationMeasure</code></a></td>
           </tr>
           <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#Risk"><code>dpv:Risk</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -8875,8 +9040,1213 @@
   </section>
 </section>
 
+<section id="vocab-context">
+  <h2>Contextual Info</h2>
+  <section id="context-classes">
+      <h3>Classes</h3>
+    <p>
+      <code><a href="#AlgorithmicLogic">Algorithmic Logic</a></code> |
+      <code><a href="#Consequence">Consequence</a></code> |
+      <code><a href="#Context">Context</a></code> |
+      <code><a href="#Duration">Duration</a></code> |
+      <code><a href="#HumanInvolvement">Human Involvement</a></code> |
+      <code><a href="#Importance">Importance</a></code> |
+      <code><a href="#Necessity">Necessity</a></code> |
+      <code><a href="#NotRequired">Not Required</a></code> |
+      <code><a href="#Optional">Optional</a></code> |
+      <code><a href="#PrimaryImportance">Primary Importance</a></code> |
+      <code><a href="#Required">Required</a></code> |
+      <code><a href="#SecondaryImportance">Secondary Importance</a></code> |
+      <code><a href="#Technology">Technology</a></code>
+    </p>
+
+    <section data-dfn-for="AlgorithmicLogic">
+      <h4 id="AlgorithmicLogic">Algorithmic Logic</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>AlgorithmicLogic</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>The algorithmic logic applied or used</td>
+          </tr>
+          <tr>
+            <td>SubType of:</td>
+            <td>
+              <a href="https://w3id.org/dpv#Context">dpv:Context</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Note:</td>
+             <td>Algorithmic Logic is intended as a broad concept for explaining the use of algorithms and automated decisions making within Processing. To describe the actual algorithm, see the Algorithm concept.</td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-01-26</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="Consequence">
+      <h4 id="Consequence">Consequence</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>Consequence</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>The consequence(s) possible or arising from indicated plan or action</td>
+          </tr>
+          <tr>
+            <td>SubType of:</td>
+            <td>
+              <a href="https://w3id.org/dpv#Context">dpv:Context</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-01-26</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="Context">
+      <h4 id="Context">Context</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>Context</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Contextually relevant information about purpose not possible to represent through other concepts</td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2019-04-05</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Axel Polleres, 
+              Elmar Kiesling, 
+              Fajar Ekaputra, 
+              Harshvardhan J. Pandit, 
+              Javier Fernandez, 
+              Simon Steyskal
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="Duration">
+      <h4 id="Duration">Duration</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>Duration</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>The duration or temporal limitation</td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-02-09</time></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="HumanInvolvement">
+      <h4 id="HumanInvolvement">Human Involvement</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>HumanInvolvement</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>The involvement of humans as a factor or agent in processing</td>
+          </tr>
+          <tr>
+            <td>SubType of:</td>
+            <td>
+              <a href="https://w3id.org/dpv#Context">dpv:Context</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Note:</td>
+             <td>Human Involvement here broadly refers to any involvement by a human in the context of carrying out processing. This may include verification of outcomes, providing input data for making decisions, or overseeing activities.</td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-01-26</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="Importance">
+      <h4 id="Importance">Importance</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>Importance</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>An indication of &#39;importance&#39; within a context</td>
+          </tr>
+          <tr>
+            <td>SubType of:</td>
+            <td>
+              <a href="https://w3id.org/dpv#Context">dpv:Context</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Note:</td>
+             <td>Importance can be used to express importance, desirability, relevance, or significance as a context.</td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-02-09</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Beatriz Esteves, 
+              Georg P Krog, 
+              Harshvardhan J. Pandit, 
+              Julian Flake, 
+              Paul Ryan
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="Necessity">
+      <h4 id="Necessity">Necessity</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>Necessity</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>An indication of &#39;necessity&#39; within a context</td>
+          </tr>
+          <tr>
+            <td>SubType of:</td>
+            <td>
+              <a href="https://w3id.org/dpv#Context">dpv:Context</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Note:</td>
+             <td>Necessity can be used to express need, essentiality, requirement, or compulsion.</td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-02-12</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Beatriz Esteves, 
+              Georg P Krog, 
+              Harshvardhan J. Pandit, 
+              Julian Flake, 
+              Paul Ryan
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="NotRequired">
+      <h4 id="NotRequired">Not Required</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>NotRequired</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Indication of neither being required nor optional i.e. not relevant or needed</td>
+          </tr>
+          <tr>
+            <td>SubType of:</td>
+            <td>
+              <a href="https://w3id.org/dpv#Necessity">dpv:Necessity</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-02-15</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Beatriz Esteves, 
+              Georg P Krog, 
+              Harshvardhan J. Pandit, 
+              Julian Flake, 
+              Paul Ryan
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="Optional">
+      <h4 id="Optional">Optional</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>Optional</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Indication of &#39;optional&#39; or &#39;voluntary&#39;</td>
+          </tr>
+          <tr>
+            <td>SubType of:</td>
+            <td>
+              <a href="https://w3id.org/dpv#Necessity">dpv:Necessity</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-02-14</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Beatriz Esteves, 
+              Georg P Krog, 
+              Harshvardhan J. Pandit, 
+              Julian Flake, 
+              Paul Ryan
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="PrimaryImportance">
+      <h4 id="PrimaryImportance">Primary Importance</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>PrimaryImportance</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Indication of &#39;primary&#39; or &#39;main&#39; or &#39;core&#39; importance</td>
+          </tr>
+          <tr>
+            <td>SubType of:</td>
+            <td>
+              <a href="https://w3id.org/dpv#Importance">dpv:Importance</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-02-10</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Beatriz Esteves, 
+              Georg P Krog, 
+              Harshvardhan J. Pandit, 
+              Julian Flake, 
+              Paul Ryan
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="Required">
+      <h4 id="Required">Required</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>Required</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Indication of &#39;required&#39; or &#39;necessary&#39;</td>
+          </tr>
+          <tr>
+            <td>SubType of:</td>
+            <td>
+              <a href="https://w3id.org/dpv#Necessity">dpv:Necessity</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-02-13</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Beatriz Esteves, 
+              Georg P Krog, 
+              Harshvardhan J. Pandit, 
+              Julian Flake, 
+              Paul Ryan
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="SecondaryImportance">
+      <h4 id="SecondaryImportance">Secondary Importance</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>SecondaryImportance</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Indication of &#39;secondary&#39; or &#39;minor&#39; or &#39;auxiliary&#39; importance</td>
+          </tr>
+          <tr>
+            <td>SubType of:</td>
+            <td>
+              <a href="https://w3id.org/dpv#Importance">dpv:Importance</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-02-11</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Beatriz Esteves, 
+              Georg P Krog, 
+              Harshvardhan J. Pandit, 
+              Julian Flake, 
+              Paul Ryan
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="Technology">
+      <h4 id="Technology">Technology</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>Technology</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>The technology, technological implementation, or any techniques, skills, methods, and processes used or applied</td>
+          </tr>
+          <tr>
+            <td>Note:</td>
+             <td>Examples (non-exhaustive) include: Algorithm, Process, Method, Skill, Database, Cookies, Server, Device</td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-01-26</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </section>
+  <section id="context-properties">
+      <h3>Properties</h3>
+    <p>
+      <code><a href="#hasAlgorithmicLogic">has algorithmic logic</a></code> |
+      <code><a href="#hasConsequence">has consequence</a></code> |
+      <code><a href="#hasContext">has context</a></code> |
+      <code><a href="#hasDuration">has duration</a></code> |
+      <code><a href="#hasHumanInvolvement">has human involvement</a></code> |
+      <code><a href="#hasIdentifier">has identifier</a></code> |
+      <code><a href="#isImplementedUsingTechnology">is implemented using technology</a></code> |
+    </p>
+
+    <section data-dfn-for="hasAlgorithmicLogic">
+      <h4 id="hasAlgorithmicLogic">has algorithmic logic</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>hasAlgorithmicLogic</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>Indicates the logic used in processing such as for automated decision making</td>
+          </tr>
+          <tr>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#AlgorithmicLogic"><code>dpv:AlgorithmicLogic</code></a></td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2020-11-04</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Georg P. Krog, 
+              Harshvardhan J. Pandit, 
+              Paul Ryan
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="hasConsequence">
+      <h4 id="hasConsequence">has consequence</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>hasConsequence</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>Indicates consequences of processing such as those for Data Subjects in relation to automated decision making</td>
+          </tr>
+          <tr>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#Consequence"><code>dpv:Consequence</code></a></td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2020-11-04</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Georg P. Krog, 
+              Harshvardhan J. Pandit, 
+              Paul Ryan
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="hasContext">
+      <h4 id="hasContext">has context</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>hasContext</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>Indicates a purpose is restricted to the specified context(s)</td>
+          </tr>
+          <tr>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Purpose"><code>dpv:Purpose</code></a></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#Context"><code>dpv:Context</code></a></td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2019-04-05</time></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="hasDuration">
+      <h4 id="hasDuration">has duration</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>hasDuration</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>Indicates information about duration</td>
+          </tr>
+          <tr>
+            <td>Source:</td>
+            <td>
+              <a href="https://www.specialprivacy.eu/">SPECIAL Project</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#Duration"><code>dpv:Duration</code></a></td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2019-04-05</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Axel Polleres, 
+              Harshvardhan J. Pandit, 
+              Mark Lizar, 
+              Rob Brennan
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="hasHumanInvolvement">
+      <h4 id="hasHumanInvolvement">has human involvement</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>hasHumanInvolvement</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>Indicates Involvement of humans in processing such as within automated decision making process</td>
+          </tr>
+          <tr>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#HumanInvolvement"><code>dpv:HumanInvolvement</code></a></td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2020-11-04</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Georg P. Krog, 
+              Harshvardhan J. Pandit, 
+              Paul Ryan
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="hasIdentifier">
+      <h4 id="hasIdentifier">has identifier</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>hasIdentifier</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>Indicates an identifier associated for identification or reference</td>
+          </tr>
+          <tr>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2020-11-25</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Beatriz Esteves, 
+              Georg P Krog, 
+              Harshvardhan J.Pandit, 
+              Paul Ryan
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="isImplementedUsingTechnology">
+      <h4 id="isImplementedUsingTechnology">is implemented using technology</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>isImplementedUsingTechnology</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>Indicates implementation details such as technologies or processes</td>
+          </tr>
+          <tr>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#Technology"><code>dpv:Technology</code></a></td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-01-26</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Beatriz Esteves, 
+              Harshvardhan J. Pandit, 
+              Julian Flake, 
+              Paul Ryan
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </section>
+</section>
+
+<section id="vocab-jurisdictions">
+  <h2>Location &amp; Jurisdictions</h2>
+  <section id="jurisdictions-classes">
+      <h3>Classes</h3>
+    <p>
+      <code><a href="#Country">Country</a></code> |
+      <code><a href="#EconomicUnion">EconomicUnion</a></code> |
+      <code><a href="#Law">Law</a></code> |
+      <code><a href="#Location">Location</a></code> |
+      <code><a href="#Region">Region</a></code> |
+      <code><a href="#SupraNationalUnion">SupraNationalUnion</a></code> |
+      <code><a href="#ThirdCountry">Third Country</a></code>
+    </p>
+
+    <section data-dfn-for="Country">
+      <h4 id="Country">Country</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>Country</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>A political entity indicative of a sovereign or non-sovereign territorial state comprising of distinct geographical areas</td>
+          </tr>
+          <tr>
+            <td>SubType of:</td>
+            <td>
+              <a href="https://w3id.org/dpv#Location">dpv:Location</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Note:</td>
+             <td>The definition of country is not intended for political interpretation. DPVCG welcomes alternate definitions based in existing sources with global scope, such as UN or ISO.</td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-01-19</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Georg P Krog, 
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="EconomicUnion">
+      <h4 id="EconomicUnion">EconomicUnion</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>EconomicUnion</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>A political union of two or more countries based on economic or trade agreements</td>
+          </tr>
+          <tr>
+            <td>SubType of:</td>
+            <td>
+              <a href="https://w3id.org/dpv#Location">dpv:Location</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-01-19</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="Law">
+      <h4 id="Law">Law</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>Law</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>A law is a set of rules created by government or authorities</td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-01-19</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="Location">
+      <h4 id="Location">Location</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>Location</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>A location is a position, site, or area where something is located</td>
+          </tr>
+          <tr>
+            <td>Note:</td>
+             <td>Location may be geographic, physical, or virtual.</td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-01-19</time></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="Region">
+      <h4 id="Region">Region</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>Region</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>A region is an area or site that is considered a location</td>
+          </tr>
+          <tr>
+            <td>SubType of:</td>
+            <td>
+              <a href="https://w3id.org/dpv#Location">dpv:Location</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-01-19</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="SupraNationalUnion">
+      <h4 id="SupraNationalUnion">SupraNationalUnion</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>SupraNationalUnion</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>A political union of two or more countries with an establishment of common authority</td>
+          </tr>
+          <tr>
+            <td>SubType of:</td>
+            <td>
+              <a href="https://w3id.org/dpv#Location">dpv:Location</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-01-19</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="ThirdCountry">
+      <h4 id="ThirdCountry">Third Country</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>ThirdCountry</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Represents a country outside applicable or compatible jurisdiction as outlined in law</td>
+          </tr>
+          <tr>
+            <td>SubType of:</td>
+            <td>
+              <a href="https://w3id.org/dpv#Country">dpv:Country</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-02-09</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </section>
+  <section id="jurisdictions-properties">
+      <h3>Properties</h3>
+    <p>
+      <code><a href="#hasApplicableLaw">has applicable law</a></code> |
+      <code><a href="#hasAuthority">has authority</a></code> |
+      <code><a href="#hasCountry">has country</a></code> |
+      <code><a href="#hasJurisdiction">has jurisdiction</a></code> |
+      <code><a href="#hasLocation">has location</a></code> |
+      <code><a href="#hasThirdCountry">has third country</a></code> |
+      <code><a href="#isAuthorityFor">is authority for</a></code> |
+    </p>
+
+    <section data-dfn-for="hasApplicableLaw">
+      <h4 id="hasApplicableLaw">has applicable law</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>hasApplicableLaw</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>Indicates applicability of a Law</td>
+          </tr>
+          <tr>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#Law"><code>dpv:Law</code></a></td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-01-19</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="hasAuthority">
+      <h4 id="hasAuthority">has authority</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>hasAuthority</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>Indicates applicability of authority for a jurisdiction</td>
+          </tr>
+          <tr>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#Authority"><code>dpv:Authority</code></a></td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-01-19</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Georg P Krog, 
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="hasCountry">
+      <h4 id="hasCountry">has country</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>hasCountry</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>Indicates applicability of specified country</td>
+          </tr>
+          <tr>
+            <td>Sub-Property Of:</td>
+            <td>
+              <a href="https://w3id.org/dpv#hasLocation">dpv:hasLocation</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#Country"><code>dpv:Country</code></a></td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-01-19</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Georg P Krog, 
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="hasJurisdiction">
+      <h4 id="hasJurisdiction">has jurisdiction</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>hasJurisdiction</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>Indicates applicability of specified jurisdiction</td>
+          </tr>
+          <tr>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#Location"><code>dpv:Location</code></a></td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-01-19</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="hasLocation">
+      <h4 id="hasLocation">has location</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>hasLocation</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>Indicates information about location</td>
+          </tr>
+          <tr>
+            <td>Source:</td>
+            <td>
+              <a href="https://www.specialprivacy.eu/">SPECIAL Project</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#Location"><code>dpv:Location</code></a></td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2019-04-05</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Axel Polleres, 
+              Harshvardhan J. Pandit, 
+              Mark Lizar, 
+              Rob Brennan
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="hasThirdCountry">
+      <h4 id="hasThirdCountry">has third country</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>hasThirdCountry</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>Indicates applicability or relevance of a &#39;third country&#39;</td>
+          </tr>
+          <tr>
+            <td>Sub-Property Of:</td>
+            <td>
+              <a href="https://w3id.org/dpv#hasCountry">dpv:hasCountry</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#ThirdCountry"><code>dpv:ThirdCountry</code></a></td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-02-09</time></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="isAuthorityFor">
+      <h4 id="isAuthorityFor">is authority for</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>isAuthorityFor</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>Indicates area, scope, or applicability of an Authority</td>
+          </tr>
+          <tr>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Authority"><code>dpv:Authority</code></a></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-01-19</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Georg P Krog, 
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </section>
+</section>
+
 <section id="vocab-legal_basis">
-  <h2>Entities</h2>
+  <h2>Legal Bases</h2>
   <section id="legal_basis-classes">
       <h3>Classes</h3>
     <p>
@@ -8894,7 +10264,7 @@
       <code><a href="#PublicInterest">Public Interest</a></code> |
       <code><a href="#VitalInterest">Vital Interest</a></code> |
       <code><a href="#VitalInterestOfDataSubject">Vital Interest of Data Subject</a></code> |
-      <code><a href="#VitalInterestOfNaturalPerson">Vital Interest of Natural Person</a></code> |
+      <code><a href="#VitalInterestOfNaturalPerson">Vital Interest of Natural Person</a></code>
     </p>
 
     <section data-dfn-for="Consent">
@@ -9379,231 +10749,38 @@
   <section id="legal_basis-properties">
       <h3>Properties</h3>
     <p>
-      <code><a href="#hasApplicableLaw">has applicable law</a></code> |
-      <code><a href="#hasAuthority">has authority</a></code> |
-      <code><a href="#hasCountry">has country</a></code> |
-      <code><a href="#hasJurisdiction">has jurisdiction</a></code> |
-      <code><a href="#hasLocation">has location</a></code> |
-      <code><a href="#hasThirdCountry">has third country</a></code> |
-      <code><a href="#isAuthorityFor">is authority for</a></code> |
+      <code><a href="#hasLegalBasis">has legal basis</a></code> |
     </p>
 
-    <section data-dfn-for="hasApplicableLaw">
-      <h4 id="hasApplicableLaw">has applicable law</h4>
+    <section data-dfn-for="hasLegalBasis">
+      <h4 id="hasLegalBasis">has legal basis</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>hasApplicableLaw</dfn></code></td>
+            <td><code><dfn>hasLegalBasis</dfn></code></td>
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
+            <td>Indicates use or applicability of a Legal Basis</td>
           </tr>
           <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
           </tr>
           <tr>
-            <td>Created:</td>
-            <td><time>2022-01-19</time></td>
-          </tr>
-          <tr>
-            <td>Contributor(s):</td>
-            <td>
-              Harshvardhan J. Pandit
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-    <section data-dfn-for="hasAuthority">
-      <h4 id="hasAuthority">has authority</h4>
-      <table class="definition">
-        <tbody>
-          <tr>
-            <td>Term:</td>
-            <td><code><dfn>hasAuthority</dfn></code></td>
-          </tr>
-          <tr>
-            <td>Description:</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#LegalBasis"><code>dpv:LegalBasis</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
-            <td><time>2022-01-19</time></td>
-          </tr>
-          <tr>
-            <td>Contributor(s):</td>
-            <td>
-              Georg P Krog, 
-              Harshvardhan J. Pandit
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-    <section data-dfn-for="hasCountry">
-      <h4 id="hasCountry">has country</h4>
-      <table class="definition">
-        <tbody>
-          <tr>
-            <td>Term:</td>
-            <td><code><dfn>hasCountry</dfn></code></td>
-          </tr>
-          <tr>
-            <td>Description:</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Sub-Property Of:</td>
-            <td>
-              <a href="https://w3id.org/dpv#hasLocation">https://w3id.org/dpv#hasLocation</a>
-            </td>
-          </tr>
-          <tr>
-            <td>Status:</td>
-            <td>accepted</td>
-          </tr>
-          <tr>
-            <td>Created:</td>
-            <td><time>2022-01-19</time></td>
-          </tr>
-          <tr>
-            <td>Contributor(s):</td>
-            <td>
-              Georg P Krog, 
-              Harshvardhan J. Pandit
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-    <section data-dfn-for="hasJurisdiction">
-      <h4 id="hasJurisdiction">has jurisdiction</h4>
-      <table class="definition">
-        <tbody>
-          <tr>
-            <td>Term:</td>
-            <td><code><dfn>hasJurisdiction</dfn></code></td>
-          </tr>
-          <tr>
-            <td>Description:</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Status:</td>
-            <td>accepted</td>
-          </tr>
-          <tr>
-            <td>Created:</td>
-            <td><time>2022-01-19</time></td>
-          </tr>
-          <tr>
-            <td>Contributor(s):</td>
-            <td>
-              Harshvardhan J. Pandit
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-    <section data-dfn-for="hasLocation">
-      <h4 id="hasLocation">has location</h4>
-      <table class="definition">
-        <tbody>
-          <tr>
-            <td>Term:</td>
-            <td><code><dfn>hasLocation</dfn></code></td>
-          </tr>
-          <tr>
-            <td>Description:</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Status:</td>
-            <td>accepted</td>
-          </tr>
-          <tr>
-            <td>Source:</td>
-            <td>
-              <a href="https://www.specialprivacy.eu/">SPECIAL Project</a>
-            </td>
-          </tr>
-          <tr>
-            <td>Created:</td>
-            <td><time>2019-04-05</time></td>
+            <td><time>2019-04-04</time></td>
           </tr>
           <tr>
             <td>Contributor(s):</td>
             <td>
               Axel Polleres, 
-              Harshvardhan J. Pandit, 
-              Mark Lizar, 
-              Rob Brennan
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-    <section data-dfn-for="hasThirdCountry">
-      <h4 id="hasThirdCountry">has third country</h4>
-      <table class="definition">
-        <tbody>
-          <tr>
-            <td>Term:</td>
-            <td><code><dfn>hasThirdCountry</dfn></code></td>
-          </tr>
-          <tr>
-            <td>Description:</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Sub-Property Of:</td>
-            <td>
-              <a href="https://w3id.org/dpv#hasCountry">https://w3id.org/dpv#hasCountry</a>
-            </td>
-          </tr>
-          <tr>
-            <td>Status:</td>
-            <td>accepted</td>
-          </tr>
-          <tr>
-            <td>Created:</td>
-            <td><time>2022-02-09</time></td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-    <section data-dfn-for="isAuthorityFor">
-      <h4 id="isAuthorityFor">is authority for</h4>
-      <table class="definition">
-        <tbody>
-          <tr>
-            <td>Term:</td>
-            <td><code><dfn>isAuthorityFor</dfn></code></td>
-          </tr>
-          <tr>
-            <td>Description:</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Status:</td>
-            <td>accepted</td>
-          </tr>
-          <tr>
-            <td>Created:</td>
-            <td><time>2022-01-19</time></td>
-          </tr>
-          <tr>
-            <td>Contributor(s):</td>
-            <td>
-              Georg P Krog, 
-              Harshvardhan J. Pandit
+              Javier Fernández
             </td>
           </tr>
         </tbody>
@@ -9614,7 +10791,7 @@
 </section>
 
 <section id="vocab-consent">
-  <h2>Entities</h2>
+  <h2>Consent</h2>
   <section id="consent-properties">
       <h3>Properties</h3>
     <p>
@@ -9643,11 +10820,7 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Specifies the notice provided in context of consent</td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -9674,11 +10847,7 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Generic property specifying when or under which condition(s) the consent will expire</td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -9705,17 +10874,13 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
+            <td>Specifies the condition or event that determines the expiry of consent</td>
           </tr>
           <tr>
             <td>Sub-Property Of:</td>
             <td>
-              <a href="https://w3id.org/dpv#expiry">https://w3id.org/dpv#expiry</a>
+              <a href="https://w3id.org/dpv#expiry">dpv:expiry</a>
             </td>
-          </tr>
-          <tr>
-            <td>Status:</td>
-            <td>accepted</td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -9742,17 +10907,17 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
+            <td>Specifies the expiry time or duration for consent</td>
           </tr>
           <tr>
             <td>Sub-Property Of:</td>
             <td>
-              <a href="https://w3id.org/dpv#expiry">https://w3id.org/dpv#expiry</a>
+              <a href="https://w3id.org/dpv#expiry">dpv:expiry</a>
             </td>
           </tr>
           <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Range:</td>
+            <td><a href="http://www.w3.org/2006/time#TemporalEntity"><code>time:TemporalEntity</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -9779,11 +10944,11 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
+            <td>Specifies the entity that provisioned or provided consent</td>
           </tr>
           <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#LegalEntity"><code>dpv:LegalEntity</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -9810,11 +10975,7 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Specifies the justification for entity providing consent</td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -9841,11 +11002,7 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Specifies the method by which consent was provisioned or provided</td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -9872,11 +11029,11 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
+            <td>Specifies the instant in time when consent was given</td>
           </tr>
           <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Range:</td>
+            <td><a href="http://www.w3.org/2006/time#Instant"><code>time:Instant</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -9903,11 +11060,11 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
+            <td>Specifies the entity that withdrew consent</td>
           </tr>
           <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#LegalEntity"><code>dpv:LegalEntity</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -9934,11 +11091,7 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Specifies the justification for entity withdrawing consent</td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -9965,11 +11118,7 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Specifries the method by which consent can be/has been withdrawn</td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -9996,11 +11145,11 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
+            <td>Specifies the instant in time when consent was withdrawn</td>
           </tr>
           <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Range:</td>
+            <td><a href="http://www.w3.org/2006/time#Instant"><code>time:Instant</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -10027,11 +11176,11 @@
           </tr>
           <tr>
             <td>Description:</td>
-            <td></td>
+            <td>Specifies consent is &#39;explicit&#39;</td>
           </tr>
           <tr>
-            <td>Status:</td>
-            <td>accepted</td>
+            <td>Range:</td>
+            <td><a href="http://www.w3.org/2001/XMLSchema#boolean"><code>xsd:boolean</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>

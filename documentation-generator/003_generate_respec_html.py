@@ -6,7 +6,7 @@
 # The vocabularies are modular
 
 IMPORT_DPV_PATH = '../dpv/dpv.ttl'
-IMPORT_DPV_MODULES_PATH = '../dpv/rdf'
+IMPORT_DPV_MODULES_PATH = '../dpv/modules'
 EXPORT_DPV_HTML_PATH = '../dpv'
 IMPORT_DPV_GDPR_PATH = '../dpv-gdpr/dpv-gdpr.ttl'
 IMPORT_DPV_GDPR_MODULES_PATH = '../dpv-gdpr/rdf'
@@ -38,8 +38,8 @@ def load_data(label, filepath):
     G = DataGraph()
     G.load(g)
     G.graph.ns = { k:v for k,v in G.graph.namespaces() }
-    TEMPLATE_DATA[f'{label}_classes'] = G.get_instances_of('rdfs_Class')
-    TEMPLATE_DATA[f'{label}_properties'] = G.get_instances_of('rdf_Property')
+    TEMPLATE_DATA[f'{label}_classes'] = G.get_instances_of('dpv_Concept')
+    TEMPLATE_DATA[f'{label}_properties'] = G.get_instances_of('dpv_Relation')
 
 
 def prefix_this(item):
@@ -96,11 +96,13 @@ template_env.filters.update(JINJA2_FILTERS)
 
 # LOAD DATA
 load_data('core', f'{IMPORT_DPV_MODULES_PATH}/base.ttl')
-load_data('personaldata', f'{IMPORT_DPV_MODULES_PATH}/personal_data_categories.ttl')
+load_data('personaldata', f'{IMPORT_DPV_MODULES_PATH}/personal_data.ttl')
 load_data('purpose', f'{IMPORT_DPV_MODULES_PATH}/purposes.ttl')
 load_data('processing', f'{IMPORT_DPV_MODULES_PATH}/processing.ttl')
 load_data('technical_organisational_measures', f'{IMPORT_DPV_MODULES_PATH}/technical_organisational_measures.ttl')
 load_data('entities', f'{IMPORT_DPV_MODULES_PATH}/entities.ttl')
+load_data('context', f'{IMPORT_DPV_MODULES_PATH}/context.ttl')
+load_data('jurisdictions', f'{IMPORT_DPV_MODULES_PATH}/jurisdictions.ttl')
 load_data('legal_basis', f'{IMPORT_DPV_MODULES_PATH}/legal_basis.ttl')
 load_data('consent', f'{IMPORT_DPV_MODULES_PATH}/consent.ttl')
 g = Graph()
@@ -116,6 +118,9 @@ DEBUG(f'wrote DPV spec at f{EXPORT_DPV_HTML_PATH}/index.html')
 with open(f'{EXPORT_DPV_HTML_PATH}/dpv.html', 'w+') as fd:
     fd.write(template.render(**TEMPLATE_DATA))
 DEBUG(f'wrote DPV spec at f{EXPORT_DPV_HTML_PATH}/dpv.html')
+
+import sys
+sys.exit()
 
 # DPV-GDPR: generate HTML
 

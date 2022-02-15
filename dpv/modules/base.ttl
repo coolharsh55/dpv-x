@@ -51,7 +51,6 @@ dpv:hasDataController a skos:Concept,
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:DataController ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates association with Data Controller"@en ;
     skos:prefLabel "has data controller"@en .
@@ -67,7 +66,6 @@ dpv:hasDataSubject a skos:Concept,
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:DataSubject ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates association with Data Subject"@en ;
     skos:prefLabel "has data subject"@en .
@@ -80,7 +78,6 @@ dpv:hasLegalBasis a skos:Concept,
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:LegalBasis ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates use or applicability of a Legal Basis"@en ;
     skos:prefLabel "has legal basis"@en .
@@ -91,7 +88,6 @@ dpv:hasPersonalData a skos:Concept,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:PersonalData ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates association with Personal Data"@en ;
     skos:prefLabel "has personal data"@en .
@@ -103,7 +99,6 @@ dpv:hasPersonalDataHandling a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:PersonalDataHandling ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates association with Personal Data Handling"@en ;
     skos:prefLabel "has personal data handling"@en .
@@ -119,7 +114,6 @@ dpv:hasProcessing a skos:Concept,
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:Processing ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates association with Processing"@en ;
     skos:prefLabel "has processing"@en ;
@@ -136,7 +130,6 @@ dpv:hasPurpose a skos:Concept,
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:Purpose ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates association with Purpose"@en ;
     skos:prefLabel "has purpose"@en ;
@@ -153,7 +146,6 @@ dpv:hasRecipient a skos:Concept,
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:Recipient ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates Recipient of Personal Data"@en ;
     skos:prefLabel "has recipient"@en ;
@@ -165,7 +157,6 @@ dpv:hasRight a skos:Concept,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:Right ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates use or applicability of Right"@en ;
     skos:prefLabel "has right"@en .
@@ -176,7 +167,6 @@ dpv:hasRisk a skos:Concept,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:Risk ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates applicability of Risk"@en ;
     skos:prefLabel "has risk"@en .
@@ -192,7 +182,6 @@ dpv:hasTechnicalOrganisationalMeasure a skos:Concept,
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:TechnicalOrganisationalMeasure ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates use or applicability of Technical or Organisational measure"@en ;
     skos:prefLabel "has technical and organisational measure"@en .

@@ -90,7 +90,6 @@ dpv:ContextConcepts a skos:Collection ;
         dpv:Duration,
         dpv:HumanInvolvement,
         dpv:Importance,
-        dpv:Location,
         dpv:Necessity,
         dpv:NotRequired,
         dpv:Optional,
@@ -104,7 +103,6 @@ dpv:ContextConcepts a skos:Collection ;
         dpv:hasDuration,
         dpv:hasHumanInvolvement,
         dpv:hasIdentifier,
-        dpv:hasLocation,
         dpv:isImplementedUsingTechnology .
 
 dpv:EntitiesConcepts a skos:Collection ;
@@ -431,7 +429,6 @@ dpv:hasAddress a skos:Concept,
         "Paul Ryan"^^xsd:string ;
     rdfs:domain dpv:Entity ;
     rdfs:range dpv:Concept ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Specifies address of a legal entity such as street address or pin code"@en ;
     skos:inScheme dpv: ;
@@ -445,7 +442,6 @@ dpv:hasAlgorithmicLogic a skos:Concept,
         "Paul Ryan"^^xsd:string ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:AlgorithmicLogic ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates the logic used in processing such as for automated decision making"@en ;
     skos:inScheme dpv: ;
@@ -495,7 +491,6 @@ dpv:hasConsequence a skos:Concept,
     dct:modified "2021-09-21"^^xsd:date ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:Consequence ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates consequences of processing such as those for Data Subjects in relation to automated decision making"@en ;
     skos:inScheme dpv: ;
@@ -511,7 +506,6 @@ dpv:hasContact a skos:Concept,
         "Paul Ryan"^^xsd:string ;
     rdfs:domain dpv:Entity ;
     rdfs:range dpv:Concept ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Specifies contact details of a legal entity such as phone  or email"@en ;
     skos:inScheme dpv: ;
@@ -522,7 +516,6 @@ dpv:hasContext a skos:Concept,
     dct:created "2019-04-05"^^xsd:date ;
     rdfs:domain dpv:Purpose ;
     rdfs:range dpv:Context ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates a purpose is restricted to the specified context(s)"@en ;
     skos:inScheme dpv: ;
@@ -569,7 +562,6 @@ dpv:hasDataSource a skos:Concept,
         "Paul Ryan"^^xsd:string ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:DataSource ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates the source or origin of data being processed"@en ;
     skos:inScheme dpv: ;
@@ -584,7 +576,6 @@ dpv:hasDuration a skos:Concept,
         "Rob Brennan"^^xsd:string ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:Duration ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates information about duration"@en ;
     skos:inScheme dpv: ;
@@ -636,7 +627,6 @@ dpv:hasHumanInvolvement a skos:Concept,
         "Paul Ryan"^^xsd:string ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:HumanInvolvement ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates Involvement of humans in processing such as within automated decision making process"@en ;
     skos:inScheme dpv: ;
@@ -652,7 +642,6 @@ dpv:hasIdentifier a skos:Concept,
         "Paul Ryan"^^xsd:string ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:Concept ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates an identifier associated for identification or reference"@en ;
     skos:inScheme dpv: ;
@@ -689,7 +678,6 @@ dpv:hasName a skos:Concept,
         "Paul Ryan"^^xsd:string ;
     rdfs:domain dpv:Entity ;
     rdfs:range dpv:Concept ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Specifies name of a legal entity"@en ;
     skos:inScheme dpv: ;
@@ -714,7 +702,6 @@ dpv:hasPersonalDataHandling a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:PersonalDataHandling ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates association with Personal Data Handling"@en ;
     skos:inScheme dpv: ;
@@ -824,7 +811,6 @@ dpv:hasRight a skos:Concept,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:Right ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates use or applicability of Right"@en ;
     skos:inScheme dpv: ;
@@ -835,7 +821,6 @@ dpv:hasSector a skos:Concept,
     dct:created "2019-04-05"^^xsd:date ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:Sector ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates the purpose is associated with activities in the indicated (Economic) Sector(s)"@en ;
     skos:inScheme dpv: ;
@@ -850,7 +835,6 @@ dpv:hasStorage a skos:Concept,
         "Rob Brennan"^^xsd:string ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:StorageCondition ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates information about storage condition"@en ;
     skos:inScheme dpv: ;
@@ -963,7 +947,6 @@ dpv:isImplementedUsingTechnology a skos:Concept,
         "Paul Ryan"^^xsd:string ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:Technology ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates implementation details such as technologies or processes"@en ;
     skos:inScheme dpv: ;
@@ -988,7 +971,6 @@ dpv:isPolicyFor a skos:Concept,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     rdfs:domain dpv:Policy ;
     rdfs:range dpv:Concept ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates the context or application of policy"@en ;
     skos:inScheme dpv: ;
@@ -1000,7 +982,6 @@ dpv:mitigatesRisk a skos:Concept,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     rdfs:domain dpv:RiskMitigationMeasure ;
     rdfs:range dpv:Risk ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates mitigation of risk(s)"@en ;
     skos:inScheme dpv: ;
@@ -2816,8 +2797,7 @@ dpv:hasDataSubject a skos:Concept,
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:DataSubject ;
-    rdfs:subPropertyOf dpv:Relation,
-        dpv:hasEntity ;
+    rdfs:subPropertyOf dpv:hasEntity ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates association with Data Subject"@en ;
     skos:inScheme dpv: ;
@@ -2831,11 +2811,25 @@ dpv:hasLegalBasis a skos:Concept,
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:LegalBasis ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates use or applicability of a Legal Basis"@en ;
     skos:inScheme dpv: ;
     skos:prefLabel "has legal basis"@en .
+
+dpv:hasLocation a skos:Concept,
+        dpv:Relation ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string,
+        "Rob Brennan"^^xsd:string ;
+    rdfs:domain dpv:Concept ;
+    rdfs:range dpv:Location ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Indicates information about location"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "has location"@en ;
+    skos:scopeNote <https://www.specialprivacy.eu/> .
 
 dpv:hasPersonalData a skos:Concept,
         dpv:Relation ;
@@ -2843,7 +2837,6 @@ dpv:hasPersonalData a skos:Concept,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:PersonalData ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates association with Personal Data"@en ;
     skos:inScheme dpv: ;
@@ -2860,7 +2853,6 @@ dpv:hasProcessing a skos:Concept,
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:Processing ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates association with Processing"@en ;
     skos:inScheme dpv: ;
@@ -2878,7 +2870,6 @@ dpv:hasPurpose a skos:Concept,
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:Purpose ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates association with Purpose"@en ;
     skos:inScheme dpv: ;
@@ -2891,7 +2882,6 @@ dpv:hasRisk a skos:Concept,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:Risk ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates applicability of Risk"@en ;
     skos:inScheme dpv: ;
@@ -3354,28 +3344,11 @@ dpv:hasDataController a skos:Concept,
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:DataController ;
-    rdfs:subPropertyOf dpv:Relation,
-        dpv:hasEntity ;
+    rdfs:subPropertyOf dpv:hasEntity ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates association with Data Controller"@en ;
     skos:inScheme dpv: ;
     skos:prefLabel "has data controller"@en .
-
-dpv:hasLocation a skos:Concept,
-        dpv:Relation ;
-    dct:created "2019-04-05"^^xsd:date ;
-    dct:creator "Axel Polleres"^^xsd:string,
-        "Harshvardhan J. Pandit"^^xsd:string,
-        "Mark Lizar"^^xsd:string,
-        "Rob Brennan"^^xsd:string ;
-    rdfs:domain dpv:Concept ;
-    rdfs:range dpv:Location ;
-    rdfs:subPropertyOf dpv:Relation ;
-    sw:term_status "accepted"@en ;
-    skos:definition "Indicates information about location"@en ;
-    skos:inScheme dpv: ;
-    skos:prefLabel "has location"@en ;
-    skos:scopeNote <https://www.specialprivacy.eu/> .
 
 dpv:Assessment a skos:Concept,
         dpv:Concept ;
@@ -3881,7 +3854,6 @@ dpv:hasEntity a skos:Concept,
     dct:created "2022-02-09"^^xsd:date ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:Entity ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates inclusion or applicability of an entity to some concept"@en ;
     skos:inScheme dpv: ;
@@ -3899,8 +3871,7 @@ dpv:hasRecipient a skos:Concept,
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:Recipient ;
-    rdfs:subPropertyOf dpv:Relation,
-        dpv:hasEntity ;
+    rdfs:subPropertyOf dpv:hasEntity ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates Recipient of Personal Data"@en ;
     skos:inScheme dpv: ;
@@ -3918,7 +3889,6 @@ dpv:hasTechnicalOrganisationalMeasure a skos:Concept,
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:TechnicalOrganisationalMeasure ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates use or applicability of Technical or Organisational measure"@en ;
     skos:inScheme dpv: ;
@@ -4039,6 +4009,20 @@ dpv:TechnicalOrganisationalMeasure a skos:Concept,
 dpv:Entity skos:narrowerTransitive dpv:LegalEntity,
         dpv:NaturalPerson .
 
+dpv:Location a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-01-19"^^xsd:date ;
+    sw:term_status "accepted"@en ;
+    skos:definition "A location is a position, site, or area where something is located"@en ;
+    skos:inScheme dpv: ;
+    skos:narrowerTransitive dpv:Country,
+        dpv:EconomicUnion,
+        dpv:Region,
+        dpv:StorageLocation,
+        dpv:SupraNationalUnion ;
+    skos:note "Location may be geographic, physical, or virtual."@en ;
+    skos:prefLabel "Location"@en .
+
 dpv:Organisation a skos:Concept,
         dpv:Concept ;
     dct:created "2022-02-02"^^xsd:date ;
@@ -4108,21 +4092,6 @@ dpv:Context a skos:Concept,
         dpv:Necessity,
         dpv:ProcessingContext ;
     skos:prefLabel "Context"@en .
-
-dpv:Location a skos:Concept,
-        dpv:Concept ;
-    dct:created "2022-01-19"^^xsd:date ;
-    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    sw:term_status "accepted"@en ;
-    skos:definition "A location is a position, site, or area where something is located"@en ;
-    skos:inScheme dpv: ;
-    skos:narrowerTransitive dpv:Country,
-        dpv:EconomicUnion,
-        dpv:Region,
-        dpv:StorageLocation,
-        dpv:SupraNationalUnion ;
-    skos:note "Location may be geographic, physical, or virtual."@en ;
-    skos:prefLabel "Location"@en .
 
 dpv:ProcessingContext a skos:Concept,
         dpv:Concept ;

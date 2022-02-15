@@ -51,6 +51,9 @@ dpv:isInstanceOf rdfs:subPropertyOf skos:semanticRelation ;
 dpv:isSubTypeOf rdfs:subPropertyOf skos:broaderTransitive ;
     skos:prefLabel "isSubTypeOf"@en .
 
+dpv:Relation rdfs:subPropertyOf skos:semanticRelation ;
+    skos:prefLabel "Relation"@en .
+
 dpv:hasProcessing a skos:Concept,
         dpv:Relation ;
     dct:created "2019-04-04"^^xsd:date ;
@@ -62,7 +65,6 @@ dpv:hasProcessing a skos:Concept,
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:domain dpv:Concept ;
     rdfs:range dpv:Processing ;
-    rdfs:subPropertyOf dpv:Relation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates association with Processing"@en ;
     skos:prefLabel "has processing"@en ;
@@ -258,9 +260,6 @@ dpv:Record a skos:Concept,
     skos:prefLabel "Record"@en ;
     skos:scopeNote <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     dpv:isSubTypeOf dpv:Obtain .
-
-dpv:Relation rdfs:subPropertyOf skos:semanticRelation ;
-    skos:prefLabel "Relation"@en .
 
 dpv:Restrict a skos:Concept,
         dpv:Concept ;
