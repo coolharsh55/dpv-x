@@ -1,0 +1,404 @@
+DEBUG - <module> :: 392 - ------
+DEBUG - <module> :: 393 - Processing base module
+DEBUG - <module> :: 398 - there are 12 classes in base
+DEBUG - add_triples_for_classes :: 234 - PersonalDataHandling
+DEBUG - add_triples_for_classes :: 234 - PersonalData
+DEBUG - add_triples_for_classes :: 234 - Processing
+DEBUG - add_triples_for_classes :: 234 - Purpose
+DEBUG - add_triples_for_classes :: 234 - Recipient
+DEBUG - add_triples_for_classes :: 234 - TechnicalOrganisationalMeasure
+DEBUG - add_triples_for_classes :: 234 - LegalBasis
+DEBUG - add_triples_for_classes :: 234 - DataSubject
+DEBUG - add_triples_for_classes :: 234 - DataController
+DEBUG - add_triples_for_classes :: 234 - Right
+DEBUG - add_triples_for_classes :: 234 - DataSubjectRight
+DEBUG - add_triples_for_classes :: 234 - Risk
+DEBUG - <module> :: 402 - there are 11 properties in base
+DEBUG - add_triples_for_properties :: 273 - hasPersonalData
+DEBUG - add_triples_for_properties :: 273 - hasProcessing
+DEBUG - add_triples_for_properties :: 273 - hasPurpose
+DEBUG - add_triples_for_properties :: 273 - hasRecipient
+DEBUG - add_triples_for_properties :: 273 - hasTechnicalOrganisationalMeasure
+DEBUG - add_triples_for_properties :: 273 - hasLegalBasis
+DEBUG - add_triples_for_properties :: 273 - hasDataSubject
+DEBUG - add_triples_for_properties :: 273 - hasDataController
+DEBUG - add_triples_for_properties :: 273 - hasRight
+DEBUG - add_triples_for_properties :: 273 - hasRisk
+DEBUG - add_triples_for_properties :: 273 - hasPersonalDataHandling
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/base.rdf
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/base.ttl
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/base.n3
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/base.jsonld
+DEBUG - <module> :: 392 - ------
+DEBUG - <module> :: 393 - Processing personal_data module
+DEBUG - <module> :: 398 - there are 10 classes in personal_data
+DEBUG - add_triples_for_classes :: 234 - PersonalData
+DEBUG - add_triples_for_classes :: 234 - AnonymisedData
+DEBUG - add_triples_for_classes :: 234 - DerivedPersonalData
+DEBUG - add_triples_for_classes :: 234 - InferredPersonalData
+DEBUG - add_triples_for_classes :: 234 - PseudoAnonymisedData
+DEBUG - add_triples_for_classes :: 234 - SensitivePersonalData
+DEBUG - add_triples_for_classes :: 234 - Data
+DEBUG - add_triples_for_classes :: 234 - NonPersonalData
+DEBUG - <module> :: 402 - there are 1 properties in personal_data
+DEBUG - add_triples_for_properties :: 273 - hasPersonalData
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/personal_data.rdf
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/personal_data.ttl
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/personal_data.n3
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/personal_data.jsonld
+DEBUG - <module> :: 392 - ------
+DEBUG - <module> :: 393 - Processing purposes module
+DEBUG - <module> :: 398 - there are 67 classes in purposes
+DEBUG - add_triples_for_classes :: 234 - Purpose
+DEBUG - add_triples_for_classes :: 234 - AcademicResearch
+DEBUG - add_triples_for_classes :: 234 - AccountManagement
+DEBUG - add_triples_for_classes :: 234 - Advertising
+DEBUG - add_triples_for_classes :: 234 - CommercialResearch
+DEBUG - add_triples_for_classes :: 234 - CommunicationManagement
+DEBUG - add_triples_for_classes :: 234 - CommunicationForCustomerCare
+DEBUG - add_triples_for_classes :: 234 - CreateEventRecommendations
+DEBUG - add_triples_for_classes :: 234 - CreatePersonalizedRecommendations
+DEBUG - add_triples_for_classes :: 234 - CreateProductRecommendations
+DEBUG - add_triples_for_classes :: 234 - CustomerCare
+DEBUG - add_triples_for_classes :: 234 - CustomerClaimsManagement
+DEBUG - add_triples_for_classes :: 234 - CustomerManagement
+DEBUG - add_triples_for_classes :: 234 - CustomerOrderManagement
+DEBUG - add_triples_for_classes :: 234 - CustomerRelationshipManagement
+DEBUG - add_triples_for_classes :: 234 - CustomerSolvencyMonitoring
+DEBUG - add_triples_for_classes :: 234 - DeliveryOfGoods
+DEBUG - add_triples_for_classes :: 234 - DirectMarketing
+DEBUG - add_triples_for_classes :: 234 - DisputeManagement
+DEBUG - add_triples_for_classes :: 234 - EnforceAccessControl
+DEBUG - add_triples_for_classes :: 234 - EnforceSecurity
+DEBUG - add_triples_for_classes :: 234 - FraudPreventionAndDetection
+DEBUG - add_triples_for_classes :: 234 - HumanResourceManagement
+DEBUG - add_triples_for_classes :: 234 - IdentityVerification
+DEBUG - add_triples_for_classes :: 234 - ImproveExistingProductsAndServices
+DEBUG - add_triples_for_classes :: 234 - ImproveInternalCRMProcesses
+DEBUG - add_triples_for_classes :: 234 - IncreaseServiceRobustness
+DEBUG - add_triples_for_classes :: 234 - InternalResourceOptimisation
+DEBUG - add_triples_for_classes :: 234 - LegalCompliance
+DEBUG - add_triples_for_classes :: 234 - Marketing
+DEBUG - add_triples_for_classes :: 234 - MemberPartnerManagement
+DEBUG - add_triples_for_classes :: 234 - NonCommercialResearch
+DEBUG - add_triples_for_classes :: 234 - OptimisationForConsumer
+DEBUG - add_triples_for_classes :: 234 - OptimisationForController
+DEBUG - add_triples_for_classes :: 234 - OptimiseUserInterface
+DEBUG - add_triples_for_classes :: 234 - OrganisationComplianceManagement
+DEBUG - add_triples_for_classes :: 234 - OrganisationGovernance
+DEBUG - add_triples_for_classes :: 234 - OrganisationRiskManagement
+DEBUG - add_triples_for_classes :: 234 - Payment
+DEBUG - add_triples_for_classes :: 234 - Personalisation
+DEBUG - add_triples_for_classes :: 234 - PersonalisedAdvertising
+DEBUG - add_triples_for_classes :: 234 - PersonalisedBenefits
+DEBUG - add_triples_for_classes :: 234 - PublicRelations
+DEBUG - add_triples_for_classes :: 234 - RecordManagement
+DEBUG - add_triples_for_classes :: 234 - RegistrationAuthentication
+DEBUG - add_triples_for_classes :: 234 - RequestedServiceProvision
+DEBUG - add_triples_for_classes :: 234 - ResearchAndDevelopment
+DEBUG - add_triples_for_classes :: 234 - Sector
+DEBUG - add_triples_for_classes :: 234 - SellDataToThirdParties
+DEBUG - add_triples_for_classes :: 234 - SellInsightsFromData
+DEBUG - add_triples_for_classes :: 234 - SellProducts
+DEBUG - add_triples_for_classes :: 234 - SellProductsToDataSubject
+DEBUG - add_triples_for_classes :: 234 - ServiceOptimization
+DEBUG - add_triples_for_classes :: 234 - ServicePersonalization
+DEBUG - add_triples_for_classes :: 234 - ServiceProvision
+DEBUG - add_triples_for_classes :: 234 - ServiceRecordManagement
+DEBUG - add_triples_for_classes :: 234 - ServiceUsageAnalytics
+DEBUG - add_triples_for_classes :: 234 - SocialMediaMarketing
+DEBUG - add_triples_for_classes :: 234 - TechnicalServiceProvision
+DEBUG - add_triples_for_classes :: 234 - UserInterfacePersonalisation
+DEBUG - add_triples_for_classes :: 234 - VendorManagement
+DEBUG - add_triples_for_classes :: 234 - VendorPayment
+DEBUG - add_triples_for_classes :: 234 - VendorRecordsManagement
+DEBUG - add_triples_for_classes :: 234 - VendorSelectionAssessment
+DEBUG - <module> :: 402 - there are 2 properties in purposes
+DEBUG - add_triples_for_properties :: 273 - hasPurpose
+DEBUG - add_triples_for_properties :: 273 - hasSector
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/purposes.rdf
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/purposes.ttl
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/purposes.n3
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/purposes.jsonld
+DEBUG - <module> :: 392 - ------
+DEBUG - <module> :: 393 - Processing context module
+DEBUG - <module> :: 398 - there are 25 classes in context
+DEBUG - add_triples_for_classes :: 234 - Context
+DEBUG - add_triples_for_classes :: 234 - Importance
+DEBUG - add_triples_for_classes :: 234 - PrimaryImportance
+DEBUG - add_triples_for_classes :: 234 - SecondaryImportance
+DEBUG - add_triples_for_classes :: 234 - Necessity
+DEBUG - add_triples_for_classes :: 234 - Required
+DEBUG - add_triples_for_classes :: 234 - Optional
+DEBUG - add_triples_for_classes :: 234 - NotRequired
+DEBUG - add_triples_for_classes :: 234 - Technology
+DEBUG - add_triples_for_classes :: 234 - AlgorithmicLogic
+DEBUG - add_triples_for_classes :: 234 - Consequence
+DEBUG - add_triples_for_classes :: 234 - HumanInvolvement
+DEBUG - add_triples_for_classes :: 234 - Location
+DEBUG - add_triples_for_classes :: 234 - Duration
+DEBUG - <module> :: 402 - there are 14 properties in context
+DEBUG - add_triples_for_properties :: 273 - hasContext
+DEBUG - add_triples_for_properties :: 273 - isImplementedUsingTechnology
+DEBUG - add_triples_for_properties :: 273 - hasAlgorithmicLogic
+DEBUG - add_triples_for_properties :: 273 - hasConsequence
+DEBUG - add_triples_for_properties :: 273 - hasHumanInvolvement
+DEBUG - add_triples_for_properties :: 273 - hasLocation
+DEBUG - add_triples_for_properties :: 273 - hasDuration
+DEBUG - add_triples_for_properties :: 273 - hasIdentifier
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/context.rdf
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/context.ttl
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/context.n3
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/context.jsonld
+DEBUG - <module> :: 392 - ------
+DEBUG - <module> :: 393 - Processing processing module
+DEBUG - <module> :: 398 - there are 34 classes in processing
+DEBUG - add_triples_for_classes :: 234 - Processing
+DEBUG - add_triples_for_classes :: 234 - Acquire
+DEBUG - add_triples_for_classes :: 234 - Adapt
+DEBUG - add_triples_for_classes :: 234 - Align
+DEBUG - add_triples_for_classes :: 234 - Alter
+DEBUG - add_triples_for_classes :: 234 - Analyse
+DEBUG - add_triples_for_classes :: 234 - Anonymise
+DEBUG - add_triples_for_classes :: 234 - Collect
+DEBUG - add_triples_for_classes :: 234 - Combine
+DEBUG - add_triples_for_classes :: 234 - Consult
+DEBUG - add_triples_for_classes :: 234 - Copy
+DEBUG - add_triples_for_classes :: 234 - Derive
+DEBUG - add_triples_for_classes :: 234 - Destruct
+DEBUG - add_triples_for_classes :: 234 - Disclose
+DEBUG - add_triples_for_classes :: 234 - DiscloseByTransmission
+DEBUG - add_triples_for_classes :: 234 - Disseminate
+DEBUG - add_triples_for_classes :: 234 - Erase
+DEBUG - add_triples_for_classes :: 234 - MakeAvailable
+DEBUG - add_triples_for_classes :: 234 - Move
+DEBUG - add_triples_for_classes :: 234 - Obtain
+DEBUG - add_triples_for_classes :: 234 - Organise
+DEBUG - add_triples_for_classes :: 234 - Profiling
+DEBUG - add_triples_for_classes :: 234 - PseudoAnonymise
+DEBUG - add_triples_for_classes :: 234 - Record
+DEBUG - add_triples_for_classes :: 234 - Remove
+DEBUG - add_triples_for_classes :: 234 - Restrict
+DEBUG - add_triples_for_classes :: 234 - Retrieve
+DEBUG - add_triples_for_classes :: 234 - Share
+DEBUG - add_triples_for_classes :: 234 - Store
+DEBUG - add_triples_for_classes :: 234 - Structure
+DEBUG - add_triples_for_classes :: 234 - Transfer
+DEBUG - add_triples_for_classes :: 234 - Transform
+DEBUG - add_triples_for_classes :: 234 - Transmit
+DEBUG - add_triples_for_classes :: 234 - Use
+DEBUG - <module> :: 402 - there are 1 properties in processing
+DEBUG - add_triples_for_properties :: 273 - hasProcessing
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/processing.rdf
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/processing.ttl
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/processing.n3
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/processing.jsonld
+DEBUG - <module> :: 392 - ------
+DEBUG - <module> :: 393 - Processing processing_context module
+DEBUG - <module> :: 398 - there are 15 classes in processing_context
+DEBUG - add_triples_for_classes :: 234 - ProcessingContext
+DEBUG - add_triples_for_classes :: 234 - DataSource
+DEBUG - add_triples_for_classes :: 234 - PublicDataSource
+DEBUG - add_triples_for_classes :: 234 - NonPublicDataSource
+DEBUG - add_triples_for_classes :: 234 - SystematicMonitoring
+DEBUG - add_triples_for_classes :: 234 - EvaluationScoring
+DEBUG - add_triples_for_classes :: 234 - MatchingCombining
+DEBUG - add_triples_for_classes :: 234 - AutomatedDecisionMaking
+DEBUG - add_triples_for_classes :: 234 - LargeScaleProcessing
+DEBUG - add_triples_for_classes :: 234 - InnovativeUseOfNewTechnologies
+DEBUG - add_triples_for_classes :: 234 - StorageDeletion
+DEBUG - add_triples_for_classes :: 234 - StorageDuration
+DEBUG - add_triples_for_classes :: 234 - StorageLocation
+DEBUG - add_triples_for_classes :: 234 - StorageRestoration
+DEBUG - add_triples_for_classes :: 234 - StorageCondition
+DEBUG - <module> :: 402 - there are 2 properties in processing_context
+DEBUG - add_triples_for_properties :: 273 - hasDataSource
+DEBUG - add_triples_for_properties :: 273 - hasStorage
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/processing_context.rdf
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/processing_context.ttl
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/processing_context.n3
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/processing_context.jsonld
+DEBUG - <module> :: 392 - ------
+DEBUG - <module> :: 393 - Processing technical_organisational_measures module
+DEBUG - <module> :: 398 - there are 50 classes in technical_organisational_measures
+DEBUG - add_triples_for_classes :: 234 - TechnicalOrganisationalMeasure
+DEBUG - add_triples_for_classes :: 234 - TechnicalMeasure
+DEBUG - add_triples_for_classes :: 234 - OrganisationalMeasure
+DEBUG - add_triples_for_classes :: 234 - AccessControlMethod
+DEBUG - add_triples_for_classes :: 234 - Anonymization
+DEBUG - add_triples_for_classes :: 234 - Assessment
+DEBUG - add_triples_for_classes :: 234 - AuthenticationProtocols
+DEBUG - add_triples_for_classes :: 234 - AuthorisationProcedure
+DEBUG - add_triples_for_classes :: 234 - Certification
+DEBUG - add_triples_for_classes :: 234 - CertificationSeal
+DEBUG - add_triples_for_classes :: 234 - CodeOfConduct
+DEBUG - add_triples_for_classes :: 234 - Consultation
+DEBUG - add_triples_for_classes :: 234 - ConsultationWithAuthority
+DEBUG - add_triples_for_classes :: 234 - ContractualTerms
+DEBUG - add_triples_for_classes :: 234 - CompleteAnonymisation
+DEBUG - add_triples_for_classes :: 234 - ControllerProcessorAgreement
+DEBUG - add_triples_for_classes :: 234 - DataProcessingAgreement
+DEBUG - add_triples_for_classes :: 234 - DataProcessingRecords
+DEBUG - add_triples_for_classes :: 234 - DataTransferImpactAssessment
+DEBUG - add_triples_for_classes :: 234 - DeIdentification
+DEBUG - add_triples_for_classes :: 234 - DesignStandard
+DEBUG - add_triples_for_classes :: 234 - DPIA
+DEBUG - add_triples_for_classes :: 234 - EncryptionInRest
+DEBUG - add_triples_for_classes :: 234 - EncryptionInTransfer
+DEBUG - add_triples_for_classes :: 234 - GuidelinesPrinciple
+DEBUG - add_triples_for_classes :: 234 - ImpactAssessment
+DEBUG - add_triples_for_classes :: 234 - JointDataControllersAgreement
+DEBUG - add_triples_for_classes :: 234 - LegalAgreement
+DEBUG - add_triples_for_classes :: 234 - LegitimateInterestAssessment
+DEBUG - add_triples_for_classes :: 234 - NDA
+DEBUG - add_triples_for_classes :: 234 - Notice
+DEBUG - add_triples_for_classes :: 234 - PIA
+DEBUG - add_triples_for_classes :: 234 - Policy
+DEBUG - add_triples_for_classes :: 234 - PrivacyByDefault
+DEBUG - add_triples_for_classes :: 234 - PrivacyByDesign
+DEBUG - add_triples_for_classes :: 234 - PrivacyNotice
+DEBUG - add_triples_for_classes :: 234 - PseudoAnonymization
+DEBUG - add_triples_for_classes :: 234 - Encryption
+DEBUG - add_triples_for_classes :: 234 - RecordsOfActivities
+DEBUG - add_triples_for_classes :: 234 - RegisterOfProcessingActivities
+DEBUG - add_triples_for_classes :: 234 - RegularityOfRecertification
+DEBUG - add_triples_for_classes :: 234 - RiskManagementProcedure
+DEBUG - add_triples_for_classes :: 234 - RiskMitigationMeasure
+DEBUG - add_triples_for_classes :: 234 - Safeguard
+DEBUG - add_triples_for_classes :: 234 - SafeguardForDataTransfer
+DEBUG - add_triples_for_classes :: 234 - Seal
+DEBUG - add_triples_for_classes :: 234 - SingleSignOn
+DEBUG - add_triples_for_classes :: 234 - StaffTraining
+DEBUG - add_triples_for_classes :: 234 - SubProcessorAgreement
+DEBUG - add_triples_for_classes :: 234 - ThirdPartyAgreement
+DEBUG - <module> :: 402 - there are 9 properties in technical_organisational_measures
+DEBUG - add_triples_for_properties :: 273 - hasTechnicalOrganisationalMeasure
+DEBUG - add_triples_for_properties :: 273 - hasTechnicalMeasure
+DEBUG - add_triples_for_properties :: 273 - hasOrganisationalMeasure
+DEBUG - add_triples_for_properties :: 273 - mitigatesRisk
+DEBUG - add_triples_for_properties :: 273 - hasPolicy
+DEBUG - add_triples_for_properties :: 273 - isPolicyFor
+DEBUG - add_triples_for_properties :: 273 - isMitigatedByMeasure
+DEBUG - add_triples_for_properties :: 273 - hasRisk
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/technical_organisational_measures.rdf
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/technical_organisational_measures.ttl
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/technical_organisational_measures.n3
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/technical_organisational_measures.jsonld
+DEBUG - <module> :: 392 - ------
+DEBUG - <module> :: 393 - Processing entities module
+DEBUG - <module> :: 398 - there are 27 classes in entities
+DEBUG - add_triples_for_classes :: 234 - LegalEntity
+DEBUG - add_triples_for_classes :: 234 - NaturalPerson
+DEBUG - add_triples_for_classes :: 234 - DataController
+DEBUG - add_triples_for_classes :: 234 - DataProcessor
+DEBUG - add_triples_for_classes :: 234 - DataSubProcessor
+DEBUG - add_triples_for_classes :: 234 - Recipient
+DEBUG - add_triples_for_classes :: 234 - ThirdParty
+DEBUG - add_triples_for_classes :: 234 - DataExporter
+DEBUG - add_triples_for_classes :: 234 - DataImporter
+DEBUG - add_triples_for_classes :: 234 - JointDataControllers
+DEBUG - add_triples_for_classes :: 234 - Representative
+DEBUG - add_triples_for_classes :: 234 - Authority
+DEBUG - add_triples_for_classes :: 234 - DataProtectionAuthority
+DEBUG - add_triples_for_classes :: 234 - NationalAuthority
+DEBUG - add_triples_for_classes :: 234 - RegionalAuthority
+DEBUG - add_triples_for_classes :: 234 - SupraNationalAuthority
+DEBUG - add_triples_for_classes :: 234 - DataSubject
+DEBUG - add_triples_for_classes :: 234 - Organisation
+DEBUG - add_triples_for_classes :: 234 - IndustryConsortium
+DEBUG - add_triples_for_classes :: 234 - GovernmentalOrganisation
+DEBUG - add_triples_for_classes :: 234 - NonGovernmentalOrganisation
+DEBUG - add_triples_for_classes :: 234 - ForProfitOrganisation
+DEBUG - add_triples_for_classes :: 234 - NonProfitOrganisation
+DEBUG - add_triples_for_classes :: 234 - AcademicScientificOrganisation
+DEBUG - add_triples_for_classes :: 234 - Child
+DEBUG - add_triples_for_classes :: 234 - VulnerableDataSubject
+DEBUG - <module> :: 402 - there are 14 properties in entities
+DEBUG - add_triples_for_properties :: 273 - hasName
+DEBUG - add_triples_for_properties :: 273 - hasAddress
+DEBUG - add_triples_for_properties :: 273 - hasContact
+DEBUG - add_triples_for_properties :: 273 - hasEntity
+DEBUG - add_triples_for_properties :: 273 - hasRepresentative
+DEBUG - add_triples_for_properties :: 273 - hasRecipient
+DEBUG - add_triples_for_properties :: 273 - hasDataSubject
+DEBUG - add_triples_for_properties :: 273 - hasDataController
+DEBUG - add_triples_for_properties :: 273 - hasJointDataController
+DEBUG - add_triples_for_properties :: 273 - hasDataProcessor
+DEBUG - add_triples_for_properties :: 273 - hasRecipientDataController
+DEBUG - add_triples_for_properties :: 273 - hasRecipientThirdParty
+DEBUG - add_triples_for_properties :: 273 - hasDataExporter
+DEBUG - add_triples_for_properties :: 273 - hasDataImporter
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/entities.rdf
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/entities.ttl
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/entities.n3
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/entities.jsonld
+DEBUG - <module> :: 392 - ------
+DEBUG - <module> :: 393 - Processing jurisdictions module
+DEBUG - <module> :: 398 - there are 7 classes in jurisdictions
+DEBUG - add_triples_for_classes :: 234 - Location
+DEBUG - add_triples_for_classes :: 234 - Country
+DEBUG - add_triples_for_classes :: 234 - SupraNationalUnion
+DEBUG - add_triples_for_classes :: 234 - EconomicUnion
+DEBUG - add_triples_for_classes :: 234 - Region
+DEBUG - add_triples_for_classes :: 234 - Law
+DEBUG - add_triples_for_classes :: 234 - ThirdCountry
+DEBUG - <module> :: 402 - there are 7 properties in jurisdictions
+DEBUG - add_triples_for_properties :: 273 - hasJurisdiction
+DEBUG - add_triples_for_properties :: 273 - hasCountry
+DEBUG - add_triples_for_properties :: 273 - hasAuthority
+DEBUG - add_triples_for_properties :: 273 - hasLocation
+DEBUG - add_triples_for_properties :: 273 - hasApplicableLaw
+DEBUG - add_triples_for_properties :: 273 - isAuthorityFor
+DEBUG - add_triples_for_properties :: 273 - hasThirdCountry
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/jurisdictions.rdf
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/jurisdictions.ttl
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/jurisdictions.n3
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/jurisdictions.jsonld
+DEBUG - <module> :: 392 - ------
+DEBUG - <module> :: 393 - Processing legal_basis module
+DEBUG - <module> :: 398 - there are 17 classes in legal_basis
+DEBUG - add_triples_for_classes :: 234 - LegalBasis
+DEBUG - add_triples_for_classes :: 234 - Consent
+DEBUG - add_triples_for_classes :: 234 - Contract
+DEBUG - add_triples_for_classes :: 234 - ContractPerformance
+DEBUG - add_triples_for_classes :: 234 - DataTransferLegalBasis
+DEBUG - add_triples_for_classes :: 234 - EnterIntoContract
+DEBUG - add_triples_for_classes :: 234 - LegalObligation
+DEBUG - add_triples_for_classes :: 234 - LegitimateInterest
+DEBUG - add_triples_for_classes :: 234 - LegitimateInterestOfController
+DEBUG - add_triples_for_classes :: 234 - LegitimateInterestOfThirdParty
+DEBUG - add_triples_for_classes :: 234 - OfficialAuthorityOfController
+DEBUG - add_triples_for_classes :: 234 - PublicInterest
+DEBUG - add_triples_for_classes :: 234 - VitalInterest
+DEBUG - add_triples_for_classes :: 234 - VitalInterestOfDataSubject
+DEBUG - add_triples_for_classes :: 234 - VitalInterestOfNaturalPerson
+DEBUG - <module> :: 402 - there are 1 properties in legal_basis
+DEBUG - add_triples_for_properties :: 273 - hasLegalBasis
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/legal_basis.rdf
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/legal_basis.ttl
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/legal_basis.n3
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/legal_basis.jsonld
+DEBUG - <module> :: 392 - ------
+DEBUG - <module> :: 393 - Processing consent module
+DEBUG - <module> :: 402 - there are 13 properties in consent
+DEBUG - add_triples_for_properties :: 273 - hasExpiry
+DEBUG - add_triples_for_properties :: 273 - hasExpiryTime
+DEBUG - add_triples_for_properties :: 273 - hasExpiryCondition
+DEBUG - add_triples_for_properties :: 273 - hasProvisionMethod
+DEBUG - add_triples_for_properties :: 273 - hasProvisionTime
+DEBUG - add_triples_for_properties :: 273 - hasWithdrawalMethod
+DEBUG - add_triples_for_properties :: 273 - hasWithdrawalTime
+DEBUG - add_triples_for_properties :: 273 - hasWithdrawalBy
+DEBUG - add_triples_for_properties :: 273 - hasProvisionBy
+DEBUG - add_triples_for_properties :: 273 - hasProvisionByJustification
+DEBUG - add_triples_for_properties :: 273 - hasWithdrawalByJustification
+DEBUG - add_triples_for_properties :: 273 - hasConsentNotice
+DEBUG - add_triples_for_properties :: 273 - isExplicit
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/consent.rdf
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/consent.ttl
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/consent.n3
+INFO - serialize_graph :: 316 - wrote ../dpv/modules/consent.jsonld
+INFO - serialize_graph :: 316 - wrote ../dpv/dpv.rdf
+INFO - serialize_graph :: 316 - wrote ../dpv/dpv.ttl
+INFO - serialize_graph :: 316 - wrote ../dpv/dpv.n3
+INFO - serialize_graph :: 316 - wrote ../dpv/dpv.jsonld
