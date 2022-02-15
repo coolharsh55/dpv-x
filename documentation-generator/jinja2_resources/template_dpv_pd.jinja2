@@ -4,25 +4,25 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Data Privacy Vocabulary (DPV)</title>
+  <title>DPV-PD: Extended Personal Data concepts for DPV</title>
   <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer></script>
   <script class="remove">
    // All config options at https://respec.org/docs/ 
    var respecConfig = {
-    shortName: "dpv",
-    title: "Data Privacy Vocabulary (DPV)",
+    shortName: "dpv-pd",
+    title: "DPV-PD: Extended Personal Data concepts for DPV",
     subtitle: "version 0.4 (published 2022-02-15)",
     specStatus: "CG-DRAFT",
     group: "dpvcg",
-    latestVersion: "https://w3id.org/dpv",
+    latestVersion: "https://w3id.org/dpv/dpv-pd",
     // github: {
-    //   repoURL: "https://github.com/w3c/dpv",
+    //   repoURL: "https://github.com/w3c/dpv-pd",
     //   branch: "master"
     // },
-    subjectPrefix: "[dpv]",
+    subjectPrefix: "[dpv-pd]",
     doJsonLd: true,
     lint: { "no-unused-dfns": false },
-    canonicalUri: "https://w3id.org/dpv",
+    canonicalUri: "https://w3id.org/dpv/dpv-pd",
     editors: [
     {
       name: "Harshvardhan J. Pandit",
@@ -240,7 +240,7 @@
     BORDER-RIGHT: #999999 1pt solid; PADDING-RIGHT: 0.5em; BORDER-TOP: #999999 1pt solid; PADDING-LEFT: 0.5em; PADDING-BOTTOM: 0.5em; BORDER-LEFT: #999999 1pt solid; PADDING-TOP: 0.5em; BORDER-BOTTOM: #999999 1pt solid; FONT-FAMILY: "courier new"; BACKGROUND-COLOR: #ffa
   }
   .ednote {
-    FONT-STYLE: italic ;
+    FONT-STYLE: italic
   }
   PRE.clientmsg {
     BORDER-RIGHT: #999 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #999 1px solid; PADDING-LEFT: 2px; BACKGROUND: #eee; PADDING-BOTTOM: 2px; MARGIN: 0px; BORDER-LEFT: #999 1px solid; PADDING-TOP: 2px; BORDER-BOTTOM: #999 1px solid
@@ -266,51 +266,43 @@
   DIV.test H4 {
     MARGIN: 0px 0px 10px
   }
-  .todo {
-    display: block;
-    background-color: #F99;
-    margin: 5px;
-    padding-left: 5px;
-    border: 2px solid #633;
-  }
-  .todo::before {
-    content: "TODO: ";
-    font-weight: bold;
-  }
-  figure {
-    margin: 2px;
-    padding: 2px;
-    border: 1px solid black;
-  }
 </style>
 </head>
 <body>
-    <section id="abstract">
-      <p>The Data Privacy Vocabulary [[DPV]] enables expressing machine-readable metadata about the use and processing of personal data based on legislative requirements such as the General Data Protection Regulation [[GDPR]]. This document acts as a ‘Primer’ for the DPV by introducing its fundamental concepts and providing examples of use-cases and applications. It is intended to be a starting point for those wishing to use the DPV and an orientation for people from all disciplines. The canonical URL for DPV is <a href="https://w3id.org/dpv">https://w3id.org/dpv#</a> which contains (this) specification.</p>
-      <p>The namespace for DPV terms is <a href="https://w3id.org/dpv#"><code>https://w3id.org/dpv#</code></a>, the suggested prefix for is <code>dpv</code>, and this document along with its various serializations are available on <a href="https://github.com/w3c/dpv">GitHub</a>.
-      <p class="note">Newcomers to the DPV are <strong>strongly recommended to first read through the [[[DPV-Primer]]]</strong> to familiarise themselves with the semantics, concepts, their place within DPV.</p>
+  <section id="abstract">
+    <p>DPV-PD extends the [[[DPV]]] to provide additional concepts regarding Personal Data categories. </p>
+    <p class="note">
+      The namespace for terms in DPV-PD is <a href="http://www.w3id.org/dpv/dpv-pd#"><code>https://www.w3id.org/dpv/dpv-pd#</code></a><br/>
+      The suggested prefix for the namespace is <code>dpv-pd</code><br/>
+      The DPV-PD vocabulary and its documentation is available on <a href="https://github.com/w3c/dpv">GitHub</a>.</p>
 
-      <p><strong>DPV Family of Documents</strong></p>
+    <p><strong>DPV Family of Documents</strong></p>
     <ul>
       <li>[[DPV-Primer]]: The Primer serves as an introductory document to DPV and provides an overview of its concepts.</li>
-      <li>[[DPV]]: (This document) The DPV Specification is the formal and normative description of DPV and its concepts. It provides a serialisation of the concepts as a taxonomy using SKOS.</li>
+      <li>[[DPV]]: The DPV Specification is the formal and normative description of DPV and its concepts. It provides a serialisation of the concepts as a taxonomy using SKOS.</li>
       <li>Extensions to Concepts: <ul>
         <li>[[DPV-GDPR]]: Extension to the DPV providing concepts relevant to [[GDPR]].</li>
-        <li>[[DPV-PD]]: Extension to the DPV providing a taxonomy of personal data categories.</li></ul></li>
+        <li>[[DPV-PD]]:(This document) Extension to the DPV providing a taxonomy of personal data categories.</li></ul></li>
       <li>Serialisations of DPV: <ul>
         <li>[[DPV-SKOS]]: A serialisation of the DPV using [[RDFS]] and [[SKOS]] to enable its use as a schema or ontology.</li>
         <li>[[DPV-OWL]]: is a serialisation of the DPV using [[OWL]] to enable its use as an ontology.</li></ul></li>
       <li>[[DPV-NACE]]: [[NACE]] taxonomy serialised in RDFS</li>
     </ul>
-    <p>The table provides an overview of the expression of concepts across the three DPV serialisations.</p>
+    <p>The table provides an overview of the expression of concepts across the three DPV serialisations, and which are followed by DPV-PD..</p>
     <table>
       <thead>
-        <th>Concept</th>
-        <th>[[DPV]]</th>
-        <th>[[DPV-SKOS]]</th>
-        <th>[[DPV-OWL]]</th>
+          <td>Serialisation</td>
+          <td><a href="https://w3id.org/dpv/dpv-pd"><code>dpv-pd</code></a></td>
+          <td><a href="https://w3id.org/dpv/dpv-skos/dpv-pd"><code>dpv-skos/dpv-pd</code></a></td>
+          <td><a href="https://w3id.org/dpv/dpv-owl/dpv-pd"><code>dpv-owl/dpv-pd</code></a></td>
       </thead>
       <tbody>
+        <tr>
+          <td>Semantics</td>
+          <th>[[DPV]]</th>
+          <th>[[DPV-SKOS]]</th>
+          <th>[[DPV-OWL]]</th>
+        </tr>
         <tr>
           <td>Concept</td>
           <td><code>dpv:Concept</code>
@@ -357,233 +349,23 @@
         <p>The peer-reviewed article “<a href="https://link.springer.com/chapter/10.1007%2F978-3-030-33246-4_44"><u>Creating A Vocabulary for Data Privacy</u></a>” presents a historical overview of the DPVCG, and describes the methodology and structure of the DPV along with describing its creation. An open-access version can be accessed <a href="http://hdl.handle.net/2262/91581"><u>here</u></a>, <a href="http://doras.dcu.ie/23801/"><u>here</u></a>, and <a href="https://aic.ai.wu.ac.at/~polleres/publications/pand-etal-2019ODBASE.pdf"><u>here</u></a>.</p>
       </li>
     </ul>
+  </section>
+  <section id="sotd">
+    <!-- sotd: Status of this document -->
+    <p>This document is published by the <a href="https://www.w3.org/community/dpvcg/">Data Privacy Vocabularies and Controls Community Group (DPVCG)</a> as a deliverable and report of its work in creating and maintaining the Data Privacy Vocabulary (DPV) and its extensions.</p>
+    <div class="note">
+      <p><strong>Contributing to the DPV and its extension DPV-PD</strong> The DPVCG welcomes participation regarding DPV and DPV-PD, including expansion or refinement of its terms, addressing open issues, and welcomes suggestions on their resolution or mitigation.</p>
+      <p>While we welcome participation via any and all mediums - e.g., via <a href="https://github.com/w3c/dpv/issues">Github</a> pull requests or issues, <a href="https://lists.w3.org/Archives/Public/public-dpvcg/">emails</a>, papers, or reports - the formal resolution of contributions takes place only through the DPVCG meeting calls and mailing lists. We therefore suggest joining the group to participate in these discussions for formal approval.</p>
+      <p>For contributions to the DPV, please see <a href="https://github.com/w3c/dpv#contribution--participation">the section on GitHub</a>. The current list of open issues and their discussions to date can be found at <a href="https://github.com/w3c/dpv/issues">GitHub issues</a>.</p>
+    </div>
+  </section>
+  <section id="vocab">
+    <h2>Taxonomy</h2>
+
+    <section id="dpv-pd-classes">
+    {{ table_classes(dpv_pd_classes) }}
     </section>
-    <section id="sotd">
-      <!-- sotd: Status of this document -->
-      <p>This document is published by the <a href="https://www.w3.org/community/dpvcg/">Data Privacy Vocabularies and Controls Community Group (DPVCG)</a> as a deliverable and report of its work in creating and maintaining the Data Privacy Vocabulary (DPV).</p>
-      <div class="note">
-        <p><strong>Contributing to the DPV and its extensions</strong> The DPVCG welcomes participation regarding the DPV, including expansion or refinement of its terms, addressing open issues, and welcomes suggestions on their resolution or mitigation.</p>
-        <p>For contributions to the DPV, please see <a href="https://github.com/w3c/dpv#contribution--participation">the section on GitHub</a>. The current list of open issues and their discussions to date can be found at <a href="https://github.com/w3c/dpv/issues">GitHub issues</a>.</p>
-      </div>
-      <p>Serialisations of DPV and its modules are available on <a href="https://github.com/w3c/dpv">GitHub</a>.</p>
-    </section>
-  <section id="vocab-base">
-    <h2>Base Vocabulary</h2>
-    <figure>
-      <img title="DPV Base Vocabulary" alt="DPV base vocabulary" src="diagrams/personaldatahandling.png">
-      <figcaption>Base Vocabulary</figcaption>
-    </figure>
-    <p>The 'Base' or 'Core' concepts in DPV represent the most relevant concepts for representing information regarding the what, how, where, who, why of personal data and its processing. Each of these concepts is further elaborated as a taxonomy of concepts in a hierarchical fashion. The DPV provides the following as 'top-level' concepts and relations to associate them with other concepts:</p>
-    <table>
-      <thead>
-        <tr>
-          <th>Class</th>
-          <th>Property</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>[=PersonalData=]</td>
-          <td>[=hasPersonalData=]</td>
-          <td>Personal data categories</td>
-        </tr>
-        <tr>
-          <td>[=Purpose=]</td>
-          <td>[=hasPurpose=]</td>
-          <td>Purpose of Processing</td>
-        </tr>
-        <tr>
-          <td>[=Processing=]</td>
-          <td>[=hasProcessing=]</td>
-          <td>Category or type of processing of personal data</td>
-        </tr>
-        <tr>
-          <td>[=DataController=]</td>
-          <td>[=hasDataController=]</td>
-          <td>Data Controller responsible for processing</td>
-        </tr>
-        <tr>
-          <td>[=DataSubject=]</td>
-          <td>[=hasDataSubject=]</td>
-          <td>Data Subject or Individual whose data is being processing</td>
-        </tr>
-        <tr>
-          <td>[=Recipient=]</td>
-          <td>[=hasRecipient=]</td>
-          <td>Recipient of personal data</td>
-        </tr>
-        <tr>
-          <td>[=TechnicalOrganisationalMeasure=]</td>
-          <td>[=hasTechnicalOrganisationalMeasure=]</td>
-          <td>Technical and/or Organisational measures associated with processing</td>
-        </tr>
-        <tr>
-          <td>[=LegalBasis=]</td>
-          <td>[=hasLegalBasis=]</td>
-          <td>Legal bases or justifications for processing</td>
-        </tr>
-        <tr>
-          <td>[=Right=]</td>
-          <td>[=hasRight=]</td>
-          <td>Rights applicable or provided</td>
-        </tr>
-        <tr>
-          <td>[=Risk=]</td>
-          <td>[=hasRisk=]</td>
-          <td>Risks applicable or probable regarding processing</td>
-        </tr>
-        <tr>
-          <td>[=PersonalDataHandling=]</td>
-          <td>[=hasPersonalDataHandling=]</td>
-          <td>A concept for associating the other core concepts as a 'group, 'policy', or 'set' - so as to express different use-cases and combinations</td>
-        </tr>
-      </tbody>
-    </table>
-    <p>DPV provides taxonomies for all core concepts except the ones specified below:</p>
-    <ul>
-      <li data-dfn-for="PersonalDataHandling"><dfn>PersonalDataHandling</dfn>: DPV defines the concept of  for representing a 'policy' or 'grouping' that associates the top-level concepts with one another. The relation <span data-dfn-for="hasPersonalDataHandling"><dfn>hasPersonalDataHandling</dfn> provides a relation to associate a <code>PersonalDataHandling</code> with other concepts, including like itself.</span></li>
-      <li><span data-dfn-for="Right"><dfn>Right</dfn>: The concept <code>Right</code> represents a generic rights provided or recognised by some law or convention.</span> The relation <span data-dfn-for="hasRight"><dfn>hasRight</dfn> provides the relation to associate a <code>Right</code> with concepts.</span>. In addition, <span data-dfn-for="DataSubjectRight"><dfn>DataSubjectRight</dfn> refers to rights specifically available to applicable for Data Subjects.</span></li>
-      <li data-dfn-for="Risk"><dfn>Risk</dfn> represents the generic concept of <i>Risk</i> that can be associated with other concepts using [=hasRisk=].</li>
-    </ul>
 
-  {% if core_classes %}
-  <section id="baseontology-classes">
-    {{ table_classes(core_classes, 'base') }}
   </section>
-  {% endif %}
-  {% if core_properties %}
-  <section id="baseontology-properties">
-    {{ table_properties(core_properties, 'base') }}
-  </section>
-  {% endif %}
-</section>
-
-<section id="vocab-entities">
-  <h2>Entities</h2>
-    {% if entities_classes %}
-  <section id="entities-classes">
-    {{ table_classes(entities_classes) }}
-  </section>
-  {% endif %}
-  {% if entities_properties %}
-  <section id="entities-properties">
-    {{ table_properties(entities_properties) }}
-  </section>
-  {% endif %}
-</section>
-
-<section id="vocab-purpose">
-  <h2>Purposes</h2>
-    {% if purpose_classes %}
-  <section id="purpose-classes">
-    {{ table_classes(purpose_classes) }}
-  </section>
-  {% endif %}
-  {% if purpose_properties %}
-  <section id="purpose-properties">
-    {{ table_properties(purpose_properties) }}
-  </section>
-  {% endif %}
-</section>
-
-<section id="vocab-processing">
-  <h2>Processing</h2>
-    {% if processing_classes %}
-  <section id="processing-classes">
-    {{ table_classes(processing_classes) }}
-  </section>
-  {% endif %}
-  {% if processing_properties %}
-  <section id="processing-properties">
-    {{ table_properties(processing_properties) }}
-  </section>
-  {% endif %}
-</section>
-
-<section id="vocab-personaldata">
-  <h2>Personal Data</h2>
-    {% if personaldata_classes %}
-  <section id="personaldata-classes">
-    {{ table_classes(personaldata_classes) }}
-  </section>
-  {% endif %}
-  {% if personaldata_properties %}
-  <section id="personaldata-properties">
-    {{ table_properties(personaldata_properties) }}
-  </section>
-  {% endif %}
-</section>
-
-<section id="vocab-technical_organisational_measures">
-  <h2>Tech/Org Measures</h2>
-    {% if technical_organisational_measures_classes %}
-  <section id="technical_organisational_measures-classes">
-    {{ table_classes(technical_organisational_measures_classes) }}
-  </section>
-  {% endif %}
-  {% if technical_organisational_measures_properties %}
-  <section id="technical_organisational_measures-properties">
-    {{ table_properties(technical_organisational_measures_properties) }}
-  </section>
-  {% endif %}
-</section>
-
-<section id="vocab-context">
-  <h2>Contextual Info</h2>
-    {% if context_classes %}
-  <section id="context-classes">
-    {{ table_classes(context_classes) }}
-  </section>
-  {% endif %}
-  {% if context_properties %}
-  <section id="context-properties">
-    {{ table_properties(context_properties) }}
-  </section>
-  {% endif %}
-</section>
-
-<section id="vocab-jurisdictions">
-  <h2>Location &amp; Jurisdictions</h2>
-    {% if jurisdictions_classes %}
-  <section id="jurisdictions-classes">
-    {{ table_classes(jurisdictions_classes) }}
-  </section>
-  {% endif %}
-  {% if jurisdictions_properties %}
-  <section id="jurisdictions-properties">
-    {{ table_properties(jurisdictions_properties) }}
-  </section>
-  {% endif %}
-</section>
-
-<section id="vocab-legal_basis">
-  <h2>Legal Bases</h2>
-    {% if legal_basis_classes %}
-  <section id="legal_basis-classes">
-    {{ table_classes(legal_basis_classes) }}
-  </section>
-  {% endif %}
-  {% if legal_basis_properties %}
-  <section id="legal_basis-properties">
-    {{ table_properties(legal_basis_properties) }}
-  </section>
-  {% endif %}
-</section>
-
-<section id="vocab-consent">
-  <h2>Consent</h2>
-    {% if consent_classes %}
-  <section id="consent-classes">
-    {{ table_classes(consent_classes) }}
-  </section>
-  {% endif %}
-  {% if consent_properties %}
-  <section id="consent-properties">
-    {{ table_properties(consent_properties) }}
-  </section>
-  {% endif %}
-</section>
-
 </body>
 </html>

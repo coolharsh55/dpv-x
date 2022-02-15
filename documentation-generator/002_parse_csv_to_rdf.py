@@ -23,6 +23,7 @@ EXPORT_DPV_PATH = '../dpv'
 EXPORT_DPV_MODULE_PATH = '../dpv/modules'
 EXPORT_DPV_GDPR_PATH = '../dpv-gdpr'
 EXPORT_DPV_GDPR_MODULE_PATH = '../dpv-gdpr/modules'
+EXPORT_DPV_PD_PATH = '../dpv-pd'
 
 # serializations in the form of extention: rdflib name
 RDF_SERIALIZATIONS = {
@@ -483,6 +484,38 @@ DPV_GDPR_GRAPH += graph
 for prefix, namespace in NAMESPACES.items():
     DPV_GDPR_GRAPH.namespace_manager.bind(prefix, namespace)
 serialize_graph(DPV_GDPR_GRAPH, f'{EXPORT_DPV_GDPR_PATH}/dpv-gdpr')
+
+##############################################################################
+
+# DPV-PD #
+# dpv-gdpr is the exact same as dpv in terms of requirements and structure
+# except that the namespace is different
+# so instead of rewriting the entire code again for dpv-gdpr,
+# here I become lazy and instead change the DPV namespace to DPV-PD
+
+DPV_PD_CSV_FILES = f'{IMPORT_CSV_PATH}/dpv-pd.csv'
+
+BASE = NAMESPACES['dpv-pd']
+DPV_PD_GRAPH = Graph()
+
+DEBUG('------')
+DEBUG(f'Processing DPV-PD')
+for prefix, namespace in NAMESPACES.items():
+    DPV_PD_GRAPH.namespace_manager.bind(prefix, namespace)
+classes = extract_terms_from_csv(DPV_PD_CSV_FILES, DPV_Class)
+DEBUG(f'there are {len(classes)} classes in {name}')
+add_triples_for_classes(classes, DPV_PD_GRAPH)
+# add collection representing concepts
+DPV_PD_GRAPH.add((BASE[f'PersonalDataConcepts'], RDF.type, SKOS.Collection))
+DPV_PD_GRAPH.add((BASE[f'PersonalDataConcepts'], DCT.title, Literal(f'Personal Data Concepts', datatype=XSD.string)))
+for concept, _, _ in DPV_PD_GRAPH.triples((None, RDF.type, SKOS.Concept)):
+    DPV_PD_GRAPH.add((BASE[f'PersonalDataConcepts'], SKOS.member, concept))
+# serialize
+DPV_PD_GRAPH.load('dpv-pd-ontology-metadata.ttl', format='turtle')
+
+for prefix, namespace in NAMESPACES.items():
+    DPV_PD_GRAPH.namespace_manager.bind(prefix, namespace)
+serialize_graph(DPV_PD_GRAPH, f'{EXPORT_DPV_PD_PATH}/dpv-pd')
 
 # #############################################################################
 

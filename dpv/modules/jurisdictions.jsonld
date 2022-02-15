@@ -1,301 +1,5 @@
 [
   {
-    "@id": "https://w3id.org/dpv#Country",
-    "@type": [
-      "https://w3id.org/dpv#Concept",
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-01-19"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Harshvardhan J. Pandit"
-      },
-      {
-        "@value": "Georg P Krog"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "A political entity indicative of a sovereign or non-sovereign territorial state comprising of distinct geographical areas"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#note": [
-      {
-        "@language": "en",
-        "@value": "The definition of country is not intended for political interpretation. DPVCG welcomes alternate definitions based in existing sources with global scope, such as UN or ISO."
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "Country"
-      }
-    ],
-    "https://w3id.org/dpv#isSubTypeOf": [
-      {
-        "@id": "https://w3id.org/dpv#Location"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv#Relation",
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://www.w3.org/2004/02/skos/core#semanticRelation"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "Relation"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv#Concept",
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://www.w3.org/2004/02/skos/core#Concept"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "Concept"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv#hasApplicableLaw",
-    "@type": [
-      "https://w3id.org/dpv#Relation",
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-01-19"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Harshvardhan J. Pandit"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/dpv#Concept"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/dpv#Law"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "Indicates applicability of a Law"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "has applicable law"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv#isSubTypeOf",
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://www.w3.org/2004/02/skos/core#broaderTransitive"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "isSubTypeOf"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv#hasCountry",
-    "@type": [
-      "https://w3id.org/dpv#Relation",
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-01-19"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Harshvardhan J. Pandit"
-      },
-      {
-        "@value": "Georg P Krog"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/dpv#Concept"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/dpv#Country"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/dpv#hasLocation"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "Indicates applicability of specified country"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "has country"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv#JurisdictionsConcepts",
-    "@type": [
-      "http://www.w3.org/2004/02/skos/core#Collection"
-    ],
-    "http://purl.org/dc/terms/title": [
-      {
-        "@value": "Jurisdictions Concepts"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#member": [
-      {
-        "@id": "https://w3id.org/dpv#Location"
-      },
-      {
-        "@id": "https://w3id.org/dpv#Country"
-      },
-      {
-        "@id": "https://w3id.org/dpv#SupraNationalUnion"
-      },
-      {
-        "@id": "https://w3id.org/dpv#EconomicUnion"
-      },
-      {
-        "@id": "https://w3id.org/dpv#Region"
-      },
-      {
-        "@id": "https://w3id.org/dpv#Law"
-      },
-      {
-        "@id": "https://w3id.org/dpv#ThirdCountry"
-      },
-      {
-        "@id": "https://w3id.org/dpv#hasJurisdiction"
-      },
-      {
-        "@id": "https://w3id.org/dpv#hasCountry"
-      },
-      {
-        "@id": "https://w3id.org/dpv#hasAuthority"
-      },
-      {
-        "@id": "https://w3id.org/dpv#hasLocation"
-      },
-      {
-        "@id": "https://w3id.org/dpv#hasApplicableLaw"
-      },
-      {
-        "@id": "https://w3id.org/dpv#isAuthorityFor"
-      },
-      {
-        "@id": "https://w3id.org/dpv#hasThirdCountry"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv#isAuthorityFor",
-    "@type": [
-      "https://w3id.org/dpv#Relation",
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-01-19"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Harshvardhan J. Pandit"
-      },
-      {
-        "@value": "Georg P Krog"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/dpv#Authority"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/dpv#Concept"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "Indicates area, scope, or applicability of an Authority"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "is authority for"
-      }
-    ]
-  },
-  {
     "@id": "https://w3id.org/dpv#hasLocation",
     "@type": [
       "https://w3id.org/dpv#Relation",
@@ -356,84 +60,57 @@
     ]
   },
   {
-    "@id": "https://w3id.org/dpv#Region",
+    "@id": "https://w3id.org/dpv#JurisdictionsConcepts",
     "@type": [
-      "https://w3id.org/dpv#Concept",
-      "http://www.w3.org/2004/02/skos/core#Concept"
+      "http://www.w3.org/2004/02/skos/core#Collection"
     ],
-    "http://purl.org/dc/terms/created": [
+    "http://purl.org/dc/terms/title": [
       {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-01-19"
+        "@value": "Jurisdictions Concepts"
       }
     ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Harshvardhan J. Pandit"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "A region is an area or site that is considered a location"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "Region"
-      }
-    ],
-    "https://w3id.org/dpv#isSubTypeOf": [
+    "http://www.w3.org/2004/02/skos/core#member": [
       {
         "@id": "https://w3id.org/dpv#Location"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv#SupraNationalUnion",
-    "@type": [
-      "https://w3id.org/dpv#Concept",
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://purl.org/dc/terms/created": [
+      },
       {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-01-19"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
+        "@id": "https://w3id.org/dpv#Country"
+      },
       {
-        "@value": "Harshvardhan J. Pandit"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        "@id": "https://w3id.org/dpv#SupraNationalUnion"
+      },
       {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
+        "@id": "https://w3id.org/dpv#EconomicUnion"
+      },
       {
-        "@language": "en",
-        "@value": "A political union of two or more countries with an establishment of common authority"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        "@id": "https://w3id.org/dpv#Region"
+      },
       {
-        "@language": "en",
-        "@value": "SupraNationalUnion"
-      }
-    ],
-    "https://w3id.org/dpv#isSubTypeOf": [
+        "@id": "https://w3id.org/dpv#Law"
+      },
       {
-        "@id": "https://w3id.org/dpv#Location"
+        "@id": "https://w3id.org/dpv#ThirdCountry"
+      },
+      {
+        "@id": "https://w3id.org/dpv#hasJurisdiction"
+      },
+      {
+        "@id": "https://w3id.org/dpv#hasCountry"
+      },
+      {
+        "@id": "https://w3id.org/dpv#hasAuthority"
+      },
+      {
+        "@id": "https://w3id.org/dpv#hasLocation"
+      },
+      {
+        "@id": "https://w3id.org/dpv#hasApplicableLaw"
+      },
+      {
+        "@id": "https://w3id.org/dpv#isAuthorityFor"
+      },
+      {
+        "@id": "https://w3id.org/dpv#hasThirdCountry"
       }
     ]
   },
@@ -479,21 +156,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/dpv#isInstanceOf",
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://www.w3.org/2004/02/skos/core#semanticRelation"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "isInstanceOf"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv#hasJurisdiction",
+    "@id": "https://w3id.org/dpv#hasApplicableLaw",
     "@type": [
       "https://w3id.org/dpv#Relation",
       "http://www.w3.org/2004/02/skos/core#Concept"
@@ -516,7 +179,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/dpv#Location"
+        "@id": "https://w3id.org/dpv#Law"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -528,13 +191,116 @@
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "Indicates applicability of specified jurisdiction"
+        "@value": "Indicates applicability of a Law"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
       {
         "@language": "en",
-        "@value": "has jurisdiction"
+        "@value": "has applicable law"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv#hasCountry",
+    "@type": [
+      "https://w3id.org/dpv#Relation",
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-01-19"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
+      },
+      {
+        "@value": "Georg P Krog"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/dpv#Concept"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/dpv#Country"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/dpv#hasLocation"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Indicates applicability of specified country"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has country"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv#isAuthorityFor",
+    "@type": [
+      "https://w3id.org/dpv#Relation",
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-01-19"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
+      },
+      {
+        "@value": "Georg P Krog"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/dpv#Authority"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/dpv#Concept"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Indicates area, scope, or applicability of an Authority"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "is authority for"
       }
     ]
   },
@@ -572,6 +338,75 @@
       {
         "@language": "en",
         "@value": "Location"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv#isInstanceOf",
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#semanticRelation"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "isInstanceOf"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv#Relation",
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#semanticRelation"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Relation"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv#Region",
+    "@type": [
+      "https://w3id.org/dpv#Concept",
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-01-19"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A region is an area or site that is considered a location"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Region"
+      }
+    ],
+    "https://w3id.org/dpv#isSubTypeOf": [
+      {
+        "@id": "https://w3id.org/dpv#Location"
       }
     ]
   },
@@ -622,7 +457,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/dpv#Law",
+    "@id": "https://w3id.org/dpv#EconomicUnion",
     "@type": [
       "https://w3id.org/dpv#Concept",
       "http://www.w3.org/2004/02/skos/core#Concept"
@@ -647,13 +482,64 @@
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "A law is a set of rules created by government or authorities"
+        "@value": "A political union of two or more countries based on economic or trade agreements"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
       {
         "@language": "en",
-        "@value": "Law"
+        "@value": "EconomicUnion"
+      }
+    ],
+    "https://w3id.org/dpv#isSubTypeOf": [
+      {
+        "@id": "https://w3id.org/dpv#Location"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv#hasJurisdiction",
+    "@type": [
+      "https://w3id.org/dpv#Relation",
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-01-19"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/dpv#Concept"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/dpv#Location"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Indicates applicability of specified jurisdiction"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has jurisdiction"
       }
     ]
   },
@@ -707,7 +593,35 @@
     ]
   },
   {
-    "@id": "https://w3id.org/dpv#EconomicUnion",
+    "@id": "https://w3id.org/dpv#Concept",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Concept"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv#isSubTypeOf",
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#broaderTransitive"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "isSubTypeOf"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv#Law",
     "@type": [
       "https://w3id.org/dpv#Concept",
       "http://www.w3.org/2004/02/skos/core#Concept"
@@ -732,13 +646,99 @@
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "A political union of two or more countries based on economic or trade agreements"
+        "@value": "A law is a set of rules created by government or authorities"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
       {
         "@language": "en",
-        "@value": "EconomicUnion"
+        "@value": "Law"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv#Country",
+    "@type": [
+      "https://w3id.org/dpv#Concept",
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-01-19"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
+      },
+      {
+        "@value": "Georg P Krog"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A political entity indicative of a sovereign or non-sovereign territorial state comprising of distinct geographical areas"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@language": "en",
+        "@value": "The definition of country is not intended for political interpretation. DPVCG welcomes alternate definitions based in existing sources with global scope, such as UN or ISO."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Country"
+      }
+    ],
+    "https://w3id.org/dpv#isSubTypeOf": [
+      {
+        "@id": "https://w3id.org/dpv#Location"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv#SupraNationalUnion",
+    "@type": [
+      "https://w3id.org/dpv#Concept",
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-01-19"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A political union of two or more countries with an establishment of common authority"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "SupraNationalUnion"
       }
     ],
     "https://w3id.org/dpv#isSubTypeOf": [
