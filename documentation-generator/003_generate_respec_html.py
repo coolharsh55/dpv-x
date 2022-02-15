@@ -11,6 +11,8 @@ EXPORT_DPV_HTML_PATH = '../dpv'
 IMPORT_DPV_GDPR_PATH = '../dpv-gdpr/dpv-gdpr.ttl'
 IMPORT_DPV_GDPR_MODULES_PATH = '../dpv-gdpr/modules'
 EXPORT_DPV_GDPR_HTML_PATH = '../dpv-gdpr'
+IMPORT_DPV_PD_PATH = '../dpv-pd/dpv-pd.ttl'
+EXPORT_DPV_PD_HTML_PATH = '../dpv-pd'
 
 from rdflib import Graph, Namespace
 from rdflib import RDF, RDFS, OWL
@@ -135,5 +137,39 @@ DEBUG(f'wrote DPV-GDPR spec at f{EXPORT_DPV_GDPR_HTML_PATH}/index.html')
 with open(f'{EXPORT_DPV_GDPR_HTML_PATH}/dpv-gdpr.html', 'w+') as fd:
     fd.write(template.render(**TEMPLATE_DATA))
 DEBUG(f'wrote DPV-GDPR spec at f{EXPORT_DPV_GDPR_HTML_PATH}/dpv-gdpr.html')
+
+# DPV-GDPR: generate HTML
+
+load_data('legal_basis', f'{IMPORT_DPV_GDPR_MODULES_PATH}/legal_basis.ttl')
+load_data('rights', f'{IMPORT_DPV_GDPR_MODULES_PATH}/rights.ttl')
+load_data('data_transfers', f'{IMPORT_DPV_GDPR_MODULES_PATH}/data_transfers.ttl')
+g = Graph()
+g.load(f'{IMPORT_DPV_GDPR_PATH}', format='turtle')
+G.load(g)
+
+template = template_env.get_template('template_dpv_gdpr.jinja2')
+with open(f'{EXPORT_DPV_GDPR_HTML_PATH}/index.html', 'w+') as fd:
+    fd.write(template.render(**TEMPLATE_DATA))
+DEBUG(f'wrote DPV-GDPR spec at f{EXPORT_DPV_GDPR_HTML_PATH}/index.html')
+with open(f'{EXPORT_DPV_GDPR_HTML_PATH}/dpv-gdpr.html', 'w+') as fd:
+    fd.write(template.render(**TEMPLATE_DATA))
+DEBUG(f'wrote DPV-GDPR spec at f{EXPORT_DPV_GDPR_HTML_PATH}/dpv-gdpr.html')
+
+
+# DPV-PD: generate HTML
+
+load_data('dpv_pd', f'{IMPORT_DPV_PD_PATH}')
+g = Graph()
+g.load(f'{IMPORT_DPV_PD_PATH}', format='turtle')
+G.load(g)
+
+template = template_env.get_template('template_dpv_pd.jinja2')
+with open(f'{EXPORT_DPV_PD_HTML_PATH}/index.html', 'w+') as fd:
+    fd.write(template.render(**TEMPLATE_DATA))
+DEBUG(f'wrote DPV-PD spec at f{EXPORT_DPV_PD_HTML_PATH}/index.html')
+with open(f'{EXPORT_DPV_PD_HTML_PATH}/dpv-pd.html', 'w+') as fd:
+    fd.write(template.render(**TEMPLATE_DATA))
+DEBUG(f'wrote DPV-PD spec at f{EXPORT_DPV_PD_HTML_PATH}/dpv-pd.html')
+
 
 DEBUG('--- END ---')

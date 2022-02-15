@@ -1,6 +1,88 @@
 [
   {
-    "@id": "https://w3id.org/dpv#VitalInterest",
+    "@id": "https://w3id.org/dpv#LegalObligation",
+    "@type": [
+      "https://w3id.org/dpv#Concept",
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2021-04-07"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Legal Obligation to conduct the specified processing"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Legal Obligation"
+      }
+    ],
+    "https://w3id.org/dpv#isSubTypeOf": [
+      {
+        "@id": "https://w3id.org/dpv#LegalBasis"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv#Consent",
+    "@type": [
+      "https://w3id.org/dpv#Concept",
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2021-04-07"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Consent of the Data Subject for specified processing"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Consent"
+      }
+    ],
+    "https://w3id.org/dpv#isSubTypeOf": [
+      {
+        "@id": "https://w3id.org/dpv#LegalBasis"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv#PublicInterest",
     "@type": [
       "https://w3id.org/dpv#Concept",
       "http://www.w3.org/2004/02/skos/core#Concept"
@@ -25,79 +107,18 @@
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "Processing is necessary or required to protect vital interests of a data subject or other natural person"
+        "@value": "Processing is necessary or beneficial for interest of the public or society at large"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
       {
         "@language": "en",
-        "@value": "Vital Interest"
+        "@value": "Public Interest"
       }
     ],
     "https://w3id.org/dpv#isSubTypeOf": [
       {
         "@id": "https://w3id.org/dpv#LegalBasis"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv#Relation",
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://www.w3.org/2004/02/skos/core#semanticRelation"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "Relation"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv#LegitimateInterestOfController",
-    "@type": [
-      "https://w3id.org/dpv#Concept",
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2021-05-19"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Georg P Krog"
-      },
-      {
-        "@value": "Harshvardhan J. Pandit"
-      },
-      {
-        "@value": "Paul Ryan"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "Legitimate Interests of a Data Controller in conducting specified processing"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "Legitimate Interest of Controller"
-      }
-    ],
-    "https://w3id.org/dpv#isSubTypeOf": [
-      {
-        "@id": "https://w3id.org/dpv#LegitimateInterest"
       }
     ]
   },
@@ -149,21 +170,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/dpv#Concept",
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://www.w3.org/2004/02/skos/core#Concept"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "Concept"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv#Consent",
+    "@id": "https://w3id.org/dpv#EnterIntoContract",
     "@type": [
       "https://w3id.org/dpv#Concept",
       "http://www.w3.org/2004/02/skos/core#Concept"
@@ -172,6 +179,53 @@
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
         "@value": "2021-04-07"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Georg P Krog"
+      },
+      {
+        "@value": "Harshvardhan J. Pandit"
+      },
+      {
+        "@value": "Paul Ryan"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Processing necessary to enter into contract"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Enter Into Contract"
+      }
+    ],
+    "https://w3id.org/dpv#isSubTypeOf": [
+      {
+        "@id": "https://w3id.org/dpv#Contract"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv#LegitimateInterest",
+    "@type": [
+      "https://w3id.org/dpv#Concept",
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2021-05-19"
       }
     ],
     "http://purl.org/dc/terms/creator": [
@@ -188,13 +242,13 @@
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "Consent of the Data Subject for specified processing"
+        "@value": "Legitimate Interests of a Party as justification for specified processing"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
       {
         "@language": "en",
-        "@value": "Consent"
+        "@value": "Legitimate Interest"
       }
     ],
     "https://w3id.org/dpv#isSubTypeOf": [
@@ -204,62 +258,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/dpv#LegalObligation",
-    "@type": [
-      "https://w3id.org/dpv#Concept",
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2021-04-07"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Harshvardhan J. Pandit"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "Legal Obligation to conduct the specified processing"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "Legal Obligation"
-      }
-    ],
-    "https://w3id.org/dpv#isSubTypeOf": [
-      {
-        "@id": "https://w3id.org/dpv#LegalBasis"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv#isSubTypeOf",
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://www.w3.org/2004/02/skos/core#broaderTransitive"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "isSubTypeOf"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv#VitalInterestOfDataSubject",
+    "@id": "https://w3id.org/dpv#VitalInterestOfNaturalPerson",
     "@type": [
       "https://w3id.org/dpv#Concept",
       "http://www.w3.org/2004/02/skos/core#Concept"
@@ -290,23 +289,23 @@
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "Processing is necessary or required to protect vital interests of a data subject"
+        "@value": "Processing is necessary or required to protect vital interests of a natural person"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
       {
         "@language": "en",
-        "@value": "Vital Interest of Data Subject"
+        "@value": "Vital Interest of Natural Person"
       }
     ],
     "https://w3id.org/dpv#isSubTypeOf": [
       {
-        "@id": "https://w3id.org/dpv#VitalInterestOfNaturalPerson"
+        "@id": "https://w3id.org/dpv#VitalInterest"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/dpv#PublicInterest",
+    "@id": "https://w3id.org/dpv#LegitimateInterestOfController",
     "@type": [
       "https://w3id.org/dpv#Concept",
       "http://www.w3.org/2004/02/skos/core#Concept"
@@ -314,12 +313,18 @@
     "http://purl.org/dc/terms/created": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2021-04-21"
+        "@value": "2021-05-19"
       }
     ],
     "http://purl.org/dc/terms/creator": [
       {
+        "@value": "Georg P Krog"
+      },
+      {
         "@value": "Harshvardhan J. Pandit"
+      },
+      {
+        "@value": "Paul Ryan"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -331,18 +336,18 @@
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "Processing is necessary or beneficial for interest of the public or society at large"
+        "@value": "Legitimate Interests of a Data Controller in conducting specified processing"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
       {
         "@language": "en",
-        "@value": "Public Interest"
+        "@value": "Legitimate Interest of Controller"
       }
     ],
     "https://w3id.org/dpv#isSubTypeOf": [
       {
-        "@id": "https://w3id.org/dpv#LegalBasis"
+        "@id": "https://w3id.org/dpv#LegitimateInterest"
       }
     ]
   },
@@ -402,7 +407,35 @@
     ]
   },
   {
-    "@id": "https://w3id.org/dpv#LegitimateInterest",
+    "@id": "https://w3id.org/dpv#isInstanceOf",
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#semanticRelation"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "isInstanceOf"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv#Relation",
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#semanticRelation"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Relation"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv#VitalInterest",
     "@type": [
       "https://w3id.org/dpv#Concept",
       "http://www.w3.org/2004/02/skos/core#Concept"
@@ -410,7 +443,7 @@
     "http://purl.org/dc/terms/created": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2021-05-19"
+        "@value": "2021-04-21"
       }
     ],
     "http://purl.org/dc/terms/creator": [
@@ -427,18 +460,65 @@
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "Legitimate Interests of a Party as justification for specified processing"
+        "@value": "Processing is necessary or required to protect vital interests of a data subject or other natural person"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
       {
         "@language": "en",
-        "@value": "Legitimate Interest"
+        "@value": "Vital Interest"
       }
     ],
     "https://w3id.org/dpv#isSubTypeOf": [
       {
         "@id": "https://w3id.org/dpv#LegalBasis"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv#VitalInterestOfDataSubject",
+    "@type": [
+      "https://w3id.org/dpv#Concept",
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2021-04-21"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Georg P Krog"
+      },
+      {
+        "@value": "Harshvardhan J. Pandit"
+      },
+      {
+        "@value": "Paul Ryan"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Processing is necessary or required to protect vital interests of a data subject"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Vital Interest of Data Subject"
+      }
+    ],
+    "https://w3id.org/dpv#isSubTypeOf": [
+      {
+        "@id": "https://w3id.org/dpv#VitalInterestOfNaturalPerson"
       }
     ]
   },
@@ -487,7 +567,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/dpv#EnterIntoContract",
+    "@id": "https://w3id.org/dpv#DataTransferLegalBasis",
     "@type": [
       "https://w3id.org/dpv#Concept",
       "http://www.w3.org/2004/02/skos/core#Concept"
@@ -495,18 +575,15 @@
     "http://purl.org/dc/terms/created": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2021-04-07"
+        "@value": "2021-09-08"
       }
     ],
     "http://purl.org/dc/terms/creator": [
       {
-        "@value": "Georg P Krog"
+        "@value": "David Hickey"
       },
       {
-        "@value": "Harshvardhan J. Pandit"
-      },
-      {
-        "@value": "Paul Ryan"
+        "@value": "Georg P Krogg"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -518,18 +595,18 @@
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "Processing necessary to enter into contract"
+        "@value": "Specific or special categories and instances of legal basis intended for justifying data transfers"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
       {
         "@language": "en",
-        "@value": "Enter Into Contract"
+        "@value": "Data Transfer Legal Basis"
       }
     ],
     "https://w3id.org/dpv#isSubTypeOf": [
       {
-        "@id": "https://w3id.org/dpv#Contract"
+        "@id": "https://w3id.org/dpv#LegalBasis"
       }
     ]
   },
@@ -595,64 +672,6 @@
     ]
   },
   {
-    "@id": "https://w3id.org/dpv#DataTransferLegalBasis",
-    "@type": [
-      "https://w3id.org/dpv#Concept",
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2021-09-08"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "David Hickey"
-      },
-      {
-        "@value": "Georg P Krogg"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "Specific or special categories and instances of legal basis intended for justifying data transfers"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "Data Transfer Legal Basis"
-      }
-    ],
-    "https://w3id.org/dpv#isSubTypeOf": [
-      {
-        "@id": "https://w3id.org/dpv#LegalBasis"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv#isInstanceOf",
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://www.w3.org/2004/02/skos/core#semanticRelation"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "isInstanceOf"
-      }
-    ]
-  },
-  {
     "@id": "https://w3id.org/dpv#OfficialAuthorityOfController",
     "@type": [
       "https://w3id.org/dpv#Concept",
@@ -700,92 +719,30 @@
     ]
   },
   {
-    "@id": "https://w3id.org/dpv#VitalInterestOfNaturalPerson",
-    "@type": [
-      "https://w3id.org/dpv#Concept",
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://purl.org/dc/terms/created": [
+    "@id": "https://w3id.org/dpv#Concept",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2021-04-21"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Georg P Krog"
-      },
-      {
-        "@value": "Harshvardhan J. Pandit"
-      },
-      {
-        "@value": "Paul Ryan"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "Processing is necessary or required to protect vital interests of a natural person"
+        "@id": "http://www.w3.org/2004/02/skos/core#Concept"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
       {
         "@language": "en",
-        "@value": "Vital Interest of Natural Person"
-      }
-    ],
-    "https://w3id.org/dpv#isSubTypeOf": [
-      {
-        "@id": "https://w3id.org/dpv#VitalInterest"
+        "@value": "Concept"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/dpv#LegalBasis",
-    "@type": [
-      "https://w3id.org/dpv#Concept",
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://purl.org/dc/terms/created": [
+    "@id": "https://w3id.org/dpv#isSubTypeOf",
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
       {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2019-04-05"
-      }
-    ],
-    "http://purl.org/dc/terms/modified": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2020-11-04"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "The Legal basis used to justify processing of personal data"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#note": [
-      {
-        "@language": "en",
-        "@value": "Legal basis (plural: legal bases) are defined by legislations and regulations, whose applicability is usually restricted to specific jurisdictions."
+        "@id": "http://www.w3.org/2004/02/skos/core#broaderTransitive"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
       {
         "@language": "en",
-        "@value": "Legal Basis"
+        "@value": "isSubTypeOf"
       }
     ]
   },
@@ -833,6 +790,49 @@
     "https://w3id.org/dpv#isSubTypeOf": [
       {
         "@id": "https://w3id.org/dpv#Contract"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv#LegalBasis",
+    "@type": [
+      "https://w3id.org/dpv#Concept",
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2019-04-05"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2020-11-04"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The Legal basis used to justify processing of personal data"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@language": "en",
+        "@value": "Legal basis (plural: legal bases) are defined by legislations and regulations, whose applicability is usually restricted to specific jurisdictions."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Legal Basis"
       }
     ]
   }

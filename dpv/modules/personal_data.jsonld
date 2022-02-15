@@ -1,5 +1,52 @@
 [
   {
+    "@id": "https://w3id.org/dpv#InferredPersonalData",
+    "@type": [
+      "https://w3id.org/dpv#Concept",
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-01-19"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Personal Data that is obtained through inference from other data"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@language": "en",
+        "@value": "Inferred Data is data that is derived from existing data, but which did not originally exist within it, e.g. inferring demographics from browsing history."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Inferred Personal Data"
+      }
+    ],
+    "https://w3id.org/dpv#isSubTypeOf": [
+      {
+        "@id": "https://w3id.org/dpv#DerivedData"
+      }
+    ]
+  },
+  {
     "@id": "https://w3id.org/dpv#SensitivePersonalData",
     "@type": [
       "https://w3id.org/dpv#Concept",
@@ -47,108 +94,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/dpv#Personal_DataConcepts",
-    "@type": [
-      "http://www.w3.org/2004/02/skos/core#Collection"
-    ],
-    "http://purl.org/dc/terms/title": [
-      {
-        "@value": "Personal_Data Concepts"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#member": [
-      {
-        "@id": "https://w3id.org/dpv#PersonalData"
-      },
-      {
-        "@id": "https://w3id.org/dpv#AnonymisedData"
-      },
-      {
-        "@id": "https://w3id.org/dpv#DerivedPersonalData"
-      },
-      {
-        "@id": "https://w3id.org/dpv#InferredPersonalData"
-      },
-      {
-        "@id": "https://w3id.org/dpv#PseudoAnonymisedData"
-      },
-      {
-        "@id": "https://w3id.org/dpv#SensitivePersonalData"
-      },
-      {
-        "@id": "https://w3id.org/dpv#Data"
-      },
-      {
-        "@id": "https://w3id.org/dpv#NonPersonalData"
-      },
-      {
-        "@id": "https://w3id.org/dpv#hasPersonalData"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv#AnonymisedData",
-    "@type": [
-      "https://w3id.org/dpv#Concept",
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-01-19"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Piero Bonatti"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "Personal Data that has been (fully and completely) anonymised so that it is no longer considered Personal Data"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#note": [
-      {
-        "@language": "en",
-        "@value": "It is advised to carefully consider indicating data is fully or completely anonymised by determining whether the data by itself or in combination with other data can identify a person. Failing this condition, the data should be denoted as PseudoAnonymisedData. To indicate data is anonymised only for a specified entity (e.g. within an organisation), the concept AnonymisedDataWithinScope (as subclass of PseudoAnonymisedData) should be used instead of AnonymisedData."
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "Anonymised Data"
-      }
-    ],
-    "https://w3id.org/dpv#isSubTypeOf": [
-      {
-        "@id": "https://w3id.org/dpv#NonPersonalData"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv#Relation",
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://www.w3.org/2004/02/skos/core#semanticRelation"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "Relation"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv#PseudoAnonymisedData",
+    "@id": "https://w3id.org/dpv#Data",
     "@type": [
       "https://w3id.org/dpv#Concept",
       "http://www.w3.org/2004/02/skos/core#Concept"
@@ -173,18 +119,13 @@
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "Personal Data that has undergone a partial (incomplete) anonymisation process such that it is still considered Personal Data"
+        "@value": "A broad concept representing  'data' or 'information'"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
       {
         "@language": "en",
-        "@value": "Pseudo-anonymised Data"
-      }
-    ],
-    "https://w3id.org/dpv#isSubTypeOf": [
-      {
-        "@id": "https://w3id.org/dpv#PersonalData"
+        "@value": "Data"
       }
     ]
   },
@@ -232,67 +173,6 @@
     "https://w3id.org/dpv#isSubTypeOf": [
       {
         "@id": "https://w3id.org/dpv#Data"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv#Concept",
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://www.w3.org/2004/02/skos/core#Concept"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "Concept"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv#InferredPersonalData",
-    "@type": [
-      "https://w3id.org/dpv#Concept",
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-01-19"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Harshvardhan J. Pandit"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "Personal Data that is obtained through inference from other data"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#note": [
-      {
-        "@language": "en",
-        "@value": "Inferred Data is data that is derived from existing data, but which did not originally exist within it, e.g. inferring demographics from browsing history."
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "Inferred Personal Data"
-      }
-    ],
-    "https://w3id.org/dpv#isSubTypeOf": [
-      {
-        "@id": "https://w3id.org/dpv#DerivedData"
       }
     ]
   },
@@ -409,6 +289,60 @@
     ]
   },
   {
+    "@id": "https://w3id.org/dpv#Concept",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Concept"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv#Personal_DataConcepts",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Collection"
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@value": "Personal_Data Concepts"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#member": [
+      {
+        "@id": "https://w3id.org/dpv#PersonalData"
+      },
+      {
+        "@id": "https://w3id.org/dpv#AnonymisedData"
+      },
+      {
+        "@id": "https://w3id.org/dpv#DerivedPersonalData"
+      },
+      {
+        "@id": "https://w3id.org/dpv#InferredPersonalData"
+      },
+      {
+        "@id": "https://w3id.org/dpv#PseudoAnonymisedData"
+      },
+      {
+        "@id": "https://w3id.org/dpv#SensitivePersonalData"
+      },
+      {
+        "@id": "https://w3id.org/dpv#Data"
+      },
+      {
+        "@id": "https://w3id.org/dpv#NonPersonalData"
+      },
+      {
+        "@id": "https://w3id.org/dpv#hasPersonalData"
+      }
+    ]
+  },
+  {
     "@id": "https://w3id.org/dpv#isSubTypeOf",
     "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
       {
@@ -486,7 +420,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/dpv#Data",
+    "@id": "https://w3id.org/dpv#PseudoAnonymisedData",
     "@type": [
       "https://w3id.org/dpv#Concept",
       "http://www.w3.org/2004/02/skos/core#Concept"
@@ -511,13 +445,79 @@
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "A broad concept representing  'data' or 'information'"
+        "@value": "Personal Data that has undergone a partial (incomplete) anonymisation process such that it is still considered Personal Data"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
       {
         "@language": "en",
-        "@value": "Data"
+        "@value": "Pseudo-anonymised Data"
+      }
+    ],
+    "https://w3id.org/dpv#isSubTypeOf": [
+      {
+        "@id": "https://w3id.org/dpv#PersonalData"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv#AnonymisedData",
+    "@type": [
+      "https://w3id.org/dpv#Concept",
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-01-19"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Piero Bonatti"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Personal Data that has been (fully and completely) anonymised so that it is no longer considered Personal Data"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@language": "en",
+        "@value": "It is advised to carefully consider indicating data is fully or completely anonymised by determining whether the data by itself or in combination with other data can identify a person. Failing this condition, the data should be denoted as PseudoAnonymisedData. To indicate data is anonymised only for a specified entity (e.g. within an organisation), the concept AnonymisedDataWithinScope (as subclass of PseudoAnonymisedData) should be used instead of AnonymisedData."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Anonymised Data"
+      }
+    ],
+    "https://w3id.org/dpv#isSubTypeOf": [
+      {
+        "@id": "https://w3id.org/dpv#NonPersonalData"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv#Relation",
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#semanticRelation"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Relation"
       }
     ]
   },
