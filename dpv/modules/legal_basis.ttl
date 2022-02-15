@@ -30,23 +30,6 @@ dpv:isInstanceOf rdfs:subPropertyOf skos:semanticRelation ;
 dpv:isSubTypeOf rdfs:subPropertyOf skos:broaderTransitive ;
     skos:prefLabel "isSubTypeOf"@en .
 
-dpv:LegalAgreement skos:narrowerTransitive dpv:Contract .
-
-dpv:Relation rdfs:subPropertyOf skos:semanticRelation ;
-    skos:prefLabel "Relation"@en .
-
-dpv:hasLegalBasis a skos:Concept,
-        dpv:Relation ;
-    dct:created "2019-04-04"^^xsd:date ;
-    dct:creator "Axel Polleres"^^xsd:string,
-        "Javier Fernández"^^xsd:string ;
-    dct:modified "2020-11-04"^^xsd:date ;
-    rdfs:domain dpv:Concept ;
-    rdfs:range dpv:LegalBasis ;
-    sw:term_status "accepted"@en ;
-    skos:definition "Indicates use or applicability of a Legal Basis"@en ;
-    skos:prefLabel "has legal basis"@en .
-
 dpv:Consent a skos:Concept,
         dpv:Concept ;
     dct:created "2021-04-07"^^xsd:date ;
@@ -139,6 +122,9 @@ dpv:PublicInterest a skos:Concept,
     skos:prefLabel "Public Interest"@en ;
     dpv:isSubTypeOf dpv:LegalBasis .
 
+dpv:Relation rdfs:subPropertyOf skos:semanticRelation ;
+    skos:prefLabel "Relation"@en .
+
 dpv:VitalInterestOfDataSubject a skos:Concept,
         dpv:Concept ;
     dct:created "2021-04-21"^^xsd:date ;
@@ -150,13 +136,24 @@ dpv:VitalInterestOfDataSubject a skos:Concept,
     skos:prefLabel "Vital Interest of Data Subject"@en ;
     dpv:isSubTypeOf dpv:VitalInterestOfNaturalPerson .
 
+dpv:hasLegalBasis a skos:Concept,
+        dpv:Relation ;
+    dct:created "2019-04-04"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Javier Fernández"^^xsd:string ;
+    dct:modified "2020-11-04"^^xsd:date ;
+    rdfs:domain dpv:Concept ;
+    rdfs:range dpv:LegalBasis ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Indicates use or applicability of a Legal Basis"@en ;
+    skos:prefLabel "has legal basis"@en .
+
 dpv:VitalInterest a skos:Concept,
         dpv:Concept ;
     dct:created "2021-04-21"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     sw:term_status "accepted"@en ;
     skos:definition "Processing is necessary or required to protect vital interests of a data subject or other natural person"@en ;
-    skos:narrowerTransitive dpv:VitalInterestOfNaturalPerson ;
     skos:prefLabel "Vital Interest"@en ;
     dpv:isSubTypeOf dpv:LegalBasis .
 
@@ -168,20 +165,8 @@ dpv:VitalInterestOfNaturalPerson a skos:Concept,
         "Paul Ryan"^^xsd:string ;
     sw:term_status "accepted"@en ;
     skos:definition "Processing is necessary or required to protect vital interests of a natural person"@en ;
-    skos:narrowerTransitive dpv:VitalInterestOfDataSubject ;
     skos:prefLabel "Vital Interest of Natural Person"@en ;
     dpv:isSubTypeOf dpv:VitalInterest .
-
-dpv:LegitimateInterest a skos:Concept,
-        dpv:Concept ;
-    dct:created "2021-05-19"^^xsd:date ;
-    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    sw:term_status "accepted"@en ;
-    skos:definition "Legitimate Interests of a Party as justification for specified processing"@en ;
-    skos:narrowerTransitive dpv:LegitimateInterestOfController,
-        dpv:LegitimateInterestOfThirdParty ;
-    skos:prefLabel "Legitimate Interest"@en ;
-    dpv:isSubTypeOf dpv:LegalBasis .
 
 dpv:Contract a skos:Concept,
         dpv:Concept ;
@@ -189,11 +174,18 @@ dpv:Contract a skos:Concept,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     sw:term_status "accepted"@en ;
     skos:definition "Creation, completion, fulfilment, or performance of a contract involving specified processing"@en ;
-    skos:narrowerTransitive dpv:ContractPerformance,
-        dpv:EnterIntoContract ;
     skos:prefLabel "Contract"@en ;
     dpv:isSubTypeOf dpv:LegalAgreement,
         dpv:LegalBasis .
+
+dpv:LegitimateInterest a skos:Concept,
+        dpv:Concept ;
+    dct:created "2021-05-19"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Legitimate Interests of a Party as justification for specified processing"@en ;
+    skos:prefLabel "Legitimate Interest"@en ;
+    dpv:isSubTypeOf dpv:LegalBasis .
 
 dpv:LegalBasis a skos:Concept,
         dpv:Concept ;
@@ -201,14 +193,6 @@ dpv:LegalBasis a skos:Concept,
     dct:modified "2020-11-04"^^xsd:date ;
     sw:term_status "accepted"@en ;
     skos:definition "The Legal basis used to justify processing of personal data"@en ;
-    skos:narrowerTransitive dpv:Consent,
-        dpv:Contract,
-        dpv:DataTransferLegalBasis,
-        dpv:LegalObligation,
-        dpv:LegitimateInterest,
-        dpv:OfficialAuthorityOfController,
-        dpv:PublicInterest,
-        dpv:VitalInterest ;
     skos:note "Legal basis (plural: legal bases) are defined by legislations and regulations, whose applicability is usually restricted to specific jurisdictions."@en ;
     skos:prefLabel "Legal Basis"@en .
 

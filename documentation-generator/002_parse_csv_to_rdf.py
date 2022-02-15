@@ -250,7 +250,6 @@ def add_triples_for_classes(classes, graph):
                     # dpv internal terms are expected to have the prefix i.e. dpv:term
                     parent = NAMESPACES[prefix][f'{term}']
                     graph.add((BASE[f'{cls.term}'], DPV.isSubTypeOf, parent))
-                    graph.add((parent, SKOS.narrowerTransitive, BASE[f'{cls.term}']))
                 else:
                     graph.add((BASE[f'{cls.term}'], DPV.isSubTypeOf, Literal(parent, datatype=XSD.string)))
         
@@ -427,9 +426,6 @@ for prefix, namespace in NAMESPACES.items():
         DPV_GRAPH.namespace_manager.bind(prefix, namespace)
 serialize_graph(DPV_GRAPH, f'{EXPORT_DPV_PATH}/dpv')
 
-import sys
-sys.exit()
-
 ##############################################################################
 
 # DPV-GDPR #
@@ -437,10 +433,6 @@ sys.exit()
 # except that the namespace is different
 # so instead of rewriting the entire code again for dpv-gdpr,
 # here I become lazy and instead change the DPV namespace to DPV-GDPR
-
-BASE = NAMESPACES['dpv-gdpr']
-
-DPV_GDPR_GRAPH = Graph()
 
 DPV_GDPR_CSV_FILES = {
     'legal_basis': {
@@ -454,8 +446,14 @@ DPV_GDPR_CSV_FILES = {
         },
     }
 
+BASE = NAMESPACES['dpv-gdpr']
+DPV_GDPR_GRAPH = Graph()
+DPV_GDPR_GRAPH.add((BASE[''], RDF.type, SKOS.ConceptScheme))
+
 for name, module in DPV_GDPR_CSV_FILES.items():
     graph = Graph()
+    DEBUG('------')
+    DEBUG(f'Processing {name} module')
     for prefix, namespace in NAMESPACES.items():
         graph.namespace_manager.bind(prefix, namespace)
     if 'classes' in module:
@@ -466,7 +464,16 @@ for name, module in DPV_GDPR_CSV_FILES.items():
         properties = extract_terms_from_csv(module['properties'], DPV_Property)
         DEBUG(f'there are {len(properties)} properties in {name}')
         add_triples_for_properties(properties, graph)
+    # add collection representing concepts
+    graph.add((BASE[f'{name.title()}Concepts'], RDF.type, SKOS.Collection))
+    graph.add((BASE[f'{name.title()}Concepts'], DCT.title, Literal(f'{name.title()} Concepts', datatype=XSD.string)))
+    for concept, _, _ in graph.triples((None, RDF.type, SKOS.Concept)):
+        graph.add((BASE[f'{name.title()}Concepts'], SKOS.member, concept))
+        DPV_GDPR_GRAPH.add((concept, SKOS.inScheme, DPV_GDPR['']))
+    # serialize
     serialize_graph(graph, f'{EXPORT_DPV_GDPR_MODULE_PATH}/{name}')
+    if 'topconcept' in module:
+        DPV_GDPR_GRAPH.add((BASE[''], SKOS.hasTopConcept, module['topconcept']))
     DPV_GDPR_GRAPH += graph
 
 graph = Graph()

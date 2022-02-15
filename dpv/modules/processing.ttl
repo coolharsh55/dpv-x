@@ -51,25 +51,6 @@ dpv:isInstanceOf rdfs:subPropertyOf skos:semanticRelation ;
 dpv:isSubTypeOf rdfs:subPropertyOf skos:broaderTransitive ;
     skos:prefLabel "isSubTypeOf"@en .
 
-dpv:Relation rdfs:subPropertyOf skos:semanticRelation ;
-    skos:prefLabel "Relation"@en .
-
-dpv:hasProcessing a skos:Concept,
-        dpv:Relation ;
-    dct:created "2019-04-04"^^xsd:date ;
-    dct:creator "Axel Polleres"^^xsd:string,
-        "Bud Bruegger"^^xsd:string,
-        "Harshvardhan J. Pandit"^^xsd:string,
-        "Javier Fernández"^^xsd:string,
-        "Mark Lizar"^^xsd:string ;
-    dct:modified "2020-11-04"^^xsd:date ;
-    rdfs:domain dpv:Concept ;
-    rdfs:range dpv:Processing ;
-    sw:term_status "accepted"@en ;
-    skos:definition "Indicates association with Processing"@en ;
-    skos:prefLabel "has processing"@en ;
-    skos:scopeNote <https://www.specialprivacy.eu/> .
-
 dpv:Acquire a skos:Concept,
         dpv:Concept ;
     dct:created "2019-05-07"^^xsd:date ;
@@ -261,6 +242,9 @@ dpv:Record a skos:Concept,
     skos:scopeNote <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     dpv:isSubTypeOf dpv:Obtain .
 
+dpv:Relation rdfs:subPropertyOf skos:semanticRelation ;
+    skos:prefLabel "Relation"@en .
+
 dpv:Restrict a skos:Concept,
         dpv:Concept ;
     dct:created "2019-05-07"^^xsd:date ;
@@ -315,12 +299,27 @@ dpv:Transmit a skos:Concept,
     skos:scopeNote <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     dpv:isSubTypeOf dpv:Disclose .
 
+dpv:hasProcessing a skos:Concept,
+        dpv:Relation ;
+    dct:created "2019-04-04"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Bud Bruegger"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernández"^^xsd:string,
+        "Mark Lizar"^^xsd:string ;
+    dct:modified "2020-11-04"^^xsd:date ;
+    rdfs:domain dpv:Concept ;
+    rdfs:range dpv:Processing ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Indicates association with Processing"@en ;
+    skos:prefLabel "has processing"@en ;
+    skos:scopeNote <https://www.specialprivacy.eu/> .
+
 dpv:Organise a skos:Concept,
         dpv:Concept ;
     dct:created "2019-05-07"^^xsd:date ;
     sw:term_status "accepted"@en ;
     skos:definition "to organize data for arranging or classifying"@en ;
-    skos:narrowerTransitive dpv:Structure ;
     skos:prefLabel "Organise"@en ;
     skos:scopeNote <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     dpv:isSubTypeOf dpv:Processing .
@@ -330,7 +329,6 @@ dpv:Transfer a skos:Concept,
     dct:created "2019-05-07"^^xsd:date ;
     sw:term_status "accepted"@en ;
     skos:definition "to move data from one place to another"@en ;
-    skos:narrowerTransitive dpv:Move ;
     skos:prefLabel "Transfer"@en ;
     skos:related svpr:Transfer ;
     skos:scopeNote <https://www.specialprivacy.eu/vocabs/processing> ;
@@ -341,8 +339,6 @@ dpv:Remove a skos:Concept,
     dct:created "2019-05-07"^^xsd:date ;
     sw:term_status "accepted"@en ;
     skos:definition "to destruct or erase data"@en ;
-    skos:narrowerTransitive dpv:Destruct,
-        dpv:Erase ;
     skos:prefLabel "Remove"@en ;
     skos:scopeNote <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     dpv:isSubTypeOf dpv:Processing .
@@ -352,9 +348,6 @@ dpv:Obtain a skos:Concept,
     dct:created "2019-05-07"^^xsd:date ;
     sw:term_status "accepted"@en ;
     skos:definition "to solicit or gather data from someone"@en ;
-    skos:narrowerTransitive dpv:Acquire,
-        dpv:Collect,
-        dpv:Record ;
     skos:prefLabel "Obtain"@en ;
     skos:scopeNote <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     dpv:isSubTypeOf dpv:Processing .
@@ -364,10 +357,6 @@ dpv:Use a skos:Concept,
     dct:created "2019-05-07"^^xsd:date ;
     sw:term_status "accepted"@en ;
     skos:definition "to use data"@en ;
-    skos:narrowerTransitive dpv:Analyse,
-        dpv:Consult,
-        dpv:Profiling,
-        dpv:Retrieve ;
     skos:prefLabel "Use"@en ;
     skos:scopeNote <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     dpv:isSubTypeOf dpv:Processing .
@@ -377,11 +366,6 @@ dpv:Disclose a skos:Concept,
     dct:created "2019-05-07"^^xsd:date ;
     sw:term_status "accepted"@en ;
     skos:definition "to make data known"@en ;
-    skos:narrowerTransitive dpv:DiscloseByTransmission,
-        dpv:Disseminate,
-        dpv:MakeAvailable,
-        dpv:Share,
-        dpv:Transmit ;
     skos:prefLabel "Disclose"@en ;
     skos:scopeNote <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     dpv:isSubTypeOf dpv:Processing .
@@ -391,14 +375,6 @@ dpv:Transform a skos:Concept,
     dct:created "2019-05-07"^^xsd:date ;
     sw:term_status "accepted"@en ;
     skos:definition "to change the form or nature of data"@en ;
-    skos:narrowerTransitive dpv:Adapt,
-        dpv:Align,
-        dpv:Alter,
-        dpv:Anonymise,
-        dpv:Combine,
-        dpv:Derive,
-        dpv:PseudoAnonymise,
-        dpv:Restrict ;
     skos:prefLabel "Transform"@en ;
     skos:scopeNote <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     dpv:isSubTypeOf dpv:Processing .
@@ -411,15 +387,6 @@ dpv:Processing a skos:Concept,
     dct:modified "2020-11-04"^^xsd:date ;
     sw:term_status "accepted"@en ;
     skos:definition "The processing performed on personal data"@en ;
-    skos:narrowerTransitive dpv:Copy,
-        dpv:Disclose,
-        dpv:Obtain,
-        dpv:Organise,
-        dpv:Remove,
-        dpv:Store,
-        dpv:Transfer,
-        dpv:Transform,
-        dpv:Use ;
     skos:prefLabel "Processing"@en ;
     skos:related spl:AnyProcessing ;
     skos:scopeNote <https://www.specialprivacy.eu/> .

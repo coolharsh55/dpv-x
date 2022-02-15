@@ -31,38 +31,6 @@ dpv:isInstanceOf rdfs:subPropertyOf skos:semanticRelation ;
 dpv:isSubTypeOf rdfs:subPropertyOf skos:broaderTransitive ;
     skos:prefLabel "isSubTypeOf"@en .
 
-dpv:Context skos:narrowerTransitive dpv:ProcessingContext .
-
-dpv:Duration skos:narrowerTransitive dpv:StorageDuration .
-
-dpv:Location skos:narrowerTransitive dpv:StorageLocation .
-
-dpv:hasDataSource a skos:Concept,
-        dpv:Relation ;
-    dct:created "2020-11-04"^^xsd:date ;
-    dct:creator "Georg P. Krog"^^xsd:string,
-        "Harshvardhan J. Pandit"^^xsd:string,
-        "Paul Ryan"^^xsd:string ;
-    rdfs:domain dpv:Concept ;
-    rdfs:range dpv:DataSource ;
-    sw:term_status "accepted"@en ;
-    skos:definition "Indicates the source or origin of data being processed"@en ;
-    skos:prefLabel "has data source"@en .
-
-dpv:hasStorage a skos:Concept,
-        dpv:Relation ;
-    dct:created "2019-04-05"^^xsd:date ;
-    dct:creator "Axel Polleres"^^xsd:string,
-        "Harshvardhan J. Pandit"^^xsd:string,
-        "Mark Lizar"^^xsd:string,
-        "Rob Brennan"^^xsd:string ;
-    rdfs:domain dpv:Concept ;
-    rdfs:range dpv:StorageCondition ;
-    sw:term_status "accepted"@en ;
-    skos:definition "Indicates information about storage condition"@en ;
-    skos:prefLabel "has storage"@en ;
-    skos:scopeNote <https://www.specialprivacy.eu/> .
-
 dpv:AutomatedDecisionMaking a skos:Concept,
         dpv:Concept ;
     dct:created "2020-11-04"^^xsd:date ;
@@ -145,9 +113,6 @@ dpv:PublicDataSource a skos:Concept,
     skos:prefLabel "Public Data Source"@en ;
     dpv:isSubTypeOf dpv:DataSource .
 
-dpv:Relation rdfs:subPropertyOf skos:semanticRelation ;
-    skos:prefLabel "Relation"@en .
-
 dpv:StorageDeletion a skos:Concept,
         dpv:Concept ;
     dct:created "2019-04-05"^^xsd:date ;
@@ -159,29 +124,6 @@ dpv:StorageDeletion a skos:Concept,
     skos:definition "Deletion or Erasure of data including any deletion guarantees"@en ;
     skos:prefLabel "Storage Deletion"@en ;
     dpv:isSubTypeOf dpv:StorageCondition .
-
-dpv:StorageRestoration a skos:Concept,
-        dpv:Concept ;
-    dct:created "2019-04-05"^^xsd:date ;
-    dct:creator "Axel Polleres"^^xsd:string,
-        "Harshvardhan J. Pandit"^^xsd:string,
-        "Mark Lizar"^^xsd:string,
-        "Rob Brennan"^^xsd:string ;
-    sw:term_status "accepted"@en ;
-    skos:definition "Regularity and temporal span of data restoration/backup mechanisms that guarantee that data is preserved"@en ;
-    skos:prefLabel "Storage Restoration"@en ;
-    dpv:isSubTypeOf dpv:StorageCondition .
-
-dpv:SystematicMonitoring a skos:Concept,
-        dpv:Concept ;
-    dct:created "2020-11-04"^^xsd:date ;
-    dct:creator "Harshvardhan J. Pandit"^^xsd:string,
-        "Piero Bonatti"^^xsd:string ;
-    sw:term_status "accepted"@en ;
-    skos:definition "Processing that involves systematic monitoring of individuals"@en ;
-    skos:prefLabel "Systematic Monitoring"@en ;
-    skos:scopeNote <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
-    dpv:isSubTypeOf dpv:ProcessingContext .
 
 dpv:StorageDuration a skos:Concept,
         dpv:Concept ;
@@ -209,6 +151,58 @@ dpv:StorageLocation a skos:Concept,
     dpv:isSubTypeOf dpv:Location,
         dpv:StorageCondition .
 
+dpv:StorageRestoration a skos:Concept,
+        dpv:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string,
+        "Rob Brennan"^^xsd:string ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Regularity and temporal span of data restoration/backup mechanisms that guarantee that data is preserved"@en ;
+    skos:prefLabel "Storage Restoration"@en ;
+    dpv:isSubTypeOf dpv:StorageCondition .
+
+dpv:SystematicMonitoring a skos:Concept,
+        dpv:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string,
+        "Piero Bonatti"^^xsd:string ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Processing that involves systematic monitoring of individuals"@en ;
+    skos:prefLabel "Systematic Monitoring"@en ;
+    skos:scopeNote <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dpv:isSubTypeOf dpv:ProcessingContext .
+
+dpv:hasDataSource a skos:Concept,
+        dpv:Relation ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Georg P. Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    rdfs:domain dpv:Concept ;
+    rdfs:range dpv:DataSource ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Indicates the source or origin of data being processed"@en ;
+    skos:prefLabel "has data source"@en .
+
+dpv:hasStorage a skos:Concept,
+        dpv:Relation ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Mark Lizar"^^xsd:string,
+        "Rob Brennan"^^xsd:string ;
+    rdfs:domain dpv:Concept ;
+    rdfs:range dpv:StorageCondition ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Indicates information about storage condition"@en ;
+    skos:prefLabel "has storage"@en ;
+    skos:scopeNote <https://www.specialprivacy.eu/> .
+
+dpv:Relation rdfs:subPropertyOf skos:semanticRelation ;
+    skos:prefLabel "Relation"@en .
+
 dpv:DataSource a skos:Concept,
         dpv:Concept ;
     dct:created "2020-11-04"^^xsd:date ;
@@ -217,8 +211,6 @@ dpv:DataSource a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string ;
     sw:term_status "accepted"@en ;
     skos:definition "The source or origin of data"@en ;
-    skos:narrowerTransitive dpv:NonPublicDataSource,
-        dpv:PublicDataSource ;
     skos:note "Source' is the direct point of data collection; 'origin' would indicate the original/others points of where the data originates from."@en ;
     skos:prefLabel "Data Source"@en ;
     dpv:isSubTypeOf dpv:ProcessingContext .
@@ -232,10 +224,6 @@ dpv:StorageCondition a skos:Concept,
         "Rob Brennan"^^xsd:string ;
     sw:term_status "accepted"@en ;
     skos:definition "Conditions required or followed regarding storage of data"@en ;
-    skos:narrowerTransitive dpv:StorageDeletion,
-        dpv:StorageDuration,
-        dpv:StorageLocation,
-        dpv:StorageRestoration ;
     skos:prefLabel "Storage Condition"@en ;
     dpv:isSubTypeOf dpv:ProcessingContext .
 
@@ -245,14 +233,6 @@ dpv:ProcessingContext a skos:Concept,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     sw:term_status "accepted"@en ;
     skos:definition "Context or conditions within which processing takes place"@en ;
-    skos:narrowerTransitive dpv:AutomatedDecisionMaking,
-        dpv:DataSource,
-        dpv:EvaluationScoring,
-        dpv:InnovativeUseOfNewTechnologies,
-        dpv:LargeScaleProcessing,
-        dpv:MatchingCombining,
-        dpv:StorageCondition,
-        dpv:SystematicMonitoring ;
     skos:prefLabel "Processing Context"@en ;
     dpv:isSubTypeOf dpv:Context .
 

@@ -5,7 +5,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://w3.org/ns/dpv-gdpr> a owl:Ontology ;
-    dct:abstract "The GDPR extension to Data Privacy Vocabulary provides terms (classes and properties) related to EU General Data Protection Regulation. ."@en ;
+    dct:abstract "The GDPR extension to Data Privacy Vocabulary provides terms (classes and properties) related to EU General Data Protection Regulation."@en ;
     dct:contributor "Beatriz Esteves",
         "Bert Bos",
         "Bud Bruegger",
@@ -23,12 +23,12 @@
         "Rob Brennan",
         "Simon Steyskal";
     dct:created "2019-06-18"^^xsd:date ;
-    dct:modified "2021-01-14"^^xsd:date ;
+    dct:modified "2022-02-15"^^xsd:date ;
     dct:creator "Axel Polleres",
         "Harshvardhan J. Pandit" ;
-    dct:description "The GDPR extension to Data Privacy Vocabulary provides terms (classes and properties) related to EU General Data Protection Regulation. ."@en ;
+    dct:description "The GDPR extension to Data Privacy Vocabulary provides terms (classes and properties) related to EU General Data Protection Regulation."@en ;
     dct:source <https://www.w3.org/community/dpvcg/> ;
     dct:title "GDPR Extension for Data Privacy Vocabulary"@en ;
     vann:preferredNamespacePrefix "dpv-gdpr" ;
-    vann:preferredNamespaceUri "https://w3.org/ns/dpv-gdpr"^^xsd:string ;
-    owl:versionInfo "0.2"^^xsd:string .
+    vann:preferredNamespaceUri "https://w3id.org/dpv-gdpr"^^xsd:string ;
+    owl:versionInfo "0.4"^^xsd:string .

@@ -25,21 +25,6 @@ dpv:isInstanceOf rdfs:subPropertyOf skos:semanticRelation ;
 dpv:isSubTypeOf rdfs:subPropertyOf skos:broaderTransitive ;
     skos:prefLabel "isSubTypeOf"@en .
 
-dpv:DerivedData skos:narrowerTransitive dpv:InferredPersonalData .
-
-dpv:Relation rdfs:subPropertyOf skos:semanticRelation ;
-    skos:prefLabel "Relation"@en .
-
-dpv:hasPersonalData a skos:Concept,
-        dpv:Relation ;
-    dct:created "2022-01-19"^^xsd:date ;
-    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    rdfs:domain dpv:Concept ;
-    rdfs:range dpv:PersonalData ;
-    sw:term_status "accepted"@en ;
-    skos:definition "Indicates association with Personal Data"@en ;
-    skos:prefLabel "has personal data"@en .
-
 dpv:AnonymisedData a skos:Concept,
         dpv:Concept ;
     dct:created "2022-01-19"^^xsd:date ;
@@ -83,6 +68,9 @@ dpv:PseudoAnonymisedData a skos:Concept,
     skos:prefLabel "Pseudo-anonymised Data"@en ;
     dpv:isSubTypeOf dpv:PersonalData .
 
+dpv:Relation rdfs:subPropertyOf skos:semanticRelation ;
+    skos:prefLabel "Relation"@en .
+
 dpv:SensitivePersonalData a skos:Concept,
         dpv:Concept ;
     dct:created "2022-01-19"^^xsd:date ;
@@ -93,15 +81,15 @@ dpv:SensitivePersonalData a skos:Concept,
     skos:prefLabel "SensitivePersonalData"@en ;
     dpv:isSubTypeOf dpv:PersonalData .
 
-dpv:Data a skos:Concept,
-        dpv:Concept ;
+dpv:hasPersonalData a skos:Concept,
+        dpv:Relation ;
     dct:created "2022-01-19"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:domain dpv:Concept ;
+    rdfs:range dpv:PersonalData ;
     sw:term_status "accepted"@en ;
-    skos:definition "A broad concept representing  'data' or 'information'"@en ;
-    skos:narrowerTransitive dpv:NonPersonalData,
-        dpv:PersonalData ;
-    skos:prefLabel "Data"@en .
+    skos:definition "Indicates association with Personal Data"@en ;
+    skos:prefLabel "has personal data"@en .
 
 dpv:NonPersonalData a skos:Concept,
         dpv:Concept ;
@@ -109,10 +97,17 @@ dpv:NonPersonalData a skos:Concept,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     sw:term_status "accepted"@en ;
     skos:definition "Data that is not Personal Data"@en ;
-    skos:narrowerTransitive dpv:AnonymisedData ;
     skos:note "The term NonPersonalData is provided to distinguish between PersonalData and other data, e.g. for indicating which data is regulated by privacy laws. To specify personal data that has been anonymised, the concept AnonymisedData should be used."@en ;
     skos:prefLabel "Non-Personal Data"@en ;
     dpv:isSubTypeOf dpv:Data .
+
+dpv:Data a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-01-19"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    sw:term_status "accepted"@en ;
+    skos:definition "A broad concept representing  'data' or 'information'"@en ;
+    skos:prefLabel "Data"@en .
 
 dpv:PersonalData a skos:Concept,
         dpv:Concept ;
@@ -121,9 +116,6 @@ dpv:PersonalData a skos:Concept,
     dct:modified "2022-01-19"^^xsd:date ;
     sw:term_status "accepted"@en ;
     skos:definition "Data directly or indirectly associated or related to an individual."@en ;
-    skos:narrowerTransitive dpv:DerivedPersonalData,
-        dpv:PseudoAnonymisedData,
-        dpv:SensitivePersonalData ;
     skos:note "This definition of personal data encompasses the concepts used in GDPR Art.4-1 for 'personal data' and ISO/IEC 2700 for 'personally identifiable information (PII)'."@en ;
     skos:prefLabel "Personal Data"@en ;
     skos:related spl:AnyData ;

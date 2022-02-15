@@ -82,31 +82,6 @@ dpv:isInstanceOf rdfs:subPropertyOf skos:semanticRelation ;
 dpv:isSubTypeOf rdfs:subPropertyOf skos:broaderTransitive ;
     skos:prefLabel "isSubTypeOf"@en .
 
-dpv:hasPurpose a skos:Concept,
-        dpv:Relation ;
-    dct:created "2019-04-04"^^xsd:date ;
-    dct:creator "Axel Polleres"^^xsd:string,
-        "Bud Bruegger"^^xsd:string,
-        "Harshvardhan J. Pandit"^^xsd:string,
-        "Javier Fernández"^^xsd:string,
-        "Mark Lizar"^^xsd:string ;
-    dct:modified "2020-11-04"^^xsd:date ;
-    rdfs:domain dpv:Concept ;
-    rdfs:range dpv:Purpose ;
-    sw:term_status "accepted"@en ;
-    skos:definition "Indicates association with Purpose"@en ;
-    skos:prefLabel "has purpose"@en ;
-    skos:scopeNote <https://www.specialprivacy.eu/> .
-
-dpv:hasSector a skos:Concept,
-        dpv:Relation ;
-    dct:created "2019-04-05"^^xsd:date ;
-    rdfs:domain dpv:Concept ;
-    rdfs:range dpv:Sector ;
-    sw:term_status "accepted"@en ;
-    skos:definition "Indicates the purpose is associated with activities in the indicated (Economic) Sector(s)"@en ;
-    skos:prefLabel "has sector"@en .
-
 dpv:AcademicResearch a skos:Concept,
         dpv:Concept ;
     dct:created "2019-04-05"^^xsd:date ;
@@ -144,6 +119,18 @@ dpv:CommercialResearch a skos:Concept,
     skos:prefLabel "Commercial Research"@en ;
     skos:related svpu:Develop ;
     dpv:isSubTypeOf dpv:ResearchAndDevelopment .
+
+dpv:CommunicationForCustomerCare a skos:Concept,
+        dpv:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Communicate with customers for assisting them, resolving issues, ensuring satisfaction in relation to services provided"@en ;
+    skos:prefLabel "Communication for Customer Care"@en ;
+    dpv:isSubTypeOf dpv:CommunicationManagement,
+        dpv:CustomerCare .
 
 dpv:CreateEventRecommendations a skos:Concept,
         dpv:Concept ;
@@ -307,6 +294,21 @@ dpv:ImproveExistingProductsAndServices a skos:Concept,
     skos:prefLabel "Improve Existing Products and Services"@en ;
     dpv:isSubTypeOf dpv:OptimisationForController .
 
+dpv:ImproveInternalCRMProcesses a skos:Concept,
+        dpv:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Elmar Kiesling"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernandez"^^xsd:string,
+        "Simon Steyskal"^^xsd:string ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Improve customer-relationship management (CRM) processes"@en ;
+    skos:prefLabel "Improve Internal CRM Processes"@en ;
+    dpv:isSubTypeOf dpv:CustomerRelationshipManagement,
+        dpv:OptimisationForController .
+
 dpv:IncreaseServiceRobustness a skos:Concept,
         dpv:Concept ;
     dct:created "2019-04-05"^^xsd:date ;
@@ -422,6 +424,18 @@ dpv:Payment a skos:Concept,
     skos:prefLabel "Payment"@en ;
     dpv:isSubTypeOf dpv:ServiceProvision .
 
+dpv:PersonalisedAdvertising a skos:Concept,
+        dpv:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Create and provide personalised advertising"@en ;
+    skos:prefLabel "Personalised Advertising"@en ;
+    dpv:isSubTypeOf dpv:Advertising,
+        dpv:Personalisation .
+
 dpv:PersonalisedBenefits a skos:Concept,
         dpv:Concept ;
     dct:created "2019-04-05"^^xsd:date ;
@@ -471,23 +485,6 @@ dpv:RegistrationAuthentication a skos:Concept,
     skos:definition "Register, authenticate, and identify users or agents in context of a service"@en ;
     skos:prefLabel "Registration and Authentication"@en ;
     dpv:isSubTypeOf dpv:ServiceProvision .
-
-dpv:Relation rdfs:subPropertyOf skos:semanticRelation ;
-    skos:prefLabel "Relation"@en .
-
-dpv:Sector a skos:Concept,
-        dpv:Concept ;
-    dct:created "2019-04-05"^^xsd:date ;
-    dct:creator "Axel Polleres"^^xsd:string,
-        "Elmar Kiesling"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string,
-        "Harshvardhan J. Pandit"^^xsd:string,
-        "Javier Fernandez"^^xsd:string,
-        "Simon Steyskal"^^xsd:string ;
-    sw:term_status "accepted"@en ;
-    skos:definition "Indicate or restrict scope for interpretation and application of purpose in a domain e.g. Agriculture, Banking"@en ;
-    skos:note "There are various sector codes used commonly to indicate the domain of an organisation or business. Examples include NACE (EU), ISIC (UN), SIC and NAICS (USA)."@en ;
-    skos:prefLabel "Sector"@en .
 
 dpv:SellDataToThirdParties a skos:Concept,
         dpv:Concept ;
@@ -627,6 +624,31 @@ dpv:VendorSelectionAssessment a skos:Concept,
     skos:scopeNote <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
     dpv:isSubTypeOf dpv:VendorManagement .
 
+dpv:hasPurpose a skos:Concept,
+        dpv:Relation ;
+    dct:created "2019-04-04"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Bud Bruegger"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernández"^^xsd:string,
+        "Mark Lizar"^^xsd:string ;
+    dct:modified "2020-11-04"^^xsd:date ;
+    rdfs:domain dpv:Concept ;
+    rdfs:range dpv:Purpose ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Indicates association with Purpose"@en ;
+    skos:prefLabel "has purpose"@en ;
+    skos:scopeNote <https://www.specialprivacy.eu/> .
+
+dpv:hasSector a skos:Concept,
+        dpv:Relation ;
+    dct:created "2019-04-05"^^xsd:date ;
+    rdfs:domain dpv:Concept ;
+    rdfs:range dpv:Sector ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Indicates the purpose is associated with activities in the indicated (Economic) Sector(s)"@en ;
+    skos:prefLabel "has sector"@en .
+
 dpv:Advertising a skos:Concept,
         dpv:Concept ;
     dct:created "2020-11-04"^^xsd:date ;
@@ -635,22 +657,9 @@ dpv:Advertising a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string ;
     sw:term_status "accepted"@en ;
     skos:definition "Conduct advertising i.e. process or artefact used to call attention to a product, service, etc. through announcements, notices, or other forms of communication"@en ;
-    skos:narrowerTransitive dpv:PersonalisedAdvertising ;
     skos:note "Advertising is a subset of Marketing. Advertising by itself does not indicate 'personalisation' i.e. personalised ads."@en ;
     skos:prefLabel "Advertising"@en ;
     dpv:isSubTypeOf dpv:Marketing .
-
-dpv:CommunicationForCustomerCare a skos:Concept,
-        dpv:Concept ;
-    dct:created "2020-11-04"^^xsd:date ;
-    dct:creator "Beatriz Esteves"^^xsd:string,
-        "Georg P Krog"^^xsd:string,
-        "Harshvardhan J. Pandit"^^xsd:string ;
-    sw:term_status "accepted"@en ;
-    skos:definition "Communicate with customers for assisting them, resolving issues, ensuring satisfaction in relation to services provided"@en ;
-    skos:prefLabel "Communication for Customer Care"@en ;
-    dpv:isSubTypeOf dpv:CommunicationManagement,
-        dpv:CustomerCare .
 
 dpv:CommunicationManagement a skos:Concept,
         dpv:Concept ;
@@ -661,7 +670,6 @@ dpv:CommunicationManagement a skos:Concept,
         "Paul Ryan"^^xsd:string ;
     sw:term_status "accepted"@en ;
     skos:definition "Manage communication or provide means for communication e.g. to send an email notifying some information"@en ;
-    skos:narrowerTransitive dpv:CommunicationForCustomerCare ;
     skos:note "This purpose by itself does not sufficiently and clearly indicate what the communication is about. As such, it is recommended to combine it with another purpose to indicate the application. For example, Communication of Payment."@en ;
     skos:prefLabel "Communication Management"@en ;
     dpv:isSubTypeOf dpv:Purpose .
@@ -677,7 +685,6 @@ dpv:CustomerCare a skos:Concept,
         "Simon Steyskal"^^xsd:string ;
     sw:term_status "accepted"@en ;
     skos:definition "Provide assistance, resolve issues, ensure satisfaction in relation to services provided"@en ;
-    skos:narrowerTransitive dpv:CommunicationForCustomerCare ;
     skos:prefLabel "Customer Care"@en ;
     skos:related svpu:Feedback ;
     dpv:isSubTypeOf dpv:CustomerManagement .
@@ -690,24 +697,8 @@ dpv:CustomerRelationshipManagement a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string ;
     sw:term_status "accepted"@en ;
     skos:definition "Manage and analyse interactions with past, current, and potential customers"@en ;
-    skos:narrowerTransitive dpv:ImproveInternalCRMProcesses ;
     skos:prefLabel "Customer Relationship Management"@en ;
     dpv:isSubTypeOf dpv:CustomerManagement .
-
-dpv:ImproveInternalCRMProcesses a skos:Concept,
-        dpv:Concept ;
-    dct:created "2019-04-05"^^xsd:date ;
-    dct:creator "Axel Polleres"^^xsd:string,
-        "Elmar Kiesling"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string,
-        "Harshvardhan J. Pandit"^^xsd:string,
-        "Javier Fernandez"^^xsd:string,
-        "Simon Steyskal"^^xsd:string ;
-    sw:term_status "accepted"@en ;
-    skos:definition "Improve customer-relationship management (CRM) processes"@en ;
-    skos:prefLabel "Improve Internal CRM Processes"@en ;
-    dpv:isSubTypeOf dpv:CustomerRelationshipManagement,
-        dpv:OptimisationForController .
 
 dpv:OptimisationForConsumer a skos:Concept,
         dpv:Concept ;
@@ -720,31 +711,34 @@ dpv:OptimisationForConsumer a skos:Concept,
         "Simon Steyskal"^^xsd:string ;
     sw:term_status "accepted"@en ;
     skos:definition "Optimize activities and services for consumer or user"@en ;
-    skos:narrowerTransitive dpv:OptimiseUserInterface ;
     skos:prefLabel "Optimisation for Consumer"@en ;
     skos:related svpu:Custom ;
     dpv:isSubTypeOf dpv:ServiceOptimization .
 
-dpv:PersonalisedAdvertising a skos:Concept,
-        dpv:Concept ;
-    dct:created "2020-11-04"^^xsd:date ;
-    dct:creator "Beatriz Esteves"^^xsd:string,
-        "Georg P Krog"^^xsd:string,
-        "Harshvardhan J. Pandit"^^xsd:string ;
-    sw:term_status "accepted"@en ;
-    skos:definition "Create and provide personalised advertising"@en ;
-    skos:prefLabel "Personalised Advertising"@en ;
-    dpv:isSubTypeOf dpv:Advertising,
-        dpv:Personalisation .
+dpv:Relation rdfs:subPropertyOf skos:semanticRelation ;
+    skos:prefLabel "Relation"@en .
 
 dpv:RequestedServiceProvision a skos:Concept,
         dpv:Concept ;
     dct:created "2021-09-08"^^xsd:date ;
     sw:term_status "accepted"@en ;
     skos:definition "Deliver service as requested by user or consumer"@en ;
-    skos:narrowerTransitive dpv:DeliveryOfGoods ;
     skos:prefLabel "Requested Service Provision"@en ;
     dpv:isSubTypeOf dpv:ServiceProvision .
+
+dpv:Sector a skos:Concept,
+        dpv:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Elmar Kiesling"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernandez"^^xsd:string,
+        "Simon Steyskal"^^xsd:string ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Indicate or restrict scope for interpretation and application of purpose in a domain e.g. Agriculture, Banking"@en ;
+    skos:note "There are various sector codes used commonly to indicate the domain of an organisation or business. Examples include NACE (EU), ISIC (UN), SIC and NAICS (USA)."@en ;
+    skos:prefLabel "Sector"@en .
 
 dpv:CreatePersonalizedRecommendations a skos:Concept,
         dpv:Concept ;
@@ -753,8 +747,6 @@ dpv:CreatePersonalizedRecommendations a skos:Concept,
         "Rudy Jacob"^^xsd:string ;
     sw:term_status "accepted"@en ;
     skos:definition "Create and provide personalised recommendations"@en ;
-    skos:narrowerTransitive dpv:CreateEventRecommendations,
-        dpv:CreateProductRecommendations ;
     skos:prefLabel "Create Personalized Recommendations"@en ;
     skos:scopeNote <https://www.specialprivacy.eu/> ;
     dpv:isSubTypeOf dpv:ServicePersonalization .
@@ -765,8 +757,6 @@ dpv:Personalisation a skos:Concept,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     sw:term_status "accepted"@en ;
     skos:definition "Create and provide customisation based on attributes and/or needs of person(s) or context(s)."@en ;
-    skos:narrowerTransitive dpv:PersonalisedAdvertising,
-        dpv:ServicePersonalization ;
     skos:note "This term is a blanket purpose category for indicating personalisation of some other purpose, e.g. by creating a subclass of the other concept and Personalisation"@en ;
     skos:prefLabel "Personalisation"@en ;
     dpv:isSubTypeOf dpv:Purpose .
@@ -782,8 +772,6 @@ dpv:ServiceOptimization a skos:Concept,
         "Simon Steyskal"^^xsd:string ;
     sw:term_status "accepted"@en ;
     skos:definition "Optimise services or activities"@en ;
-    skos:narrowerTransitive dpv:OptimisationForConsumer,
-        dpv:OptimisationForController ;
     skos:note "Subclass of ServiceProvision since optimisation is usually considered part of providing services"@en ;
     skos:prefLabel "Service Optimization"@en ;
     dpv:isSubTypeOf dpv:ServiceProvision .
@@ -799,9 +787,6 @@ dpv:EnforceSecurity a skos:Concept,
         "Simon Steyskal"^^xsd:string ;
     sw:term_status "accepted"@en ;
     skos:definition "Ensure and enforce security e.g. of data, personnel"@en ;
-    skos:narrowerTransitive dpv:EnforceAccessControl,
-        dpv:FraudPreventionAndDetection,
-        dpv:IdentityVerification ;
     skos:note "Was previous \"Security\". Prefixed to distinguish from TechOrg measures."@en ;
     skos:prefLabel "Enforce Security"@en ;
     dpv:isSubTypeOf dpv:Purpose .
@@ -817,9 +802,6 @@ dpv:ResearchAndDevelopment a skos:Concept,
         "Simon Steyskal"^^xsd:string ;
     sw:term_status "accepted"@en ;
     skos:definition "Conduct research and development for new methods, products, or services"@en ;
-    skos:narrowerTransitive dpv:AcademicResearch,
-        dpv:CommercialResearch,
-        dpv:NonCommercialResearch ;
     skos:prefLabel "Research and Development"@en ;
     dpv:isSubTypeOf dpv:Purpose .
 
@@ -828,12 +810,25 @@ dpv:SellProducts a skos:Concept,
     dct:created "2021-09-08"^^xsd:date ;
     sw:term_status "accepted"@en ;
     skos:definition "Sell products or services"@en ;
-    skos:narrowerTransitive dpv:SellDataToThirdParties,
-        dpv:SellInsightsFromData,
-        dpv:SellProductsToDataSubject ;
     skos:note "Sell here means exchange, submit, or provide in return for direct or indirect compensation."@en ;
     skos:prefLabel "Sell Products"@en ;
     dpv:isSubTypeOf dpv:ServiceProvision .
+
+dpv:ServicePersonalization a skos:Concept,
+        dpv:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Elmar Kiesling"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernandez"^^xsd:string,
+        "Simon Steyskal"^^xsd:string ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Personalise services or product or activities"@en ;
+    skos:note "Subclass of ServiceProvision since personalisation is usually considered part of providing services"@en ;
+    skos:prefLabel "Service Personalization"@en ;
+    dpv:isSubTypeOf dpv:Personalisation,
+        dpv:ServiceProvision .
 
 dpv:VendorManagement a skos:Concept,
         dpv:Concept ;
@@ -844,9 +839,6 @@ dpv:VendorManagement a skos:Concept,
         "Paul Ryan"^^xsd:string ;
     sw:term_status "accepted"@en ;
     skos:definition "Manage orders, payment, evaluation, and prospecting related to vendors"@en ;
-    skos:narrowerTransitive dpv:VendorPayment,
-        dpv:VendorRecordsManagement,
-        dpv:VendorSelectionAssessment ;
     skos:prefLabel "Vendor Management"@en ;
     skos:scopeNote <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
     dpv:isSubTypeOf dpv:Purpose .
@@ -859,10 +851,6 @@ dpv:Marketing a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string ;
     sw:term_status "accepted"@en ;
     skos:definition "Conduct marketing in relation to organisation or products or services e.g. promoting, selling, and distributing"@en ;
-    skos:narrowerTransitive dpv:Advertising,
-        dpv:DirectMarketing,
-        dpv:PublicRelations,
-        dpv:SocialMediaMarketing ;
     skos:note "Was commercial interest, changed to consider Marketing a separate Purpose category by itself"@en ;
     skos:prefLabel "Marketing"@en ;
     dpv:isSubTypeOf dpv:Purpose .
@@ -878,10 +866,6 @@ dpv:OptimisationForController a skos:Concept,
         "Simon Steyskal"^^xsd:string ;
     sw:term_status "accepted"@en ;
     skos:definition "Optimize activities and services for provider or controller"@en ;
-    skos:narrowerTransitive dpv:ImproveExistingProductsAndServices,
-        dpv:ImproveInternalCRMProcesses,
-        dpv:IncreaseServiceRobustness,
-        dpv:InternalResourceOptimisation ;
     skos:prefLabel "Optimisation for Controller"@en ;
     dpv:isSubTypeOf dpv:ServiceOptimization .
 
@@ -894,43 +878,15 @@ dpv:OrganisationGovernance a skos:Concept,
         "Paul Ryan"^^xsd:string ;
     sw:term_status "accepted"@en ;
     skos:definition "Conduct activities and functions for organisation's governance"@en ;
-    skos:narrowerTransitive dpv:DisputeManagement,
-        dpv:MemberPartnerManagement,
-        dpv:OrganisationComplianceManagement,
-        dpv:OrganisationRiskManagement ;
     skos:prefLabel "Organisation Governance"@en ;
     skos:scopeNote <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
     dpv:isSubTypeOf dpv:Purpose .
-
-dpv:ServicePersonalization a skos:Concept,
-        dpv:Concept ;
-    dct:created "2019-04-05"^^xsd:date ;
-    dct:creator "Axel Polleres"^^xsd:string,
-        "Elmar Kiesling"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string,
-        "Harshvardhan J. Pandit"^^xsd:string,
-        "Javier Fernandez"^^xsd:string,
-        "Simon Steyskal"^^xsd:string ;
-    sw:term_status "accepted"@en ;
-    skos:definition "Personalise services or product or activities"@en ;
-    skos:narrowerTransitive dpv:CreatePersonalizedRecommendations,
-        dpv:PersonalisedBenefits,
-        dpv:UserInterfacePersonalisation ;
-    skos:note "Subclass of ServiceProvision since personalisation is usually considered part of providing services"@en ;
-    skos:prefLabel "Service Personalization"@en ;
-    dpv:isSubTypeOf dpv:Personalisation,
-        dpv:ServiceProvision .
 
 dpv:CustomerManagement a skos:Concept,
         dpv:Concept ;
     dct:created "2021-09-08"^^xsd:date ;
     sw:term_status "accepted"@en ;
     skos:definition "Manage past, current, and future customers"@en ;
-    skos:narrowerTransitive dpv:CustomerCare,
-        dpv:CustomerClaimsManagement,
-        dpv:CustomerOrderManagement,
-        dpv:CustomerRelationshipManagement,
-        dpv:CustomerSolvencyMonitoring ;
     skos:prefLabel "Customer Management"@en ;
     dpv:isSubTypeOf dpv:Purpose .
 
@@ -945,15 +901,6 @@ dpv:ServiceProvision a skos:Concept,
         "Simon Steyskal"^^xsd:string ;
     sw:term_status "accepted"@en ;
     skos:definition "Provide service or product or activities"@en ;
-    skos:narrowerTransitive dpv:Payment,
-        dpv:RegistrationAuthentication,
-        dpv:RequestedServiceProvision,
-        dpv:SellProducts,
-        dpv:ServiceOptimization,
-        dpv:ServicePersonalization,
-        dpv:ServiceRecordManagement,
-        dpv:ServiceUsageAnalytics,
-        dpv:TechnicalServiceProvision ;
     skos:prefLabel "Service Provision"@en ;
     dpv:isSubTypeOf dpv:Purpose .
 
@@ -965,19 +912,6 @@ dpv:Purpose a skos:Concept,
     dct:modified "2020-11-04"^^xsd:date ;
     sw:term_status "accepted"@en ;
     skos:definition "The purpose of processing personal data"@en ;
-    skos:narrowerTransitive dpv:AccountManagement,
-        dpv:CommunicationManagement,
-        dpv:CustomerManagement,
-        dpv:EnforceSecurity,
-        dpv:HumanResourceManagement,
-        dpv:LegalCompliance,
-        dpv:Marketing,
-        dpv:OrganisationGovernance,
-        dpv:Personalisation,
-        dpv:RecordManagement,
-        dpv:ResearchAndDevelopment,
-        dpv:ServiceProvision,
-        dpv:VendorManagement ;
     skos:prefLabel "Purpose"@en ;
     skos:related spl:AnyPurpose ;
     skos:scopeNote <https://www.specialprivacy.eu/> .

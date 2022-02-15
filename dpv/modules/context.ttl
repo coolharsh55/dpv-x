@@ -34,6 +34,71 @@ dpv:isInstanceOf rdfs:subPropertyOf skos:semanticRelation ;
 dpv:isSubTypeOf rdfs:subPropertyOf skos:broaderTransitive ;
     skos:prefLabel "isSubTypeOf"@en .
 
+dpv:NotRequired a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-02-15"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Indication of neither being required nor optional i.e. not relevant or needed"@en ;
+    skos:prefLabel "Not Required"@en ;
+    dpv:isSubTypeOf dpv:Necessity .
+
+dpv:Optional a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-02-14"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Indication of 'optional' or 'voluntary'"@en ;
+    skos:prefLabel "Optional"@en ;
+    dpv:isSubTypeOf dpv:Necessity .
+
+dpv:PrimaryImportance a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-02-10"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Indication of 'primary' or 'main' or 'core' importance"@en ;
+    skos:prefLabel "Primary Importance"@en ;
+    dpv:isSubTypeOf dpv:Importance .
+
+dpv:Required a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-02-13"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Indication of 'required' or 'necessary'"@en ;
+    skos:prefLabel "Required"@en ;
+    dpv:isSubTypeOf dpv:Necessity .
+
+dpv:SecondaryImportance a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-02-11"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Indication of 'secondary' or 'minor' or 'auxiliary' importance"@en ;
+    skos:prefLabel "Secondary Importance"@en ;
+    dpv:isSubTypeOf dpv:Importance .
+
 dpv:hasAlgorithmicLogic a skos:Concept,
         dpv:Relation ;
     dct:created "2020-11-04"^^xsd:date ;
@@ -123,87 +188,6 @@ dpv:isImplementedUsingTechnology a skos:Concept,
     skos:note "The term 'technology' is inclusive of technologies, processes, and methods."@en ;
     skos:prefLabel "is implemented using technology"@en .
 
-dpv:Duration a skos:Concept,
-        dpv:Concept ;
-    dct:created "2022-02-09"^^xsd:date ;
-    sw:term_status "accepted"@en ;
-    skos:definition "The duration or temporal limitation"@en ;
-    skos:prefLabel "Duration"@en .
-
-dpv:NotRequired a skos:Concept,
-        dpv:Concept ;
-    dct:created "2022-02-15"^^xsd:date ;
-    dct:creator "Beatriz Esteves"^^xsd:string,
-        "Georg P Krog"^^xsd:string,
-        "Harshvardhan J. Pandit"^^xsd:string,
-        "Julian Flake"^^xsd:string,
-        "Paul Ryan"^^xsd:string ;
-    sw:term_status "accepted"@en ;
-    skos:definition "Indication of neither being required nor optional i.e. not relevant or needed"@en ;
-    skos:prefLabel "Not Required"@en ;
-    dpv:isSubTypeOf dpv:Necessity .
-
-dpv:Optional a skos:Concept,
-        dpv:Concept ;
-    dct:created "2022-02-14"^^xsd:date ;
-    dct:creator "Beatriz Esteves"^^xsd:string,
-        "Georg P Krog"^^xsd:string,
-        "Harshvardhan J. Pandit"^^xsd:string,
-        "Julian Flake"^^xsd:string,
-        "Paul Ryan"^^xsd:string ;
-    sw:term_status "accepted"@en ;
-    skos:definition "Indication of 'optional' or 'voluntary'"@en ;
-    skos:prefLabel "Optional"@en ;
-    dpv:isSubTypeOf dpv:Necessity .
-
-dpv:PrimaryImportance a skos:Concept,
-        dpv:Concept ;
-    dct:created "2022-02-10"^^xsd:date ;
-    dct:creator "Beatriz Esteves"^^xsd:string,
-        "Georg P Krog"^^xsd:string,
-        "Harshvardhan J. Pandit"^^xsd:string,
-        "Julian Flake"^^xsd:string,
-        "Paul Ryan"^^xsd:string ;
-    sw:term_status "accepted"@en ;
-    skos:definition "Indication of 'primary' or 'main' or 'core' importance"@en ;
-    skos:prefLabel "Primary Importance"@en ;
-    dpv:isSubTypeOf dpv:Importance .
-
-dpv:Required a skos:Concept,
-        dpv:Concept ;
-    dct:created "2022-02-13"^^xsd:date ;
-    dct:creator "Beatriz Esteves"^^xsd:string,
-        "Georg P Krog"^^xsd:string,
-        "Harshvardhan J. Pandit"^^xsd:string,
-        "Julian Flake"^^xsd:string,
-        "Paul Ryan"^^xsd:string ;
-    sw:term_status "accepted"@en ;
-    skos:definition "Indication of 'required' or 'necessary'"@en ;
-    skos:prefLabel "Required"@en ;
-    dpv:isSubTypeOf dpv:Necessity .
-
-dpv:SecondaryImportance a skos:Concept,
-        dpv:Concept ;
-    dct:created "2022-02-11"^^xsd:date ;
-    dct:creator "Beatriz Esteves"^^xsd:string,
-        "Georg P Krog"^^xsd:string,
-        "Harshvardhan J. Pandit"^^xsd:string,
-        "Julian Flake"^^xsd:string,
-        "Paul Ryan"^^xsd:string ;
-    sw:term_status "accepted"@en ;
-    skos:definition "Indication of 'secondary' or 'minor' or 'auxiliary' importance"@en ;
-    skos:prefLabel "Secondary Importance"@en ;
-    dpv:isSubTypeOf dpv:Importance .
-
-dpv:Technology a skos:Concept,
-        dpv:Concept ;
-    dct:created "2022-01-26"^^xsd:date ;
-    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    sw:term_status "accepted"@en ;
-    skos:definition "The technology, technological implementation, or any techniques, skills, methods, and processes used or applied"@en ;
-    skos:note "Examples (non-exhaustive) include: Algorithm, Process, Method, Skill, Database, Cookies, Server, Device"@en ;
-    skos:prefLabel "Technology"@en .
-
 dpv:AlgorithmicLogic a skos:Concept,
         dpv:Concept ;
     dct:created "2022-01-26"^^xsd:date ;
@@ -223,6 +207,13 @@ dpv:Consequence a skos:Concept,
     skos:prefLabel "Consequence"@en ;
     dpv:isSubTypeOf dpv:Context .
 
+dpv:Duration a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-02-09"^^xsd:date ;
+    sw:term_status "accepted"@en ;
+    skos:definition "The duration or temporal limitation"@en ;
+    skos:prefLabel "Duration"@en .
+
 dpv:HumanInvolvement a skos:Concept,
         dpv:Concept ;
     dct:created "2022-01-26"^^xsd:date ;
@@ -232,6 +223,15 @@ dpv:HumanInvolvement a skos:Concept,
     skos:note "Human Involvement here broadly refers to any involvement by a human in the context of carrying out processing. This may include verification of outcomes, providing input data for making decisions, or overseeing activities."@en ;
     skos:prefLabel "Human Involvement"@en ;
     dpv:isSubTypeOf dpv:Context .
+
+dpv:Technology a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-01-26"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    sw:term_status "accepted"@en ;
+    skos:definition "The technology, technological implementation, or any techniques, skills, methods, and processes used or applied"@en ;
+    skos:note "Examples (non-exhaustive) include: Algorithm, Process, Method, Skill, Database, Cookies, Server, Device"@en ;
+    skos:prefLabel "Technology"@en .
 
 dpv:Importance a skos:Concept,
         dpv:Concept ;
@@ -243,8 +243,6 @@ dpv:Importance a skos:Concept,
         "Paul Ryan"^^xsd:string ;
     sw:term_status "accepted"@en ;
     skos:definition "An indication of 'importance' within a context"@en ;
-    skos:narrowerTransitive dpv:PrimaryImportance,
-        dpv:SecondaryImportance ;
     skos:note "Importance can be used to express importance, desirability, relevance, or significance as a context."@en ;
     skos:prefLabel "Importance"@en ;
     dpv:isSubTypeOf dpv:Context .
@@ -259,9 +257,6 @@ dpv:Necessity a skos:Concept,
         "Paul Ryan"^^xsd:string ;
     sw:term_status "accepted"@en ;
     skos:definition "An indication of 'necessity' within a context"@en ;
-    skos:narrowerTransitive dpv:NotRequired,
-        dpv:Optional,
-        dpv:Required ;
     skos:note "Necessity can be used to express need, essentiality, requirement, or compulsion."@en ;
     skos:prefLabel "Necessity"@en ;
     dpv:isSubTypeOf dpv:Context .
@@ -277,11 +272,6 @@ dpv:Context a skos:Concept,
         "Simon Steyskal"^^xsd:string ;
     sw:term_status "accepted"@en ;
     skos:definition "Contextually relevant information about purpose not possible to represent through other concepts"@en ;
-    skos:narrowerTransitive dpv:AlgorithmicLogic,
-        dpv:Consequence,
-        dpv:HumanInvolvement,
-        dpv:Importance,
-        dpv:Necessity ;
     skos:prefLabel "Context"@en .
 
 dpv:Relation rdfs:subPropertyOf skos:semanticRelation ;

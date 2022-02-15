@@ -9,7 +9,7 @@ IMPORT_DPV_PATH = '../dpv/dpv.ttl'
 IMPORT_DPV_MODULES_PATH = '../dpv/modules'
 EXPORT_DPV_HTML_PATH = '../dpv'
 IMPORT_DPV_GDPR_PATH = '../dpv-gdpr/dpv-gdpr.ttl'
-IMPORT_DPV_GDPR_MODULES_PATH = '../dpv-gdpr/rdf'
+IMPORT_DPV_GDPR_MODULES_PATH = '../dpv-gdpr/modules'
 EXPORT_DPV_GDPR_HTML_PATH = '../dpv-gdpr'
 
 from rdflib import Graph, Namespace
@@ -118,9 +118,6 @@ DEBUG(f'wrote DPV spec at f{EXPORT_DPV_HTML_PATH}/index.html')
 with open(f'{EXPORT_DPV_HTML_PATH}/dpv.html', 'w+') as fd:
     fd.write(template.render(**TEMPLATE_DATA))
 DEBUG(f'wrote DPV spec at f{EXPORT_DPV_HTML_PATH}/dpv.html')
-
-import sys
-sys.exit()
 
 # DPV-GDPR: generate HTML
 
