@@ -5,14 +5,14 @@
 
 # The vocabularies are modular
 
-IMPORT_DPV_PATH = '../dpv-owl/dpv.ttl'
-IMPORT_DPV_MODULES_PATH = '../dpv-owl/modules'
-EXPORT_DPV_HTML_PATH = '../dpv-owl'
-IMPORT_DPV_GDPR_PATH = '../dpv-owl/dpv-gdpr/dpv-gdpr.ttl'
-IMPORT_DPV_GDPR_MODULES_PATH = '../dpv-owl/dpv-gdpr/modules'
-EXPORT_DPV_GDPR_HTML_PATH = '../dpv-owl/dpv-gdpr'
-IMPORT_DPV_PD_PATH = '../dpv-owl/dpv-pd/dpv-pd.ttl'
-EXPORT_DPV_PD_HTML_PATH = '../dpv-owl/dpv-pd'
+IMPORT_DPV_PATH = '../dpv-skos/dpv.ttl'
+IMPORT_DPV_MODULES_PATH = '../dpv-skos/modules'
+EXPORT_DPV_HTML_PATH = '../dpv-skos'
+IMPORT_DPV_GDPR_PATH = '../dpv-skos/dpv-gdpr/dpv-gdpr.ttl'
+IMPORT_DPV_GDPR_MODULES_PATH = '../dpv-skos/dpv-gdpr/modules'
+EXPORT_DPV_GDPR_HTML_PATH = '../dpv-skos/dpv-gdpr'
+IMPORT_DPV_PD_PATH = '../dpv-skos/dpv-pd/dpv-pd.ttl'
+EXPORT_DPV_PD_HTML_PATH = '../dpv-skos/dpv-pd'
 
 from rdflib import Graph, Namespace
 from rdflib import RDF, RDFS, OWL
@@ -40,7 +40,7 @@ def load_data(label, filepath):
     G = DataGraph()
     G.load(g)
     G.graph.ns = { k:v for k,v in G.graph.namespaces() }
-    TEMPLATE_DATA[f'{label}_classes'] = G.get_instances_of('owl_Class')
+    TEMPLATE_DATA[f'{label}_classes'] = G.get_instances_of('rdfs_Class')
     TEMPLATE_DATA[f'{label}_properties'] = G.get_instances_of('rdf_Property')
 
 
@@ -113,7 +113,7 @@ G.load(g)
 
 # DPV: generate HTML
 
-template = template_env.get_template('template_dpv_owl.jinja2')
+template = template_env.get_template('template_dpv_skos.jinja2')
 with open(f'{EXPORT_DPV_HTML_PATH}/index.html', 'w+') as fd:
     fd.write(template.render(**TEMPLATE_DATA))
 DEBUG(f'wrote DPV spec at f{EXPORT_DPV_HTML_PATH}/index.html')
@@ -130,7 +130,7 @@ g = Graph()
 g.load(f'{IMPORT_DPV_GDPR_PATH}', format='turtle')
 G.load(g)
 
-template = template_env.get_template('template_dpv_gdpr_owl.jinja2')
+template = template_env.get_template('template_dpv_gdpr_skos.jinja2')
 with open(f'{EXPORT_DPV_GDPR_HTML_PATH}/index.html', 'w+') as fd:
     fd.write(template.render(**TEMPLATE_DATA))
 DEBUG(f'wrote DPV-GDPR spec at f{EXPORT_DPV_GDPR_HTML_PATH}/index.html')
@@ -146,7 +146,7 @@ g = Graph()
 g.load(f'{IMPORT_DPV_PD_PATH}', format='turtle')
 G.load(g)
 
-template = template_env.get_template('template_dpv_pd_owl.jinja2')
+template = template_env.get_template('template_dpv_pd_skos.jinja2')
 with open(f'{EXPORT_DPV_PD_HTML_PATH}/index.html', 'w+') as fd:
     fd.write(template.render(**TEMPLATE_DATA))
 DEBUG(f'wrote DPV-PD spec at f{EXPORT_DPV_PD_HTML_PATH}/index.html')

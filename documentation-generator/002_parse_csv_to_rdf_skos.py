@@ -19,11 +19,11 @@
 ########################################
 
 IMPORT_CSV_PATH = './vocab_csv'
-EXPORT_DPV_PATH = '../dpv'
-EXPORT_DPV_MODULE_PATH = '../dpv/modules'
-EXPORT_DPV_GDPR_PATH = '../dpv-gdpr'
-EXPORT_DPV_GDPR_MODULE_PATH = '../dpv-gdpr/modules'
-EXPORT_DPV_PD_PATH = '../dpv-pd'
+EXPORT_DPV_PATH = '../dpv-skos'
+EXPORT_DPV_MODULE_PATH = '../dpv-skos/modules'
+EXPORT_DPV_GDPR_PATH = '../dpv-skos/dpv-gdpr'
+EXPORT_DPV_GDPR_MODULE_PATH = '../dpv-skos/dpv-gdpr/modules'
+EXPORT_DPV_PD_PATH = '../dpv-skos/dpv-pd'
 
 # serializations in the form of extention: rdflib name
 RDF_SERIALIZATIONS = {
@@ -84,7 +84,7 @@ DPVO_PD = Namespace('https://w3id.org/dpv/dpv-owl/pd#')
 
 # The dpv namespace is the default base for all terms
 # Later, this is changed to write terms under DPV-GDPR namespace
-BASE = DPV
+BASE = DPVS
 
 NAMESPACES = {
     'dct': DCT,
@@ -116,6 +116,16 @@ NAMESPACES = {
     'dpvo': DPVO,
     'dpvo-gdpr': DPVO_GDPR,
     'dpvo-pd': DPVO_PD,
+}
+NAMESPACES_DPV_SKOS = {
+    'dpv': DPVS,
+    'dpv-nace': DPV_NACE,
+    'dpv-gdpr': DPVS_GDPR,
+    'dpv-pd': DPVS_PD,
+    'dpvs': DPVS,
+    'dpvs-gdpr': DPVS_GDPR,
+    'dpvs-pd': DPVS_PD,
+    'xsd': XSD,
 }
 
 # the field labels are based on what they should be translated to
@@ -221,7 +231,7 @@ def add_common_triples_for_all_terms(term, graph):
     return None
 
 
-def add_triples_for_classes(classes, graph):
+def add_triples_for_classes(classes, graph, model, topconcept):
     '''Adds triples for classes to graph
     classes: list of CSV data rows
     graph: rdflib graph
@@ -233,13 +243,18 @@ def add_triples_for_classes(classes, graph):
             continue
         # rdf:type
         DEBUG(cls.term)
-        graph.add((BASE[f'{cls.term}'], RDF.type, DPV.Concept))
+        graph.add((BASE[f'{cls.term}'], RDF.type, SKOS.Concept))
+        graph.add((BASE[f'{cls.term}'], RDF.type, RDFS.Class))
+        topconcept_term = topconcept.split('#')[1] if topconcept else ''
+        if model == 'taxonomy' and cls.term != topconcept_term:
+            if 'dpv:Concept' not in cls.dpv_isSubTypeOf:
+                graph.add((BASE[f'{cls.term}'], RDF.type, topconcept))
         # rdfs:subClassOf
         if cls.dpv_isSubTypeOf:
             parents = [p.strip() for p in cls.dpv_isSubTypeOf.split(',')]
             for parent in parents:
                 if parent.startswith('http'):
-                    graph.add((BASE[f'{cls.term}'], DPV.isSubTypeOf, URIRef(parent)))
+                    graph.add((BASE[f'{cls.term}'], SKOS.broaderTransitive, URIRef(parent)))
                 elif ':' in parent:
                     if parent == "dpv:Concept":
                         continue
@@ -249,10 +264,12 @@ def add_triples_for_classes(classes, graph):
                     # gets the namespace from registered ones and create URI
                     # will throw an error if namespace is not registered
                     # dpv internal terms are expected to have the prefix i.e. dpv:term
-                    parent = NAMESPACES[prefix][f'{term}']
-                    graph.add((BASE[f'{cls.term}'], DPV.isSubTypeOf, parent))
+                    parent = NAMESPACES_DPV_SKOS[prefix][f'{term}']
+                    graph.add((BASE[f'{cls.term}'], SKOS.broaderTransitive, parent))
+                    if model == 'ontology':
+                        graph.add((BASE[f'{cls.term}'], RDFS.subClassOf, parent))
                 else:
-                    graph.add((BASE[f'{cls.term}'], DPV.isSubTypeOf, Literal(parent, datatype=XSD.string)))
+                    graph.add((BASE[f'{cls.term}'], SKOS.broaderTransitive, Literal(parent, datatype=XSD.string)))
         
         add_common_triples_for_all_terms(cls, graph)
 
@@ -271,25 +288,46 @@ def add_triples_for_properties(properties, graph):
             continue
         # rdf:type
         DEBUG(prop.term)
-        graph.add((BASE[f'{prop.term}'], RDF.type, DPV.Relation))
+        graph.add((BASE[f'{prop.term}'], RDF.type, RDF.Property))
         # rdfs:domain
         if prop.rdfs_domain:
             # assuming something like rdfs:Resource
             prefix, label = prop.rdfs_domain.split(':')
+            if 'o__' in prefix:
+                link = prefix.replace('o__')
+                link = NAMESPACES[prefix][f'{label}']
+            elif prefix == 'dpv':
+                if label == 'Concept':
+                    link = None
+                else:
+                    link = NAMESPACES_DPV_SKOS[f'{prefix}'][f'{label}']
+            else:
+                link = NAMESPACES[prefix][f'{label}']
             # gets the namespace from registered ones and create URI
             # will throw an error if namespace is not registered
             # dpv internal terms are expected to have the prefix i.e. dpv:term
-            link = NAMESPACES[prefix][f'{label}']
-            graph.add((BASE[f'{prop.term}'], RDFS.domain, link))
+            if link:
+                graph.add((BASE[f'{prop.term}'], RDFS.domain, link))
         # rdfs:range
         if prop.rdfs_range:
             # assuming something like rdfs:Resource
             prefix, label = prop.rdfs_range.split(':')
+            if 'o__' in prefix:
+                # explicit owl declaration
+                link = prefix.replace('o__')
+                link = NAMESPACES[prefix][f'{label}']
+            elif prefix == 'dpv':
+                if label == 'Concept':
+                    link = None
+                else:
+                    link = NAMESPACES_DPV_SKOS[f'{prefix}'][f'{label}']
+            else:
+                link = NAMESPACES[prefix][f'{label}']
             # gets the namespace from registered ones and create URI
             # will throw an error if namespace is not registered
             # dpv internal terms are expected to have the prefix i.e. dpv:term
-            link = NAMESPACES[prefix][f'{label}']
-            graph.add((BASE[f'{prop.term}'], RDFS.range, link))
+            if link:
+                graph.add((BASE[f'{prop.term}'], RDFS.range, link))
         # rdfs:subPropertyOf
         if prop.rdfs_subpropertyof:
             parents = [p.strip() for p in prop.rdfs_subpropertyof.split(',')]
@@ -304,7 +342,7 @@ def add_triples_for_properties(properties, graph):
                     # gets the namespace from registered ones and create URI
                     # will throw an error if namespace is not registered
                     # dpv internal terms are expected to have the prefix i.e. dpv:term
-                    parent = NAMESPACES[prefix][f'{term}']
+                    parent = NAMESPACES_DPV_SKOS[prefix][f'{term}']
                     graph.add((BASE[f'{prop.term}'], RDFS.subPropertyOf, parent))
                 else:
                     graph.add((BASE[f'{prop.term}'], RDFS.subPropertyOf, Literal(parent, datatype=XSD.string)))
@@ -327,62 +365,67 @@ DPV_CSV_FILES = {
         'classes': f'{IMPORT_CSV_PATH}/BaseOntology.csv',
         'properties': f'{IMPORT_CSV_PATH}/BaseOntology_properties.csv',
         'model': 'vocabulary',
+        'topconcept': '',
         },
     'personal_data': {
         'classes': f'{IMPORT_CSV_PATH}/PersonalData.csv',
         'properties': f'{IMPORT_CSV_PATH}/PersonalData_properties.csv',
         'model': 'ontology',
-        'topconcept': DPV.PersonalData,
+        'topconcept': BASE['PersonalData'],
         },
     'purposes': {
         'classes': f'{IMPORT_CSV_PATH}/Purpose.csv',
         'properties': f'{IMPORT_CSV_PATH}/Purpose_properties.csv',
         'model': 'taxonomy',
-        'topconcept': DPV.Purpose,
+        'topconcept': BASE['Purpose'],
         },
     'context': {
         'classes': f'{IMPORT_CSV_PATH}/Context.csv',
         'properties': f'{IMPORT_CSV_PATH}/Context_properties.csv',
         'model': 'taxonomy',
-        'topconcept': DPV.Context,
+        'topconcept': BASE['Context'],
         },
     'processing': {
         'classes': f'{IMPORT_CSV_PATH}/Processing.csv',
         'properties': f'{IMPORT_CSV_PATH}/Processing_properties.csv',
         'model': 'taxonomy',
-        'topconcept': DPV.Processing,
+        'topconcept': BASE['Processing'],
         },
     'processing_context': {
         'classes': f'{IMPORT_CSV_PATH}/ProcessingContext.csv',
         'properties': f'{IMPORT_CSV_PATH}/ProcessingContext_properties.csv',
         'model': 'taxonomy',
+        'topconcept': BASE['Context'],
         },
     'technical_organisational_measures': {
         'classes': f'{IMPORT_CSV_PATH}/TechnicalOrganisationalMeasure.csv',
         'properties': f'{IMPORT_CSV_PATH}/TechnicalOrganisationalMeasure_properties.csv',
         'model': 'taxonomy',
-        'topconcept': DPV.TechnicalOrganisationalMeasure,
+        'topconcept': BASE['TechnicalOrganisationalMeasure'],
         },
     'entities': {
         'classes': f'{IMPORT_CSV_PATH}/Entities.csv',
         'properties': f'{IMPORT_CSV_PATH}/Entities_properties.csv',
         'model': 'ontology',
-        'topconcept': DPV.Entity,
+        'topconcept': BASE['Entity'],
         },
     'jurisdictions': {
         'classes': f'{IMPORT_CSV_PATH}/Jurisdictions.csv',
         'properties': f'{IMPORT_CSV_PATH}/Jurisdictions_properties.csv',
         'model': 'ontology',
+        'topconcept': '',
         },
     'legal_basis': {
         'classes': f'{IMPORT_CSV_PATH}/LegalBasis.csv',
         'properties': f'{IMPORT_CSV_PATH}/LegalBasis_properties.csv',
         'model': 'taxonomy',
-        'topconcept': DPV.LegalBasis,
+        'topconcept': BASE['LegalBasis'],
     },
     'consent': {
         # 'classes': f'{IMPORT_CSV_PATH}/Consent.csv',
         'properties': f'{IMPORT_CSV_PATH}/Consent_properties.csv',
+        'model': 'vocabulary',
+        'topconcept': '',
         },
     }
 
@@ -392,13 +435,15 @@ DPV_GRAPH.add((BASE[''], RDF.type, SKOS.ConceptScheme))
 for name, module in DPV_CSV_FILES.items():
     graph = Graph()
     DEBUG('------')
-    DEBUG(f'Processing {name} module')
+    model = module['model']
+    topconcept = module['topconcept']
+    DEBUG(f'Processing {name} {model}')
     for prefix, namespace in NAMESPACES.items():
         graph.namespace_manager.bind(prefix, namespace)
     if 'classes' in module:
         classes = extract_terms_from_csv(module['classes'], DPV_Class)
         DEBUG(f'there are {len(classes)} classes in {name}')
-        add_triples_for_classes(classes, graph)
+        add_triples_for_classes(classes, graph, model, topconcept)
     if 'properties' in module:
         properties = extract_terms_from_csv(module['properties'], DPV_Property)
         DEBUG(f'there are {len(properties)} properties in {name}')
@@ -410,17 +455,15 @@ for name, module in DPV_CSV_FILES.items():
         graph.add((BASE[f'{name.title()}Concepts'], SKOS.member, concept))
         DPV_GRAPH.add((concept, SKOS.inScheme, DPV['']))
     # serialize
-    graph.load('dpv-semantics-metadata.ttl', format='turtle')
     serialize_graph(graph, f'{EXPORT_DPV_MODULE_PATH}/{name}')
-    if 'topconcept' in module:
-        DPV_GRAPH.add((BASE[''], SKOS.hasTopConcept, module['topconcept']))
+    if 'topconcept':
+        DPV_GRAPH.add((BASE[''], SKOS.hasTopConcept, BASE[f'{topconcept}']))
     DPV_GRAPH += graph
 
 # add information about ontology
 # this is assumed to be in file dpv-ontology-metadata.ttl
 graph = Graph()
-graph.load('dpv-ontology-metadata.ttl', format='turtle')
-graph.load('dpv-semantics-metadata.ttl', format='turtle')
+graph.load('dpv-skos-ontology-metadata.ttl', format='turtle')
 DPV_GRAPH += graph
 
 for prefix, namespace in NAMESPACES.items():
@@ -438,29 +481,37 @@ serialize_graph(DPV_GRAPH, f'{EXPORT_DPV_PATH}/dpv')
 DPV_GDPR_CSV_FILES = {
     'legal_basis': {
         'classes': f'{IMPORT_CSV_PATH}/GDPR_LegalBasis.csv',
+        'model': 'taxonomy',
+        'topconcept': DPVS['LegalBasis'],
         },
     'rights': {
         'classes': f'{IMPORT_CSV_PATH}/GDPR_LegalRights.csv',
+        'model': 'taxonomy',
+        'topconcept': DPVS['DataSubjectRight'],
         },
     'data_transfers': {
         'classes': f'{IMPORT_CSV_PATH}/GDPR_DataTransfers.csv',
+        'model': 'taxonomy',
+        'topconcept': DPVS['TechnicalOrganisationalMeasure'],
         },
     }
 
-BASE = NAMESPACES['dpv-gdpr']
+BASE = NAMESPACES['dpvs-gdpr']
 DPV_GDPR_GRAPH = Graph()
 DPV_GDPR_GRAPH.add((BASE[''], RDF.type, SKOS.ConceptScheme))
 
 for name, module in DPV_GDPR_CSV_FILES.items():
     graph = Graph()
     DEBUG('------')
+    model = module['model']
+    topconcept = module['topconcept']
     DEBUG(f'Processing {name} module')
     for prefix, namespace in NAMESPACES.items():
         graph.namespace_manager.bind(prefix, namespace)
     if 'classes' in module:
         classes = extract_terms_from_csv(module['classes'], DPV_Class)
         DEBUG(f'there are {len(classes)} classes in {name}')
-        add_triples_for_classes(classes, graph)
+        add_triples_for_classes(classes, graph, model, topconcept)
     if 'properties' in module:
         properties = extract_terms_from_csv(module['properties'], DPV_Property)
         DEBUG(f'there are {len(properties)} properties in {name}')
@@ -473,12 +524,12 @@ for name, module in DPV_GDPR_CSV_FILES.items():
         DPV_GDPR_GRAPH.add((concept, SKOS.inScheme, DPV_GDPR['']))
     # serialize
     serialize_graph(graph, f'{EXPORT_DPV_GDPR_MODULE_PATH}/{name}')
-    if 'topconcept' in module:
-        DPV_GDPR_GRAPH.add((BASE[''], SKOS.hasTopConcept, module['topconcept']))
+    if 'topconcept':
+        DPV_GDPR_GRAPH.add((BASE[''], SKOS.hasTopConcept, BASE[f'topconcept']))
     DPV_GDPR_GRAPH += graph
 
 graph = Graph()
-graph.load('dpv-gdpr-ontology-metadata.ttl', format='turtle')
+graph.load('dpv-skos-gdpr-ontology-metadata.ttl', format='turtle')
 DPV_GDPR_GRAPH += graph
 
 for prefix, namespace in NAMESPACES.items():
@@ -495,7 +546,7 @@ serialize_graph(DPV_GDPR_GRAPH, f'{EXPORT_DPV_GDPR_PATH}/dpv-gdpr')
 
 DPV_PD_CSV_FILES = f'{IMPORT_CSV_PATH}/dpv-pd.csv'
 
-BASE = NAMESPACES['dpv-pd']
+BASE = NAMESPACES['dpvs-pd']
 DPV_PD_GRAPH = Graph()
 
 DEBUG('------')
@@ -504,14 +555,14 @@ for prefix, namespace in NAMESPACES.items():
     DPV_PD_GRAPH.namespace_manager.bind(prefix, namespace)
 classes = extract_terms_from_csv(DPV_PD_CSV_FILES, DPV_Class)
 DEBUG(f'there are {len(classes)} classes in {name}')
-add_triples_for_classes(classes, DPV_PD_GRAPH)
+add_triples_for_classes(classes, DPV_PD_GRAPH, model='taxonomy', topconcept=DPVS['PersonalData'])
 # add collection representing concepts
 DPV_PD_GRAPH.add((BASE[f'PersonalDataConcepts'], RDF.type, SKOS.Collection))
 DPV_PD_GRAPH.add((BASE[f'PersonalDataConcepts'], DCT.title, Literal(f'Personal Data Concepts', datatype=XSD.string)))
 for concept, _, _ in DPV_PD_GRAPH.triples((None, RDF.type, SKOS.Concept)):
     DPV_PD_GRAPH.add((BASE[f'PersonalDataConcepts'], SKOS.member, concept))
 # serialize
-DPV_PD_GRAPH.load('dpv-pd-ontology-metadata.ttl', format='turtle')
+DPV_PD_GRAPH.load('dpv-skos-pd-ontology-metadata.ttl', format='turtle')
 
 for prefix, namespace in NAMESPACES.items():
     DPV_PD_GRAPH.namespace_manager.bind(prefix, namespace)

@@ -1,20 +1,20 @@
-{% from 'macro_term_table.jinja2' import table_classes %}
-{% from 'macro_term_table.jinja2' import table_properties %}
+{% from 'macro_term_table_skos.jinja2' import table_classes %}
+{% from 'macro_term_table_skos.jinja2' import table_properties %}
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
-  <title>DPV-PD: Extended Personal Data concepts for DPV</title>
+  <title>DPVS-PD: Extended Personal Data concepts for DPV-SKOS</title>
   <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer></script>
   <script class="remove">
    // All config options at https://respec.org/docs/ 
    var respecConfig = {
-    shortName: "dpv-pd",
-    title: "DPV-PD: Extended Personal Data concepts for DPV",
+    shortName: "dpvs-pd",
+    title: "DPVS-PD: Extended Personal Data concepts for DPV",
     subtitle: "version 0.4 (published 2022-02-15)",
     specStatus: "CG-DRAFT",
     group: "dpvcg",
-    latestVersion: "https://w3id.org/dpv/dpv-pd",
+    latestVersion: "https://w3id.org/dpv/dpv-skos/dpv-pd",
     // github: {
     //   repoURL: "https://github.com/w3c/dpv-pd",
     //   branch: "master"
@@ -22,7 +22,7 @@
     subjectPrefix: "[dpv-pd]",
     doJsonLd: true,
     lint: { "no-unused-dfns": false },
-    canonicalUri: "https://w3id.org/dpv/dpv-pd",
+    canonicalUri: "https://w3id.org/dpv/dpv-skos/dpv-pd",
     editors: [
     {
       name: "Harshvardhan J. Pandit",
@@ -137,6 +137,14 @@
       "DPV-SKOS": {
         href: "https://www.w3id.org/dpv/dpv-skos",
         title: "Data Privacy Vocabulary serialised using SKOS+RDFS (DPV-SKOS)"
+      },
+      "DPVS-GDPR": {
+        href: "https://www.w3id.org/dpv/dpv-skos/dpv-gdpr",
+        title: "GDPR Extension for DPV-SKOS"
+      },
+      "DPVS-PD": {
+        href: "https://www.w3id.org/dpv/dpv-skos/dpv-pd",
+        title: "Personal Data Categories Extension for DPV-SKOS"
       },
       "DPV-OWL": {
         href: "https://www.w3id.org/dpv/dpv-owl",
@@ -282,9 +290,10 @@
       <li>[[DPV]]: The DPV Specification is the formal and normative description of DPV and its concepts. It provides a serialisation of the concepts as a taxonomy using SKOS.</li>
       <li>Extensions to Concepts: <ul>
         <li>[[DPV-GDPR]]: Extension to the DPV providing concepts relevant to [[GDPR]].</li>
-        <li>[[DPV-PD]]:(This document) Extension to the DPV providing a taxonomy of personal data categories.</li></ul></li>
+        <li>[[DPV-PD]]: Extension to the DPV providing a taxonomy of personal data categories.</li></ul></li>
       <li>Serialisations of DPV: <ul>
         <li>[[DPV-SKOS]]: A serialisation of the DPV using [[RDFS]] and [[SKOS]] to enable its use as a schema or ontology.</li>
+        <li>[[DPVS-PD]]:(This document) Extension to the DPV-SKOS providing a taxonomy of personal data categories.</li></ul></li>
         <li>[[DPV-OWL]]: is a serialisation of the DPV using [[OWL]] to enable its use as an ontology.</li></ul></li>
       <li>[[DPV-NACE]]: [[NACE]] taxonomy serialised in RDFS</li>
     </ul>

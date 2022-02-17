@@ -19,14 +19,32 @@
             <td>Definition:</td>
             <td>{{term.skos_definition}}</td>
           </tr>
-          {% if term.dpv_isSubTypeOf %}
+          {% if term.rdfs_subClassOf %}
           <tr>
-            <td>SubType of:</td>
+            <td>SubClass of:</td>
             <td>
-              {% if term.dpv_isSubTypeOf is sequence and not term.dpv_isSubTypeOf is string %}{% for parent in term.dpv_isSubTypeOf|sort %}
+              {% if term.rdfs_subClassOf is sequence and not term.rdfs_subClassOf is string %}{% for parent in term.rdfs_subClassOf|sort %}
               <a href="{{parent.iri}}">{{parent|prefix_this}}</a>{{", " if not loop.last}}
               {% endfor %}{% else %}
-              <a href="{{term.dpv_isSubTypeOf.iri}}">{{term.dpv_isSubTypeOf|prefix_this}}</a>
+              <a href="{{term.rdfs_subClassOf.iri}}">{{term.rdfs_subClassOf|prefix_this}}</a>
+              {% endif %}
+            </td>
+          </tr>
+          {% endif %}
+          {% for pt in term.rdf_type %}{% if 'dpv' in pt.iri %}
+          <tr>
+            <td>Instance of:</td>
+            <td>{% for cls in term.rdf_type %}{% if 'dpv' in cls.iri %}<a href="{{cls.iri}}">{{cls|prefix_this}}</a>{% endif %}{% endfor %}</td>
+          </tr>
+          {% endif %}{% endfor %}
+          {% if term.skos_broaderTransitive %}
+          <tr>
+            <td>Narrower than:</td>
+            <td>
+              {% if term.skos_broaderTransitive is sequence and not term.skos_broaderTransitive is string %}{% for parent in term.skos_broaderTransitive|sort %}
+              <a href="{{parent.iri}}">{{parent|prefix_this}}</a>{{", " if not loop.last}}
+              {% endfor %}{% else %}
+              <a href="{{term.skos_broaderTransitive.iri}}">{{term.skos_broaderTransitive|prefix_this}}</a>
               {% endif %}
             </td>
           </tr>
