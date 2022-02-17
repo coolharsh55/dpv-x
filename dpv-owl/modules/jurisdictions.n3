@@ -11,6 +11,7 @@ dpvo:EconomicUnion a owl:Class ;
     dct:created "2022-01-19"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "A political union of two or more countries based on economic or trade agreements"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Location ;
     sw:term_status "accepted"@en .
 
@@ -19,6 +20,7 @@ dpvo:Region a owl:Class ;
     dct:created "2022-01-19"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "A region is an area or site that is considered a location"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Location ;
     sw:term_status "accepted"@en .
 
@@ -27,6 +29,7 @@ dpvo:SupraNationalUnion a owl:Class ;
     dct:created "2022-01-19"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "A political union of two or more countries with an establishment of common authority"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Location ;
     sw:term_status "accepted"@en .
 
@@ -37,6 +40,7 @@ dpvo:hasApplicableLaw a rdf:Property,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Indicates applicability of a Law"@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:Law ;
     sw:term_status "accepted"@en .
 
@@ -48,6 +52,7 @@ dpvo:hasAuthority a rdf:Property,
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Indicates applicability of authority for a jurisdiction"@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:Authority ;
     sw:term_status "accepted"@en .
 
@@ -58,6 +63,7 @@ dpvo:hasJurisdiction a rdf:Property,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Indicates applicability of specified jurisdiction"@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:Location ;
     sw:term_status "accepted"@en .
 
@@ -67,6 +73,7 @@ dpvo:hasThirdCountry a rdf:Property,
     dct:created "2022-02-09"^^xsd:date ;
     dct:description "Indicates applicability or relevance of a 'third country'"@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:ThirdCountry ;
     rdfs:subPropertyOf dpvo:hasCountry ;
     sw:term_status "accepted"@en .
@@ -79,6 +86,7 @@ dpvo:isAuthorityFor a rdf:Property,
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Indicates area, scope, or applicability of an Authority"@en ;
     rdfs:domain dpvo:Authority ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range owl:Thing ;
     sw:term_status "accepted"@en .
 
@@ -87,6 +95,7 @@ dpvo:Law a owl:Class ;
     dct:created "2022-01-19"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "A law is a set of rules created by government or authorities"@en ;
+    rdfs:isDefinedBy dpvo: ;
     sw:term_status "accepted"@en .
 
 dpvo:ThirdCountry a owl:Class ;
@@ -94,6 +103,7 @@ dpvo:ThirdCountry a owl:Class ;
     dct:created "2022-02-09"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Represents a country outside applicable or compatible jurisdiction as outlined in law"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Country ;
     sw:term_status "accepted"@en .
 
@@ -105,6 +115,7 @@ dpvo:hasCountry a rdf:Property,
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Indicates applicability of specified country"@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:Country ;
     rdfs:subPropertyOf dpvo:hasLocation ;
     sw:term_status "accepted"@en .
@@ -118,8 +129,9 @@ dpvo:hasLocation a rdf:Property,
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Indicates information about location"@en ;
+    dct:source <https://www.specialprivacy.eu/> ;
     rdfs:domain owl:Thing ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:Location ;
     sw:term_status "accepted"@en .
 
@@ -130,6 +142,7 @@ dpvo:Country a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "A political entity indicative of a sovereign or non-sovereign territorial state comprising of distinct geographical areas"@en ;
     rdfs:comment "The definition of country is not intended for political interpretation. DPVCG welcomes alternate definitions based in existing sources with global scope, such as UN or ISO."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Location ;
     sw:term_status "accepted"@en .
 
@@ -138,5 +151,6 @@ dpvo:Location a owl:Class ;
     dct:created "2022-01-19"^^xsd:date ;
     dct:description "A location is a position, site, or area where something is located"@en ;
     rdfs:comment "Location may be geographic, physical, or virtual."@en ;
+    rdfs:isDefinedBy dpvo: ;
     sw:term_status "accepted"@en .
 

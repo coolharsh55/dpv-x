@@ -19,6 +19,7 @@
         "Fajar J. Ekaputra",
         "Georg P Krog",
         "Javier D. Fernández",
+        "Julian Flake",
         "Mark Lizar",
         "Paul Ryan",
         "Piero Bonatti",
@@ -30,6 +31,7 @@
     dct:creator "Axel Polleres",
         "Harshvardhan J. Pandit" ;
     dct:description "DPV-PD is an extension to the Data Privacy Vocabulary that provides additional terms related to Personal Data categories."@en ;
+    dct:license <https://www.w3.org/Consortium/Legal/2015/doc-license> ;
     dct:modified "2022-02-15"^^xsd:date ;
     dct:source <https://www.w3.org/community/dpvcg/> ;
     dct:title "DPV-PD: Personal Data Extension for DPV"@en ;
@@ -43,7 +45,8 @@ dpvo-pd:Accent a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about linguistic and speech accents."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Language ;
     sw:term_status "accepted"@en .
 
@@ -53,7 +56,8 @@ dpvo-pd:Acquantaince a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about acquaintainces in a social network."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:SocialNetwork ;
     sw:term_status "accepted"@en .
 
@@ -63,7 +67,8 @@ dpvo-pd:Age a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about age"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:PhysicalCharacteristic ;
     sw:term_status "accepted"@en .
 
@@ -73,7 +78,8 @@ dpvo-pd:ApartmentOwned a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about apartment(s) owned and its history"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:HouseOwned ;
     sw:term_status "accepted"@en .
 
@@ -83,7 +89,8 @@ dpvo-pd:Association a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about associations in a social network with other individuals, groups, or entities e.g. friend of a friend"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:SocialNetwork ;
     sw:term_status "accepted"@en .
 
@@ -93,7 +100,8 @@ dpvo-pd:Attitude a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about attitude."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Behavioral ;
     sw:term_status "accepted"@en .
 
@@ -102,7 +110,8 @@ dpvo-pd:AuthenticationHistory a owl:Class ;
     dct:created "2020-11-04"^^xsd:date ;
     dct:creator "Georg P Krog"^^xsd:string ;
     dct:description "Information about prior authentication and its outcomes such as login attempts or location."@en ;
-    rdfs:isDefinedBy <https://www.w3.org/community/dpvcg/> ;
+    dct:source <https://www.w3.org/community/dpvcg/> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Behavioral ;
     sw:term_status "accepted"@en .
 
@@ -112,7 +121,8 @@ dpvo-pd:BankAccount a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about bank accounts."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:FinancialAccount ;
     sw:term_status "accepted"@en .
 
@@ -122,7 +132,8 @@ dpvo-pd:BloodType a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about blood type."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:MedicalHealth ;
     sw:term_status "accepted"@en .
 
@@ -132,7 +143,8 @@ dpvo-pd:BrowserFingerprint a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about the web browser which is used as a 'fingerprint'"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:DeviceBased ;
     sw:term_status "accepted"@en .
 
@@ -141,7 +153,8 @@ dpvo-pd:BrowsingReferral a owl:Class ;
     dct:created "2020-11-04"^^xsd:date ;
     dct:creator "Georg P Krog"^^xsd:string ;
     dct:description "Information about web browsing referrer or referral, which can be based on location, targeted referrals, direct, organic search, social media or actions, campaigns."@en ;
-    rdfs:isDefinedBy <https://www.w3.org/community/dpvcg/> ;
+    dct:source <https://www.w3.org/community/dpvcg/> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:BrowsingBehavior ;
     sw:term_status "accepted"@en .
 
@@ -151,7 +164,8 @@ dpvo-pd:CallLog a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about the calls that an individual has made."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Behavioral ;
     sw:term_status "accepted"@en .
 
@@ -161,7 +175,8 @@ dpvo-pd:CarOwned a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about cars ownership and ownership history."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Ownership ;
     sw:term_status "accepted"@en .
 
@@ -171,7 +186,8 @@ dpvo-pd:Character a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about character in the public sphere"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:PublicLife ;
     sw:term_status "accepted"@en .
 
@@ -181,7 +197,8 @@ dpvo-pd:CommunicationsMetadata a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about communication metadata in the public sphere"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:seeAlso svd:Interactive ;
     rdfs:subClassOf dpvo-pd:PublicLife ;
     sw:term_status "accepted"@en .
@@ -192,7 +209,8 @@ dpvo-pd:Connection a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about and including connections in a social network"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:SocialNetwork ;
     sw:term_status "accepted"@en .
 
@@ -202,7 +220,8 @@ dpvo-pd:Country a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about country e.g. residence, travel."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Location ;
     sw:term_status "accepted"@en .
 
@@ -212,7 +231,8 @@ dpvo-pd:CreditCapacity a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about credit capacity."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Credit ;
     sw:term_status "accepted"@en .
 
@@ -222,7 +242,8 @@ dpvo-pd:CreditCardNumber a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about credit card number"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:PaymentCardNumber ;
     sw:term_status "accepted"@en .
 
@@ -232,7 +253,8 @@ dpvo-pd:CreditRecord a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about credit record."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Credit ;
     sw:term_status "accepted"@en .
 
@@ -242,7 +264,8 @@ dpvo-pd:CreditScore a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about credit score."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:CreditWorthiness ;
     sw:term_status "accepted"@en .
 
@@ -252,7 +275,8 @@ dpvo-pd:CreditStanding a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about credit standing."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Credit ;
     sw:term_status "accepted"@en .
 
@@ -262,7 +286,8 @@ dpvo-pd:CriminalCharge a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about criminal charges."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Criminal ;
     sw:term_status "accepted"@en .
 
@@ -272,7 +297,8 @@ dpvo-pd:CriminalConviction a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about criminal convictions."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Criminal ;
     sw:term_status "accepted"@en .
 
@@ -282,7 +308,8 @@ dpvo-pd:CriminalPardon a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about criminal pardons."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Criminal ;
     sw:term_status "accepted"@en .
 
@@ -292,7 +319,8 @@ dpvo-pd:DNACode a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about DNA."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:MedicalHealth ;
     sw:term_status "accepted"@en .
 
@@ -302,7 +330,8 @@ dpvo-pd:Demeanor a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about demeanor."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Behavioral ;
     sw:term_status "accepted"@en .
 
@@ -314,7 +343,8 @@ dpvo-pd:DeviceApplications a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Information about applications or application-like software on a device."@en ;
-    rdfs:isDefinedBy <https://www.w3.org/community/dpvcg/> ;
+    dct:source <https://www.w3.org/community/dpvcg/> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:DeviceSoftware ;
     sw:term_status "accepted"@en .
 
@@ -326,7 +356,8 @@ dpvo-pd:DeviceOperatingSystem a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Information about the operating system (OS) or system software that manages hardware or software resources."@en ;
-    rdfs:isDefinedBy <https://www.w3.org/community/dpvcg/> ;
+    dct:source <https://www.w3.org/community/dpvcg/> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:DeviceSoftware ;
     sw:term_status "accepted"@en .
 
@@ -336,7 +367,8 @@ dpvo-pd:Dialect a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about linguistic dialects."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Language ;
     sw:term_status "accepted"@en .
 
@@ -346,7 +378,8 @@ dpvo-pd:Disability a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about disabilities."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:MedicalHealth ;
     sw:term_status "accepted"@en .
 
@@ -356,7 +389,8 @@ dpvo-pd:DisciplinaryAction a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about disciplinary actions and its history"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Professional ;
     sw:term_status "accepted"@en .
 
@@ -366,7 +400,8 @@ dpvo-pd:Dislike a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about dislikes or preferences regarding repulsions."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Interest ;
     sw:term_status "accepted"@en .
 
@@ -376,7 +411,8 @@ dpvo-pd:Divorce a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about divorce(s)."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:FamilyStructure ;
     sw:term_status "accepted"@en .
 
@@ -386,7 +422,8 @@ dpvo-pd:DrugTestResult a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about drug test results."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:MedicalHealth ;
     sw:term_status "accepted"@en .
 
@@ -396,7 +433,8 @@ dpvo-pd:EmailAddress a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about Email address."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Contact ;
     sw:term_status "accepted"@en .
 
@@ -406,7 +444,8 @@ dpvo-pd:EmailContent a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about the contents of Emails sent or received"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Communication ;
     sw:term_status "accepted"@en .
 
@@ -416,7 +455,8 @@ dpvo-pd:EmploymentHistory a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about employment history"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Professional ;
     sw:term_status "accepted"@en .
 
@@ -426,7 +466,8 @@ dpvo-pd:EthnicOrigin a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about ethnic origin"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo:SpecialCategoryPersonalData,
         dpvo-pd:Ethnicity ;
     sw:term_status "accepted"@en .
@@ -437,7 +478,8 @@ dpvo-pd:FamilyHealthHistory a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about family health history."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:HealthHistory ;
     sw:term_status "accepted"@en .
 
@@ -447,7 +489,8 @@ dpvo-pd:FavoriteColor a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about favorite color."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Favorite ;
     sw:term_status "accepted"@en .
 
@@ -457,7 +500,8 @@ dpvo-pd:FavoriteFood a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about favorite food."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Favorite ;
     sw:term_status "accepted"@en .
 
@@ -467,7 +511,8 @@ dpvo-pd:FavoriteMusic a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about favorite music."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Favorite ;
     sw:term_status "accepted"@en .
 
@@ -477,7 +522,8 @@ dpvo-pd:Fetish a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information an individual's sexual fetishes"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Sexual ;
     sw:term_status "accepted"@en .
 
@@ -487,7 +533,8 @@ dpvo-pd:FinancialAccountNumber a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about financial account number"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:AccountIdentifier ;
     sw:term_status "accepted"@en .
 
@@ -497,7 +544,8 @@ dpvo-pd:Fingerprint a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about fingerprint used for biometric purposes."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Biometric ;
     sw:term_status "accepted"@en .
 
@@ -507,7 +555,8 @@ dpvo-pd:Friend a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about friends in a social network, including aspects of friendships such as years together or nature of friendship."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:SocialNetwork ;
     sw:term_status "accepted"@en .
 
@@ -517,7 +566,8 @@ dpvo-pd:GPSCoordinate a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about location expressed using Global Position System coordinates (GPS)"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Location ;
     sw:term_status "accepted"@en .
 
@@ -527,7 +577,8 @@ dpvo-pd:Gender a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about gender"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:PhysicalCharacteristic ;
     sw:term_status "accepted"@en .
 
@@ -537,7 +588,8 @@ dpvo-pd:GeneralReputation a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about reputation in the public sphere"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:PublicLife ;
     sw:term_status "accepted"@en .
 
@@ -547,7 +599,8 @@ dpvo-pd:Geographic a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about location or based on geography (e.g. home address)"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Demographic ;
     sw:term_status "accepted"@en .
 
@@ -557,7 +610,8 @@ dpvo-pd:GroupMembership a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about groups and memberships included or associated with a social network"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:SocialNetwork ;
     sw:term_status "accepted"@en .
 
@@ -567,7 +621,8 @@ dpvo-pd:HairColor a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about hair color"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:PhysicalCharacteristic ;
     sw:term_status "accepted"@en .
 
@@ -577,7 +632,8 @@ dpvo-pd:HealthRecord a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about health record."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:MedicalHealth ;
     sw:term_status "accepted"@en .
 
@@ -587,7 +643,8 @@ dpvo-pd:Height a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about physical height"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:PhysicalCharacteristic ;
     sw:term_status "accepted"@en .
 
@@ -597,7 +654,8 @@ dpvo-pd:IPAddress a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about the Internet protocol (IP) address of a device"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:DeviceBased ;
     sw:term_status "accepted"@en .
 
@@ -607,7 +665,8 @@ dpvo-pd:Income a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about financial income e.g. for individual or household or family"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Transactional ;
     sw:term_status "accepted"@en .
 
@@ -617,7 +676,8 @@ dpvo-pd:IncomeBracket a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about income bracket."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Demographic ;
     sw:term_status "accepted"@en .
 
@@ -627,7 +687,8 @@ dpvo-pd:IndividualHealthHistory a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about information health history."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:HealthHistory ;
     sw:term_status "accepted"@en .
 
@@ -637,7 +698,8 @@ dpvo-pd:Intention a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about intentions"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Preference ;
     sw:term_status "accepted"@en .
 
@@ -647,7 +709,8 @@ dpvo-pd:Interaction a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about interactions in the public sphere"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:PublicLife ;
     sw:term_status "accepted"@en .
 
@@ -657,7 +720,8 @@ dpvo-pd:Job a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about professional jobs"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Professional ;
     sw:term_status "accepted"@en .
 
@@ -667,7 +731,8 @@ dpvo-pd:LifeHistory a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about personal history regarding events or activities - including  their occurrences that might be directly related or have had an influence (e.g. World War, 9/11)"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Historical ;
     sw:term_status "accepted"@en .
 
@@ -677,7 +742,8 @@ dpvo-pd:Like a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about likes or preferences regarding attractions."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Interest ;
     sw:term_status "accepted"@en .
 
@@ -687,7 +753,8 @@ dpvo-pd:LinkClicked a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about the links that an individual has clicked."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:seeAlso svd:Navigation ;
     rdfs:subClassOf dpvo-pd:Behavioral ;
     sw:term_status "accepted"@en .
@@ -698,7 +765,8 @@ dpvo-pd:LoanRecord a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about loans, whether applied, provided or rejected, and its history"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Transactional ;
     sw:term_status "accepted"@en .
 
@@ -708,7 +776,8 @@ dpvo-pd:MACAddress a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about the Media Access Control (MAC) address of a device"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:DeviceBased ;
     sw:term_status "accepted"@en .
 
@@ -718,7 +787,8 @@ dpvo-pd:MaritalStatus a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about marital status and history"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:PublicLife ;
     sw:term_status "accepted"@en .
 
@@ -728,7 +798,8 @@ dpvo-pd:Marriage a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about marriage(s)."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:FamilyStructure ;
     sw:term_status "accepted"@en .
 
@@ -738,7 +809,8 @@ dpvo-pd:MentalHealth a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about mental health."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Health ;
     sw:term_status "accepted"@en .
 
@@ -748,7 +820,8 @@ dpvo-pd:Name a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about names associated or used as given name or nickname."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Identifying ;
     sw:term_status "accepted"@en .
 
@@ -758,7 +831,8 @@ dpvo-pd:OfficialID a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about an official identifier or identification document"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:seeAlso svd:Government ;
     rdfs:subClassOf dpvo-pd:Identifying ;
     sw:term_status "accepted"@en .
@@ -769,7 +843,8 @@ dpvo-pd:Offspring a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about offspring(s)."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:FamilyStructure ;
     sw:term_status "accepted"@en .
 
@@ -779,7 +854,8 @@ dpvo-pd:Opinion a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about opinions"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Preference ;
     sw:term_status "accepted"@en .
 
@@ -789,7 +865,8 @@ dpvo-pd:PINCode a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about Personal identification number (PIN), which is usually used in the process of authenticating the individual as an user accessing a system."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Authenticating ;
     sw:term_status "accepted"@en .
 
@@ -799,7 +876,8 @@ dpvo-pd:Parent a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about parent(s)."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:FamilyStructure ;
     sw:term_status "accepted"@en .
 
@@ -809,7 +887,8 @@ dpvo-pd:Password a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about password used in the process of authenticating the individual as an user accessing a system."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Authenticating ;
     sw:term_status "accepted"@en .
 
@@ -818,7 +897,8 @@ dpvo-pd:PaymentCardExpiry a owl:Class ;
     dct:created "2020-11-04"^^xsd:date ;
     dct:creator "Georg P Krog"^^xsd:string ;
     dct:description "Information about payment card expiry such as a date."@en ;
-    rdfs:isDefinedBy <https://www.w3.org/community/dpvcg/> ;
+    dct:source <https://www.w3.org/community/dpvcg/> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:PaymentCard ;
     sw:term_status "accepted"@en .
 
@@ -828,7 +908,8 @@ dpvo-pd:PersonalPossession a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about personal possessions."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Ownership ;
     sw:term_status "accepted"@en .
 
@@ -838,7 +919,8 @@ dpvo-pd:Personality a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about personality (e.g., categorization in terms of the Big Five personality traits)"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Behavioral ;
     sw:term_status "accepted"@en .
 
@@ -848,7 +930,8 @@ dpvo-pd:PhilosophicalBelief a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about philosophical beliefs."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo:SpecialCategoryPersonalData,
         dpvo-pd:KnowledgeBelief ;
     sw:term_status "accepted"@en .
@@ -859,7 +942,8 @@ dpvo-pd:PhysicalAddress a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about physical address."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Contact ;
     sw:term_status "accepted"@en .
 
@@ -869,7 +953,8 @@ dpvo-pd:PhysicalHealth a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about physical health."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Health ;
     sw:term_status "accepted"@en .
 
@@ -879,7 +964,8 @@ dpvo-pd:PhysicalTrait a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about defining traits or features regarding the body."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Demographic ;
     sw:term_status "accepted"@en .
 
@@ -889,7 +975,8 @@ dpvo-pd:Picture a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about visual representation or image e.g. profile photo."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Identifying ;
     sw:term_status "accepted"@en .
 
@@ -899,7 +986,8 @@ dpvo-pd:Piercing a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about piercings"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:PhysicalCharacteristic ;
     sw:term_status "accepted"@en .
 
@@ -909,7 +997,8 @@ dpvo-pd:PoliticalAffiliation a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about political affiliation and history"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:seeAlso svd:Political ;
     rdfs:subClassOf dpvo:SpecialCategoryPersonalData,
         dpvo-pd:PublicLife ;
@@ -921,7 +1010,8 @@ dpvo-pd:Prescription a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about medical and pharmaceutical prescriptions"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:MedicalHealth ;
     sw:term_status "accepted"@en .
 
@@ -931,7 +1021,8 @@ dpvo-pd:PrivacyPreference a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about privacy preferences"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Preference ;
     sw:term_status "accepted"@en .
 
@@ -941,7 +1032,8 @@ dpvo-pd:Proclivitie a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about proclivities in a sexual context"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Sexual ;
     sw:term_status "accepted"@en .
 
@@ -951,7 +1043,8 @@ dpvo-pd:ProfessionalCertification a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about professional certifications"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Professional ;
     sw:term_status "accepted"@en .
 
@@ -961,7 +1054,8 @@ dpvo-pd:ProfessionalEvaluation a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about professional evaluations"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Professional ;
     sw:term_status "accepted"@en .
 
@@ -971,7 +1065,8 @@ dpvo-pd:ProfessionalInterview a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about professional interviews"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Professional ;
     sw:term_status "accepted"@en .
 
@@ -981,7 +1076,8 @@ dpvo-pd:Purchase a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about purchases such as items bought e.g. grocery or clothing"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:seeAlso svd:Purchase ;
     rdfs:subClassOf dpvo-pd:Transactional ;
     sw:term_status "accepted"@en .
@@ -992,7 +1088,8 @@ dpvo-pd:PurchasesAndSpendingHabit a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about analysis of purchases made and money spent expressed as a habit e.g. monthly shopping trends"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Transactional ;
     sw:term_status "accepted"@en .
 
@@ -1002,7 +1099,8 @@ dpvo-pd:Race a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about race or racial history."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo:SpecialCategoryPersonalData,
         dpvo-pd:Ethnicity ;
     sw:term_status "accepted"@en .
@@ -1013,7 +1111,8 @@ dpvo-pd:Reference a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about references in the professional context"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Professional ;
     sw:term_status "accepted"@en .
 
@@ -1023,7 +1122,8 @@ dpvo-pd:Relationship a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about relationships and relationship history."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Family ;
     sw:term_status "accepted"@en .
 
@@ -1033,7 +1133,8 @@ dpvo-pd:Religion a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about religion, religious inclinations, and religious history."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo:SpecialCategoryPersonalData,
         dpvo-pd:PublicLife ;
     sw:term_status "accepted"@en .
@@ -1044,7 +1145,8 @@ dpvo-pd:ReligiousBelief a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about religion and religious beliefs."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo:SpecialCategoryPersonalData,
         dpvo-pd:KnowledgeBelief ;
     sw:term_status "accepted"@en .
@@ -1055,7 +1157,8 @@ dpvo-pd:Retina a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about retina and the retinal patterns."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Biometric ;
     sw:term_status "accepted"@en .
 
@@ -1065,7 +1168,8 @@ dpvo-pd:RoomNumber a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about location expressed as Room number or similar numbering systems"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Location ;
     sw:term_status "accepted"@en .
 
@@ -1075,7 +1179,8 @@ dpvo-pd:Salary a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about salary"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Professional ;
     sw:term_status "accepted"@en .
 
@@ -1085,7 +1190,8 @@ dpvo-pd:Sale a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about sales e.g. selling of goods or services"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Transactional ;
     sw:term_status "accepted"@en .
 
@@ -1095,7 +1201,8 @@ dpvo-pd:School a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about school such as name of school, conduct, or grades obtained."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Professional ;
     sw:term_status "accepted"@en .
 
@@ -1105,7 +1212,8 @@ dpvo-pd:SecretText a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about secret text used in the process of authenticating the individual as an user accessing a system, e.g., when recovering a lost password."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Authenticating ;
     sw:term_status "accepted"@en .
 
@@ -1115,7 +1223,8 @@ dpvo-pd:SexualHistory a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about sexual history"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Sexual ;
     sw:term_status "accepted"@en .
 
@@ -1125,7 +1234,8 @@ dpvo-pd:SexualPreference a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about sexual preferences"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Sexual ;
     sw:term_status "accepted"@en .
 
@@ -1135,7 +1245,8 @@ dpvo-pd:Sibling a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about sibling(s)."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:FamilyStructure ;
     sw:term_status "accepted"@en .
 
@@ -1145,7 +1256,8 @@ dpvo-pd:SkinTone a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about skin tone"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:PhysicalCharacteristic ;
     sw:term_status "accepted"@en .
 
@@ -1155,7 +1267,8 @@ dpvo-pd:SocialMediaCommunication a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about social media communication, including the communication itself and metadata."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:seeAlso svd:Social ;
     rdfs:subClassOf dpvo-pd:Communication ;
     sw:term_status "accepted"@en .
@@ -1166,7 +1279,8 @@ dpvo-pd:SocialStatus a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about social status"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:PublicLife ;
     sw:term_status "accepted"@en .
 
@@ -1176,7 +1290,8 @@ dpvo-pd:TVViewingBehavior a owl:Class ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Rudy Jacob"^^xsd:string ;
     dct:description "Information about TV viewing Behavior, such as timestamps of channel change, duration of viewership, content consumed"@en ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+    dct:source <https://www.specialprivacy.eu/> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:ServiceConsumptionBehavior ;
     sw:term_status "accepted"@en .
 
@@ -1186,7 +1301,8 @@ dpvo-pd:Tattoo a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about tattoos"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:PhysicalCharacteristic ;
     sw:term_status "accepted"@en .
 
@@ -1196,7 +1312,8 @@ dpvo-pd:Tax a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about financial tax e.g. tax records or tax due"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Transactional ;
     sw:term_status "accepted"@en .
 
@@ -1206,7 +1323,8 @@ dpvo-pd:TelephoneNumber a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about telephone number."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Contact ;
     sw:term_status "accepted"@en .
 
@@ -1216,7 +1334,8 @@ dpvo-pd:Thought a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about thoughts"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:KnowledgeBelief ;
     sw:term_status "accepted"@en .
 
@@ -1226,7 +1345,8 @@ dpvo-pd:Transaction a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about financial transactions e.g. bank transfers"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Transactional ;
     sw:term_status "accepted"@en .
 
@@ -1236,7 +1356,8 @@ dpvo-pd:UID a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about unique identifiers."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:seeAlso svd:UniqueId ;
     rdfs:subClassOf dpvo-pd:Identifying ;
     sw:term_status "accepted"@en .
@@ -1247,7 +1368,8 @@ dpvo-pd:Username a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about usernames."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Identifying ;
     sw:term_status "accepted"@en .
 
@@ -1257,7 +1379,8 @@ dpvo-pd:VoiceCommunicationRecording a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about vocal recorded communication (e.g. telephony, VoIP)"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Communication ;
     sw:term_status "accepted"@en .
 
@@ -1267,7 +1390,8 @@ dpvo-pd:VoiceMail a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about voice mail messages."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Communication ;
     sw:term_status "accepted"@en .
 
@@ -1277,7 +1401,8 @@ dpvo-pd:Weight a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about physical weight"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:PhysicalCharacteristic ;
     sw:term_status "accepted"@en .
 
@@ -1287,7 +1412,8 @@ dpvo-pd:WorkHistory a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about work history in a professional context"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Professional ;
     sw:term_status "accepted"@en .
 
@@ -1297,7 +1423,8 @@ dpvo-pd:BrowsingBehavior a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about browsing Behavior."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:seeAlso svd:OnlineActivity ;
     rdfs:subClassOf dpvo-pd:Behavioral ;
     sw:term_status "accepted"@en .
@@ -1308,7 +1435,8 @@ dpvo-pd:CreditWorthiness a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about credit worthiness."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Credit ;
     sw:term_status "accepted"@en .
 
@@ -1318,7 +1446,8 @@ dpvo-pd:Historical a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about historical data related to or relevant regarding history or past events"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo:PersonalData ;
     sw:term_status "accepted"@en .
 
@@ -1328,7 +1457,8 @@ dpvo-pd:HouseOwned a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about house(s) owned and ownership history."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Ownership ;
     sw:term_status "accepted"@en .
 
@@ -1337,7 +1467,8 @@ dpvo-pd:PaymentCardNumber a owl:Class ;
     dct:created "2020-11-04"^^xsd:date ;
     dct:creator "Georg P Krog"^^xsd:string ;
     dct:description "Information about payment card number."@en ;
-    rdfs:isDefinedBy <https://www.w3.org/community/dpvcg/> ;
+    dct:source <https://www.w3.org/community/dpvcg/> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:AccountIdentifier,
         dpvo-pd:PaymentCard ;
     sw:term_status "accepted"@en .
@@ -1348,7 +1479,8 @@ dpvo-pd:ServiceConsumptionBehavior a owl:Class ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Rudy Jacob"^^xsd:string ;
     dct:description "Information about the consumption of a service, e.g. time and duration of consumption."@en ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+    dct:source <https://www.specialprivacy.eu/> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Behavioral ;
     sw:term_status "accepted"@en .
 
@@ -1358,7 +1490,8 @@ dpvo-pd:AccountIdentifier a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about financial account identifier."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:FinancialAccount ;
     sw:term_status "accepted"@en .
 
@@ -1368,7 +1501,8 @@ dpvo-pd:Biometric a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about biometrics and biometric characteristics."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo:SpecialCategoryPersonalData,
         dpvo-pd:Identifying ;
     sw:term_status "accepted"@en .
@@ -1381,7 +1515,8 @@ dpvo-pd:DeviceSoftware a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Information about software on or related to a device."@en ;
-    rdfs:isDefinedBy <https://www.w3.org/community/dpvcg/> ;
+    dct:source <https://www.w3.org/community/dpvcg/> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:DeviceBased ;
     sw:term_status "accepted"@en .
 
@@ -1391,7 +1526,8 @@ dpvo-pd:Family a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about family and relationships"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Social ;
     sw:term_status "accepted"@en .
 
@@ -1401,7 +1537,8 @@ dpvo-pd:Health a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about health."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:seeAlso svd:Health ;
     rdfs:subClassOf dpvo-pd:MedicalHealth ;
     sw:term_status "accepted"@en .
@@ -1412,7 +1549,8 @@ dpvo-pd:HealthHistory a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about health history."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:MedicalHealth ;
     sw:term_status "accepted"@en .
 
@@ -1422,7 +1560,8 @@ dpvo-pd:Interest a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about interests"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Preference ;
     sw:term_status "accepted"@en .
 
@@ -1432,7 +1571,8 @@ dpvo-pd:Language a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about language and lingual history."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Ethnicity ;
     sw:term_status "accepted"@en .
 
@@ -1441,7 +1581,8 @@ dpvo-pd:PaymentCard a owl:Class ;
     dct:created "2020-11-04"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Information about payment card such as Credit Card, Debit Card."@en ;
-    rdfs:isDefinedBy <https://www.w3.org/community/dpvcg/> ;
+    dct:source <https://www.w3.org/community/dpvcg/> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:FinancialAccount ;
     sw:term_status "accepted"@en .
 
@@ -1451,7 +1592,8 @@ dpvo-pd:Authenticating a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about authentication and information used for authenticating"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Internal ;
     sw:term_status "accepted"@en .
 
@@ -1461,7 +1603,8 @@ dpvo-pd:Contact a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about contacts or used for contacting e.g. email address or phone number"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:seeAlso svd:Physical ;
     rdfs:subClassOf dpvo-pd:Tracking ;
     sw:term_status "accepted"@en .
@@ -1472,7 +1615,8 @@ dpvo-pd:Criminal a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about criminal activity e.g. criminal convictions or jail time"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:seeAlso svd:Judicial ;
     rdfs:subClassOf dpvo-pd:Social ;
     sw:term_status "accepted"@en .
@@ -1483,7 +1627,8 @@ dpvo-pd:Demographic a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about demography and demographic characteristics"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:External ;
     sw:term_status "accepted"@en .
 
@@ -1493,7 +1638,8 @@ dpvo-pd:Ethnicity a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about ethnic origins and lineage"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:External ;
     sw:term_status "accepted"@en .
 
@@ -1503,7 +1649,8 @@ dpvo-pd:Favorite a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about favorites"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Preference ;
     sw:term_status "accepted"@en .
 
@@ -1513,7 +1660,8 @@ dpvo-pd:Financial a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about finance including monetary characteristics and transactions"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:seeAlso svd:Financial ;
     rdfs:subClassOf dpvo:PersonalData ;
     sw:term_status "accepted"@en .
@@ -1524,7 +1672,8 @@ dpvo-pd:FinancialAccount a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about financial accounts."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Financial ;
     sw:term_status "accepted"@en .
 
@@ -1534,7 +1683,8 @@ dpvo-pd:Internal a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Informatoin about internal characteristics that cannot be seen or observed"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo:PersonalData ;
     sw:term_status "accepted"@en .
 
@@ -1544,7 +1694,8 @@ dpvo-pd:KnowledgeBelief a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about knowledge and beliefs"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Internal ;
     sw:term_status "accepted"@en .
 
@@ -1554,7 +1705,8 @@ dpvo-pd:Location a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about location"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:seeAlso svd:Location ;
     rdfs:subClassOf dpvo-pd:Tracking ;
     sw:term_status "accepted"@en .
@@ -1565,7 +1717,8 @@ dpvo-pd:Ownership a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about ownership and history, including renting, borrowing, possessions."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Financial ;
     sw:term_status "accepted"@en .
 
@@ -1575,7 +1728,8 @@ dpvo-pd:Tracking a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information used to track an individual or group e.g. location or email"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo:PersonalData ;
     sw:term_status "accepted"@en .
 
@@ -1585,7 +1739,8 @@ dpvo-pd:Communication a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information communicated from or to an individual"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Social ;
     sw:term_status "accepted"@en .
 
@@ -1595,7 +1750,8 @@ dpvo-pd:Credit a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about reputation with regards to money"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Transactional ;
     sw:term_status "accepted"@en .
 
@@ -1605,7 +1761,8 @@ dpvo-pd:DeviceBased a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about devices"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:seeAlso svd:Computer ;
     rdfs:subClassOf dpvo-pd:Tracking ;
     sw:term_status "accepted"@en .
@@ -1616,7 +1773,8 @@ dpvo-pd:Sexual a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about sexuality and sexual history"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo:SpecialCategoryPersonalData,
         dpvo-pd:External ;
     sw:term_status "accepted"@en .
@@ -1627,7 +1785,8 @@ dpvo-pd:FamilyStructure a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about family and familial structure."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Family ;
     sw:term_status "accepted"@en .
 
@@ -1637,7 +1796,8 @@ dpvo-pd:Preference a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about preferences or interests"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:seeAlso svd:Preference ;
     rdfs:subClassOf dpvo-pd:Internal ;
     sw:term_status "accepted"@en .
@@ -1648,7 +1808,8 @@ dpvo-pd:SocialNetwork a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about friends or connections expressed as a social network"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Social ;
     sw:term_status "accepted"@en .
 
@@ -1658,7 +1819,8 @@ dpvo-pd:Identifying a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information that uniquely or semi-uniquely identifies an individual or a group"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:External ;
     sw:term_status "accepted"@en .
 
@@ -1668,7 +1830,8 @@ dpvo-pd:Social a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about social aspects such as family, public life, or professional networks."@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo:PersonalData ;
     sw:term_status "accepted"@en .
 
@@ -1678,7 +1841,8 @@ dpvo-pd:External a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about external characteristics that can be observed"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo:PersonalData ;
     sw:term_status "accepted"@en .
 
@@ -1688,7 +1852,8 @@ dpvo-pd:Behavioral a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about Behavior or activity"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:seeAlso svd:Activity ;
     rdfs:subClassOf dpvo-pd:External ;
     sw:term_status "accepted"@en .
@@ -1699,7 +1864,8 @@ dpvo-pd:MedicalHealth a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about health, medical conditions or health care"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo:SpecialCategoryPersonalData,
         dpvo-pd:External ;
     sw:term_status "accepted"@en .
@@ -1710,7 +1876,8 @@ dpvo-pd:PhysicalCharacteristic a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about physical characteristics"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:seeAlso svd:Demographic ;
     rdfs:subClassOf dpvo-pd:External ;
     sw:term_status "accepted"@en .
@@ -1721,7 +1888,8 @@ dpvo-pd:PublicLife a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about public life"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Social ;
     sw:term_status "accepted"@en .
 
@@ -1731,7 +1899,8 @@ dpvo-pd:Transactional a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about a purchasing, spending or income"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Financial ;
     sw:term_status "accepted"@en .
 
@@ -1741,7 +1910,8 @@ dpvo-pd:Professional a owl:Class ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Information about educational or professional career"@en ;
-    rdfs:isDefinedBy <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpvo-pd: ;
     rdfs:subClassOf dpvo-pd:Social ;
     sw:term_status "accepted"@en .
 

@@ -44,6 +44,7 @@ dpv:DataSubjectRight a skos:Concept,
     dct:creator "Beatriz Esteves"^^xsd:string,
         "Georg P Krog"^^xsd:string,
         "Harshvardhan Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "The rights applicable or provided to a Data Subject"@en ;
     skos:note "Based on use of definitions, the notion of 'Data Subject Right' can be equivalent to 'Individual Right' or 'Right of a Person'"@en ;
@@ -60,6 +61,7 @@ dpv:hasDataController a skos:Concept,
         "Mark Lizar"^^xsd:string ;
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:domain dpv:Concept ;
+    rdfs:isDefinedBy dpv: ;
     rdfs:range dpv:DataController ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates association with Data Controller"@en ;
@@ -75,6 +77,7 @@ dpv:hasDataSubject a skos:Concept,
         "Mark Lizar"^^xsd:string ;
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:domain dpv:Concept ;
+    rdfs:isDefinedBy dpv: ;
     rdfs:range dpv:DataSubject ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates association with Data Subject"@en ;
@@ -87,6 +90,7 @@ dpv:hasLegalBasis a skos:Concept,
         "Javier Fernández"^^xsd:string ;
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:domain dpv:Concept ;
+    rdfs:isDefinedBy dpv: ;
     rdfs:range dpv:LegalBasis ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates use or applicability of a Legal Basis"@en ;
@@ -97,6 +101,7 @@ dpv:hasPersonalData a skos:Concept,
     dct:created "2022-01-19"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     rdfs:domain dpv:Concept ;
+    rdfs:isDefinedBy dpv: ;
     rdfs:range dpv:PersonalData ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates association with Personal Data"@en ;
@@ -108,6 +113,7 @@ dpv:hasPersonalDataHandling a skos:Concept,
     dct:creator "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
     rdfs:domain dpv:Concept ;
+    rdfs:isDefinedBy dpv: ;
     rdfs:range dpv:PersonalDataHandling ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates association with Personal Data Handling"@en ;
@@ -122,12 +128,13 @@ dpv:hasProcessing a skos:Concept,
         "Javier Fernández"^^xsd:string,
         "Mark Lizar"^^xsd:string ;
     dct:modified "2020-11-04"^^xsd:date ;
+    dct:source <https://www.specialprivacy.eu/> ;
     rdfs:domain dpv:Concept ;
+    rdfs:isDefinedBy dpv: ;
     rdfs:range dpv:Processing ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates association with Processing"@en ;
-    skos:prefLabel "has processing"@en ;
-    skos:scopeNote <https://www.specialprivacy.eu/> .
+    skos:prefLabel "has processing"@en .
 
 dpv:hasPurpose a skos:Concept,
         dpv:Relation ;
@@ -138,12 +145,13 @@ dpv:hasPurpose a skos:Concept,
         "Javier Fernández"^^xsd:string,
         "Mark Lizar"^^xsd:string ;
     dct:modified "2020-11-04"^^xsd:date ;
+    dct:source <https://www.specialprivacy.eu/> ;
     rdfs:domain dpv:Concept ;
+    rdfs:isDefinedBy dpv: ;
     rdfs:range dpv:Purpose ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates association with Purpose"@en ;
-    skos:prefLabel "has purpose"@en ;
-    skos:scopeNote <https://www.specialprivacy.eu/> .
+    skos:prefLabel "has purpose"@en .
 
 dpv:hasRecipient a skos:Concept,
         dpv:Relation ;
@@ -154,18 +162,20 @@ dpv:hasRecipient a skos:Concept,
         "Javier Fernández"^^xsd:string,
         "Mark Lizar"^^xsd:string ;
     dct:modified "2020-11-04"^^xsd:date ;
+    dct:source <https://www.specialprivacy.eu/> ;
     rdfs:domain dpv:Concept ;
+    rdfs:isDefinedBy dpv: ;
     rdfs:range dpv:Recipient ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates Recipient of Personal Data"@en ;
-    skos:prefLabel "has recipient"@en ;
-    skos:scopeNote <https://www.specialprivacy.eu/> .
+    skos:prefLabel "has recipient"@en .
 
 dpv:hasRight a skos:Concept,
         dpv:Relation ;
     dct:created "2020-11-18"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     rdfs:domain dpv:Concept ;
+    rdfs:isDefinedBy dpv: ;
     rdfs:range dpv:Right ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates use or applicability of Right"@en ;
@@ -176,6 +186,7 @@ dpv:hasRisk a skos:Concept,
     dct:created "2020-11-18"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     rdfs:domain dpv:Concept ;
+    rdfs:isDefinedBy dpv: ;
     rdfs:range dpv:Risk ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates applicability of Risk"@en ;
@@ -191,6 +202,7 @@ dpv:hasTechnicalOrganisationalMeasure a skos:Concept,
         "Mark Lizar"^^xsd:string ;
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:domain dpv:Concept ;
+    rdfs:isDefinedBy dpv: ;
     rdfs:range dpv:TechnicalOrganisationalMeasure ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates use or applicability of Technical or Organisational measure"@en ;
@@ -202,11 +214,12 @@ dpv:DataController a skos:Concept,
     dct:creator "Axel Polleres"^^xsd:string,
         "Javier Fernández"^^xsd:string ;
     dct:modified "2020-11-04"^^xsd:date ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_7/oj> ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "The individual or organisation that decides (or controls) the purpose(s) of processing personal data."@en ;
     skos:note "The terms 'Controller' is usually the more common form of indicating a Data Controller. In ISO/IEC the term 'PII Controller' is used."@en ;
     skos:prefLabel "Data Controller"@en ;
-    skos:scopeNote <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_7/oj> ;
     dpv:isSubTypeOf dpv:LegalEntity .
 
 dpv:DataSubject a skos:Concept,
@@ -215,17 +228,19 @@ dpv:DataSubject a skos:Concept,
     dct:creator "Axel Polleres"^^xsd:string,
         "Javier Fernández"^^xsd:string ;
     dct:modified "2020-11-04"^^xsd:date ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_1/oj> ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "The individual (or category of individuals) whose personal data is being processed"@en ;
     skos:note "The term 'data subject' is specific to the GDPR, but is functionally equivalent to the term 'individual' and the ISO/IEC term 'PII Principle'."@en ;
     skos:prefLabel "Data Subject"@en ;
-    skos:scopeNote <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_1/oj> ;
     dpv:isSubTypeOf dpv:LegalEntity .
 
 dpv:LegalBasis a skos:Concept,
         dpv:Concept ;
     dct:created "2019-04-05"^^xsd:date ;
     dct:modified "2020-11-04"^^xsd:date ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "The Legal basis used to justify processing of personal data"@en ;
     skos:note "Legal basis (plural: legal bases) are defined by legislations and regulations, whose applicability is usually restricted to specific jurisdictions."@en ;
@@ -236,12 +251,13 @@ dpv:PersonalData a skos:Concept,
     dct:created "2019-04-05"^^xsd:date ;
     dct:creator "Harshvardhan Pandit"^^xsd:string ;
     dct:modified "2022-01-19"^^xsd:date ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_1/oj> ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Data directly or indirectly associated or related to an individual."@en ;
     skos:note "This definition of personal data encompasses the concepts used in GDPR Art.4-1 for 'personal data' and ISO/IEC 2700 for 'personally identifiable information (PII)'."@en ;
     skos:prefLabel "Personal Data"@en ;
     skos:related spl:AnyData ;
-    skos:scopeNote <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_1/oj> ;
     dpv:isSubTypeOf dpv:Data .
 
 dpv:PersonalDataHandling a skos:Concept,
@@ -250,6 +266,7 @@ dpv:PersonalDataHandling a skos:Concept,
     dct:creator "Axel Polleres"^^xsd:string,
         "Javier Fernández"^^xsd:string ;
     dct:modified "2020-11-04"^^xsd:date ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "A high-level Class to describe 'data handling'. This can consist of personal data being processed for a purpose, involving entities, using technical and organisational measures, applicable risks, rights, and legal basis."@en ;
     skos:prefLabel "Personal Data Handling"@en .
@@ -260,11 +277,12 @@ dpv:Processing a skos:Concept,
     dct:creator "Axel Polleres"^^xsd:string,
         "Javier Fernández"^^xsd:string ;
     dct:modified "2020-11-04"^^xsd:date ;
+    dct:source <https://www.specialprivacy.eu/> ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "The processing performed on personal data"@en ;
     skos:prefLabel "Processing"@en ;
-    skos:related spl:AnyProcessing ;
-    skos:scopeNote <https://www.specialprivacy.eu/> .
+    skos:related spl:AnyProcessing .
 
 dpv:Purpose a skos:Concept,
         dpv:Concept ;
@@ -272,11 +290,12 @@ dpv:Purpose a skos:Concept,
     dct:creator "Axel Polleres"^^xsd:string,
         "Javier Fernández"^^xsd:string ;
     dct:modified "2020-11-04"^^xsd:date ;
+    dct:source <https://www.specialprivacy.eu/> ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "The purpose of processing personal data"@en ;
     skos:prefLabel "Purpose"@en ;
-    skos:related spl:AnyPurpose ;
-    skos:scopeNote <https://www.specialprivacy.eu/> .
+    skos:related spl:AnyPurpose .
 
 dpv:Recipient a skos:Concept,
         dpv:Concept ;
@@ -284,19 +303,21 @@ dpv:Recipient a skos:Concept,
     dct:creator "Axel Polleres"^^xsd:string,
         "Javier Fernández"^^xsd:string ;
     dct:modified "2020-11-04"^^xsd:date ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_9/oj>,
+        <https://www.specialprivacy.eu/> ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Entities that receive personal data"@en ;
     skos:note "A recipient of personal data can be used to indicate any entity that receives personal data. This can be a Third Party, Processor (GDPR), or even a Controller."@en ;
     skos:prefLabel "Recipient"@en ;
     skos:related spl:AnyRecipient ;
-    skos:scopeNote <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_9/oj>,
-        <https://www.specialprivacy.eu/> ;
     dpv:isSubTypeOf dpv:LegalEntity .
 
 dpv:Risk a skos:Concept,
         dpv:Concept ;
     dct:created "2020-11-18"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "A risk or possibility or uncertainty of negative effects, impacts, or consequences."@en ;
     skos:note "Risks can be associated with one or more different concepts such as purpose, processing, personal data, technical or organisational measure."@en ;
@@ -307,6 +328,7 @@ dpv:TechnicalOrganisationalMeasure a skos:Concept,
     dct:created "2019-04-05"^^xsd:date ;
     dct:creator "Bud Bruegger"^^xsd:string ;
     dct:modified "2020-11-04"^^xsd:date ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "The Technical and Organisational measures used."@en ;
     skos:prefLabel "Technical and Organisational Measure"@en .
@@ -317,6 +339,7 @@ dpv:Right a skos:Concept,
     dct:creator "Beatriz Esteves"^^xsd:string,
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "The right(s) applicable, provided, or expected."@en ;
     skos:note "A 'right' is a legal, social, or ethical principle of freedom or entitlement which dictate the norms regarding what is allowed or owed.. Rights as a concept encompass a broad area of norms and entities, and are not specific to Individuals or Data Protection / Privacy. For individual specific rights, see dpv:DataSubjectRight"@en ;

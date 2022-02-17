@@ -21,6 +21,7 @@
         "Fajar J. Ekaputra",
         "Georg P Krog",
         "Javier D. Fernández",
+        "Julian Flake",
         "Mark Lizar",
         "Paul Ryan",
         "Piero Bonatti",
@@ -32,6 +33,7 @@
     dct:creator "Axel Polleres",
         "Harshvardhan J. Pandit" ;
     dct:description "The Data Privacy Vocabulary (DPV) provides terms (classes and properties) to represent information about legally compliant personal data handling, which includes purposes, processing, personal data, technical and organisational measures."@en ;
+    dct:license <https://www.w3.org/Consortium/Legal/2015/doc-license> ;
     dct:modified "2022-02-15"^^xsd:date ;
     dct:source <https://www.w3.org/community/dpvcg/> ;
     dct:title "Data Privacy Vocabulary"@en ;
@@ -49,6 +51,7 @@ dpvo:AcademicResearch a owl:Class ;
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
     dct:description "Conduct or assist with research conducted in an academic context e.g. within universities"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso svpu:Education ;
     rdfs:subClassOf dpvo:ResearchAndDevelopment ;
     sw:term_status "accepted"@en .
@@ -58,7 +61,8 @@ dpvo:AcademicScientificOrganisation a owl:Class ;
     dct:created "2022-02-02"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Organisations related to academia or scientific pursuits e.g. Universities, Schools, Research Bodies"@en ;
-    rdfs:isDefinedBy <http://purl.org/adms> ;
+    dct:source <http://purl.org/adms> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Organisation ;
     sw:term_status "accepted"@en .
 
@@ -70,6 +74,7 @@ dpvo:AccessControlMethod a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Methods which restrict access to a place or resource"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:TechnicalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -77,6 +82,7 @@ dpvo:AccountManagement a owl:Class ;
     rdfs:label "Account Management"@en ;
     dct:created "2021-09-08"^^xsd:date ;
     dct:description "Create, maintain, and manage accounts for purposes of providing services"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Purpose ;
     sw:term_status "accepted"@en .
 
@@ -84,7 +90,8 @@ dpvo:Acquire a owl:Class ;
     rdfs:label "Acquire"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to come into possession or control of the data"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Obtain ;
     sw:term_status "accepted"@en .
 
@@ -92,7 +99,8 @@ dpvo:Adapt a owl:Class ;
     rdfs:label "Adapt"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to modify the data, often rewritten into a new form for a new use"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Transform ;
     sw:term_status "accepted"@en .
 
@@ -100,7 +108,8 @@ dpvo:Align a owl:Class ;
     rdfs:label "Align"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to adjust the data to be in relation to another data"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Transform ;
     sw:term_status "accepted"@en .
 
@@ -108,7 +117,8 @@ dpvo:Alter a owl:Class ;
     rdfs:label "Alter"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to change the data without changing it into something else"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Transform ;
     sw:term_status "accepted"@en .
 
@@ -116,7 +126,8 @@ dpvo:Analyse a owl:Class ;
     rdfs:label "Analyse"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to study or examine the data in detail"@en ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/vocabs/processing> ;
+    dct:source <https://www.specialprivacy.eu/vocabs/processing> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso svpr:Analyse ;
     rdfs:subClassOf dpvo:Use ;
     sw:term_status "accepted"@en .
@@ -125,7 +136,8 @@ dpvo:Anonymise a owl:Class ;
     rdfs:label "Anonymise"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to irreversibly alter personal data in such a way that an unique data subject can no longer be identified directly or indirectly or in combination with other data"@en ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/vocabs/processing> ;
+    dct:source <https://www.specialprivacy.eu/vocabs/processing> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso svpr:Anonymize ;
     rdfs:subClassOf dpvo:Transform ;
     sw:term_status "accepted"@en .
@@ -136,6 +148,7 @@ dpvo:AnonymisedData a owl:Class ;
     dct:creator "Piero Bonatti"^^xsd:string ;
     dct:description "Personal Data that has been (fully and completely) anonymised so that it is no longer considered Personal Data"@en ;
     rdfs:comment "It is advised to carefully consider indicating data is fully or completely anonymised by determining whether the data by itself or in combination with other data can identify a person. Failing this condition, the data should be denoted as PseudoAnonymisedData. To indicate data is anonymised only for a specified entity (e.g. within an organisation), the concept AnonymisedDataWithinScope (as subclass of PseudoAnonymisedData) should be used instead of AnonymisedData."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:NonPersonalData ;
     sw:term_status "accepted"@en .
 
@@ -148,6 +161,7 @@ dpvo:AuthorisationProcedure a owl:Class ;
         "Rob Brennan"^^xsd:string ;
     dct:description "Procedures for determining authorisation through permission or authority"@en ;
     rdfs:comment "non-technical authorisation procedures: How is it described on an organisational level, who gets access to the data"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -157,7 +171,8 @@ dpvo:AutomatedDecisionMaking a owl:Class ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Piero Bonatti"^^xsd:string ;
     dct:description "Processing that involves automated decision making"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:ProcessingContext ;
     sw:term_status "accepted"@en .
 
@@ -169,6 +184,7 @@ dpvo:Certification a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Certification mechanisms, seals, and marks for the purpose of demonstrating compliance"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:CertificationSeal ;
     sw:term_status "accepted"@en .
 
@@ -178,6 +194,7 @@ dpvo:Child a owl:Class ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "A 'child' is a natural legal person who is below a certain legal age depending on the legal jurisdiction."@en ;
     rdfs:comment "The legality of age defining a child varies by jurisdiction. In addition, 'child' is distinct from a 'minor'. For example, the legal age drinking alcohol can be 21, which makes a person of age 20 a 'minor' in this context. In other cases, 'minor' and 'child' are used interchangeably to refer to a person below some legally defined age."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:DataSubject ;
     sw:term_status "accepted"@en .
 
@@ -189,6 +206,7 @@ dpvo:CodeOfConduct a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "A set of rules or procedures outlining the norms and practices for conducting activities"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:GuidelinesPrinciple ;
     sw:term_status "accepted"@en .
 
@@ -196,8 +214,9 @@ dpvo:Collect a owl:Class ;
     rdfs:label "Collect"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to gather data from someone"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj>,
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj>,
         <https://www.specialprivacy.eu/vocabs/processing> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso svpr:Collect ;
     rdfs:subClassOf dpvo:Obtain ;
     sw:term_status "accepted"@en .
@@ -206,8 +225,9 @@ dpvo:Combine a owl:Class ;
     rdfs:label "Combine"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to join or merge data"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj>,
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj>,
         <https://www.specialprivacy.eu/vocabs/processing> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso svpr:Aggregate ;
     rdfs:subClassOf dpvo:Transform ;
     sw:term_status "accepted"@en .
@@ -222,6 +242,7 @@ dpvo:CommercialResearch a owl:Class ;
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
     dct:description "Conduct research in a commercial setting or with intention to commercialise e.g. in a company or sponsored by a company"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso svpu:Develop ;
     rdfs:subClassOf dpvo:ResearchAndDevelopment ;
     sw:term_status "accepted"@en .
@@ -233,6 +254,7 @@ dpvo:CommunicationForCustomerCare a owl:Class ;
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Communicate with customers for assisting them, resolving issues, ensuring satisfaction in relation to services provided"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:CommunicationManagement,
         dpvo:CustomerCare ;
     sw:term_status "accepted"@en .
@@ -242,6 +264,7 @@ dpvo:CompleteAnonymisation a owl:Class ;
     dct:created "2022-02-09"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Altering personal data irreversibly such that a data subject can no longer be identified directly or indirectly, either by the data controller alone or in collaboration with any other party"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Anonymization ;
     sw:term_status "accepted"@en .
 
@@ -250,6 +273,7 @@ dpvo:Consent a owl:Class ;
     dct:created "2021-04-07"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Consent of the Data Subject for specified processing"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:LegalBasis ;
     sw:term_status "accepted"@en .
 
@@ -257,8 +281,9 @@ dpvo:Consult a owl:Class ;
     rdfs:label "Consult"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to consult or query data"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj>,
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj>,
         <https://www.specialprivacy.eu/vocabs/processing> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso svpr:Query ;
     rdfs:subClassOf dpvo:Use ;
     sw:term_status "accepted"@en .
@@ -270,6 +295,7 @@ dpvo:ConsultationWithAuthority a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Consultation with an authority or authoritative entity"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Consultation ;
     sw:term_status "accepted"@en .
 
@@ -280,6 +306,7 @@ dpvo:ContractPerformance a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Fulfilment or performance of a contract involving specified processing"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Contract ;
     sw:term_status "accepted"@en .
 
@@ -291,6 +318,7 @@ dpvo:ContractualTerms a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Contractual terms governing data handling within or with an entity"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:LegalAgreement ;
     sw:term_status "accepted"@en .
 
@@ -303,6 +331,7 @@ dpvo:ControllerProcessorAgreement a owl:Class ;
         "Julian Flake"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "An agreement outlining conditions, criteria, obligations, responsibilities, and specifics for carrying out processing of personal data between a Data Controller and a Data Processor"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:DataProcessingAgreement ;
     sw:term_status "accepted"@en .
 
@@ -310,7 +339,8 @@ dpvo:Copy a owl:Class ;
     rdfs:label "Copy"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to produce an exact reprodution of the data"@en ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/vocabs/processing> ;
+    dct:source <https://www.specialprivacy.eu/vocabs/processing> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso svpr:Copy ;
     rdfs:subClassOf dpvo:Processing ;
     sw:term_status "accepted"@en .
@@ -321,7 +351,8 @@ dpvo:CreateEventRecommendations a owl:Class ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Rudy Jacob"^^xsd:string ;
     dct:description "Create and provide personalised recommendations for events"@en ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+    dct:source <https://www.specialprivacy.eu/> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:CreatePersonalizedRecommendations ;
     sw:term_status "accepted"@en .
 
@@ -335,6 +366,7 @@ dpvo:CreateProductRecommendations a owl:Class ;
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
     dct:description "Create and provide product recommendations e.g. suggest similar products"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso svpu:Marketing ;
     rdfs:subClassOf dpvo:CreatePersonalizedRecommendations ;
     sw:term_status "accepted"@en .
@@ -343,7 +375,8 @@ dpvo:CustomerClaimsManagement a owl:Class ;
     rdfs:label "Customer Claims Management"@en ;
     dct:created "2021-09-08"^^xsd:date ;
     dct:description "Manage claims, including repayment of monies owed"@en ;
-    rdfs:isDefinedBy <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:CustomerManagement ;
     sw:term_status "accepted"@en .
 
@@ -351,7 +384,8 @@ dpvo:CustomerOrderManagement a owl:Class ;
     rdfs:label "Customer Order Management"@en ;
     dct:created "2021-09-08"^^xsd:date ;
     dct:description "Manage customer orders"@en ;
-    rdfs:isDefinedBy <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:CustomerManagement ;
     sw:term_status "accepted"@en .
 
@@ -359,7 +393,8 @@ dpvo:CustomerSolvencyMonitoring a owl:Class ;
     rdfs:label "Customer Solvency Monitoring"@en ;
     dct:created "2021-09-09"^^xsd:date ;
     dct:description "Monitor solvency of customers for financial diligence"@en ;
-    rdfs:isDefinedBy <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:CustomerManagement ;
     sw:term_status "accepted"@en .
 
@@ -371,6 +406,7 @@ dpvo:DPIA a owl:Class ;
         "Paul Ryan"^^xsd:string ;
     dct:description "A DPIA involves determining the potential and actual impact of processing activities on individuals or groups of individuals"@en ;
     rdfs:comment "Top class: Impact Assessment, and DPIA is sub-class"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:ImpactAssessment ;
     sw:term_status "accepted"@en .
 
@@ -381,6 +417,7 @@ dpvo:DataProtectionAuthority a owl:Class ;
         "Harshvardhan Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "An authority tasked with overseeing legal compliance regarding privacy and data protection laws."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Authority ;
     sw:term_status "accepted"@en .
 
@@ -390,6 +427,7 @@ dpvo:DataSubProcessor a owl:Class ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "A 'sub-processor' is a processor engaged by another processor"@en ;
     rdfs:comment "sub-processor' is a commonly used term similar to 'sub-contractor' and does not have a specific legal definition"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:DataProcessor ;
     sw:term_status "accepted"@en .
 
@@ -401,6 +439,7 @@ dpvo:DataSubjectRight a owl:Class ;
         "Harshvardhan Pandit"^^xsd:string ;
     dct:description "The rights applicable or provided to a Data Subject"@en ;
     rdfs:comment "Based on use of definitions, the notion of 'Data Subject Right' can be equivalent to 'Individual Right' or 'Right of a Person'"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Right ;
     sw:term_status "accepted"@en .
 
@@ -411,6 +450,7 @@ dpvo:DataTransferImpactAssessment a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Impact Assessment for conducting data transfers"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:ImpactAssessment ;
     sw:term_status "accepted"@en .
 
@@ -420,6 +460,7 @@ dpvo:DataTransferLegalBasis a owl:Class ;
     dct:creator "David Hickey"^^xsd:string,
         "Georg P Krogg"^^xsd:string ;
     dct:description "Specific or special categories and instances of legal basis intended for justifying data transfers"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:LegalBasis ;
     sw:term_status "accepted"@en .
 
@@ -431,6 +472,7 @@ dpvo:DeIdentification a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Removal of identity or information to reduce identifiability"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Anonymization ;
     sw:term_status "accepted"@en .
 
@@ -444,6 +486,7 @@ dpvo:DeliveryOfGoods a owl:Class ;
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
     dct:description "Deliver goods and services requested or asked by consumer"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso svpu:Delivery ;
     rdfs:subClassOf dpvo:RequestedServiceProvision ;
     sw:term_status "accepted"@en .
@@ -452,7 +495,8 @@ dpvo:Derive a owl:Class ;
     rdfs:label "Derive"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to create new derivative data from the original data"@en ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/vocabs/processing> ;
+    dct:source <https://www.specialprivacy.eu/vocabs/processing> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso svpr:Derive ;
     rdfs:subClassOf dpvo:Transform ;
     sw:term_status "accepted"@en .
@@ -465,6 +509,7 @@ dpvo:DesignStandard a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "A set of rules or guidelines outlining criterias for design"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:GuidelinesPrinciple ;
     sw:term_status "accepted"@en .
 
@@ -472,7 +517,8 @@ dpvo:Destruct a owl:Class ;
     rdfs:label "Destruct"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to process data in a way it no longer exists or cannot be repaired"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Remove ;
     sw:term_status "accepted"@en .
 
@@ -483,6 +529,7 @@ dpvo:DirectMarketing a owl:Class ;
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Conduct direct marketing i.e. marketing communicated directly to the individual"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Marketing ;
     sw:term_status "accepted"@en .
 
@@ -490,7 +537,8 @@ dpvo:DiscloseByTransmission a owl:Class ;
     rdfs:label "Disclose by Transmission"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to disclose data by means of transmission"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Disclose ;
     sw:term_status "accepted"@en .
 
@@ -498,7 +546,8 @@ dpvo:DisputeManagement a owl:Class ;
     rdfs:label "Dispute Management"@en ;
     dct:created "2021-09-08"^^xsd:date ;
     dct:description "Manage disputes by natural persons, private bodies, or public authorities relevant to organisation"@en ;
-    rdfs:isDefinedBy <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OrganisationGovernance ;
     sw:term_status "accepted"@en .
 
@@ -506,7 +555,8 @@ dpvo:Disseminate a owl:Class ;
     rdfs:label "Disseminate"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to spread data throughout"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Disclose ;
     sw:term_status "accepted"@en .
 
@@ -515,6 +565,7 @@ dpvo:EconomicUnion a owl:Class ;
     dct:created "2022-01-19"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "A political union of two or more countries based on economic or trade agreements"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Location ;
     sw:term_status "accepted"@en .
 
@@ -526,6 +577,7 @@ dpvo:EncryptionInRest a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Encryption of data when being stored (persistent encryption)"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Encryption ;
     sw:term_status "accepted"@en .
 
@@ -537,6 +589,7 @@ dpvo:EncryptionInTransfer a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Encryption of data in transit e.g. when being transferred from one location to another, including sharing"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Encryption ;
     sw:term_status "accepted"@en .
 
@@ -551,6 +604,7 @@ dpvo:EnforceAccessControl a owl:Class ;
         "Simon Steyskal"^^xsd:string ;
     dct:description "Conduct or enforce access control"@en ;
     rdfs:comment "Was previously \"Access Control\". Prefixed to distinguish from Technical Measure."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso svpu:Login ;
     rdfs:subClassOf dpvo:EnforceSecurity ;
     sw:term_status "accepted"@en .
@@ -562,6 +616,7 @@ dpvo:EnterIntoContract a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Processing necessary to enter into contract"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Contract ;
     sw:term_status "accepted"@en .
 
@@ -569,7 +624,8 @@ dpvo:Erase a owl:Class ;
     rdfs:label "Erase"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to delete data"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Remove ;
     sw:term_status "accepted"@en .
 
@@ -579,7 +635,8 @@ dpvo:EvaluationScoring a owl:Class ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Piero Bonatti"^^xsd:string ;
     dct:description "Processing that involves evaluation and scoring of individuals"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:ProcessingContext ;
     sw:term_status "accepted"@en .
 
@@ -588,6 +645,7 @@ dpvo:ForProfitOrganisation a owl:Class ;
     dct:created "2022-02-02"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "An organisation that aims to achieve profit as its primary goal"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Organisation ;
     sw:term_status "accepted"@en .
 
@@ -601,6 +659,7 @@ dpvo:FraudPreventionAndDetection a owl:Class ;
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
     dct:description "Detect and prevent fraud"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso svpu:Government ;
     rdfs:subClassOf dpvo:EnforceSecurity ;
     sw:term_status "accepted"@en .
@@ -614,8 +673,9 @@ dpvo:HumanResourceManagement a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Manage humans and 'human resources' within the organisation for effective and efficient operations."@en ;
+    dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
     rdfs:comment "HR is a broad concept. Its management includes, amongst others - recruiting employees and intermediaries e.g. brokers, independent representatives; payroll administration, remunerations, commissions, and wages; and application of social legislation."@en ;
-    rdfs:isDefinedBy <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Purpose ;
     sw:term_status "accepted"@en .
 
@@ -629,6 +689,7 @@ dpvo:IdentityVerification a owl:Class ;
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
     dct:description "Verify or authorize identity"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:EnforceSecurity ;
     sw:term_status "accepted"@en .
 
@@ -642,6 +703,7 @@ dpvo:ImproveExistingProductsAndServices a owl:Class ;
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
     dct:description "Improve existing products and services"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OptimisationForController ;
     sw:term_status "accepted"@en .
 
@@ -655,6 +717,7 @@ dpvo:ImproveInternalCRMProcesses a owl:Class ;
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
     dct:description "Improve customer-relationship management (CRM) processes"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:CustomerRelationshipManagement,
         dpvo:OptimisationForController ;
     sw:term_status "accepted"@en .
@@ -669,6 +732,7 @@ dpvo:IncreaseServiceRobustness a owl:Class ;
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
     dct:description "Improve robustness and resilience of services"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OptimisationForController ;
     sw:term_status "accepted"@en .
 
@@ -677,7 +741,8 @@ dpvo:IndustryConsortium a owl:Class ;
     dct:created "2022-02-02"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "A consortium established and comprising on industry organisations"@en ;
-    rdfs:isDefinedBy <http://purl.org/adms> ;
+    dct:source <http://purl.org/adms> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Organisation ;
     sw:term_status "accepted"@en .
 
@@ -687,6 +752,7 @@ dpvo:InferredPersonalData a owl:Class ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Personal Data that is obtained through inference from other data"@en ;
     rdfs:comment "Inferred Data is data that is derived from existing data, but which did not originally exist within it, e.g. inferring demographics from browsing history."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:DerivedPersonalData ;
     sw:term_status "accepted"@en .
 
@@ -696,7 +762,8 @@ dpvo:InnovativeUseOfNewTechnologies a owl:Class ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Piero Bonatti"^^xsd:string ;
     dct:description "Processing that involves use of innovative and new technologies"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:ProcessingContext ;
     sw:term_status "accepted"@en .
 
@@ -710,6 +777,7 @@ dpvo:InternalResourceOptimisation a owl:Class ;
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
     dct:description "Optimize internal resource availability and usage for organisation"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OptimisationForController ;
     sw:term_status "accepted"@en .
 
@@ -722,6 +790,7 @@ dpvo:JointDataControllersAgreement a owl:Class ;
         "Julian Flake"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "An agreement outlining conditions, criteria, obligations, responsibilities, and specifics for carrying out processing of personal data between Controllers within a Joint Controllers relationship"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:DataProcessingAgreement ;
     sw:term_status "accepted"@en .
 
@@ -731,7 +800,8 @@ dpvo:LargeScaleProcessing a owl:Class ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Piero Bonatti"^^xsd:string ;
     dct:description "Processing that takes place at large scales"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:ProcessingContext ;
     sw:term_status "accepted"@en .
 
@@ -742,6 +812,7 @@ dpvo:LegalCompliance a owl:Class ;
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Fulfilment of obligations or requirements towards achieving compliance with law or regulations"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Purpose ;
     sw:term_status "accepted"@en .
 
@@ -750,6 +821,7 @@ dpvo:LegalObligation a owl:Class ;
     dct:created "2021-04-07"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Legal Obligation to conduct the specified processing"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:LegalBasis ;
     sw:term_status "accepted"@en .
 
@@ -760,6 +832,7 @@ dpvo:LegitimateInterestAssessment a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Indicates an assessment regarding the use of legitimate interest as a lawful basis by the data controller"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Assessment ;
     sw:term_status "accepted"@en .
 
@@ -770,6 +843,7 @@ dpvo:LegitimateInterestOfController a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Legitimate Interests of a Data Controller in conducting specified processing"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:LegitimateInterest ;
     sw:term_status "accepted"@en .
 
@@ -780,6 +854,7 @@ dpvo:LegitimateInterestOfThirdParty a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Legitimate Interests of a Third Party in conducting specified processing"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:LegitimateInterest ;
     sw:term_status "accepted"@en .
 
@@ -787,7 +862,8 @@ dpvo:MakeAvailable a owl:Class ;
     rdfs:label "Make Available"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to transform or publish data to be used"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Disclose ;
     sw:term_status "accepted"@en .
 
@@ -797,7 +873,8 @@ dpvo:MatchingCombining a owl:Class ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Piero Bonatti"^^xsd:string ;
     dct:description "Processing that involves matching and combining of personal data"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:ProcessingContext ;
     sw:term_status "accepted"@en .
 
@@ -809,7 +886,8 @@ dpvo:MemberPartnerManagement a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Maintain registry of shareholders, members, or partners for governance, administration, and management functions"@en ;
-    rdfs:isDefinedBy <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OrganisationGovernance ;
     sw:term_status "accepted"@en .
 
@@ -817,7 +895,8 @@ dpvo:Move a owl:Class ;
     rdfs:label "Move"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to move data from one location to another including deleting the original copy"@en ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/vocabs/processing> ;
+    dct:source <https://www.specialprivacy.eu/vocabs/processing> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso svpr:Move ;
     rdfs:subClassOf dpvo:Transfer ;
     sw:term_status "accepted"@en .
@@ -830,6 +909,7 @@ dpvo:NDA a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Non-disclosure Agreements e.g. preserving confidentiality of information"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:LegalAgreement ;
     sw:term_status "accepted"@en .
 
@@ -838,7 +918,8 @@ dpvo:NationalAuthority a owl:Class ;
     dct:created "2022-02-02"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "e.g. DPA, but not all \"DPA\" are national authority e.g. EDPS and EDPB"@en ;
-    rdfs:isDefinedBy <http://purl.org/adms> ;
+    dct:source <http://purl.org/adms> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Authority ;
     sw:term_status "accepted"@en .
 
@@ -852,6 +933,7 @@ dpvo:NonCommercialResearch a owl:Class ;
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
     dct:description "Conduct research in a non-commercial setting e.g. for a non-profit-organisation (NGO)"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:ResearchAndDevelopment ;
     sw:term_status "accepted"@en .
 
@@ -860,7 +942,8 @@ dpvo:NonGovernmentalOrganisation a owl:Class ;
     dct:created "2022-02-02"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "An organisation not part of or independent from the government"@en ;
-    rdfs:isDefinedBy <http://purl.org/adms> ;
+    dct:source <http://purl.org/adms> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Organisation ;
     sw:term_status "accepted"@en .
 
@@ -869,7 +952,8 @@ dpvo:NonProfitOrganisation a owl:Class ;
     dct:created "2022-02-02"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "An organisation that does not aim to achieve profit as its primary goal"@en ;
-    rdfs:isDefinedBy <http://purl.org/adms> ;
+    dct:source <http://purl.org/adms> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Organisation ;
     sw:term_status "accepted"@en .
 
@@ -882,6 +966,7 @@ dpvo:NonPublicDataSource a owl:Class ;
         "Julian Flake"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "A source of data that is not publicly accessible or available"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:DataSource ;
     sw:term_status "accepted"@en .
 
@@ -894,6 +979,7 @@ dpvo:NotRequired a owl:Class ;
         "Julian Flake"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Indication of neither being required nor optional i.e. not relevant or needed"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Necessity ;
     sw:term_status "accepted"@en .
 
@@ -904,6 +990,7 @@ dpvo:OfficialAuthorityOfController a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Processing necessary or authorised through the official authority granted to or vested in the Data Controller"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:LegalBasis ;
     sw:term_status "accepted"@en .
 
@@ -917,6 +1004,7 @@ dpvo:OptimiseUserInterface a owl:Class ;
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
     dct:description "Optimize interfaces presented to the user"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OptimisationForConsumer ;
     sw:term_status "accepted"@en .
 
@@ -929,6 +1017,7 @@ dpvo:Optional a owl:Class ;
         "Julian Flake"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Indication of 'optional' or 'voluntary'"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Necessity ;
     sw:term_status "accepted"@en .
 
@@ -940,6 +1029,7 @@ dpvo:OrganisationComplianceManagement a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Manage compliance for organisation in relation to internal policies"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OrganisationGovernance ;
     sw:term_status "accepted"@en .
 
@@ -951,6 +1041,7 @@ dpvo:OrganisationRiskManagement a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Manage risk for organisation's activities"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OrganisationGovernance ;
     sw:term_status "accepted"@en .
 
@@ -961,6 +1052,7 @@ dpvo:PIA a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Carrying out an impact assessment regarding privacy risks"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:ImpactAssessment ;
     sw:term_status "accepted"@en .
 
@@ -971,6 +1063,7 @@ dpvo:Payment a owl:Class ;
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Process payment transactions in relation to service"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:ServiceProvision ;
     sw:term_status "accepted"@en .
 
@@ -981,6 +1074,7 @@ dpvo:PersonalisedAdvertising a owl:Class ;
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Create and provide personalised advertising"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Advertising,
         dpvo:Personalisation ;
     sw:term_status "accepted"@en .
@@ -995,6 +1089,7 @@ dpvo:PersonalisedBenefits a owl:Class ;
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
     dct:description "Create and provide personalised benefits for a service"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:ServicePersonalization ;
     sw:term_status "accepted"@en .
 
@@ -1007,6 +1102,7 @@ dpvo:PrimaryImportance a owl:Class ;
         "Julian Flake"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Indication of 'primary' or 'main' or 'core' importance"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Importance ;
     sw:term_status "accepted"@en .
 
@@ -1018,6 +1114,7 @@ dpvo:PrivacyByDefault a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Practices regarding selecting appropriate data protection and privacy measures as the 'default' in an activity or service"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:GuidelinesPrinciple ;
     sw:term_status "accepted"@en .
 
@@ -1029,6 +1126,7 @@ dpvo:PrivacyByDesign a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Practices regarding incorporating data protection and privacy in the design of information and services"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -1040,6 +1138,7 @@ dpvo:PrivacyNotice a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Represents a notice or document outlining information regarding privacy"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Notice ;
     sw:term_status "accepted"@en .
 
@@ -1047,7 +1146,8 @@ dpvo:Profiling a owl:Class ;
     rdfs:label "Profiling"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to create a profile that describes or represents a person"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Use ;
     sw:term_status "accepted"@en .
 
@@ -1055,7 +1155,8 @@ dpvo:PseudoAnonymise a owl:Class ;
     rdfs:label "Pseudo-Anonymise"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to replace personal identifiable information by artificial identifiers"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Transform ;
     sw:term_status "accepted"@en .
 
@@ -1064,6 +1165,7 @@ dpvo:PseudoAnonymisedData a owl:Class ;
     dct:created "2022-01-19"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Personal Data that has undergone a partial (incomplete) anonymisation process such that it is still considered Personal Data"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:PersonalData ;
     sw:term_status "accepted"@en .
 
@@ -1075,7 +1177,8 @@ dpvo:PseudoAnonymization a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "PseudoAnonmyization or 'pseudonymisation’ means the processing of personal data in such a manner that the personal data can no longer be attributed to a specific data subject without the use of additional information, provided that such additional information is kept separately and is subject to technical and organisational measures to ensure that the personal data are not attributed to an identified or identifiable natural person;"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_5/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_5/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Anonymization ;
     sw:term_status "accepted"@en .
 
@@ -1089,6 +1192,7 @@ dpvo:PublicDataSource a owl:Class ;
         "Paul Ryan"^^xsd:string ;
     dct:description "A source of data that is publicly accessible or available"@en ;
     rdfs:comment "The term 'Public' is used here in a broad sense. Actual consideration of what is 'Public Data' can vary based on several contextual or jurisdictional factors such as  definition of open, methods of access, permissions and licenses."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:DataSource ;
     sw:term_status "accepted"@en .
 
@@ -1097,6 +1201,7 @@ dpvo:PublicInterest a owl:Class ;
     dct:created "2021-04-21"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Processing is necessary or beneficial for interest of the public or society at large"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:LegalBasis ;
     sw:term_status "accepted"@en .
 
@@ -1108,7 +1213,8 @@ dpvo:PublicRelations a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Manage and conduct public relations processes. This includes creating goodwill for the organization."@en ;
-    rdfs:isDefinedBy <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Marketing ;
     sw:term_status "accepted"@en .
 
@@ -1116,7 +1222,8 @@ dpvo:Record a owl:Class ;
     rdfs:label "Record"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to make a record (especially media)"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Obtain ;
     sw:term_status "accepted"@en .
 
@@ -1128,6 +1235,7 @@ dpvo:RecordManagement a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Manage creation, storage, and use of records relevant to operations, events, and processes e.g. to store logs or access requests"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Purpose ;
     sw:term_status "accepted"@en .
 
@@ -1136,6 +1244,7 @@ dpvo:Region a owl:Class ;
     dct:created "2022-01-19"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "A region is an area or site that is considered a location"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Location ;
     sw:term_status "accepted"@en .
 
@@ -1144,7 +1253,8 @@ dpvo:RegionalAuthority a owl:Class ;
     dct:created "2022-02-02"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "e.g. regional DPA in DE / US-CA"@en ;
-    rdfs:isDefinedBy <http://purl.org/adms> ;
+    dct:source <http://purl.org/adms> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Authority ;
     sw:term_status "accepted"@en .
 
@@ -1156,6 +1266,7 @@ dpvo:RegisterOfProcessingActivities a owl:Class ;
         "Paul Ryan"^^xsd:string ;
     dct:description "A ROPA is a document maintained by Data Controllers detailing processing activities carried out under their responsibility"@en ;
     rdfs:comment "Tied to compliance processes and documents, decide how to specify those"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:DataProcessingRecords ;
     sw:term_status "accepted"@en .
 
@@ -1166,6 +1277,7 @@ dpvo:RegistrationAuthentication a owl:Class ;
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Register, authenticate, and identify users or agents in context of a service"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:ServiceProvision ;
     sw:term_status "accepted"@en .
 
@@ -1177,6 +1289,7 @@ dpvo:RegularityOfRecertification a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Policy regarding repetition or renewal of existing certification(s)"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -1189,6 +1302,7 @@ dpvo:Required a owl:Class ;
         "Julian Flake"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Indication of 'required' or 'necessary'"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Necessity ;
     sw:term_status "accepted"@en .
 
@@ -1196,7 +1310,8 @@ dpvo:Restrict a owl:Class ;
     rdfs:label "Restrict"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to apply a restriction on the processsing of specific records"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Transform ;
     sw:term_status "accepted"@en .
 
@@ -1204,7 +1319,8 @@ dpvo:Retrieve a owl:Class ;
     rdfs:label "Retrieve"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to retrieve data, often in an automated manner"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Use ;
     sw:term_status "accepted"@en .
 
@@ -1216,8 +1332,9 @@ dpvo:RiskManagementProcedure a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Risk management refers to a coordinated set of activities and methods that is used to direct an organization and to control the many risks that can affect its ability to achieve objectives.  The term risk management also refers to the programme that is used to manage risk. This programme includes risk management principles, a risk management framework, and a risk management process."@en ;
+    dct:source <https://www.iso.org/iso-31000-risk-management.html> ;
     rdfs:comment "Data Protection Impact Assessments as per GDPR art 35, other Privacy Impact Assessments, threat severity assessment https://www.cnil.fr/en/privacy-impact-assessment-pia"@en ;
-    rdfs:isDefinedBy <https://www.iso.org/iso-31000-risk-management.html> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -1229,6 +1346,7 @@ dpvo:SafeguardForDataTransfer a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Represents a safeguard used for data transfer. Can include technical or organisational measures."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Safeguard ;
     sw:term_status "accepted"@en .
 
@@ -1240,6 +1358,7 @@ dpvo:Seal a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "A seal or a mark indicating proof of certification to some certification or standard"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:CertificationSeal ;
     sw:term_status "accepted"@en .
 
@@ -1252,6 +1371,7 @@ dpvo:SecondaryImportance a owl:Class ;
         "Julian Flake"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Indication of 'secondary' or 'minor' or 'auxiliary' importance"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Importance ;
     sw:term_status "accepted"@en .
 
@@ -1266,6 +1386,7 @@ dpvo:SellDataToThirdParties a owl:Class ;
         "Simon Steyskal"^^xsd:string ;
     dct:description "Sell data or information to third parties"@en ;
     rdfs:comment "Sell here means exchange, submit, or provide in return for direct or indirect compensation. Was subclass of commercial interest, changed to reflect selling something"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:SellProducts ;
     sw:term_status "accepted"@en .
 
@@ -1280,6 +1401,7 @@ dpvo:SellInsightsFromData a owl:Class ;
         "Simon Steyskal"^^xsd:string ;
     dct:description "Sell data or information relevant to insights obtained from analysis of data"@en ;
     rdfs:comment "Sell here means exchange, submit, or provide in return for direct or indirect compensation. Was subclass of commercial interest, changed to reflect selling something"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:SellProducts ;
     sw:term_status "accepted"@en .
 
@@ -1294,6 +1416,7 @@ dpvo:SellProductsToDataSubject a owl:Class ;
         "Simon Steyskal"^^xsd:string ;
     dct:description "Sell products or services to the user, consumer, or data subjects"@en ;
     rdfs:comment "Was subclass of commercial interest, changed to reflect selling something"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:SellProducts ;
     sw:term_status "accepted"@en .
 
@@ -1303,6 +1426,7 @@ dpvo:SensitivePersonalData a owl:Class ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Personal data that is considered 'sensitive' in terms of privacy and/or impact, and therefore requires additional considerations and/or protection"@en ;
     rdfs:comment "Sensitivity' is a matter of context, and may be defined within legal frameworks. For GDPR, Special categories of personal data are considered a subset of sensitive data. To illustrate the difference between the two, consider the situation where Location data is collected, and which is considered 'sensitive' but not 'special'. As a probable rule, sensitive data require additional considerations whereas special category data requires additional legal basis / justifications."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:PersonalData ;
     sw:term_status "accepted"@en .
 
@@ -1310,6 +1434,7 @@ dpvo:ServiceRecordManagement a owl:Class ;
     rdfs:label "Service Order Management"@en ;
     dct:created "2021-09-08"^^xsd:date ;
     dct:description "Manage invoicing, orders, and records in relation to services"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:ServiceProvision ;
     sw:term_status "accepted"@en .
 
@@ -1321,6 +1446,7 @@ dpvo:ServiceUsageAnalytics a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Conduct analysis and reporting related to usage of services or products"@en ;
     rdfs:comment "Was \"UsageAnalytics\", prefixed with Service to better reflect scope"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:ServiceProvision ;
     sw:term_status "accepted"@en .
 
@@ -1328,7 +1454,8 @@ dpvo:Share a owl:Class ;
     rdfs:label "Share"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to give data (or a portion of it) to others"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Disclose ;
     sw:term_status "accepted"@en .
 
@@ -1339,6 +1466,7 @@ dpvo:SingleSignOn a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Use of credentials or processes that enable using one set of credentials to authenticate multiple contexts."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:AuthenticationProtocols ;
     sw:term_status "accepted"@en .
 
@@ -1349,6 +1477,7 @@ dpvo:SocialMediaMarketing a owl:Class ;
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Conduct marketing through social media"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Marketing ;
     sw:term_status "accepted"@en .
 
@@ -1360,6 +1489,7 @@ dpvo:StaffTraining a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Practices and policies regarding training of staff members"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -1371,6 +1501,7 @@ dpvo:StorageDeletion a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Deletion or Erasure of data including any deletion guarantees"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:StorageCondition ;
     sw:term_status "accepted"@en .
 
@@ -1382,6 +1513,7 @@ dpvo:StorageDuration a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Duration or temporal limitation on storage of personal data"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Duration,
         dpvo:StorageCondition ;
     sw:term_status "accepted"@en .
@@ -1394,6 +1526,7 @@ dpvo:StorageLocation a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Location or geospatial scope where the data is stored"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Location,
         dpvo:StorageCondition ;
     sw:term_status "accepted"@en .
@@ -1406,6 +1539,7 @@ dpvo:StorageRestoration a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Regularity and temporal span of data restoration/backup mechanisms that guarantee that data is preserved"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:StorageCondition ;
     sw:term_status "accepted"@en .
 
@@ -1413,7 +1547,8 @@ dpvo:Store a owl:Class ;
     rdfs:label "Store"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to keep data for future use"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Processing ;
     sw:term_status "accepted"@en .
 
@@ -1421,7 +1556,8 @@ dpvo:Structure a owl:Class ;
     rdfs:label "Structure"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to arrange data according to a structure"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Organise ;
     sw:term_status "accepted"@en .
 
@@ -1434,6 +1570,7 @@ dpvo:SubProcessorAgreement a owl:Class ;
         "Julian Flake"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "An agreement outlining conditions, criteria, obligations, responsibilities, and specifics for carrying out processing of personal data between a Data Processor and a Data (Sub-)Processor"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:DataProcessingAgreement ;
     sw:term_status "accepted"@en .
 
@@ -1442,7 +1579,8 @@ dpvo:SupraNationalAuthority a owl:Class ;
     dct:created "2022-02-02"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "e.g. EU, EDPB"@en ;
-    rdfs:isDefinedBy <http://purl.org/adms> ;
+    dct:source <http://purl.org/adms> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Authority ;
     sw:term_status "accepted"@en .
 
@@ -1451,6 +1589,7 @@ dpvo:SupraNationalUnion a owl:Class ;
     dct:created "2022-01-19"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "A political union of two or more countries with an establishment of common authority"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Location ;
     sw:term_status "accepted"@en .
 
@@ -1460,7 +1599,8 @@ dpvo:SystematicMonitoring a owl:Class ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Piero Bonatti"^^xsd:string ;
     dct:description "Processing that involves systematic monitoring of individuals"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:ProcessingContext ;
     sw:term_status "accepted"@en .
 
@@ -1469,6 +1609,7 @@ dpvo:TechnicalServiceProvision a owl:Class ;
     dct:created "2021-09-08"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Manage and provide technical processes and functions necessary for delivering services"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:ServiceProvision ;
     sw:term_status "accepted"@en .
 
@@ -1477,6 +1618,7 @@ dpvo:ThirdPartyAgreement a owl:Class ;
     dct:created "2022-02-09"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "An agreement outlining conditions, criteria, obligations, responsibilities, and specifics for carrying out processing of personal data between a Data Controller or Processor and a Third Party"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:DataProcessingAgreement ;
     sw:term_status "accepted"@en .
 
@@ -1484,7 +1626,8 @@ dpvo:Transmit a owl:Class ;
     rdfs:label "Transmit"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to send out data"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Disclose ;
     sw:term_status "accepted"@en .
 
@@ -1498,6 +1641,7 @@ dpvo:UserInterfacePersonalisation a owl:Class ;
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
     dct:description "Personalise interfaces presented to the user"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:ServicePersonalization ;
     sw:term_status "accepted"@en .
 
@@ -1509,7 +1653,8 @@ dpvo:VendorPayment a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Manage payment of vendors"@en ;
-    rdfs:isDefinedBy <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:VendorManagement ;
     sw:term_status "accepted"@en .
 
@@ -1521,7 +1666,8 @@ dpvo:VendorRecordsManagement a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Manage orders related to vendors"@en ;
-    rdfs:isDefinedBy <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:VendorManagement ;
     sw:term_status "accepted"@en .
 
@@ -1533,7 +1679,8 @@ dpvo:VendorSelectionAssessment a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Manage selection, assessment, and evaluation related to vendors"@en ;
-    rdfs:isDefinedBy <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:VendorManagement ;
     sw:term_status "accepted"@en .
 
@@ -1544,6 +1691,7 @@ dpvo:VitalInterestOfDataSubject a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Processing is necessary or required to protect vital interests of a data subject"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:VitalInterestOfNaturalPerson ;
     sw:term_status "accepted"@en .
 
@@ -1554,6 +1702,7 @@ dpvo:VulnerableDataSubject a owl:Class ;
         "Harshvardhan Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Data Subjects which should be considered 'vulnerable' and therefore would require additional measures and safeguards"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:DataSubject ;
     sw:term_status "accepted"@en .
 
@@ -1567,6 +1716,7 @@ dpvo:hasAddress a rdf:Property,
         "Paul Ryan"^^xsd:string ;
     dct:description "Specifies address of a legal entity such as street address or pin code"@en ;
     rdfs:domain dpvo:Entity ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range owl:Thing ;
     sw:term_status "accepted"@en .
 
@@ -1579,6 +1729,7 @@ dpvo:hasAlgorithmicLogic a rdf:Property,
         "Paul Ryan"^^xsd:string ;
     dct:description "Indicates the logic used in processing such as for automated decision making"@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:AlgorithmicLogic ;
     sw:term_status "accepted"@en .
 
@@ -1589,6 +1740,7 @@ dpvo:hasApplicableLaw a rdf:Property,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Indicates applicability of a Law"@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:Law ;
     sw:term_status "accepted"@en .
 
@@ -1600,6 +1752,7 @@ dpvo:hasAuthority a rdf:Property,
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Indicates applicability of authority for a jurisdiction"@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:Authority ;
     sw:term_status "accepted"@en .
 
@@ -1612,6 +1765,7 @@ dpvo:hasConsentNotice a rdf:Property,
         "Mark Lizar"^^xsd:string ;
     dct:description "Specifies the notice provided in context of consent"@en ;
     rdfs:comment "The actual notice that the Data Subject received to consent to, either a text or link to a document, which should be usable to decide whether the form or consent was compliant to legislation, e.g. documenting how the user has been informed about rights and implications (such as, right to data portability,right to recitffy, right to erasure, right to restrict processing, right to object, rights regarding automated decision making or profiling, processors, third parties, sub-processors, outside-EEA transfers, automated decision-making, or other necessary details of the privacy-policy). Can be TextOrDocumentOrURI."@en ;
+    rdfs:isDefinedBy dpvo: ;
     sw:term_status "accepted"@en .
 
 dpvo:hasConsequence a rdf:Property,
@@ -1625,6 +1779,7 @@ dpvo:hasConsequence a rdf:Property,
     dct:modified "2021-09-21"^^xsd:date ;
     rdfs:comment "Removed plural suffix for consistency"@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:Consequence ;
     sw:term_status "accepted"@en .
 
@@ -1638,6 +1793,7 @@ dpvo:hasContact a rdf:Property,
         "Paul Ryan"^^xsd:string ;
     dct:description "Specifies contact details of a legal entity such as phone  or email"@en ;
     rdfs:domain dpvo:Entity ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range owl:Thing ;
     sw:term_status "accepted"@en .
 
@@ -1647,6 +1803,7 @@ dpvo:hasContext a rdf:Property,
     dct:created "2019-04-05"^^xsd:date ;
     dct:description "Indicates a purpose is restricted to the specified context(s)"@en ;
     rdfs:domain dpvo:Purpose ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:Context ;
     sw:term_status "accepted"@en .
 
@@ -1656,6 +1813,7 @@ dpvo:hasDataExporter a rdf:Property,
     dct:created "2022-02-13"^^xsd:date ;
     dct:description "Indiciates inclusion or applicability of a LegalEntity in the role of Data Exporter"@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:DataExporter ;
     rdfs:subPropertyOf dpvo:hasEntity ;
     sw:term_status "accepted"@en .
@@ -1666,6 +1824,7 @@ dpvo:hasDataImporter a rdf:Property,
     dct:created "2022-02-14"^^xsd:date ;
     dct:description "Indiciates inclusion or applicability of a LegalEntity in the role of Data Importer"@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:DataImporter ;
     rdfs:subPropertyOf dpvo:hasRecipient ;
     sw:term_status "accepted"@en .
@@ -1676,6 +1835,7 @@ dpvo:hasDataProcessor a rdf:Property,
     dct:created "2022-02-10"^^xsd:date ;
     dct:description "Indiciates inclusion or applicability of a Data Processor"@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:DataProcessor ;
     rdfs:subPropertyOf dpvo:hasRecipient ;
     sw:term_status "accepted"@en .
@@ -1689,6 +1849,7 @@ dpvo:hasDataSource a rdf:Property,
         "Paul Ryan"^^xsd:string ;
     dct:description "Indicates the source or origin of data being processed"@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:DataSource ;
     sw:term_status "accepted"@en .
 
@@ -1704,6 +1865,7 @@ dpvo:hasDataSubject a rdf:Property,
     dct:description "Indicates association with Data Subject"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:DataSubject ;
     rdfs:subPropertyOf dpvo:hasEntity ;
     sw:term_status "accepted"@en .
@@ -1717,8 +1879,9 @@ dpvo:hasDuration a rdf:Property,
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Indicates information about duration"@en ;
+    dct:source <https://www.specialprivacy.eu/> ;
     rdfs:domain owl:Thing ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:Duration ;
     sw:term_status "accepted"@en .
 
@@ -1730,6 +1893,7 @@ dpvo:hasExpiry a rdf:Property,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Mark Lizar"^^xsd:string ;
     dct:description "Generic property specifying when or under which condition(s) the consent will expire"@en ;
+    rdfs:isDefinedBy dpvo: ;
     sw:term_status "accepted"@en .
 
 dpvo:hasExpiryCondition a rdf:Property,
@@ -1741,6 +1905,7 @@ dpvo:hasExpiryCondition a rdf:Property,
         "Mark Lizar"^^xsd:string ;
     dct:description "Specifies the condition or event that determines the expiry of consent"@en ;
     rdfs:comment "Can be TextOrDocumentOrURI"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subPropertyOf dpvo:expiry ;
     sw:term_status "accepted"@en .
 
@@ -1752,6 +1917,7 @@ dpvo:hasExpiryTime a rdf:Property,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Mark Lizar"^^xsd:string ;
     dct:description "Specifies the expiry time or duration for consent"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subPropertyOf dpvo:expiry ;
     sw:term_status "accepted"@en .
 
@@ -1761,6 +1927,7 @@ dpvo:hasFrequency a rdf:Property,
     dct:created "2022-02-16"^^xsd:date ;
     dct:description "Indicates the frequency with which something takes place"@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:Frequency ;
     sw:term_status "accepted"@en .
 
@@ -1774,6 +1941,7 @@ dpvo:hasHumanInvolvement a rdf:Property,
     dct:description "Indicates Involvement of humans in processing such as within automated decision making process"@en ;
     rdfs:comment "Human involvement is also relevant to 'human in the loop'"@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:HumanInvolvement ;
     sw:term_status "accepted"@en .
 
@@ -1787,6 +1955,7 @@ dpvo:hasIdentifier a rdf:Property,
         "Paul Ryan"^^xsd:string ;
     dct:description "Indicates an identifier associated for identification or reference"@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range owl:Thing ;
     sw:term_status "accepted"@en .
 
@@ -1796,6 +1965,7 @@ dpvo:hasJointDataControllers a rdf:Property,
     dct:created "2022-02-09"^^xsd:date ;
     dct:description "Indicates inclusion or applicability of a Joint Data Controller"@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:JointDataControllers ;
     rdfs:subPropertyOf dpvo:hasDataController ;
     sw:term_status "accepted"@en .
@@ -1807,6 +1977,7 @@ dpvo:hasJurisdiction a rdf:Property,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Indicates applicability of specified jurisdiction"@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:Location ;
     sw:term_status "accepted"@en .
 
@@ -1819,6 +1990,7 @@ dpvo:hasLegalBasis a rdf:Property,
     dct:description "Indicates use or applicability of a Legal Basis"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:LegalBasis ;
     sw:term_status "accepted"@en .
 
@@ -1832,6 +2004,7 @@ dpvo:hasName a rdf:Property,
         "Paul Ryan"^^xsd:string ;
     dct:description "Specifies name of a legal entity"@en ;
     rdfs:domain dpvo:Entity ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range owl:Thing ;
     sw:term_status "accepted"@en .
 
@@ -1842,6 +2015,7 @@ dpvo:hasOrganisationalMeasure a rdf:Property,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Indicates use or applicability of Organisational measure"@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:OrganisationalMeasure ;
     rdfs:subPropertyOf dpvo:hasTechnicalOrganisationalMeasure ;
     sw:term_status "accepted"@en .
@@ -1853,6 +2027,7 @@ dpvo:hasPersonalData a rdf:Property,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Indicates association with Personal Data"@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:PersonalData ;
     sw:term_status "accepted"@en .
 
@@ -1864,6 +2039,7 @@ dpvo:hasPersonalDataHandling a rdf:Property,
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Indicates association with Personal Data Handling"@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:PersonalDataHandling ;
     sw:term_status "accepted"@en .
 
@@ -1874,6 +2050,7 @@ dpvo:hasPolicy a rdf:Property,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Indicates policy applicable or used"@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:Policy ;
     rdfs:subPropertyOf dpvo:hasTechnicalOrganisationalMeasure ;
     sw:term_status "accepted"@en .
@@ -1889,8 +2066,9 @@ dpvo:hasProcessing a rdf:Property,
         "Mark Lizar"^^xsd:string ;
     dct:description "Indicates association with Processing"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
+    dct:source <https://www.specialprivacy.eu/> ;
     rdfs:domain owl:Thing ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:Processing ;
     sw:term_status "accepted"@en .
 
@@ -1903,6 +2081,7 @@ dpvo:hasProvisionBy a rdf:Property,
         "Mark Lizar"^^xsd:string ;
     dct:description "Specifies the entity that provisioned or provided consent"@en ;
     rdfs:comment "Normally this would be the dataSubject, but in some exceptional cases, the consent might be given on behalf by someone else, e.g. parents of minors."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:LegalEntity ;
     sw:term_status "accepted"@en .
 
@@ -1915,6 +2094,7 @@ dpvo:hasProvisionByJustification a rdf:Property,
         "Mark Lizar"^^xsd:string ;
     dct:description "Specifies the justification for entity providing consent"@en ;
     rdfs:comment "This field can be used to proivde a justification why the provision was provided by another DataSubject or legal entity,  e.g. declariing the relationship (parent, guardian), in combination with the field provisionBy"@en ;
+    rdfs:isDefinedBy dpvo: ;
     sw:term_status "accepted"@en .
 
 dpvo:hasProvisionMethod a rdf:Property,
@@ -1926,6 +2106,7 @@ dpvo:hasProvisionMethod a rdf:Property,
         "Mark Lizar"^^xsd:string ;
     dct:description "Specifies the method by which consent was provisioned or provided"@en ;
     rdfs:comment "Can be used to record information of how consent was provided e.g. by a click to a form, in writing, etc., by logging into a system and confirm per email, or with some additional authentication, etc."@en ;
+    rdfs:isDefinedBy dpvo: ;
     sw:term_status "accepted"@en .
 
 dpvo:hasProvisionTime a rdf:Property,
@@ -1936,6 +2117,7 @@ dpvo:hasProvisionTime a rdf:Property,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Mark Lizar"^^xsd:string ;
     dct:description "Specifies the instant in time when consent was given"@en ;
+    rdfs:isDefinedBy dpvo: ;
     sw:term_status "accepted"@en .
 
 dpvo:hasPurpose a rdf:Property,
@@ -1949,8 +2131,9 @@ dpvo:hasPurpose a rdf:Property,
         "Mark Lizar"^^xsd:string ;
     dct:description "Indicates association with Purpose"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
+    dct:source <https://www.specialprivacy.eu/> ;
     rdfs:domain owl:Thing ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:Purpose ;
     sw:term_status "accepted"@en .
 
@@ -1960,6 +2143,7 @@ dpvo:hasRecipientDataController a rdf:Property,
     dct:created "2022-02-11"^^xsd:date ;
     dct:description "Indiciates inclusion or applicability of a Data Controller as a Recipient of persona data"@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:DataController ;
     rdfs:subPropertyOf dpvo:hasRecipient ;
     sw:term_status "accepted"@en .
@@ -1970,6 +2154,7 @@ dpvo:hasRecipientThirdParty a rdf:Property,
     dct:created "2022-02-12"^^xsd:date ;
     dct:description "Indiciates inclusion or applicability of a Third Party as a Recipient of persona data"@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:ThirdParty ;
     rdfs:subPropertyOf dpvo:hasRecipient ;
     sw:term_status "accepted"@en .
@@ -1984,6 +2169,7 @@ dpvo:hasRepresentative a rdf:Property,
         "Paul Ryan"^^xsd:string ;
     dct:description "Specifies representative of the legal entity"@en ;
     rdfs:domain dpvo:Entity ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:Representative ;
     rdfs:subPropertyOf dpvo:hasEntity ;
     sw:term_status "accepted"@en .
@@ -1995,6 +2181,7 @@ dpvo:hasRight a rdf:Property,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Indicates use or applicability of Right"@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:Right ;
     sw:term_status "accepted"@en .
 
@@ -2005,6 +2192,7 @@ dpvo:hasRisk a rdf:Property,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Indicates applicability of Risk"@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:Risk ;
     sw:term_status "accepted"@en .
 
@@ -2014,6 +2202,7 @@ dpvo:hasSector a rdf:Property,
     dct:created "2019-04-05"^^xsd:date ;
     dct:description "Indicates the purpose is associated with activities in the indicated (Economic) Sector(s)"@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:Sector ;
     sw:term_status "accepted"@en .
 
@@ -2026,8 +2215,9 @@ dpvo:hasStorage a rdf:Property,
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Indicates information about storage condition"@en ;
+    dct:source <https://www.specialprivacy.eu/> ;
     rdfs:domain owl:Thing ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:StorageCondition ;
     sw:term_status "accepted"@en .
 
@@ -2038,6 +2228,7 @@ dpvo:hasTechnicalMeasure a rdf:Property,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Indicates use or applicability of Technical measure"@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:TechnicalMeasure ;
     rdfs:subPropertyOf dpvo:hasTechnicalOrganisationalMeasure ;
     sw:term_status "accepted"@en .
@@ -2048,6 +2239,7 @@ dpvo:hasThirdCountry a rdf:Property,
     dct:created "2022-02-09"^^xsd:date ;
     dct:description "Indicates applicability or relevance of a 'third country'"@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:ThirdCountry ;
     rdfs:subPropertyOf dpvo:hasCountry ;
     sw:term_status "accepted"@en .
@@ -2061,6 +2253,7 @@ dpvo:hasWithdrawalBy a rdf:Property,
         "Mark Lizar"^^xsd:string ;
     dct:description "Specifies the entity that withdrew consent"@en ;
     rdfs:comment "Normally this would be the dataSubject, but in some exceptional cases, the consent might be withdraawn on behalf by someone else, e.g. parents of minors."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:LegalEntity ;
     sw:term_status "accepted"@en .
 
@@ -2073,6 +2266,7 @@ dpvo:hasWithdrawalByJustification a rdf:Property,
         "Mark Lizar"^^xsd:string ;
     dct:description "Specifies the justification for entity withdrawing consent"@en ;
     rdfs:comment "This field can be used to proivde a justification why the weithdrawal was done by another DataSubject or legal entity, e.g. declariing the relationship (parent, guardian), in combination with the field withdrawalBy"@en ;
+    rdfs:isDefinedBy dpvo: ;
     sw:term_status "accepted"@en .
 
 dpvo:hasWithdrawalMethod a rdf:Property,
@@ -2084,6 +2278,7 @@ dpvo:hasWithdrawalMethod a rdf:Property,
         "Mark Lizar"^^xsd:string ;
     dct:description "Specifries the method by which consent can be/has been withdrawn"@en ;
     rdfs:comment "Can be used to record information of how to withdraw consent, e.g. by a click to a form, in writing, etc., by logging into a system and confirm per email, or with some additional authentication, etc."@en ;
+    rdfs:isDefinedBy dpvo: ;
     sw:term_status "accepted"@en .
 
 dpvo:hasWithdrawalTime a rdf:Property,
@@ -2094,6 +2289,7 @@ dpvo:hasWithdrawalTime a rdf:Property,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Mark Lizar"^^xsd:string ;
     dct:description "Specifies the instant in time when consent was withdrawn"@en ;
+    rdfs:isDefinedBy dpvo: ;
     sw:term_status "accepted"@en .
 
 dpvo:isAuthorityFor a rdf:Property,
@@ -2104,6 +2300,7 @@ dpvo:isAuthorityFor a rdf:Property,
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Indicates area, scope, or applicability of an Authority"@en ;
     rdfs:domain dpvo:Authority ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range owl:Thing ;
     sw:term_status "accepted"@en .
 
@@ -2116,6 +2313,7 @@ dpvo:isExplicit a rdf:Property,
         "Mark Lizar"^^xsd:string ;
     dct:description "Specifies consent is 'explicit'"@en ;
     rdfs:comment "The conditions for what is considered 'explicit consent' differ by norms and laws."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range xsd:boolean ;
     sw:term_status "accepted"@en .
 
@@ -2130,6 +2328,7 @@ dpvo:isImplementedUsingTechnology a rdf:Property,
     dct:description "Indicates implementation details such as technologies or processes"@en ;
     rdfs:comment "The term 'technology' is inclusive of technologies, processes, and methods."@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:Technology ;
     sw:term_status "accepted"@en .
 
@@ -2140,6 +2339,7 @@ dpvo:isMitigatedByMeasure a rdf:Property,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Indicate a risk is mitigated by specified measure"@en ;
     rdfs:domain dpvo:Risk ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:RiskMitigationMeasure ;
     rdfs:subPropertyOf dpvo:hasTechnicalOrganisationalMeasure ;
     sw:term_status "accepted"@en .
@@ -2151,6 +2351,7 @@ dpvo:isPolicyFor a rdf:Property,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Indicates the context or application of policy"@en ;
     rdfs:domain dpvo:Policy ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range owl:Thing ;
     sw:term_status "accepted"@en .
 
@@ -2161,6 +2362,7 @@ dpvo:mitigatesRisk a rdf:Property,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Indicates mitigation of risk(s)"@en ;
     rdfs:domain dpvo:RiskMitigationMeasure ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:Risk ;
     sw:term_status "accepted"@en .
 
@@ -2172,6 +2374,7 @@ dpvo:Advertising a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Conduct advertising i.e. process or artefact used to call attention to a product, service, etc. through announcements, notices, or other forms of communication"@en ;
     rdfs:comment "Advertising is a subset of Marketing. Advertising by itself does not indicate 'personalisation' i.e. personalised ads."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Marketing ;
     sw:term_status "accepted"@en .
 
@@ -2181,6 +2384,7 @@ dpvo:AlgorithmicLogic a owl:Class ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "The algorithmic logic applied or used"@en ;
     rdfs:comment "Algorithmic Logic is intended as a broad concept for explaining the use of algorithms and automated decisions making within Processing. To describe the actual algorithm, see the Algorithm concept."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Context ;
     sw:term_status "accepted"@en .
 
@@ -2192,6 +2396,7 @@ dpvo:AuthenticationProtocols a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Protocols involving validation of identity i.e. authentication of a person or information"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:TechnicalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -2204,6 +2409,7 @@ dpvo:CommunicationManagement a owl:Class ;
         "Paul Ryan"^^xsd:string ;
     dct:description "Manage communication or provide means for communication e.g. to send an email notifying some information"@en ;
     rdfs:comment "This purpose by itself does not sufficiently and clearly indicate what the communication is about. As such, it is recommended to combine it with another purpose to indicate the application. For example, Communication of Payment."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Purpose ;
     sw:term_status "accepted"@en .
 
@@ -2212,6 +2418,7 @@ dpvo:Consequence a owl:Class ;
     dct:created "2022-01-26"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "The consequence(s) possible or arising from indicated plan or action"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Context ;
     sw:term_status "accepted"@en .
 
@@ -2222,6 +2429,7 @@ dpvo:Consultation a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Consultation is a process of receiving feedback, advice, or opinion from an external agency"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -2235,6 +2443,7 @@ dpvo:CustomerCare a owl:Class ;
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
     dct:description "Provide assistance, resolve issues, ensure satisfaction in relation to services provided"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso svpu:Feedback ;
     rdfs:subClassOf dpvo:CustomerManagement ;
     sw:term_status "accepted"@en .
@@ -2246,6 +2455,7 @@ dpvo:CustomerRelationshipManagement a owl:Class ;
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Manage and analyse interactions with past, current, and potential customers"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:CustomerManagement ;
     sw:term_status "accepted"@en .
 
@@ -2257,8 +2467,9 @@ dpvo:DataExporter a owl:Class ;
         "Harshvardhan Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "An entity that 'exports' data where exporting is considered a form of data transfer"@en ;
+    dct:source <https://edpb.europa.eu/our-work-tools/our-documents/recommendations/recommendations-012020-measures-supplement-transfer_en> ;
     rdfs:comment "The EU, in particular the EDPB, uses data exporter the context of cross-border data transfers/flows. These concepts are not bound by jurisdictional or geopolitical scopes within DPV and can thus be used for any notion of exporting"@en ;
-    rdfs:isDefinedBy <https://edpb.europa.eu/our-work-tools/our-documents/recommendations/recommendations-012020-measures-supplement-transfer_en> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:LegalEntity ;
     sw:term_status "accepted"@en .
 
@@ -2270,8 +2481,9 @@ dpvo:DataImporter a owl:Class ;
         "Harshvardhan Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "An entity that 'imports' data where importing is considered a form of data transfer"@en ;
+    dct:source <https://edpb.europa.eu/our-work-tools/our-documents/recommendations/recommendations-012020-measures-supplement-transfer_en> ;
     rdfs:comment "The EU, in particular the EDPB, uses data importing the context of cross-border data transfers/flows. These concepts are not bound by jurisdictional or geopolitical scopes within DPV and can thus be used for any notion of importing"@en ;
-    rdfs:isDefinedBy <https://edpb.europa.eu/our-work-tools/our-documents/recommendations/recommendations-012020-measures-supplement-transfer_en> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Recipient ;
     sw:term_status "accepted"@en .
 
@@ -2280,6 +2492,7 @@ dpvo:DataProcessingRecords a owl:Class ;
     dct:created "2021-09-08"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Records of personal data processing, whether ex-ante or ex-post"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:RecordsOfActivities ;
     sw:term_status "accepted"@en .
 
@@ -2290,8 +2503,9 @@ dpvo:DerivedPersonalData a owl:Class ;
         "Fajar Ekaputra"^^xsd:string ;
     dct:description "Personal Data that is obtained or derived from other data"@en ;
     dct:modified "2022-01-19"^^xsd:date ;
+    dct:source <https://www.w3.org/community/dpvcg/> ;
     rdfs:comment "Derived Data is data that is obtained through processing of existing data, e.g. deriving first name from full name. To indicate data that is derived but which was not present or evident within the source data, InferredPersonalData should be used."@en ;
-    rdfs:isDefinedBy <https://www.w3.org/community/dpvcg/> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso svd:Derived ;
     rdfs:subClassOf dpvo:PersonalData ;
     sw:term_status "accepted"@en .
@@ -2300,6 +2514,7 @@ dpvo:Frequency a owl:Class ;
     rdfs:label "Frequency"@en ;
     dct:created "2022-02-16"^^xsd:date ;
     dct:description "The frequency or information about periods and repetitions in terms of recurrence."@en ;
+    rdfs:isDefinedBy dpvo: ;
     sw:term_status "accepted"@en .
 
 dpvo:GovernmentalOrganisation a owl:Class ;
@@ -2307,6 +2522,7 @@ dpvo:GovernmentalOrganisation a owl:Class ;
     dct:created "2022-02-02"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "An organisation managed or part of government"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Organisation ;
     sw:term_status "accepted"@en .
 
@@ -2316,6 +2532,7 @@ dpvo:HumanInvolvement a owl:Class ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "The involvement of humans as a factor or agent in processing"@en ;
     rdfs:comment "Human Involvement here broadly refers to any involvement by a human in the context of carrying out processing. This may include verification of outcomes, providing input data for making decisions, or overseeing activities."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Context ;
     sw:term_status "accepted"@en .
 
@@ -2326,6 +2543,7 @@ dpvo:JointDataControllers a owl:Class ;
         "Harshvardhan Pandit"^^xsd:string ;
     dct:description "A group of Data Controllers that jointly determine the purposes and means of processing"@en ;
     rdfs:comment "To indicate the membership, hasDataController may be used"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:DataController ;
     sw:term_status "accepted"@en .
 
@@ -2334,12 +2552,14 @@ dpvo:Law a owl:Class ;
     dct:created "2022-01-19"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "A law is a set of rules created by government or authorities"@en ;
+    rdfs:isDefinedBy dpvo: ;
     sw:term_status "accepted"@en .
 
 dpvo:NaturalPerson a owl:Class ;
     rdfs:label "Natural Person"@en ;
     dct:created "2022-02-09"^^xsd:date ;
     dct:description "A human"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Entity ;
     sw:term_status "accepted"@en .
 
@@ -2349,6 +2569,7 @@ dpvo:NonPersonalData a owl:Class ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Data that is not Personal Data"@en ;
     rdfs:comment "The term NonPersonalData is provided to distinguish between PersonalData and other data, e.g. for indicating which data is regulated by privacy laws. To specify personal data that has been anonymised, the concept AnonymisedData should be used."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Data ;
     sw:term_status "accepted"@en .
 
@@ -2360,6 +2581,7 @@ dpvo:Notice a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "A notice is an artefact for providing information, choices, or controls"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -2373,6 +2595,7 @@ dpvo:OptimisationForConsumer a owl:Class ;
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
     dct:description "Optimize activities and services for consumer or user"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso svpu:Custom ;
     rdfs:subClassOf dpvo:ServiceOptimization ;
     sw:term_status "accepted"@en .
@@ -2381,7 +2604,8 @@ dpvo:Organise a owl:Class ;
     rdfs:label "Organise"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to organize data for arranging or classifying"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Processing ;
     sw:term_status "accepted"@en .
 
@@ -2392,6 +2616,7 @@ dpvo:PersonalDataHandling a owl:Class ;
         "Javier Fernández"^^xsd:string ;
     dct:description "A high-level Class to describe 'data handling'. This can consist of personal data being processed for a purpose, involving entities, using technical and organisational measures, applicable risks, rights, and legal basis."@en ;
     dct:modified "2020-11-04"^^xsd:date ;
+    rdfs:isDefinedBy dpvo: ;
     sw:term_status "accepted"@en .
 
 dpvo:RecordsOfActivities a owl:Class ;
@@ -2401,6 +2626,7 @@ dpvo:RecordsOfActivities a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Records of activities within some context such as maintainence tasks or governance functions"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -2412,7 +2638,8 @@ dpvo:Representative a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "A representative of a legal entity"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_27/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_27/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:LegalEntity ;
     sw:term_status "accepted"@en .
 
@@ -2420,6 +2647,7 @@ dpvo:RequestedServiceProvision a owl:Class ;
     rdfs:label "Requested Service Provision"@en ;
     dct:created "2021-09-08"^^xsd:date ;
     dct:description "Deliver service as requested by user or consumer"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:ServiceProvision ;
     sw:term_status "accepted"@en .
 
@@ -2432,6 +2660,7 @@ dpvo:Safeguard a owl:Class ;
         "Paul Ryan"^^xsd:string ;
     dct:description "A safeguard is a precautionary measure for the protection against or mitigation of negative effects"@en ;
     rdfs:comment "This concept is relevant given the requirement to assert safeguards in cross-border data transfers"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -2446,6 +2675,7 @@ dpvo:Sector a owl:Class ;
         "Simon Steyskal"^^xsd:string ;
     dct:description "Indicate or restrict scope for interpretation and application of purpose in a domain e.g. Agriculture, Banking"@en ;
     rdfs:comment "There are various sector codes used commonly to indicate the domain of an organisation or business. Examples include NACE (EU), ISIC (UN), SIC and NAICS (USA)."@en ;
+    rdfs:isDefinedBy dpvo: ;
     sw:term_status "accepted"@en .
 
 dpvo:Technology a owl:Class ;
@@ -2454,6 +2684,7 @@ dpvo:Technology a owl:Class ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "The technology, technological implementation, or any techniques, skills, methods, and processes used or applied"@en ;
     rdfs:comment "Examples (non-exhaustive) include: Algorithm, Process, Method, Skill, Database, Cookies, Server, Device"@en ;
+    rdfs:isDefinedBy dpvo: ;
     sw:term_status "accepted"@en .
 
 dpvo:ThirdCountry a owl:Class ;
@@ -2461,6 +2692,7 @@ dpvo:ThirdCountry a owl:Class ;
     dct:created "2022-02-09"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Represents a country outside applicable or compatible jurisdiction as outlined in law"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Country ;
     sw:term_status "accepted"@en .
 
@@ -2469,7 +2701,8 @@ dpvo:ThirdParty a owl:Class ;
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "A ‘third party’ means a natural or legal person, public authority, agency or body other than the data subject, controller, processor and people who, under the direct authority of the controller or processor, are authorised to process personal data."@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_10/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_10/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Recipient ;
     sw:term_status "accepted"@en .
 
@@ -2477,7 +2710,8 @@ dpvo:Transfer a owl:Class ;
     rdfs:label "Transfer"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to move data from one place to another"@en ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/vocabs/processing> ;
+    dct:source <https://www.specialprivacy.eu/vocabs/processing> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso svpr:Transfer ;
     rdfs:subClassOf dpvo:Processing ;
     sw:term_status "accepted"@en .
@@ -2487,6 +2721,7 @@ dpvo:VitalInterest a owl:Class ;
     dct:created "2021-04-21"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Processing is necessary or required to protect vital interests of a data subject or other natural person"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:LegalBasis ;
     sw:term_status "accepted"@en .
 
@@ -2497,6 +2732,7 @@ dpvo:VitalInterestOfNaturalPerson a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Processing is necessary or required to protect vital interests of a natural person"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:VitalInterest ;
     sw:term_status "accepted"@en .
 
@@ -2508,6 +2744,7 @@ dpvo:hasCountry a rdf:Property,
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Indicates applicability of specified country"@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:Country ;
     rdfs:subPropertyOf dpvo:hasLocation ;
     sw:term_status "accepted"@en .
@@ -2524,6 +2761,7 @@ dpvo:hasDataController a rdf:Property,
     dct:description "Indicates association with Data Controller"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:DataController ;
     rdfs:subPropertyOf dpvo:hasEntity ;
     sw:term_status "accepted"@en .
@@ -2537,8 +2775,9 @@ dpvo:hasLocation a rdf:Property,
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Indicates information about location"@en ;
+    dct:source <https://www.specialprivacy.eu/> ;
     rdfs:domain owl:Thing ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:Location ;
     sw:term_status "accepted"@en .
 
@@ -2547,6 +2786,7 @@ dpvo:Assessment a owl:Class ;
     dct:created "2021-09-08"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "The document, plan, or process for assessment or determination towards a purpose e.g. assessment of legality or impact assessments"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -2558,6 +2798,7 @@ dpvo:CertificationSeal a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Certifications, seals, and marks indicating compliance to regulations or practices"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -2566,6 +2807,7 @@ dpvo:Contract a owl:Class ;
     dct:created "2021-04-07"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Creation, completion, fulfilment, or performance of a contract involving specified processing"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:LegalAgreement,
         dpvo:LegalBasis ;
     sw:term_status "accepted"@en .
@@ -2577,6 +2819,7 @@ dpvo:Country a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "A political entity indicative of a sovereign or non-sovereign territorial state comprising of distinct geographical areas"@en ;
     rdfs:comment "The definition of country is not intended for political interpretation. DPVCG welcomes alternate definitions based in existing sources with global scope, such as UN or ISO."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Location ;
     sw:term_status "accepted"@en .
 
@@ -2586,7 +2829,8 @@ dpvo:CreatePersonalizedRecommendations a owl:Class ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Rudy Jacob"^^xsd:string ;
     dct:description "Create and provide personalised recommendations"@en ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+    dct:source <https://www.specialprivacy.eu/> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:ServicePersonalization ;
     sw:term_status "accepted"@en .
 
@@ -2595,6 +2839,7 @@ dpvo:Data a owl:Class ;
     dct:created "2022-01-19"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "A broad concept representing  'data' or 'information'"@en ;
+    rdfs:isDefinedBy dpvo: ;
     sw:term_status "accepted"@en .
 
 dpvo:DataProcessor a owl:Class ;
@@ -2602,7 +2847,8 @@ dpvo:DataProcessor a owl:Class ;
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "A ‘processor’ means a natural or legal person, public authority, agency or other body which processes personal data on behalf of the controller."@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_8/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_8/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Recipient ;
     sw:term_status "accepted"@en .
 
@@ -2610,6 +2856,7 @@ dpvo:Duration a owl:Class ;
     rdfs:label "Duration"@en ;
     dct:created "2022-02-09"^^xsd:date ;
     dct:description "The duration or temporal limitation"@en ;
+    rdfs:isDefinedBy dpvo: ;
     sw:term_status "accepted"@en .
 
 dpvo:Encryption a owl:Class ;
@@ -2620,6 +2867,7 @@ dpvo:Encryption a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Technical measures consisting of encryption"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:TechnicalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -2633,6 +2881,7 @@ dpvo:Importance a owl:Class ;
         "Paul Ryan"^^xsd:string ;
     dct:description "An indication of 'importance' within a context"@en ;
     rdfs:comment "Importance can be used to express importance, desirability, relevance, or significance as a context."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Context ;
     sw:term_status "accepted"@en .
 
@@ -2641,6 +2890,7 @@ dpvo:LegitimateInterest a owl:Class ;
     dct:created "2021-05-19"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Legitimate Interests of a Party as justification for specified processing"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:LegalBasis ;
     sw:term_status "accepted"@en .
 
@@ -2650,6 +2900,7 @@ dpvo:Personalisation a owl:Class ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Create and provide customisation based on attributes and/or needs of person(s) or context(s)."@en ;
     rdfs:comment "This term is a blanket purpose category for indicating personalisation of some other purpose, e.g. by creating a subclass of the other concept and Personalisation"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Purpose ;
     sw:term_status "accepted"@en .
 
@@ -2661,6 +2912,7 @@ dpvo:Policy a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "A guidance document outlining any of: procedures, plans, principles, decisions, intent, or protocols."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -2668,7 +2920,8 @@ dpvo:Remove a owl:Class ;
     rdfs:label "Remove"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to destruct or erase data"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Processing ;
     sw:term_status "accepted"@en .
 
@@ -2680,6 +2933,7 @@ dpvo:Right a owl:Class ;
         "Harshvardhan J Pandit"^^xsd:string ;
     dct:description "The right(s) applicable, provided, or expected."@en ;
     rdfs:comment "A 'right' is a legal, social, or ethical principle of freedom or entitlement which dictate the norms regarding what is allowed or owed.. Rights as a concept encompass a broad area of norms and entities, and are not specific to Individuals or Data Protection / Privacy. For individual specific rights, see dpv:DataSubjectRight"@en ;
+    rdfs:isDefinedBy dpvo: ;
     sw:term_status "accepted"@en .
 
 dpvo:RiskMitigationMeasure a owl:Class ;
@@ -2689,6 +2943,7 @@ dpvo:RiskMitigationMeasure a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Measures intended to mitigate, minimise, or prevent risk."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:TechnicalOrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -2703,6 +2958,7 @@ dpvo:ServiceOptimization a owl:Class ;
         "Simon Steyskal"^^xsd:string ;
     dct:description "Optimise services or activities"@en ;
     rdfs:comment "Subclass of ServiceProvision since optimisation is usually considered part of providing services"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:ServiceProvision ;
     sw:term_status "accepted"@en .
 
@@ -2714,7 +2970,8 @@ dpvo:Anonymization a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Process by which some personal identifiers are removed or identifiability is reduced"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_5/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_5/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:TechnicalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -2725,8 +2982,9 @@ dpvo:DataController a owl:Class ;
         "Javier Fernández"^^xsd:string ;
     dct:description "The individual or organisation that decides (or controls) the purpose(s) of processing personal data."@en ;
     dct:modified "2020-11-04"^^xsd:date ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_7/oj> ;
     rdfs:comment "The terms 'Controller' is usually the more common form of indicating a Data Controller. In ISO/IEC the term 'PII Controller' is used."@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_7/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:LegalEntity ;
     sw:term_status "accepted"@en .
 
@@ -2738,6 +2996,7 @@ dpvo:DataSource a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "The source or origin of data"@en ;
     rdfs:comment "Source' is the direct point of data collection; 'origin' would indicate the original/others points of where the data originates from."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:ProcessingContext ;
     sw:term_status "accepted"@en .
 
@@ -2748,8 +3007,9 @@ dpvo:DataSubject a owl:Class ;
         "Javier Fernández"^^xsd:string ;
     dct:description "The individual (or category of individuals) whose personal data is being processed"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_1/oj> ;
     rdfs:comment "The term 'data subject' is specific to the GDPR, but is functionally equivalent to the term 'individual' and the ISO/IEC term 'PII Principle'."@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_1/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:LegalEntity,
         dpvo:NaturalPerson ;
     sw:term_status "accepted"@en .
@@ -2765,6 +3025,7 @@ dpvo:EnforceSecurity a owl:Class ;
         "Simon Steyskal"^^xsd:string ;
     dct:description "Ensure and enforce security e.g. of data, personnel"@en ;
     rdfs:comment "Was previous \"Security\". Prefixed to distinguish from TechOrg measures."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Purpose ;
     sw:term_status "accepted"@en .
 
@@ -2776,6 +3037,7 @@ dpvo:GuidelinesPrinciple a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Guidelines or Principles regarding processing and operational measures"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -2786,6 +3048,7 @@ dpvo:ImpactAssessment a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Calculating or determining the likelihood of impact of an existing or proposed process, which can involve risks or detriments."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Assessment ;
     sw:term_status "accepted"@en .
 
@@ -2799,6 +3062,7 @@ dpvo:Necessity a owl:Class ;
         "Paul Ryan"^^xsd:string ;
     dct:description "An indication of 'necessity' within a context"@en ;
     rdfs:comment "Necessity can be used to express need, essentiality, requirement, or compulsion."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Context ;
     sw:term_status "accepted"@en .
 
@@ -2806,7 +3070,8 @@ dpvo:Obtain a owl:Class ;
     rdfs:label "Obtain"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to solicit or gather data from someone"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Processing ;
     sw:term_status "accepted"@en .
 
@@ -2820,6 +3085,7 @@ dpvo:ResearchAndDevelopment a owl:Class ;
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
     dct:description "Conduct research and development for new methods, products, or services"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Purpose ;
     sw:term_status "accepted"@en .
 
@@ -2829,6 +3095,7 @@ dpvo:Risk a owl:Class ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "A risk or possibility or uncertainty of negative effects, impacts, or consequences."@en ;
     rdfs:comment "Risks can be associated with one or more different concepts such as purpose, processing, personal data, technical or organisational measure."@en ;
+    rdfs:isDefinedBy dpvo: ;
     sw:term_status "accepted"@en .
 
 dpvo:SellProducts a owl:Class ;
@@ -2836,6 +3103,7 @@ dpvo:SellProducts a owl:Class ;
     dct:created "2021-09-08"^^xsd:date ;
     dct:description "Sell products or services"@en ;
     rdfs:comment "Sell here means exchange, submit, or provide in return for direct or indirect compensation."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:ServiceProvision ;
     sw:term_status "accepted"@en .
 
@@ -2850,6 +3118,7 @@ dpvo:ServicePersonalization a owl:Class ;
         "Simon Steyskal"^^xsd:string ;
     dct:description "Personalise services or product or activities"@en ;
     rdfs:comment "Subclass of ServiceProvision since personalisation is usually considered part of providing services"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Personalisation,
         dpvo:ServiceProvision ;
     sw:term_status "accepted"@en .
@@ -2862,7 +3131,8 @@ dpvo:VendorManagement a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Manage orders, payment, evaluation, and prospecting related to vendors"@en ;
-    rdfs:isDefinedBy <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Purpose ;
     sw:term_status "accepted"@en .
 
@@ -2876,6 +3146,7 @@ dpvo:DataProcessingAgreement a owl:Class ;
         "Paul Ryan"^^xsd:string ;
     dct:description "An agreement outlining conditions, criteria, obligations, responsibilities, and specifics for carrying out processing of personal data"@en ;
     rdfs:comment "For specific role-based data processing agreements, see concepts for Processors and JointDataController agreements."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:LegalAgreement ;
     sw:term_status "accepted"@en .
 
@@ -2887,6 +3158,7 @@ dpvo:LegalAgreement a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "A legally binding agreement"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -2898,6 +3170,7 @@ dpvo:Marketing a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Conduct marketing in relation to organisation or products or services e.g. promoting, selling, and distributing"@en ;
     rdfs:comment "Was commercial interest, changed to consider Marketing a separate Purpose category by itself"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Purpose ;
     sw:term_status "accepted"@en .
 
@@ -2911,6 +3184,7 @@ dpvo:OptimisationForController a owl:Class ;
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
     dct:description "Optimize activities and services for provider or controller"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:ServiceOptimization ;
     sw:term_status "accepted"@en .
 
@@ -2922,7 +3196,8 @@ dpvo:OrganisationGovernance a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Conduct activities and functions for organisation's governance"@en ;
-    rdfs:isDefinedBy <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Purpose ;
     sw:term_status "accepted"@en .
 
@@ -2932,8 +3207,9 @@ dpvo:PersonalData a owl:Class ;
     dct:creator "Harshvardhan Pandit"^^xsd:string ;
     dct:description "Data directly or indirectly associated or related to an individual."@en ;
     dct:modified "2022-01-19"^^xsd:date ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_1/oj> ;
     rdfs:comment "This definition of personal data encompasses the concepts used in GDPR Art.4-1 for 'personal data' and ISO/IEC 2700 for 'personally identifiable information (PII)'."@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_1/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso spl:AnyData ;
     rdfs:subClassOf dpvo:Data ;
     sw:term_status "accepted"@en .
@@ -2945,9 +3221,10 @@ dpvo:Recipient a owl:Class ;
         "Javier Fernández"^^xsd:string ;
     dct:description "Entities that receive personal data"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
-    rdfs:comment "A recipient of personal data can be used to indicate any entity that receives personal data. This can be a Third Party, Processor (GDPR), or even a Controller."@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_9/oj>,
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_9/oj>,
         <https://www.specialprivacy.eu/> ;
+    rdfs:comment "A recipient of personal data can be used to indicate any entity that receives personal data. This can be a Third Party, Processor (GDPR), or even a Controller."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso spl:AnyRecipient ;
     rdfs:subClassOf dpvo:LegalEntity ;
     sw:term_status "accepted"@en .
@@ -2958,13 +3235,15 @@ dpvo:TechnicalOrganisationalMeasure a owl:Class ;
     dct:creator "Bud Bruegger"^^xsd:string ;
     dct:description "The Technical and Organisational measures used."@en ;
     dct:modified "2020-11-04"^^xsd:date ;
+    rdfs:isDefinedBy dpvo: ;
     sw:term_status "accepted"@en .
 
 dpvo:Use a owl:Class ;
     rdfs:label "Use"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to use data"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Processing ;
     sw:term_status "accepted"@en .
 
@@ -2979,8 +3258,9 @@ dpvo:hasRecipient a rdf:Property,
         "Mark Lizar"^^xsd:string ;
     dct:description "Indicates Recipient of Personal Data"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
+    dct:source <https://www.specialprivacy.eu/> ;
     rdfs:domain owl:Thing ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:Recipient ;
     rdfs:subPropertyOf dpvo:hasEntity ;
     sw:term_status "accepted"@en .
@@ -2997,6 +3277,7 @@ dpvo:hasTechnicalOrganisationalMeasure a rdf:Property,
     dct:description "Indicates use or applicability of Technical or Organisational measure"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:TechnicalOrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -3004,6 +3285,7 @@ dpvo:CustomerManagement a owl:Class ;
     rdfs:label "Customer Management"@en ;
     dct:created "2021-09-08"^^xsd:date ;
     dct:description "Manage past, current, and future customers"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Purpose ;
     sw:term_status "accepted"@en .
 
@@ -3011,7 +3293,8 @@ dpvo:Disclose a owl:Class ;
     rdfs:label "Disclose"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to make data known"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Processing ;
     sw:term_status "accepted"@en .
 
@@ -3023,6 +3306,7 @@ dpvo:StorageCondition a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Conditions required or followed regarding storage of data"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:ProcessingContext ;
     sw:term_status "accepted"@en .
 
@@ -3034,6 +3318,7 @@ dpvo:TechnicalMeasure a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Technical measures required/followed when processing data of the declared category"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:TechnicalOrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -3044,6 +3329,7 @@ dpvo:hasEntity a rdf:Property,
     dct:description "Indicates inclusion or applicability of an entity to some concept"@en ;
     rdfs:comment "parent property for controller, processor, data subject, authority, etc.?"@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:Entity ;
     sw:term_status "accepted"@en .
 
@@ -3054,6 +3340,7 @@ dpvo:Authority a owl:Class ;
         "Harshvardhan Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "An authority with the power to create or enforce laws, or determine their compliance."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:GovernmentalOrganisation,
         dpvo:LegalEntity ;
     sw:term_status "accepted"@en .
@@ -3063,6 +3350,7 @@ dpvo:Organisation a owl:Class ;
     dct:created "2022-02-02"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "A general term reflecting a company or a business or a group acting as a unit"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:LegalEntity ;
     sw:term_status "accepted"@en .
 
@@ -3076,12 +3364,7 @@ dpvo:Context a owl:Class ;
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
     dct:description "Contextually relevant information about purpose not possible to represent through other concepts"@en ;
-    sw:term_status "accepted"@en .
-
-dpvo:Entity a owl:Class ;
-    rdfs:label "Entity"@en ;
-    dct:created ""^^xsd:date ;
-    dct:description "A human or non-human 'thing' that constitutes as an entity"@en ;
+    rdfs:isDefinedBy dpvo: ;
     sw:term_status "accepted"@en .
 
 dpvo:Location a owl:Class ;
@@ -3089,6 +3372,7 @@ dpvo:Location a owl:Class ;
     dct:created "2022-01-19"^^xsd:date ;
     dct:description "A location is a position, site, or area where something is located"@en ;
     rdfs:comment "Location may be geographic, physical, or virtual."@en ;
+    rdfs:isDefinedBy dpvo: ;
     sw:term_status "accepted"@en .
 
 dpvo:ProcessingContext a owl:Class ;
@@ -3096,6 +3380,7 @@ dpvo:ProcessingContext a owl:Class ;
     dct:created "2022-02-09"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Context or conditions within which processing takes place"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Context ;
     sw:term_status "accepted"@en .
 
@@ -3103,7 +3388,8 @@ dpvo:Transform a owl:Class ;
     rdfs:label "Transform"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to change the form or nature of data"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Processing ;
     sw:term_status "accepted"@en .
 
@@ -3113,6 +3399,7 @@ dpvo:LegalBasis a owl:Class ;
     dct:description "The Legal basis used to justify processing of personal data"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:comment "Legal basis (plural: legal bases) are defined by legislations and regulations, whose applicability is usually restricted to specific jurisdictions."@en ;
+    rdfs:isDefinedBy dpvo: ;
     sw:term_status "accepted"@en .
 
 dpvo:LegalEntity a owl:Class ;
@@ -3120,6 +3407,7 @@ dpvo:LegalEntity a owl:Class ;
     dct:created "2019-04-05"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "A human or non-human 'thing' that constitutes as an entity and which is recognised and defined in law"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Entity ;
     sw:term_status "accepted"@en .
 
@@ -3133,6 +3421,7 @@ dpvo:ServiceProvision a owl:Class ;
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
     dct:description "Provide service or product or activities"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Purpose ;
     sw:term_status "accepted"@en .
 
@@ -3143,7 +3432,8 @@ dpvo:Processing a owl:Class ;
         "Javier Fernández"^^xsd:string ;
     dct:description "The processing performed on personal data"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+    dct:source <https://www.specialprivacy.eu/> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso spl:AnyProcessing ;
     sw:term_status "accepted"@en .
 
@@ -3155,6 +3445,7 @@ dpvo:OrganisationalMeasure a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Organisational measures required/followed when processing data of the declared category"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:TechnicalOrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -3165,7 +3456,8 @@ dpvo:Purpose a owl:Class ;
         "Javier Fernández"^^xsd:string ;
     dct:description "The purpose of processing personal data"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+    dct:source <https://www.specialprivacy.eu/> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso spl:AnyPurpose ;
     sw:term_status "accepted"@en .
 

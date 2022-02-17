@@ -15,6 +15,7 @@ dpvo:DataSubjectRight a owl:Class ;
         "Harshvardhan Pandit"^^xsd:string ;
     dct:description "The rights applicable or provided to a Data Subject"@en ;
     rdfs:comment "Based on use of definitions, the notion of 'Data Subject Right' can be equivalent to 'Individual Right' or 'Right of a Person'"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Right ;
     sw:term_status "accepted"@en .
 
@@ -30,6 +31,7 @@ dpvo:hasDataController a rdf:Property,
     dct:description "Indicates association with Data Controller"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:DataController ;
     sw:term_status "accepted"@en .
 
@@ -45,6 +47,7 @@ dpvo:hasDataSubject a rdf:Property,
     dct:description "Indicates association with Data Subject"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:DataSubject ;
     sw:term_status "accepted"@en .
 
@@ -57,6 +60,7 @@ dpvo:hasLegalBasis a rdf:Property,
     dct:description "Indicates use or applicability of a Legal Basis"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:LegalBasis ;
     sw:term_status "accepted"@en .
 
@@ -67,6 +71,7 @@ dpvo:hasPersonalData a rdf:Property,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Indicates association with Personal Data"@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:PersonalData ;
     sw:term_status "accepted"@en .
 
@@ -78,6 +83,7 @@ dpvo:hasPersonalDataHandling a rdf:Property,
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Indicates association with Personal Data Handling"@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:PersonalDataHandling ;
     sw:term_status "accepted"@en .
 
@@ -92,8 +98,9 @@ dpvo:hasProcessing a rdf:Property,
         "Mark Lizar"^^xsd:string ;
     dct:description "Indicates association with Processing"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
+    dct:source <https://www.specialprivacy.eu/> ;
     rdfs:domain owl:Thing ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:Processing ;
     sw:term_status "accepted"@en .
 
@@ -108,8 +115,9 @@ dpvo:hasPurpose a rdf:Property,
         "Mark Lizar"^^xsd:string ;
     dct:description "Indicates association with Purpose"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
+    dct:source <https://www.specialprivacy.eu/> ;
     rdfs:domain owl:Thing ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:Purpose ;
     sw:term_status "accepted"@en .
 
@@ -124,8 +132,9 @@ dpvo:hasRecipient a rdf:Property,
         "Mark Lizar"^^xsd:string ;
     dct:description "Indicates Recipient of Personal Data"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
+    dct:source <https://www.specialprivacy.eu/> ;
     rdfs:domain owl:Thing ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:Recipient ;
     sw:term_status "accepted"@en .
 
@@ -136,6 +145,7 @@ dpvo:hasRight a rdf:Property,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Indicates use or applicability of Right"@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:Right ;
     sw:term_status "accepted"@en .
 
@@ -146,6 +156,7 @@ dpvo:hasRisk a rdf:Property,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Indicates applicability of Risk"@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:Risk ;
     sw:term_status "accepted"@en .
 
@@ -161,6 +172,7 @@ dpvo:hasTechnicalOrganisationalMeasure a rdf:Property,
     dct:description "Indicates use or applicability of Technical or Organisational measure"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:TechnicalOrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -171,8 +183,9 @@ dpvo:DataController a owl:Class ;
         "Javier Fernández"^^xsd:string ;
     dct:description "The individual or organisation that decides (or controls) the purpose(s) of processing personal data."@en ;
     dct:modified "2020-11-04"^^xsd:date ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_7/oj> ;
     rdfs:comment "The terms 'Controller' is usually the more common form of indicating a Data Controller. In ISO/IEC the term 'PII Controller' is used."@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_7/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:LegalEntity ;
     sw:term_status "accepted"@en .
 
@@ -183,8 +196,9 @@ dpvo:DataSubject a owl:Class ;
         "Javier Fernández"^^xsd:string ;
     dct:description "The individual (or category of individuals) whose personal data is being processed"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_1/oj> ;
     rdfs:comment "The term 'data subject' is specific to the GDPR, but is functionally equivalent to the term 'individual' and the ISO/IEC term 'PII Principle'."@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_1/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:LegalEntity ;
     sw:term_status "accepted"@en .
 
@@ -194,6 +208,7 @@ dpvo:LegalBasis a owl:Class ;
     dct:description "The Legal basis used to justify processing of personal data"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:comment "Legal basis (plural: legal bases) are defined by legislations and regulations, whose applicability is usually restricted to specific jurisdictions."@en ;
+    rdfs:isDefinedBy dpvo: ;
     sw:term_status "accepted"@en .
 
 dpvo:PersonalData a owl:Class ;
@@ -202,8 +217,9 @@ dpvo:PersonalData a owl:Class ;
     dct:creator "Harshvardhan Pandit"^^xsd:string ;
     dct:description "Data directly or indirectly associated or related to an individual."@en ;
     dct:modified "2022-01-19"^^xsd:date ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_1/oj> ;
     rdfs:comment "This definition of personal data encompasses the concepts used in GDPR Art.4-1 for 'personal data' and ISO/IEC 2700 for 'personally identifiable information (PII)'."@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_1/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso spl:AnyData ;
     rdfs:subClassOf dpvo:Data ;
     sw:term_status "accepted"@en .
@@ -215,6 +231,7 @@ dpvo:PersonalDataHandling a owl:Class ;
         "Javier Fernández"^^xsd:string ;
     dct:description "A high-level Class to describe 'data handling'. This can consist of personal data being processed for a purpose, involving entities, using technical and organisational measures, applicable risks, rights, and legal basis."@en ;
     dct:modified "2020-11-04"^^xsd:date ;
+    rdfs:isDefinedBy dpvo: ;
     sw:term_status "accepted"@en .
 
 dpvo:Processing a owl:Class ;
@@ -224,7 +241,8 @@ dpvo:Processing a owl:Class ;
         "Javier Fernández"^^xsd:string ;
     dct:description "The processing performed on personal data"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+    dct:source <https://www.specialprivacy.eu/> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso spl:AnyProcessing ;
     sw:term_status "accepted"@en .
 
@@ -235,7 +253,8 @@ dpvo:Purpose a owl:Class ;
         "Javier Fernández"^^xsd:string ;
     dct:description "The purpose of processing personal data"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+    dct:source <https://www.specialprivacy.eu/> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso spl:AnyPurpose ;
     sw:term_status "accepted"@en .
 
@@ -246,9 +265,10 @@ dpvo:Recipient a owl:Class ;
         "Javier Fernández"^^xsd:string ;
     dct:description "Entities that receive personal data"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
-    rdfs:comment "A recipient of personal data can be used to indicate any entity that receives personal data. This can be a Third Party, Processor (GDPR), or even a Controller."@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_9/oj>,
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_9/oj>,
         <https://www.specialprivacy.eu/> ;
+    rdfs:comment "A recipient of personal data can be used to indicate any entity that receives personal data. This can be a Third Party, Processor (GDPR), or even a Controller."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso spl:AnyRecipient ;
     rdfs:subClassOf dpvo:LegalEntity ;
     sw:term_status "accepted"@en .
@@ -259,6 +279,7 @@ dpvo:Risk a owl:Class ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "A risk or possibility or uncertainty of negative effects, impacts, or consequences."@en ;
     rdfs:comment "Risks can be associated with one or more different concepts such as purpose, processing, personal data, technical or organisational measure."@en ;
+    rdfs:isDefinedBy dpvo: ;
     sw:term_status "accepted"@en .
 
 dpvo:TechnicalOrganisationalMeasure a owl:Class ;
@@ -267,6 +288,7 @@ dpvo:TechnicalOrganisationalMeasure a owl:Class ;
     dct:creator "Bud Bruegger"^^xsd:string ;
     dct:description "The Technical and Organisational measures used."@en ;
     dct:modified "2020-11-04"^^xsd:date ;
+    rdfs:isDefinedBy dpvo: ;
     sw:term_status "accepted"@en .
 
 dpvo:Right a owl:Class ;
@@ -277,5 +299,6 @@ dpvo:Right a owl:Class ;
         "Harshvardhan J Pandit"^^xsd:string ;
     dct:description "The right(s) applicable, provided, or expected."@en ;
     rdfs:comment "A 'right' is a legal, social, or ethical principle of freedom or entitlement which dictate the norms regarding what is allowed or owed.. Rights as a concept encompass a broad area of norms and entities, and are not specific to Individuals or Data Protection / Privacy. For individual specific rights, see dpv:DataSubjectRight"@en ;
+    rdfs:isDefinedBy dpvo: ;
     sw:term_status "accepted"@en .
 

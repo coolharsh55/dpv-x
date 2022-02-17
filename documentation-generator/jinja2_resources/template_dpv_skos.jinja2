@@ -147,7 +147,7 @@
         title: "Personal Data Categories Extension for DPV-SKOS"
       },
       "DPV-OWL": {
-        href: "https://www.w3id.org/dpv/dpv-owl",
+        href: "https://www.w3id.org/dpv/dpv-skos",
         title: "Data Privacy Vocabulary serialised using OWL2 (DPV-OWL)"
       },
       "DPV-Primer": {
@@ -294,8 +294,8 @@
 </head>
 <body>
     <section id="abstract">
-      <p>The Data Privacy Vocabulary [[DPV]] enables expressing machine-readable metadata about the use and processing of personal data based on legislative requirements such as the General Data Protection Regulation [[GDPR]]. This document acts as a ‘Primer’ for the DPV by introducing its fundamental concepts and providing examples of use-cases and applications. It is intended to be a starting point for those wishing to use the DPV and an orientation for people from all disciplines. The canonical URL for DPV is <a href="https://w3id.org/dpv">https://w3id.org/dpv#</a> which contains (this) specification.</p>
-      <p>The namespace for DPV terms is <a href="https://w3id.org/dpv#"><code>https://w3id.org/dpv#</code></a>, the suggested prefix for is <code>dpv</code>, and this document along with its various serializations are available on <a href="https://github.com/w3c/dpv">GitHub</a>.
+      <p>The Data Privacy Vocabulary [[DPV]] enables expressing machine-readable metadata about the use and processing of personal data based on legislative requirements such as the General Data Protection Regulation [[GDPR]]. This document describes the DPV-SKOS specification that provides the DPV as an RDFS ontology and using SKOS semantics to describe its hierarchies.</p>
+      <p>The canonical URL for DPV-SKOS is <a href="https://w3id.org/dpv/dpv-skos">https://w3id.org/dpv/dpv-skos#</a> which contains (this) specification. The namespace for DPV terms is <a href="https://w3id.org/dpv/dpv-skos#"><code>https://w3id.org/dpv/dpv-skos#</code></a>, the suggested prefix for is <code>dpvo</code>, and this document along with its various serializations are available on <a href="https://github.com/w3c/dpv">GitHub</a>.
       <p class="note">Newcomers to the DPV are <strong>strongly recommended to first read through the [[[DPV-Primer]]]</strong> to familiarise themselves with the semantics, concepts, their place within DPV.</p>
 
       <p><strong>DPV Family of Documents</strong></p>
@@ -375,10 +375,53 @@
       </div>
       <p>Serialisations of DPV and its modules are available on <a href="https://github.com/w3c/dpv">GitHub</a>.</p>
     </section>
+  <section id="dpvs-semantics">
+    <h2>DPV-SKOS Semantics</h2>
+    <p>As the earlier table outlined, this specification provides a serialisation of [[DPV]] by using RDFS to model the 'ontology' aspects and SKOS to model the 'hierarchy of concepts'. This is necessary to provide the ability to express information with greater flexibility than is permitted within the stricter semantics of OWL.</p>
+    <p>For example, consider the case where the <code>Purpose</code> is to be specified as <code>RequestedServiceProvision</code>. Given that ontologies, schemas, or data models should define domains and ranges for properties where applicable or suitable to enable their use within tools, for validation, inferences, and so on - it necessitates <code>RequestedServiceProvision</code> be an <i>instance</i> of <code>Purpose</code>. However, doing so prevents <code>RequestedServiceProvision</code> from being further extended, such as via <i>subclass mechanism</i>. While OWL2 permits <i>punning</i>, utilising it in this situation results in a large amount of assertions regarding each class being an instance of itself and of all its parent classes.</p>
+    <p>To prevent the above, and to provide the ability to express relationships between concepts whilst still permitting their usage with properties, this serialisation is designed where RDFS is used to express the basic structure or schema of the ontology i.e. the classes and properties, and SKOS is then utilised to express relationships between their instances. In this, each concept is defined as a <code>rdfs:Class</code> and a <code>skos:Concept</code> so that their usage can be applied based on either semantics. As a result, the taxonomies within DPV-SKOS are of two types:</p>
+    <ol>
+      <li>RDFS subclasses: these are classes with a subclass relationship to their parents.</li>
+      <li>SKOS broader (transitive): these are concepts that instances of a 'top concept' where relationship with 'parent' is defined using <code>skos:broaderTransitive</code> instead.</li>
+    </ol>
+    <figure>
+      <img src="img/semantics-01.png">
+      <figcaption>SKOS semantics providing ability to express relationships between concepts so that they can be used as value of properties</figcaption>
+    </figure>
+    <p>As an example, consider the <code>Purpose</code> taxonomy, part of which is illustrated in the figure above. Here, <code>ServiceProvision</code> and <code>RequestedServiceProvision</code> are part of the purpose hierarchy, where <i>RequestedServiceProvision</i> is a more specialised type of <i>ServiceProvision</i>. While DPV suggests best practice as extending (via subclass or instantiation) its concepts to make them specific to the applied use-case, this may not always be desired or required. Such as when the use-case wants to indicate its purpose is <code>RequestedServiceProvision</code> without additional details (e.g. for planning what they would like to do).</p>
+    <p>Instead, by declaring both these concepts as instances of <code>Purpose</code>, the property <code>hasPurpose</code> can be used to refer to either of them. To extend them, one must create another instance of <code>Purpose</code> and relate it to the closest concept within the hierarchy by using <code>skos:broaderTransitive</code> to indicate relevance.</p>
+    <aside class="example" title="Using the RDFS+SKOS semantics">
+    <pre class="nohighlight">
+ex:PDH a dpvs:PersonalDataHandling ;
+    dpvs:hasPurpose dpvs:RequestedServiceProvision .
+
+ex:PDH a dpvs:PersonalDataHandling ;
+    dpvs:hasPurpose ex:PurposeXYZ .
+ex:PurposeXYZ a dpvs:Purpose ;
+    skos:broaderTransitive dpvs:RequestedServiceProvision .
+
+# 'hacks that are invalid or no longer necessary
+
+# 1: Creating empty blank nodes to satisfy property range assertions
+ex:PDH a dpvs:PersonalDataHandling ;
+    dpvs:hasPurpose [ a dpvs:RequestedServiceProvision ] .
+
+# 2: Creating a node only to subclass existing concept
+ex:PDH a dpvs:PersonalDataHandling ;
+    dpvs:hasPurpose ex:Purpose XYZ .
+ex:PurposeXYZ rdfs:subClassOf dpvs:RequestedServiceProvision
+    </pre>
+    </aside>
+    <figure>
+      <img src="img/semantics-01.png">
+      <figcaption>SKOS semantics providing ability to express relationships between concepts so that they can be used as value of properties</figcaption>
+    </figure>
+    <p>Not all taxonomies make sense when expressed as an instance of a top concept. For example, consider the <i>Entities</i> taxonomy, where various entities are described as a hierarchy, as depicted in the figure above. In its case, it would not be accurate or correct to express relationships between instances such as <code>skos:broader dpvs:DataController</code>. For such cases, the expression of hierarchies continues to utilise the <code>rdfs:subClassOf</code> relationship to enforce the creation of specific instances representing that entity e.g. a specific data controller.</p>
+  </section>
   <section id="vocab-base">
     <h2>Base Vocabulary</h2>
     <figure>
-      <img title="DPV Base Vocabulary" alt="DPV base vocabulary" src="diagrams/personaldatahandling.png">
+    <img title="DPV Base Vocabulary" alt="DPV base vocabulary" src="/dpv/diagrams/personaldatahandling.png">
       <figcaption>Base Vocabulary</figcaption>
     </figure>
     <p>The 'Base' or 'Core' concepts in DPV represent the most relevant concepts for representing information regarding the what, how, where, who, why of personal data and its processing. Each of these concepts is further elaborated as a taxonomy of concepts in a hierarchical fashion. The DPV provides the following as 'top-level' concepts and relations to associate them with other concepts:</p>

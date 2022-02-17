@@ -2,6 +2,7 @@
 @prefix dpv: <https://w3id.org/dpv#> .
 @prefix dpv-pd: <https://w3id.org/dpv/pd#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix svd: <http://www.specialprivacy.eu/vocabs/data#> .
 @prefix sw: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
@@ -19,6 +20,7 @@
         "Fajar J. Ekaputra",
         "Georg P Krog",
         "Javier D. Fernández",
+        "Julian Flake",
         "Mark Lizar",
         "Paul Ryan",
         "Piero Bonatti",
@@ -30,6 +32,7 @@
     dct:creator "Axel Polleres",
         "Harshvardhan J. Pandit" ;
     dct:description "DPV-PD is an extension to the Data Privacy Vocabulary that provides additional terms related to Personal Data categories."@en ;
+    dct:license <https://www.w3.org/Consortium/Legal/2015/doc-license> ;
     dct:modified "2022-02-15"^^xsd:date ;
     dct:source <https://www.w3.org/community/dpvcg/> ;
     dct:title "DPV-PD: Personal Data Extension for DPV"@en ;
@@ -213,10 +216,11 @@ dpv-pd:Accent a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about linguistic and speech accents."@en ;
     skos:prefLabel "Accent"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Language .
 
 dpv-pd:Acquantaince a skos:Concept,
@@ -224,10 +228,11 @@ dpv-pd:Acquantaince a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about acquaintainces in a social network."@en ;
     skos:prefLabel "Acquantaince"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:SocialNetwork .
 
 dpv-pd:Age a skos:Concept,
@@ -235,10 +240,11 @@ dpv-pd:Age a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about age"@en ;
     skos:prefLabel "Age"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:PhysicalCharacteristic .
 
 dpv-pd:ApartmentOwned a skos:Concept,
@@ -246,10 +252,11 @@ dpv-pd:ApartmentOwned a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about apartment(s) owned and its history"@en ;
     skos:prefLabel "Apartment Owned"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:HouseOwned .
 
 dpv-pd:Association a skos:Concept,
@@ -257,10 +264,11 @@ dpv-pd:Association a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about associations in a social network with other individuals, groups, or entities e.g. friend of a friend"@en ;
     skos:prefLabel "Association"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:SocialNetwork .
 
 dpv-pd:Attitude a skos:Concept,
@@ -268,20 +276,22 @@ dpv-pd:Attitude a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about attitude."@en ;
     skos:prefLabel "Attitude"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Behavioral .
 
 dpv-pd:AuthenticationHistory a skos:Concept,
         dpv:Concept ;
     dct:created "2020-11-04"^^xsd:date ;
     dct:creator "Georg P Krog"^^xsd:string ;
+    dct:source <https://www.w3.org/community/dpvcg/> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about prior authentication and its outcomes such as login attempts or location."@en ;
     skos:prefLabel "Authentication History"@en ;
-    skos:scopeNote <https://www.w3.org/community/dpvcg/> ;
     dpv:isSubTypeOf dpv-pd:Behavioral .
 
 dpv-pd:BankAccount a skos:Concept,
@@ -289,10 +299,11 @@ dpv-pd:BankAccount a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about bank accounts."@en ;
     skos:prefLabel "Bank Account"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:FinancialAccount .
 
 dpv-pd:BloodType a skos:Concept,
@@ -300,10 +311,11 @@ dpv-pd:BloodType a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about blood type."@en ;
     skos:prefLabel "Blood Type"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:MedicalHealth .
 
 dpv-pd:BrowserFingerprint a skos:Concept,
@@ -311,20 +323,22 @@ dpv-pd:BrowserFingerprint a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about the web browser which is used as a 'fingerprint'"@en ;
     skos:prefLabel "Browser Fingerprint"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:DeviceBased .
 
 dpv-pd:BrowsingReferral a skos:Concept,
         dpv:Concept ;
     dct:created "2020-11-04"^^xsd:date ;
     dct:creator "Georg P Krog"^^xsd:string ;
+    dct:source <https://www.w3.org/community/dpvcg/> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about web browsing referrer or referral, which can be based on location, targeted referrals, direct, organic search, social media or actions, campaigns."@en ;
     skos:prefLabel "Browsing Referral"@en ;
-    skos:scopeNote <https://www.w3.org/community/dpvcg/> ;
     dpv:isSubTypeOf dpv-pd:BrowsingBehavior .
 
 dpv-pd:CallLog a skos:Concept,
@@ -332,10 +346,11 @@ dpv-pd:CallLog a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about the calls that an individual has made."@en ;
     skos:prefLabel "Call Log"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Behavioral .
 
 dpv-pd:CarOwned a skos:Concept,
@@ -343,10 +358,11 @@ dpv-pd:CarOwned a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about cars ownership and ownership history."@en ;
     skos:prefLabel "Car Owned"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Ownership .
 
 dpv-pd:Character a skos:Concept,
@@ -354,10 +370,11 @@ dpv-pd:Character a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about character in the public sphere"@en ;
     skos:prefLabel "Character"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:PublicLife .
 
 dpv-pd:CommunicationsMetadata a skos:Concept,
@@ -365,11 +382,12 @@ dpv-pd:CommunicationsMetadata a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about communication metadata in the public sphere"@en ;
     skos:prefLabel "Communications Metadata"@en ;
     skos:related svd:Interactive ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:PublicLife .
 
 dpv-pd:Connection a skos:Concept,
@@ -377,10 +395,11 @@ dpv-pd:Connection a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about and including connections in a social network"@en ;
     skos:prefLabel "Connection"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:SocialNetwork .
 
 dpv-pd:Country a skos:Concept,
@@ -388,10 +407,11 @@ dpv-pd:Country a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about country e.g. residence, travel."@en ;
     skos:prefLabel "Country"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Location .
 
 dpv-pd:CreditCapacity a skos:Concept,
@@ -399,10 +419,11 @@ dpv-pd:CreditCapacity a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about credit capacity."@en ;
     skos:prefLabel "Credit Capacity"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Credit .
 
 dpv-pd:CreditCardNumber a skos:Concept,
@@ -410,10 +431,11 @@ dpv-pd:CreditCardNumber a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about credit card number"@en ;
     skos:prefLabel "Credit Card Number"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:PaymentCardNumber .
 
 dpv-pd:CreditRecord a skos:Concept,
@@ -421,10 +443,11 @@ dpv-pd:CreditRecord a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about credit record."@en ;
     skos:prefLabel "Credit Record"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Credit .
 
 dpv-pd:CreditScore a skos:Concept,
@@ -432,10 +455,11 @@ dpv-pd:CreditScore a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about credit score."@en ;
     skos:prefLabel "Credit Score"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:CreditWorthiness .
 
 dpv-pd:CreditStanding a skos:Concept,
@@ -443,10 +467,11 @@ dpv-pd:CreditStanding a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about credit standing."@en ;
     skos:prefLabel "Credit Standing"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Credit .
 
 dpv-pd:CriminalCharge a skos:Concept,
@@ -454,10 +479,11 @@ dpv-pd:CriminalCharge a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about criminal charges."@en ;
     skos:prefLabel "Criminal Charge"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Criminal .
 
 dpv-pd:CriminalConviction a skos:Concept,
@@ -465,10 +491,11 @@ dpv-pd:CriminalConviction a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about criminal convictions."@en ;
     skos:prefLabel "Criminal Conviction"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Criminal .
 
 dpv-pd:CriminalPardon a skos:Concept,
@@ -476,10 +503,11 @@ dpv-pd:CriminalPardon a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about criminal pardons."@en ;
     skos:prefLabel "Criminal Pardon"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Criminal .
 
 dpv-pd:DNACode a skos:Concept,
@@ -487,10 +515,11 @@ dpv-pd:DNACode a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about DNA."@en ;
     skos:prefLabel "DNA Code"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:MedicalHealth .
 
 dpv-pd:Demeanor a skos:Concept,
@@ -498,10 +527,11 @@ dpv-pd:Demeanor a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about demeanor."@en ;
     skos:prefLabel "Demeanor"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Behavioral .
 
 dpv-pd:DeviceApplications a skos:Concept,
@@ -511,10 +541,11 @@ dpv-pd:DeviceApplications a skos:Concept,
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
+    dct:source <https://www.w3.org/community/dpvcg/> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about applications or application-like software on a device."@en ;
     skos:prefLabel "Device Applications"@en ;
-    skos:scopeNote <https://www.w3.org/community/dpvcg/> ;
     dpv:isSubTypeOf dpv-pd:DeviceSoftware .
 
 dpv-pd:DeviceOperatingSystem a skos:Concept,
@@ -524,10 +555,11 @@ dpv-pd:DeviceOperatingSystem a skos:Concept,
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
+    dct:source <https://www.w3.org/community/dpvcg/> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about the operating system (OS) or system software that manages hardware or software resources."@en ;
     skos:prefLabel "Device Operating System"@en ;
-    skos:scopeNote <https://www.w3.org/community/dpvcg/> ;
     dpv:isSubTypeOf dpv-pd:DeviceSoftware .
 
 dpv-pd:Dialect a skos:Concept,
@@ -535,10 +567,11 @@ dpv-pd:Dialect a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about linguistic dialects."@en ;
     skos:prefLabel "Dialect"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Language .
 
 dpv-pd:Disability a skos:Concept,
@@ -546,10 +579,11 @@ dpv-pd:Disability a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about disabilities."@en ;
     skos:prefLabel "Disability"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:MedicalHealth .
 
 dpv-pd:DisciplinaryAction a skos:Concept,
@@ -557,10 +591,11 @@ dpv-pd:DisciplinaryAction a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about disciplinary actions and its history"@en ;
     skos:prefLabel "Disciplinary Action"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Professional .
 
 dpv-pd:Dislike a skos:Concept,
@@ -568,10 +603,11 @@ dpv-pd:Dislike a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about dislikes or preferences regarding repulsions."@en ;
     skos:prefLabel "Dislike"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Interest .
 
 dpv-pd:Divorce a skos:Concept,
@@ -579,10 +615,11 @@ dpv-pd:Divorce a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about divorce(s)."@en ;
     skos:prefLabel "Divorce"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:FamilyStructure .
 
 dpv-pd:DrugTestResult a skos:Concept,
@@ -590,10 +627,11 @@ dpv-pd:DrugTestResult a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about drug test results."@en ;
     skos:prefLabel "Drug Test Result"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:MedicalHealth .
 
 dpv-pd:EmailAddress a skos:Concept,
@@ -601,10 +639,11 @@ dpv-pd:EmailAddress a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about Email address."@en ;
     skos:prefLabel "Email Address"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Contact .
 
 dpv-pd:EmailContent a skos:Concept,
@@ -612,10 +651,11 @@ dpv-pd:EmailContent a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about the contents of Emails sent or received"@en ;
     skos:prefLabel "Email Content"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Communication .
 
 dpv-pd:EmploymentHistory a skos:Concept,
@@ -623,10 +663,11 @@ dpv-pd:EmploymentHistory a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about employment history"@en ;
     skos:prefLabel "Employment History"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Professional .
 
 dpv-pd:EthnicOrigin a skos:Concept,
@@ -634,10 +675,11 @@ dpv-pd:EthnicOrigin a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about ethnic origin"@en ;
     skos:prefLabel "Ethnic Origin"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv:SpecialCategoryPersonalData,
         dpv-pd:Ethnicity .
 
@@ -646,10 +688,11 @@ dpv-pd:FamilyHealthHistory a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about family health history."@en ;
     skos:prefLabel "Family Health History"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:HealthHistory .
 
 dpv-pd:FavoriteColor a skos:Concept,
@@ -657,10 +700,11 @@ dpv-pd:FavoriteColor a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about favorite color."@en ;
     skos:prefLabel "Favorite Color"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Favorite .
 
 dpv-pd:FavoriteFood a skos:Concept,
@@ -668,10 +712,11 @@ dpv-pd:FavoriteFood a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about favorite food."@en ;
     skos:prefLabel "Favorite Food"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Favorite .
 
 dpv-pd:FavoriteMusic a skos:Concept,
@@ -679,10 +724,11 @@ dpv-pd:FavoriteMusic a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about favorite music."@en ;
     skos:prefLabel "Favorite Music"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Favorite .
 
 dpv-pd:Fetish a skos:Concept,
@@ -690,10 +736,11 @@ dpv-pd:Fetish a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information an individual's sexual fetishes"@en ;
     skos:prefLabel "Fetish"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Sexual .
 
 dpv-pd:FinancialAccountNumber a skos:Concept,
@@ -701,10 +748,11 @@ dpv-pd:FinancialAccountNumber a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about financial account number"@en ;
     skos:prefLabel "Financial Account Number"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:AccountIdentifier .
 
 dpv-pd:Fingerprint a skos:Concept,
@@ -712,10 +760,11 @@ dpv-pd:Fingerprint a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about fingerprint used for biometric purposes."@en ;
     skos:prefLabel "Fingerprint"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Biometric .
 
 dpv-pd:Friend a skos:Concept,
@@ -723,10 +772,11 @@ dpv-pd:Friend a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about friends in a social network, including aspects of friendships such as years together or nature of friendship."@en ;
     skos:prefLabel "Friend"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:SocialNetwork .
 
 dpv-pd:GPSCoordinate a skos:Concept,
@@ -734,10 +784,11 @@ dpv-pd:GPSCoordinate a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about location expressed using Global Position System coordinates (GPS)"@en ;
     skos:prefLabel "GPS Coordinate"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Location .
 
 dpv-pd:Gender a skos:Concept,
@@ -745,10 +796,11 @@ dpv-pd:Gender a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about gender"@en ;
     skos:prefLabel "Gender"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:PhysicalCharacteristic .
 
 dpv-pd:GeneralReputation a skos:Concept,
@@ -756,10 +808,11 @@ dpv-pd:GeneralReputation a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about reputation in the public sphere"@en ;
     skos:prefLabel "General Reputation"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:PublicLife .
 
 dpv-pd:Geographic a skos:Concept,
@@ -767,10 +820,11 @@ dpv-pd:Geographic a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about location or based on geography (e.g. home address)"@en ;
     skos:prefLabel "Geographic"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Demographic .
 
 dpv-pd:GroupMembership a skos:Concept,
@@ -778,10 +832,11 @@ dpv-pd:GroupMembership a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about groups and memberships included or associated with a social network"@en ;
     skos:prefLabel "Group Membership"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:SocialNetwork .
 
 dpv-pd:HairColor a skos:Concept,
@@ -789,10 +844,11 @@ dpv-pd:HairColor a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about hair color"@en ;
     skos:prefLabel "Hair Color"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:PhysicalCharacteristic .
 
 dpv-pd:HealthRecord a skos:Concept,
@@ -800,10 +856,11 @@ dpv-pd:HealthRecord a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about health record."@en ;
     skos:prefLabel "Health Record"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:MedicalHealth .
 
 dpv-pd:Height a skos:Concept,
@@ -811,10 +868,11 @@ dpv-pd:Height a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about physical height"@en ;
     skos:prefLabel "Height"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:PhysicalCharacteristic .
 
 dpv-pd:IPAddress a skos:Concept,
@@ -822,10 +880,11 @@ dpv-pd:IPAddress a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about the Internet protocol (IP) address of a device"@en ;
     skos:prefLabel "IP Address"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:DeviceBased .
 
 dpv-pd:Income a skos:Concept,
@@ -833,10 +892,11 @@ dpv-pd:Income a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about financial income e.g. for individual or household or family"@en ;
     skos:prefLabel "Income"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Transactional .
 
 dpv-pd:IncomeBracket a skos:Concept,
@@ -844,10 +904,11 @@ dpv-pd:IncomeBracket a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about income bracket."@en ;
     skos:prefLabel "Income Bracket"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Demographic .
 
 dpv-pd:IndividualHealthHistory a skos:Concept,
@@ -855,10 +916,11 @@ dpv-pd:IndividualHealthHistory a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about information health history."@en ;
     skos:prefLabel "Individual Health History"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:HealthHistory .
 
 dpv-pd:Intention a skos:Concept,
@@ -866,10 +928,11 @@ dpv-pd:Intention a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about intentions"@en ;
     skos:prefLabel "Intention"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Preference .
 
 dpv-pd:Interaction a skos:Concept,
@@ -877,10 +940,11 @@ dpv-pd:Interaction a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about interactions in the public sphere"@en ;
     skos:prefLabel "Interaction"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:PublicLife .
 
 dpv-pd:Job a skos:Concept,
@@ -888,10 +952,11 @@ dpv-pd:Job a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about professional jobs"@en ;
     skos:prefLabel "Job"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Professional .
 
 dpv-pd:LifeHistory a skos:Concept,
@@ -899,10 +964,11 @@ dpv-pd:LifeHistory a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about personal history regarding events or activities - including  their occurrences that might be directly related or have had an influence (e.g. World War, 9/11)"@en ;
     skos:prefLabel "Life History"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Historical .
 
 dpv-pd:Like a skos:Concept,
@@ -910,10 +976,11 @@ dpv-pd:Like a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about likes or preferences regarding attractions."@en ;
     skos:prefLabel "Like"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Interest .
 
 dpv-pd:LinkClicked a skos:Concept,
@@ -921,11 +988,12 @@ dpv-pd:LinkClicked a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about the links that an individual has clicked."@en ;
     skos:prefLabel "LinkClicked"@en ;
     skos:related svd:Navigation ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Behavioral .
 
 dpv-pd:LoanRecord a skos:Concept,
@@ -933,10 +1001,11 @@ dpv-pd:LoanRecord a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about loans, whether applied, provided or rejected, and its history"@en ;
     skos:prefLabel "Loan Record"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Transactional .
 
 dpv-pd:MACAddress a skos:Concept,
@@ -944,10 +1013,11 @@ dpv-pd:MACAddress a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about the Media Access Control (MAC) address of a device"@en ;
     skos:prefLabel "MAC Address"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:DeviceBased .
 
 dpv-pd:MaritalStatus a skos:Concept,
@@ -955,10 +1025,11 @@ dpv-pd:MaritalStatus a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about marital status and history"@en ;
     skos:prefLabel "Marital Status"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:PublicLife .
 
 dpv-pd:Marriage a skos:Concept,
@@ -966,10 +1037,11 @@ dpv-pd:Marriage a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about marriage(s)."@en ;
     skos:prefLabel "Marriage"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:FamilyStructure .
 
 dpv-pd:MentalHealth a skos:Concept,
@@ -977,10 +1049,11 @@ dpv-pd:MentalHealth a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about mental health."@en ;
     skos:prefLabel "Mental Health"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Health .
 
 dpv-pd:Name a skos:Concept,
@@ -988,10 +1061,11 @@ dpv-pd:Name a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about names associated or used as given name or nickname."@en ;
     skos:prefLabel "Name"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Identifying .
 
 dpv-pd:OfficialID a skos:Concept,
@@ -999,11 +1073,12 @@ dpv-pd:OfficialID a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about an official identifier or identification document"@en ;
     skos:prefLabel "Official ID"@en ;
     skos:related svd:Government ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Identifying .
 
 dpv-pd:Offspring a skos:Concept,
@@ -1011,10 +1086,11 @@ dpv-pd:Offspring a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about offspring(s)."@en ;
     skos:prefLabel "Offspring"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:FamilyStructure .
 
 dpv-pd:Opinion a skos:Concept,
@@ -1022,10 +1098,11 @@ dpv-pd:Opinion a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about opinions"@en ;
     skos:prefLabel "Opinion"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Preference .
 
 dpv-pd:PINCode a skos:Concept,
@@ -1033,10 +1110,11 @@ dpv-pd:PINCode a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about Personal identification number (PIN), which is usually used in the process of authenticating the individual as an user accessing a system."@en ;
     skos:prefLabel "PIN Code"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Authenticating .
 
 dpv-pd:Parent a skos:Concept,
@@ -1044,10 +1122,11 @@ dpv-pd:Parent a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about parent(s)."@en ;
     skos:prefLabel "Parent"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:FamilyStructure .
 
 dpv-pd:Password a skos:Concept,
@@ -1055,20 +1134,22 @@ dpv-pd:Password a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about password used in the process of authenticating the individual as an user accessing a system."@en ;
     skos:prefLabel "Password"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Authenticating .
 
 dpv-pd:PaymentCardExpiry a skos:Concept,
         dpv:Concept ;
     dct:created "2020-11-04"^^xsd:date ;
     dct:creator "Georg P Krog"^^xsd:string ;
+    dct:source <https://www.w3.org/community/dpvcg/> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about payment card expiry such as a date."@en ;
     skos:prefLabel "Payment Card Expiry"@en ;
-    skos:scopeNote <https://www.w3.org/community/dpvcg/> ;
     dpv:isSubTypeOf dpv-pd:PaymentCard .
 
 dpv-pd:PersonalPossession a skos:Concept,
@@ -1076,10 +1157,11 @@ dpv-pd:PersonalPossession a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about personal possessions."@en ;
     skos:prefLabel "Personal Possession"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Ownership .
 
 dpv-pd:Personality a skos:Concept,
@@ -1087,10 +1169,11 @@ dpv-pd:Personality a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about personality (e.g., categorization in terms of the Big Five personality traits)"@en ;
     skos:prefLabel "Personality"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Behavioral .
 
 dpv-pd:PhilosophicalBelief a skos:Concept,
@@ -1098,10 +1181,11 @@ dpv-pd:PhilosophicalBelief a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about philosophical beliefs."@en ;
     skos:prefLabel "Philosophical Belief"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv:SpecialCategoryPersonalData,
         dpv-pd:KnowledgeBelief .
 
@@ -1110,10 +1194,11 @@ dpv-pd:PhysicalAddress a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about physical address."@en ;
     skos:prefLabel "Physical Address"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Contact .
 
 dpv-pd:PhysicalHealth a skos:Concept,
@@ -1121,10 +1206,11 @@ dpv-pd:PhysicalHealth a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about physical health."@en ;
     skos:prefLabel "Physical Health"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Health .
 
 dpv-pd:PhysicalTrait a skos:Concept,
@@ -1132,10 +1218,11 @@ dpv-pd:PhysicalTrait a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about defining traits or features regarding the body."@en ;
     skos:prefLabel "Physical Trait"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Demographic .
 
 dpv-pd:Picture a skos:Concept,
@@ -1143,10 +1230,11 @@ dpv-pd:Picture a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about visual representation or image e.g. profile photo."@en ;
     skos:prefLabel "Picture"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Identifying .
 
 dpv-pd:Piercing a skos:Concept,
@@ -1154,10 +1242,11 @@ dpv-pd:Piercing a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about piercings"@en ;
     skos:prefLabel "Piercing"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:PhysicalCharacteristic .
 
 dpv-pd:PoliticalAffiliation a skos:Concept,
@@ -1165,11 +1254,12 @@ dpv-pd:PoliticalAffiliation a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about political affiliation and history"@en ;
     skos:prefLabel "Political Affiliation"@en ;
     skos:related svd:Political ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv:SpecialCategoryPersonalData,
         dpv-pd:PublicLife .
 
@@ -1178,10 +1268,11 @@ dpv-pd:Prescription a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about medical and pharmaceutical prescriptions"@en ;
     skos:prefLabel "Prescription"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:MedicalHealth .
 
 dpv-pd:PrivacyPreference a skos:Concept,
@@ -1189,10 +1280,11 @@ dpv-pd:PrivacyPreference a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about privacy preferences"@en ;
     skos:prefLabel "Privacy Preference"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Preference .
 
 dpv-pd:Proclivitie a skos:Concept,
@@ -1200,10 +1292,11 @@ dpv-pd:Proclivitie a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about proclivities in a sexual context"@en ;
     skos:prefLabel "Proclivitie"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Sexual .
 
 dpv-pd:ProfessionalCertification a skos:Concept,
@@ -1211,10 +1304,11 @@ dpv-pd:ProfessionalCertification a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about professional certifications"@en ;
     skos:prefLabel "Professional Certification"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Professional .
 
 dpv-pd:ProfessionalEvaluation a skos:Concept,
@@ -1222,10 +1316,11 @@ dpv-pd:ProfessionalEvaluation a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about professional evaluations"@en ;
     skos:prefLabel "Professional Evaluation"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Professional .
 
 dpv-pd:ProfessionalInterview a skos:Concept,
@@ -1233,10 +1328,11 @@ dpv-pd:ProfessionalInterview a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about professional interviews"@en ;
     skos:prefLabel "Professional Interview"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Professional .
 
 dpv-pd:Purchase a skos:Concept,
@@ -1244,11 +1340,12 @@ dpv-pd:Purchase a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about purchases such as items bought e.g. grocery or clothing"@en ;
     skos:prefLabel "Purchase"@en ;
     skos:related svd:Purchase ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Transactional .
 
 dpv-pd:PurchasesAndSpendingHabit a skos:Concept,
@@ -1256,10 +1353,11 @@ dpv-pd:PurchasesAndSpendingHabit a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about analysis of purchases made and money spent expressed as a habit e.g. monthly shopping trends"@en ;
     skos:prefLabel "Purchases and Spending Habit"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Transactional .
 
 dpv-pd:Race a skos:Concept,
@@ -1267,10 +1365,11 @@ dpv-pd:Race a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about race or racial history."@en ;
     skos:prefLabel "Race"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv:SpecialCategoryPersonalData,
         dpv-pd:Ethnicity .
 
@@ -1279,10 +1378,11 @@ dpv-pd:Reference a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about references in the professional context"@en ;
     skos:prefLabel "Reference"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Professional .
 
 dpv-pd:Relationship a skos:Concept,
@@ -1290,10 +1390,11 @@ dpv-pd:Relationship a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about relationships and relationship history."@en ;
     skos:prefLabel "Relationship"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Family .
 
 dpv-pd:Religion a skos:Concept,
@@ -1301,10 +1402,11 @@ dpv-pd:Religion a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about religion, religious inclinations, and religious history."@en ;
     skos:prefLabel "Religion"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv:SpecialCategoryPersonalData,
         dpv-pd:PublicLife .
 
@@ -1313,10 +1415,11 @@ dpv-pd:ReligiousBelief a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about religion and religious beliefs."@en ;
     skos:prefLabel "Religious Belief"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv:SpecialCategoryPersonalData,
         dpv-pd:KnowledgeBelief .
 
@@ -1325,10 +1428,11 @@ dpv-pd:Retina a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about retina and the retinal patterns."@en ;
     skos:prefLabel "Retina"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Biometric .
 
 dpv-pd:RoomNumber a skos:Concept,
@@ -1336,10 +1440,11 @@ dpv-pd:RoomNumber a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about location expressed as Room number or similar numbering systems"@en ;
     skos:prefLabel "Room Number"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Location .
 
 dpv-pd:Salary a skos:Concept,
@@ -1347,10 +1452,11 @@ dpv-pd:Salary a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about salary"@en ;
     skos:prefLabel "Salary"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Professional .
 
 dpv-pd:Sale a skos:Concept,
@@ -1358,10 +1464,11 @@ dpv-pd:Sale a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about sales e.g. selling of goods or services"@en ;
     skos:prefLabel "Sale"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Transactional .
 
 dpv-pd:School a skos:Concept,
@@ -1369,10 +1476,11 @@ dpv-pd:School a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about school such as name of school, conduct, or grades obtained."@en ;
     skos:prefLabel "School"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Professional .
 
 dpv-pd:SecretText a skos:Concept,
@@ -1380,10 +1488,11 @@ dpv-pd:SecretText a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about secret text used in the process of authenticating the individual as an user accessing a system, e.g., when recovering a lost password."@en ;
     skos:prefLabel "Secret Text"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Authenticating .
 
 dpv-pd:SexualHistory a skos:Concept,
@@ -1391,10 +1500,11 @@ dpv-pd:SexualHistory a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about sexual history"@en ;
     skos:prefLabel "Sexual History"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Sexual .
 
 dpv-pd:SexualPreference a skos:Concept,
@@ -1402,10 +1512,11 @@ dpv-pd:SexualPreference a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about sexual preferences"@en ;
     skos:prefLabel "Sexual Preference"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Sexual .
 
 dpv-pd:Sibling a skos:Concept,
@@ -1413,10 +1524,11 @@ dpv-pd:Sibling a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about sibling(s)."@en ;
     skos:prefLabel "Sibling"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:FamilyStructure .
 
 dpv-pd:SkinTone a skos:Concept,
@@ -1424,10 +1536,11 @@ dpv-pd:SkinTone a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about skin tone"@en ;
     skos:prefLabel "Skin Tone"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:PhysicalCharacteristic .
 
 dpv-pd:SocialMediaCommunication a skos:Concept,
@@ -1435,11 +1548,12 @@ dpv-pd:SocialMediaCommunication a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about social media communication, including the communication itself and metadata."@en ;
     skos:prefLabel "Social Media Communication"@en ;
     skos:related svd:Social ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Communication .
 
 dpv-pd:SocialStatus a skos:Concept,
@@ -1447,10 +1561,11 @@ dpv-pd:SocialStatus a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about social status"@en ;
     skos:prefLabel "Social Status"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:PublicLife .
 
 dpv-pd:TVViewingBehavior a skos:Concept,
@@ -1458,10 +1573,11 @@ dpv-pd:TVViewingBehavior a skos:Concept,
     dct:created "2019-11-26"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Rudy Jacob"^^xsd:string ;
+    dct:source <https://www.specialprivacy.eu/> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about TV viewing Behavior, such as timestamps of channel change, duration of viewership, content consumed"@en ;
     skos:prefLabel "TV Viewing Behavior"@en ;
-    skos:scopeNote <https://www.specialprivacy.eu/> ;
     dpv:isSubTypeOf dpv-pd:ServiceConsumptionBehavior .
 
 dpv-pd:Tattoo a skos:Concept,
@@ -1469,10 +1585,11 @@ dpv-pd:Tattoo a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about tattoos"@en ;
     skos:prefLabel "Tattoo"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:PhysicalCharacteristic .
 
 dpv-pd:Tax a skos:Concept,
@@ -1480,10 +1597,11 @@ dpv-pd:Tax a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about financial tax e.g. tax records or tax due"@en ;
     skos:prefLabel "Tax"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Transactional .
 
 dpv-pd:TelephoneNumber a skos:Concept,
@@ -1491,10 +1609,11 @@ dpv-pd:TelephoneNumber a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about telephone number."@en ;
     skos:prefLabel "Telephone Number"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Contact .
 
 dpv-pd:Thought a skos:Concept,
@@ -1502,10 +1621,11 @@ dpv-pd:Thought a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about thoughts"@en ;
     skos:prefLabel "Thought"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:KnowledgeBelief .
 
 dpv-pd:Transaction a skos:Concept,
@@ -1513,10 +1633,11 @@ dpv-pd:Transaction a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about financial transactions e.g. bank transfers"@en ;
     skos:prefLabel "Transaction"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Transactional .
 
 dpv-pd:UID a skos:Concept,
@@ -1524,11 +1645,12 @@ dpv-pd:UID a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about unique identifiers."@en ;
     skos:prefLabel "UID"@en ;
     skos:related svd:UniqueId ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Identifying .
 
 dpv-pd:Username a skos:Concept,
@@ -1536,10 +1658,11 @@ dpv-pd:Username a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about usernames."@en ;
     skos:prefLabel "Username"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Identifying .
 
 dpv-pd:VoiceCommunicationRecording a skos:Concept,
@@ -1547,10 +1670,11 @@ dpv-pd:VoiceCommunicationRecording a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about vocal recorded communication (e.g. telephony, VoIP)"@en ;
     skos:prefLabel "Voice Communication Recording"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Communication .
 
 dpv-pd:VoiceMail a skos:Concept,
@@ -1558,10 +1682,11 @@ dpv-pd:VoiceMail a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about voice mail messages."@en ;
     skos:prefLabel "Voice Mail"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Communication .
 
 dpv-pd:Weight a skos:Concept,
@@ -1569,10 +1694,11 @@ dpv-pd:Weight a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about physical weight"@en ;
     skos:prefLabel "Weight"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:PhysicalCharacteristic .
 
 dpv-pd:WorkHistory a skos:Concept,
@@ -1580,10 +1706,11 @@ dpv-pd:WorkHistory a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about work history in a professional context"@en ;
     skos:prefLabel "Work History"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Professional .
 
 dpv-pd:BrowsingBehavior a skos:Concept,
@@ -1591,11 +1718,12 @@ dpv-pd:BrowsingBehavior a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about browsing Behavior."@en ;
     skos:prefLabel "Browsing Behavior"@en ;
     skos:related svd:OnlineActivity ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Behavioral .
 
 dpv-pd:CreditWorthiness a skos:Concept,
@@ -1603,10 +1731,11 @@ dpv-pd:CreditWorthiness a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about credit worthiness."@en ;
     skos:prefLabel "Credit Worthiness"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Credit .
 
 dpv-pd:Historical a skos:Concept,
@@ -1614,10 +1743,11 @@ dpv-pd:Historical a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about historical data related to or relevant regarding history or past events"@en ;
     skos:prefLabel "Historical"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv:PersonalData .
 
 dpv-pd:HouseOwned a skos:Concept,
@@ -1625,20 +1755,22 @@ dpv-pd:HouseOwned a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about house(s) owned and ownership history."@en ;
     skos:prefLabel "House Owned"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Ownership .
 
 dpv-pd:PaymentCardNumber a skos:Concept,
         dpv:Concept ;
     dct:created "2020-11-04"^^xsd:date ;
     dct:creator "Georg P Krog"^^xsd:string ;
+    dct:source <https://www.w3.org/community/dpvcg/> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about payment card number."@en ;
     skos:prefLabel "Payment Card Number"@en ;
-    skos:scopeNote <https://www.w3.org/community/dpvcg/> ;
     dpv:isSubTypeOf dpv-pd:AccountIdentifier,
         dpv-pd:PaymentCard .
 
@@ -1647,10 +1779,11 @@ dpv-pd:ServiceConsumptionBehavior a skos:Concept,
     dct:created "2019-11-26"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Rudy Jacob"^^xsd:string ;
+    dct:source <https://www.specialprivacy.eu/> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about the consumption of a service, e.g. time and duration of consumption."@en ;
     skos:prefLabel "Service Consumption Behavior"@en ;
-    skos:scopeNote <https://www.specialprivacy.eu/> ;
     dpv:isSubTypeOf dpv-pd:Behavioral .
 
 dpv-pd:AccountIdentifier a skos:Concept,
@@ -1658,10 +1791,11 @@ dpv-pd:AccountIdentifier a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about financial account identifier."@en ;
     skos:prefLabel "Account Identifier"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:FinancialAccount .
 
 dpv-pd:Biometric a skos:Concept,
@@ -1669,10 +1803,11 @@ dpv-pd:Biometric a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about biometrics and biometric characteristics."@en ;
     skos:prefLabel "Biometric"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv:SpecialCategoryPersonalData,
         dpv-pd:Identifying .
 
@@ -1683,10 +1818,11 @@ dpv-pd:DeviceSoftware a skos:Concept,
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
+    dct:source <https://www.w3.org/community/dpvcg/> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about software on or related to a device."@en ;
     skos:prefLabel "Device Software"@en ;
-    skos:scopeNote <https://www.w3.org/community/dpvcg/> ;
     dpv:isSubTypeOf dpv-pd:DeviceBased .
 
 dpv-pd:Family a skos:Concept,
@@ -1694,10 +1830,11 @@ dpv-pd:Family a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about family and relationships"@en ;
     skos:prefLabel "Family"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Social .
 
 dpv-pd:Health a skos:Concept,
@@ -1705,11 +1842,12 @@ dpv-pd:Health a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about health."@en ;
     skos:prefLabel "Health"@en ;
     skos:related svd:Health ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:MedicalHealth .
 
 dpv-pd:HealthHistory a skos:Concept,
@@ -1717,10 +1855,11 @@ dpv-pd:HealthHistory a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about health history."@en ;
     skos:prefLabel "Health History"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:MedicalHealth .
 
 dpv-pd:Interest a skos:Concept,
@@ -1728,10 +1867,11 @@ dpv-pd:Interest a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about interests"@en ;
     skos:prefLabel "Interest"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Preference .
 
 dpv-pd:Language a skos:Concept,
@@ -1739,20 +1879,22 @@ dpv-pd:Language a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about language and lingual history."@en ;
     skos:prefLabel "Language"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Ethnicity .
 
 dpv-pd:PaymentCard a skos:Concept,
         dpv:Concept ;
     dct:created "2020-11-04"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:source <https://www.w3.org/community/dpvcg/> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about payment card such as Credit Card, Debit Card."@en ;
     skos:prefLabel "Payment Card"@en ;
-    skos:scopeNote <https://www.w3.org/community/dpvcg/> ;
     dpv:isSubTypeOf dpv-pd:FinancialAccount .
 
 dpv-pd:Authenticating a skos:Concept,
@@ -1760,10 +1902,11 @@ dpv-pd:Authenticating a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about authentication and information used for authenticating"@en ;
     skos:prefLabel "Authenticating"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Internal .
 
 dpv-pd:Contact a skos:Concept,
@@ -1771,11 +1914,12 @@ dpv-pd:Contact a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about contacts or used for contacting e.g. email address or phone number"@en ;
     skos:prefLabel "Contact"@en ;
     skos:related svd:Physical ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Tracking .
 
 dpv-pd:Criminal a skos:Concept,
@@ -1783,11 +1927,12 @@ dpv-pd:Criminal a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about criminal activity e.g. criminal convictions or jail time"@en ;
     skos:prefLabel "Criminal"@en ;
     skos:related svd:Judicial ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Social .
 
 dpv-pd:Demographic a skos:Concept,
@@ -1795,10 +1940,11 @@ dpv-pd:Demographic a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about demography and demographic characteristics"@en ;
     skos:prefLabel "Demographic"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:External .
 
 dpv-pd:Ethnicity a skos:Concept,
@@ -1806,10 +1952,11 @@ dpv-pd:Ethnicity a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about ethnic origins and lineage"@en ;
     skos:prefLabel "Ethnicity"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:External .
 
 dpv-pd:Favorite a skos:Concept,
@@ -1817,10 +1964,11 @@ dpv-pd:Favorite a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about favorites"@en ;
     skos:prefLabel "Favorite"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Preference .
 
 dpv-pd:Financial a skos:Concept,
@@ -1828,11 +1976,12 @@ dpv-pd:Financial a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about finance including monetary characteristics and transactions"@en ;
     skos:prefLabel "Financial"@en ;
     skos:related svd:Financial ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv:PersonalData .
 
 dpv-pd:FinancialAccount a skos:Concept,
@@ -1840,10 +1989,11 @@ dpv-pd:FinancialAccount a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about financial accounts."@en ;
     skos:prefLabel "Financial Account"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Financial .
 
 dpv-pd:Internal a skos:Concept,
@@ -1851,10 +2001,11 @@ dpv-pd:Internal a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Informatoin about internal characteristics that cannot be seen or observed"@en ;
     skos:prefLabel "Internal"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv:PersonalData .
 
 dpv-pd:KnowledgeBelief a skos:Concept,
@@ -1862,10 +2013,11 @@ dpv-pd:KnowledgeBelief a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about knowledge and beliefs"@en ;
     skos:prefLabel "Knowledge and Beliefs"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Internal .
 
 dpv-pd:Location a skos:Concept,
@@ -1873,11 +2025,12 @@ dpv-pd:Location a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about location"@en ;
     skos:prefLabel "Location"@en ;
     skos:related svd:Location ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Tracking .
 
 dpv-pd:Ownership a skos:Concept,
@@ -1885,10 +2038,11 @@ dpv-pd:Ownership a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about ownership and history, including renting, borrowing, possessions."@en ;
     skos:prefLabel "Ownership"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Financial .
 
 dpv-pd:Tracking a skos:Concept,
@@ -1896,10 +2050,11 @@ dpv-pd:Tracking a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information used to track an individual or group e.g. location or email"@en ;
     skos:prefLabel "Tracking"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv:PersonalData .
 
 dpv-pd:Communication a skos:Concept,
@@ -1907,10 +2062,11 @@ dpv-pd:Communication a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information communicated from or to an individual"@en ;
     skos:prefLabel "Communication"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Social .
 
 dpv-pd:Credit a skos:Concept,
@@ -1918,10 +2074,11 @@ dpv-pd:Credit a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about reputation with regards to money"@en ;
     skos:prefLabel "Credit"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Transactional .
 
 dpv-pd:DeviceBased a skos:Concept,
@@ -1929,11 +2086,12 @@ dpv-pd:DeviceBased a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about devices"@en ;
     skos:prefLabel "Device Based"@en ;
     skos:related svd:Computer ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Tracking .
 
 dpv-pd:Sexual a skos:Concept,
@@ -1941,10 +2099,11 @@ dpv-pd:Sexual a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about sexuality and sexual history"@en ;
     skos:prefLabel "Sexual"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv:SpecialCategoryPersonalData,
         dpv-pd:External .
 
@@ -1953,10 +2112,11 @@ dpv-pd:FamilyStructure a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about family and familial structure."@en ;
     skos:prefLabel "Family Structure"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Family .
 
 dpv-pd:Preference a skos:Concept,
@@ -1964,11 +2124,12 @@ dpv-pd:Preference a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about preferences or interests"@en ;
     skos:prefLabel "Preference"@en ;
     skos:related svd:Preference ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Internal .
 
 dpv-pd:SocialNetwork a skos:Concept,
@@ -1976,10 +2137,11 @@ dpv-pd:SocialNetwork a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about friends or connections expressed as a social network"@en ;
     skos:prefLabel "Social Network"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Social .
 
 dpv-pd:Identifying a skos:Concept,
@@ -1987,10 +2149,11 @@ dpv-pd:Identifying a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information that uniquely or semi-uniquely identifies an individual or a group"@en ;
     skos:prefLabel "Identifying"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:External .
 
 dpv-pd:Social a skos:Concept,
@@ -1998,10 +2161,11 @@ dpv-pd:Social a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about social aspects such as family, public life, or professional networks."@en ;
     skos:prefLabel "Social"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv:PersonalData .
 
 dpv-pd:External a skos:Concept,
@@ -2009,10 +2173,11 @@ dpv-pd:External a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about external characteristics that can be observed"@en ;
     skos:prefLabel "External"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv:PersonalData .
 
 dpv-pd:Behavioral a skos:Concept,
@@ -2020,11 +2185,12 @@ dpv-pd:Behavioral a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about Behavior or activity"@en ;
     skos:prefLabel "Behavioral"@en ;
     skos:related svd:Activity ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:External .
 
 dpv-pd:MedicalHealth a skos:Concept,
@@ -2032,10 +2198,11 @@ dpv-pd:MedicalHealth a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about health, medical conditions or health care"@en ;
     skos:prefLabel "MedicalHealth"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv:SpecialCategoryPersonalData,
         dpv-pd:External .
 
@@ -2044,11 +2211,12 @@ dpv-pd:PhysicalCharacteristic a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about physical characteristics"@en ;
     skos:prefLabel "PhysicalCharacteristic"@en ;
     skos:related svd:Demographic ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:External .
 
 dpv-pd:PublicLife a skos:Concept,
@@ -2056,10 +2224,11 @@ dpv-pd:PublicLife a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about public life"@en ;
     skos:prefLabel "Public Life"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Social .
 
 dpv-pd:Transactional a skos:Concept,
@@ -2067,10 +2236,11 @@ dpv-pd:Transactional a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about a purchasing, spending or income"@en ;
     skos:prefLabel "Transactional"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Financial .
 
 dpv-pd:Professional a skos:Concept,
@@ -2078,9 +2248,10 @@ dpv-pd:Professional a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about educational or professional career"@en ;
     skos:prefLabel "Professional"@en ;
-    skos:scopeNote <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     dpv:isSubTypeOf dpv-pd:Social .
 

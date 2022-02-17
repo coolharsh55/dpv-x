@@ -11,7 +11,8 @@ dpvo-gdpr:AdHocContractualClauses a owl:Class ;
     dct:created "2021-09-22"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Contractual Clauses not drafted by the EU Commission, e.g. by the Controller"@en ;
-    rdfs:isDefinedBy <https://edpb.europa.eu/system/files/2021-06/edpb_recommendations_202001vo.2.0_supplementarymeasurestransferstools_en.pdf> ;
+    dct:source <https://edpb.europa.eu/system/files/2021-06/edpb_recommendations_202001vo.2.0_supplementarymeasurestransferstools_en.pdf> ;
+    rdfs:isDefinedBy dpvo-gdpr: ;
     rdfs:subClassOf dpvo:Contract,
         dpvo-gdpr:DataTransferTool ;
     sw:term_status "accepted"@en .
@@ -24,7 +25,8 @@ dpvo-gdpr:BindingCorporateRules a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Binding corporate rules (BCR) are data protection policies adhered to by companies established in the EU for transfers of personal data outside the EU within a group of undertakings or enterprises."@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_20/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_20/oj> ;
+    rdfs:isDefinedBy dpvo-gdpr: ;
     rdfs:subClassOf dpvo-gdpr:DataTransferTool ;
     sw:term_status "accepted"@en .
 
@@ -33,7 +35,8 @@ dpvo-gdpr:CertificationMechanismsForDataTransfers a owl:Class ;
     dct:created "2021-09-22"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Certification and its binding or specified mechanisms intended to provide sufficient safeguards for data transfers"@en ;
-    rdfs:isDefinedBy <https://edpb.europa.eu/system/files/2021-06/edpb_recommendations_202001vo.2.0_supplementarymeasurestransferstools_en.pdf> ;
+    dct:source <https://edpb.europa.eu/system/files/2021-06/edpb_recommendations_202001vo.2.0_supplementarymeasurestransferstools_en.pdf> ;
+    rdfs:isDefinedBy dpvo-gdpr: ;
     rdfs:subClassOf dpvo-gdpr:DataTransferTool ;
     sw:term_status "accepted"@en .
 
@@ -42,7 +45,8 @@ dpvo-gdpr:CodesOfConductForDataTransfers a owl:Class ;
     dct:created "2021-09-22"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Codes of Conduct that outline sufficient safeguards for carrying out data transfers"@en ;
-    rdfs:isDefinedBy <https://edpb.europa.eu/system/files/2021-06/edpb_recommendations_202001vo.2.0_supplementarymeasurestransferstools_en.pdf> ;
+    dct:source <https://edpb.europa.eu/system/files/2021-06/edpb_recommendations_202001vo.2.0_supplementarymeasurestransferstools_en.pdf> ;
+    rdfs:isDefinedBy dpvo-gdpr: ;
     rdfs:subClassOf dpvo-gdpr:DataTransferTool ;
     sw:term_status "accepted"@en .
 
@@ -54,7 +58,8 @@ dpvo-gdpr:SCCByCommission a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Standard contractual clauses adopted by the Commission in accordance with the examination procedure referred to in GDPR Article 93(2)"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_46/par_2/pnt_c/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_46/par_2/pnt_c/oj> ;
+    rdfs:isDefinedBy dpvo-gdpr: ;
     rdfs:subClassOf dpvo-gdpr:StandardContractualClauses ;
     sw:term_status "accepted"@en .
 
@@ -66,7 +71,8 @@ dpvo-gdpr:SCCBySupervisoryAuthority a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Standard data protection clauses adopted by a supervisory authority and approved by the Commission pursuant to the examination procedure referred to in GDPR Article 93(2)"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_46/par_2/pnt_d/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_46/par_2/pnt_d/oj> ;
+    rdfs:isDefinedBy dpvo-gdpr: ;
     rdfs:subClassOf dpvo-gdpr:StandardContractualClauses ;
     sw:term_status "accepted"@en .
 
@@ -77,7 +83,8 @@ dpvo-gdpr:SupplementaryMeasure a owl:Class ;
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Supplementary measures are intended to additionally provide safeguards or guarentees to bring the resulting protection in line with EU requirements"@en ;
-    rdfs:isDefinedBy <https://edpb.europa.eu/system/files/2021-06/edpb_recommendations_202001vo.2.0_supplementarymeasurestransferstools_en.pdf> ;
+    dct:source <https://edpb.europa.eu/system/files/2021-06/edpb_recommendations_202001vo.2.0_supplementarymeasurestransferstools_en.pdf> ;
+    rdfs:isDefinedBy dpvo-gdpr: ;
     rdfs:subClassOf dpvo:TechnicalOrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -89,7 +96,8 @@ dpvo-gdpr:StandardContractualClauses a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Standard Contractual Clauses (SCCs) are pre-approved clauses by the EU for ensuring appropriate data protection safeguards intended for data transfers from the EU to third countries"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/dec_impl/2021/914/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/dec_impl/2021/914/oj> ;
+    rdfs:isDefinedBy dpvo-gdpr: ;
     rdfs:subClassOf dpvo:Contract,
         dpvo-gdpr:DataTransferTool ;
     sw:term_status "accepted"@en .
@@ -100,8 +108,9 @@ dpvo-gdpr:DataTransferTool a owl:Class ;
     dct:creator "David Hickey"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "A legal instrument or tool intended to assist or justify data transfers"@en ;
-    rdfs:isDefinedBy <https://edpb.europa.eu/sites/default/files/consultation/edpb_recommendations_202001_supplementarymeasurestransferstools_en.pdf>,
+    dct:source <https://edpb.europa.eu/sites/default/files/consultation/edpb_recommendations_202001_supplementarymeasurestransferstools_en.pdf>,
         <https://eur-lex.europa.eu/eli/reg/2016/679/art_46/pnt_c/oj> ;
+    rdfs:isDefinedBy dpvo-gdpr: ;
     rdfs:subClassOf dpvo:TechnicalOrganisationalMeasure ;
     sw:term_status "accepted"@en .
 

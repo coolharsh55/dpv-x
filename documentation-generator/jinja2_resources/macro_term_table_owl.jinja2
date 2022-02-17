@@ -48,14 +48,14 @@
              <td>{{term.rdfs_comment}}</td>
           </tr>
           {% endif %}
-          {% if term.rdfs_isDefinedBy %}
+          {% if term.dct_source %}
           <tr>
             <td>Source:</td>
             <td>
-            {% if term.rdfs_isDefinedBy is sequence and not term.rdfs_isDefinedBy is string %}{% for parent in term.rdfs_isDefinedBy|sort %}
+            {% if term.dct_source is sequence and not term.dct_source is string %}{% for parent in term.dct_source|sort %}
               <a href="{{parent}}">{{parent|saved_label}}</a>{{', ' if not loop.last }}
               {% endfor %}{% else %}
-              <a href="{{term.rdfs_isDefinedBy}}">{{term.rdfs_isDefinedBy|saved_label}}</a>
+              <a href="{{term.dct_source}}">{{term.dct_source|saved_label}}</a>
               {% endif %}
             </td>
           </tr>
@@ -133,14 +133,14 @@
             </td>
           </tr>
           {% endif %}
-          {% if term.rdfs_isDefinedBy %}
+          {% if term.dct_source %}
           <tr>
             <td>Source:</td>
             <td>
-            {% if term.rdfs_isDefinedBy is sequence and not term.rdfs_isDefinedBy is string %}{% for parent in term.rdfs_isDefinedBy|sort %}
+            {% if term.dct_source is sequence and not term.dct_source is string %}{% for parent in term.dct_source|sort %}
               <a href="{{parent}}">{{parent|saved_label}}</a>{{', ' if not loop.last }}
               {% endfor %}{% else %}
-              <a href="{{term.rdfs_isDefinedBy}}">{{term.rdfs_isDefinedBy|saved_label}}</a>
+              <a href="{{term.dct_source}}">{{term.dct_source|saved_label}}</a>
               {% endif %}
             </td>
           </tr>

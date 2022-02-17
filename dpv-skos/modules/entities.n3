@@ -11,12 +11,13 @@ dpvs:AcademicScientificOrganisation a rdfs:Class,
         skos:Concept ;
     dct:created "2022-02-02"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:source <http://purl.org/adms> ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:subClassOf dpvs:Organisation ;
     sw:term_status "accepted"@en ;
     skos:broaderTransitive dpvs:Organisation ;
     skos:definition "Organisations related to academia or scientific pursuits e.g. Universities, Schools, Research Bodies"@en ;
-    skos:prefLabel "AcademicScientificOrganisation"@en ;
-    skos:scopeNote <http://purl.org/adms> .
+    skos:prefLabel "AcademicScientificOrganisation"@en .
 
 dpvs:Authority a rdfs:Class,
         skos:Concept ;
@@ -24,6 +25,7 @@ dpvs:Authority a rdfs:Class,
     dct:creator "Georg Krog"^^xsd:string,
         "Harshvardhan Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:subClassOf dpvs:GovernmentalOrganisation,
         dpvs:LegalEntity ;
     sw:term_status "accepted"@en ;
@@ -36,6 +38,7 @@ dpvs:Child a rdfs:Class,
         skos:Concept ;
     dct:created "2020-11-25"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:subClassOf dpvs:DataSubject ;
     sw:term_status "accepted"@en ;
     skos:broaderTransitive dpvs:DataSubject ;
@@ -49,13 +52,14 @@ dpvs:DataController a rdfs:Class,
     dct:creator "Axel Polleres"^^xsd:string,
         "Javier Fernández"^^xsd:string ;
     dct:modified "2020-11-04"^^xsd:date ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_7/oj> ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:subClassOf dpvs:LegalEntity ;
     sw:term_status "accepted"@en ;
     skos:broaderTransitive dpvs:LegalEntity ;
     skos:definition "The individual or organisation that decides (or controls) the purpose(s) of processing personal data."@en ;
     skos:note "The terms 'Controller' is usually the more common form of indicating a Data Controller. In ISO/IEC the term 'PII Controller' is used."@en ;
-    skos:prefLabel "Data Controller"@en ;
-    skos:scopeNote <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_7/oj> .
+    skos:prefLabel "Data Controller"@en .
 
 dpvs:DataExporter a rdfs:Class,
         skos:Concept ;
@@ -64,13 +68,14 @@ dpvs:DataExporter a rdfs:Class,
         "Georg Krog"^^xsd:string,
         "Harshvardhan Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
+    dct:source <https://edpb.europa.eu/our-work-tools/our-documents/recommendations/recommendations-012020-measures-supplement-transfer_en> ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:subClassOf dpvs:LegalEntity ;
     sw:term_status "accepted"@en ;
     skos:broaderTransitive dpvs:LegalEntity ;
     skos:definition "An entity that 'exports' data where exporting is considered a form of data transfer"@en ;
     skos:note "The EU, in particular the EDPB, uses data exporter the context of cross-border data transfers/flows. These concepts are not bound by jurisdictional or geopolitical scopes within DPV and can thus be used for any notion of exporting"@en ;
-    skos:prefLabel "Data Exporter"@en ;
-    skos:scopeNote <https://edpb.europa.eu/our-work-tools/our-documents/recommendations/recommendations-012020-measures-supplement-transfer_en> .
+    skos:prefLabel "Data Exporter"@en .
 
 dpvs:DataImporter a rdfs:Class,
         skos:Concept ;
@@ -79,24 +84,26 @@ dpvs:DataImporter a rdfs:Class,
         "Georg Krog"^^xsd:string,
         "Harshvardhan Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
+    dct:source <https://edpb.europa.eu/our-work-tools/our-documents/recommendations/recommendations-012020-measures-supplement-transfer_en> ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:subClassOf dpvs:Recipient ;
     sw:term_status "accepted"@en ;
     skos:broaderTransitive dpvs:Recipient ;
     skos:definition "An entity that 'imports' data where importing is considered a form of data transfer"@en ;
     skos:note "The EU, in particular the EDPB, uses data importing the context of cross-border data transfers/flows. These concepts are not bound by jurisdictional or geopolitical scopes within DPV and can thus be used for any notion of importing"@en ;
-    skos:prefLabel "Data Importer"@en ;
-    skos:scopeNote <https://edpb.europa.eu/our-work-tools/our-documents/recommendations/recommendations-012020-measures-supplement-transfer_en> .
+    skos:prefLabel "Data Importer"@en .
 
 dpvs:DataProcessor a rdfs:Class,
         skos:Concept ;
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_8/oj> ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:subClassOf dpvs:Recipient ;
     sw:term_status "accepted"@en ;
     skos:broaderTransitive dpvs:Recipient ;
     skos:definition "A ‘processor’ means a natural or legal person, public authority, agency or other body which processes personal data on behalf of the controller."@en ;
-    skos:prefLabel "Data Processor"@en ;
-    skos:scopeNote <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_8/oj> .
+    skos:prefLabel "Data Processor"@en .
 
 dpvs:DataProtectionAuthority a rdfs:Class,
         skos:Concept ;
@@ -104,6 +111,7 @@ dpvs:DataProtectionAuthority a rdfs:Class,
     dct:creator "Georg Krog"^^xsd:string,
         "Harshvardhan Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:subClassOf dpvs:Authority ;
     sw:term_status "accepted"@en ;
     skos:broaderTransitive dpvs:Authority ;
@@ -114,6 +122,7 @@ dpvs:DataSubProcessor a rdfs:Class,
         skos:Concept ;
     dct:created "2020-11-25"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:subClassOf dpvs:DataProcessor ;
     sw:term_status "accepted"@en ;
     skos:broaderTransitive dpvs:DataProcessor ;
@@ -127,6 +136,8 @@ dpvs:DataSubject a rdfs:Class,
     dct:creator "Axel Polleres"^^xsd:string,
         "Javier Fernández"^^xsd:string ;
     dct:modified "2020-11-04"^^xsd:date ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_1/oj> ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:subClassOf dpvs:LegalEntity,
         dpvs:NaturalPerson ;
     sw:term_status "accepted"@en ;
@@ -134,13 +145,13 @@ dpvs:DataSubject a rdfs:Class,
         dpvs:NaturalPerson ;
     skos:definition "The individual (or category of individuals) whose personal data is being processed"@en ;
     skos:note "The term 'data subject' is specific to the GDPR, but is functionally equivalent to the term 'individual' and the ISO/IEC term 'PII Principle'."@en ;
-    skos:prefLabel "Data Subject"@en ;
-    skos:scopeNote <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_1/oj> .
+    skos:prefLabel "Data Subject"@en .
 
 dpvs:ForProfitOrganisation a rdfs:Class,
         skos:Concept ;
     dct:created "2022-02-02"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:subClassOf dpvs:Organisation ;
     sw:term_status "accepted"@en ;
     skos:broaderTransitive dpvs:Organisation ;
@@ -151,6 +162,7 @@ dpvs:GovernmentalOrganisation a rdfs:Class,
         skos:Concept ;
     dct:created "2022-02-02"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:subClassOf dpvs:Organisation ;
     sw:term_status "accepted"@en ;
     skos:broaderTransitive dpvs:Organisation ;
@@ -161,18 +173,20 @@ dpvs:IndustryConsortium a rdfs:Class,
         skos:Concept ;
     dct:created "2022-02-02"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:source <http://purl.org/adms> ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:subClassOf dpvs:Organisation ;
     sw:term_status "accepted"@en ;
     skos:broaderTransitive dpvs:Organisation ;
     skos:definition "A consortium established and comprising on industry organisations"@en ;
-    skos:prefLabel "IndustryConsortium"@en ;
-    skos:scopeNote <http://purl.org/adms> .
+    skos:prefLabel "IndustryConsortium"@en .
 
 dpvs:JointDataControllers a rdfs:Class,
         skos:Concept ;
     dct:created "2022-02-02"^^xsd:date ;
     dct:creator "Georg Krog"^^xsd:string,
         "Harshvardhan Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:subClassOf dpvs:DataController ;
     sw:term_status "accepted"@en ;
     skos:broaderTransitive dpvs:DataController ;
@@ -184,6 +198,7 @@ dpvs:LegalEntity a rdfs:Class,
         skos:Concept ;
     dct:created "2019-04-05"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:subClassOf dpvs:Entity ;
     sw:term_status "accepted"@en ;
     skos:broaderTransitive dpvs:Entity ;
@@ -194,16 +209,18 @@ dpvs:NationalAuthority a rdfs:Class,
         skos:Concept ;
     dct:created "2022-02-02"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:source <http://purl.org/adms> ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:subClassOf dpvs:Authority ;
     sw:term_status "accepted"@en ;
     skos:broaderTransitive dpvs:Authority ;
     skos:definition "e.g. DPA, but not all \"DPA\" are national authority e.g. EDPS and EDPB"@en ;
-    skos:prefLabel "NationalAuthority"@en ;
-    skos:scopeNote <http://purl.org/adms> .
+    skos:prefLabel "NationalAuthority"@en .
 
 dpvs:NaturalPerson a rdfs:Class,
         skos:Concept ;
     dct:created "2022-02-09"^^xsd:date ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:subClassOf dpvs:Entity ;
     sw:term_status "accepted"@en ;
     skos:broaderTransitive dpvs:Entity ;
@@ -214,28 +231,31 @@ dpvs:NonGovernmentalOrganisation a rdfs:Class,
         skos:Concept ;
     dct:created "2022-02-02"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:source <http://purl.org/adms> ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:subClassOf dpvs:Organisation ;
     sw:term_status "accepted"@en ;
     skos:broaderTransitive dpvs:Organisation ;
     skos:definition "An organisation not part of or independent from the government"@en ;
-    skos:prefLabel "NonGovernmentalOrganisation"@en ;
-    skos:scopeNote <http://purl.org/adms> .
+    skos:prefLabel "NonGovernmentalOrganisation"@en .
 
 dpvs:NonProfitOrganisation a rdfs:Class,
         skos:Concept ;
     dct:created "2022-02-02"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:source <http://purl.org/adms> ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:subClassOf dpvs:Organisation ;
     sw:term_status "accepted"@en ;
     skos:broaderTransitive dpvs:Organisation ;
     skos:definition "An organisation that does not aim to achieve profit as its primary goal"@en ;
-    skos:prefLabel "NonProfitOrganisation"@en ;
-    skos:scopeNote <http://purl.org/adms> .
+    skos:prefLabel "NonProfitOrganisation"@en .
 
 dpvs:Organisation a rdfs:Class,
         skos:Concept ;
     dct:created "2022-02-02"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:subClassOf dpvs:LegalEntity ;
     sw:term_status "accepted"@en ;
     skos:broaderTransitive dpvs:LegalEntity ;
@@ -248,26 +268,28 @@ dpvs:Recipient a rdfs:Class,
     dct:creator "Axel Polleres"^^xsd:string,
         "Javier Fernández"^^xsd:string ;
     dct:modified "2020-11-04"^^xsd:date ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_9/oj>,
+        <https://www.specialprivacy.eu/> ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:subClassOf dpvs:LegalEntity ;
     sw:term_status "accepted"@en ;
     skos:broaderTransitive dpvs:LegalEntity ;
     skos:definition "Entities that receive personal data"@en ;
     skos:note "A recipient of personal data can be used to indicate any entity that receives personal data. This can be a Third Party, Processor (GDPR), or even a Controller."@en ;
     skos:prefLabel "Recipient"@en ;
-    skos:related spl:AnyRecipient ;
-    skos:scopeNote <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_9/oj>,
-        <https://www.specialprivacy.eu/> .
+    skos:related spl:AnyRecipient .
 
 dpvs:RegionalAuthority a rdfs:Class,
         skos:Concept ;
     dct:created "2022-02-02"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:source <http://purl.org/adms> ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:subClassOf dpvs:Authority ;
     sw:term_status "accepted"@en ;
     skos:broaderTransitive dpvs:Authority ;
     skos:definition "e.g. regional DPA in DE / US-CA"@en ;
-    skos:prefLabel "RegionalAuthority"@en ;
-    skos:scopeNote <http://purl.org/adms> .
+    skos:prefLabel "RegionalAuthority"@en .
 
 dpvs:Representative a rdfs:Class,
         skos:Concept ;
@@ -276,34 +298,37 @@ dpvs:Representative a rdfs:Class,
         "Georg Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_27/oj> ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:subClassOf dpvs:LegalEntity ;
     sw:term_status "accepted"@en ;
     skos:broaderTransitive dpvs:LegalEntity ;
     skos:definition "A representative of a legal entity"@en ;
-    skos:prefLabel "Representative"@en ;
-    skos:scopeNote <https://eur-lex.europa.eu/eli/reg/2016/679/art_27/oj> .
+    skos:prefLabel "Representative"@en .
 
 dpvs:SupraNationalAuthority a rdfs:Class,
         skos:Concept ;
     dct:created "2022-02-02"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:source <http://purl.org/adms> ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:subClassOf dpvs:Authority ;
     sw:term_status "accepted"@en ;
     skos:broaderTransitive dpvs:Authority ;
     skos:definition "e.g. EU, EDPB"@en ;
-    skos:prefLabel "SupraNationalAuthority"@en ;
-    skos:scopeNote <http://purl.org/adms> .
+    skos:prefLabel "SupraNationalAuthority"@en .
 
 dpvs:ThirdParty a rdfs:Class,
         skos:Concept ;
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_10/oj> ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:subClassOf dpvs:Recipient ;
     sw:term_status "accepted"@en ;
     skos:broaderTransitive dpvs:Recipient ;
     skos:definition "A ‘third party’ means a natural or legal person, public authority, agency or body other than the data subject, controller, processor and people who, under the direct authority of the controller or processor, are authorised to process personal data."@en ;
-    skos:prefLabel "Third Party"@en ;
-    skos:scopeNote <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_10/oj> .
+    skos:prefLabel "Third Party"@en .
 
 dpvs:VulnerableDataSubject a rdfs:Class,
         skos:Concept ;
@@ -311,6 +336,7 @@ dpvs:VulnerableDataSubject a rdfs:Class,
     dct:creator "Georg Krog"^^xsd:string,
         "Harshvardhan Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:subClassOf dpvs:DataSubject ;
     sw:term_status "accepted"@en ;
     skos:broaderTransitive dpvs:DataSubject ;
@@ -368,6 +394,7 @@ dpvs:hasAddress a rdf:Property,
         "Harshvardhan J.Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     rdfs:domain dpvs:Entity ;
+    rdfs:isDefinedBy dpvs: ;
     sw:term_status "accepted"@en ;
     skos:definition "Specifies address of a legal entity such as street address or pin code"@en ;
     skos:prefLabel "has address"@en .
@@ -380,6 +407,7 @@ dpvs:hasContact a rdf:Property,
         "Harshvardhan J.Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     rdfs:domain dpvs:Entity ;
+    rdfs:isDefinedBy dpvs: ;
     sw:term_status "accepted"@en ;
     skos:definition "Specifies contact details of a legal entity such as phone  or email"@en ;
     skos:prefLabel "has contact"@en .
@@ -387,6 +415,7 @@ dpvs:hasContact a rdf:Property,
 dpvs:hasDataExporter a rdf:Property,
         skos:Concept ;
     dct:created "2022-02-13"^^xsd:date ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:range dpvs:DataExporter ;
     rdfs:subPropertyOf dpvs:hasEntity ;
     sw:term_status "accepted"@en ;
@@ -396,6 +425,7 @@ dpvs:hasDataExporter a rdf:Property,
 dpvs:hasDataImporter a rdf:Property,
         skos:Concept ;
     dct:created "2022-02-14"^^xsd:date ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:range dpvs:DataImporter ;
     rdfs:subPropertyOf dpvs:hasRecipient ;
     sw:term_status "accepted"@en ;
@@ -405,6 +435,7 @@ dpvs:hasDataImporter a rdf:Property,
 dpvs:hasDataProcessor a rdf:Property,
         skos:Concept ;
     dct:created "2022-02-10"^^xsd:date ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:range dpvs:DataProcessor ;
     rdfs:subPropertyOf dpvs:hasRecipient ;
     sw:term_status "accepted"@en ;
@@ -420,6 +451,7 @@ dpvs:hasDataSubject a rdf:Property,
         "Javier Fernández"^^xsd:string,
         "Mark Lizar"^^xsd:string ;
     dct:modified "2020-11-04"^^xsd:date ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:range dpvs:DataSubject ;
     rdfs:subPropertyOf dpvs:hasEntity ;
     sw:term_status "accepted"@en ;
@@ -429,6 +461,7 @@ dpvs:hasDataSubject a rdf:Property,
 dpvs:hasJointDataControllers a rdf:Property,
         skos:Concept ;
     dct:created "2022-02-09"^^xsd:date ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:range dpvs:JointDataControllers ;
     rdfs:subPropertyOf dpvs:hasDataController ;
     sw:term_status "accepted"@en ;
@@ -443,6 +476,7 @@ dpvs:hasName a rdf:Property,
         "Harshvardhan J.Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     rdfs:domain dpvs:Entity ;
+    rdfs:isDefinedBy dpvs: ;
     sw:term_status "accepted"@en ;
     skos:definition "Specifies name of a legal entity"@en ;
     skos:prefLabel "has name"@en .
@@ -450,6 +484,7 @@ dpvs:hasName a rdf:Property,
 dpvs:hasRecipientDataController a rdf:Property,
         skos:Concept ;
     dct:created "2022-02-11"^^xsd:date ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:range dpvs:DataController ;
     rdfs:subPropertyOf dpvs:hasRecipient ;
     sw:term_status "accepted"@en ;
@@ -459,6 +494,7 @@ dpvs:hasRecipientDataController a rdf:Property,
 dpvs:hasRecipientThirdParty a rdf:Property,
         skos:Concept ;
     dct:created "2022-02-12"^^xsd:date ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:range dpvs:ThirdParty ;
     rdfs:subPropertyOf dpvs:hasRecipient ;
     sw:term_status "accepted"@en ;
@@ -473,6 +509,7 @@ dpvs:hasRepresentative a rdf:Property,
         "Harshvardhan J.Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     rdfs:domain dpvs:Entity ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:range dpvs:Representative ;
     rdfs:subPropertyOf dpvs:hasEntity ;
     sw:term_status "accepted"@en ;
@@ -488,6 +525,7 @@ dpvs:hasDataController a rdf:Property,
         "Javier Fernández"^^xsd:string,
         "Mark Lizar"^^xsd:string ;
     dct:modified "2020-11-04"^^xsd:date ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:range dpvs:DataController ;
     rdfs:subPropertyOf dpvs:hasEntity ;
     sw:term_status "accepted"@en ;
@@ -503,16 +541,18 @@ dpvs:hasRecipient a rdf:Property,
         "Javier Fernández"^^xsd:string,
         "Mark Lizar"^^xsd:string ;
     dct:modified "2020-11-04"^^xsd:date ;
+    dct:source <https://www.specialprivacy.eu/> ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:range dpvs:Recipient ;
     rdfs:subPropertyOf dpvs:hasEntity ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates Recipient of Personal Data"@en ;
-    skos:prefLabel "has recipient"@en ;
-    skos:scopeNote <https://www.specialprivacy.eu/> .
+    skos:prefLabel "has recipient"@en .
 
 dpvs:hasEntity a rdf:Property,
         skos:Concept ;
     dct:created "2022-02-09"^^xsd:date ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:range dpvs:Entity ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates inclusion or applicability of an entity to some concept"@en ;

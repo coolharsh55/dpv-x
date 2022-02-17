@@ -13,7 +13,8 @@ dpvo-gdpr:A13 a owl:Class ;
         "Georg Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "information to be provided where personal data is directly collected from data subject"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_13/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_13/oj> ;
+    rdfs:isDefinedBy dpvo-gdpr: ;
     rdfs:subClassOf dpvo:DataSubjectRight ;
     sw:term_status "accepted"@en .
 
@@ -24,7 +25,8 @@ dpvo-gdpr:A14 a owl:Class ;
         "Georg Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "information to be provided where personal data is collected from other sources"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_14/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_14/oj> ;
+    rdfs:isDefinedBy dpvo-gdpr: ;
     rdfs:subClassOf dpvo:DataSubjectRight ;
     sw:term_status "accepted"@en .
 
@@ -35,7 +37,8 @@ dpvo-gdpr:A15 a owl:Class ;
         "Georg Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Right of access"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_15/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_15/oj> ;
+    rdfs:isDefinedBy dpvo-gdpr: ;
     rdfs:subClassOf dpvo:DataSubjectRight ;
     sw:term_status "accepted"@en .
 
@@ -46,7 +49,8 @@ dpvo-gdpr:A16 a owl:Class ;
         "Georg Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Right to rectification"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_16/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_16/oj> ;
+    rdfs:isDefinedBy dpvo-gdpr: ;
     rdfs:subClassOf dpvo:DataSubjectRight ;
     sw:term_status "accepted"@en .
 
@@ -57,7 +61,8 @@ dpvo-gdpr:A17 a owl:Class ;
         "Georg Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Right to erasure ('Right to be forgotten')"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_17/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_17/oj> ;
+    rdfs:isDefinedBy dpvo-gdpr: ;
     rdfs:subClassOf dpvo:DataSubjectRight ;
     sw:term_status "accepted"@en .
 
@@ -68,7 +73,8 @@ dpvo-gdpr:A18 a owl:Class ;
         "Georg Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Right to restriction of processing"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_18/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_18/oj> ;
+    rdfs:isDefinedBy dpvo-gdpr: ;
     rdfs:subClassOf dpvo:DataSubjectRight ;
     sw:term_status "accepted"@en .
 
@@ -79,7 +85,8 @@ dpvo-gdpr:A19 a owl:Class ;
         "Georg Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Right to be notified in case of rectification or erasure of personal data or restriction of processing"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_19/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_19/oj> ;
+    rdfs:isDefinedBy dpvo-gdpr: ;
     rdfs:subClassOf dpvo:DataSubjectRight ;
     sw:term_status "accepted"@en .
 
@@ -90,7 +97,8 @@ dpvo-gdpr:A20 a owl:Class ;
         "Georg Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Right to data portability"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_20/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_20/oj> ;
+    rdfs:isDefinedBy dpvo-gdpr: ;
     rdfs:subClassOf dpvo:DataSubjectRight ;
     sw:term_status "accepted"@en .
 
@@ -101,7 +109,8 @@ dpvo-gdpr:A21 a owl:Class ;
         "Georg Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Right to object to processing of personal data"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_21/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_21/oj> ;
+    rdfs:isDefinedBy dpvo-gdpr: ;
     rdfs:subClassOf dpvo:DataSubjectRight ;
     sw:term_status "accepted"@en .
 
@@ -112,7 +121,8 @@ dpvo-gdpr:A22 a owl:Class ;
         "Georg Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Right not to be subject to a decision based solely on automated processing including profiling"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_22/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_22/oj> ;
+    rdfs:isDefinedBy dpvo-gdpr: ;
     rdfs:subClassOf dpvo:DataSubjectRight ;
     sw:term_status "accepted"@en .
 
@@ -123,7 +133,8 @@ dpvo-gdpr:A7-3 a owl:Class ;
         "Georg Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Right to withdraw consent"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_7/par_3/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_7/par_3/oj> ;
+    rdfs:isDefinedBy dpvo-gdpr: ;
     rdfs:subClassOf dpvo:DataSubjectRight ;
     sw:term_status "accepted"@en .
 
@@ -134,7 +145,8 @@ dpvo-gdpr:A77 a owl:Class ;
         "Georg Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Right to lodge a complaint with a supervisory authority"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_77/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_77/oj> ;
+    rdfs:isDefinedBy dpvo-gdpr: ;
     rdfs:subClassOf dpvo:DataSubjectRight ;
     sw:term_status "accepted"@en .
 

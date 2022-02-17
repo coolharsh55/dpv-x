@@ -34,6 +34,7 @@ dpv:Consent a skos:Concept,
         dpv:Concept ;
     dct:created "2021-04-07"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Consent of the Data Subject for specified processing"@en ;
     skos:prefLabel "Consent"@en ;
@@ -45,6 +46,7 @@ dpv:ContractPerformance a skos:Concept,
     dct:creator "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Fulfilment or performance of a contract involving specified processing"@en ;
     skos:prefLabel "Contract Performance"@en ;
@@ -55,6 +57,7 @@ dpv:DataTransferLegalBasis a skos:Concept,
     dct:created "2021-09-08"^^xsd:date ;
     dct:creator "David Hickey"^^xsd:string,
         "Georg P Krogg"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Specific or special categories and instances of legal basis intended for justifying data transfers"@en ;
     skos:prefLabel "Data Transfer Legal Basis"@en ;
@@ -66,6 +69,7 @@ dpv:EnterIntoContract a skos:Concept,
     dct:creator "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Processing necessary to enter into contract"@en ;
     skos:prefLabel "Enter Into Contract"@en ;
@@ -75,6 +79,7 @@ dpv:LegalObligation a skos:Concept,
         dpv:Concept ;
     dct:created "2021-04-07"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Legal Obligation to conduct the specified processing"@en ;
     skos:prefLabel "Legal Obligation"@en ;
@@ -86,6 +91,7 @@ dpv:LegitimateInterestOfController a skos:Concept,
     dct:creator "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Legitimate Interests of a Data Controller in conducting specified processing"@en ;
     skos:prefLabel "Legitimate Interest of Controller"@en ;
@@ -97,6 +103,7 @@ dpv:LegitimateInterestOfThirdParty a skos:Concept,
     dct:creator "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Legitimate Interests of a Third Party in conducting specified processing"@en ;
     skos:prefLabel "Legitimate Interest of Third Party"@en ;
@@ -108,6 +115,7 @@ dpv:OfficialAuthorityOfController a skos:Concept,
     dct:creator "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Processing necessary or authorised through the official authority granted to or vested in the Data Controller"@en ;
     skos:prefLabel "Official Authority of Controller"@en ;
@@ -117,6 +125,7 @@ dpv:PublicInterest a skos:Concept,
         dpv:Concept ;
     dct:created "2021-04-21"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Processing is necessary or beneficial for interest of the public or society at large"@en ;
     skos:prefLabel "Public Interest"@en ;
@@ -131,6 +140,7 @@ dpv:VitalInterestOfDataSubject a skos:Concept,
     dct:creator "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Processing is necessary or required to protect vital interests of a data subject"@en ;
     skos:prefLabel "Vital Interest of Data Subject"@en ;
@@ -143,6 +153,7 @@ dpv:hasLegalBasis a skos:Concept,
         "Javier Fernández"^^xsd:string ;
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:domain dpv:Concept ;
+    rdfs:isDefinedBy dpv: ;
     rdfs:range dpv:LegalBasis ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates use or applicability of a Legal Basis"@en ;
@@ -152,6 +163,7 @@ dpv:VitalInterest a skos:Concept,
         dpv:Concept ;
     dct:created "2021-04-21"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Processing is necessary or required to protect vital interests of a data subject or other natural person"@en ;
     skos:prefLabel "Vital Interest"@en ;
@@ -163,6 +175,7 @@ dpv:VitalInterestOfNaturalPerson a skos:Concept,
     dct:creator "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Processing is necessary or required to protect vital interests of a natural person"@en ;
     skos:prefLabel "Vital Interest of Natural Person"@en ;
@@ -172,6 +185,7 @@ dpv:Contract a skos:Concept,
         dpv:Concept ;
     dct:created "2021-04-07"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Creation, completion, fulfilment, or performance of a contract involving specified processing"@en ;
     skos:prefLabel "Contract"@en ;
@@ -182,6 +196,7 @@ dpv:LegitimateInterest a skos:Concept,
         dpv:Concept ;
     dct:created "2021-05-19"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Legitimate Interests of a Party as justification for specified processing"@en ;
     skos:prefLabel "Legitimate Interest"@en ;
@@ -191,6 +206,7 @@ dpv:LegalBasis a skos:Concept,
         dpv:Concept ;
     dct:created "2019-04-05"^^xsd:date ;
     dct:modified "2020-11-04"^^xsd:date ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "The Legal basis used to justify processing of personal data"@en ;
     skos:note "Legal basis (plural: legal bases) are defined by legislations and regulations, whose applicability is usually restricted to specific jurisdictions."@en ;

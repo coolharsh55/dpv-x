@@ -11,6 +11,7 @@ dpv:ContextConcepts a skos:Collection ;
         dpv:Consequence,
         dpv:Context,
         dpv:Duration,
+        dpv:Frequency,
         dpv:HumanInvolvement,
         dpv:Importance,
         dpv:Necessity,
@@ -24,6 +25,7 @@ dpv:ContextConcepts a skos:Collection ;
         dpv:hasConsequence,
         dpv:hasContext,
         dpv:hasDuration,
+        dpv:hasFrequency,
         dpv:hasHumanInvolvement,
         dpv:hasIdentifier,
         dpv:isImplementedUsingTechnology .
@@ -42,6 +44,7 @@ dpv:NotRequired a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Indication of neither being required nor optional i.e. not relevant or needed"@en ;
     skos:prefLabel "Not Required"@en ;
@@ -55,6 +58,7 @@ dpv:Optional a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Indication of 'optional' or 'voluntary'"@en ;
     skos:prefLabel "Optional"@en ;
@@ -68,6 +72,7 @@ dpv:PrimaryImportance a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Indication of 'primary' or 'main' or 'core' importance"@en ;
     skos:prefLabel "Primary Importance"@en ;
@@ -81,6 +86,7 @@ dpv:Required a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Indication of 'required' or 'necessary'"@en ;
     skos:prefLabel "Required"@en ;
@@ -94,6 +100,7 @@ dpv:SecondaryImportance a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Indication of 'secondary' or 'minor' or 'auxiliary' importance"@en ;
     skos:prefLabel "Secondary Importance"@en ;
@@ -106,6 +113,7 @@ dpv:hasAlgorithmicLogic a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     rdfs:domain dpv:Concept ;
+    rdfs:isDefinedBy dpv: ;
     rdfs:range dpv:AlgorithmicLogic ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates the logic used in processing such as for automated decision making"@en ;
@@ -119,6 +127,7 @@ dpv:hasConsequence a skos:Concept,
         "Paul Ryan"^^xsd:string ;
     dct:modified "2021-09-21"^^xsd:date ;
     rdfs:domain dpv:Concept ;
+    rdfs:isDefinedBy dpv: ;
     rdfs:range dpv:Consequence ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates consequences of processing such as those for Data Subjects in relation to automated decision making"@en ;
@@ -129,6 +138,7 @@ dpv:hasContext a skos:Concept,
         dpv:Relation ;
     dct:created "2019-04-05"^^xsd:date ;
     rdfs:domain dpv:Purpose ;
+    rdfs:isDefinedBy dpv: ;
     rdfs:range dpv:Context ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates a purpose is restricted to the specified context(s)"@en ;
@@ -141,12 +151,23 @@ dpv:hasDuration a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
+    dct:source <https://www.specialprivacy.eu/> ;
     rdfs:domain dpv:Concept ;
+    rdfs:isDefinedBy dpv: ;
     rdfs:range dpv:Duration ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates information about duration"@en ;
-    skos:prefLabel "has duration"@en ;
-    skos:scopeNote <https://www.specialprivacy.eu/> .
+    skos:prefLabel "has duration"@en .
+
+dpv:hasFrequency a skos:Concept,
+        dpv:Relation ;
+    dct:created "2022-02-16"^^xsd:date ;
+    rdfs:domain dpv:Concept ;
+    rdfs:isDefinedBy dpv: ;
+    rdfs:range dpv:Frequency ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Indicates the frequency with which something takes place"@en ;
+    skos:prefLabel "has frequency"@en .
 
 dpv:hasHumanInvolvement a skos:Concept,
         dpv:Relation ;
@@ -155,6 +176,7 @@ dpv:hasHumanInvolvement a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     rdfs:domain dpv:Concept ;
+    rdfs:isDefinedBy dpv: ;
     rdfs:range dpv:HumanInvolvement ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates Involvement of humans in processing such as within automated decision making process"@en ;
@@ -169,6 +191,7 @@ dpv:hasIdentifier a skos:Concept,
         "Harshvardhan J.Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     rdfs:domain dpv:Concept ;
+    rdfs:isDefinedBy dpv: ;
     rdfs:range dpv:Concept ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates an identifier associated for identification or reference"@en ;
@@ -182,6 +205,7 @@ dpv:isImplementedUsingTechnology a skos:Concept,
         "Julian Flake"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     rdfs:domain dpv:Concept ;
+    rdfs:isDefinedBy dpv: ;
     rdfs:range dpv:Technology ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates implementation details such as technologies or processes"@en ;
@@ -192,6 +216,7 @@ dpv:AlgorithmicLogic a skos:Concept,
         dpv:Concept ;
     dct:created "2022-01-26"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "The algorithmic logic applied or used"@en ;
     skos:note "Algorithmic Logic is intended as a broad concept for explaining the use of algorithms and automated decisions making within Processing. To describe the actual algorithm, see the Algorithm concept."@en ;
@@ -202,6 +227,7 @@ dpv:Consequence a skos:Concept,
         dpv:Concept ;
     dct:created "2022-01-26"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "The consequence(s) possible or arising from indicated plan or action"@en ;
     skos:prefLabel "Consequence"@en ;
@@ -210,14 +236,24 @@ dpv:Consequence a skos:Concept,
 dpv:Duration a skos:Concept,
         dpv:Concept ;
     dct:created "2022-02-09"^^xsd:date ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "The duration or temporal limitation"@en ;
     skos:prefLabel "Duration"@en .
+
+dpv:Frequency a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-02-16"^^xsd:date ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "The frequency or information about periods and repetitions in terms of recurrence."@en ;
+    skos:prefLabel "Frequency"@en .
 
 dpv:HumanInvolvement a skos:Concept,
         dpv:Concept ;
     dct:created "2022-01-26"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "The involvement of humans as a factor or agent in processing"@en ;
     skos:note "Human Involvement here broadly refers to any involvement by a human in the context of carrying out processing. This may include verification of outcomes, providing input data for making decisions, or overseeing activities."@en ;
@@ -228,6 +264,7 @@ dpv:Technology a skos:Concept,
         dpv:Concept ;
     dct:created "2022-01-26"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "The technology, technological implementation, or any techniques, skills, methods, and processes used or applied"@en ;
     skos:note "Examples (non-exhaustive) include: Algorithm, Process, Method, Skill, Database, Cookies, Server, Device"@en ;
@@ -241,6 +278,7 @@ dpv:Importance a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "An indication of 'importance' within a context"@en ;
     skos:note "Importance can be used to express importance, desirability, relevance, or significance as a context."@en ;
@@ -255,6 +293,7 @@ dpv:Necessity a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "An indication of 'necessity' within a context"@en ;
     skos:note "Necessity can be used to express need, essentiality, requirement, or compulsion."@en ;
@@ -270,6 +309,7 @@ dpv:Context a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Contextually relevant information about purpose not possible to represent through other concepts"@en ;
     skos:prefLabel "Context"@en .

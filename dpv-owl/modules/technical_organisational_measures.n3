@@ -14,6 +14,7 @@ dpvo:AccessControlMethod a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Methods which restrict access to a place or resource"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:TechnicalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -26,6 +27,7 @@ dpvo:AuthorisationProcedure a owl:Class ;
         "Rob Brennan"^^xsd:string ;
     dct:description "Procedures for determining authorisation through permission or authority"@en ;
     rdfs:comment "non-technical authorisation procedures: How is it described on an organisational level, who gets access to the data"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -37,6 +39,7 @@ dpvo:Certification a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Certification mechanisms, seals, and marks for the purpose of demonstrating compliance"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:CertificationSeal ;
     sw:term_status "accepted"@en .
 
@@ -48,6 +51,7 @@ dpvo:CodeOfConduct a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "A set of rules or procedures outlining the norms and practices for conducting activities"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:GuidelinesPrinciple ;
     sw:term_status "accepted"@en .
 
@@ -56,6 +60,7 @@ dpvo:CompleteAnonymisation a owl:Class ;
     dct:created "2022-02-09"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Altering personal data irreversibly such that a data subject can no longer be identified directly or indirectly, either by the data controller alone or in collaboration with any other party"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Anonymization ;
     sw:term_status "accepted"@en .
 
@@ -66,6 +71,7 @@ dpvo:ConsultationWithAuthority a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Consultation with an authority or authoritative entity"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Consultation ;
     sw:term_status "accepted"@en .
 
@@ -77,6 +83,7 @@ dpvo:ContractualTerms a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Contractual terms governing data handling within or with an entity"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:LegalAgreement ;
     sw:term_status "accepted"@en .
 
@@ -89,6 +96,7 @@ dpvo:ControllerProcessorAgreement a owl:Class ;
         "Julian Flake"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "An agreement outlining conditions, criteria, obligations, responsibilities, and specifics for carrying out processing of personal data between a Data Controller and a Data Processor"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:DataProcessingAgreement ;
     sw:term_status "accepted"@en .
 
@@ -100,6 +108,7 @@ dpvo:DPIA a owl:Class ;
         "Paul Ryan"^^xsd:string ;
     dct:description "A DPIA involves determining the potential and actual impact of processing activities on individuals or groups of individuals"@en ;
     rdfs:comment "Top class: Impact Assessment, and DPIA is sub-class"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:ImpactAssessment ;
     sw:term_status "accepted"@en .
 
@@ -110,6 +119,7 @@ dpvo:DataTransferImpactAssessment a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Impact Assessment for conducting data transfers"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:ImpactAssessment ;
     sw:term_status "accepted"@en .
 
@@ -121,6 +131,7 @@ dpvo:DeIdentification a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Removal of identity or information to reduce identifiability"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Anonymization ;
     sw:term_status "accepted"@en .
 
@@ -132,6 +143,7 @@ dpvo:DesignStandard a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "A set of rules or guidelines outlining criterias for design"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:GuidelinesPrinciple ;
     sw:term_status "accepted"@en .
 
@@ -143,6 +155,7 @@ dpvo:EncryptionInRest a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Encryption of data when being stored (persistent encryption)"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Encryption ;
     sw:term_status "accepted"@en .
 
@@ -154,6 +167,7 @@ dpvo:EncryptionInTransfer a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Encryption of data in transit e.g. when being transferred from one location to another, including sharing"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Encryption ;
     sw:term_status "accepted"@en .
 
@@ -166,6 +180,7 @@ dpvo:JointDataControllersAgreement a owl:Class ;
         "Julian Flake"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "An agreement outlining conditions, criteria, obligations, responsibilities, and specifics for carrying out processing of personal data between Controllers within a Joint Controllers relationship"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:DataProcessingAgreement ;
     sw:term_status "accepted"@en .
 
@@ -176,6 +191,7 @@ dpvo:LegitimateInterestAssessment a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Indicates an assessment regarding the use of legitimate interest as a lawful basis by the data controller"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Assessment ;
     sw:term_status "accepted"@en .
 
@@ -187,6 +203,7 @@ dpvo:NDA a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Non-disclosure Agreements e.g. preserving confidentiality of information"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:LegalAgreement ;
     sw:term_status "accepted"@en .
 
@@ -197,6 +214,7 @@ dpvo:PIA a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Carrying out an impact assessment regarding privacy risks"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:ImpactAssessment ;
     sw:term_status "accepted"@en .
 
@@ -208,6 +226,7 @@ dpvo:PrivacyByDefault a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Practices regarding selecting appropriate data protection and privacy measures as the 'default' in an activity or service"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:GuidelinesPrinciple ;
     sw:term_status "accepted"@en .
 
@@ -219,6 +238,7 @@ dpvo:PrivacyByDesign a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Practices regarding incorporating data protection and privacy in the design of information and services"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -230,6 +250,7 @@ dpvo:PrivacyNotice a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Represents a notice or document outlining information regarding privacy"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Notice ;
     sw:term_status "accepted"@en .
 
@@ -241,7 +262,8 @@ dpvo:PseudoAnonymization a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "PseudoAnonmyization or 'pseudonymisation’ means the processing of personal data in such a manner that the personal data can no longer be attributed to a specific data subject without the use of additional information, provided that such additional information is kept separately and is subject to technical and organisational measures to ensure that the personal data are not attributed to an identified or identifiable natural person;"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_5/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_5/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Anonymization ;
     sw:term_status "accepted"@en .
 
@@ -253,6 +275,7 @@ dpvo:RegisterOfProcessingActivities a owl:Class ;
         "Paul Ryan"^^xsd:string ;
     dct:description "A ROPA is a document maintained by Data Controllers detailing processing activities carried out under their responsibility"@en ;
     rdfs:comment "Tied to compliance processes and documents, decide how to specify those"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:DataProcessingRecords ;
     sw:term_status "accepted"@en .
 
@@ -264,6 +287,7 @@ dpvo:RegularityOfRecertification a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Policy regarding repetition or renewal of existing certification(s)"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -275,8 +299,9 @@ dpvo:RiskManagementProcedure a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Risk management refers to a coordinated set of activities and methods that is used to direct an organization and to control the many risks that can affect its ability to achieve objectives.  The term risk management also refers to the programme that is used to manage risk. This programme includes risk management principles, a risk management framework, and a risk management process."@en ;
+    dct:source <https://www.iso.org/iso-31000-risk-management.html> ;
     rdfs:comment "Data Protection Impact Assessments as per GDPR art 35, other Privacy Impact Assessments, threat severity assessment https://www.cnil.fr/en/privacy-impact-assessment-pia"@en ;
-    rdfs:isDefinedBy <https://www.iso.org/iso-31000-risk-management.html> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -288,6 +313,7 @@ dpvo:SafeguardForDataTransfer a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Represents a safeguard used for data transfer. Can include technical or organisational measures."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Safeguard ;
     sw:term_status "accepted"@en .
 
@@ -299,6 +325,7 @@ dpvo:Seal a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "A seal or a mark indicating proof of certification to some certification or standard"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:CertificationSeal ;
     sw:term_status "accepted"@en .
 
@@ -309,6 +336,7 @@ dpvo:SingleSignOn a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Use of credentials or processes that enable using one set of credentials to authenticate multiple contexts."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:AuthenticationProtocols ;
     sw:term_status "accepted"@en .
 
@@ -320,6 +348,7 @@ dpvo:StaffTraining a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Practices and policies regarding training of staff members"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -332,6 +361,7 @@ dpvo:SubProcessorAgreement a owl:Class ;
         "Julian Flake"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "An agreement outlining conditions, criteria, obligations, responsibilities, and specifics for carrying out processing of personal data between a Data Processor and a Data (Sub-)Processor"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:DataProcessingAgreement ;
     sw:term_status "accepted"@en .
 
@@ -340,6 +370,7 @@ dpvo:ThirdPartyAgreement a owl:Class ;
     dct:created "2022-02-09"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "An agreement outlining conditions, criteria, obligations, responsibilities, and specifics for carrying out processing of personal data between a Data Controller or Processor and a Third Party"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:DataProcessingAgreement ;
     sw:term_status "accepted"@en .
 
@@ -350,6 +381,7 @@ dpvo:hasOrganisationalMeasure a rdf:Property,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Indicates use or applicability of Organisational measure"@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:OrganisationalMeasure ;
     rdfs:subPropertyOf dpvo:hasTechnicalOrganisationalMeasure ;
     sw:term_status "accepted"@en .
@@ -361,6 +393,7 @@ dpvo:hasPolicy a rdf:Property,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Indicates policy applicable or used"@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:Policy ;
     rdfs:subPropertyOf dpvo:hasTechnicalOrganisationalMeasure ;
     sw:term_status "accepted"@en .
@@ -372,6 +405,7 @@ dpvo:hasRisk a rdf:Property,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Indicates applicability of Risk"@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:Risk ;
     sw:term_status "accepted"@en .
 
@@ -382,6 +416,7 @@ dpvo:hasTechnicalMeasure a rdf:Property,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Indicates use or applicability of Technical measure"@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:TechnicalMeasure ;
     rdfs:subPropertyOf dpvo:hasTechnicalOrganisationalMeasure ;
     sw:term_status "accepted"@en .
@@ -393,6 +428,7 @@ dpvo:isMitigatedByMeasure a rdf:Property,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Indicate a risk is mitigated by specified measure"@en ;
     rdfs:domain dpvo:Risk ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:RiskMitigationMeasure ;
     rdfs:subPropertyOf dpvo:hasTechnicalOrganisationalMeasure ;
     sw:term_status "accepted"@en .
@@ -404,6 +440,7 @@ dpvo:isPolicyFor a rdf:Property,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Indicates the context or application of policy"@en ;
     rdfs:domain dpvo:Policy ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range owl:Thing ;
     sw:term_status "accepted"@en .
 
@@ -414,6 +451,7 @@ dpvo:mitigatesRisk a rdf:Property,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Indicates mitigation of risk(s)"@en ;
     rdfs:domain dpvo:RiskMitigationMeasure ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:Risk ;
     sw:term_status "accepted"@en .
 
@@ -425,6 +463,7 @@ dpvo:AuthenticationProtocols a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Protocols involving validation of identity i.e. authentication of a person or information"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:TechnicalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -435,6 +474,7 @@ dpvo:Consultation a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Consultation is a process of receiving feedback, advice, or opinion from an external agency"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -443,6 +483,7 @@ dpvo:DataProcessingRecords a owl:Class ;
     dct:created "2021-09-08"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Records of personal data processing, whether ex-ante or ex-post"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:RecordsOfActivities ;
     sw:term_status "accepted"@en .
 
@@ -454,6 +495,7 @@ dpvo:Notice a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "A notice is an artefact for providing information, choices, or controls"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -464,6 +506,7 @@ dpvo:RecordsOfActivities a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Records of activities within some context such as maintainence tasks or governance functions"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -476,6 +519,7 @@ dpvo:Safeguard a owl:Class ;
         "Paul Ryan"^^xsd:string ;
     dct:description "A safeguard is a precautionary measure for the protection against or mitigation of negative effects"@en ;
     rdfs:comment "This concept is relevant given the requirement to assert safeguards in cross-border data transfers"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -484,6 +528,7 @@ dpvo:Assessment a owl:Class ;
     dct:created "2021-09-08"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "The document, plan, or process for assessment or determination towards a purpose e.g. assessment of legality or impact assessments"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -495,6 +540,7 @@ dpvo:CertificationSeal a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Certifications, seals, and marks indicating compliance to regulations or practices"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -506,6 +552,7 @@ dpvo:Encryption a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Technical measures consisting of encryption"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:TechnicalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -517,6 +564,7 @@ dpvo:Policy a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "A guidance document outlining any of: procedures, plans, principles, decisions, intent, or protocols."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -527,6 +575,7 @@ dpvo:RiskMitigationMeasure a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Measures intended to mitigate, minimise, or prevent risk."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:TechnicalOrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -538,7 +587,8 @@ dpvo:Anonymization a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Process by which some personal identifiers are removed or identifiability is reduced"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_5/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_5/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:TechnicalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -550,6 +600,7 @@ dpvo:GuidelinesPrinciple a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Guidelines or Principles regarding processing and operational measures"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -560,6 +611,7 @@ dpvo:ImpactAssessment a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Calculating or determining the likelihood of impact of an existing or proposed process, which can involve risks or detriments."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Assessment ;
     sw:term_status "accepted"@en .
 
@@ -571,6 +623,7 @@ dpvo:LegalAgreement a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "A legally binding agreement"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -584,6 +637,7 @@ dpvo:DataProcessingAgreement a owl:Class ;
         "Paul Ryan"^^xsd:string ;
     dct:description "An agreement outlining conditions, criteria, obligations, responsibilities, and specifics for carrying out processing of personal data"@en ;
     rdfs:comment "For specific role-based data processing agreements, see concepts for Processors and JointDataController agreements."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:LegalAgreement ;
     sw:term_status "accepted"@en .
 
@@ -593,6 +647,7 @@ dpvo:TechnicalOrganisationalMeasure a owl:Class ;
     dct:creator "Bud Bruegger"^^xsd:string ;
     dct:description "The Technical and Organisational measures used."@en ;
     dct:modified "2020-11-04"^^xsd:date ;
+    rdfs:isDefinedBy dpvo: ;
     sw:term_status "accepted"@en .
 
 dpvo:hasTechnicalOrganisationalMeasure a rdf:Property,
@@ -607,6 +662,7 @@ dpvo:hasTechnicalOrganisationalMeasure a rdf:Property,
     dct:description "Indicates use or applicability of Technical or Organisational measure"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:TechnicalOrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -618,6 +674,7 @@ dpvo:TechnicalMeasure a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Technical measures required/followed when processing data of the declared category"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:TechnicalOrganisationalMeasure ;
     sw:term_status "accepted"@en .
 
@@ -629,6 +686,7 @@ dpvo:OrganisationalMeasure a owl:Class ;
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
     dct:description "Organisational measures required/followed when processing data of the declared category"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:TechnicalOrganisationalMeasure ;
     sw:term_status "accepted"@en .
 

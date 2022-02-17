@@ -15,6 +15,7 @@
         "Fajar J. Ekaputra",
         "Georg P Krog",
         "Javier D. Fernández",
+        "Julian Flake",
         "Mark Lizar",
         "Paul Ryan",
         "Piero Bonatti",
@@ -31,4 +32,5 @@
     dct:title "DPV-GDPR: GDPR Extension for DPV"@en ;
     vann:preferredNamespacePrefix "dpvo-gdpr" ;
     vann:preferredNamespaceUri "https://w3id.org/dpv-owl/dpv-gdpr"^^xsd:string ;
+    dct:license <https://www.w3.org/Consortium/Legal/2015/doc-license> ;
     owl:versionInfo "0.4"^^xsd:string .

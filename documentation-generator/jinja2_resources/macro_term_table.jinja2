@@ -48,14 +48,14 @@
              <td>{{term.skos_note}}</td>
           </tr>
           {% endif %}
-          {% if term.skos_scopeNote %}
+          {% if term.dct_source %}
           <tr>
             <td>Source:</td>
             <td>
-            {% if term.skos_scopeNote is sequence and not term.skos_scopeNote is string %}{% for parent in term.skos_scopeNote|sort %}
+            {% if term.dct_source is sequence and not term.dct_source is string %}{% for parent in term.dct_source|sort %}
               <a href="{{parent}}">{{parent|saved_label}}</a>{{', ' if not loop.last }}
               {% endfor %}{% else %}
-              <a href="{{term.skos_scopeNote}}">{{term.skos_scopeNote|saved_label}}</a>
+              <a href="{{term.dct_source}}">{{term.dct_source|saved_label}}</a>
               {% endif %}
             </td>
           </tr>
@@ -133,14 +133,14 @@
             </td>
           </tr>
           {% endif %}
-          {% if term.skos_scopeNote %}
+          {% if term.dct_source %}
           <tr>
             <td>Source:</td>
             <td>
-            {% if term.skos_scopeNote is sequence and not term.skos_scopeNote is string %}{% for parent in term.skos_scopeNote|sort %}
+            {% if term.dct_source is sequence and not term.dct_source is string %}{% for parent in term.dct_source|sort %}
               <a href="{{parent}}">{{parent|saved_label}}</a>{{', ' if not loop.last }}
               {% endfor %}{% else %}
-              <a href="{{term.skos_scopeNote}}">{{term.skos_scopeNote|saved_label}}</a>
+              <a href="{{term.dct_source}}">{{term.dct_source|saved_label}}</a>
               {% endif %}
             </td>
           </tr>

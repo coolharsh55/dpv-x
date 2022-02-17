@@ -91,6 +91,7 @@ dpv:AcademicResearch a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Conduct or assist with research conducted in an academic context e.g. within universities"@en ;
     skos:prefLabel "Academic Research"@en ;
@@ -100,6 +101,7 @@ dpv:AcademicResearch a skos:Concept,
 dpv:AccountManagement a skos:Concept,
         dpv:Concept ;
     dct:created "2021-09-08"^^xsd:date ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Create, maintain, and manage accounts for purposes of providing services"@en ;
     skos:prefLabel "Account Management"@en ;
@@ -114,6 +116,7 @@ dpv:CommercialResearch a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Conduct research in a commercial setting or with intention to commercialise e.g. in a company or sponsored by a company"@en ;
     skos:prefLabel "Commercial Research"@en ;
@@ -126,6 +129,7 @@ dpv:CommunicationForCustomerCare a skos:Concept,
     dct:creator "Beatriz Esteves"^^xsd:string,
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Communicate with customers for assisting them, resolving issues, ensuring satisfaction in relation to services provided"@en ;
     skos:prefLabel "Communication for Customer Care"@en ;
@@ -137,10 +141,11 @@ dpv:CreateEventRecommendations a skos:Concept,
     dct:created "2019-11-26"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Rudy Jacob"^^xsd:string ;
+    dct:source <https://www.specialprivacy.eu/> ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Create and provide personalised recommendations for events"@en ;
     skos:prefLabel "Create Event Recommendations"@en ;
-    skos:scopeNote <https://www.specialprivacy.eu/> ;
     dpv:isSubTypeOf dpv:CreatePersonalizedRecommendations .
 
 dpv:CreateProductRecommendations a skos:Concept,
@@ -152,6 +157,7 @@ dpv:CreateProductRecommendations a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Create and provide product recommendations e.g. suggest similar products"@en ;
     skos:prefLabel "Create Product Recommendations"@en ;
@@ -161,28 +167,31 @@ dpv:CreateProductRecommendations a skos:Concept,
 dpv:CustomerClaimsManagement a skos:Concept,
         dpv:Concept ;
     dct:created "2021-09-08"^^xsd:date ;
+    dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Manage claims, including repayment of monies owed"@en ;
     skos:prefLabel "Customer Claims Management"@en ;
-    skos:scopeNote <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
     dpv:isSubTypeOf dpv:CustomerManagement .
 
 dpv:CustomerOrderManagement a skos:Concept,
         dpv:Concept ;
     dct:created "2021-09-08"^^xsd:date ;
+    dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Manage customer orders"@en ;
     skos:prefLabel "Customer Order Management"@en ;
-    skos:scopeNote <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
     dpv:isSubTypeOf dpv:CustomerManagement .
 
 dpv:CustomerSolvencyMonitoring a skos:Concept,
         dpv:Concept ;
     dct:created "2021-09-09"^^xsd:date ;
+    dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Monitor solvency of customers for financial diligence"@en ;
     skos:prefLabel "Customer Solvency Monitoring"@en ;
-    skos:scopeNote <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
     dpv:isSubTypeOf dpv:CustomerManagement .
 
 dpv:DeliveryOfGoods a skos:Concept,
@@ -194,6 +203,7 @@ dpv:DeliveryOfGoods a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Deliver goods and services requested or asked by consumer"@en ;
     skos:prefLabel "Delivery of Goods"@en ;
@@ -206,6 +216,7 @@ dpv:DirectMarketing a skos:Concept,
     dct:creator "Beatriz Esteves"^^xsd:string,
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Conduct direct marketing i.e. marketing communicated directly to the individual"@en ;
     skos:prefLabel "Direct Marketing"@en ;
@@ -214,10 +225,11 @@ dpv:DirectMarketing a skos:Concept,
 dpv:DisputeManagement a skos:Concept,
         dpv:Concept ;
     dct:created "2021-09-08"^^xsd:date ;
+    dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Manage disputes by natural persons, private bodies, or public authorities relevant to organisation"@en ;
     skos:prefLabel "Dispute Management"@en ;
-    skos:scopeNote <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
     dpv:isSubTypeOf dpv:OrganisationGovernance .
 
 dpv:EnforceAccessControl a skos:Concept,
@@ -229,6 +241,7 @@ dpv:EnforceAccessControl a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Conduct or enforce access control"@en ;
     skos:note "Was previously \"Access Control\". Prefixed to distinguish from Technical Measure."@en ;
@@ -245,6 +258,7 @@ dpv:FraudPreventionAndDetection a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Detect and prevent fraud"@en ;
     skos:prefLabel "Fraud Prevention and Detection"@en ;
@@ -259,11 +273,12 @@ dpv:HumanResourceManagement a skos:Concept,
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
+    dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Manage humans and 'human resources' within the organisation for effective and efficient operations."@en ;
     skos:note "HR is a broad concept. Its management includes, amongst others - recruiting employees and intermediaries e.g. brokers, independent representatives; payroll administration, remunerations, commissions, and wages; and application of social legislation."@en ;
     skos:prefLabel "Human Resources Management"@en ;
-    skos:scopeNote <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
     dpv:isSubTypeOf dpv:Purpose .
 
 dpv:IdentityVerification a skos:Concept,
@@ -275,6 +290,7 @@ dpv:IdentityVerification a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Verify or authorize identity"@en ;
     skos:prefLabel "Identity Verification"@en ;
@@ -289,6 +305,7 @@ dpv:ImproveExistingProductsAndServices a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Improve existing products and services"@en ;
     skos:prefLabel "Improve Existing Products and Services"@en ;
@@ -303,6 +320,7 @@ dpv:ImproveInternalCRMProcesses a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Improve customer-relationship management (CRM) processes"@en ;
     skos:prefLabel "Improve Internal CRM Processes"@en ;
@@ -318,6 +336,7 @@ dpv:IncreaseServiceRobustness a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Improve robustness and resilience of services"@en ;
     skos:prefLabel "Increase Service Robustness"@en ;
@@ -332,6 +351,7 @@ dpv:InternalResourceOptimisation a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Optimize internal resource availability and usage for organisation"@en ;
     skos:prefLabel "Internal Resource Optimisation"@en ;
@@ -343,6 +363,7 @@ dpv:LegalCompliance a skos:Concept,
     dct:creator "Beatriz Esteves"^^xsd:string,
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Fulfilment of obligations or requirements towards achieving compliance with law or regulations"@en ;
     skos:prefLabel "Legal Compliance"@en ;
@@ -355,10 +376,11 @@ dpv:MemberPartnerManagement a skos:Concept,
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
+    dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Maintain registry of shareholders, members, or partners for governance, administration, and management functions"@en ;
     skos:prefLabel "Members and Partners Management"@en ;
-    skos:scopeNote <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
     dpv:isSubTypeOf dpv:OrganisationGovernance .
 
 dpv:NonCommercialResearch a skos:Concept,
@@ -370,6 +392,7 @@ dpv:NonCommercialResearch a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Conduct research in a non-commercial setting e.g. for a non-profit-organisation (NGO)"@en ;
     skos:prefLabel "Non-Commercial Research"@en ;
@@ -384,6 +407,7 @@ dpv:OptimiseUserInterface a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Optimize interfaces presented to the user"@en ;
     skos:prefLabel "Optimise User Interface"@en ;
@@ -396,6 +420,7 @@ dpv:OrganisationComplianceManagement a skos:Concept,
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Manage compliance for organisation in relation to internal policies"@en ;
     skos:prefLabel "Organisation Compliance Management"@en ;
@@ -408,6 +433,7 @@ dpv:OrganisationRiskManagement a skos:Concept,
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Manage risk for organisation's activities"@en ;
     skos:prefLabel "Organisation Risk Management"@en ;
@@ -419,6 +445,7 @@ dpv:Payment a skos:Concept,
     dct:creator "Beatriz Esteves"^^xsd:string,
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Process payment transactions in relation to service"@en ;
     skos:prefLabel "Payment"@en ;
@@ -430,6 +457,7 @@ dpv:PersonalisedAdvertising a skos:Concept,
     dct:creator "Beatriz Esteves"^^xsd:string,
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Create and provide personalised advertising"@en ;
     skos:prefLabel "Personalised Advertising"@en ;
@@ -445,6 +473,7 @@ dpv:PersonalisedBenefits a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Create and provide personalised benefits for a service"@en ;
     skos:prefLabel "Personalised Benefits"@en ;
@@ -457,10 +486,11 @@ dpv:PublicRelations a skos:Concept,
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
+    dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Manage and conduct public relations processes. This includes creating goodwill for the organization."@en ;
     skos:prefLabel "Public Relations"@en ;
-    skos:scopeNote <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
     dpv:isSubTypeOf dpv:Marketing .
 
 dpv:RecordManagement a skos:Concept,
@@ -470,6 +500,7 @@ dpv:RecordManagement a skos:Concept,
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Manage creation, storage, and use of records relevant to operations, events, and processes e.g. to store logs or access requests"@en ;
     skos:prefLabel "Record Management"@en ;
@@ -481,6 +512,7 @@ dpv:RegistrationAuthentication a skos:Concept,
     dct:creator "Beatriz Esteves"^^xsd:string,
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Register, authenticate, and identify users or agents in context of a service"@en ;
     skos:prefLabel "Registration and Authentication"@en ;
@@ -495,6 +527,7 @@ dpv:SellDataToThirdParties a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Sell data or information to third parties"@en ;
     skos:note "Sell here means exchange, submit, or provide in return for direct or indirect compensation. Was subclass of commercial interest, changed to reflect selling something"@en ;
@@ -510,6 +543,7 @@ dpv:SellInsightsFromData a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Sell data or information relevant to insights obtained from analysis of data"@en ;
     skos:note "Sell here means exchange, submit, or provide in return for direct or indirect compensation. Was subclass of commercial interest, changed to reflect selling something"@en ;
@@ -525,6 +559,7 @@ dpv:SellProductsToDataSubject a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Sell products or services to the user, consumer, or data subjects"@en ;
     skos:note "Was subclass of commercial interest, changed to reflect selling something"@en ;
@@ -534,6 +569,7 @@ dpv:SellProductsToDataSubject a skos:Concept,
 dpv:ServiceRecordManagement a skos:Concept,
         dpv:Concept ;
     dct:created "2021-09-08"^^xsd:date ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Manage invoicing, orders, and records in relation to services"@en ;
     skos:prefLabel "Service Order Management"@en ;
@@ -545,6 +581,7 @@ dpv:ServiceUsageAnalytics a skos:Concept,
     dct:creator "Beatriz Esteves"^^xsd:string,
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Conduct analysis and reporting related to usage of services or products"@en ;
     skos:note "Was \"UsageAnalytics\", prefixed with Service to better reflect scope"@en ;
@@ -557,6 +594,7 @@ dpv:SocialMediaMarketing a skos:Concept,
     dct:creator "Beatriz Esteves"^^xsd:string,
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Conduct marketing through social media"@en ;
     skos:prefLabel "Social Media"@en ;
@@ -566,6 +604,7 @@ dpv:TechnicalServiceProvision a skos:Concept,
         dpv:Concept ;
     dct:created "2021-09-08"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Manage and provide technical processes and functions necessary for delivering services"@en ;
     skos:prefLabel "Technical Service Provision"@en ;
@@ -580,6 +619,7 @@ dpv:UserInterfacePersonalisation a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Personalise interfaces presented to the user"@en ;
     skos:prefLabel "User Interface Personalisation"@en ;
@@ -592,10 +632,11 @@ dpv:VendorPayment a skos:Concept,
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
+    dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Manage payment of vendors"@en ;
     skos:prefLabel "Vendor Payment"@en ;
-    skos:scopeNote <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
     dpv:isSubTypeOf dpv:VendorManagement .
 
 dpv:VendorRecordsManagement a skos:Concept,
@@ -605,10 +646,11 @@ dpv:VendorRecordsManagement a skos:Concept,
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
+    dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Manage orders related to vendors"@en ;
     skos:prefLabel "Vendor Records Management"@en ;
-    skos:scopeNote <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
     dpv:isSubTypeOf dpv:VendorManagement .
 
 dpv:VendorSelectionAssessment a skos:Concept,
@@ -618,10 +660,11 @@ dpv:VendorSelectionAssessment a skos:Concept,
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
+    dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Manage selection, assessment, and evaluation related to vendors"@en ;
     skos:prefLabel "Vendor Selection Assessment"@en ;
-    skos:scopeNote <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
     dpv:isSubTypeOf dpv:VendorManagement .
 
 dpv:hasPurpose a skos:Concept,
@@ -633,17 +676,19 @@ dpv:hasPurpose a skos:Concept,
         "Javier Fernández"^^xsd:string,
         "Mark Lizar"^^xsd:string ;
     dct:modified "2020-11-04"^^xsd:date ;
+    dct:source <https://www.specialprivacy.eu/> ;
     rdfs:domain dpv:Concept ;
+    rdfs:isDefinedBy dpv: ;
     rdfs:range dpv:Purpose ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates association with Purpose"@en ;
-    skos:prefLabel "has purpose"@en ;
-    skos:scopeNote <https://www.specialprivacy.eu/> .
+    skos:prefLabel "has purpose"@en .
 
 dpv:hasSector a skos:Concept,
         dpv:Relation ;
     dct:created "2019-04-05"^^xsd:date ;
     rdfs:domain dpv:Concept ;
+    rdfs:isDefinedBy dpv: ;
     rdfs:range dpv:Sector ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates the purpose is associated with activities in the indicated (Economic) Sector(s)"@en ;
@@ -655,6 +700,7 @@ dpv:Advertising a skos:Concept,
     dct:creator "Beatriz Esteves"^^xsd:string,
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Conduct advertising i.e. process or artefact used to call attention to a product, service, etc. through announcements, notices, or other forms of communication"@en ;
     skos:note "Advertising is a subset of Marketing. Advertising by itself does not indicate 'personalisation' i.e. personalised ads."@en ;
@@ -668,6 +714,7 @@ dpv:CommunicationManagement a skos:Concept,
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Manage communication or provide means for communication e.g. to send an email notifying some information"@en ;
     skos:note "This purpose by itself does not sufficiently and clearly indicate what the communication is about. As such, it is recommended to combine it with another purpose to indicate the application. For example, Communication of Payment."@en ;
@@ -683,6 +730,7 @@ dpv:CustomerCare a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Provide assistance, resolve issues, ensure satisfaction in relation to services provided"@en ;
     skos:prefLabel "Customer Care"@en ;
@@ -695,6 +743,7 @@ dpv:CustomerRelationshipManagement a skos:Concept,
     dct:creator "Beatriz"^^xsd:string,
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Manage and analyse interactions with past, current, and potential customers"@en ;
     skos:prefLabel "Customer Relationship Management"@en ;
@@ -709,6 +758,7 @@ dpv:OptimisationForConsumer a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Optimize activities and services for consumer or user"@en ;
     skos:prefLabel "Optimisation for Consumer"@en ;
@@ -721,6 +771,7 @@ dpv:Relation rdfs:subPropertyOf skos:semanticRelation ;
 dpv:RequestedServiceProvision a skos:Concept,
         dpv:Concept ;
     dct:created "2021-09-08"^^xsd:date ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Deliver service as requested by user or consumer"@en ;
     skos:prefLabel "Requested Service Provision"@en ;
@@ -735,6 +786,7 @@ dpv:Sector a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicate or restrict scope for interpretation and application of purpose in a domain e.g. Agriculture, Banking"@en ;
     skos:note "There are various sector codes used commonly to indicate the domain of an organisation or business. Examples include NACE (EU), ISIC (UN), SIC and NAICS (USA)."@en ;
@@ -745,16 +797,18 @@ dpv:CreatePersonalizedRecommendations a skos:Concept,
     dct:created "2019-11-26"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Rudy Jacob"^^xsd:string ;
+    dct:source <https://www.specialprivacy.eu/> ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Create and provide personalised recommendations"@en ;
     skos:prefLabel "Create Personalized Recommendations"@en ;
-    skos:scopeNote <https://www.specialprivacy.eu/> ;
     dpv:isSubTypeOf dpv:ServicePersonalization .
 
 dpv:Personalisation a skos:Concept,
         dpv:Concept ;
     dct:created "2021-09-01"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Create and provide customisation based on attributes and/or needs of person(s) or context(s)."@en ;
     skos:note "This term is a blanket purpose category for indicating personalisation of some other purpose, e.g. by creating a subclass of the other concept and Personalisation"@en ;
@@ -770,6 +824,7 @@ dpv:ServiceOptimization a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Optimise services or activities"@en ;
     skos:note "Subclass of ServiceProvision since optimisation is usually considered part of providing services"@en ;
@@ -785,6 +840,7 @@ dpv:EnforceSecurity a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Ensure and enforce security e.g. of data, personnel"@en ;
     skos:note "Was previous \"Security\". Prefixed to distinguish from TechOrg measures."@en ;
@@ -800,6 +856,7 @@ dpv:ResearchAndDevelopment a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Conduct research and development for new methods, products, or services"@en ;
     skos:prefLabel "Research and Development"@en ;
@@ -808,6 +865,7 @@ dpv:ResearchAndDevelopment a skos:Concept,
 dpv:SellProducts a skos:Concept,
         dpv:Concept ;
     dct:created "2021-09-08"^^xsd:date ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Sell products or services"@en ;
     skos:note "Sell here means exchange, submit, or provide in return for direct or indirect compensation."@en ;
@@ -823,6 +881,7 @@ dpv:ServicePersonalization a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Personalise services or product or activities"@en ;
     skos:note "Subclass of ServiceProvision since personalisation is usually considered part of providing services"@en ;
@@ -837,10 +896,11 @@ dpv:VendorManagement a skos:Concept,
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
+    dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Manage orders, payment, evaluation, and prospecting related to vendors"@en ;
     skos:prefLabel "Vendor Management"@en ;
-    skos:scopeNote <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
     dpv:isSubTypeOf dpv:Purpose .
 
 dpv:Marketing a skos:Concept,
@@ -849,6 +909,7 @@ dpv:Marketing a skos:Concept,
     dct:creator "Beatriz Esteves"^^xsd:string,
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Conduct marketing in relation to organisation or products or services e.g. promoting, selling, and distributing"@en ;
     skos:note "Was commercial interest, changed to consider Marketing a separate Purpose category by itself"@en ;
@@ -864,6 +925,7 @@ dpv:OptimisationForController a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Optimize activities and services for provider or controller"@en ;
     skos:prefLabel "Optimisation for Controller"@en ;
@@ -876,15 +938,17 @@ dpv:OrganisationGovernance a skos:Concept,
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
+    dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Conduct activities and functions for organisation's governance"@en ;
     skos:prefLabel "Organisation Governance"@en ;
-    skos:scopeNote <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
     dpv:isSubTypeOf dpv:Purpose .
 
 dpv:CustomerManagement a skos:Concept,
         dpv:Concept ;
     dct:created "2021-09-08"^^xsd:date ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Manage past, current, and future customers"@en ;
     skos:prefLabel "Customer Management"@en ;
@@ -899,6 +963,7 @@ dpv:ServiceProvision a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Provide service or product or activities"@en ;
     skos:prefLabel "Service Provision"@en ;
@@ -910,11 +975,12 @@ dpv:Purpose a skos:Concept,
     dct:creator "Axel Polleres"^^xsd:string,
         "Javier Fernández"^^xsd:string ;
     dct:modified "2020-11-04"^^xsd:date ;
+    dct:source <https://www.specialprivacy.eu/> ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "The purpose of processing personal data"@en ;
     skos:prefLabel "Purpose"@en ;
-    skos:related spl:AnyPurpose ;
-    skos:scopeNote <https://www.specialprivacy.eu/> .
+    skos:related spl:AnyPurpose .
 
 dpv:Concept rdfs:subClassOf skos:Concept ;
     skos:prefLabel "Concept"@en .

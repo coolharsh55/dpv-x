@@ -284,8 +284,8 @@
 </head>
 <body>
     <section id="abstract">
-      <p>The Data Privacy Vocabulary [[DPV]] enables expressing machine-readable metadata about the use and processing of personal data based on legislative requirements such as the General Data Protection Regulation [[GDPR]]. This document acts as a ‘Primer’ for the DPV by introducing its fundamental concepts and providing examples of use-cases and applications. It is intended to be a starting point for those wishing to use the DPV and an orientation for people from all disciplines. The canonical URL for DPV is <a href="https://w3id.org/dpv">https://w3id.org/dpv#</a> which contains (this) specification.</p>
-      <p>The namespace for DPV terms is <a href="https://w3id.org/dpv#"><code>https://w3id.org/dpv#</code></a>, the suggested prefix for is <code>dpv</code>, and this document along with its various serializations are available on <a href="https://github.com/w3c/dpv">GitHub</a>.
+      <p>The Data Privacy Vocabulary [[DPV]] enables expressing machine-readable metadata about the use and processing of personal data based on legislative requirements such as the General Data Protection Regulation [[GDPR]]. This document describes the DPV specification along with its data model.</p>
+      <p>The canonical URL for DPV is <a href="https://w3id.org/dpv">https://w3id.org/dpv#</a> which contains (this) specification. The namespace for DPV terms is <a href="https://w3id.org/dpv#"><code>https://w3id.org/dpv#</code></a>, the suggested prefix for is <code>dpv</code>, and this document along with its various serializations are available on <a href="https://github.com/w3c/dpv">GitHub</a>.
       <p class="note">Newcomers to the DPV are <strong>strongly recommended to first read through the [[[DPV-Primer]]]</strong> to familiarise themselves with the semantics, concepts, their place within DPV.</p>
 
       <p><strong>DPV Family of Documents</strong></p>
@@ -2362,7 +2362,7 @@
       <code><a href="#hasDataProcessor">has data processor</a></code> |
       <code><a href="#hasDataSubject">has data subject</a></code> |
       <code><a href="#hasEntity">has entity</a></code> |
-      <code><a href="#hasJointDataController">has joint data controller</a></code> |
+      <code><a href="#hasJointDataControllers">has joint data controllers</a></code> |
       <code><a href="#hasName">has name</a></code> |
       <code><a href="#hasRecipient">has recipient</a></code> |
       <code><a href="#hasRecipientDataController">has recipient data controller</a></code> |
@@ -2654,13 +2654,13 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="hasJointDataController">
-      <h4 id="hasJointDataController">has joint data controller</h4>
+    <section data-dfn-for="hasJointDataControllers">
+      <h4 id="hasJointDataControllers">has joint data controllers</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>hasJointDataController</dfn></code></td>
+            <td><code><dfn>hasJointDataControllers</dfn></code></td>
           </tr>
           <tr>
             <td>Description:</td>
@@ -2678,7 +2678,7 @@
           </tr>
           <tr>
             <td>Range:</td>
-            <td><a href="https://w3id.org/dpv#JointDataController"><code>dpv:JointDataController</code></a></td>
+            <td><a href="https://w3id.org/dpv#JointDataControllers"><code>dpv:JointDataControllers</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>
@@ -6725,7 +6725,7 @@
           <tr>
             <td>SubType of:</td>
             <td>
-              <a href="https://w3id.org/dpv#DerivedData">dpv:DerivedData</a>
+              <a href="https://w3id.org/dpv#DerivedPersonalData">dpv:DerivedPersonalData</a>
             </td>
           </tr>
           <tr>
@@ -7424,7 +7424,7 @@
           <tr>
             <td>SubType of:</td>
             <td>
-              <a href="">DataProcessingAgreement</a>
+              <a href="https://w3id.org/dpv#DataProcessingAgreement">dpv:DataProcessingAgreement</a>
             </td>
           </tr>
           <tr>
@@ -7836,7 +7836,7 @@
           <tr>
             <td>SubType of:</td>
             <td>
-              <a href="">DataProcessingAgreement</a>
+              <a href="https://w3id.org/dpv#DataProcessingAgreement">dpv:DataProcessingAgreement</a>
             </td>
           </tr>
           <tr>
@@ -9037,6 +9037,7 @@
       <code><a href="#Consequence">Consequence</a></code> |
       <code><a href="#Context">Context</a></code> |
       <code><a href="#Duration">Duration</a></code> |
+      <code><a href="#Frequency">Frequency</a></code> |
       <code><a href="#HumanInvolvement">Human Involvement</a></code> |
       <code><a href="#Importance">Importance</a></code> |
       <code><a href="#Necessity">Necessity</a></code> |
@@ -9159,6 +9160,25 @@
           <tr>
             <td>Created:</td>
             <td><time>2022-02-09</time></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="Frequency">
+      <h4 id="Frequency">Frequency</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>Frequency</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>The frequency or information about periods and repetitions in terms of recurrence.</td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-02-16</time></td>
           </tr>
         </tbody>
       </table>
@@ -9489,6 +9509,7 @@
       <code><a href="#hasConsequence">has consequence</a></code> |
       <code><a href="#hasContext">has context</a></code> |
       <code><a href="#hasDuration">has duration</a></code> |
+      <code><a href="#hasFrequency">has frequency</a></code> |
       <code><a href="#hasHumanInvolvement">has human involvement</a></code> |
       <code><a href="#hasIdentifier">has identifier</a></code> |
       <code><a href="#isImplementedUsingTechnology">is implemented using technology</a></code> |
@@ -9629,6 +9650,33 @@
               Mark Lizar, 
               Rob Brennan
             </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="hasFrequency">
+      <h4 id="hasFrequency">has frequency</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>hasFrequency</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>Indicates the frequency with which something takes place</td>
+          </tr>
+          <tr>
+            <td>Domain:</td>
+            <td><a href="https://w3id.org/dpv#Concept"><code>dpv:Concept</code></a></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><a href="https://w3id.org/dpv#Frequency"><code>dpv:Frequency</code></a></td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-02-16</time></td>
           </tr>
         </tbody>
       </table>
@@ -10904,10 +10952,6 @@
             </td>
           </tr>
           <tr>
-            <td>Range:</td>
-            <td><a href="http://www.w3.org/2006/time#TemporalEntity"><code>time:TemporalEntity</code></a></td>
-          </tr>
-          <tr>
             <td>Created:</td>
             <td><time>2019-04-05</time></td>
           </tr>
@@ -11020,10 +11064,6 @@
             <td>Specifies the instant in time when consent was given</td>
           </tr>
           <tr>
-            <td>Range:</td>
-            <td><a href="http://www.w3.org/2006/time#Instant"><code>time:Instant</code></a></td>
-          </tr>
-          <tr>
             <td>Created:</td>
             <td><time>2019-04-05</time></td>
           </tr>
@@ -11134,10 +11174,6 @@
           <tr>
             <td>Description:</td>
             <td>Specifies the instant in time when consent was withdrawn</td>
-          </tr>
-          <tr>
-            <td>Range:</td>
-            <td><a href="http://www.w3.org/2006/time#Instant"><code>time:Instant</code></a></td>
           </tr>
           <tr>
             <td>Created:</td>

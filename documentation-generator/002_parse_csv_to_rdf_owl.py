@@ -212,9 +212,9 @@ def add_common_triples_for_all_terms(term, graph):
                 LINKS[link] = label
             # add link to graph
             if link.startswith('http'):
-                graph.add((BASE[f'{term.term}'], RDFS.isDefinedBy, URIRef(link)))
+                graph.add((BASE[f'{term.term}'], DCT.source, URIRef(link)))
             else:
-                graph.add((BASE[f'{term.term}'], RDFS.isDefinedBy, Literal(link, datatype=XSD.string)))
+                graph.add((BASE[f'{term.term}'], DCT.source, Literal(link, datatype=XSD.string)))
     # dct:created
     graph.add((BASE[f'{term.term}'], DCT.created, Literal(term.dct_created, datatype=XSD.date)))
     # dct:modified
@@ -227,6 +227,8 @@ def add_common_triples_for_all_terms(term, graph):
         authors = [a.strip() for a in term.dct_creator.split(',')]
         for author in authors:
             graph.add((BASE[f'{term.term}'], DCT.creator, Literal(author, datatype=XSD.string)))
+    # is defined by this vocabulary
+    graph.add((BASE[f'{term.term}'], RDFS.isDefinedBy, BASE['']))
     # resolution
         # do nothing
 
@@ -458,7 +460,7 @@ for name, module in DPV_CSV_FILES.items():
 # add information about ontology
 # this is assumed to be in file dpv-ontology-metadata.ttl
 graph = Graph()
-graph.load('dpv-owl-ontology-metadata.ttl', format='turtle')
+graph.load('ontology_metadata/dpv-owl.ttl', format='turtle')
 DPV_GRAPH += graph
 
 for prefix, namespace in NAMESPACES.items():
@@ -507,7 +509,7 @@ for name, module in DPV_GDPR_CSV_FILES.items():
     DPV_GDPR_GRAPH += graph
 
 graph = Graph()
-graph.load('dpv-owl-gdpr-ontology-metadata.ttl', format='turtle')
+graph.load('ontology_metadata/dpv-owl-gdpr.ttl', format='turtle')
 DPV_GDPR_GRAPH += graph
 
 for prefix, namespace in NAMESPACES.items():
@@ -535,7 +537,7 @@ classes = extract_terms_from_csv(DPV_PD_CSV_FILES, DPV_Class)
 DEBUG(f'there are {len(classes)} classes in {name}')
 add_triples_for_classes(classes, DPV_PD_GRAPH)
 # serialize
-DPV_PD_GRAPH.load('dpv-owl-pd-ontology-metadata.ttl', format='turtle')
+DPV_PD_GRAPH.load('ontology_metadata/dpv-owl-pd.ttl', format='turtle')
 
 for prefix, namespace in NAMESPACES.items():
     DPV_PD_GRAPH.namespace_manager.bind(prefix, namespace)

@@ -11,6 +11,7 @@ dpvo:Consent a owl:Class ;
     dct:created "2021-04-07"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Consent of the Data Subject for specified processing"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:LegalBasis ;
     sw:term_status "accepted"@en .
 
@@ -21,6 +22,7 @@ dpvo:ContractPerformance a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Fulfilment or performance of a contract involving specified processing"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Contract ;
     sw:term_status "accepted"@en .
 
@@ -30,6 +32,7 @@ dpvo:DataTransferLegalBasis a owl:Class ;
     dct:creator "David Hickey"^^xsd:string,
         "Georg P Krogg"^^xsd:string ;
     dct:description "Specific or special categories and instances of legal basis intended for justifying data transfers"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:LegalBasis ;
     sw:term_status "accepted"@en .
 
@@ -40,6 +43,7 @@ dpvo:EnterIntoContract a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Processing necessary to enter into contract"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Contract ;
     sw:term_status "accepted"@en .
 
@@ -48,6 +52,7 @@ dpvo:LegalObligation a owl:Class ;
     dct:created "2021-04-07"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Legal Obligation to conduct the specified processing"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:LegalBasis ;
     sw:term_status "accepted"@en .
 
@@ -58,6 +63,7 @@ dpvo:LegitimateInterestOfController a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Legitimate Interests of a Data Controller in conducting specified processing"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:LegitimateInterest ;
     sw:term_status "accepted"@en .
 
@@ -68,6 +74,7 @@ dpvo:LegitimateInterestOfThirdParty a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Legitimate Interests of a Third Party in conducting specified processing"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:LegitimateInterest ;
     sw:term_status "accepted"@en .
 
@@ -78,6 +85,7 @@ dpvo:OfficialAuthorityOfController a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Processing necessary or authorised through the official authority granted to or vested in the Data Controller"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:LegalBasis ;
     sw:term_status "accepted"@en .
 
@@ -86,6 +94,7 @@ dpvo:PublicInterest a owl:Class ;
     dct:created "2021-04-21"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Processing is necessary or beneficial for interest of the public or society at large"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:LegalBasis ;
     sw:term_status "accepted"@en .
 
@@ -96,6 +105,7 @@ dpvo:VitalInterestOfDataSubject a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Processing is necessary or required to protect vital interests of a data subject"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:VitalInterestOfNaturalPerson ;
     sw:term_status "accepted"@en .
 
@@ -108,6 +118,7 @@ dpvo:hasLegalBasis a rdf:Property,
     dct:description "Indicates use or applicability of a Legal Basis"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:LegalBasis ;
     sw:term_status "accepted"@en .
 
@@ -116,6 +127,7 @@ dpvo:VitalInterest a owl:Class ;
     dct:created "2021-04-21"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Processing is necessary or required to protect vital interests of a data subject or other natural person"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:LegalBasis ;
     sw:term_status "accepted"@en .
 
@@ -126,6 +138,7 @@ dpvo:VitalInterestOfNaturalPerson a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Processing is necessary or required to protect vital interests of a natural person"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:VitalInterest ;
     sw:term_status "accepted"@en .
 
@@ -134,6 +147,7 @@ dpvo:Contract a owl:Class ;
     dct:created "2021-04-07"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Creation, completion, fulfilment, or performance of a contract involving specified processing"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:LegalAgreement,
         dpvo:LegalBasis ;
     sw:term_status "accepted"@en .
@@ -143,6 +157,7 @@ dpvo:LegitimateInterest a owl:Class ;
     dct:created "2021-05-19"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Legitimate Interests of a Party as justification for specified processing"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:LegalBasis ;
     sw:term_status "accepted"@en .
 
@@ -152,5 +167,6 @@ dpvo:LegalBasis a owl:Class ;
     dct:description "The Legal basis used to justify processing of personal data"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:comment "Legal basis (plural: legal bases) are defined by legislations and regulations, whose applicability is usually restricted to specific jurisdictions."@en ;
+    rdfs:isDefinedBy dpvo: ;
     sw:term_status "accepted"@en .
 

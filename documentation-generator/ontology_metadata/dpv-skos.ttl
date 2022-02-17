@@ -18,6 +18,7 @@
         "Fajar J. Ekaputra",
         "Georg P Krog",
         "Javier D. Fernández",
+        "Julian Flake",
         "Mark Lizar",
         "Paul Ryan",
         "Piero Bonatti",
@@ -34,4 +35,5 @@
     dct:title "Data Privacy Vocabulary"@en ;
     vann:preferredNamespacePrefix "dpvo" ;
     vann:preferredNamespaceUri "https://w3id.org/dpv/dpv-owl"^^xsd:string ;
+    dct:license <https://www.w3.org/Consortium/Legal/2015/doc-license> ;
     owl:versionInfo "0.4"^^xsd:string .

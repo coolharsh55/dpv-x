@@ -11,6 +11,7 @@ dpvs:Country a rdfs:Class,
     dct:created "2022-01-19"^^xsd:date ;
     dct:creator "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:subClassOf dpvs:Location ;
     sw:term_status "accepted"@en ;
     skos:broaderTransitive dpvs:Location ;
@@ -22,6 +23,7 @@ dpvs:EconomicUnion a rdfs:Class,
         skos:Concept ;
     dct:created "2022-01-19"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:subClassOf dpvs:Location ;
     sw:term_status "accepted"@en ;
     skos:broaderTransitive dpvs:Location ;
@@ -32,6 +34,7 @@ dpvs:Law a rdfs:Class,
         skos:Concept ;
     dct:created "2022-01-19"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpvs: ;
     sw:term_status "accepted"@en ;
     skos:definition "A law is a set of rules created by government or authorities"@en ;
     skos:prefLabel "Law"@en .
@@ -39,6 +42,7 @@ dpvs:Law a rdfs:Class,
 dpvs:Location a rdfs:Class,
         skos:Concept ;
     dct:created "2022-01-19"^^xsd:date ;
+    rdfs:isDefinedBy dpvs: ;
     sw:term_status "accepted"@en ;
     skos:definition "A location is a position, site, or area where something is located"@en ;
     skos:note "Location may be geographic, physical, or virtual."@en ;
@@ -48,6 +52,7 @@ dpvs:Region a rdfs:Class,
         skos:Concept ;
     dct:created "2022-01-19"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:subClassOf dpvs:Location ;
     sw:term_status "accepted"@en ;
     skos:broaderTransitive dpvs:Location ;
@@ -58,6 +63,7 @@ dpvs:SupraNationalUnion a rdfs:Class,
         skos:Concept ;
     dct:created "2022-01-19"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:subClassOf dpvs:Location ;
     sw:term_status "accepted"@en ;
     skos:broaderTransitive dpvs:Location ;
@@ -68,6 +74,7 @@ dpvs:ThirdCountry a rdfs:Class,
         skos:Concept ;
     dct:created "2022-02-09"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:subClassOf dpvs:Country ;
     sw:term_status "accepted"@en ;
     skos:broaderTransitive dpvs:Country ;
@@ -95,6 +102,7 @@ dpvs:hasApplicableLaw a rdf:Property,
         skos:Concept ;
     dct:created "2022-01-19"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:range dpvs:Law ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates applicability of a Law"@en ;
@@ -105,6 +113,7 @@ dpvs:hasAuthority a rdf:Property,
     dct:created "2022-01-19"^^xsd:date ;
     dct:creator "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:range dpvs:Authority ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates applicability of authority for a jurisdiction"@en ;
@@ -114,6 +123,7 @@ dpvs:hasJurisdiction a rdf:Property,
         skos:Concept ;
     dct:created "2022-01-19"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:range dpvs:Location ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates applicability of specified jurisdiction"@en ;
@@ -122,6 +132,7 @@ dpvs:hasJurisdiction a rdf:Property,
 dpvs:hasThirdCountry a rdf:Property,
         skos:Concept ;
     dct:created "2022-02-09"^^xsd:date ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:range dpvs:ThirdCountry ;
     rdfs:subPropertyOf dpvs:hasCountry ;
     sw:term_status "accepted"@en ;
@@ -134,6 +145,7 @@ dpvs:isAuthorityFor a rdf:Property,
     dct:creator "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
     rdfs:domain dpvs:Authority ;
+    rdfs:isDefinedBy dpvs: ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates area, scope, or applicability of an Authority"@en ;
     skos:prefLabel "is authority for"@en .
@@ -143,6 +155,7 @@ dpvs:hasCountry a rdf:Property,
     dct:created "2022-01-19"^^xsd:date ;
     dct:creator "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:range dpvs:Country ;
     rdfs:subPropertyOf dpvs:hasLocation ;
     sw:term_status "accepted"@en ;
@@ -156,9 +169,10 @@ dpvs:hasLocation a rdf:Property,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
+    dct:source <https://www.specialprivacy.eu/> ;
+    rdfs:isDefinedBy dpvs: ;
     rdfs:range dpvs:Location ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates information about location"@en ;
-    skos:prefLabel "has location"@en ;
-    skos:scopeNote <https://www.specialprivacy.eu/> .
+    skos:prefLabel "has location"@en .
 

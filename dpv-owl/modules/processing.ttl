@@ -12,7 +12,8 @@ dpvo:Acquire a owl:Class ;
     rdfs:label "Acquire"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to come into possession or control of the data"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Obtain ;
     sw:term_status "accepted"@en .
 
@@ -20,7 +21,8 @@ dpvo:Adapt a owl:Class ;
     rdfs:label "Adapt"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to modify the data, often rewritten into a new form for a new use"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Transform ;
     sw:term_status "accepted"@en .
 
@@ -28,7 +30,8 @@ dpvo:Align a owl:Class ;
     rdfs:label "Align"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to adjust the data to be in relation to another data"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Transform ;
     sw:term_status "accepted"@en .
 
@@ -36,7 +39,8 @@ dpvo:Alter a owl:Class ;
     rdfs:label "Alter"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to change the data without changing it into something else"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Transform ;
     sw:term_status "accepted"@en .
 
@@ -44,7 +48,8 @@ dpvo:Analyse a owl:Class ;
     rdfs:label "Analyse"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to study or examine the data in detail"@en ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/vocabs/processing> ;
+    dct:source <https://www.specialprivacy.eu/vocabs/processing> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso svpr:Analyse ;
     rdfs:subClassOf dpvo:Use ;
     sw:term_status "accepted"@en .
@@ -53,7 +58,8 @@ dpvo:Anonymise a owl:Class ;
     rdfs:label "Anonymise"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to irreversibly alter personal data in such a way that an unique data subject can no longer be identified directly or indirectly or in combination with other data"@en ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/vocabs/processing> ;
+    dct:source <https://www.specialprivacy.eu/vocabs/processing> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso svpr:Anonymize ;
     rdfs:subClassOf dpvo:Transform ;
     sw:term_status "accepted"@en .
@@ -62,8 +68,9 @@ dpvo:Collect a owl:Class ;
     rdfs:label "Collect"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to gather data from someone"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj>,
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj>,
         <https://www.specialprivacy.eu/vocabs/processing> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso svpr:Collect ;
     rdfs:subClassOf dpvo:Obtain ;
     sw:term_status "accepted"@en .
@@ -72,8 +79,9 @@ dpvo:Combine a owl:Class ;
     rdfs:label "Combine"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to join or merge data"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj>,
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj>,
         <https://www.specialprivacy.eu/vocabs/processing> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso svpr:Aggregate ;
     rdfs:subClassOf dpvo:Transform ;
     sw:term_status "accepted"@en .
@@ -82,8 +90,9 @@ dpvo:Consult a owl:Class ;
     rdfs:label "Consult"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to consult or query data"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj>,
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj>,
         <https://www.specialprivacy.eu/vocabs/processing> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso svpr:Query ;
     rdfs:subClassOf dpvo:Use ;
     sw:term_status "accepted"@en .
@@ -92,7 +101,8 @@ dpvo:Copy a owl:Class ;
     rdfs:label "Copy"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to produce an exact reprodution of the data"@en ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/vocabs/processing> ;
+    dct:source <https://www.specialprivacy.eu/vocabs/processing> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso svpr:Copy ;
     rdfs:subClassOf dpvo:Processing ;
     sw:term_status "accepted"@en .
@@ -101,7 +111,8 @@ dpvo:Derive a owl:Class ;
     rdfs:label "Derive"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to create new derivative data from the original data"@en ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/vocabs/processing> ;
+    dct:source <https://www.specialprivacy.eu/vocabs/processing> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso svpr:Derive ;
     rdfs:subClassOf dpvo:Transform ;
     sw:term_status "accepted"@en .
@@ -110,7 +121,8 @@ dpvo:Destruct a owl:Class ;
     rdfs:label "Destruct"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to process data in a way it no longer exists or cannot be repaired"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Remove ;
     sw:term_status "accepted"@en .
 
@@ -118,7 +130,8 @@ dpvo:DiscloseByTransmission a owl:Class ;
     rdfs:label "Disclose by Transmission"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to disclose data by means of transmission"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Disclose ;
     sw:term_status "accepted"@en .
 
@@ -126,7 +139,8 @@ dpvo:Disseminate a owl:Class ;
     rdfs:label "Disseminate"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to spread data throughout"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Disclose ;
     sw:term_status "accepted"@en .
 
@@ -134,7 +148,8 @@ dpvo:Erase a owl:Class ;
     rdfs:label "Erase"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to delete data"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Remove ;
     sw:term_status "accepted"@en .
 
@@ -142,7 +157,8 @@ dpvo:MakeAvailable a owl:Class ;
     rdfs:label "Make Available"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to transform or publish data to be used"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Disclose ;
     sw:term_status "accepted"@en .
 
@@ -150,7 +166,8 @@ dpvo:Move a owl:Class ;
     rdfs:label "Move"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to move data from one location to another including deleting the original copy"@en ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/vocabs/processing> ;
+    dct:source <https://www.specialprivacy.eu/vocabs/processing> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso svpr:Move ;
     rdfs:subClassOf dpvo:Transfer ;
     sw:term_status "accepted"@en .
@@ -159,7 +176,8 @@ dpvo:Profiling a owl:Class ;
     rdfs:label "Profiling"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to create a profile that describes or represents a person"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Use ;
     sw:term_status "accepted"@en .
 
@@ -167,7 +185,8 @@ dpvo:PseudoAnonymise a owl:Class ;
     rdfs:label "Pseudo-Anonymise"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to replace personal identifiable information by artificial identifiers"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Transform ;
     sw:term_status "accepted"@en .
 
@@ -175,7 +194,8 @@ dpvo:Record a owl:Class ;
     rdfs:label "Record"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to make a record (especially media)"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Obtain ;
     sw:term_status "accepted"@en .
 
@@ -183,7 +203,8 @@ dpvo:Restrict a owl:Class ;
     rdfs:label "Restrict"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to apply a restriction on the processsing of specific records"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Transform ;
     sw:term_status "accepted"@en .
 
@@ -191,7 +212,8 @@ dpvo:Retrieve a owl:Class ;
     rdfs:label "Retrieve"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to retrieve data, often in an automated manner"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Use ;
     sw:term_status "accepted"@en .
 
@@ -199,7 +221,8 @@ dpvo:Share a owl:Class ;
     rdfs:label "Share"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to give data (or a portion of it) to others"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Disclose ;
     sw:term_status "accepted"@en .
 
@@ -207,7 +230,8 @@ dpvo:Store a owl:Class ;
     rdfs:label "Store"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to keep data for future use"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Processing ;
     sw:term_status "accepted"@en .
 
@@ -215,7 +239,8 @@ dpvo:Structure a owl:Class ;
     rdfs:label "Structure"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to arrange data according to a structure"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Organise ;
     sw:term_status "accepted"@en .
 
@@ -223,7 +248,8 @@ dpvo:Transmit a owl:Class ;
     rdfs:label "Transmit"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to send out data"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Disclose ;
     sw:term_status "accepted"@en .
 
@@ -238,8 +264,9 @@ dpvo:hasProcessing a rdf:Property,
         "Mark Lizar"^^xsd:string ;
     dct:description "Indicates association with Processing"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
+    dct:source <https://www.specialprivacy.eu/> ;
     rdfs:domain owl:Thing ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:Processing ;
     sw:term_status "accepted"@en .
 
@@ -247,7 +274,8 @@ dpvo:Organise a owl:Class ;
     rdfs:label "Organise"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to organize data for arranging or classifying"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Processing ;
     sw:term_status "accepted"@en .
 
@@ -255,7 +283,8 @@ dpvo:Transfer a owl:Class ;
     rdfs:label "Transfer"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to move data from one place to another"@en ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/vocabs/processing> ;
+    dct:source <https://www.specialprivacy.eu/vocabs/processing> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso svpr:Transfer ;
     rdfs:subClassOf dpvo:Processing ;
     sw:term_status "accepted"@en .
@@ -264,7 +293,8 @@ dpvo:Remove a owl:Class ;
     rdfs:label "Remove"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to destruct or erase data"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Processing ;
     sw:term_status "accepted"@en .
 
@@ -272,7 +302,8 @@ dpvo:Obtain a owl:Class ;
     rdfs:label "Obtain"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to solicit or gather data from someone"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Processing ;
     sw:term_status "accepted"@en .
 
@@ -280,7 +311,8 @@ dpvo:Use a owl:Class ;
     rdfs:label "Use"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to use data"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Processing ;
     sw:term_status "accepted"@en .
 
@@ -288,7 +320,8 @@ dpvo:Disclose a owl:Class ;
     rdfs:label "Disclose"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to make data known"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Processing ;
     sw:term_status "accepted"@en .
 
@@ -296,7 +329,8 @@ dpvo:Transform a owl:Class ;
     rdfs:label "Transform"@en ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:description "to change the form or nature of data"@en ;
-    rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Processing ;
     sw:term_status "accepted"@en .
 
@@ -307,7 +341,8 @@ dpvo:Processing a owl:Class ;
         "Javier Fernández"^^xsd:string ;
     dct:description "The processing performed on personal data"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+    dct:source <https://www.specialprivacy.eu/> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso spl:AnyProcessing ;
     sw:term_status "accepted"@en .
 

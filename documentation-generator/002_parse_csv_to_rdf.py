@@ -200,9 +200,9 @@ def add_common_triples_for_all_terms(term, graph):
                 LINKS[link] = label
             # add link to graph
             if link.startswith('http'):
-                graph.add((BASE[f'{term.term}'], SKOS.scopeNote, URIRef(link)))
+                graph.add((BASE[f'{term.term}'], DCT.source, URIRef(link)))
             else:
-                graph.add((BASE[f'{term.term}'], SKOS.scopeNote, Literal(link, datatype=XSD.string)))
+                graph.add((BASE[f'{term.term}'], DCT.source, Literal(link, datatype=XSD.string)))
     # dct:created
     graph.add((BASE[f'{term.term}'], DCT.created, Literal(term.dct_created, datatype=XSD.date)))
     # dct:modified
@@ -215,6 +215,8 @@ def add_common_triples_for_all_terms(term, graph):
         authors = [a.strip() for a in term.dct_creator.split(',')]
         for author in authors:
             graph.add((BASE[f'{term.term}'], DCT.creator, Literal(author, datatype=XSD.string)))
+    # is defined by this vocabulary
+    graph.add((BASE[f'{term.term}'], RDFS.isDefinedBy, BASE['']))
     # resolution
         # do nothing
 
@@ -410,7 +412,7 @@ for name, module in DPV_CSV_FILES.items():
         graph.add((BASE[f'{name.title()}Concepts'], SKOS.member, concept))
         DPV_GRAPH.add((concept, SKOS.inScheme, DPV['']))
     # serialize
-    graph.load('dpv-semantics-metadata.ttl', format='turtle')
+    graph.load('ontology_metadata/dpv-semantics.ttl', format='turtle')
     serialize_graph(graph, f'{EXPORT_DPV_MODULE_PATH}/{name}')
     if 'topconcept' in module:
         DPV_GRAPH.add((BASE[''], SKOS.hasTopConcept, module['topconcept']))
@@ -419,8 +421,8 @@ for name, module in DPV_CSV_FILES.items():
 # add information about ontology
 # this is assumed to be in file dpv-ontology-metadata.ttl
 graph = Graph()
-graph.load('dpv-ontology-metadata.ttl', format='turtle')
-graph.load('dpv-semantics-metadata.ttl', format='turtle')
+graph.load('ontology_metadata/dpv-gdpr.ttl', format='turtle')
+graph.load('ontology_metadata/dpv-semantics.ttl', format='turtle')
 DPV_GRAPH += graph
 
 for prefix, namespace in NAMESPACES.items():
@@ -478,7 +480,7 @@ for name, module in DPV_GDPR_CSV_FILES.items():
     DPV_GDPR_GRAPH += graph
 
 graph = Graph()
-graph.load('dpv-gdpr-ontology-metadata.ttl', format='turtle')
+graph.load('ontology_metadata/dpv-gdpr.ttl', format='turtle')
 DPV_GDPR_GRAPH += graph
 
 for prefix, namespace in NAMESPACES.items():
@@ -511,7 +513,7 @@ DPV_PD_GRAPH.add((BASE[f'PersonalDataConcepts'], DCT.title, Literal(f'Personal D
 for concept, _, _ in DPV_PD_GRAPH.triples((None, RDF.type, SKOS.Concept)):
     DPV_PD_GRAPH.add((BASE[f'PersonalDataConcepts'], SKOS.member, concept))
 # serialize
-DPV_PD_GRAPH.load('dpv-pd-ontology-metadata.ttl', format='turtle')
+DPV_PD_GRAPH.load('ontology_metadata/dpv-pd.ttl', format='turtle')
 
 for prefix, namespace in NAMESPACES.items():
     DPV_PD_GRAPH.namespace_manager.bind(prefix, namespace)

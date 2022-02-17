@@ -18,6 +18,7 @@ dpvo:AcademicResearch a owl:Class ;
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
     dct:description "Conduct or assist with research conducted in an academic context e.g. within universities"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso svpu:Education ;
     rdfs:subClassOf dpvo:ResearchAndDevelopment ;
     sw:term_status "accepted"@en .
@@ -26,6 +27,7 @@ dpvo:AccountManagement a owl:Class ;
     rdfs:label "Account Management"@en ;
     dct:created "2021-09-08"^^xsd:date ;
     dct:description "Create, maintain, and manage accounts for purposes of providing services"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Purpose ;
     sw:term_status "accepted"@en .
 
@@ -39,6 +41,7 @@ dpvo:CommercialResearch a owl:Class ;
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
     dct:description "Conduct research in a commercial setting or with intention to commercialise e.g. in a company or sponsored by a company"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso svpu:Develop ;
     rdfs:subClassOf dpvo:ResearchAndDevelopment ;
     sw:term_status "accepted"@en .
@@ -50,6 +53,7 @@ dpvo:CommunicationForCustomerCare a owl:Class ;
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Communicate with customers for assisting them, resolving issues, ensuring satisfaction in relation to services provided"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:CommunicationManagement,
         dpvo:CustomerCare ;
     sw:term_status "accepted"@en .
@@ -60,7 +64,8 @@ dpvo:CreateEventRecommendations a owl:Class ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Rudy Jacob"^^xsd:string ;
     dct:description "Create and provide personalised recommendations for events"@en ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+    dct:source <https://www.specialprivacy.eu/> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:CreatePersonalizedRecommendations ;
     sw:term_status "accepted"@en .
 
@@ -74,6 +79,7 @@ dpvo:CreateProductRecommendations a owl:Class ;
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
     dct:description "Create and provide product recommendations e.g. suggest similar products"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso svpu:Marketing ;
     rdfs:subClassOf dpvo:CreatePersonalizedRecommendations ;
     sw:term_status "accepted"@en .
@@ -82,7 +88,8 @@ dpvo:CustomerClaimsManagement a owl:Class ;
     rdfs:label "Customer Claims Management"@en ;
     dct:created "2021-09-08"^^xsd:date ;
     dct:description "Manage claims, including repayment of monies owed"@en ;
-    rdfs:isDefinedBy <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:CustomerManagement ;
     sw:term_status "accepted"@en .
 
@@ -90,7 +97,8 @@ dpvo:CustomerOrderManagement a owl:Class ;
     rdfs:label "Customer Order Management"@en ;
     dct:created "2021-09-08"^^xsd:date ;
     dct:description "Manage customer orders"@en ;
-    rdfs:isDefinedBy <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:CustomerManagement ;
     sw:term_status "accepted"@en .
 
@@ -98,7 +106,8 @@ dpvo:CustomerSolvencyMonitoring a owl:Class ;
     rdfs:label "Customer Solvency Monitoring"@en ;
     dct:created "2021-09-09"^^xsd:date ;
     dct:description "Monitor solvency of customers for financial diligence"@en ;
-    rdfs:isDefinedBy <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:CustomerManagement ;
     sw:term_status "accepted"@en .
 
@@ -112,6 +121,7 @@ dpvo:DeliveryOfGoods a owl:Class ;
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
     dct:description "Deliver goods and services requested or asked by consumer"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso svpu:Delivery ;
     rdfs:subClassOf dpvo:RequestedServiceProvision ;
     sw:term_status "accepted"@en .
@@ -123,6 +133,7 @@ dpvo:DirectMarketing a owl:Class ;
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Conduct direct marketing i.e. marketing communicated directly to the individual"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Marketing ;
     sw:term_status "accepted"@en .
 
@@ -130,7 +141,8 @@ dpvo:DisputeManagement a owl:Class ;
     rdfs:label "Dispute Management"@en ;
     dct:created "2021-09-08"^^xsd:date ;
     dct:description "Manage disputes by natural persons, private bodies, or public authorities relevant to organisation"@en ;
-    rdfs:isDefinedBy <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OrganisationGovernance ;
     sw:term_status "accepted"@en .
 
@@ -145,6 +157,7 @@ dpvo:EnforceAccessControl a owl:Class ;
         "Simon Steyskal"^^xsd:string ;
     dct:description "Conduct or enforce access control"@en ;
     rdfs:comment "Was previously \"Access Control\". Prefixed to distinguish from Technical Measure."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso svpu:Login ;
     rdfs:subClassOf dpvo:EnforceSecurity ;
     sw:term_status "accepted"@en .
@@ -159,6 +172,7 @@ dpvo:FraudPreventionAndDetection a owl:Class ;
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
     dct:description "Detect and prevent fraud"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso svpu:Government ;
     rdfs:subClassOf dpvo:EnforceSecurity ;
     sw:term_status "accepted"@en .
@@ -172,8 +186,9 @@ dpvo:HumanResourceManagement a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Manage humans and 'human resources' within the organisation for effective and efficient operations."@en ;
+    dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
     rdfs:comment "HR is a broad concept. Its management includes, amongst others - recruiting employees and intermediaries e.g. brokers, independent representatives; payroll administration, remunerations, commissions, and wages; and application of social legislation."@en ;
-    rdfs:isDefinedBy <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Purpose ;
     sw:term_status "accepted"@en .
 
@@ -187,6 +202,7 @@ dpvo:IdentityVerification a owl:Class ;
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
     dct:description "Verify or authorize identity"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:EnforceSecurity ;
     sw:term_status "accepted"@en .
 
@@ -200,6 +216,7 @@ dpvo:ImproveExistingProductsAndServices a owl:Class ;
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
     dct:description "Improve existing products and services"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OptimisationForController ;
     sw:term_status "accepted"@en .
 
@@ -213,6 +230,7 @@ dpvo:ImproveInternalCRMProcesses a owl:Class ;
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
     dct:description "Improve customer-relationship management (CRM) processes"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:CustomerRelationshipManagement,
         dpvo:OptimisationForController ;
     sw:term_status "accepted"@en .
@@ -227,6 +245,7 @@ dpvo:IncreaseServiceRobustness a owl:Class ;
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
     dct:description "Improve robustness and resilience of services"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OptimisationForController ;
     sw:term_status "accepted"@en .
 
@@ -240,6 +259,7 @@ dpvo:InternalResourceOptimisation a owl:Class ;
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
     dct:description "Optimize internal resource availability and usage for organisation"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OptimisationForController ;
     sw:term_status "accepted"@en .
 
@@ -250,6 +270,7 @@ dpvo:LegalCompliance a owl:Class ;
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Fulfilment of obligations or requirements towards achieving compliance with law or regulations"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Purpose ;
     sw:term_status "accepted"@en .
 
@@ -261,7 +282,8 @@ dpvo:MemberPartnerManagement a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Maintain registry of shareholders, members, or partners for governance, administration, and management functions"@en ;
-    rdfs:isDefinedBy <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OrganisationGovernance ;
     sw:term_status "accepted"@en .
 
@@ -275,6 +297,7 @@ dpvo:NonCommercialResearch a owl:Class ;
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
     dct:description "Conduct research in a non-commercial setting e.g. for a non-profit-organisation (NGO)"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:ResearchAndDevelopment ;
     sw:term_status "accepted"@en .
 
@@ -288,6 +311,7 @@ dpvo:OptimiseUserInterface a owl:Class ;
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
     dct:description "Optimize interfaces presented to the user"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OptimisationForConsumer ;
     sw:term_status "accepted"@en .
 
@@ -299,6 +323,7 @@ dpvo:OrganisationComplianceManagement a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Manage compliance for organisation in relation to internal policies"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OrganisationGovernance ;
     sw:term_status "accepted"@en .
 
@@ -310,6 +335,7 @@ dpvo:OrganisationRiskManagement a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Manage risk for organisation's activities"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:OrganisationGovernance ;
     sw:term_status "accepted"@en .
 
@@ -320,6 +346,7 @@ dpvo:Payment a owl:Class ;
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Process payment transactions in relation to service"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:ServiceProvision ;
     sw:term_status "accepted"@en .
 
@@ -330,6 +357,7 @@ dpvo:PersonalisedAdvertising a owl:Class ;
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Create and provide personalised advertising"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Advertising,
         dpvo:Personalisation ;
     sw:term_status "accepted"@en .
@@ -344,6 +372,7 @@ dpvo:PersonalisedBenefits a owl:Class ;
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
     dct:description "Create and provide personalised benefits for a service"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:ServicePersonalization ;
     sw:term_status "accepted"@en .
 
@@ -355,7 +384,8 @@ dpvo:PublicRelations a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Manage and conduct public relations processes. This includes creating goodwill for the organization."@en ;
-    rdfs:isDefinedBy <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Marketing ;
     sw:term_status "accepted"@en .
 
@@ -367,6 +397,7 @@ dpvo:RecordManagement a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Manage creation, storage, and use of records relevant to operations, events, and processes e.g. to store logs or access requests"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Purpose ;
     sw:term_status "accepted"@en .
 
@@ -377,6 +408,7 @@ dpvo:RegistrationAuthentication a owl:Class ;
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Register, authenticate, and identify users or agents in context of a service"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:ServiceProvision ;
     sw:term_status "accepted"@en .
 
@@ -391,6 +423,7 @@ dpvo:SellDataToThirdParties a owl:Class ;
         "Simon Steyskal"^^xsd:string ;
     dct:description "Sell data or information to third parties"@en ;
     rdfs:comment "Sell here means exchange, submit, or provide in return for direct or indirect compensation. Was subclass of commercial interest, changed to reflect selling something"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:SellProducts ;
     sw:term_status "accepted"@en .
 
@@ -405,6 +438,7 @@ dpvo:SellInsightsFromData a owl:Class ;
         "Simon Steyskal"^^xsd:string ;
     dct:description "Sell data or information relevant to insights obtained from analysis of data"@en ;
     rdfs:comment "Sell here means exchange, submit, or provide in return for direct or indirect compensation. Was subclass of commercial interest, changed to reflect selling something"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:SellProducts ;
     sw:term_status "accepted"@en .
 
@@ -419,6 +453,7 @@ dpvo:SellProductsToDataSubject a owl:Class ;
         "Simon Steyskal"^^xsd:string ;
     dct:description "Sell products or services to the user, consumer, or data subjects"@en ;
     rdfs:comment "Was subclass of commercial interest, changed to reflect selling something"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:SellProducts ;
     sw:term_status "accepted"@en .
 
@@ -426,6 +461,7 @@ dpvo:ServiceRecordManagement a owl:Class ;
     rdfs:label "Service Order Management"@en ;
     dct:created "2021-09-08"^^xsd:date ;
     dct:description "Manage invoicing, orders, and records in relation to services"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:ServiceProvision ;
     sw:term_status "accepted"@en .
 
@@ -437,6 +473,7 @@ dpvo:ServiceUsageAnalytics a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Conduct analysis and reporting related to usage of services or products"@en ;
     rdfs:comment "Was \"UsageAnalytics\", prefixed with Service to better reflect scope"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:ServiceProvision ;
     sw:term_status "accepted"@en .
 
@@ -447,6 +484,7 @@ dpvo:SocialMediaMarketing a owl:Class ;
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Conduct marketing through social media"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Marketing ;
     sw:term_status "accepted"@en .
 
@@ -455,6 +493,7 @@ dpvo:TechnicalServiceProvision a owl:Class ;
     dct:created "2021-09-08"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Manage and provide technical processes and functions necessary for delivering services"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:ServiceProvision ;
     sw:term_status "accepted"@en .
 
@@ -468,6 +507,7 @@ dpvo:UserInterfacePersonalisation a owl:Class ;
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
     dct:description "Personalise interfaces presented to the user"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:ServicePersonalization ;
     sw:term_status "accepted"@en .
 
@@ -479,7 +519,8 @@ dpvo:VendorPayment a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Manage payment of vendors"@en ;
-    rdfs:isDefinedBy <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:VendorManagement ;
     sw:term_status "accepted"@en .
 
@@ -491,7 +532,8 @@ dpvo:VendorRecordsManagement a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Manage orders related to vendors"@en ;
-    rdfs:isDefinedBy <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:VendorManagement ;
     sw:term_status "accepted"@en .
 
@@ -503,7 +545,8 @@ dpvo:VendorSelectionAssessment a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Manage selection, assessment, and evaluation related to vendors"@en ;
-    rdfs:isDefinedBy <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:VendorManagement ;
     sw:term_status "accepted"@en .
 
@@ -518,8 +561,9 @@ dpvo:hasPurpose a rdf:Property,
         "Mark Lizar"^^xsd:string ;
     dct:description "Indicates association with Purpose"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
+    dct:source <https://www.specialprivacy.eu/> ;
     rdfs:domain owl:Thing ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:Purpose ;
     sw:term_status "accepted"@en .
 
@@ -529,6 +573,7 @@ dpvo:hasSector a rdf:Property,
     dct:created "2019-04-05"^^xsd:date ;
     dct:description "Indicates the purpose is associated with activities in the indicated (Economic) Sector(s)"@en ;
     rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:Sector ;
     sw:term_status "accepted"@en .
 
@@ -540,6 +585,7 @@ dpvo:Advertising a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Conduct advertising i.e. process or artefact used to call attention to a product, service, etc. through announcements, notices, or other forms of communication"@en ;
     rdfs:comment "Advertising is a subset of Marketing. Advertising by itself does not indicate 'personalisation' i.e. personalised ads."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Marketing ;
     sw:term_status "accepted"@en .
 
@@ -552,6 +598,7 @@ dpvo:CommunicationManagement a owl:Class ;
         "Paul Ryan"^^xsd:string ;
     dct:description "Manage communication or provide means for communication e.g. to send an email notifying some information"@en ;
     rdfs:comment "This purpose by itself does not sufficiently and clearly indicate what the communication is about. As such, it is recommended to combine it with another purpose to indicate the application. For example, Communication of Payment."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Purpose ;
     sw:term_status "accepted"@en .
 
@@ -565,6 +612,7 @@ dpvo:CustomerCare a owl:Class ;
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
     dct:description "Provide assistance, resolve issues, ensure satisfaction in relation to services provided"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso svpu:Feedback ;
     rdfs:subClassOf dpvo:CustomerManagement ;
     sw:term_status "accepted"@en .
@@ -576,6 +624,7 @@ dpvo:CustomerRelationshipManagement a owl:Class ;
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Manage and analyse interactions with past, current, and potential customers"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:CustomerManagement ;
     sw:term_status "accepted"@en .
 
@@ -589,6 +638,7 @@ dpvo:OptimisationForConsumer a owl:Class ;
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
     dct:description "Optimize activities and services for consumer or user"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso svpu:Custom ;
     rdfs:subClassOf dpvo:ServiceOptimization ;
     sw:term_status "accepted"@en .
@@ -597,6 +647,7 @@ dpvo:RequestedServiceProvision a owl:Class ;
     rdfs:label "Requested Service Provision"@en ;
     dct:created "2021-09-08"^^xsd:date ;
     dct:description "Deliver service as requested by user or consumer"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:ServiceProvision ;
     sw:term_status "accepted"@en .
 
@@ -611,6 +662,7 @@ dpvo:Sector a owl:Class ;
         "Simon Steyskal"^^xsd:string ;
     dct:description "Indicate or restrict scope for interpretation and application of purpose in a domain e.g. Agriculture, Banking"@en ;
     rdfs:comment "There are various sector codes used commonly to indicate the domain of an organisation or business. Examples include NACE (EU), ISIC (UN), SIC and NAICS (USA)."@en ;
+    rdfs:isDefinedBy dpvo: ;
     sw:term_status "accepted"@en .
 
 dpvo:CreatePersonalizedRecommendations a owl:Class ;
@@ -619,7 +671,8 @@ dpvo:CreatePersonalizedRecommendations a owl:Class ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Rudy Jacob"^^xsd:string ;
     dct:description "Create and provide personalised recommendations"@en ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+    dct:source <https://www.specialprivacy.eu/> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:ServicePersonalization ;
     sw:term_status "accepted"@en .
 
@@ -629,6 +682,7 @@ dpvo:Personalisation a owl:Class ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Create and provide customisation based on attributes and/or needs of person(s) or context(s)."@en ;
     rdfs:comment "This term is a blanket purpose category for indicating personalisation of some other purpose, e.g. by creating a subclass of the other concept and Personalisation"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Purpose ;
     sw:term_status "accepted"@en .
 
@@ -643,6 +697,7 @@ dpvo:ServiceOptimization a owl:Class ;
         "Simon Steyskal"^^xsd:string ;
     dct:description "Optimise services or activities"@en ;
     rdfs:comment "Subclass of ServiceProvision since optimisation is usually considered part of providing services"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:ServiceProvision ;
     sw:term_status "accepted"@en .
 
@@ -657,6 +712,7 @@ dpvo:EnforceSecurity a owl:Class ;
         "Simon Steyskal"^^xsd:string ;
     dct:description "Ensure and enforce security e.g. of data, personnel"@en ;
     rdfs:comment "Was previous \"Security\". Prefixed to distinguish from TechOrg measures."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Purpose ;
     sw:term_status "accepted"@en .
 
@@ -670,6 +726,7 @@ dpvo:ResearchAndDevelopment a owl:Class ;
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
     dct:description "Conduct research and development for new methods, products, or services"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Purpose ;
     sw:term_status "accepted"@en .
 
@@ -678,6 +735,7 @@ dpvo:SellProducts a owl:Class ;
     dct:created "2021-09-08"^^xsd:date ;
     dct:description "Sell products or services"@en ;
     rdfs:comment "Sell here means exchange, submit, or provide in return for direct or indirect compensation."@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:ServiceProvision ;
     sw:term_status "accepted"@en .
 
@@ -692,6 +750,7 @@ dpvo:ServicePersonalization a owl:Class ;
         "Simon Steyskal"^^xsd:string ;
     dct:description "Personalise services or product or activities"@en ;
     rdfs:comment "Subclass of ServiceProvision since personalisation is usually considered part of providing services"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Personalisation,
         dpvo:ServiceProvision ;
     sw:term_status "accepted"@en .
@@ -704,7 +763,8 @@ dpvo:VendorManagement a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Manage orders, payment, evaluation, and prospecting related to vendors"@en ;
-    rdfs:isDefinedBy <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Purpose ;
     sw:term_status "accepted"@en .
 
@@ -716,6 +776,7 @@ dpvo:Marketing a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "Conduct marketing in relation to organisation or products or services e.g. promoting, selling, and distributing"@en ;
     rdfs:comment "Was commercial interest, changed to consider Marketing a separate Purpose category by itself"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Purpose ;
     sw:term_status "accepted"@en .
 
@@ -729,6 +790,7 @@ dpvo:OptimisationForController a owl:Class ;
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
     dct:description "Optimize activities and services for provider or controller"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:ServiceOptimization ;
     sw:term_status "accepted"@en .
 
@@ -740,7 +802,8 @@ dpvo:OrganisationGovernance a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Conduct activities and functions for organisation's governance"@en ;
-    rdfs:isDefinedBy <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Purpose ;
     sw:term_status "accepted"@en .
 
@@ -748,6 +811,7 @@ dpvo:CustomerManagement a owl:Class ;
     rdfs:label "Customer Management"@en ;
     dct:created "2021-09-08"^^xsd:date ;
     dct:description "Manage past, current, and future customers"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Purpose ;
     sw:term_status "accepted"@en .
 
@@ -761,6 +825,7 @@ dpvo:ServiceProvision a owl:Class ;
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
     dct:description "Provide service or product or activities"@en ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Purpose ;
     sw:term_status "accepted"@en .
 
@@ -771,7 +836,8 @@ dpvo:Purpose a owl:Class ;
         "Javier Fernández"^^xsd:string ;
     dct:description "The purpose of processing personal data"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
-    rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+    dct:source <https://www.specialprivacy.eu/> ;
+    rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso spl:AnyPurpose ;
     sw:term_status "accepted"@en .
 

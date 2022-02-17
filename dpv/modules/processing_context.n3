@@ -36,10 +36,11 @@ dpv:AutomatedDecisionMaking a skos:Concept,
     dct:created "2020-11-04"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Piero Bonatti"^^xsd:string ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Processing that involves automated decision making"@en ;
     skos:prefLabel "Automated Decision Making"@en ;
-    skos:scopeNote <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     dpv:isSubTypeOf dpv:ProcessingContext .
 
 dpv:EvaluationScoring a skos:Concept,
@@ -47,10 +48,11 @@ dpv:EvaluationScoring a skos:Concept,
     dct:created "2020-11-04"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Piero Bonatti"^^xsd:string ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Processing that involves evaluation and scoring of individuals"@en ;
     skos:prefLabel "Evaluation and Scoring"@en ;
-    skos:scopeNote <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     dpv:isSubTypeOf dpv:ProcessingContext .
 
 dpv:InnovativeUseOfNewTechnologies a skos:Concept,
@@ -58,10 +60,11 @@ dpv:InnovativeUseOfNewTechnologies a skos:Concept,
     dct:created "2020-11-04"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Piero Bonatti"^^xsd:string ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Processing that involves use of innovative and new technologies"@en ;
     skos:prefLabel "Innovative Use of New Technologies"@en ;
-    skos:scopeNote <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     dpv:isSubTypeOf dpv:ProcessingContext .
 
 dpv:LargeScaleProcessing a skos:Concept,
@@ -69,10 +72,11 @@ dpv:LargeScaleProcessing a skos:Concept,
     dct:created "2020-11-04"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Piero Bonatti"^^xsd:string ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Processing that takes place at large scales"@en ;
     skos:prefLabel "Large Scale Processing"@en ;
-    skos:scopeNote <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     dpv:isSubTypeOf dpv:ProcessingContext .
 
 dpv:MatchingCombining a skos:Concept,
@@ -80,10 +84,11 @@ dpv:MatchingCombining a skos:Concept,
     dct:created "2020-11-04"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Piero Bonatti"^^xsd:string ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Processing that involves matching and combining of personal data"@en ;
     skos:prefLabel "Matching and Combining"@en ;
-    skos:scopeNote <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     dpv:isSubTypeOf dpv:ProcessingContext .
 
 dpv:NonPublicDataSource a skos:Concept,
@@ -94,6 +99,7 @@ dpv:NonPublicDataSource a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "A source of data that is not publicly accessible or available"@en ;
     skos:prefLabel "Non-Public Data Source"@en ;
@@ -107,6 +113,7 @@ dpv:PublicDataSource a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "A source of data that is publicly accessible or available"@en ;
     skos:note "The term 'Public' is used here in a broad sense. Actual consideration of what is 'Public Data' can vary based on several contextual or jurisdictional factors such as  definition of open, methods of access, permissions and licenses."@en ;
@@ -120,6 +127,7 @@ dpv:StorageDeletion a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Deletion or Erasure of data including any deletion guarantees"@en ;
     skos:prefLabel "Storage Deletion"@en ;
@@ -132,6 +140,7 @@ dpv:StorageDuration a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Duration or temporal limitation on storage of personal data"@en ;
     skos:prefLabel "Storage Duration"@en ;
@@ -145,6 +154,7 @@ dpv:StorageLocation a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Location or geospatial scope where the data is stored"@en ;
     skos:prefLabel "Storage Location"@en ;
@@ -158,6 +168,7 @@ dpv:StorageRestoration a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Regularity and temporal span of data restoration/backup mechanisms that guarantee that data is preserved"@en ;
     skos:prefLabel "Storage Restoration"@en ;
@@ -168,10 +179,11 @@ dpv:SystematicMonitoring a skos:Concept,
     dct:created "2020-11-04"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Piero Bonatti"^^xsd:string ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Processing that involves systematic monitoring of individuals"@en ;
     skos:prefLabel "Systematic Monitoring"@en ;
-    skos:scopeNote <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     dpv:isSubTypeOf dpv:ProcessingContext .
 
 dpv:hasDataSource a skos:Concept,
@@ -181,6 +193,7 @@ dpv:hasDataSource a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     rdfs:domain dpv:Concept ;
+    rdfs:isDefinedBy dpv: ;
     rdfs:range dpv:DataSource ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates the source or origin of data being processed"@en ;
@@ -193,12 +206,13 @@ dpv:hasStorage a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
+    dct:source <https://www.specialprivacy.eu/> ;
     rdfs:domain dpv:Concept ;
+    rdfs:isDefinedBy dpv: ;
     rdfs:range dpv:StorageCondition ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates information about storage condition"@en ;
-    skos:prefLabel "has storage"@en ;
-    skos:scopeNote <https://www.specialprivacy.eu/> .
+    skos:prefLabel "has storage"@en .
 
 dpv:Relation rdfs:subPropertyOf skos:semanticRelation ;
     skos:prefLabel "Relation"@en .
@@ -209,6 +223,7 @@ dpv:DataSource a skos:Concept,
     dct:creator "Beatriz Esteves"^^xsd:string,
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "The source or origin of data"@en ;
     skos:note "Source' is the direct point of data collection; 'origin' would indicate the original/others points of where the data originates from."@en ;
@@ -222,6 +237,7 @@ dpv:StorageCondition a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Conditions required or followed regarding storage of data"@en ;
     skos:prefLabel "Storage Condition"@en ;
@@ -231,6 +247,7 @@ dpv:ProcessingContext a skos:Concept,
         dpv:Concept ;
     dct:created "2022-02-09"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Context or conditions within which processing takes place"@en ;
     skos:prefLabel "Processing Context"@en ;
