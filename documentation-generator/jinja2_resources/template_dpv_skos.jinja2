@@ -413,7 +413,7 @@ ex:PurposeXYZ rdfs:subClassOf dpvs:RequestedServiceProvision
     </pre>
     </aside>
     <figure>
-      <img src="img/semantics-01.png">
+      <img src="img/semantics-02.png">
       <figcaption>SKOS semantics providing ability to express relationships between concepts so that they can be used as value of properties</figcaption>
     </figure>
     <p>Not all taxonomies make sense when expressed as an instance of a top concept. For example, consider the <i>Entities</i> taxonomy, where various entities are described as a hierarchy, as depicted in the figure above. In its case, it would not be accurate or correct to express relationships between instances such as <code>skos:broader dpvs:DataController</code>. For such cases, the expression of hierarchies continues to utilise the <code>rdfs:subClassOf</code> relationship to enforce the creation of specific instances representing that entity e.g. a specific data controller.</p>
@@ -421,7 +421,7 @@ ex:PurposeXYZ rdfs:subClassOf dpvs:RequestedServiceProvision
   <section id="vocab-base">
     <h2>Base Vocabulary</h2>
     <figure>
-    <img title="DPV Base Vocabulary" alt="DPV base vocabulary" src="/dpv/diagrams/personaldatahandling.png">
+    <img title="DPV Base Vocabulary" alt="DPV base vocabulary" src="/dpv/dpv/diagrams/personaldatahandling.png">
       <figcaption>Base Vocabulary</figcaption>
     </figure>
     <p>The 'Base' or 'Core' concepts in DPV represent the most relevant concepts for representing information regarding the what, how, where, who, why of personal data and its processing. Each of these concepts is further elaborated as a taxonomy of concepts in a hierarchical fashion. The DPV provides the following as 'top-level' concepts and relations to associate them with other concepts:</p>
