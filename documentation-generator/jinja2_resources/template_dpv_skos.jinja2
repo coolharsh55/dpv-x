@@ -594,6 +594,20 @@ ex:PurposeXYZ rdfs:subClassOf dpvs:RequestedServiceProvision
   {% endif %}
 </section>
 
+<section id="vocab-processing-context">
+  <h2>Context of Processing</h2>
+    {% if processing_context_classes %}
+  <section id="processing-context-classes">
+    {{ table_classes(processing_context_classes) }}
+  </section>
+  {% endif %}
+  {% if processing_context_properties %}
+  <section id="processing-context-properties">
+    {{ table_properties(processing_context_properties) }}
+  </section>
+  {% endif %}
+</section>
+
 <section id="vocab-jurisdictions">
   <h2>Location &amp; Jurisdictions</h2>
     {% if jurisdictions_classes %}
@@ -635,6 +649,19 @@ ex:PurposeXYZ rdfs:subClassOf dpvs:RequestedServiceProvision
   </section>
   {% endif %}
 </section>
+
+{% if proposed %}
+<section id="proposed-terms" class="appendix">
+  <h2>Proposed Terms</h2>
+  <p>The following terms have been proposed for inclusion, and are under discussion. They are provided here for illustrative purposes and should not be considered as part of DPV.</p>
+  {% for name, terms in proposed.items() %}
+    <strong>{{name}}</strong>
+    <ul>{% for term in terms %}
+      <li>{{term}}</li>
+    {% endfor %}</ul>
+  {% endfor %}
+</section>
+{% endif %}
 
 </body>
 </html>
