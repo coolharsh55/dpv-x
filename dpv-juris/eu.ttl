@@ -1,0 +1,84 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dpv: <http://w3id.org/dpv#> .
+@prefix juris: <http://w3id.org/dpv/dpv-juris#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix time: <https://www.w3.org/TR/owl-time/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+juris:EU a dpv:SupraNationalUnion ;
+    dct:title "European Union (EU)"@en ;
+    skos:narrower juris:EU27, juris:EU28 ;
+    skos:narrower juris:BE, juris:BG, juris:CZ, juris:DK, juris:DE, juris:EE, juris:IE, juris:GR, juris:ES, juris:FR, juris:HR, juris:IT, juris:CY, juris:LV, juris:LT, juris:LU, juris:HU, juris:MT, juris:NL, juris:AT, juris:PL, juris:PT, juris:RO, juris:SI, juris:SK, juris:FI, juris:SE .
+
+juris:EU27 a dpv:SupraNationalUnion ;
+    dct:title "European Union (EU-27)" ;
+    skos:broader juris:EU ;
+    skos:narrower juris:BE, juris:BG, juris:CZ, juris:DK, juris:DE, juris:EE, juris:IE, juris:GR, juris:ES, juris:FR, juris:HR, juris:IT, juris:CY, juris:LV, juris:LT, juris:LU, juris:HU, juris:MT, juris:NL, juris:AT, juris:PL, juris:PT, juris:RO, juris:SI, juris:SK, juris:FI, juris:SE ; 
+    dct:temporal [ a time:ProperInterval ; 
+        time:hasBeginning [ time:inXSDDate "2020-02-01"^^xsd:date ] ] .
+
+juris:EU28 a dpv:SupraNationalUnion ;
+    dct:title "European Union (EU-28)" ;
+    skos:broader juris:EU ;
+    skos:narrower juris:BE, juris:BG, juris:CZ, juris:DK, juris:DE, juris:EE, juris:IE, juris:GR, juris:ES, juris:FR, juris:HR, juris:IT, juris:CY, juris:LV, juris:LT, juris:LU, juris:HU, juris:MT, juris:NL, juris:AT, juris:PL, juris:PT, juris:RO, juris:SI, juris:SK, juris:FI, juris:SE, juris:GB ; 
+    dct:temporal [ a time:ProperInterval ; 
+        time:hasBeginning [ time:inXSDDate "2013-07-01"^^xsd:date ] ;
+        time:hasEnd [ time:inXSDDate "2020-01-31"^^xsd:date ] ] .
+
+juris:EEA a dpv:SupraNationalUnion ;
+    dct:title "European Economic Area (EEA)"@en ;
+    skos:narrower juris:EU27, juris:EU28 ; 
+    skos:narrower juris:BE, juris:BG, juris:CZ, juris:DK, juris:DE, juris:EE, juris:IE, juris:GR, juris:ES, juris:FR, juris:HR, juris:IT, juris:CY, juris:LV, juris:LT, juris:LU, juris:HU, juris:MT, juris:NL, juris:AT, juris:PL, juris:PT, juris:RO, juris:SI, juris:SK, juris:FI, juris:SE .
+
+juris:EEA30 a dpv:SupraNationalUnion ;
+    dct:title "European Economic Area (EEA-30)" ;
+    skos:broader juris:EEA ;
+    skos:narrower juris:BE, juris:BG, juris:CZ, juris:DK, juris:DE, juris:EE, juris:IE, juris:GR, juris:ES, juris:FR, juris:HR, juris:IT, juris:CY, juris:LV, juris:LT, juris:LU, juris:HU, juris:MT, juris:NL, juris:AT, juris:PL, juris:PT, juris:RO, juris:SI, juris:SK, juris:FI, juris:SE ; 
+    dct:temporal [ a time:ProperInterval ; 
+        time:hasBeginning [ time:inXSDDate "2020-02-01"^^xsd:date ] ] .
+
+juris:EEA31 a dpv:SupraNationalUnion ;
+    dct:title "European Economic Area (EEA-31)" ;
+    skos:broader juris:EEA ;
+    skos:narrower juris:BE, juris:BG, juris:CZ, juris:DK, juris:DE, juris:EE, juris:IE, juris:GR, juris:ES, juris:FR, juris:HR, juris:IT, juris:CY, juris:LV, juris:LT, juris:LU, juris:HU, juris:MT, juris:NL, juris:AT, juris:PL, juris:PT, juris:RO, juris:SI, juris:SK, juris:FI, juris:SE, juris:GB ; 
+    dct:temporal [ a time:ProperInterval ; 
+        time:hasBeginning [ time:inXSDDate "2014-04-12"^^xsd:date ] ;
+        time:hasEnd [ time:inXSDDate "2020-01-31"^^xsd:date ] ] .
+
+juris:BE skos:broaderTransitive juris:EEA, juris:EEA30, juris:EEA31, juris:EU27, juris:EU28, juris:EU ; dpv:hasApplicableLaw juris:GDPR .
+juris:BG skos:broaderTransitive juris:EEA, juris:EEA30, juris:EEA31, juris:EU27, juris:EU28, juris:EU ; dpv:hasApplicableLaw juris:GDPR .
+juris:CZ skos:broaderTransitive juris:EEA, juris:EEA30, juris:EEA31, juris:EU27, juris:EU28, juris:EU ; dpv:hasApplicableLaw juris:GDPR .
+juris:DK skos:broaderTransitive juris:EEA, juris:EEA30, juris:EEA31, juris:EU27, juris:EU28, juris:EU ; dpv:hasApplicableLaw juris:GDPR .
+juris:DE skos:broaderTransitive juris:EEA, juris:EEA30, juris:EEA31, juris:EU27, juris:EU28, juris:EU ; dpv:hasApplicableLaw juris:GDPR .
+juris:EE skos:broaderTransitive juris:EEA, juris:EEA30, juris:EEA31, juris:EU27, juris:EU28, juris:EU ; dpv:hasApplicableLaw juris:GDPR .
+juris:IE skos:broaderTransitive juris:EEA, juris:EEA30, juris:EEA31, juris:EU27, juris:EU28, juris:EU ; dpv:hasApplicableLaw juris:GDPR .
+juris:GR skos:broaderTransitive juris:EEA, juris:EEA30, juris:EEA31, juris:EU27, juris:EU28, juris:EU ; dpv:hasApplicableLaw juris:GDPR .
+juris:ES skos:broaderTransitive juris:EEA, juris:EEA30, juris:EEA31, juris:EU27, juris:EU28, juris:EU ; dpv:hasApplicableLaw juris:GDPR .
+juris:FR skos:broaderTransitive juris:EEA, juris:EEA30, juris:EEA31, juris:EU27, juris:EU28, juris:EU ; dpv:hasApplicableLaw juris:GDPR .
+juris:HR skos:broaderTransitive juris:EEA, juris:EEA30, juris:EEA31, juris:EU27, juris:EU28, juris:EU ; dpv:hasApplicableLaw juris:GDPR .
+juris:IT skos:broaderTransitive juris:EEA, juris:EEA30, juris:EEA31, juris:EU27, juris:EU28, juris:EU ; dpv:hasApplicableLaw juris:GDPR .
+juris:CY skos:broaderTransitive juris:EEA, juris:EEA30, juris:EEA31, juris:EU27, juris:EU28, juris:EU ; dpv:hasApplicableLaw juris:GDPR .
+juris:LV skos:broaderTransitive juris:EEA, juris:EEA30, juris:EEA31, juris:EU27, juris:EU28, juris:EU ; dpv:hasApplicableLaw juris:GDPR .
+juris:LT skos:broaderTransitive juris:EEA, juris:EEA30, juris:EEA31, juris:EU27, juris:EU28, juris:EU ; dpv:hasApplicableLaw juris:GDPR .
+juris:LU skos:broaderTransitive juris:EEA, juris:EEA30, juris:EEA31, juris:EU27, juris:EU28, juris:EU ; dpv:hasApplicableLaw juris:GDPR .
+juris:HU skos:broaderTransitive juris:EEA, juris:EEA30, juris:EEA31, juris:EU27, juris:EU28, juris:EU ; dpv:hasApplicableLaw juris:GDPR .
+juris:MT skos:broaderTransitive juris:EEA, juris:EEA30, juris:EEA31, juris:EU27, juris:EU28, juris:EU ; dpv:hasApplicableLaw juris:GDPR .
+juris:NL skos:broaderTransitive juris:EEA, juris:EEA30, juris:EEA31, juris:EU27, juris:EU28, juris:EU ; dpv:hasApplicableLaw juris:GDPR .
+juris:AT skos:broaderTransitive juris:EEA, juris:EEA30, juris:EEA31, juris:EU27, juris:EU28, juris:EU ; dpv:hasApplicableLaw juris:GDPR .
+juris:PL skos:broaderTransitive juris:EEA, juris:EEA30, juris:EEA31, juris:EU27, juris:EU28, juris:EU ; dpv:hasApplicableLaw juris:GDPR .
+juris:PT skos:broaderTransitive juris:EEA, juris:EEA30, juris:EEA31, juris:EU27, juris:EU28, juris:EU ; dpv:hasApplicableLaw juris:GDPR .
+juris:RO skos:broaderTransitive juris:EEA, juris:EEA30, juris:EEA31, juris:EU27, juris:EU28, juris:EU ; dpv:hasApplicableLaw juris:GDPR .
+juris:SI skos:broaderTransitive juris:EEA, juris:EEA30, juris:EEA31, juris:EU27, juris:EU28, juris:EU ; dpv:hasApplicableLaw juris:GDPR .
+juris:SK skos:broaderTransitive juris:EEA, juris:EEA30, juris:EEA31, juris:EU27, juris:EU28, juris:EU ; dpv:hasApplicableLaw juris:GDPR .
+juris:FI skos:broaderTransitive juris:EEA, juris:EEA30, juris:EEA31, juris:EU27, juris:EU28, juris:EU ; dpv:hasApplicableLaw juris:GDPR .
+juris:SE skos:broaderTransitive juris:EEA, juris:EEA30, juris:EEA31, juris:EU27, juris:EU28, juris:EU ; dpv:hasApplicableLaw juris:GDPR .
+juris:GB skos:broaderTransitive juris:EEA31, juris:EU28 .
+
+juris:DE-Hesse a dpv:Region ;
+    dct:title "Hesse"@en ;
+    skos:broaderTransitive juris:DE ;
+    dpv:hasApplicableLaw juris:GDPR .
+juris:DE-North-Rhine-Westphalia a dpv:Region ;
+    dct:title "North-Rhine Westphalia"@en ;
+    skos:broaderTransitive juris:DE ;
+    dpv:hasApplicableLaw juris:GDPR .
