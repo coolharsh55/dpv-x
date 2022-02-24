@@ -1,5 +1,6 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix dpv: <http://w3id.org/dpv#> .
+@prefix dpv-gdpr: <http://w3id.org/dpv/dpv-gdpr#> .
 @prefix foaf1: <http://xmlns.com/foaf/spec/> .
 @prefix juris: <http://w3id.org/dpv/dpv-juris#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -13,6 +14,106 @@ juris:AQ a dpv:Country ;
     juris:iso_alpha3 "ATA"^^xsd:string ;
     juris:iso_numeric 10 ;
     juris:un_m49 10 .
+
+juris:Adequacy-EU-AD a dpv-gdpr:A45-3 ;
+    dct:temporal [ a time1:ProperInterval ;
+            time1:hasBeginning [ time1:inXSDDate "2010-10-21"^^xsd:date ] ] ;
+    dct:title "EU Adequacy Decision for Andorra" ;
+    dpv:hasCountry juris:AD,
+        juris:EU ;
+    foaf1:homepage "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32010D0625?"^^xsd:anyURI .
+
+juris:Adequacy-EU-AR a dpv-gdpr:A45-3 ;
+    dct:temporal [ a time1:ProperInterval ;
+            time1:hasBeginning [ time1:inXSDDate "2003-07-05"^^xsd:date ] ] ;
+    dct:title "EU Adequacy Decision for Argentina" ;
+    dpv:hasCountry juris:AR ;
+    foaf1:homepage "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32003D0490"^^xsd:anyURI .
+
+juris:Adequacy-EU-CA a dpv-gdpr:A45-3 ;
+    dct:temporal [ a time1:ProperInterval ;
+            time1:hasBeginning [ time1:inXSDDate "2002-01-04"^^xsd:date ] ] ;
+    dct:title "EU Adequacy Decision for Canada (commercial organisations)" ;
+    dpv:hasCountry juris:CA ;
+    foaf1:homepage "https://eur-lex.europa.eu/legal-content/en/TXT/?uri=CELEX%3A32002D0002"^^xsd:anyURI .
+
+juris:Adequacy-EU-CH a dpv-gdpr:A45-3 ;
+    dct:temporal [ a time1:ProperInterval ;
+            time1:hasBeginning [ time1:inXSDDate "2000-08-25"^^xsd:date ] ] ;
+    dct:title "EU Adequacy Decision for Switzerland" ;
+    dpv:hasCountry juris:CH ;
+    foaf1:homepage "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32000D0518"^^xsd:anyURI .
+
+juris:Adequacy-EU-FO a dpv-gdpr:A45-3 ;
+    dct:temporal [ a time1:ProperInterval ;
+            time1:hasBeginning [ time1:inXSDDate "2010-03-09"^^xsd:date ] ] ;
+    dct:title "EU Adequacy Decision for Faroe Islands" ;
+    dpv:hasCountry juris:FO ;
+    foaf1:homepage "https://eur-lex.europa.eu/legal-content/en/ALL/?uri=CELEX%3A32010D0146"^^xsd:anyURI .
+
+juris:Adequacy-EU-GB a dpv-gdpr:A45-3 ;
+    dct:temporal [ a time1:ProperInterval ;
+            time1:hasBeginning [ time1:inXSDDate "2021-06-28"^^xsd:date ] ] ;
+    dct:title "EU Adequacy Decision for United Kingdom" ;
+    dpv:hasJurisdiction juris:EU,
+        juris:GB ;
+    foaf1:homepage "https://ec.europa.eu/info/files/decision-adequate-protection-personal-data-united-kingdom-general-data-protection-regulation_en"^^xsd:anyURI .
+
+juris:Adequacy-EU-GG a dpv-gdpr:A45-3 ;
+    dct:temporal [ a time1:ProperInterval ;
+            time1:hasBeginning [ time1:inXSDDate "2003-11-21"^^xsd:date ] ] ;
+    dct:title "EU Adequacy Decision for Guernsey" ;
+    dpv:hasJurisdiction juris:EU,
+        juris:GG ;
+    foaf1:homepage "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32003D0821"^^xsd:anyURI .
+
+juris:Adequacy-EU-IL a dpv-gdpr:A45-3 ;
+    dct:temporal [ a time1:ProperInterval ;
+            time1:hasBeginning [ time1:inXSDDate "2011-02-01"^^xsd:date ] ] ;
+    dct:title "EU Adequacy Decision for Israel" ;
+    dpv:hasJurisdiction juris:EU,
+        juris:IL ;
+    foaf1:homepage "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32011D0061"^^xsd:anyURI .
+
+juris:Adequacy-EU-IM a dpv-gdpr:A45-3 ;
+    dct:temporal [ a time1:ProperInterval ;
+            time1:hasBeginning [ time1:inXSDDate "2004-04-30"^^xsd:date ] ] ;
+    dct:title "EU Adequacy Decision for Isle of Man" ;
+    dpv:hasJurisdiction juris:EU,
+        juris:IM ;
+    foaf1:homepage "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32004D0411"^^xsd:anyURI .
+
+juris:Adequacy-EU-JE a dpv-gdpr:A45-3 ;
+    dct:temporal [ a time1:ProperInterval ;
+            time1:hasBeginning [ time1:inXSDDate "2008-05-26"^^xsd:date ] ] ;
+    dct:title "EU Adequacy Decision for Jersey" ;
+    dpv:hasJurisdiction juris:EU,
+        juris:JE ;
+    foaf1:homepage "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32008D0393"^^xsd:anyURI .
+
+juris:Adequacy-EU-JP a dpv-gdpr:A45-3 ;
+    dct:temporal [ a time1:ProperInterval ;
+            time1:hasBeginning [ time1:inXSDDate "2019-01-23"^^xsd:date ] ] ;
+    dct:title "EU Adequacy Decision for Japan" ;
+    dpv:hasJurisdiction juris:EU,
+        juris:JP ;
+    foaf1:homepage "http://data.europa.eu/eli/dec_impl/2019/419/oj"^^xsd:anyURI .
+
+juris:Adequacy-EU-NZ a dpv-gdpr:A45-3 ;
+    dct:temporal [ a time1:ProperInterval ;
+            time1:hasBeginning [ time1:inXSDDate "2012-12-20"^^xsd:date ] ] ;
+    dct:title "EU Adequacy Decision for New Zealand" ;
+    dpv:hasJurisdiction juris:EU,
+        juris:NZ ;
+    foaf1:homepage "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32013D0065"^^xsd:anyURI .
+
+juris:Adequacy-EU-UY a dpv-gdpr:A45-3 ;
+    dct:temporal [ a time1:ProperInterval ;
+            time1:hasBeginning [ time1:inXSDDate "2012-08-22"^^xsd:date ] ] ;
+    dct:title "EU Adequacy Decision for Uruguay" ;
+    dpv:hasJurisdiction juris:EU,
+        juris:UY ;
+    foaf1:homepage "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32012D0484"^^xsd:anyURI .
 
 juris:CY-DPA a dpv:DataProtectionAuthority ;
     dct:title "Commissioner for Personal Data Protection"@en ;
@@ -218,15 +319,6 @@ juris:SK-DPA a dpv:DataProtectionAuthority ;
     dpv:hasJurisdiction juris:SK ;
     foaf1:homepage "http://www.dataprotection.gov.sk/"^^xsd:anyURI .
 
-juris:AD a dpv:Country ;
-    dct:title "Andorra"@en ;
-    juris:iso_alpha2 "AD"^^xsd:string ;
-    juris:iso_alpha3 "AND"^^xsd:string ;
-    juris:iso_numeric 20 ;
-    juris:un_m49 20 ;
-    skos:broaderTransitive juris:Europe,
-        juris:SouthernEurope .
-
 juris:AE a dpv:Country ;
     dct:title "United Arab Emirates"@en ;
     juris:iso_alpha2 "AE"^^xsd:string ;
@@ -362,15 +454,6 @@ juris:BY a dpv:Country ;
     skos:broaderTransitive juris:EasternEurope,
         juris:Europe .
 
-juris:CA a dpv:Country ;
-    dct:title "Canada"@en ;
-    juris:iso_alpha2 "CA"^^xsd:string ;
-    juris:iso_alpha3 "CAN"^^xsd:string ;
-    juris:iso_numeric 124 ;
-    juris:un_m49 124 ;
-    skos:broaderTransitive juris:Americas,
-        juris:NorthernAmerica .
-
 juris:CC a dpv:Country ;
     dct:title "Cocos (Keeling) Islands"@en ;
     juris:iso_alpha2 "CC"^^xsd:string ;
@@ -379,15 +462,6 @@ juris:CC a dpv:Country ;
     juris:un_m49 166 ;
     skos:broaderTransitive juris:AustraliaandNewZealand,
         juris:Oceania .
-
-juris:CH a dpv:Country ;
-    dct:title "Switzerland"@en ;
-    juris:iso_alpha2 "CH"^^xsd:string ;
-    juris:iso_alpha3 "CHE"^^xsd:string ;
-    juris:iso_numeric 756 ;
-    juris:un_m49 756 ;
-    skos:broaderTransitive juris:Europe,
-        juris:WesternEurope .
 
 juris:CK a dpv:Country ;
     dct:title "Cook Islands"@en ;
@@ -471,15 +545,6 @@ juris:FM a dpv:Country ;
     skos:broaderTransitive juris:Micronesia,
         juris:Oceania .
 
-juris:FO a dpv:Country ;
-    dct:title "Faroe Islands"@en ;
-    juris:iso_alpha2 "FO"^^xsd:string ;
-    juris:iso_alpha3 "FRO"^^xsd:string ;
-    juris:iso_numeric 234 ;
-    juris:un_m49 234 ;
-    skos:broaderTransitive juris:Europe,
-        juris:NorthernEurope .
-
 juris:GE a dpv:Country ;
     dct:title "Georgia"@en ;
     juris:iso_alpha2 "GE"^^xsd:string ;
@@ -543,24 +608,6 @@ juris:ID a dpv:Country ;
     skos:broaderTransitive juris:Asia,
         juris:SoutheasternAsia .
 
-juris:IL a dpv:Country ;
-    dct:title "Israel"@en ;
-    juris:iso_alpha2 "IL"^^xsd:string ;
-    juris:iso_alpha3 "ISR"^^xsd:string ;
-    juris:iso_numeric 376 ;
-    juris:un_m49 376 ;
-    skos:broaderTransitive juris:Asia,
-        juris:WesternAsia .
-
-juris:IM a dpv:Country ;
-    dct:title "Isle of Man"@en ;
-    juris:iso_alpha2 "IM"^^xsd:string ;
-    juris:iso_alpha3 "IMN"^^xsd:string ;
-    juris:iso_numeric 833 ;
-    juris:un_m49 833 ;
-    skos:broaderTransitive juris:Europe,
-        juris:NorthernEurope .
-
 juris:IN a dpv:Country ;
     dct:title "India"@en ;
     juris:iso_alpha2 "IN"^^xsd:string ;
@@ -596,15 +643,6 @@ juris:JO a dpv:Country ;
     juris:un_m49 400 ;
     skos:broaderTransitive juris:Asia,
         juris:WesternAsia .
-
-juris:JP a dpv:Country ;
-    dct:title "Japan"@en ;
-    juris:iso_alpha2 "JP"^^xsd:string ;
-    juris:iso_alpha3 "JPN"^^xsd:string ;
-    juris:iso_numeric 392 ;
-    juris:un_m49 392 ;
-    skos:broaderTransitive juris:Asia,
-        juris:EasternAsia .
 
 juris:KG a dpv:Country ;
     dct:title "Kyrgyzstan"@en ;
@@ -857,15 +895,6 @@ juris:NU a dpv:Country ;
     juris:un_m49 570 ;
     skos:broaderTransitive juris:Oceania,
         juris:Polynesia .
-
-juris:NZ a dpv:Country ;
-    dct:title "New Zealand"@en ;
-    juris:iso_alpha2 "NZ"^^xsd:string ;
-    juris:iso_alpha3 "NZL"^^xsd:string ;
-    juris:iso_numeric 554 ;
-    juris:un_m49 554 ;
-    skos:broaderTransitive juris:AustraliaandNewZealand,
-        juris:Oceania .
 
 juris:OM a dpv:Country ;
     dct:title "Oman"@en ;
@@ -1209,6 +1238,15 @@ juris:YE a dpv:Country ;
     skos:broaderTransitive juris:Asia,
         juris:WesternAsia .
 
+juris:AD a dpv:Country ;
+    dct:title "Andorra"@en ;
+    juris:iso_alpha2 "AD"^^xsd:string ;
+    juris:iso_alpha3 "AND"^^xsd:string ;
+    juris:iso_numeric 20 ;
+    juris:un_m49 20 ;
+    skos:broaderTransitive juris:Europe,
+        juris:SouthernEurope .
+
 juris:AG a dpv:Country ;
     dct:title "Antigua and Barbuda"@en ;
     juris:iso_alpha2 "AG"^^xsd:string ;
@@ -1238,16 +1276,6 @@ juris:AO a dpv:Country ;
     skos:broaderTransitive juris:Africa,
         juris:MiddleAfrica,
         juris:SubSaharanAfrica .
-
-juris:AR a dpv:Country ;
-    dct:title "Argentina"@en ;
-    juris:iso_alpha2 "AR"^^xsd:string ;
-    juris:iso_alpha3 "ARG"^^xsd:string ;
-    juris:iso_numeric 32 ;
-    juris:un_m49 32 ;
-    skos:broaderTransitive juris:Americas,
-        juris:LatinAmericaandtheCaribbean,
-        juris:SouthAmerica .
 
 juris:AW a dpv:Country ;
     dct:title "Aruba"@en ;
@@ -1379,6 +1407,15 @@ juris:BZ a dpv:Country ;
         juris:CentralAmerica,
         juris:LatinAmericaandtheCaribbean .
 
+juris:CA a dpv:Country ;
+    dct:title "Canada"@en ;
+    juris:iso_alpha2 "CA"^^xsd:string ;
+    juris:iso_alpha3 "CAN"^^xsd:string ;
+    juris:iso_numeric 124 ;
+    juris:un_m49 124 ;
+    skos:broaderTransitive juris:Americas,
+        juris:NorthernAmerica .
+
 juris:CD a dpv:Country ;
     dct:title "Democratic Republic of the Congo"@en ;
     juris:iso_alpha2 "CD"^^xsd:string ;
@@ -1408,6 +1445,15 @@ juris:CG a dpv:Country ;
     skos:broaderTransitive juris:Africa,
         juris:MiddleAfrica,
         juris:SubSaharanAfrica .
+
+juris:CH a dpv:Country ;
+    dct:title "Switzerland"@en ;
+    juris:iso_alpha2 "CH"^^xsd:string ;
+    juris:iso_alpha3 "CHE"^^xsd:string ;
+    juris:iso_numeric 756 ;
+    juris:un_m49 756 ;
+    skos:broaderTransitive juris:Europe,
+        juris:WesternEurope .
 
 juris:CI a dpv:Country ;
     dct:title "Côte d’Ivoire"@en ;
@@ -1559,6 +1605,15 @@ juris:FK a dpv:Country ;
         juris:LatinAmericaandtheCaribbean,
         juris:SouthAmerica .
 
+juris:FO a dpv:Country ;
+    dct:title "Faroe Islands"@en ;
+    juris:iso_alpha2 "FO"^^xsd:string ;
+    juris:iso_alpha3 "FRO"^^xsd:string ;
+    juris:iso_numeric 234 ;
+    juris:un_m49 234 ;
+    skos:broaderTransitive juris:Europe,
+        juris:NorthernEurope .
+
 juris:GA a dpv:Country ;
     dct:title "Gabon"@en ;
     juris:iso_alpha2 "GA"^^xsd:string ;
@@ -1588,16 +1643,6 @@ juris:GF a dpv:Country ;
     skos:broaderTransitive juris:Americas,
         juris:LatinAmericaandtheCaribbean,
         juris:SouthAmerica .
-
-juris:GG a dpv:Country ;
-    dct:title "Guernsey"@en ;
-    juris:iso_alpha2 "GG"^^xsd:string ;
-    juris:iso_alpha3 "GGY"^^xsd:string ;
-    juris:iso_numeric 831 ;
-    juris:un_m49 831 ;
-    skos:broaderTransitive juris:ChannelIslands,
-        juris:Europe,
-        juris:NorthernEurope .
 
 juris:GH a dpv:Country ;
     dct:title "Ghana"@en ;
@@ -1709,6 +1754,24 @@ juris:HT a dpv:Country ;
         juris:Caribbean,
         juris:LatinAmericaandtheCaribbean .
 
+juris:IL a dpv:Country ;
+    dct:title "Israel"@en ;
+    juris:iso_alpha2 "IL"^^xsd:string ;
+    juris:iso_alpha3 "ISR"^^xsd:string ;
+    juris:iso_numeric 376 ;
+    juris:un_m49 376 ;
+    skos:broaderTransitive juris:Asia,
+        juris:WesternAsia .
+
+juris:IM a dpv:Country ;
+    dct:title "Isle of Man"@en ;
+    juris:iso_alpha2 "IM"^^xsd:string ;
+    juris:iso_alpha3 "IMN"^^xsd:string ;
+    juris:iso_numeric 833 ;
+    juris:un_m49 833 ;
+    skos:broaderTransitive juris:Europe,
+        juris:NorthernEurope .
+
 juris:IO a dpv:Country ;
     dct:title "British Indian Ocean Territory"@en ;
     juris:iso_alpha2 "IO"^^xsd:string ;
@@ -1729,16 +1792,6 @@ juris:IS a dpv:Country ;
     skos:broaderTransitive juris:Europe,
         juris:NorthernEurope .
 
-juris:JE a dpv:Country ;
-    dct:title "Jersey"@en ;
-    juris:iso_alpha2 "JE"^^xsd:string ;
-    juris:iso_alpha3 "JEY"^^xsd:string ;
-    juris:iso_numeric 832 ;
-    juris:un_m49 832 ;
-    skos:broaderTransitive juris:ChannelIslands,
-        juris:Europe,
-        juris:NorthernEurope .
-
 juris:JM a dpv:Country ;
     dct:title "Jamaica"@en ;
     juris:iso_alpha2 "JM"^^xsd:string ;
@@ -1748,6 +1801,15 @@ juris:JM a dpv:Country ;
     skos:broaderTransitive juris:Americas,
         juris:Caribbean,
         juris:LatinAmericaandtheCaribbean .
+
+juris:JP a dpv:Country ;
+    dct:title "Japan"@en ;
+    juris:iso_alpha2 "JP"^^xsd:string ;
+    juris:iso_alpha3 "JPN"^^xsd:string ;
+    juris:iso_numeric 392 ;
+    juris:un_m49 392 ;
+    skos:broaderTransitive juris:Asia,
+        juris:EasternAsia .
 
 juris:KE a dpv:Country ;
     dct:title "Kenya"@en ;
@@ -1977,6 +2039,15 @@ juris:NO a dpv:Country ;
     juris:un_m49 578 ;
     skos:broaderTransitive juris:Europe,
         juris:NorthernEurope .
+
+juris:NZ a dpv:Country ;
+    dct:title "New Zealand"@en ;
+    juris:iso_alpha2 "NZ"^^xsd:string ;
+    juris:iso_alpha3 "NZL"^^xsd:string ;
+    juris:iso_numeric 554 ;
+    juris:un_m49 554 ;
+    skos:broaderTransitive juris:AustraliaandNewZealand,
+        juris:Oceania .
 
 juris:PA a dpv:Country ;
     dct:title "Panama"@en ;
@@ -2225,16 +2296,6 @@ juris:UG a dpv:Country ;
         juris:EasternAfrica,
         juris:SubSaharanAfrica .
 
-juris:UY a dpv:Country ;
-    dct:title "Uruguay"@en ;
-    juris:iso_alpha2 "UY"^^xsd:string ;
-    juris:iso_alpha3 "URY"^^xsd:string ;
-    juris:iso_numeric 858 ;
-    juris:un_m49 858 ;
-    skos:broaderTransitive juris:Americas,
-        juris:LatinAmericaandtheCaribbean,
-        juris:SouthAmerica .
-
 juris:VC a dpv:Country ;
     dct:title "Saint Vincent and the Grenadines"@en ;
     juris:iso_alpha2 "VC"^^xsd:string ;
@@ -2315,6 +2376,16 @@ juris:ZW a dpv:Country ;
         juris:EasternAfrica,
         juris:SubSaharanAfrica .
 
+juris:AR a dpv:Country ;
+    dct:title "Argentina"@en ;
+    juris:iso_alpha2 "AR"^^xsd:string ;
+    juris:iso_alpha3 "ARG"^^xsd:string ;
+    juris:iso_numeric 32 ;
+    juris:un_m49 32 ;
+    skos:broaderTransitive juris:Americas,
+        juris:LatinAmericaandtheCaribbean,
+        juris:SouthAmerica .
+
 juris:ChannelIslands a dpv:Region ;
     dct:title "ChannelIslands"@en ;
     juris:un_m49 830 ;
@@ -2322,6 +2393,46 @@ juris:ChannelIslands a dpv:Region ;
     skos:narrowerTransitive juris:GG,
         juris:JE,
         juris:Sark .
+
+juris:GG a dpv:Country ;
+    dct:title "Guernsey"@en ;
+    juris:iso_alpha2 "GG"^^xsd:string ;
+    juris:iso_alpha3 "GGY"^^xsd:string ;
+    juris:iso_numeric 831 ;
+    juris:un_m49 831 ;
+    skos:broaderTransitive juris:ChannelIslands,
+        juris:Europe,
+        juris:NorthernEurope .
+
+juris:JE a dpv:Country ;
+    dct:title "Jersey"@en ;
+    juris:iso_alpha2 "JE"^^xsd:string ;
+    juris:iso_alpha3 "JEY"^^xsd:string ;
+    juris:iso_numeric 832 ;
+    juris:un_m49 832 ;
+    skos:broaderTransitive juris:ChannelIslands,
+        juris:Europe,
+        juris:NorthernEurope .
+
+juris:UY a dpv:Country ;
+    dct:title "Uruguay"@en ;
+    juris:iso_alpha2 "UY"^^xsd:string ;
+    juris:iso_alpha3 "URY"^^xsd:string ;
+    juris:iso_numeric 858 ;
+    juris:un_m49 858 ;
+    skos:broaderTransitive juris:Americas,
+        juris:LatinAmericaandtheCaribbean,
+        juris:SouthAmerica .
+
+juris:CentralAsia a dpv:Region ;
+    dct:title "CentralAsia"@en ;
+    juris:un_m49 143 ;
+    skos:broaderTransitive juris:Asia ;
+    skos:narrowerTransitive juris:KG,
+        juris:KZ,
+        juris:TJ,
+        juris:TM,
+        juris:UZ .
 
 juris:GB a dpv:Country ;
     dct:title "United Kingdom of Great Britain and Northern Ireland"@en ;
@@ -2334,16 +2445,6 @@ juris:GB a dpv:Country ;
         juris:EU28,
         juris:Europe,
         juris:NorthernEurope .
-
-juris:CentralAsia a dpv:Region ;
-    dct:title "CentralAsia"@en ;
-    juris:un_m49 143 ;
-    skos:broaderTransitive juris:Asia ;
-    skos:narrowerTransitive juris:KG,
-        juris:KZ,
-        juris:TJ,
-        juris:TM,
-        juris:UZ .
 
 juris:Melanesia a dpv:Region ;
     dct:title "Melanesia"@en ;
@@ -3321,38 +3422,6 @@ juris:EU28 a dpv:SupraNationalUnion ;
         juris:SI,
         juris:SK .
 
-juris:EU a dpv:SupraNationalUnion ;
-    dct:title "European Union (EU)"@en ;
-    skos:narrower juris:AT,
-        juris:BE,
-        juris:BG,
-        juris:CY,
-        juris:CZ,
-        juris:DE,
-        juris:DK,
-        juris:EE,
-        juris:ES,
-        juris:EU27,
-        juris:EU28,
-        juris:FI,
-        juris:FR,
-        juris:GR,
-        juris:HR,
-        juris:HU,
-        juris:IE,
-        juris:IT,
-        juris:LT,
-        juris:LU,
-        juris:LV,
-        juris:MT,
-        juris:NL,
-        juris:PL,
-        juris:PT,
-        juris:RO,
-        juris:SE,
-        juris:SI,
-        juris:SK .
-
 juris:GDPR a dpv:Law ;
     dct:temporal [ a time1:ProperInterval ;
             time1:hasBeginning [ time1:inXSDDate "2018-05-25"^^xsd:date ] ] ;
@@ -3396,6 +3465,38 @@ juris:Oceania a dpv:Region ;
         juris:VU,
         juris:WF,
         juris:WS .
+
+juris:EU a dpv:SupraNationalUnion ;
+    dct:title "European Union (EU)"@en ;
+    skos:narrower juris:AT,
+        juris:BE,
+        juris:BG,
+        juris:CY,
+        juris:CZ,
+        juris:DE,
+        juris:DK,
+        juris:EE,
+        juris:ES,
+        juris:EU27,
+        juris:EU28,
+        juris:FI,
+        juris:FR,
+        juris:GR,
+        juris:HR,
+        juris:HU,
+        juris:IE,
+        juris:IT,
+        juris:LT,
+        juris:LU,
+        juris:LV,
+        juris:MT,
+        juris:NL,
+        juris:PL,
+        juris:PT,
+        juris:RO,
+        juris:SE,
+        juris:SI,
+        juris:SK .
 
 juris:Asia a dpv:Region ;
     dct:title "Asia"@en ;
