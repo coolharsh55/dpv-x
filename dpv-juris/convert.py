@@ -20,6 +20,7 @@ g.namespace_manager.bind('dct', DCT)
 g.namespace_manager.bind('dpv', DPV)
 g.namespace_manager.bind('juris', JURIS)
 g.namespace_manager.bind('time', TIME)
+g.namespace_manager.bind('foaf', Namespace('http://xmlns.com/foaf/spec/'))
 
 REGIONS = set()
 COUNTRIES = set()
@@ -87,6 +88,6 @@ with open('iso.json', 'r') as fd:
             g.add((JURIS[f'{alpha2}'], DCT.title, Literal(en, lang='en')))
 
 g.load('eu.ttl', format='ttl')
-g.load('dpa.ttl', format='ttl')
+g.load('de.ttl', format='ttl')
 
 g.serialize('juris.ttl', format='ttl')
