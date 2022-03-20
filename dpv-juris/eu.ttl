@@ -183,194 +183,194 @@ juris:EU-GDPR a dpv:Law ;
     dct:temporal [ a time:ProperInterval ; 
         time:hasBeginning [ time:inXSDDate "2018-05-25"^^xsd:date ] ] .
 
-juris:AT-DPA a dpv:DataProtectionAuthority ;
+juris:DPA-AT a dpv:DataProtectionAuthority ;
     dct:title "Austrian Data Protection Authority"@en ;
     foaf:homepage "https://dsb.gv.at"^^xsd:anyURI ;
     dpv:hasJurisdiction juris:AT ;
     dpv:hasApplicableLaw juris:EU-GDPR .
-juris:AT dpv:hasAuthority juris:AT-DPA .
+juris:AT dpv:hasAuthority juris:DPA-AT .
 
-juris:BE-DPA a dpv:DataProtectionAuthority ;
+juris:DPA-BE a dpv:DataProtectionAuthority ;
     dct:title "Belgian Data Protection Authority"@en ;
     dpv:hasJurisdiction juris:BE ;
     foaf:homepage "https://www.dataprotectionauthority.be/"^^xsd:anyURI ;
     dpv:hasApplicableLaw juris:EU-GDPR .
-juris:BE dpv:hasAuthority juris:BE-DPA .
+juris:BE dpv:hasAuthority juris:DPA-BE .
 
-juris:BG-DPA a dpv:DataProtectionAuthority ;
+juris:DPA-BG a dpv:DataProtectionAuthority ;
     dct:title "Commission for Personal Data Protection"@en ;
     foaf:homepage "https://www.cpdp.bg/"^^xsd:anyURI ;
     dpv:hasJurisdiction juris:BG .
-juris:BG dpv:hasAuthority juris:BG-DPA .
+juris:BG dpv:hasAuthority juris:DPA-BG .
 
-juris:CY-DPA a dpv:DataProtectionAuthority ;
+juris:DPA-CY a dpv:DataProtectionAuthority ;
     dct:title "Commissioner for Personal Data Protection"@en ;
     foaf:homepage "http://www.dataprotection.gov.cy/"^^xsd:anyURI ;
     dpv:hasJurisdiction juris:CY .
-juris:CY dpv:hasAuthority juris:CZ-DPA .
+juris:CY dpv:hasAuthority juris:DPA-CZ .
 
-juris:CZ-DPA a dpv:DataProtectionAuthority ;
+juris:DPA-CZ a dpv:DataProtectionAuthority ;
     dct:title "Office for Personal Data Protection"@en ;
     foaf:homepage "https://www.uoou.cz/"^^xsd:anyURI ;
     dpv:hasJurisdiction juris:CZ .
-juris:CZ dpv:hasAuthority juris:CZ-DPA .
+juris:CZ dpv:hasAuthority juris:DPA-CZ .
 
-juris:DE-DPA a dpv:DataProtectionAuthority ;
+juris:DPA-DE a dpv:DataProtectionAuthority ;
     dct:title "The Federal Commissioner for Data Protection and Freedom of Information "@en ;
     foaf:homepage "http://www.bfdi.bund.de/"^^xsd:anyURI ;
     dpv:hasJurisdiction juris:DE .
-juris:DE dpv:hasAuthority juris:DE-DPA .
+juris:DE dpv:hasAuthority juris:DPA-DE .
 
-juris:DK-DPA a dpv:DataProtectionAuthority ;
+juris:DPA-DK a dpv:DataProtectionAuthority ;
     dct:title "Danish Data Protection Agency"@en ;
     foaf:homepage "http://www.datatilsynet.dk/"^^xsd:anyURI ;
     dpv:hasJurisdiction juris:DK .
-juris:DK dpv:hasAuthority juris:DK-DPA .
+juris:DK dpv:hasAuthority juris:DPA-DK .
 
-juris:EE-DPA a dpv:DataProtectionAuthority ;
+juris:DPA-EE a dpv:DataProtectionAuthority ;
     dct:title "Estonian Data Protection Inspectorate"@en ;
     foaf:homepage "http://www.aki.ee/"^^xsd:anyURI ;
     dpv:hasJurisdiction juris:EE .
-juris:EE dpv:hasAuthority juris:EE-DPA .
+juris:EE dpv:hasAuthority juris:DPA-EE .
 
-juris:ES-DPA a dpv:DataProtectionAuthority ;
+juris:DPA-ES a dpv:DataProtectionAuthority ;
     dct:title "Spanish Data Protection Agency (AEPD)"@en ;
     foaf:homepage "https://www.aepd.es/"^^xsd:anyURI ;
     dpv:hasJurisdiction juris:ES .
-juris:ES dpv:hasAuthority juris:ES-DPA .
+juris:ES dpv:hasAuthority juris:DPA-ES .
 
-juris:FI-DPA a dpv:DataProtectionAuthority ;
+juris:DPA-FI a dpv:DataProtectionAuthority ;
     dct:title "Office of the Data Protection Ombudsman"@en ;
     foaf:homepage "https://tietosuoja.fi/"^^xsd:anyURI ;
     dpv:hasJurisdiction juris:FI .
-juris:FI dpv:hasAuthority juris:FI-DPA .
+juris:FI dpv:hasAuthority juris:DPA-FI .
 
-juris:FR-DPA a dpv:DataProtectionAuthority ;
+juris:DPA-FR a dpv:DataProtectionAuthority ;
     dct:title "National Commission on Informatics and Liberty (CNIL)"@en ;
     foaf:homepage "https://www.cnil.fr/"^^xsd:anyURI ;
     dpv:hasJurisdiction juris:FR .
-juris:FR dpv:hasAuthority juris:FR-DPA .
+juris:FR dpv:hasAuthority juris:DPA-FR .
 
-juris:GR-DPA a dpv:DataProtectionAuthority ;
+juris:DPA-GR a dpv:DataProtectionAuthority ;
     dct:title "Hellenic Data Protection Authority"@en ;
     foaf:homepage "http://dpa.gr"^^xsd:anyURI ;
     dpv:hasJurisdiction juris:GR .
-juris:GR dpv:hasAuthority juris:GR-DPA .
+juris:GR dpv:hasAuthority juris:DPA-GR .
 
-juris:HR-DPA a dpv:DataProtectionAuthority ;
+juris:DPA-HR a dpv:DataProtectionAuthority ;
     dct:title "Croatian Personal Data Protection Agency"@en ;
     foaf:homepage "http://www.azop.hr/"^^xsd:anyURI ;
     dpv:hasJurisdiction juris:HR .
-juris:HR dpv:hasAuthority juris:HR-DPA .
+juris:HR dpv:hasAuthority juris:DPA-HR .
 
-juris:HU-DPA a dpv:DataProtectionAuthority ;
+juris:DPA-HU a dpv:DataProtectionAuthority ;
     dct:title "Hungarian National Authority for Data Protection and Freedom of Information"@en ;
     foaf:homepage "http://www.naih.hu/"^^xsd:anyURI ;
     dpv:hasJurisdiction juris:HU .
-juris:HU dpv:hasAuthority juris:HU-DPA .
+juris:HU dpv:hasAuthority juris:DPA-HU .
 
-juris:IE-DPA a dpv:DataProtectionAuthority ;
+juris:DPA-IE a dpv:DataProtectionAuthority ;
     dct:title "Data Protection Commission (DPC)"@en ;
     foaf:homepage "http://www.dataprotection.ie"^^xsd:anyURI ;
     dpv:hasJurisdiction juris:IE .
-juris:IE dpv:hasAuthority juris:IE-DPA .
+juris:IE dpv:hasAuthority juris:DPA-IE .
 
-juris:IS-DPA a dpv:DataProtectionAuthority ;
+juris:DPA-IS a dpv:DataProtectionAuthority ;
     dct:title "Icelandic Data Protection Authority"@en ;
     foaf:homepage "https://www.dpa.is/"^^xsd:anyURI,
         "https://www.personuvernd.is/"^^xsd:anyURI ;
     dpv:hasJurisdiction juris:IS .
-juris:IS dpv:hasAuthority juris:IS-DPA .
+juris:IS dpv:hasAuthority juris:DPA-IS .
 
-juris:IT-DPA a dpv:DataProtectionAuthority ;
+juris:DPA-IT a dpv:DataProtectionAuthority ;
     dct:title "Data Protection Commission"@en ;
     dct:title "Garante per la protezione dei dati personali"@it ;
     foaf:homepage "https://www.garanteprivacy.it/"^^xsd:anyURI ;
     dpv:hasJurisdiction juris:IT .
-juris:IT dpv:hasAuthority juris:IT-DPA .
+juris:IT dpv:hasAuthority juris:DPA-IT .
 
-juris:LI-DPA a dpv:DataProtectionAuthority ;
+juris:DPA-LI a dpv:DataProtectionAuthority ;
     dct:title "Data Protection Authority"@en ;
     foaf:homepage "https://www.datenschutzstelle.li/"^^xsd:anyURI ;
     dpv:hasJurisdiction juris:LI .
-juris:LI dpv:hasAuthority juris:LI-DPA .
+juris:LI dpv:hasAuthority juris:DPA-LI .
 
-juris:LT-DPA a dpv:DataProtectionAuthority ;
+juris:DPA-LT a dpv:DataProtectionAuthority ;
     dct:title "State Data Protection Inspectorate"@en ;
     foaf:homepage "https://ada.lt"^^xsd:anyURI ;
     dpv:hasJurisdiction juris:LT .
-juris:LT dpv:hasAuthority juris:LT-DPA .
+juris:LT dpv:hasAuthority juris:DPA-LT .
 
-juris:LU-DPA a dpv:DataProtectionAuthority ;
+juris:DPA-LU a dpv:DataProtectionAuthority ;
     dct:title "National Commission for Data Protection"@en ;
     foaf:homepage "https://cnpd.public.lu"^^xsd:anyURI ;
     dpv:hasJurisdiction juris:LU .
-juris:LU dpv:hasAuthority juris:LU-DPA .
+juris:LU dpv:hasAuthority juris:DPA-LU .
 
-juris:LV-DPA a dpv:DataProtectionAuthority ;
+juris:DPA-LV a dpv:DataProtectionAuthority ;
     dct:title "Data State Inspectorate"@en ;
     foaf:homepage "http://www.dvi.gov.lv/"^^xsd:anyURI ;
     dpv:hasJurisdiction juris:LV .
-juris:LV dpv:hasAuthority juris:LV-DPA .
+juris:LV dpv:hasAuthority juris:DPA-LV .
 
-juris:MT-DPA a dpv:DataProtectionAuthority ;
+juris:DPA-MT a dpv:DataProtectionAuthority ;
     dct:title "Office of the Information and Data Protection Commissioner"@en ;
     foaf:homepage "https://idpc.org.mt"^^xsd:anyURI ;
     dpv:hasJurisdiction juris:MT .
-juris:MT dpv:hasAuthority juris:MT-DPA .
+juris:MT dpv:hasAuthority juris:DPA-MT .
 
-juris:NL-DPA a dpv:DataProtectionAuthority ;
+juris:DPA-NL a dpv:DataProtectionAuthority ;
     dct:title "Dutch Data Protection Authority"@en ;
     foaf:homepage "https://autoriteitpersoonsgegevens.nl"^^xsd:anyURI ;
     dpv:hasJurisdiction juris:NL .
-juris:NL dpv:hasAuthority juris:NL-DPA .
+juris:NL dpv:hasAuthority juris:DPA-NL .
 
-juris:NO-DPA a dpv:DataProtectionAuthority ;
+juris:DPA-NO a dpv:DataProtectionAuthority ;
     dct:title "Datatilsynet"@en ;
     foaf:homepage "https://www.datatilsynet.no/"^^xsd:anyURI ;
     dpv:hasJurisdiction juris:NO .
 
-juris:PL-DPA a dpv:DataProtectionAuthority ;
+juris:DPA-PL a dpv:DataProtectionAuthority ;
     dct:title "Personal Data Protection Office"@en ;
     foaf:homepage "https://uodo.gov.pl/"^^xsd:anyURI ;
     dpv:hasJurisdiction juris:PL .
-juris:PL dpv:hasAuthority juris:PL-DPA .
+juris:PL dpv:hasAuthority juris:DPA-PL .
 
-juris:PT-DPA a dpv:DataProtectionAuthority ;
+juris:DPA-PT a dpv:DataProtectionAuthority ;
     dct:title "Comissão Nacional de Protecção de Dados"@en ;
     foaf:homepage "https://www.cnpd.pt"^^xsd:anyURI ;
     dpv:hasJurisdiction juris:PT .
-juris:PT dpv:hasAuthority juris:PT-DPA .
+juris:PT dpv:hasAuthority juris:DPA-PT .
 
-juris:RO-DPA a dpv:DataProtectionAuthority ;
+juris:DPA-RO a dpv:DataProtectionAuthority ;
     dct:title "National Supervisory Authority for Personal Data Processing"@en ;
     foaf:homepage "http://www.dataprotection.ro/"^^xsd:anyURI ;
     dpv:hasJurisdiction juris:RO .
-juris:RO dpv:hasAuthority juris:RO-DPA .
+juris:RO dpv:hasAuthority juris:DPA-RO .
 
-juris:SE-DPA a dpv:DataProtectionAuthority ;
+juris:DPA-SE a dpv:DataProtectionAuthority ;
     dct:title "Swedish Authority for Privacy Protection"@en ;
     foaf:homepage "https://www.imy.se/"^^xsd:anyURI ;
     dpv:hasJurisdiction juris:SE .
-juris:SE dpv:hasAuthority juris:SE-DPA .
+juris:SE dpv:hasAuthority juris:DPA-SE .
 
-juris:SI-DPA a dpv:DataProtectionAuthority ;
+juris:DPA-SI a dpv:DataProtectionAuthority ;
     dct:title "Information Commissioner of the Republic of Slovenia"@en ;
     foaf:homepage "https://www.ip-rs.si/"^^xsd:anyURI ;
     dpv:hasJurisdiction juris:SI .
-juris:SI dpv:hasAuthority juris:SI-DPA .
+juris:SI dpv:hasAuthority juris:DPA-SI .
 
-juris:SK-DPA a dpv:DataProtectionAuthority ;
+juris:DPA-SK a dpv:DataProtectionAuthority ;
     dct:title "Office for Personal Data Protection of the Slovak Republic"@en ;
     foaf:homepage "http://www.dataprotection.gov.sk/"^^xsd:anyURI ;
     dpv:hasJurisdiction juris:SK .
-juris:SK dpv:hasAuthority juris:SK-DPA .
+juris:SK dpv:hasAuthority juris:DPA-SK .
 
-juris:GB-DPA a dpv:DataProtectionAuthority ;
+juris:DPA-GB a dpv:DataProtectionAuthority ;
     dct:title "Information Commissioner's Office (ICO)"@en ;
     foaf:homepage "https://ico.org.uk/"^^xsd:anyURI ;
     dpv:hasJurisdiction juris:GB .
-juris:GB dpv:hasAuthority juris:GB-DPA .
+juris:GB dpv:hasAuthority juris:DPA-GB .
 
 juris:EU-EDPB a dpv:DataProtectionAuthority ;
     dct:title "European Data Protection Board"@en ;
@@ -382,68 +382,68 @@ juris:EU-EDPS a dpv:DataProtectionAuthority ;
     foaf:homepage "https://edps.europa.eu/"^^xsd:anyURI ;
     dpv:hasJurisdiction juris:EU .
 
-juris:DE-DPA dpv:hasApplicableLaw juris:DE-BDSG,
+juris:DPA-DE dpv:hasApplicableLaw juris:DE-BDSG,
     juris:EU-GDPR .
 
-juris:DE-BDSG dpv:hasAuthority juris:DE-DPA .
+juris:DE-BDSG dpv:hasAuthority juris:DPA-DE .
 
-juris:EU-GDPR dpv:hasAuthority juris:DE-DPA,
-    juris:CZ-DPA, juris:AT-DPA, juris:BE-DPA,
-    juris:BG-DPA, juris:DK-DPA, juris:EE-DPA,
-    juris:ES-DPA, juris:FI-DPA, juris:FR-DPA,
-    juris:GR-DPA, juris:HR-DPA, juris:HU-DPA,
-    juris:IE-DPA, juris:IT-DPA, juris:LT-DPA,
-    juris:LU-DPA, juris:LV-DPA, juris:MT-DPA,
-    juris:NL-DPA, juris:PL-DPA, juris:PT-DPA,
-    juris:RO-DPA, juris:SE-DPA, juris:SI-DPA,
-    juris:SK-DPA .
+juris:EU-GDPR dpv:hasAuthority juris:DPA-DE,
+    juris:DPA-CZ, juris:DPA-AT, juris:DPA-BE,
+    juris:DPA-BG, juris:DPA-DK, juris:DPA-EE,
+    juris:DPA-ES, juris:DPA-FI, juris:DPA-FR,
+    juris:DPA-GR, juris:DPA-HR, juris:DPA-HU,
+    juris:DPA-IE, juris:DPA-IT, juris:DPA-LT,
+    juris:DPA-LU, juris:DPA-LV, juris:DPA-MT,
+    juris:DPA-NL, juris:DPA-PL, juris:DPA-PT,
+    juris:DPA-RO, juris:DPA-SE, juris:DPA-SI,
+    juris:DPA-SK .
 
-juris:CZ-DPA dpv:hasApplicableLaw juris:EU-GDPR .
+juris:DPA-CZ dpv:hasApplicableLaw juris:EU-GDPR .
 
-juris:AT-DPA dpv:hasApplicableLaw juris:EU-GDPR .
+juris:DPA-AT dpv:hasApplicableLaw juris:EU-GDPR .
 
-juris:BE-DPA dpv:hasApplicableLaw juris:EU-GDPR .
+juris:DPA-BE dpv:hasApplicableLaw juris:EU-GDPR .
 
-juris:BG-DPA dpv:hasApplicableLaw juris:EU-GDPR .
+juris:DPA-BG dpv:hasApplicableLaw juris:EU-GDPR .
 
-juris:DK-DPA dpv:hasApplicableLaw juris:EU-GDPR .
+juris:DPA-DK dpv:hasApplicableLaw juris:EU-GDPR .
 
-juris:EE-DPA dpv:hasApplicableLaw juris:EU-GDPR .
+juris:DPA-EE dpv:hasApplicableLaw juris:EU-GDPR .
 
-juris:ES-DPA dpv:hasApplicableLaw juris:EU-GDPR .
+juris:DPA-ES dpv:hasApplicableLaw juris:EU-GDPR .
 
-juris:FI-DPA dpv:hasApplicableLaw juris:EU-GDPR .
+juris:DPA-FI dpv:hasApplicableLaw juris:EU-GDPR .
 
-juris:FR-DPA dpv:hasApplicableLaw juris:EU-GDPR .
+juris:DPA-FR dpv:hasApplicableLaw juris:EU-GDPR .
 
-juris:GR-DPA dpv:hasApplicableLaw juris:EU-GDPR .
+juris:DPA-GR dpv:hasApplicableLaw juris:EU-GDPR .
 
-juris:HR-DPA dpv:hasApplicableLaw juris:EU-GDPR .
+juris:DPA-HR dpv:hasApplicableLaw juris:EU-GDPR .
 
-juris:HU-DPA dpv:hasApplicableLaw juris:EU-GDPR .
+juris:DPA-HU dpv:hasApplicableLaw juris:EU-GDPR .
 
-juris:IE-DPA dpv:hasApplicableLaw juris:EU-GDPR .
+juris:DPA-IE dpv:hasApplicableLaw juris:EU-GDPR .
 
-juris:IT-DPA dpv:hasApplicableLaw juris:EU-GDPR .
+juris:DPA-IT dpv:hasApplicableLaw juris:EU-GDPR .
 
-juris:LT-DPA dpv:hasApplicableLaw juris:EU-GDPR .
+juris:DPA-LT dpv:hasApplicableLaw juris:EU-GDPR .
 
-juris:LU-DPA dpv:hasApplicableLaw juris:EU-GDPR .
+juris:DPA-LU dpv:hasApplicableLaw juris:EU-GDPR .
 
-juris:LV-DPA dpv:hasApplicableLaw juris:EU-GDPR .
+juris:DPA-LV dpv:hasApplicableLaw juris:EU-GDPR .
 
-juris:MT-DPA dpv:hasApplicableLaw juris:EU-GDPR .
+juris:DPA-MT dpv:hasApplicableLaw juris:EU-GDPR .
 
-juris:NL-DPA dpv:hasApplicableLaw juris:EU-GDPR .
+juris:DPA-NL dpv:hasApplicableLaw juris:EU-GDPR .
 
-juris:PL-DPA dpv:hasApplicableLaw juris:EU-GDPR .
+juris:DPA-PL dpv:hasApplicableLaw juris:EU-GDPR .
 
-juris:PT-DPA dpv:hasApplicableLaw juris:EU-GDPR .
+juris:DPA-PT dpv:hasApplicableLaw juris:EU-GDPR .
 
-juris:RO-DPA dpv:hasApplicableLaw juris:EU-GDPR .
+juris:DPA-RO dpv:hasApplicableLaw juris:EU-GDPR .
 
-juris:SE-DPA dpv:hasApplicableLaw juris:EU-GDPR .
+juris:DPA-SE dpv:hasApplicableLaw juris:EU-GDPR .
 
-juris:SI-DPA dpv:hasApplicableLaw juris:EU-GDPR .
+juris:DPA-SI dpv:hasApplicableLaw juris:EU-GDPR .
 
-juris:SK-DPA dpv:hasApplicableLaw juris:EU-GDPR .
+juris:DPA-SK dpv:hasApplicableLaw juris:EU-GDPR .

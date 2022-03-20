@@ -89,5 +89,6 @@ with open('iso.json', 'r') as fd:
 
 g.load('eu.ttl', format='ttl')
 g.load('de.ttl', format='ttl')
+g.load('us.ttl', format='ttl')
 
 g.serialize('juris.ttl', format='ttl')

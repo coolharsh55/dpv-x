@@ -1,0 +1,200 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dpv: <http://w3id.org/dpv#> .
+@prefix dpv-gdpr: <http://w3id.org/dpv/dpv-gdpr#> .
+@prefix juris: <http://w3id.org/dpv/dpv-juris#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix time: <https://www.w3.org/TR/owl-time/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/spec/> .
+
+juris:US-AL a dpv:Region ;
+	dct:title "Alabama"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-AK a dpv:Region ;
+	dct:title "Alaska"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-AZ a dpv:Region ;
+	dct:title "Arizona"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-AR a dpv:Region ;
+	dct:title "Arkansas"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-CA a dpv:Region ;
+	dct:title "California"@en ;
+	dpv:hasApplicableLaw juris:US-CA-CCPA, juris:US-CA-CPRA ;
+	dpv:hasAuthority juris:DPA-US-CA ;
+	skos:broaderTransitive juris:US .
+juris:US-CA-CCPA a dpv:Law ;
+	dct:title "California Consumer Privacy Act (CPRA)"@en ;
+	dpv:hasJurisdiction juris:US-CA ;
+	dpv:hasAuthority juris:DPA-US-CA ;
+	foaf:homepage "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201720180AB375"^^xsd:anyURI ;
+    dct:temporal [ a time:ProperInterval ; 
+        time:hasBeginning [ time:inXSDDate "2020-01-01"^^xsd:date ] ] .
+juris:US-CA-CPRA a dpv:Law ;
+	dct:title "California Privacy Rights Act (CPRA)"@en ;
+	dpv:hasJurisdiction juris:US-CA ;
+	dpv:hasAuthority juris:DPA-US-CA ;
+	foaf:homepage "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201720180AB375"^^xsd:anyURI ;
+    dct:temporal [ a time:ProperInterval ; 
+        time:hasBeginning [ time:inXSDDate "2023-01-01"^^xsd:date ] ] .
+juris:DPA-US-CA a dpv:DataProtectionAuthority ;
+	dct:title "California Privacy Protection Agency"@en ;
+	foaf:homepage "https://cppa.ca.gov/"^^xsd:anyURI ;
+	dpv:hasApplicableLaw juris:US-CA-CCPA, juris:US-CA-CPRA .
+juris:US-CO a dpv:Region ;
+	dct:title "Colorado"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-CT a dpv:Region ;
+	dct:title "Connecticut"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-DE a dpv:Region ;
+	dct:title "Delaware"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-FL a dpv:Region ;
+	dct:title "Florida"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-GA a dpv:Region ;
+	dct:title "Georgia"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-HI a dpv:Region ;
+	dct:title "Hawaii"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-ID a dpv:Region ;
+	dct:title "Idaho"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-IL a dpv:Region ;
+	dct:title "Illinois"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-IN a dpv:Region ;
+	dct:title "Indiana"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-IA a dpv:Region ;
+	dct:title "Iowa"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-KS a dpv:Region ;
+	dct:title "Kansas"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-KY a dpv:Region ;
+	dct:title "Kentucky"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-LA a dpv:Region ;
+	dct:title "Louisiana"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-ME a dpv:Region ;
+	dct:title "Maine"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-MD a dpv:Region ;
+	dct:title "Maryland"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-MA a dpv:Region ;
+	dct:title "Massachusetts"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-MI a dpv:Region ;
+	dct:title "Michigan"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-MN a dpv:Region ;
+	dct:title "Minnesota"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-MS a dpv:Region ;
+	dct:title "Mississippi"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-MO a dpv:Region ;
+	dct:title "Missouri"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-MT a dpv:Region ;
+	dct:title "Montana"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-NE a dpv:Region ;
+	dct:title "Nebraska"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-NV a dpv:Region ;
+	dct:title "Nevada"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-NH a dpv:Region ;
+	dct:title "New Hampshire"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-NJ a dpv:Region ;
+	dct:title "New Jersey"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-NM a dpv:Region ;
+	dct:title "New Mexico"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-NY a dpv:Region ;
+	dct:title "New York"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-NC a dpv:Region ;
+	dct:title "North Carolina"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-ND a dpv:Region ;
+	dct:title "North Dakota"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-OH a dpv:Region ;
+	dct:title "Ohio"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-OK a dpv:Region ;
+	dct:title "Oklahoma"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-OR a dpv:Region ;
+	dct:title "Oregon"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-PA a dpv:Region ;
+	dct:title "Pennsylvania"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-RI a dpv:Region ;
+	dct:title "Rhode Island"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-SC a dpv:Region ;
+	dct:title "South Carolina"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-SD a dpv:Region ;
+	dct:title "South Dakota"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-TN a dpv:Region ;
+	dct:title "Tennessee"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-TX a dpv:Region ;
+	dct:title "Texas"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-UT a dpv:Region ;
+	dct:title "Utah"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-VT a dpv:Region ;
+	dct:title "Vermont"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-VA a dpv:Region ;
+	dct:title "Virginia"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-WA a dpv:Region ;
+	dct:title "Washington"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-WV a dpv:Region ;
+	dct:title "West Virginia"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-WI a dpv:Region ;
+	dct:title "Wisconsin"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-WY a dpv:Region ;
+	dct:title "Wyoming"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-DC a dpv:Region ;
+	dct:title "District of Columbia"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-AS a dpv:Region ;
+	dct:title "American Samoa"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-GU a dpv:Region ;
+	dct:title "Guam"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-MP a dpv:Region ;
+	dct:title "Northern Mariana Islands"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-PR a dpv:Region ;
+	dct:title "Puerto Rico"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-UM a dpv:Region ;
+	dct:title "United States Minor Outlying Islands"@en ;
+	skos:broaderTransitive juris:US .
+juris:US-VI a dpv:Region ;
+	dct:title "U.S. Virgin Islands"@en ;
+	skos:broaderTransitive juris:US .

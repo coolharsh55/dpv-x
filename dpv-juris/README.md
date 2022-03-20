@@ -39,7 +39,7 @@ juris:EU-GDPR a dpv:Law ;
     dct:temporal [ a time1:ProperInterval ;
             time1:hasBeginning [ time1:inXSDDate "2018-05-25"^^xsd:date ] ] ;
     dct:title "General Data Protection Regulation (GDPR)"@en ;
-    dpv:hasAuthority juris:AT-DPA, ... ;
+    dpv:hasAuthority juris:DPA-AT, ... ;
     dpv:hasJurisdiction juris:EEA, juris:AT, ... ;
     foaf1:homepage "http://data.europa.eu/eli/reg/2016/679/oj"^^xsd:anyURI .
 
@@ -55,7 +55,7 @@ juris:EU-EDPS a dpv:DataProtectionAuthority ;
 juris:DE a dpv:Country ;
     dct:title "Germany"@en ;
     dpv:hasApplicableLaw juris:DE-BDSG, juris:EU-GDPR ;
-    dpv:hasAuthority juris:DE-DPA ;
+    dpv:hasAuthority juris:DPA-DE ;
     juris:iso_alpha2 "DE"^^xsd:string ;
     juris:iso_alpha3 "DEU"^^xsd:string ;
     juris:iso_numeric 276 ;
@@ -68,11 +68,11 @@ juris:DE-BDSG a dpv:Law ;
             time1:hasBeginning [ time1:inXSDDate "2019-11-20"^^xsd:date ] ] ;
     dct:title "Bundesdatenschutzgesetz (BDSG)"@de,
         "Federal Data Protection Act (BDSG)"@en ;
-    dpv:hasAuthority juris:DE-BB-DPA, ... ;
+    dpv:hasAuthority juris:DPA-DE-BB, ... ;
     dpv:hasJurisdiction juris:DE ;
     foaf1:homepage "https://www.gesetze-im-internet.de/bdsg_2018/"^^xsd:anyURI .
 
-juris:DE-DPA a dpv:DataProtectionAuthority ;
+juris:DPA-DE a dpv:DataProtectionAuthority ;
     dct:title "The Federal Commissioner for Data Protection and Freedom of Information "@en ;
     dpv:hasApplicableLaw juris:DE-BDSG, juris:EU-GDPR ;
     dpv:hasJurisdiction juris:DE ;
@@ -81,16 +81,16 @@ juris:DE-DPA a dpv:DataProtectionAuthority ;
 juris:DE-BE a dpv:Region ;
     dct:title "Berlin"@de, "Berlin"@en ;
     dpv:hasApplicableLaw juris:DE-BDSG, juris:DE-BE-BlnDSG, juris:EU-GDPR ;
-    dpv:hasAuthority juris:DE-BE-DPA ;
+    dpv:hasAuthority juris:DPA-DE-BE ;
     skos:broaderTransitive juris:DE .
 
 juris:DE-BE-BlnDSG a dpv:Law ;
     dct:title "Berliner Datenschutzgesetz (BlnDSG)" ;
-    dpv:hasAuthority juris:DE-BE-DPA ;
+    dpv:hasAuthority juris:DPA-DE-BE ;
     dpv:hasJurisdiction juris:DE-BE ;
     foaf1:homepage "https://www.datenschutz-berlin.de/fileadmin/user_upload/pdf/publikationen/informationsmaterialien/2018-BlnBDI_BlnDSG.pdf"^^xsd:anyURI .
 
-juris:DE-BE-DPA a dpv:DataProtectionAuthority ;
+juris:DPA-DE-BE a dpv:DataProtectionAuthority ;
     dct:title "Berliner Beauftragte für Datenschutz und Informationsfreiheit"@de ;
     dpv:hasApplicableLaw juris:DE-BDSG, juris:DE-BE-BlnDSG, juris:EU-GDPR ;
     dpv:hasJurisdiction juris:DE-BE ;
