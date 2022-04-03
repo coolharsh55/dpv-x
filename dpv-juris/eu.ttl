@@ -13,14 +13,14 @@ juris:EU a dpv:SupraNationalUnion ;
     skos:narrower juris:BE, juris:BG, juris:CZ, juris:DK, juris:DE, juris:EE, juris:IE, juris:GR, juris:ES, juris:FR, juris:HR, juris:IT, juris:CY, juris:LV, juris:LT, juris:LU, juris:HU, juris:MT, juris:NL, juris:AT, juris:PL, juris:PT, juris:RO, juris:SI, juris:SK, juris:FI, juris:SE .
 
 juris:EU27 a dpv:SupraNationalUnion ;
-    dct:title "European Union (EU-27)" ;
+    dct:title "European Union (EU-27)"@en ;
     skos:broader juris:EU ;
     skos:narrower juris:BE, juris:BG, juris:CZ, juris:DK, juris:DE, juris:EE, juris:IE, juris:GR, juris:ES, juris:FR, juris:HR, juris:IT, juris:CY, juris:LV, juris:LT, juris:LU, juris:HU, juris:MT, juris:NL, juris:AT, juris:PL, juris:PT, juris:RO, juris:SI, juris:SK, juris:FI, juris:SE ; 
     dct:temporal [ a time:ProperInterval ; 
         time:hasBeginning [ time:inXSDDate "2020-02-01"^^xsd:date ] ] .
 
 juris:EU28 a dpv:SupraNationalUnion ;
-    dct:title "European Union (EU-28)" ;
+    dct:title "European Union (EU-28)"@en ;
     skos:broader juris:EU ;
     skos:narrower juris:BE, juris:BG, juris:CZ, juris:DK, juris:DE, juris:EE, juris:IE, juris:GR, juris:ES, juris:FR, juris:HR, juris:IT, juris:CY, juris:LV, juris:LT, juris:LU, juris:HU, juris:MT, juris:NL, juris:AT, juris:PL, juris:PT, juris:RO, juris:SI, juris:SK, juris:FI, juris:SE, juris:GB ; 
     dct:temporal [ a time:ProperInterval ; 
@@ -33,14 +33,14 @@ juris:EEA a dpv:SupraNationalUnion ;
     skos:narrower juris:BE, juris:BG, juris:CZ, juris:DK, juris:DE, juris:EE, juris:IE, juris:GR, juris:ES, juris:FR, juris:HR, juris:IT, juris:CY, juris:LV, juris:LT, juris:LU, juris:HU, juris:MT, juris:NL, juris:AT, juris:PL, juris:PT, juris:RO, juris:SI, juris:SK, juris:FI, juris:SE .
 
 juris:EEA30 a dpv:SupraNationalUnion ;
-    dct:title "European Economic Area (EEA-30)" ;
+    dct:title "European Economic Area (EEA-30)"@en ;
     skos:broader juris:EEA ;
     skos:narrower juris:BE, juris:BG, juris:CZ, juris:DK, juris:DE, juris:EE, juris:IE, juris:GR, juris:ES, juris:FR, juris:HR, juris:IT, juris:CY, juris:LV, juris:LT, juris:LU, juris:HU, juris:MT, juris:NL, juris:AT, juris:PL, juris:PT, juris:RO, juris:SI, juris:SK, juris:FI, juris:SE ; 
     dct:temporal [ a time:ProperInterval ; 
         time:hasBeginning [ time:inXSDDate "2020-02-01"^^xsd:date ] ] .
 
 juris:EEA31 a dpv:SupraNationalUnion ;
-    dct:title "European Economic Area (EEA-31)" ;
+    dct:title "European Economic Area (EEA-31)"@en ;
     skos:broader juris:EEA ;
     skos:narrower juris:BE, juris:BG, juris:CZ, juris:DK, juris:DE, juris:EE, juris:IE, juris:GR, juris:ES, juris:FR, juris:HR, juris:IT, juris:CY, juris:LV, juris:LT, juris:LU, juris:HU, juris:MT, juris:NL, juris:AT, juris:PL, juris:PT, juris:RO, juris:SI, juris:SK, juris:FI, juris:SE, juris:GB ; 
     dct:temporal [ a time:ProperInterval ; 
@@ -77,43 +77,47 @@ juris:SE skos:broaderTransitive juris:EEA, juris:EEA30, juris:EEA31, juris:EU27,
 juris:GB skos:broaderTransitive juris:EEA31, juris:EU28 .
 
 juris:Adequacy-EU-AD a dpv-gdpr:A45-3 ;
-    dct:title "EU Adequacy Decision for Andorra" ;
+    dct:title "EU Adequacy Decision for Andorra"@en ;
     foaf:homepage "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32010D0625?"^^xsd:anyURI ;
     dct:temporal [ a time:ProperInterval ;
             time:hasBeginning [ time:inXSDDate "2010-10-21"^^xsd:date ] ] ;
-    dpv:hasCountry juris:EU ;
-    dpv:hasCountry juris:AD .
+    dpv:hasJurisdiction juris:AD ;
+    dpv:hasJurisdiction juris:EU .
 
 juris:Adequacy-EU-AR a dpv-gdpr:A45-3 ;
-    dct:title "EU Adequacy Decision for Argentina" ;
+    dct:title "EU Adequacy Decision for Argentina"@en ;
     foaf:homepage "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32003D0490"^^xsd:anyURI ;
     dct:temporal [ a time:ProperInterval ;
             time:hasBeginning [ time:inXSDDate "2003-07-05"^^xsd:date ] ] ;
-    dpv:hasCountry juris:AR .
+    dpv:hasJurisdiction juris:AR ;
+    dpv:hasJurisdiction juris:EU.
 
 juris:Adequacy-EU-CA a dpv-gdpr:A45-3 ;
-    dct:title "EU Adequacy Decision for Canada (commercial organisations)" ;
+    dct:title "EU Adequacy Decision for Canada (commercial organisations)"@en ;
     foaf:homepage "https://eur-lex.europa.eu/legal-content/en/TXT/?uri=CELEX%3A32002D0002"^^xsd:anyURI ;
     dct:temporal [ a time:ProperInterval ;
             time:hasBeginning [ time:inXSDDate "2002-01-04"^^xsd:date ] ] ;
-    dpv:hasCountry juris:CA .
+    dpv:hasJurisdiction juris:CA ;
+    dpv:hasJurisdiction juris:EU.
 
 juris:Adequacy-EU-CH a dpv-gdpr:A45-3 ;
-    dct:title "EU Adequacy Decision for Switzerland" ;
+    dct:title "EU Adequacy Decision for Switzerland"@en ;
     foaf:homepage "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32000D0518"^^xsd:anyURI ;
     dct:temporal [ a time:ProperInterval ;
             time:hasBeginning [ time:inXSDDate "2000-08-25"^^xsd:date ] ] ;
-    dpv:hasCountry juris:CH .
+    dpv:hasJurisdiction juris:CH ;
+    dpv:hasJurisdiction juris:EU.
 
 juris:Adequacy-EU-FO a dpv-gdpr:A45-3 ;
-    dct:title "EU Adequacy Decision for Faroe Islands" ;
+    dct:title "EU Adequacy Decision for Faroe Islands"@en ;
     foaf:homepage "https://eur-lex.europa.eu/legal-content/en/ALL/?uri=CELEX%3A32010D0146"^^xsd:anyURI ;
     dct:temporal [ a time:ProperInterval ;
             time:hasBeginning [ time:inXSDDate "2010-03-09"^^xsd:date ] ] ;
-    dpv:hasCountry juris:FO .
+    dpv:hasJurisdiction juris:FO ;
+    dpv:hasJurisdiction juris:EU.
 
 juris:Adequacy-EU-GG a dpv-gdpr:A45-3 ;
-    dct:title "EU Adequacy Decision for Guernsey" ;
+    dct:title "EU Adequacy Decision for Guernsey"@en ;
     foaf:homepage "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32003D0821"^^xsd:anyURI ;
     dct:temporal [ a time:ProperInterval ;
             time:hasBeginning [ time:inXSDDate "2003-11-21"^^xsd:date ] ] ;
@@ -121,7 +125,7 @@ juris:Adequacy-EU-GG a dpv-gdpr:A45-3 ;
     dpv:hasJurisdiction juris:EU.
 
 juris:Adequacy-EU-IL a dpv-gdpr:A45-3 ;
-    dct:title "EU Adequacy Decision for Israel" ;
+    dct:title "EU Adequacy Decision for Israel"@en ;
     foaf:homepage "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32011D0061"^^xsd:anyURI ;
     dct:temporal [ a time:ProperInterval ;
             time:hasBeginning [ time:inXSDDate "2011-02-01"^^xsd:date ] ] ;
@@ -129,7 +133,7 @@ juris:Adequacy-EU-IL a dpv-gdpr:A45-3 ;
     dpv:hasJurisdiction juris:EU .
 
 juris:Adequacy-EU-IM a dpv-gdpr:A45-3 ;
-    dct:title "EU Adequacy Decision for Isle of Man" ;
+    dct:title "EU Adequacy Decision for Isle of Man"@en ;
     foaf:homepage "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32004D0411"^^xsd:anyURI ;
     dct:temporal [ a time:ProperInterval ;
             time:hasBeginning [ time:inXSDDate "2004-04-30"^^xsd:date ] ] ;
@@ -137,7 +141,7 @@ juris:Adequacy-EU-IM a dpv-gdpr:A45-3 ;
     dpv:hasJurisdiction juris:EU .
 
 juris:Adequacy-EU-JE a dpv-gdpr:A45-3 ;
-    dct:title "EU Adequacy Decision for Jersey" ;
+    dct:title "EU Adequacy Decision for Jersey"@en ;
     foaf:homepage "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32008D0393"^^xsd:anyURI ;
     dct:temporal [ a time:ProperInterval ;
             time:hasBeginning [ time:inXSDDate "2008-05-26"^^xsd:date ] ] ;
@@ -145,7 +149,7 @@ juris:Adequacy-EU-JE a dpv-gdpr:A45-3 ;
     dpv:hasJurisdiction juris:EU .
 
 juris:Adequacy-EU-JP a dpv-gdpr:A45-3 ;
-    dct:title "EU Adequacy Decision for Japan" ;
+    dct:title "EU Adequacy Decision for Japan"@en ;
     foaf:homepage "http://data.europa.eu/eli/dec_impl/2019/419/oj"^^xsd:anyURI ;
     dct:temporal [ a time:ProperInterval ;
             time:hasBeginning [ time:inXSDDate "2019-01-23"^^xsd:date ] ] ;
@@ -153,7 +157,7 @@ juris:Adequacy-EU-JP a dpv-gdpr:A45-3 ;
     dpv:hasJurisdiction juris:EU .
 
 juris:Adequacy-EU-NZ a dpv-gdpr:A45-3 ;
-    dct:title "EU Adequacy Decision for New Zealand" ;
+    dct:title "EU Adequacy Decision for New Zealand"@en ;
     foaf:homepage "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32013D0065"^^xsd:anyURI ;
     dct:temporal [ a time:ProperInterval ;
             time:hasBeginning [ time:inXSDDate "2012-12-20"^^xsd:date ] ] ;
@@ -161,7 +165,7 @@ juris:Adequacy-EU-NZ a dpv-gdpr:A45-3 ;
     dpv:hasJurisdiction juris:EU .
 
 juris:Adequacy-EU-GB a dpv-gdpr:A45-3 ;
-    dct:title "EU Adequacy Decision for United Kingdom" ;
+    dct:title "EU Adequacy Decision for United Kingdom"@en ;
     foaf:homepage "https://ec.europa.eu/info/files/decision-adequate-protection-personal-data-united-kingdom-general-data-protection-regulation_en"^^xsd:anyURI ;
     dct:temporal [ a time:ProperInterval ;
             time:hasBeginning [ time:inXSDDate "2021-06-28"^^xsd:date ] ] ;
@@ -169,7 +173,7 @@ juris:Adequacy-EU-GB a dpv-gdpr:A45-3 ;
     dpv:hasJurisdiction juris:EU .
 
 juris:Adequacy-EU-UY a dpv-gdpr:A45-3 ;
-    dct:title "EU Adequacy Decision for Uruguay" ;
+    dct:title "EU Adequacy Decision for Uruguay"@en ;
     foaf:homepage "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32012D0484"^^xsd:anyURI ;
     dct:temporal [ a time:ProperInterval ;
             time:hasBeginning [ time:inXSDDate "2012-08-22"^^xsd:date ] ] ;
@@ -177,7 +181,7 @@ juris:Adequacy-EU-UY a dpv-gdpr:A45-3 ;
     dpv:hasJurisdiction juris:EU .
 
 juris:EU-GDPR a dpv:Law ;
-    dct:title "General Data Protection Regulation (GDPR)" ;
+    dct:title "General Data Protection Regulation (GDPR)"@en ;
     dpv:hasJurisdiction juris:BE, juris:BG, juris:CZ, juris:DK, juris:DE, juris:EE, juris:IE, juris:EL, juris:ES, juris:FR, juris:HR, juris:IT, juris:CY, juris:LV, juris:LT, juris:LU, juris:HU, juris:MT, juris:NL, juris:AT, juris:PL, juris:PT, juris:RO, juris:SI, juris:SK, juris:FI, juris:SE, juris:EU, juris:EEA ;
     foaf:homepage "http://data.europa.eu/eli/reg/2016/679/oj"^^xsd:anyURI ;
     dct:temporal [ a time:ProperInterval ; 

@@ -25,7 +25,7 @@ juris:US-CA a dpv:Region ;
 	dpv:hasAuthority juris:DPA-US-CA ;
 	skos:broaderTransitive juris:US .
 juris:US-CA-CCPA a dpv:Law ;
-	dct:title "California Consumer Privacy Act (CPRA)"@en ;
+	dct:title "California Consumer Privacy Act (CCPA)"@en ;
 	dpv:hasJurisdiction juris:US-CA ;
 	dpv:hasAuthority juris:DPA-US-CA ;
 	foaf:homepage "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201720180AB375"^^xsd:anyURI ;

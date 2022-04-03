@@ -18,43 +18,47 @@ juris:AQ a dpv:Country ;
 juris:Adequacy-EU-AD a dpv-gdpr:A45-3 ;
     dct:temporal [ a time1:ProperInterval ;
             time1:hasBeginning [ time1:inXSDDate "2010-10-21"^^xsd:date ] ] ;
-    dct:title "EU Adequacy Decision for Andorra" ;
-    dpv:hasCountry juris:AD,
+    dct:title "EU Adequacy Decision for Andorra"@en ;
+    dpv:hasJurisdiction juris:AD,
         juris:EU ;
     foaf1:homepage "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32010D0625?"^^xsd:anyURI .
 
 juris:Adequacy-EU-AR a dpv-gdpr:A45-3 ;
     dct:temporal [ a time1:ProperInterval ;
             time1:hasBeginning [ time1:inXSDDate "2003-07-05"^^xsd:date ] ] ;
-    dct:title "EU Adequacy Decision for Argentina" ;
-    dpv:hasCountry juris:AR ;
+    dct:title "EU Adequacy Decision for Argentina"@en ;
+    dpv:hasJurisdiction juris:AR,
+        juris:EU ;
     foaf1:homepage "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32003D0490"^^xsd:anyURI .
 
 juris:Adequacy-EU-CA a dpv-gdpr:A45-3 ;
     dct:temporal [ a time1:ProperInterval ;
             time1:hasBeginning [ time1:inXSDDate "2002-01-04"^^xsd:date ] ] ;
-    dct:title "EU Adequacy Decision for Canada (commercial organisations)" ;
-    dpv:hasCountry juris:CA ;
+    dct:title "EU Adequacy Decision for Canada (commercial organisations)"@en ;
+    dpv:hasJurisdiction juris:CA,
+        juris:EU ;
     foaf1:homepage "https://eur-lex.europa.eu/legal-content/en/TXT/?uri=CELEX%3A32002D0002"^^xsd:anyURI .
 
 juris:Adequacy-EU-CH a dpv-gdpr:A45-3 ;
     dct:temporal [ a time1:ProperInterval ;
             time1:hasBeginning [ time1:inXSDDate "2000-08-25"^^xsd:date ] ] ;
-    dct:title "EU Adequacy Decision for Switzerland" ;
-    dpv:hasCountry juris:CH ;
+    dct:title "EU Adequacy Decision for Switzerland"@en ;
+    dpv:hasJurisdiction juris:CH,
+        juris:EU ;
     foaf1:homepage "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32000D0518"^^xsd:anyURI .
 
 juris:Adequacy-EU-FO a dpv-gdpr:A45-3 ;
     dct:temporal [ a time1:ProperInterval ;
             time1:hasBeginning [ time1:inXSDDate "2010-03-09"^^xsd:date ] ] ;
-    dct:title "EU Adequacy Decision for Faroe Islands" ;
-    dpv:hasCountry juris:FO ;
+    dct:title "EU Adequacy Decision for Faroe Islands"@en ;
+    dpv:hasJurisdiction juris:EU,
+        juris:FO ;
     foaf1:homepage "https://eur-lex.europa.eu/legal-content/en/ALL/?uri=CELEX%3A32010D0146"^^xsd:anyURI .
 
 juris:Adequacy-EU-GB a dpv-gdpr:A45-3 ;
     dct:temporal [ a time1:ProperInterval ;
             time1:hasBeginning [ time1:inXSDDate "2021-06-28"^^xsd:date ] ] ;
-    dct:title "EU Adequacy Decision for United Kingdom" ;
+    dct:title "EU Adequacy Decision for United Kingdom"@en ;
     dpv:hasJurisdiction juris:EU,
         juris:GB ;
     foaf1:homepage "https://ec.europa.eu/info/files/decision-adequate-protection-personal-data-united-kingdom-general-data-protection-regulation_en"^^xsd:anyURI .
@@ -62,7 +66,7 @@ juris:Adequacy-EU-GB a dpv-gdpr:A45-3 ;
 juris:Adequacy-EU-GG a dpv-gdpr:A45-3 ;
     dct:temporal [ a time1:ProperInterval ;
             time1:hasBeginning [ time1:inXSDDate "2003-11-21"^^xsd:date ] ] ;
-    dct:title "EU Adequacy Decision for Guernsey" ;
+    dct:title "EU Adequacy Decision for Guernsey"@en ;
     dpv:hasJurisdiction juris:EU,
         juris:GG ;
     foaf1:homepage "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32003D0821"^^xsd:anyURI .
@@ -70,7 +74,7 @@ juris:Adequacy-EU-GG a dpv-gdpr:A45-3 ;
 juris:Adequacy-EU-IL a dpv-gdpr:A45-3 ;
     dct:temporal [ a time1:ProperInterval ;
             time1:hasBeginning [ time1:inXSDDate "2011-02-01"^^xsd:date ] ] ;
-    dct:title "EU Adequacy Decision for Israel" ;
+    dct:title "EU Adequacy Decision for Israel"@en ;
     dpv:hasJurisdiction juris:EU,
         juris:IL ;
     foaf1:homepage "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32011D0061"^^xsd:anyURI .
@@ -78,7 +82,7 @@ juris:Adequacy-EU-IL a dpv-gdpr:A45-3 ;
 juris:Adequacy-EU-IM a dpv-gdpr:A45-3 ;
     dct:temporal [ a time1:ProperInterval ;
             time1:hasBeginning [ time1:inXSDDate "2004-04-30"^^xsd:date ] ] ;
-    dct:title "EU Adequacy Decision for Isle of Man" ;
+    dct:title "EU Adequacy Decision for Isle of Man"@en ;
     dpv:hasJurisdiction juris:EU,
         juris:IM ;
     foaf1:homepage "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32004D0411"^^xsd:anyURI .
@@ -86,7 +90,7 @@ juris:Adequacy-EU-IM a dpv-gdpr:A45-3 ;
 juris:Adequacy-EU-JE a dpv-gdpr:A45-3 ;
     dct:temporal [ a time1:ProperInterval ;
             time1:hasBeginning [ time1:inXSDDate "2008-05-26"^^xsd:date ] ] ;
-    dct:title "EU Adequacy Decision for Jersey" ;
+    dct:title "EU Adequacy Decision for Jersey"@en ;
     dpv:hasJurisdiction juris:EU,
         juris:JE ;
     foaf1:homepage "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32008D0393"^^xsd:anyURI .
@@ -94,7 +98,7 @@ juris:Adequacy-EU-JE a dpv-gdpr:A45-3 ;
 juris:Adequacy-EU-JP a dpv-gdpr:A45-3 ;
     dct:temporal [ a time1:ProperInterval ;
             time1:hasBeginning [ time1:inXSDDate "2019-01-23"^^xsd:date ] ] ;
-    dct:title "EU Adequacy Decision for Japan" ;
+    dct:title "EU Adequacy Decision for Japan"@en ;
     dpv:hasJurisdiction juris:EU,
         juris:JP ;
     foaf1:homepage "http://data.europa.eu/eli/dec_impl/2019/419/oj"^^xsd:anyURI .
@@ -102,7 +106,7 @@ juris:Adequacy-EU-JP a dpv-gdpr:A45-3 ;
 juris:Adequacy-EU-NZ a dpv-gdpr:A45-3 ;
     dct:temporal [ a time1:ProperInterval ;
             time1:hasBeginning [ time1:inXSDDate "2012-12-20"^^xsd:date ] ] ;
-    dct:title "EU Adequacy Decision for New Zealand" ;
+    dct:title "EU Adequacy Decision for New Zealand"@en ;
     dpv:hasJurisdiction juris:EU,
         juris:NZ ;
     foaf1:homepage "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32013D0065"^^xsd:anyURI .
@@ -110,7 +114,7 @@ juris:Adequacy-EU-NZ a dpv-gdpr:A45-3 ;
 juris:Adequacy-EU-UY a dpv-gdpr:A45-3 ;
     dct:temporal [ a time1:ProperInterval ;
             time1:hasBeginning [ time1:inXSDDate "2012-08-22"^^xsd:date ] ] ;
-    dct:title "EU Adequacy Decision for Uruguay" ;
+    dct:title "EU Adequacy Decision for Uruguay"@en ;
     dpv:hasJurisdiction juris:EU,
         juris:UY ;
     foaf1:homepage "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32012D0484"^^xsd:anyURI .
@@ -614,13 +618,13 @@ juris:DE-BE a dpv:Region ;
     skos:broaderTransitive juris:DE .
 
 juris:DE-BE-BbgDSG a dpv:Law ;
-    dct:title "Brandenburgisches Datenschutzgesetz (BbgDSG)" ;
+    dct:title "Brandenburgisches Datenschutzgesetz (BbgDSG)"@de ;
     dpv:hasAuthority juris:DPA-DE-BB ;
     dpv:hasJurisdiction juris:DE-BB ;
     foaf1:homepage "https://www.lda.brandenburg.de/sixcms/media.php/9/BbgDSG_2019.pdf"^^xsd:anyURI .
 
 juris:DE-BE-BlnDSG a dpv:Law ;
-    dct:title "Berliner Datenschutzgesetz (BlnDSG)" ;
+    dct:title "Berliner Datenschutzgesetz (BlnDSG)"@de ;
     dpv:hasAuthority juris:DPA-DE-BE ;
     dpv:hasJurisdiction juris:DE-BE ;
     foaf1:homepage "https://www.datenschutz-berlin.de/fileadmin/user_upload/pdf/publikationen/informationsmaterialien/2018-BlnBDI_BlnDSG.pdf"^^xsd:anyURI .
@@ -642,7 +646,7 @@ juris:DE-HB a dpv:Region ;
     skos:broaderTransitive juris:DE .
 
 juris:DE-HB-BremDSGVOAG a dpv:Law ;
-    dct:title "Bremisches Ausführungsgesetz zur EU-Datenschutz-Grundverordnung (BremDSGVOAG)" ;
+    dct:title "Bremisches Ausführungsgesetz zur EU-Datenschutz-Grundverordnung (BremDSGVOAG)"@de ;
     dpv:hasAuthority juris:DPA-DE-HB ;
     dpv:hasJurisdiction juris:DE-HB ;
     foaf1:homepage "https://www.transparenz.bremen.de/metainformationen/bremisches-ausfuehrungsgesetz-zur-eu-datenschutz-grundverordnung-bremdsgvoag-vom-8-mai-2018-116884?template=20_gp_ifg_meta_detail_d"^^xsd:anyURI .
@@ -657,7 +661,7 @@ juris:DE-HE a dpv:Region ;
     skos:broaderTransitive juris:DE .
 
 juris:DE-HE-HDISG a dpv:Law ;
-    dct:title "Hessisches Datenschutz- und Informationsfreiheitsgesetz (HDSIG)" ;
+    dct:title "Hessisches Datenschutz- und Informationsfreiheitsgesetz (HDSIG)"@de ;
     dpv:hasAuthority juris:DPA-DE-HE ;
     dpv:hasJurisdiction juris:DE-HE ;
     foaf1:homepage "https://www.rv.hessenrecht.hessen.de/bshe/document/jlr-DSIFGHErahmen"^^xsd:anyURI .
@@ -672,13 +676,13 @@ juris:DE-HH a dpv:Region ;
     skos:broaderTransitive juris:DE .
 
 juris:DE-HH-HmbDSG a dpv:Law ;
-    dct:title "Hamburgisches Datenschutzgesetz (HmbDSG)" ;
+    dct:title "Hamburgisches Datenschutzgesetz (HmbDSG)"@de ;
     dpv:hasAuthority juris:DPA-DE-HH ;
     dpv:hasJurisdiction juris:DE-HH ;
     foaf1:homepage "https://datenschutz-hamburg.de/assets/pdf/HmbDSG_neu.pdf"^^xsd:anyURI .
 
 juris:DE-LSA-DSG a dpv:Law ;
-    dct:title "Gesetz zum Schutz personenbezogener Daten der Bürger (Datenschutzgesetz Sachsen-Anhalt - DSG LSA)" ;
+    dct:title "Gesetz zum Schutz personenbezogener Daten der Bürger (Datenschutzgesetz Sachsen-Anhalt - DSG LSA)"@de ;
     dpv:hasAuthority juris:DPA-DE-ST ;
     dpv:hasJurisdiction juris:DE-ST ;
     foaf1:homepage "https://www.landtag.sachsen-anhalt.de/fileadmin/Downloads/Rechtsgrundlagen/2018_Datenschutzgesetz-DSG-LSA.pdf"^^xsd:anyURI .
@@ -693,7 +697,7 @@ juris:DE-MV a dpv:Region ;
     skos:broaderTransitive juris:DE .
 
 juris:DE-MV-DSG a dpv:Law ;
-    dct:title "Gesetz zur Anpassung des Landesdatenschutzgesetzes und weiterer datenschutzrechtlicher Vorschriften im Zuständigkeitsbereich des Ministeriums für Inneres und Europa Mecklenburg-Vorpommern an die Verordnung (EU) 2016/679 und zur Umsetzung der Richtlinie (EU) 2016/680" ;
+    dct:title "Gesetz zur Anpassung des Landesdatenschutzgesetzes und weiterer datenschutzrechtlicher Vorschriften im Zuständigkeitsbereich des Ministeriums für Inneres und Europa Mecklenburg-Vorpommern an die Verordnung (EU) 2016/679 und zur Umsetzung der Richtlinie (EU) 2016/680"@de ;
     dpv:hasAuthority juris:DPA-DE-MV ;
     dpv:hasJurisdiction juris:DE-MV ;
     foaf1:homepage "https://www.datenschutz-mv.de/static/DS/Dateien/Rechtsgrundlagen/Landesdatenschutzgesetz.pdf"^^xsd:anyURI .
@@ -708,7 +712,7 @@ juris:DE-NI a dpv:Region ;
     skos:broaderTransitive juris:DE .
 
 juris:DE-NI-NDSG a dpv:Law ;
-    dct:title "Niedersächsisches Datenschutzgesetz (NDSG)" ;
+    dct:title "Niedersächsisches Datenschutzgesetz (NDSG)"@de ;
     dpv:hasAuthority juris:DPA-DE-NI ;
     dpv:hasJurisdiction juris:DE-NI ;
     foaf1:homepage "https://lfd.niedersachsen.de/download/132258/Niedersaechsisches_Datenschutzgesetz_NDSG_vom_16._Mai_2018_Nds._GVBl._S._66_.pdf"^^xsd:anyURI .
@@ -723,13 +727,13 @@ juris:DE-NW a dpv:Region ;
     skos:broaderTransitive juris:DE .
 
 juris:DE-NW-DSG a dpv:Law ;
-    dct:title "Datenschutzgesetz Nordrhein-Westfalen (DSG NRW)" ;
+    dct:title "Datenschutzgesetz Nordrhein-Westfalen (DSG NRW)"@de ;
     dpv:hasAuthority juris:DPA-DE-NW ;
     dpv:hasJurisdiction juris:DE-NW ;
     foaf1:homepage "https://recht.nrw.de/lmi/owa/br_text_anzeigen?v_id=3520071121100436275"^^xsd:anyURI .
 
 juris:DE-RP-LDSG a dpv:Law ;
-    dct:title "Landesdatenschutzgesetz (LDSG)" ;
+    dct:title "Landesdatenschutzgesetz (LDSG)"@de ;
     dpv:hasAuthority juris:DPA-DE-RP ;
     dpv:hasJurisdiction juris:DE-RP ;
     foaf1:homepage "https://landesrecht.rlp.de/bsrp/document/jlr-DSGRP2018pP18"^^xsd:anyURI .
@@ -744,7 +748,7 @@ juris:DE-SH a dpv:Region ;
     skos:broaderTransitive juris:DE .
 
 juris:DE-SH-LDSG a dpv:Law ;
-    dct:title "Schleswig-Holsteinisches Gesetz zum Schutz personenbezogener Daten (Landesdatenschutzgesetz - LDSG)" ;
+    dct:title "Schleswig-Holsteinisches Gesetz zum Schutz personenbezogener Daten (Landesdatenschutzgesetz - LDSG)"@de ;
     dpv:hasAuthority juris:DPA-DE-SH ;
     dpv:hasJurisdiction juris:DE-SH ;
     foaf1:homepage "https://www.gesetze-rechtsprechung.sh.juris.de/jportal/?quelle=jlink&query=DSG+SH&psml=bsshoprod.psml&max=true&aiz=true"^^xsd:anyURI .
@@ -759,7 +763,7 @@ juris:DE-SL a dpv:Region ;
     skos:broaderTransitive juris:DE .
 
 juris:DE-SL-SDSG a dpv:Law ;
-    dct:title "Saarländisches Datenschutzgesetz" ;
+    dct:title "Saarländisches Datenschutzgesetz"@de ;
     dpv:hasAuthority juris:DPA-DE-SL ;
     dpv:hasJurisdiction juris:DE-SL ;
     foaf1:homepage "https://recht.saarland.de/bssl/document/jlr-DSGSL2018rahmen"^^xsd:anyURI .
@@ -774,7 +778,7 @@ juris:DE-SN a dpv:Region ;
     skos:broaderTransitive juris:DE .
 
 juris:DE-SN-SächsDSG a dpv:Law ;
-    dct:title "Gesetz zum Schutz der informationellen Selbstbestimmung im Freistaat Sachsen (Sächsisches Datenschutzgesetz – SächsDSG)" ;
+    dct:title "Gesetz zum Schutz der informationellen Selbstbestimmung im Freistaat Sachsen (Sächsisches Datenschutzgesetz – SächsDSG)"@de ;
     dpv:hasAuthority juris:DPA-DE-SN ;
     dpv:hasJurisdiction juris:DE-SN ;
     foaf1:homepage "https://www.recht.sachsen.de/vorschrift_gesamt/1672/28005.pdf"^^xsd:anyURI .
@@ -798,7 +802,7 @@ juris:DE-TH a dpv:Region ;
     skos:broaderTransitive juris:DE .
 
 juris:DE-TH-ThürDSG a dpv:Law ;
-    dct:title "Thüringer Datenschutzgesetz (ThürDSG)" ;
+    dct:title "Thüringer Datenschutzgesetz (ThürDSG)"@de ;
     dpv:hasAuthority juris:DPA-DE-TH ;
     dpv:hasJurisdiction juris:DE-TH ;
     foaf1:homepage "https://landesrecht.thueringen.de/bsth/document/jlr-DSGTH2018rahmen"^^xsd:anyURI .
@@ -1624,7 +1628,7 @@ juris:US-CA a dpv:Region ;
 juris:US-CA-CCPA a dpv:Law ;
     dct:temporal [ a time1:ProperInterval ;
             time1:hasBeginning [ time1:inXSDDate "2020-01-01"^^xsd:date ] ] ;
-    dct:title "California Consumer Privacy Act (CPRA)"@en ;
+    dct:title "California Consumer Privacy Act (CCPA)"@en ;
     dpv:hasAuthority juris:DPA-US-CA ;
     dpv:hasJurisdiction juris:US-CA ;
     foaf1:homepage "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201720180AB375"^^xsd:anyURI .
@@ -2017,7 +2021,7 @@ juris:DE-BY a dpv:Region ;
     skos:broaderTransitive juris:DE .
 
 juris:DE-BY-BayDSG a dpv:Law ;
-    dct:title "Bayerisches Datenschutzgesetz (BayDSG)" ;
+    dct:title "Bayerisches Datenschutzgesetz (BayDSG)"@de ;
     dpv:hasAuthority juris:DPA-DE-BY-non-public,
         juris:DPA-DE-BY-public ;
     dpv:hasJurisdiction juris:DE-BY ;
@@ -3867,7 +3871,7 @@ juris:DE a dpv:Country ;
 juris:EEA30 a dpv:SupraNationalUnion ;
     dct:temporal [ a time1:ProperInterval ;
             time1:hasBeginning [ time1:inXSDDate "2020-02-01"^^xsd:date ] ] ;
-    dct:title "European Economic Area (EEA-30)" ;
+    dct:title "European Economic Area (EEA-30)"@en ;
     skos:broader juris:EEA ;
     skos:narrower juris:AT,
         juris:BE,
@@ -3901,7 +3905,7 @@ juris:EEA31 a dpv:SupraNationalUnion ;
     dct:temporal [ a time1:ProperInterval ;
             time1:hasBeginning [ time1:inXSDDate "2014-04-12"^^xsd:date ] ;
             time1:hasEnd [ time1:inXSDDate "2020-01-31"^^xsd:date ] ] ;
-    dct:title "European Economic Area (EEA-31)" ;
+    dct:title "European Economic Area (EEA-31)"@en ;
     skos:broader juris:EEA ;
     skos:narrower juris:AT,
         juris:BE,
@@ -3968,7 +3972,7 @@ juris:Caribbean a dpv:Region ;
 juris:EU27 a dpv:SupraNationalUnion ;
     dct:temporal [ a time1:ProperInterval ;
             time1:hasBeginning [ time1:inXSDDate "2020-02-01"^^xsd:date ] ] ;
-    dct:title "European Union (EU-27)" ;
+    dct:title "European Union (EU-27)"@en ;
     skos:broader juris:EU ;
     skos:narrower juris:AT,
         juris:BE,
@@ -4034,7 +4038,7 @@ juris:EU28 a dpv:SupraNationalUnion ;
     dct:temporal [ a time1:ProperInterval ;
             time1:hasBeginning [ time1:inXSDDate "2013-07-01"^^xsd:date ] ;
             time1:hasEnd [ time1:inXSDDate "2020-01-31"^^xsd:date ] ] ;
-    dct:title "European Union (EU-28)" ;
+    dct:title "European Union (EU-28)"@en ;
     skos:broader juris:EU ;
     skos:narrower juris:AT,
         juris:BE,
@@ -4542,7 +4546,7 @@ juris:Africa a dpv:Region ;
 juris:EU-GDPR a dpv:Law ;
     dct:temporal [ a time1:ProperInterval ;
             time1:hasBeginning [ time1:inXSDDate "2018-05-25"^^xsd:date ] ] ;
-    dct:title "General Data Protection Regulation (GDPR)" ;
+    dct:title "General Data Protection Regulation (GDPR)"@en ;
     dpv:hasAuthority juris:DPA-AT,
         juris:DPA-BE,
         juris:DPA-BG,

@@ -43,13 +43,13 @@ juris:DE-BE a dpv:Region ;
     skos:broaderTransitive juris:DE .
 
 juris:DE-BE-BbgDSG a dpv:Law ;
-    dct:title "Brandenburgisches Datenschutzgesetz (BbgDSG)" ;
+    dct:title "Brandenburgisches Datenschutzgesetz (BbgDSG)"@de ;
     dpv:hasAuthority juris:DPA-DE-BB ;
     dpv:hasJurisdiction juris:DE-BB ;
     foaf:homepage "https://www.lda.brandenburg.de/sixcms/media.php/9/BbgDSG_2019.pdf"^^xsd:anyURI .
 
 juris:DE-BE-BlnDSG a dpv:Law ;
-    dct:title "Berliner Datenschutzgesetz (BlnDSG)" ;
+    dct:title "Berliner Datenschutzgesetz (BlnDSG)"@de ;
     dpv:hasAuthority juris:DPA-DE-BE ;
     dpv:hasJurisdiction juris:DE-BE ;
     foaf:homepage "https://www.datenschutz-berlin.de/fileadmin/user_upload/pdf/publikationen/informationsmaterialien/2018-BlnBDI_BlnDSG.pdf"^^xsd:anyURI .
@@ -71,7 +71,7 @@ juris:DE-HB a dpv:Region ;
     skos:broaderTransitive juris:DE .
 
 juris:DE-HB-BremDSGVOAG a dpv:Law ;
-    dct:title "Bremisches Ausführungsgesetz zur EU-Datenschutz-Grundverordnung (BremDSGVOAG)" ;
+    dct:title "Bremisches Ausführungsgesetz zur EU-Datenschutz-Grundverordnung (BremDSGVOAG)"@de ;
     dpv:hasAuthority juris:DPA-DE-HB ;
     dpv:hasJurisdiction juris:DE-HB ;
     foaf:homepage "https://www.transparenz.bremen.de/metainformationen/bremisches-ausfuehrungsgesetz-zur-eu-datenschutz-grundverordnung-bremdsgvoag-vom-8-mai-2018-116884?template=20_gp_ifg_meta_detail_d"^^xsd:anyURI .
@@ -86,7 +86,7 @@ juris:DE-HE a dpv:Region ;
     skos:broaderTransitive juris:DE .
 
 juris:DE-HE-HDISG a dpv:Law ;
-    dct:title "Hessisches Datenschutz- und Informationsfreiheitsgesetz (HDSIG)" ;
+    dct:title "Hessisches Datenschutz- und Informationsfreiheitsgesetz (HDSIG)"@de ;
     dpv:hasAuthority juris:DPA-DE-HE ;
     dpv:hasJurisdiction juris:DE-HE ;
     foaf:homepage "https://www.rv.hessenrecht.hessen.de/bshe/document/jlr-DSIFGHErahmen"^^xsd:anyURI .
@@ -101,13 +101,13 @@ juris:DE-HH a dpv:Region ;
     skos:broaderTransitive juris:DE .
 
 juris:DE-HH-HmbDSG a dpv:Law ;
-    dct:title "Hamburgisches Datenschutzgesetz (HmbDSG)" ;
+    dct:title "Hamburgisches Datenschutzgesetz (HmbDSG)"@de ;
     dpv:hasAuthority juris:DPA-DE-HH ;
     dpv:hasJurisdiction juris:DE-HH ;
     foaf:homepage "https://datenschutz-hamburg.de/assets/pdf/HmbDSG_neu.pdf"^^xsd:anyURI .
 
 juris:DE-LSA-DSG a dpv:Law ;
-    dct:title "Gesetz zum Schutz personenbezogener Daten der Bürger (Datenschutzgesetz Sachsen-Anhalt - DSG LSA)" ;
+    dct:title "Gesetz zum Schutz personenbezogener Daten der Bürger (Datenschutzgesetz Sachsen-Anhalt - DSG LSA)"@de ;
     dpv:hasAuthority juris:DPA-DE-ST ;
     dpv:hasJurisdiction juris:DE-ST ;
     foaf:homepage "https://www.landtag.sachsen-anhalt.de/fileadmin/Downloads/Rechtsgrundlagen/2018_Datenschutzgesetz-DSG-LSA.pdf"^^xsd:anyURI .
@@ -122,7 +122,7 @@ juris:DE-MV a dpv:Region ;
     skos:broaderTransitive juris:DE .
 
 juris:DE-MV-DSG a dpv:Law ;
-    dct:title "Gesetz zur Anpassung des Landesdatenschutzgesetzes und weiterer datenschutzrechtlicher Vorschriften im Zuständigkeitsbereich des Ministeriums für Inneres und Europa Mecklenburg-Vorpommern an die Verordnung (EU) 2016/679 und zur Umsetzung der Richtlinie (EU) 2016/680" ;
+    dct:title "Gesetz zur Anpassung des Landesdatenschutzgesetzes und weiterer datenschutzrechtlicher Vorschriften im Zuständigkeitsbereich des Ministeriums für Inneres und Europa Mecklenburg-Vorpommern an die Verordnung (EU) 2016/679 und zur Umsetzung der Richtlinie (EU) 2016/680"@de ;
     dpv:hasAuthority juris:DPA-DE-MV ;
     dpv:hasJurisdiction juris:DE-MV ;
     foaf:homepage "https://www.datenschutz-mv.de/static/DS/Dateien/Rechtsgrundlagen/Landesdatenschutzgesetz.pdf"^^xsd:anyURI .
@@ -137,7 +137,7 @@ juris:DE-NI a dpv:Region ;
     skos:broaderTransitive juris:DE .
 
 juris:DE-NI-NDSG a dpv:Law ;
-    dct:title "Niedersächsisches Datenschutzgesetz (NDSG)" ;
+    dct:title "Niedersächsisches Datenschutzgesetz (NDSG)"@de ;
     dpv:hasAuthority juris:DPA-DE-NI ;
     dpv:hasJurisdiction juris:DE-NI ;
     foaf:homepage "https://lfd.niedersachsen.de/download/132258/Niedersaechsisches_Datenschutzgesetz_NDSG_vom_16._Mai_2018_Nds._GVBl._S._66_.pdf"^^xsd:anyURI .
@@ -152,13 +152,13 @@ juris:DE-NW a dpv:Region ;
     skos:broaderTransitive juris:DE .
 
 juris:DE-NW-DSG a dpv:Law ;
-    dct:title "Datenschutzgesetz Nordrhein-Westfalen (DSG NRW)" ;
+    dct:title "Datenschutzgesetz Nordrhein-Westfalen (DSG NRW)"@de ;
     dpv:hasAuthority juris:DPA-DE-NW ;
     dpv:hasJurisdiction juris:DE-NW ;
     foaf:homepage "https://recht.nrw.de/lmi/owa/br_text_anzeigen?v_id=3520071121100436275"^^xsd:anyURI .
 
 juris:DE-RP-LDSG a dpv:Law ;
-    dct:title "Landesdatenschutzgesetz (LDSG)" ;
+    dct:title "Landesdatenschutzgesetz (LDSG)"@de ;
     dpv:hasAuthority juris:DPA-DE-RP ;
     dpv:hasJurisdiction juris:DE-RP ;
     foaf:homepage "https://landesrecht.rlp.de/bsrp/document/jlr-DSGRP2018pP18"^^xsd:anyURI .
@@ -173,7 +173,7 @@ juris:DE-SH a dpv:Region ;
     skos:broaderTransitive juris:DE .
 
 juris:DE-SH-LDSG a dpv:Law ;
-    dct:title "Schleswig-Holsteinisches Gesetz zum Schutz personenbezogener Daten (Landesdatenschutzgesetz - LDSG)" ;
+    dct:title "Schleswig-Holsteinisches Gesetz zum Schutz personenbezogener Daten (Landesdatenschutzgesetz - LDSG)"@de ;
     dpv:hasAuthority juris:DPA-DE-SH ;
     dpv:hasJurisdiction juris:DE-SH ;
     foaf:homepage "https://www.gesetze-rechtsprechung.sh.juris.de/jportal/?quelle=jlink&query=DSG+SH&psml=bsshoprod.psml&max=true&aiz=true"^^xsd:anyURI .
@@ -188,7 +188,7 @@ juris:DE-SL a dpv:Region ;
     skos:broaderTransitive juris:DE .
 
 juris:DE-SL-SDSG a dpv:Law ;
-    dct:title "Saarländisches Datenschutzgesetz" ;
+    dct:title "Saarländisches Datenschutzgesetz"@de ;
     dpv:hasAuthority juris:DPA-DE-SL ;
     dpv:hasJurisdiction juris:DE-SL ;
     foaf:homepage "https://recht.saarland.de/bssl/document/jlr-DSGSL2018rahmen"^^xsd:anyURI .
@@ -203,7 +203,7 @@ juris:DE-SN a dpv:Region ;
     skos:broaderTransitive juris:DE .
 
 juris:DE-SN-SächsDSG a dpv:Law ;
-    dct:title "Gesetz zum Schutz der informationellen Selbstbestimmung im Freistaat Sachsen (Sächsisches Datenschutzgesetz – SächsDSG)" ;
+    dct:title "Gesetz zum Schutz der informationellen Selbstbestimmung im Freistaat Sachsen (Sächsisches Datenschutzgesetz – SächsDSG)"@de ;
     dpv:hasAuthority juris:DPA-DE-SN ;
     dpv:hasJurisdiction juris:DE-SN ;
     foaf:homepage "https://www.recht.sachsen.de/vorschrift_gesamt/1672/28005.pdf"^^xsd:anyURI .
@@ -227,7 +227,7 @@ juris:DE-TH a dpv:Region ;
     skos:broaderTransitive juris:DE .
 
 juris:DE-TH-ThürDSG a dpv:Law ;
-    dct:title "Thüringer Datenschutzgesetz (ThürDSG)" ;
+    dct:title "Thüringer Datenschutzgesetz (ThürDSG)"@de ;
     dpv:hasAuthority juris:DPA-DE-TH ;
     dpv:hasJurisdiction juris:DE-TH ;
     foaf:homepage "https://landesrecht.thueringen.de/bsth/document/jlr-DSGTH2018rahmen"^^xsd:anyURI .
@@ -243,7 +243,7 @@ juris:DE-BY a dpv:Region ;
     skos:broaderTransitive juris:DE .
 
 juris:DE-BY-BayDSG a dpv:Law ;
-    dct:title "Bayerisches Datenschutzgesetz (BayDSG)" ;
+    dct:title "Bayerisches Datenschutzgesetz (BayDSG)"@de ;
     dpv:hasAuthority juris:DPA-DE-BY-non-public,
         juris:DPA-DE-BY-public ;
     dpv:hasJurisdiction juris:DE-BY ;
@@ -381,7 +381,7 @@ juris:DPA-DE-RP a dpv:DataProtectionAuthority ;
     dpv:hasApplicableLaw juris:DE-BDSG,
         juris:DE-RP-LDSG,
         juris:EU-GDPR ;
-    dpv:hasJurisdiction juris:DPA-DE-RP ;
+    dpv:hasJurisdiction juris:DE-RP ;
     foaf:homepage "https://www.datenschutz.rlp.de/"^^xsd:anyURI .
 
 juris:DE dpv:hasApplicableLaw juris:DE-BDSG .
