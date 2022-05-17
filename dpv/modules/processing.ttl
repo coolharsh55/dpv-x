@@ -2,8 +2,8 @@
 @prefix dpv: <https://w3id.org/dpv#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix spl: <http://www.specialprivacy.eu/langs/usage-policy#> .
-@prefix svpr: <http://www.specialprivacy.eu/vocabs/processing#> .
+@prefix spl: <https://specialprivacy.ercim.eu/langs/usage-policy#> .
+@prefix svpr: <https://specialprivacy.ercim.eu/vocabs/processing#> .
 @prefix sw: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -44,6 +44,12 @@ dpv:ProcessingConcepts a skos:Collection ;
         dpv:Transmit,
         dpv:Use,
         dpv:hasProcessing .
+
+dpv:hasDomain rdfs:subPropertyOf skos:semanticRelation ;
+    skos:prefLabel "has domain"@en .
+
+dpv:hasRange rdfs:subPropertyOf skos:semanticRelation ;
+    skos:prefLabel "has range"@en .
 
 dpv:isInstanceOf rdfs:subPropertyOf skos:semanticRelation ;
     skos:prefLabel "isInstanceOf"@en .
@@ -94,7 +100,7 @@ dpv:Alter a skos:Concept,
 dpv:Analyse a skos:Concept,
         dpv:Concept ;
     dct:created "2019-05-07"^^xsd:date ;
-    dct:source <https://www.specialprivacy.eu/vocabs/processing> ;
+    dct:source <https://specialprivacy.ercim.eu/vocabs/processing> ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "to study or examine the data in detail"@en ;
@@ -105,7 +111,7 @@ dpv:Analyse a skos:Concept,
 dpv:Anonymise a skos:Concept,
         dpv:Concept ;
     dct:created "2019-05-07"^^xsd:date ;
-    dct:source <https://www.specialprivacy.eu/vocabs/processing> ;
+    dct:source <https://specialprivacy.ercim.eu/vocabs/processing> ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "to irreversibly alter personal data in such a way that an unique data subject can no longer be identified directly or indirectly or in combination with other data"@en ;
@@ -117,7 +123,7 @@ dpv:Collect a skos:Concept,
         dpv:Concept ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj>,
-        <https://www.specialprivacy.eu/vocabs/processing> ;
+        <https://specialprivacy.ercim.eu/vocabs/processing> ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "to gather data from someone"@en ;
@@ -129,7 +135,7 @@ dpv:Combine a skos:Concept,
         dpv:Concept ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj>,
-        <https://www.specialprivacy.eu/vocabs/processing> ;
+        <https://specialprivacy.ercim.eu/vocabs/processing> ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "to join or merge data"@en ;
@@ -141,7 +147,7 @@ dpv:Consult a skos:Concept,
         dpv:Concept ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj>,
-        <https://www.specialprivacy.eu/vocabs/processing> ;
+        <https://specialprivacy.ercim.eu/vocabs/processing> ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "to consult or query data"@en ;
@@ -152,7 +158,7 @@ dpv:Consult a skos:Concept,
 dpv:Copy a skos:Concept,
         dpv:Concept ;
     dct:created "2019-05-07"^^xsd:date ;
-    dct:source <https://www.specialprivacy.eu/vocabs/processing> ;
+    dct:source <https://specialprivacy.ercim.eu/vocabs/processing> ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "to produce an exact reprodution of the data"@en ;
@@ -163,10 +169,11 @@ dpv:Copy a skos:Concept,
 dpv:Derive a skos:Concept,
         dpv:Concept ;
     dct:created "2019-05-07"^^xsd:date ;
-    dct:source <https://www.specialprivacy.eu/vocabs/processing> ;
+    dct:source <https://specialprivacy.ercim.eu/vocabs/processing> ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "to create new derivative data from the original data"@en ;
+    skos:note "Derive indicates data is present or obtainable from existing data. For data that is created without such existence, see Infer."@en ;
     skos:prefLabel "Derive"@en ;
     skos:related svpr:Derive ;
     dpv:isSubTypeOf dpv:Transform .
@@ -224,7 +231,7 @@ dpv:MakeAvailable a skos:Concept,
 dpv:Move a skos:Concept,
         dpv:Concept ;
     dct:created "2019-05-07"^^xsd:date ;
-    dct:source <https://www.specialprivacy.eu/vocabs/processing> ;
+    dct:source <https://specialprivacy.ercim.eu/vocabs/processing> ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "to move data from one location to another including deleting the original copy"@en ;
@@ -334,13 +341,13 @@ dpv:hasProcessing a skos:Concept,
         "Javier Fernández"^^xsd:string,
         "Mark Lizar"^^xsd:string ;
     dct:modified "2020-11-04"^^xsd:date ;
-    dct:source <https://www.specialprivacy.eu/> ;
-    rdfs:domain dpv:Concept ;
+    dct:source <https://specialprivacy.ercim.eu/> ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:Processing ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates association with Processing"@en ;
-    skos:prefLabel "has processing"@en .
+    skos:prefLabel "has processing"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:Processing .
 
 dpv:Organise a skos:Concept,
         dpv:Concept ;
@@ -355,7 +362,7 @@ dpv:Organise a skos:Concept,
 dpv:Transfer a skos:Concept,
         dpv:Concept ;
     dct:created "2019-05-07"^^xsd:date ;
-    dct:source <https://www.specialprivacy.eu/vocabs/processing> ;
+    dct:source <https://specialprivacy.ercim.eu/vocabs/processing> ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "to move data from one place to another"@en ;
@@ -419,7 +426,7 @@ dpv:Processing a skos:Concept,
     dct:creator "Axel Polleres"^^xsd:string,
         "Javier Fernández"^^xsd:string ;
     dct:modified "2020-11-04"^^xsd:date ;
-    dct:source <https://www.specialprivacy.eu/> ;
+    dct:source <https://specialprivacy.ercim.eu/> ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "The processing performed on personal data"@en ;

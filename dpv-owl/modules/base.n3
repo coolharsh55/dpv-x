@@ -3,9 +3,22 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix spl: <http://www.specialprivacy.eu/langs/usage-policy#> .
+@prefix spl: <https://specialprivacy.ercim.eu/langs/usage-policy#> .
 @prefix sw: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dpvo:DataController a owl:Class ;
+    rdfs:label "Data Controller"@en ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Javier Fernández"^^xsd:string ;
+    dct:description "The individual or organisation that decides (or controls) the purpose(s) of processing personal data."@en ;
+    dct:modified "2020-11-04"^^xsd:date ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_7/oj> ;
+    rdfs:comment "The terms 'Controller' is usually the more common form of indicating a Data Controller. In ISO/IEC the term 'PII Controller' is used."@en ;
+    rdfs:isDefinedBy dpvo: ;
+    rdfs:subClassOf dpvo:LegalEntity ;
+    sw:term_status "accepted"@en .
 
 dpvo:DataSubjectRight a owl:Class ;
     rdfs:label "Data Subject Right"@en ;
@@ -32,7 +45,7 @@ dpvo:hasDataController a rdf:Property,
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:domain owl:Thing ;
     rdfs:isDefinedBy dpvo: ;
-    rdfs:range dpvo:DataController ;
+    rdfs:range dpvo:LegalEntity ;
     sw:term_status "accepted"@en .
 
 dpvo:hasDataSubject a rdf:Property,
@@ -98,7 +111,7 @@ dpvo:hasProcessing a rdf:Property,
         "Mark Lizar"^^xsd:string ;
     dct:description "Indicates association with Processing"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
-    dct:source <https://www.specialprivacy.eu/> ;
+    dct:source <https://specialprivacy.ercim.eu/> ;
     rdfs:domain owl:Thing ;
     rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:Processing ;
@@ -115,7 +128,7 @@ dpvo:hasPurpose a rdf:Property,
         "Mark Lizar"^^xsd:string ;
     dct:description "Indicates association with Purpose"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
-    dct:source <https://www.specialprivacy.eu/> ;
+    dct:source <https://specialprivacy.ercim.eu/> ;
     rdfs:domain owl:Thing ;
     rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:Purpose ;
@@ -132,7 +145,7 @@ dpvo:hasRecipient a rdf:Property,
         "Mark Lizar"^^xsd:string ;
     dct:description "Indicates Recipient of Personal Data"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
-    dct:source <https://www.specialprivacy.eu/> ;
+    dct:source <https://specialprivacy.ercim.eu/> ;
     rdfs:domain owl:Thing ;
     rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:Recipient ;
@@ -174,19 +187,6 @@ dpvo:hasTechnicalOrganisationalMeasure a rdf:Property,
     rdfs:domain owl:Thing ;
     rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:TechnicalOrganisationalMeasure ;
-    sw:term_status "accepted"@en .
-
-dpvo:DataController a owl:Class ;
-    rdfs:label "Data Controller"@en ;
-    dct:created "2019-04-05"^^xsd:date ;
-    dct:creator "Axel Polleres"^^xsd:string,
-        "Javier Fernández"^^xsd:string ;
-    dct:description "The individual or organisation that decides (or controls) the purpose(s) of processing personal data."@en ;
-    dct:modified "2020-11-04"^^xsd:date ;
-    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_7/oj> ;
-    rdfs:comment "The terms 'Controller' is usually the more common form of indicating a Data Controller. In ISO/IEC the term 'PII Controller' is used."@en ;
-    rdfs:isDefinedBy dpvo: ;
-    rdfs:subClassOf dpvo:LegalEntity ;
     sw:term_status "accepted"@en .
 
 dpvo:DataSubject a owl:Class ;
@@ -241,7 +241,7 @@ dpvo:Processing a owl:Class ;
         "Javier Fernández"^^xsd:string ;
     dct:description "The processing performed on personal data"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
-    dct:source <https://www.specialprivacy.eu/> ;
+    dct:source <https://specialprivacy.ercim.eu/> ;
     rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso spl:AnyProcessing ;
     sw:term_status "accepted"@en .
@@ -253,7 +253,7 @@ dpvo:Purpose a owl:Class ;
         "Javier Fernández"^^xsd:string ;
     dct:description "The purpose of processing personal data"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
-    dct:source <https://www.specialprivacy.eu/> ;
+    dct:source <https://specialprivacy.ercim.eu/> ;
     rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso spl:AnyPurpose ;
     sw:term_status "accepted"@en .
@@ -266,7 +266,7 @@ dpvo:Recipient a owl:Class ;
     dct:description "Entities that receive personal data"@en ;
     dct:modified "2020-11-04"^^xsd:date ;
     dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_9/oj>,
-        <https://www.specialprivacy.eu/> ;
+        <https://specialprivacy.ercim.eu/> ;
     rdfs:comment "A recipient of personal data can be used to indicate any entity that receives personal data. This can be a Third Party, Processor (GDPR), or even a Controller."@en ;
     rdfs:isDefinedBy dpvo: ;
     rdfs:seeAlso spl:AnyRecipient ;

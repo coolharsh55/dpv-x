@@ -12,6 +12,10 @@
       <table class="definition">
         <tbody>
           <tr>
+            <td>IRI</td>
+            <td>`{{ term.iri }}`</td>
+          </tr>
+          <tr>
             <td>Term:</td>
             <td><code>{% if not prefix %}<dfn>{{term.iri|fragment_this}}</dfn>{% else %}{{term.iri|fragment_this}}{% endif %}</code></td>
           </tr>
@@ -30,14 +34,7 @@
               {% endif %}
             </td>
           </tr>
-          {% endif %}
-          {% for pt in term.rdf_type %}{% if 'dpv' in pt.iri %}
-          <tr>
-            <td>Instance of:</td>
-            <td>{% for cls in term.rdf_type %}{% if 'dpv' in cls.iri %}<a href="{{cls.iri}}">{{cls|prefix_this}}</a>{% endif %}{% endfor %}</td>
-          </tr>
-          {% endif %}{% endfor %}
-          {% if term.skos_broaderTransitive %}
+          {% elif term.skos_broaderTransitive %}
           <tr>
             <td>Narrower than:</td>
             <td>
@@ -49,6 +46,12 @@
             </td>
           </tr>
           {% endif %}
+          {% for pt in term.rdf_type %}{% if 'dpv' in pt.iri %}
+          <tr>
+            <td>Instance of:</td>
+            <td>{% for cls in term.rdf_type %}{% if 'dpv' in cls.iri %}<a href="{{cls.iri}}">{{cls|prefix_this}}</a>{% endif %}{% endfor %}</td>
+          </tr>
+          {% endif %}{% endfor %}
           {% set children = term|subclasses %}
           {% if children %}
           <tr>
@@ -131,6 +134,10 @@
       <h4 id="{% if prefix %}{{prefix}}-{% endif %}{{term.iri|fragment_this}}">{{term.skos_prefLabel}}</h4>
       <table class="definition">
         <tbody>
+          <tr>
+            <td>IRI</td>
+            <td>`{{ term.iri }}`</td>
+          </tr>
           <tr>
             <td>Term:</td>
             <td><code>{% if not prefix %}<dfn>{{term.iri|fragment_this}}</dfn>{% else %}{{term.iri|fragment_this}}{% endif %}</code></td>

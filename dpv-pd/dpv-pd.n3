@@ -1,17 +1,18 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix dpv: <https://w3id.org/dpv#> .
-@prefix dpv-pd: <https://w3id.org/dpv/pd#> .
+@prefix dpv-pd: <https://w3id.org/dpv/dpv-pd#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix svd: <http://www.specialprivacy.eu/vocabs/data#> .
+@prefix svd: <https://specialprivacy.ercim.eu/vocabs/data#> .
 @prefix sw: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://w3id.org/dpv/dpv-pd> a owl:Ontology ;
     dct:abstract "DPV-PD is an extension to the Data Privacy Vocabulary that provides additional terms related to Personal Data categories."@en ;
-    dct:contributor "Beatriz Esteves",
+    dct:contributor "Axel Polleres",
+        "Beatriz Esteves",
         "Bert Bos",
         "Bud Bruegger",
         "David Hickey",
@@ -19,6 +20,7 @@
         "Eva Schlehahn",
         "Fajar J. Ekaputra",
         "Georg P Krog",
+        "Harshvardhan J. Pandit",
         "Javier D. Fernández",
         "Julian Flake",
         "Mark Lizar",
@@ -28,17 +30,17 @@
         "Rigo Wenning",
         "Rob Brennan",
         "Simon Steyskal" ;
-    dct:created "2022-02-15"^^xsd:date ;
+    dct:created "2022-04-02"^^xsd:date ;
     dct:creator "Axel Polleres",
         "Harshvardhan J. Pandit" ;
     dct:description "DPV-PD is an extension to the Data Privacy Vocabulary that provides additional terms related to Personal Data categories."@en ;
     dct:license <https://www.w3.org/Consortium/Legal/2015/doc-license> ;
-    dct:modified "2022-02-15"^^xsd:date ;
+    dct:modified "2022-04-02"^^xsd:date ;
     dct:source <https://www.w3.org/community/dpvcg/> ;
     dct:title "DPV-PD: Personal Data Extension for DPV"@en ;
     vann:preferredNamespacePrefix "dpv-pd" ;
     vann:preferredNamespaceUri "https://w3id.org/dpv/dpv-pd"^^xsd:string ;
-    owl:versionInfo "0.4"^^xsd:string .
+    owl:versionInfo "0.6"^^xsd:string .
 
 dpv-pd:PersonalDataConcepts a skos:Collection ;
     dct:title "Personal Data Concepts"^^xsd:string ;
@@ -1573,7 +1575,7 @@ dpv-pd:TVViewingBehavior a skos:Concept,
     dct:created "2019-11-26"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Rudy Jacob"^^xsd:string ;
-    dct:source <https://www.specialprivacy.eu/> ;
+    dct:source <https://specialprivacy.ercim.eu/> ;
     rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about TV viewing Behavior, such as timestamps of channel change, duration of viewership, content consumed"@en ;
@@ -1779,7 +1781,7 @@ dpv-pd:ServiceConsumptionBehavior a skos:Concept,
     dct:created "2019-11-26"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Rudy Jacob"^^xsd:string ;
-    dct:source <https://www.specialprivacy.eu/> ;
+    dct:source <https://specialprivacy.ercim.eu/> ;
     rdfs:isDefinedBy dpv-pd: ;
     sw:term_status "accepted"@en ;
     skos:definition "Information about the consumption of a service, e.g. time and duration of consumption."@en ;
@@ -1824,6 +1826,18 @@ dpv-pd:DeviceSoftware a skos:Concept,
     skos:definition "Information about software on or related to a device."@en ;
     skos:prefLabel "Device Software"@en ;
     dpv:isSubTypeOf dpv-pd:DeviceBased .
+
+dpv-pd:Ethnicity a skos:Concept,
+        dpv:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Information about ethnic origins and lineage"@en ;
+    skos:prefLabel "Ethnicity"@en ;
+    dpv:isSubTypeOf dpv-pd:External .
 
 dpv-pd:Family a skos:Concept,
         dpv:Concept ;
@@ -1879,12 +1893,13 @@ dpv-pd:Language a skos:Concept,
     dct:created "2019-06-04"^^xsd:date ;
     dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
         "Fajar Ekaputra"^^xsd:string ;
+    dct:modified "2022-04-20"^^xsd:date ;
     dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
     rdfs:isDefinedBy dpv-pd: ;
-    sw:term_status "accepted"@en ;
+    sw:term_status "changed"@en ;
     skos:definition "Information about language and lingual history."@en ;
     skos:prefLabel "Language"@en ;
-    dpv:isSubTypeOf dpv-pd:Ethnicity .
+    dpv:isSubTypeOf dpv-pd:External .
 
 dpv-pd:PaymentCard a skos:Concept,
         dpv:Concept ;
@@ -1945,18 +1960,6 @@ dpv-pd:Demographic a skos:Concept,
     sw:term_status "accepted"@en ;
     skos:definition "Information about demography and demographic characteristics"@en ;
     skos:prefLabel "Demographic"@en ;
-    dpv:isSubTypeOf dpv-pd:External .
-
-dpv-pd:Ethnicity a skos:Concept,
-        dpv:Concept ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:isDefinedBy dpv-pd: ;
-    sw:term_status "accepted"@en ;
-    skos:definition "Information about ethnic origins and lineage"@en ;
-    skos:prefLabel "Ethnicity"@en ;
     dpv:isSubTypeOf dpv-pd:External .
 
 dpv-pd:Favorite a skos:Concept,
@@ -2168,18 +2171,6 @@ dpv-pd:Social a skos:Concept,
     skos:prefLabel "Social"@en ;
     dpv:isSubTypeOf dpv:PersonalData .
 
-dpv-pd:External a skos:Concept,
-        dpv:Concept ;
-    dct:created "2019-06-04"^^xsd:date ;
-    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string ;
-    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
-    rdfs:isDefinedBy dpv-pd: ;
-    sw:term_status "accepted"@en ;
-    skos:definition "Information about external characteristics that can be observed"@en ;
-    skos:prefLabel "External"@en ;
-    dpv:isSubTypeOf dpv:PersonalData .
-
 dpv-pd:Behavioral a skos:Concept,
         dpv:Concept ;
     dct:created "2019-06-04"^^xsd:date ;
@@ -2192,6 +2183,18 @@ dpv-pd:Behavioral a skos:Concept,
     skos:prefLabel "Behavioral"@en ;
     skos:related svd:Activity ;
     dpv:isSubTypeOf dpv-pd:External .
+
+dpv-pd:External a skos:Concept,
+        dpv:Concept ;
+    dct:created "2019-06-04"^^xsd:date ;
+    dct:creator "Elmar Kiesling; Harshvardhan J. Pandit"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string ;
+    dct:source <https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf> ;
+    rdfs:isDefinedBy dpv-pd: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Information about external characteristics that can be observed"@en ;
+    skos:prefLabel "External"@en ;
+    dpv:isSubTypeOf dpv:PersonalData .
 
 dpv-pd:MedicalHealth a skos:Concept,
         dpv:Concept ;

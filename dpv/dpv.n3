@@ -3,13 +3,45 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix spl: <http://www.specialprivacy.eu/langs/usage-policy#> .
-@prefix svd: <http://www.specialprivacy.eu/vocabs/data#> .
-@prefix svpr: <http://www.specialprivacy.eu/vocabs/processing#> .
-@prefix svpu: <http://www.specialprivacy.eu/vocabs/purposes#> .
+@prefix spl: <https://specialprivacy.ercim.eu/langs/usage-policy#> .
+@prefix svd: <https://specialprivacy.ercim.eu/vocabs/data#> .
+@prefix svpr: <https://specialprivacy.ercim.eu/vocabs/processing#> .
+@prefix svpu: <https://specialprivacy.ercim.eu/vocabs/purposes#> .
 @prefix sw: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dpv> a owl:Ontology ;
+    dct:abstract "The Data Privacy Vocabulary (DPV) provides terms (classes and properties) to represent information about legally compliant personal data handling, which includes purposes, processing, personal data, technical and organisational measures."@en ;
+    dct:contributor "Axel Polleres",
+        "Beatriz Esteves",
+        "Bert Bos",
+        "Bud Bruegger",
+        "Elmar Kiesling",
+        "Eva Schlehahn",
+        "Fajar J. Ekaputra",
+        "Georg P Krog",
+        "Harshvardhan J. Pandit",
+        "Javier D. Fernández",
+        "Julian Flake",
+        "Mark Lizar",
+        "Paul Ryan",
+        "Piero Bonatti",
+        "Ramisa Gachpaz Hamed",
+        "Rigo Wenning",
+        "Rob Brennan",
+        "Simon Steyskal" ;
+    dct:created "2019-06-18"^^xsd:date ;
+    dct:creator "Axel Polleres",
+        "Harshvardhan J. Pandit" ;
+    dct:description "The Data Privacy Vocabulary (DPV) provides terms (classes and properties) to represent information about legally compliant personal data handling, which includes purposes, processing, personal data, technical and organisational measures."@en ;
+    dct:license <https://www.w3.org/Consortium/Legal/2015/doc-license> ;
+    dct:modified "2022-04-02"^^xsd:date ;
+    dct:source <https://www.w3.org/community/dpvcg/> ;
+    dct:title "Data Privacy Vocabulary"@en ;
+    vann:preferredNamespacePrefix "dpv" ;
+    vann:preferredNamespaceUri "https://w3id.org/dpv"^^xsd:string ;
+    owl:versionInfo "0.6"^^xsd:string .
 
 dpv:BaseConcepts a skos:Collection ;
     dct:title "Base Concepts"^^xsd:string ;
@@ -56,7 +88,6 @@ dpv:ConsentConcepts a skos:Collection ;
 dpv:ContextConcepts a skos:Collection ;
     dct:title "Context Concepts"^^xsd:string ;
     skos:member dpv:AlgorithmicLogic,
-        dpv:Consequence,
         dpv:Context,
         dpv:Duration,
         dpv:Frequency,
@@ -70,61 +101,99 @@ dpv:ContextConcepts a skos:Collection ;
         dpv:SecondaryImportance,
         dpv:Technology,
         dpv:hasAlgorithmicLogic,
-        dpv:hasConsequence,
         dpv:hasContext,
         dpv:hasDuration,
         dpv:hasFrequency,
         dpv:hasHumanInvolvement,
         dpv:hasIdentifier,
+        dpv:isAfter,
+        dpv:isBefore,
         dpv:isImplementedByEntity,
         dpv:isImplementedUsingTechnology .
 
 dpv:EntitiesConcepts a skos:Collection ;
     dct:title "Entities Concepts"^^xsd:string ;
-    skos:member dpv:AcademicScientificOrganisation,
-        dpv:Authority,
+    skos:member dpv:Entity,
+        dpv:LegalEntity,
+        dpv:NaturalPerson,
+        dpv:Representative,
+        dpv:hasAddress,
+        dpv:hasContact,
+        dpv:hasEntity,
+        dpv:hasName,
+        dpv:hasRepresentative,
+        dpv:hasResponsibleEntity .
+
+dpv:Entities_AuthorityConcepts a skos:Collection ;
+    dct:title "Entities_Authority Concepts"^^xsd:string ;
+    skos:member dpv:Authority,
+        dpv:DataProtectionAuthority,
+        dpv:NationalAuthority,
+        dpv:RegionalAuthority,
+        dpv:SupraNationalAuthority,
+        dpv:hasAuthority,
+        dpv:isAuthorityFor .
+
+dpv:Entities_DatasubjectConcepts a skos:Collection ;
+    dct:title "Entities_Datasubject Concepts"^^xsd:string ;
+    skos:member dpv:Adult,
+        dpv:Applicant,
         dpv:Child,
-        dpv:DataController,
+        dpv:Citizen,
+        dpv:Client,
+        dpv:Consumer,
+        dpv:Customer,
+        dpv:DataSubject,
+        dpv:Employee,
+        dpv:Immigrant,
+        dpv:JobApplicant,
+        dpv:Member,
+        dpv:NonCitizen,
+        dpv:Participant,
+        dpv:Patient,
+        dpv:Student,
+        dpv:Subscriber,
+        dpv:Tourist,
+        dpv:User,
+        dpv:Visitor,
+        dpv:VulnerableDataSubject,
+        dpv:hasDataSubject .
+
+dpv:Entities_LegalroleConcepts a skos:Collection ;
+    dct:title "Entities_Legalrole Concepts"^^xsd:string ;
+    skos:member dpv:DataController,
         dpv:DataExporter,
         dpv:DataImporter,
         dpv:DataProcessor,
-        dpv:DataProtectionAuthority,
         dpv:DataProtectionOfficer,
         dpv:DataSubProcessor,
-        dpv:DataSubject,
-        dpv:ForProfitOrganisation,
-        dpv:GovernmentalOrganisation,
-        dpv:IndustryConsortium,
         dpv:JointDataControllers,
-        dpv:LegalEntity,
-        dpv:NationalAuthority,
-        dpv:NaturalPerson,
-        dpv:NonGovernmentalOrganisation,
-        dpv:NonProfitOrganisation,
-        dpv:Organisation,
         dpv:Recipient,
-        dpv:RegionalAuthority,
-        dpv:Representative,
-        dpv:SupraNationalAuthority,
         dpv:ThirdParty,
-        dpv:VulnerableDataSubject,
-        dpv:hasAddress,
-        dpv:hasContact,
         dpv:hasDataController,
         dpv:hasDataExporter,
         dpv:hasDataImporter,
         dpv:hasDataProcessor,
-        dpv:hasDataSubject,
-        dpv:hasEntity,
+        dpv:hasDataProtectionOfficer,
         dpv:hasJointDataControllers,
-        dpv:hasName,
         dpv:hasRecipient,
         dpv:hasRecipientDataController,
-        dpv:hasRecipientThirdParty,
-        dpv:hasRepresentative .
+        dpv:hasRecipientThirdParty .
 
-dpv:JurisdictionsConcepts a skos:Collection ;
-    dct:title "Jurisdictions Concepts"^^xsd:string ;
+dpv:Entities_OrganisationConcepts a skos:Collection ;
+    dct:title "Entities_Organisation Concepts"^^xsd:string ;
+    skos:member dpv:AcademicScientificOrganisation,
+        dpv:ForProfitOrganisation,
+        dpv:GovernmentalOrganisation,
+        dpv:IndustryConsortium,
+        dpv:InternationalOrganisation,
+        dpv:NonGovernmentalOrganisation,
+        dpv:NonProfitOrganisation,
+        dpv:Organisation,
+        dpv:OrganisationalUnit .
+
+dpv:JurisdictionConcepts a skos:Collection ;
+    dct:title "Jurisdiction Concepts"^^xsd:string ;
     skos:member dpv:Country,
         dpv:EconomicUnion,
         dpv:Law,
@@ -133,12 +202,10 @@ dpv:JurisdictionsConcepts a skos:Collection ;
         dpv:SupraNationalUnion,
         dpv:ThirdCountry,
         dpv:hasApplicableLaw,
-        dpv:hasAuthority,
         dpv:hasCountry,
         dpv:hasJurisdiction,
         dpv:hasLocation,
-        dpv:hasThirdCountry,
-        dpv:isAuthorityFor .
+        dpv:hasThirdCountry .
 
 dpv:Legal_BasisConcepts a skos:Collection ;
     dct:title "Legal_Basis Concepts"^^xsd:string ;
@@ -162,8 +229,10 @@ dpv:Legal_BasisConcepts a skos:Collection ;
 dpv:Personal_DataConcepts a skos:Collection ;
     dct:title "Personal_Data Concepts"^^xsd:string ;
     skos:member dpv:AnonymisedData,
+        dpv:CollectedPersonalData,
         dpv:Data,
         dpv:DerivedPersonalData,
+        dpv:GeneratedPersonalData,
         dpv:InferredPersonalData,
         dpv:NonPersonalData,
         dpv:PersonalData,
@@ -217,7 +286,6 @@ dpv:Processing_ContextConcepts a skos:Collection ;
         dpv:EvaluationScoring,
         dpv:InnovativeUseOfNewTechnologies,
         dpv:LargeScaleProcessing,
-        dpv:MatchingCombining,
         dpv:NonPublicDataSource,
         dpv:ProcessingContext,
         dpv:PublicDataSource,
@@ -273,6 +341,7 @@ dpv:PurposesConcepts a skos:Collection ;
         dpv:Personalisation,
         dpv:PersonalisedAdvertising,
         dpv:PersonalisedBenefits,
+        dpv:PersonnelManagement,
         dpv:PublicRelations,
         dpv:Purpose,
         dpv:RecordManagement,
@@ -290,6 +359,7 @@ dpv:PurposesConcepts a skos:Collection ;
         dpv:ServiceRecordManagement,
         dpv:ServiceUsageAnalytics,
         dpv:SocialMediaMarketing,
+        dpv:TargetedAdvertising,
         dpv:TechnicalServiceProvision,
         dpv:UserInterfacePersonalisation,
         dpv:VendorManagement,
@@ -298,6 +368,29 @@ dpv:PurposesConcepts a skos:Collection ;
         dpv:VendorSelectionAssessment,
         dpv:hasPurpose,
         dpv:hasSector .
+
+dpv:RiskConcepts a skos:Collection ;
+    dct:title "Risk Concepts"^^xsd:string ;
+    skos:member dpv:Benefit,
+        dpv:Consequence,
+        dpv:ConsequenceAsSideEffect,
+        dpv:ConsequenceOfFailure,
+        dpv:ConsequenceOfSuccess,
+        dpv:Damage,
+        dpv:Detriment,
+        dpv:Harm,
+        dpv:Impact,
+        dpv:MaterialDamage,
+        dpv:NonMaterialDamage,
+        dpv:Risk,
+        dpv:RiskManagementProcedure,
+        dpv:RiskMitigationMeasure,
+        dpv:hasConsequence,
+        dpv:hasImpact,
+        dpv:hasImpactOn,
+        dpv:hasRisk,
+        dpv:isMitigatedByMeasure,
+        dpv:mitigatesRisk .
 
 dpv:Technical_Organisational_MeasuresConcepts a skos:Collection ;
     dct:title "Technical_Organisational_Measures Concepts"^^xsd:string ;
@@ -340,8 +433,6 @@ dpv:Technical_Organisational_MeasuresConcepts a skos:Collection ;
         dpv:RecordsOfActivities,
         dpv:RegisterOfProcessingActivities,
         dpv:RegularityOfRecertification,
-        dpv:RiskManagementProcedure,
-        dpv:RiskMitigationMeasure,
         dpv:Safeguard,
         dpv:SafeguardForDataTransfer,
         dpv:Seal,
@@ -353,49 +444,21 @@ dpv:Technical_Organisational_MeasuresConcepts a skos:Collection ;
         dpv:ThirdPartyAgreement,
         dpv:hasOrganisationalMeasure,
         dpv:hasPolicy,
-        dpv:hasRisk,
         dpv:hasTechnicalMeasure,
         dpv:hasTechnicalOrganisationalMeasure,
-        dpv:isMitigatedByMeasure,
-        dpv:isPolicyFor,
-        dpv:mitigatesRisk .
+        dpv:isPolicyFor .
+
+dpv:hasDomain rdfs:subPropertyOf skos:semanticRelation ;
+    skos:prefLabel "has domain"@en .
+
+dpv:hasRange rdfs:subPropertyOf skos:semanticRelation ;
+    skos:prefLabel "has range"@en .
 
 dpv:isInstanceOf rdfs:subPropertyOf skos:semanticRelation ;
     skos:prefLabel "isInstanceOf"@en .
 
 dpv:isSubTypeOf rdfs:subPropertyOf skos:broaderTransitive ;
     skos:prefLabel "isSubTypeOf"@en .
-
-<https://w3id.org/dpv/dpv-gdpr> a owl:Ontology ;
-    dct:abstract "The GDPR extension to Data Privacy Vocabulary provides terms (classes and properties) related to EU General Data Protection Regulation."@en ;
-    dct:contributor "Beatriz Esteves",
-        "Bert Bos",
-        "Bud Bruegger",
-        "David Hickey",
-        "Elmar Kiesling",
-        "Eva Schlehahn",
-        "Fajar J. Ekaputra",
-        "Georg P Krog",
-        "Javier D. Fernández",
-        "Julian Flake",
-        "Mark Lizar",
-        "Paul Ryan",
-        "Piero Bonatti",
-        "Ramisa Gachpaz Hamed",
-        "Rigo Wenning",
-        "Rob Brennan",
-        "Simon Steyskal" ;
-    dct:created "2019-06-18"^^xsd:date ;
-    dct:creator "Axel Polleres",
-        "Harshvardhan J. Pandit" ;
-    dct:description "The GDPR extension to Data Privacy Vocabulary provides terms (classes and properties) related to EU General Data Protection Regulation."@en ;
-    dct:license <https://www.w3.org/Consortium/Legal/2015/doc-license> ;
-    dct:modified "2022-02-15"^^xsd:date ;
-    dct:source <https://www.w3.org/community/dpvcg/> ;
-    dct:title "DPV-GDPR: GDPR Extension for DPV"@en ;
-    vann:preferredNamespacePrefix "dpv-gdpr" ;
-    vann:preferredNamespaceUri "https://w3id.org/dpv/dpv-gdpr"^^xsd:string ;
-    owl:versionInfo "0.4"^^xsd:string .
 
 dpv:AcademicResearch a skos:Concept,
         dpv:Concept ;
@@ -443,6 +506,9 @@ dpv:AccessControlMethod a skos:Concept,
 dpv:AccountManagement a skos:Concept,
         dpv:Concept ;
     dct:created "2021-09-08"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Create, maintain, and manage accounts for purposes of providing services"@en ;
@@ -472,6 +538,17 @@ dpv:Adapt a skos:Concept,
     skos:prefLabel "Adapt"@en ;
     dpv:isSubTypeOf dpv:Transform .
 
+dpv:Adult a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-03-30"^^xsd:date ;
+    dct:creator "Georg Krog"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "A natural person that is not a child i.e. has attained some legally specified age of adulthood"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "Adult"@en ;
+    dpv:isSubTypeOf dpv:DataSubject .
+
 dpv:Align a skos:Concept,
         dpv:Concept ;
     dct:created "2019-05-07"^^xsd:date ;
@@ -497,7 +574,7 @@ dpv:Alter a skos:Concept,
 dpv:Analyse a skos:Concept,
         dpv:Concept ;
     dct:created "2019-05-07"^^xsd:date ;
-    dct:source <https://www.specialprivacy.eu/vocabs/processing> ;
+    dct:source <https://specialprivacy.ercim.eu/vocabs/processing> ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "to study or examine the data in detail"@en ;
@@ -509,7 +586,7 @@ dpv:Analyse a skos:Concept,
 dpv:Anonymise a skos:Concept,
         dpv:Concept ;
     dct:created "2019-05-07"^^xsd:date ;
-    dct:source <https://www.specialprivacy.eu/vocabs/processing> ;
+    dct:source <https://specialprivacy.ercim.eu/vocabs/processing> ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "to irreversibly alter personal data in such a way that an unique data subject can no longer be identified directly or indirectly or in combination with other data"@en ;
@@ -558,6 +635,22 @@ dpv:AutomatedDecisionMaking a skos:Concept,
     skos:prefLabel "Automated Decision Making"@en ;
     dpv:isSubTypeOf dpv:ProcessingContext .
 
+dpv:Benefit a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-03-23"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Beatriz Esteves"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Impact(s) that acts as or causes benefits"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "Benefit"@en ;
+    dpv:isSubTypeOf dpv:Impact .
+
 dpv:Certification a skos:Concept,
         dpv:Concept ;
     dct:created "2019-04-05"^^xsd:date ;
@@ -580,9 +673,39 @@ dpv:Child a skos:Concept,
     sw:term_status "accepted"@en ;
     skos:definition "A 'child' is a natural legal person who is below a certain legal age depending on the legal jurisdiction."@en ;
     skos:inScheme dpv: ;
-    skos:note "The legality of age defining a child varies by jurisdiction. In addition, 'child' is distinct from a 'minor'. For example, the legal age drinking alcohol can be 21, which makes a person of age 20 a 'minor' in this context. In other cases, 'minor' and 'child' are used interchangeably to refer to a person below some legally defined age."@en ;
+    skos:note "The legality of age defining a child varies by jurisdiction. In addition, 'child' is distinct from a 'minor'. For example, the legal age for consumption of alcohol can be 21, which makes a person of age 20 a 'minor' in this context. In other cases, 'minor' and 'child' are used interchangeably to refer to a person below some legally defined age."@en ;
     skos:prefLabel "Child"@en ;
+    dpv:isSubTypeOf dpv:NatualPerson .
+
+dpv:Citizen a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-04-06"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P. Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Data subjects that are citizens (for a jurisdiction)"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "Citizen"@en ;
     dpv:isSubTypeOf dpv:DataSubject .
+
+dpv:Client a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-04-06"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P. Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Data subjects that are clients or recipients of services"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "Client"@en ;
+    dpv:isSubTypeOf dpv:Customer .
 
 dpv:CodeOfConduct a skos:Concept,
         dpv:Concept ;
@@ -602,7 +725,7 @@ dpv:Collect a skos:Concept,
         dpv:Concept ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj>,
-        <https://www.specialprivacy.eu/vocabs/processing> ;
+        <https://specialprivacy.ercim.eu/vocabs/processing> ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "to gather data from someone"@en ;
@@ -611,11 +734,23 @@ dpv:Collect a skos:Concept,
     skos:related svpr:Collect ;
     dpv:isSubTypeOf dpv:Obtain .
 
+dpv:CollectedPersonalData a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-03-30"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Personal Data that has been collected from another source such as the Data Subject"@en ;
+    skos:inScheme dpv: ;
+    skos:note "To indicate the source of data, use the DataSource concept with the hasDataSource relation"@en ;
+    skos:prefLabel "Collected Personal Data"@en ;
+    dpv:isSubTypeOf dpv:PersonalData .
+
 dpv:Combine a skos:Concept,
         dpv:Concept ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj>,
-        <https://www.specialprivacy.eu/vocabs/processing> ;
+        <https://specialprivacy.ercim.eu/vocabs/processing> ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "to join or merge data"@en ;
@@ -677,11 +812,46 @@ dpv:Consent a skos:Concept,
     skos:prefLabel "Consent"@en ;
     dpv:isSubTypeOf dpv:LegalBasis .
 
+dpv:ConsequenceAsSideEffect a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-03-30"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "The consequence(s) possible or arising as a side-effect of specified context"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "Consequence as Side-Effect"@en ;
+    dpv:isSubTypeOf dpv:Consequence .
+
+dpv:ConsequenceOfFailure a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-03-23"^^xsd:date ;
+    dct:creator "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "The consequence(s) possible or arising from failure of specified context"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "Consequence of Failure"@en ;
+    dpv:isSubTypeOf dpv:Consequence .
+
+dpv:ConsequenceOfSuccess a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-03-23"^^xsd:date ;
+    dct:creator "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "The consequence(s) possible or arising from success of specified context"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "Consequence of Success"@en ;
+    dpv:isSubTypeOf dpv:Consequence .
+
 dpv:Consult a skos:Concept,
         dpv:Concept ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj>,
-        <https://www.specialprivacy.eu/vocabs/processing> ;
+        <https://specialprivacy.ercim.eu/vocabs/processing> ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "to consult or query data"@en ;
@@ -702,6 +872,21 @@ dpv:ConsultationWithAuthority a skos:Concept,
     skos:inScheme dpv: ;
     skos:prefLabel "Consultation with Authority"@en ;
     dpv:isSubTypeOf dpv:Consultation .
+
+dpv:Consumer a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-04-06"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P. Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Data subjects that consume goods or services for direct use"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "Consumer"@en ;
+    dpv:isSubTypeOf dpv:DataSubject .
 
 dpv:ContractPerformance a skos:Concept,
         dpv:Concept ;
@@ -748,7 +933,7 @@ dpv:ControllerProcessorAgreement a skos:Concept,
 dpv:Copy a skos:Concept,
         dpv:Concept ;
     dct:created "2019-05-07"^^xsd:date ;
-    dct:source <https://www.specialprivacy.eu/vocabs/processing> ;
+    dct:source <https://specialprivacy.ercim.eu/vocabs/processing> ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "to produce an exact reprodution of the data"@en ;
@@ -762,7 +947,7 @@ dpv:CreateEventRecommendations a skos:Concept,
     dct:created "2019-11-26"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Rudy Jacob"^^xsd:string ;
-    dct:source <https://www.specialprivacy.eu/> ;
+    dct:source <https://specialprivacy.ercim.eu/> ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Create and provide personalised recommendations for events"@en ;
@@ -790,6 +975,9 @@ dpv:CreateProductRecommendations a skos:Concept,
 dpv:CustomerClaimsManagement a skos:Concept,
         dpv:Concept ;
     dct:created "2021-09-08"^^xsd:date ;
+    dct:creator "Beatriz"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
     dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
@@ -801,6 +989,9 @@ dpv:CustomerClaimsManagement a skos:Concept,
 dpv:CustomerOrderManagement a skos:Concept,
         dpv:Concept ;
     dct:created "2021-09-08"^^xsd:date ;
+    dct:creator "Beatriz"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
     dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
@@ -811,7 +1002,10 @@ dpv:CustomerOrderManagement a skos:Concept,
 
 dpv:CustomerSolvencyMonitoring a skos:Concept,
         dpv:Concept ;
-    dct:created "2021-09-09"^^xsd:date ;
+    dct:created "2021-09-08"^^xsd:date ;
+    dct:creator "Beatriz"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
     dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
@@ -846,20 +1040,6 @@ dpv:DataProtectionAuthority a skos:Concept,
     skos:inScheme dpv: ;
     skos:prefLabel "Data Protection Authority"@en ;
     dpv:isSubTypeOf dpv:Authority .
-
-dpv:DataProtectionOfficer a skos:Concept,
-        dpv:Concept ;
-    dct:created "2020-11-04"^^xsd:date ;
-    dct:creator "Georg Krog"^^xsd:string,
-        "Paul Ryan"^^xsd:string ;
-    dct:modified "2021-12-08"^^xsd:date ;
-    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_37/oj> ;
-    rdfs:isDefinedBy dpv: ;
-    sw:term_status "modified"@en ;
-    skos:definition "An entity within or authorised by an organisation to monitor internal compliance, inform and advise on data protection obligations and act as a contact point for data subjects and the supervisory authority."@en ;
-    skos:inScheme dpv: ;
-    skos:prefLabel "Data Protection Officer"@en ;
-    dpv:isSubTypeOf dpv:Representative .
 
 dpv:DataSubProcessor a skos:Concept,
         dpv:Concept ;
@@ -946,11 +1126,12 @@ dpv:DeliveryOfGoods a skos:Concept,
 dpv:Derive a skos:Concept,
         dpv:Concept ;
     dct:created "2019-05-07"^^xsd:date ;
-    dct:source <https://www.specialprivacy.eu/vocabs/processing> ;
+    dct:source <https://specialprivacy.ercim.eu/vocabs/processing> ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "to create new derivative data from the original data"@en ;
     skos:inScheme dpv: ;
+    skos:note "Derive indicates data is present or obtainable from existing data. For data that is created without such existence, see Infer."@en ;
     skos:prefLabel "Derive"@en ;
     skos:related svpr:Derive ;
     dpv:isSubTypeOf dpv:Transform .
@@ -980,6 +1161,21 @@ dpv:Destruct a skos:Concept,
     skos:prefLabel "Destruct"@en ;
     dpv:isSubTypeOf dpv:Remove .
 
+dpv:Detriment a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-03-23"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Impact that acts as or causes detriments"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "Detriment"@en ;
+    dpv:isSubTypeOf dpv:Impact .
+
 dpv:DirectMarketing a skos:Concept,
         dpv:Concept ;
     dct:created "2020-11-04"^^xsd:date ;
@@ -1007,6 +1203,9 @@ dpv:DiscloseByTransmission a skos:Concept,
 dpv:DisputeManagement a skos:Concept,
         dpv:Concept ;
     dct:created "2021-09-08"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
     dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
@@ -1036,6 +1235,21 @@ dpv:EconomicUnion a skos:Concept,
     skos:inScheme dpv: ;
     skos:prefLabel "EconomicUnion"@en ;
     dpv:isSubTypeOf dpv:Location .
+
+dpv:Employee a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-04-06"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P. Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Data subjects that are employees"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "Employee"@en ;
+    dpv:isSubTypeOf dpv:DataSubject .
 
 dpv:EncryptionInRest a skos:Concept,
         dpv:Concept ;
@@ -1148,6 +1362,21 @@ dpv:FraudPreventionAndDetection a skos:Concept,
     skos:related svpu:Government ;
     dpv:isSubTypeOf dpv:EnforceSecurity .
 
+dpv:Harm a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-03-23"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Impact that acts as or causes harms"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "Harm"@en ;
+    dpv:isSubTypeOf dpv:Impact .
+
 dpv:HumanResourceManagement a skos:Concept,
         dpv:Concept ;
     dct:created "2021-09-01"^^xsd:date ;
@@ -1180,6 +1409,21 @@ dpv:IdentityVerification a skos:Concept,
     skos:inScheme dpv: ;
     skos:prefLabel "Identity Verification"@en ;
     dpv:isSubTypeOf dpv:EnforceSecurity .
+
+dpv:Immigrant a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-04-06"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P. Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Data subjects that are immigrants (for a jurisdiction)"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "Immigrant"@en ;
+    dpv:isSubTypeOf dpv:DataSubject .
 
 dpv:ImproveExistingProductsAndServices a skos:Concept,
         dpv:Concept ;
@@ -1250,9 +1494,10 @@ dpv:InferredPersonalData a skos:Concept,
     sw:term_status "accepted"@en ;
     skos:definition "Personal Data that is obtained through inference from other data"@en ;
     skos:inScheme dpv: ;
-    skos:note "Inferred Data is data that is derived from existing data, but which did not originally exist within it, e.g. inferring demographics from browsing history."@en ;
+    skos:note "Inferred Data is derived data generated from existing data, but which did not originally exist within it, e.g. inferring demographics from browsing history."@en ;
     skos:prefLabel "Inferred Personal Data"@en ;
-    dpv:isSubTypeOf dpv:DerivedPersonalData .
+    dpv:isSubTypeOf dpv:DerivedPersonalData,
+        dpv:GeneratedPersonalData .
 
 dpv:InnovativeUseOfNewTechnologies a skos:Concept,
         dpv:Concept ;
@@ -1282,6 +1527,34 @@ dpv:InternalResourceOptimisation a skos:Concept,
     skos:inScheme dpv: ;
     skos:prefLabel "Internal Resource Optimisation"@en ;
     dpv:isSubTypeOf dpv:OptimisationForController .
+
+dpv:InternationalOrganisation a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-03-23"^^xsd:date ;
+    dct:creator "Georg P. Krog"^^xsd:string,
+        "Julian Flake"^^xsd:string ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_26/oj> ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "An organisation and its subordinate bodies governed by public international law, or any other body which is set up by, or on the basis of, an agreement between two or more countries"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "International Organisation"@en ;
+    dpv:isSubTypeOf dpv:Organisation .
+
+dpv:JobApplicant a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-04-06"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P. Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Data subjects that apply for jobs or employments"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "JobApplicant"@en ;
+    dpv:isSubTypeOf dpv:Applicant .
 
 dpv:JointDataControllersAgreement a skos:Concept,
         dpv:Concept ;
@@ -1385,18 +1658,31 @@ dpv:MakeAvailable a skos:Concept,
     skos:prefLabel "Make Available"@en ;
     dpv:isSubTypeOf dpv:Disclose .
 
-dpv:MatchingCombining a skos:Concept,
+dpv:MaterialDamage a skos:Concept,
         dpv:Concept ;
-    dct:created "2020-11-04"^^xsd:date ;
-    dct:creator "Harshvardhan J. Pandit"^^xsd:string,
-        "Piero Bonatti"^^xsd:string ;
-    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    dct:created "2022-03-30"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
-    skos:definition "Processing that involves matching and combining of personal data"@en ;
+    skos:definition "Impact that acts as or causes material damages"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "Matching and Combining"@en ;
-    dpv:isSubTypeOf dpv:ProcessingContext .
+    skos:prefLabel "Material Damage"@en ;
+    dpv:isSubTypeOf dpv:Damage .
+
+dpv:Member a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-04-06"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P. Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Data subjects that are members of a group, organisation, or other collectives"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "Member"@en ;
+    dpv:isSubTypeOf dpv:DataSubject .
 
 dpv:MemberPartnerManagement a skos:Concept,
         dpv:Concept ;
@@ -1416,7 +1702,7 @@ dpv:MemberPartnerManagement a skos:Concept,
 dpv:Move a skos:Concept,
         dpv:Concept ;
     dct:created "2019-05-07"^^xsd:date ;
-    dct:source <https://www.specialprivacy.eu/vocabs/processing> ;
+    dct:source <https://specialprivacy.ercim.eu/vocabs/processing> ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "to move data from one location to another including deleting the original copy"@en ;
@@ -1446,10 +1732,25 @@ dpv:NationalAuthority a skos:Concept,
     dct:source <http://purl.org/adms> ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
-    skos:definition "e.g. DPA, but not all \"DPA\" are national authority e.g. EDPS and EDPB"@en ;
+    skos:definition "An authority tasked with overseeing legal compliance for a nation"@en ;
     skos:inScheme dpv: ;
     skos:prefLabel "NationalAuthority"@en ;
     dpv:isSubTypeOf dpv:Authority .
+
+dpv:NonCitizen a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-04-06"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P. Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Data subjects that are not citizens (for a jurisdiction)"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "NonCitizen"@en ;
+    dpv:isSubTypeOf dpv:DataSubject .
 
 dpv:NonCommercialResearch a skos:Concept,
         dpv:Concept ;
@@ -1478,6 +1779,17 @@ dpv:NonGovernmentalOrganisation a skos:Concept,
     skos:inScheme dpv: ;
     skos:prefLabel "NonGovernmentalOrganisation"@en ;
     dpv:isSubTypeOf dpv:Organisation .
+
+dpv:NonMaterialDamage a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-03-30"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Impact that acts as or causes non-material damages"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "Non-Material Damage"@en ;
+    dpv:isSubTypeOf dpv:Damage .
 
 dpv:NonProfitOrganisation a skos:Concept,
         dpv:Concept ;
@@ -1593,6 +1905,18 @@ dpv:OrganisationRiskManagement a skos:Concept,
     skos:prefLabel "Organisation Risk Management"@en ;
     dpv:isSubTypeOf dpv:OrganisationGovernance .
 
+dpv:OrganisationalUnit a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-03-23"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Entity within an organisation that does not constitute as a separate legal entity"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "Organisational Unit"@en ;
+    dpv:isSubTypeOf dpv:Entity .
+
 dpv:PIA a skos:Concept,
         dpv:Concept ;
     dct:created "2020-11-04"^^xsd:date ;
@@ -1606,6 +1930,36 @@ dpv:PIA a skos:Concept,
     skos:prefLabel "Privacy Impact Assessment"@en ;
     dpv:isSubTypeOf dpv:ImpactAssessment .
 
+dpv:Participant a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-04-06"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P. Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Data subjects that participate in some context such as volunteers in a function"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "Participant"@en ;
+    dpv:isSubTypeOf dpv:DataSubject .
+
+dpv:Patient a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-04-06"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P. Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Data subjects that receive medican attention, treatment, care, advice, or other health related services"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "Patient"@en ;
+    dpv:isSubTypeOf dpv:DataSubject .
+
 dpv:Payment a skos:Concept,
         dpv:Concept ;
     dct:created "2020-11-04"^^xsd:date ;
@@ -1618,20 +1972,6 @@ dpv:Payment a skos:Concept,
     skos:inScheme dpv: ;
     skos:prefLabel "Payment"@en ;
     dpv:isSubTypeOf dpv:ServiceProvision .
-
-dpv:PersonalisedAdvertising a skos:Concept,
-        dpv:Concept ;
-    dct:created "2020-11-04"^^xsd:date ;
-    dct:creator "Beatriz Esteves"^^xsd:string,
-        "Georg P Krog"^^xsd:string,
-        "Harshvardhan J. Pandit"^^xsd:string ;
-    rdfs:isDefinedBy dpv: ;
-    sw:term_status "accepted"@en ;
-    skos:definition "Create and provide personalised advertising"@en ;
-    skos:inScheme dpv: ;
-    skos:prefLabel "Personalised Advertising"@en ;
-    dpv:isSubTypeOf dpv:Advertising,
-        dpv:Personalisation .
 
 dpv:PersonalisedBenefits a skos:Concept,
         dpv:Concept ;
@@ -1648,6 +1988,19 @@ dpv:PersonalisedBenefits a skos:Concept,
     skos:inScheme dpv: ;
     skos:prefLabel "Personalised Benefits"@en ;
     dpv:isSubTypeOf dpv:ServicePersonalization .
+
+dpv:PersonnelManagement a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-03-30"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Management of personnel associated with the organisation e.g. evaluation and management of employees and intermediaries"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "Personnel Management"@en ;
+    dpv:isSubTypeOf dpv:HumanResources .
 
 dpv:PrimaryImportance a skos:Concept,
         dpv:Concept ;
@@ -1839,7 +2192,7 @@ dpv:RegionalAuthority a skos:Concept,
     dct:source <http://purl.org/adms> ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
-    skos:definition "e.g. regional DPA in DE / US-CA"@en ;
+    skos:definition "An authority tasked with overseeing legal compliance for a region"@en ;
     skos:inScheme dpv: ;
     skos:prefLabel "RegionalAuthority"@en ;
     dpv:isSubTypeOf dpv:Authority .
@@ -2035,6 +2388,9 @@ dpv:SellProductsToDataSubject a skos:Concept,
 dpv:ServiceRecordManagement a skos:Concept,
         dpv:Concept ;
     dct:created "2021-09-08"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Manage invoicing, orders, and records in relation to services"@en ;
@@ -2202,6 +2558,21 @@ dpv:Structure a skos:Concept,
     skos:prefLabel "Structure"@en ;
     dpv:isSubTypeOf dpv:Organise .
 
+dpv:Student a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-04-06"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P. Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Data subjects that are students"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "Student"@en ;
+    dpv:isSubTypeOf dpv:DataSubject .
+
 dpv:SubProcessorAgreement a skos:Concept,
         dpv:Concept ;
     dct:created "2022-01-26"^^xsd:date ;
@@ -2217,6 +2588,22 @@ dpv:SubProcessorAgreement a skos:Concept,
     skos:prefLabel "Sub-Processor Agreement"@en ;
     dpv:isSubTypeOf dpv:DataProcessingAgreement .
 
+dpv:Subscriber a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-04-06"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P. Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Data subjects that subscribe to service(s)"@en ;
+    skos:inScheme dpv: ;
+    skos:note "note: subscriber can be customer or consumer"@en ;
+    skos:prefLabel "Subscriber"@en ;
+    dpv:isSubTypeOf dpv:DataSubject .
+
 dpv:SupraNationalAuthority a skos:Concept,
         dpv:Concept ;
     dct:created "2022-02-02"^^xsd:date ;
@@ -2224,7 +2611,7 @@ dpv:SupraNationalAuthority a skos:Concept,
     dct:source <http://purl.org/adms> ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
-    skos:definition "e.g. EU, EDPB"@en ;
+    skos:definition "An authority tasked with overseeing legal compliance for a supra-national union e.g. EU"@en ;
     skos:inScheme dpv: ;
     skos:prefLabel "SupraNationalAuthority"@en ;
     dpv:isSubTypeOf dpv:Authority .
@@ -2253,6 +2640,17 @@ dpv:SystematicMonitoring a skos:Concept,
     skos:prefLabel "Systematic Monitoring"@en ;
     dpv:isSubTypeOf dpv:ProcessingContext .
 
+dpv:TargetedAdvertising a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-03-30"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Create and provide pesonalised advertisement where the personalisation is targeted to a specific individual or group of individuals"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "Targeted Advertising"@en ;
+    dpv:isSubTypeOf dpv:PersonalisedAdvertising .
+
 dpv:TechnicalServiceProvision a skos:Concept,
         dpv:Concept ;
     dct:created "2021-09-08"^^xsd:date ;
@@ -2275,6 +2673,21 @@ dpv:ThirdPartyAgreement a skos:Concept,
     skos:prefLabel "Third-Party Agreement"@en ;
     dpv:isSubTypeOf dpv:DataProcessingAgreement .
 
+dpv:Tourist a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-04-06"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P. Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Data subjects that are tourists i.e. not citizens and not immigrants"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "Tourist"@en ;
+    dpv:isSubTypeOf dpv:DataSubject .
+
 dpv:Transmit a skos:Concept,
         dpv:Concept ;
     dct:created "2019-05-07"^^xsd:date ;
@@ -2285,6 +2698,21 @@ dpv:Transmit a skos:Concept,
     skos:inScheme dpv: ;
     skos:prefLabel "Transmit"@en ;
     dpv:isSubTypeOf dpv:Disclose .
+
+dpv:User a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-04-06"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P. Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Data subjects that use service(s)"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "User"@en ;
+    dpv:isSubTypeOf dpv:DataSubject .
 
 dpv:UserInterfacePersonalisation a skos:Concept,
         dpv:Concept ;
@@ -2347,6 +2775,21 @@ dpv:VendorSelectionAssessment a skos:Concept,
     skos:prefLabel "Vendor Selection Assessment"@en ;
     dpv:isSubTypeOf dpv:VendorManagement .
 
+dpv:Visitor a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-04-06"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P. Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Data subjects that are temporary visitors"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "Visitor"@en ;
+    dpv:isSubTypeOf dpv:DataSubject .
+
 dpv:VitalInterestOfDataSubject a skos:Concept,
         dpv:Concept ;
     dct:created "2021-04-21"^^xsd:date ;
@@ -2370,6 +2813,7 @@ dpv:VulnerableDataSubject a skos:Concept,
     sw:term_status "accepted"@en ;
     skos:definition "Data Subjects which should be considered 'vulnerable' and therefore would require additional measures and safeguards"@en ;
     skos:inScheme dpv: ;
+    skos:note "This concept denotes a Data Subject or a group are vulnerable, but not what vulnerability they possess or its context. This information can be provided additionally as comments, or as separate concepts and relations. Proposals for this are welcome."@en ;
     skos:prefLabel "Vulnerable Data Subject"@en ;
     dpv:isSubTypeOf dpv:DataSubject .
 
@@ -2380,13 +2824,13 @@ dpv:hasAddress a skos:Concept,
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J.Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
-    rdfs:domain dpv:Entity ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:Concept ;
     sw:term_status "accepted"@en ;
     skos:definition "Specifies address of a legal entity such as street address or pin code"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "has address"@en .
+    skos:prefLabel "has address"@en ;
+    dpv:hasDomain dpv:Entity ;
+    dpv:hasRange dpv:Concept .
 
 dpv:hasAlgorithmicLogic a skos:Concept,
         dpv:Relation ;
@@ -2394,38 +2838,38 @@ dpv:hasAlgorithmicLogic a skos:Concept,
     dct:creator "Georg P. Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
-    rdfs:domain dpv:Concept ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:AlgorithmicLogic ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates the logic used in processing such as for automated decision making"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "has algorithmic logic"@en .
+    skos:prefLabel "has algorithmic logic"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:AlgorithmicLogic .
 
 dpv:hasApplicableLaw a skos:Concept,
         dpv:Relation ;
     dct:created "2022-01-19"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    rdfs:domain dpv:Concept ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:Law ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates applicability of a Law"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "has applicable law"@en .
+    skos:prefLabel "has applicable law"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:Law .
 
 dpv:hasAuthority a skos:Concept,
         dpv:Relation ;
     dct:created "2022-01-19"^^xsd:date ;
     dct:creator "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
-    rdfs:domain dpv:Concept ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:Authority ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates applicability of authority for a jurisdiction"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "has authority"@en .
+    skos:prefLabel "has authority"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:Authority .
 
 dpv:hasConsentNotice a skos:Concept,
         dpv:Relation ;
@@ -2440,22 +2884,6 @@ dpv:hasConsentNotice a skos:Concept,
     skos:note "The actual notice that the Data Subject received to consent to, either a text or link to a document, which should be usable to decide whether the form or consent was compliant to legislation, e.g. documenting how the user has been informed about rights and implications (such as, right to data portability,right to recitffy, right to erasure, right to restrict processing, right to object, rights regarding automated decision making or profiling, processors, third parties, sub-processors, outside-EEA transfers, automated decision-making, or other necessary details of the privacy-policy). Can be TextOrDocumentOrURI."@en ;
     skos:prefLabel "has consent notice"@en .
 
-dpv:hasConsequence a skos:Concept,
-        dpv:Relation ;
-    dct:created "2020-11-04"^^xsd:date ;
-    dct:creator "Georg P. Krog"^^xsd:string,
-        "Harshvardhan J. Pandit"^^xsd:string,
-        "Paul Ryan"^^xsd:string ;
-    dct:modified "2021-09-21"^^xsd:date ;
-    rdfs:domain dpv:Concept ;
-    rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:Consequence ;
-    sw:term_status "accepted"@en ;
-    skos:definition "Indicates consequences of processing such as those for Data Subjects in relation to automated decision making"@en ;
-    skos:inScheme dpv: ;
-    skos:note "Removed plural suffix for consistency"@en ;
-    skos:prefLabel "has consequence"@en .
-
 dpv:hasContact a skos:Concept,
         dpv:Relation ;
     dct:created "2020-11-04"^^xsd:date ;
@@ -2463,60 +2891,83 @@ dpv:hasContact a skos:Concept,
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J.Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
-    rdfs:domain dpv:Entity ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:Concept ;
     sw:term_status "accepted"@en ;
     skos:definition "Specifies contact details of a legal entity such as phone  or email"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "has contact"@en .
+    skos:prefLabel "has contact"@en ;
+    dpv:hasDomain dpv:Entity ;
+    dpv:hasRange dpv:Concept .
 
 dpv:hasContext a skos:Concept,
         dpv:Relation ;
     dct:created "2019-04-05"^^xsd:date ;
-    rdfs:domain dpv:Purpose ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:Context ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates a purpose is restricted to the specified context(s)"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "has context"@en .
+    skos:prefLabel "has context"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:Context .
 
 dpv:hasDataExporter a skos:Concept,
         dpv:Relation ;
-    dct:created "2022-02-13"^^xsd:date ;
-    rdfs:domain dpv:Concept ;
+    dct:created "2022-02-09"^^xsd:date ;
+    dct:creator "Georg P. Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:DataExporter ;
-    rdfs:subPropertyOf dpv:hasEntity ;
     sw:term_status "accepted"@en ;
     skos:definition "Indiciates inclusion or applicability of a LegalEntity in the role of Data Exporter"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "has data exporter"@en .
+    skos:prefLabel "has data exporter"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:DataExporter ;
+    dpv:isSubTypeOf dpv:hasEntity .
 
 dpv:hasDataImporter a skos:Concept,
         dpv:Relation ;
-    dct:created "2022-02-14"^^xsd:date ;
-    rdfs:domain dpv:Concept ;
+    dct:created "2022-02-09"^^xsd:date ;
+    dct:creator "Georg P. Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:DataImporter ;
-    rdfs:subPropertyOf dpv:hasRecipient ;
     sw:term_status "accepted"@en ;
     skos:definition "Indiciates inclusion or applicability of a LegalEntity in the role of Data Importer"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "has data importer"@en .
+    skos:prefLabel "has data importer"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:DataImporter ;
+    dpv:isSubTypeOf dpv:hasRecipient .
 
 dpv:hasDataProcessor a skos:Concept,
         dpv:Relation ;
-    dct:created "2022-02-10"^^xsd:date ;
-    rdfs:domain dpv:Concept ;
+    dct:created "2022-02-09"^^xsd:date ;
+    dct:creator "Georg P. Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:DataProcessor ;
-    rdfs:subPropertyOf dpv:hasRecipient ;
     sw:term_status "accepted"@en ;
     skos:definition "Indiciates inclusion or applicability of a Data Processor"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "has data processor"@en .
+    skos:prefLabel "has data processor"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:DataProcessor ;
+    dpv:isSubTypeOf dpv:hasRecipient .
+
+dpv:hasDataProtectionOfficer a skos:Concept,
+        dpv:Relation ;
+    dct:created "2022-03-02"^^xsd:date ;
+    dct:creator "Paul Ryan"^^xsd:string,
+        "Rob Brennan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Specifices an associated data protection officer"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "has data protection officer"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:DataProtectionOfficer ;
+    dpv:isSubTypeOf dpv:hasRepresentative .
 
 dpv:hasDataSource a skos:Concept,
         dpv:Relation ;
@@ -2524,13 +2975,13 @@ dpv:hasDataSource a skos:Concept,
     dct:creator "Georg P. Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
-    rdfs:domain dpv:Concept ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:DataSource ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates the source or origin of data being processed"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "has data source"@en .
+    skos:prefLabel "has data source"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:DataSource .
 
 dpv:hasDuration a skos:Concept,
         dpv:Relation ;
@@ -2539,14 +2990,14 @@ dpv:hasDuration a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
-    dct:source <https://www.specialprivacy.eu/> ;
-    rdfs:domain dpv:Concept ;
+    dct:source <https://specialprivacy.ercim.eu/> ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:Duration ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates information about duration"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "has duration"@en .
+    skos:prefLabel "has duration"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:Duration .
 
 dpv:hasExpiry a skos:Concept,
         dpv:Relation ;
@@ -2567,12 +3018,12 @@ dpv:hasExpiryCondition a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Mark Lizar"^^xsd:string ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:subPropertyOf dpv:expiry ;
     sw:term_status "accepted"@en ;
     skos:definition "Specifies the condition or event that determines the expiry of consent"@en ;
     skos:inScheme dpv: ;
     skos:note "Can be TextOrDocumentOrURI"@en ;
-    skos:prefLabel "has expiry condition"@en .
+    skos:prefLabel "has expiry condition"@en ;
+    dpv:isSubTypeOf dpv:expiry .
 
 dpv:hasExpiryTime a skos:Concept,
         dpv:Relation ;
@@ -2581,22 +3032,23 @@ dpv:hasExpiryTime a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Mark Lizar"^^xsd:string ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:subPropertyOf dpv:expiry ;
     sw:term_status "accepted"@en ;
     skos:definition "Specifies the expiry time or duration for consent"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "has expiry time"@en .
+    skos:prefLabel "has expiry time"@en ;
+    dpv:isSubTypeOf dpv:expiry .
 
 dpv:hasFrequency a skos:Concept,
         dpv:Relation ;
     dct:created "2022-02-16"^^xsd:date ;
-    rdfs:domain dpv:Concept ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:Frequency ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates the frequency with which something takes place"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "has frequency"@en .
+    skos:prefLabel "has frequency"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:Frequency .
 
 dpv:hasHumanInvolvement a skos:Concept,
         dpv:Relation ;
@@ -2604,14 +3056,14 @@ dpv:hasHumanInvolvement a skos:Concept,
     dct:creator "Georg P. Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
-    rdfs:domain dpv:Concept ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:HumanInvolvement ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates Involvement of humans in processing such as within automated decision making process"@en ;
     skos:inScheme dpv: ;
     skos:note "Human involvement is also relevant to 'human in the loop'"@en ;
-    skos:prefLabel "has human involvement"@en .
+    skos:prefLabel "has human involvement"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:HumanInvolvement .
 
 dpv:hasIdentifier a skos:Concept,
         dpv:Relation ;
@@ -2620,37 +3072,74 @@ dpv:hasIdentifier a skos:Concept,
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J.Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
-    rdfs:domain dpv:Concept ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:Concept ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates an identifier associated for identification or reference"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "has identifier"@en .
+    skos:prefLabel "has identifier"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:Concept .
+
+dpv:hasImpact a skos:Concept,
+        dpv:Relation ;
+    dct:created ""^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Indicates impact(s) possible or arising as consequences from specified concept"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "has impact"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:Impact ;
+    dpv:isSubTypeOf dpv:hasConsequence .
+
+dpv:hasImpactOn a skos:Concept,
+        dpv:Relation ;
+    dct:created ""^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Indicates the thing (e.g. plan, process, or entity) affected by an impact"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "has impact on"@en ;
+    dpv:hasDomain dpv:Impact ;
+    dpv:hasRange dpv:Concept ;
+    dpv:isSubTypeOf dpv:hasConsequenceOn .
 
 dpv:hasJointDataControllers a skos:Concept,
         dpv:Relation ;
     dct:created "2022-02-09"^^xsd:date ;
-    rdfs:domain dpv:Concept ;
+    dct:creator "Georg P. Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:JointDataControllers ;
-    rdfs:subPropertyOf dpv:hasDataController ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates inclusion or applicability of a Joint Data Controller"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "has joint data controllers"@en .
+    skos:prefLabel "has joint data controllers"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:JointDataControllers ;
+    dpv:isSubTypeOf dpv:hasDataController .
 
 dpv:hasJurisdiction a skos:Concept,
         dpv:Relation ;
     dct:created "2022-01-19"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    rdfs:domain dpv:Concept ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:Location ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates applicability of specified jurisdiction"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "has jurisdiction"@en .
+    skos:prefLabel "has jurisdiction"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:Location .
 
 dpv:hasName a skos:Concept,
         dpv:Relation ;
@@ -2659,52 +3148,52 @@ dpv:hasName a skos:Concept,
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J.Pandit"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
-    rdfs:domain dpv:Entity ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:Concept ;
     sw:term_status "accepted"@en ;
     skos:definition "Specifies name of a legal entity"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "has name"@en .
+    skos:prefLabel "has name"@en ;
+    dpv:hasDomain dpv:Entity ;
+    dpv:hasRange dpv:Concept .
 
 dpv:hasOrganisationalMeasure a skos:Concept,
         dpv:Relation ;
-    dct:created "2022-02-10"^^xsd:date ;
+    dct:created "2022-02-09"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    rdfs:domain dpv:Concept ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:OrganisationalMeasure ;
-    rdfs:subPropertyOf dpv:hasTechnicalOrganisationalMeasure ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates use or applicability of Organisational measure"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "has organisational measure"@en .
+    skos:prefLabel "has organisational measure"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:OrganisationalMeasure ;
+    dpv:isSubTypeOf dpv:hasTechnicalOrganisationalMeasure .
 
 dpv:hasPersonalDataHandling a skos:Concept,
         dpv:Relation ;
     dct:created "2022-01-19"^^xsd:date ;
     dct:creator "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
-    rdfs:domain dpv:Concept ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:PersonalDataHandling ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates association with Personal Data Handling"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "has personal data handling"@en .
+    skos:prefLabel "has personal data handling"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:PersonalDataHandling .
 
 dpv:hasPolicy a skos:Concept,
         dpv:Relation ;
     dct:created "2022-01-26"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    rdfs:domain dpv:Concept ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:Policy ;
-    rdfs:subPropertyOf dpv:hasTechnicalOrganisationalMeasure ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates policy applicable or used"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "has policy"@en .
+    skos:prefLabel "has policy"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:Policy ;
+    dpv:isSubTypeOf dpv:hasTechnicalOrganisationalMeasure .
 
 dpv:hasProvisionBy a skos:Concept,
         dpv:Relation ;
@@ -2713,12 +3202,12 @@ dpv:hasProvisionBy a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Mark Lizar"^^xsd:string ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:LegalEntity ;
     sw:term_status "accepted"@en ;
     skos:definition "Specifies the entity that provisioned or provided consent"@en ;
     skos:inScheme dpv: ;
     skos:note "Normally this would be the dataSubject, but in some exceptional cases, the consent might be given on behalf by someone else, e.g. parents of minors."@en ;
-    skos:prefLabel "has provision by"@en .
+    skos:prefLabel "has provision by"@en ;
+    dpv:hasRange dpv:LegalEntity .
 
 dpv:hasProvisionByJustification a skos:Concept,
         dpv:Relation ;
@@ -2760,66 +3249,69 @@ dpv:hasProvisionTime a skos:Concept,
 
 dpv:hasRecipientDataController a skos:Concept,
         dpv:Relation ;
-    dct:created "2022-02-11"^^xsd:date ;
-    rdfs:domain dpv:Concept ;
+    dct:created "2022-02-09"^^xsd:date ;
+    dct:creator "Georg P. Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:DataController ;
-    rdfs:subPropertyOf dpv:hasRecipient ;
     sw:term_status "accepted"@en ;
     skos:definition "Indiciates inclusion or applicability of a Data Controller as a Recipient of persona data"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "has recipient data controller"@en .
+    skos:prefLabel "has recipient data controller"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:DataController ;
+    dpv:isSubTypeOf dpv:hasRecipient .
 
 dpv:hasRecipientThirdParty a skos:Concept,
         dpv:Relation ;
-    dct:created "2022-02-12"^^xsd:date ;
-    rdfs:domain dpv:Concept ;
+    dct:created "2022-02-09"^^xsd:date ;
+    dct:creator "Georg P. Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:ThirdParty ;
-    rdfs:subPropertyOf dpv:hasRecipient ;
     sw:term_status "accepted"@en ;
     skos:definition "Indiciates inclusion or applicability of a Third Party as a Recipient of persona data"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "has recipient third party"@en .
+    skos:prefLabel "has recipient third party"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:ThirdParty ;
+    dpv:isSubTypeOf dpv:hasRecipient .
 
-dpv:hasRepresentative a skos:Concept,
+dpv:hasResponsibleEntity a skos:Concept,
         dpv:Relation ;
-    dct:created "2020-11-04"^^xsd:date ;
-    dct:creator "Beatriz Esteves"^^xsd:string,
-        "Georg P Krog"^^xsd:string,
-        "Harshvardhan J.Pandit"^^xsd:string,
-        "Paul Ryan"^^xsd:string ;
-    rdfs:domain dpv:Entity ;
+    dct:created "2022-03-02"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:Representative ;
-    rdfs:subPropertyOf dpv:hasEntity ;
     sw:term_status "accepted"@en ;
-    skos:definition "Specifies representative of the legal entity"@en ;
+    skos:definition "Specifies the indicated entity is responsible within some context"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "has representative"@en .
+    skos:prefLabel "has responsible entity"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:Entity ;
+    dpv:isSubTypeOf dpv:hasEntity .
 
 dpv:hasRight a skos:Concept,
         dpv:Relation ;
     dct:created "2020-11-18"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    rdfs:domain dpv:Concept ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:Right ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates use or applicability of Right"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "has right"@en .
+    skos:prefLabel "has right"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:Right .
 
 dpv:hasSector a skos:Concept,
         dpv:Relation ;
     dct:created "2019-04-05"^^xsd:date ;
-    rdfs:domain dpv:Concept ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:Sector ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates the purpose is associated with activities in the indicated (Economic) Sector(s)"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "has sector"@en .
+    skos:prefLabel "has sector"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:Sector .
 
 dpv:hasStorage a skos:Concept,
         dpv:Relation ;
@@ -2828,39 +3320,41 @@ dpv:hasStorage a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
-    dct:source <https://www.specialprivacy.eu/> ;
-    rdfs:domain dpv:Concept ;
+    dct:source <https://specialprivacy.ercim.eu/> ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:StorageCondition ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates information about storage condition"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "has storage"@en .
+    skos:prefLabel "has storage"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:StorageCondition .
 
 dpv:hasTechnicalMeasure a skos:Concept,
         dpv:Relation ;
     dct:created "2022-02-09"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    rdfs:domain dpv:Concept ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:TechnicalMeasure ;
-    rdfs:subPropertyOf dpv:hasTechnicalOrganisationalMeasure ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates use or applicability of Technical measure"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "has technical measure"@en .
+    skos:prefLabel "has technical measure"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:TechnicalMeasure ;
+    dpv:isSubTypeOf dpv:hasTechnicalOrganisationalMeasure .
 
 dpv:hasThirdCountry a skos:Concept,
         dpv:Relation ;
     dct:created "2022-02-09"^^xsd:date ;
-    rdfs:domain dpv:Concept ;
+    dct:creator "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:ThirdCountry ;
-    rdfs:subPropertyOf dpv:hasCountry ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates applicability or relevance of a 'third country'"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "has third country"@en .
+    skos:prefLabel "has third country"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:ThirdCountry ;
+    dpv:isSubTypeOf dpv:hasCountry .
 
 dpv:hasWithdrawalBy a skos:Concept,
         dpv:Relation ;
@@ -2869,12 +3363,12 @@ dpv:hasWithdrawalBy a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Mark Lizar"^^xsd:string ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:LegalEntity ;
     sw:term_status "accepted"@en ;
     skos:definition "Specifies the entity that withdrew consent"@en ;
     skos:inScheme dpv: ;
     skos:note "Normally this would be the dataSubject, but in some exceptional cases, the consent might be withdraawn on behalf by someone else, e.g. parents of minors."@en ;
-    skos:prefLabel "has withdrawal by"@en .
+    skos:prefLabel "has withdrawal by"@en ;
+    dpv:hasRange dpv:LegalEntity .
 
 dpv:hasWithdrawalByJustification a skos:Concept,
         dpv:Relation ;
@@ -2914,18 +3408,46 @@ dpv:hasWithdrawalTime a skos:Concept,
     skos:inScheme dpv: ;
     skos:prefLabel "has withdrawal time"@en .
 
+dpv:isAfter a skos:Concept,
+        dpv:Relation ;
+    dct:created "2022-03-02"^^xsd:date ;
+    dct:creator "Georg P. Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Indicates the specified concepts is 'after' this concept in some context"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "is after"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:Concept .
+
 dpv:isAuthorityFor a skos:Concept,
         dpv:Relation ;
     dct:created "2022-01-19"^^xsd:date ;
     dct:creator "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
-    rdfs:domain dpv:Authority ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:Concept ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates area, scope, or applicability of an Authority"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "is authority for"@en .
+    skos:prefLabel "is authority for"@en ;
+    dpv:hasDomain dpv:Authority ;
+    dpv:hasRange dpv:Concept .
+
+dpv:isBefore a skos:Concept,
+        dpv:Relation ;
+    dct:created "2022-03-02"^^xsd:date ;
+    dct:creator "Georg P. Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Indicates the specified concepts is 'before' this concept in some context"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "is before"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:Concept .
 
 dpv:isExplicit a skos:Concept,
         dpv:Relation ;
@@ -2934,12 +3456,12 @@ dpv:isExplicit a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Mark Lizar"^^xsd:string ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range xsd:boolean ;
     sw:term_status "accepted"@en ;
     skos:definition "Specifies consent is 'explicit'"@en ;
     skos:inScheme dpv: ;
     skos:note "The conditions for what is considered 'explicit consent' differ by norms and laws."@en ;
-    skos:prefLabel "is explicit"@en .
+    skos:prefLabel "is explicit"@en ;
+    dpv:hasRange xsd:boolean .
 
 dpv:isImplementedByEntity a skos:Concept,
         dpv:Relation ;
@@ -2950,14 +3472,14 @@ dpv:isImplementedByEntity a skos:Concept,
         "Julian Flake"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:modified "2022-01-26"^^xsd:date ;
-    rdfs:domain dpv:Concept ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:Entity ;
     sw:term_status "modified"@en ;
     skos:definition "Indicates implementation details such as entities or agents"@en ;
     skos:inScheme dpv: ;
     skos:note "The use of 'entity' is inclusive of entities (e.g. Data Processor) as well as 'agent' (e.g. DPO). For indicating technological implementation, the property isImplementedByTechnology should be used."@en ;
-    skos:prefLabel "is implemented by entity"@en .
+    skos:prefLabel "is implemented by entity"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:Entity .
 
 dpv:isImplementedUsingTechnology a skos:Concept,
         dpv:Relation ;
@@ -2966,51 +3488,51 @@ dpv:isImplementedUsingTechnology a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
-    rdfs:domain dpv:Concept ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:Technology ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates implementation details such as technologies or processes"@en ;
     skos:inScheme dpv: ;
     skos:note "The term 'technology' is inclusive of technologies, processes, and methods."@en ;
-    skos:prefLabel "is implemented using technology"@en .
+    skos:prefLabel "is implemented using technology"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:Technology .
 
 dpv:isMitigatedByMeasure a skos:Concept,
         dpv:Relation ;
     dct:created "2022-02-09"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    rdfs:domain dpv:Risk ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:RiskMitigationMeasure ;
-    rdfs:subPropertyOf dpv:hasTechnicalOrganisationalMeasure ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicate a risk is mitigated by specified measure"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "is mitigated by measure"@en .
+    skos:prefLabel "is mitigated by measure"@en ;
+    dpv:hasDomain dpv:Risk ;
+    dpv:hasRange dpv:RiskMitigationMeasure ;
+    dpv:isSubTypeOf dpv:hasTechnicalOrganisationalMeasure .
 
 dpv:isPolicyFor a skos:Concept,
         dpv:Relation ;
     dct:created "2022-01-26"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    rdfs:domain dpv:Policy ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:Concept ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates the context or application of policy"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "is policy for"@en .
+    skos:prefLabel "is policy for"@en ;
+    dpv:hasDomain dpv:Policy ;
+    dpv:hasRange dpv:Concept .
 
 dpv:mitigatesRisk a skos:Concept,
         dpv:Relation ;
     dct:created "2020-11-04"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    rdfs:domain dpv:RiskMitigationMeasure ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:Risk ;
     sw:term_status "accepted"@en ;
-    skos:definition "Indicates mitigation of risk(s)"@en ;
+    skos:definition "Indicates risks mitigated by this concept"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "mitigates risk"@en .
+    skos:prefLabel "mitigates risk"@en ;
+    dpv:hasDomain dpv:RiskMitigationMeasure ;
+    dpv:hasRange dpv:Risk .
 
 dpv:Advertising a skos:Concept,
         dpv:Concept ;
@@ -3037,6 +3559,21 @@ dpv:AlgorithmicLogic a skos:Concept,
     skos:note "Algorithmic Logic is intended as a broad concept for explaining the use of algorithms and automated decisions making within Processing. To describe the actual algorithm, see the Algorithm concept."@en ;
     skos:prefLabel "Algorithmic Logic"@en ;
     dpv:isSubTypeOf dpv:Context .
+
+dpv:Applicant a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-04-06"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P. Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Data subjects that are applicants in some context"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "Applicant"@en ;
+    dpv:isSubTypeOf dpv:DataSubject .
 
 dpv:AuthenticationProtocols a skos:Concept,
         dpv:Concept ;
@@ -3067,17 +3604,6 @@ dpv:CommunicationManagement a skos:Concept,
     skos:prefLabel "Communication Management"@en ;
     dpv:isSubTypeOf dpv:Purpose .
 
-dpv:Consequence a skos:Concept,
-        dpv:Concept ;
-    dct:created "2022-01-26"^^xsd:date ;
-    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    rdfs:isDefinedBy dpv: ;
-    sw:term_status "accepted"@en ;
-    skos:definition "The consequence(s) possible or arising from indicated plan or action"@en ;
-    skos:inScheme dpv: ;
-    skos:prefLabel "Consequence"@en ;
-    dpv:isSubTypeOf dpv:Context .
-
 dpv:Consultation a skos:Concept,
         dpv:Concept ;
     dct:created "2020-11-04"^^xsd:date ;
@@ -3090,6 +3616,22 @@ dpv:Consultation a skos:Concept,
     skos:inScheme dpv: ;
     skos:prefLabel "Consultation"@en ;
     dpv:isSubTypeOf dpv:OrganisationalMeasure .
+
+dpv:Customer a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-04-06"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P. Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Data subjects that purchase goods or services"@en ;
+    skos:inScheme dpv: ;
+    skos:note "note: for B2B relations where customers are organisations, this concept only applies for data subjects"@en ;
+    skos:prefLabel "Customer"@en ;
+    dpv:isSubTypeOf dpv:DataSubject .
 
 dpv:CustomerCare a skos:Concept,
         dpv:Concept ;
@@ -3164,6 +3706,20 @@ dpv:DataProcessingRecords a skos:Concept,
     skos:prefLabel "Data Processing Records"@en ;
     dpv:isSubTypeOf dpv:RecordsOfActivities .
 
+dpv:DataProtectionOfficer a skos:Concept,
+        dpv:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Georg Krog"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:modified "2021-12-08"^^xsd:date ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_37/oj> ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "modified"@en ;
+    skos:definition "An entity within or authorised by an organisation to monitor internal compliance, inform and advise on data protection obligations and act as a contact point for data subjects and the supervisory authority."@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "Data Protection Officer"@en ;
+    dpv:isSubTypeOf dpv:Representative .
+
 dpv:DerivedPersonalData a skos:Concept,
         dpv:Concept ;
     dct:created "2019-05-07"^^xsd:date ;
@@ -3183,11 +3739,24 @@ dpv:DerivedPersonalData a skos:Concept,
 dpv:Frequency a skos:Concept,
         dpv:Concept ;
     dct:created "2022-02-16"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "The frequency or information about periods and repetitions in terms of recurrence."@en ;
     skos:inScheme dpv: ;
     skos:prefLabel "Frequency"@en .
+
+dpv:GeneratedPersonalData a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-03-30"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Personal Data that is generated or brought into existence without relation to existing data i.e. it is not derived or inferred from other data"@en ;
+    skos:inScheme dpv: ;
+    skos:note "Generated Data is used to indicate data that is produced and is not derived or inferred from other data"@en ;
+    skos:prefLabel "Generated Personal Data"@en ;
+    dpv:isSubTypeOf dpv:PersonalData .
 
 dpv:GovernmentalOrganisation a skos:Concept,
         dpv:Concept ;
@@ -3206,7 +3775,7 @@ dpv:HumanInvolvement a skos:Concept,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
-    skos:definition "The involvement of humans as a factor or agent in processing"@en ;
+    skos:definition "The involvement of humans in specified context"@en ;
     skos:inScheme dpv: ;
     skos:note "Human Involvement here broadly refers to any involvement by a human in the context of carrying out processing. This may include verification of outcomes, providing input data for making decisions, or overseeing activities."@en ;
     skos:prefLabel "Human Involvement"@en ;
@@ -3238,6 +3807,7 @@ dpv:Law a skos:Concept,
 dpv:NaturalPerson a skos:Concept,
         dpv:Concept ;
     dct:created "2022-02-09"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "A human"@en ;
@@ -3311,6 +3881,20 @@ dpv:PersonalDataHandling a skos:Concept,
     skos:inScheme dpv: ;
     skos:prefLabel "Personal Data Handling"@en .
 
+dpv:PersonalisedAdvertising a skos:Concept,
+        dpv:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Create and provide personalised advertising"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "Personalised Advertising"@en ;
+    dpv:isSubTypeOf dpv:Advertising,
+        dpv:Personalisation .
+
 dpv:RecordsOfActivities a skos:Concept,
         dpv:Concept ;
     dct:created "2021-09-08"^^xsd:date ;
@@ -3327,6 +3911,9 @@ dpv:RecordsOfActivities a skos:Concept,
 dpv:RequestedServiceProvision a skos:Concept,
         dpv:Concept ;
     dct:created "2021-09-08"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Deliver service as requested by user or consumer"@en ;
@@ -3414,7 +4001,7 @@ dpv:ThirdParty a skos:Concept,
 dpv:Transfer a skos:Concept,
         dpv:Concept ;
     dct:created "2019-05-07"^^xsd:date ;
-    dct:source <https://www.specialprivacy.eu/vocabs/processing> ;
+    dct:source <https://specialprivacy.ercim.eu/vocabs/processing> ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "to move data from one place to another"@en ;
@@ -3447,19 +4034,37 @@ dpv:VitalInterestOfNaturalPerson a skos:Concept,
     skos:prefLabel "Vital Interest of Natural Person"@en ;
     dpv:isSubTypeOf dpv:VitalInterest .
 
+dpv:hasConsequence a skos:Concept,
+        dpv:Relation ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string ;
+    dct:modified "2021-09-21"^^xsd:date ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Indicates consenquence(s) possible or arising from specified concept"@en ;
+    skos:inScheme dpv: ;
+    skos:note "Removed plural suffix for consistency"@en ;
+    skos:prefLabel "has consequence"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:Consequence .
+
 dpv:hasCountry a skos:Concept,
         dpv:Relation ;
     dct:created "2022-01-19"^^xsd:date ;
     dct:creator "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
-    rdfs:domain dpv:Concept ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:Country ;
-    rdfs:subPropertyOf dpv:hasLocation ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates applicability of specified country"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "has country"@en .
+    skos:prefLabel "has country"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:Country ;
+    dpv:isSubTypeOf dpv:hasLocation .
 
 dpv:hasDataSubject a skos:Concept,
         dpv:Relation ;
@@ -3470,14 +4075,14 @@ dpv:hasDataSubject a skos:Concept,
         "Javier Fernández"^^xsd:string,
         "Mark Lizar"^^xsd:string ;
     dct:modified "2020-11-04"^^xsd:date ;
-    rdfs:domain dpv:Concept ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:DataSubject ;
-    rdfs:subPropertyOf dpv:hasEntity ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates association with Data Subject"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "has data subject"@en .
+    skos:prefLabel "has data subject"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:DataSubject ;
+    dpv:isSubTypeOf dpv:hasEntity .
 
 dpv:hasLegalBasis a skos:Concept,
         dpv:Relation ;
@@ -3485,13 +4090,13 @@ dpv:hasLegalBasis a skos:Concept,
     dct:creator "Axel Polleres"^^xsd:string,
         "Javier Fernández"^^xsd:string ;
     dct:modified "2020-11-04"^^xsd:date ;
-    rdfs:domain dpv:Concept ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:LegalBasis ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates use or applicability of a Legal Basis"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "has legal basis"@en .
+    skos:prefLabel "has legal basis"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:LegalBasis .
 
 dpv:hasLocation a skos:Concept,
         dpv:Relation ;
@@ -3500,26 +4105,26 @@ dpv:hasLocation a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
-    dct:source <https://www.specialprivacy.eu/> ;
-    rdfs:domain dpv:Concept ;
+    dct:source <https://specialprivacy.ercim.eu/> ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:Location ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates information about location"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "has location"@en .
+    skos:prefLabel "has location"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:Location .
 
 dpv:hasPersonalData a skos:Concept,
         dpv:Relation ;
     dct:created "2022-01-19"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    rdfs:domain dpv:Concept ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:PersonalData ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates association with Personal Data"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "has personal data"@en .
+    skos:prefLabel "has personal data"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:PersonalData .
 
 dpv:hasProcessing a skos:Concept,
         dpv:Relation ;
@@ -3530,14 +4135,14 @@ dpv:hasProcessing a skos:Concept,
         "Javier Fernández"^^xsd:string,
         "Mark Lizar"^^xsd:string ;
     dct:modified "2020-11-04"^^xsd:date ;
-    dct:source <https://www.specialprivacy.eu/> ;
-    rdfs:domain dpv:Concept ;
+    dct:source <https://specialprivacy.ercim.eu/> ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:Processing ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates association with Processing"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "has processing"@en .
+    skos:prefLabel "has processing"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:Processing .
 
 dpv:hasPurpose a skos:Concept,
         dpv:Relation ;
@@ -3548,26 +4153,43 @@ dpv:hasPurpose a skos:Concept,
         "Javier Fernández"^^xsd:string,
         "Mark Lizar"^^xsd:string ;
     dct:modified "2020-11-04"^^xsd:date ;
-    dct:source <https://www.specialprivacy.eu/> ;
-    rdfs:domain dpv:Concept ;
+    dct:source <https://specialprivacy.ercim.eu/> ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:Purpose ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates association with Purpose"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "has purpose"@en .
+    skos:prefLabel "has purpose"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:Purpose .
+
+dpv:hasRepresentative a skos:Concept,
+        dpv:Relation ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J.Pandit"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Specifies representative of the legal entity"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "has representative"@en ;
+    dpv:hasDomain dpv:Entity ;
+    dpv:hasRange dpv:Representative ;
+    dpv:isSubTypeOf dpv:hasEntity .
 
 dpv:hasRisk a skos:Concept,
         dpv:Relation ;
     dct:created "2020-11-18"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    rdfs:domain dpv:Concept ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:Risk ;
     sw:term_status "accepted"@en ;
-    skos:definition "Indicates applicability of Risk"@en ;
+    skos:definition "Indicates applicability of Risk"@en,
+        "Indicates applicability of Risk for this concept"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "has risk"@en .
+    skos:prefLabel "has risk"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:Risk .
 
 dpv:Assessment a skos:Concept,
         dpv:Concept ;
@@ -3624,13 +4246,24 @@ dpv:CreatePersonalizedRecommendations a skos:Concept,
     dct:created "2019-11-26"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Rudy Jacob"^^xsd:string ;
-    dct:source <https://www.specialprivacy.eu/> ;
+    dct:source <https://specialprivacy.ercim.eu/> ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Create and provide personalised recommendations"@en ;
     skos:inScheme dpv: ;
     skos:prefLabel "Create Personalized Recommendations"@en ;
     dpv:isSubTypeOf dpv:ServicePersonalization .
+
+dpv:Damage a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-03-30"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Impact that acts as or causes damages"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "Damage"@en ;
+    dpv:isSubTypeOf dpv:Impact .
 
 dpv:Data a skos:Concept,
         dpv:Concept ;
@@ -3657,6 +4290,7 @@ dpv:DataProcessor a skos:Concept,
 dpv:Duration a skos:Concept,
         dpv:Concept ;
     dct:created "2022-02-09"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "The duration or temporal limitation"@en ;
@@ -3808,14 +4442,15 @@ dpv:hasDataController a skos:Concept,
         "Javier Fernández"^^xsd:string,
         "Mark Lizar"^^xsd:string ;
     dct:modified "2020-11-04"^^xsd:date ;
-    rdfs:domain dpv:Concept ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:DataController ;
-    rdfs:subPropertyOf dpv:hasEntity ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates association with Data Controller"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "has data controller"@en .
+    skos:prefLabel "has data controller"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:DataController,
+        dpv:LegalEntity ;
+    dpv:isSubTypeOf dpv:hasEntity .
 
 dpv:Anonymization a skos:Concept,
         dpv:Concept ;
@@ -3933,20 +4568,12 @@ dpv:ResearchAndDevelopment a skos:Concept,
     skos:prefLabel "Research and Development"@en ;
     dpv:isSubTypeOf dpv:Purpose .
 
-dpv:Risk a skos:Concept,
-        dpv:Concept ;
-    dct:created "2020-11-18"^^xsd:date ;
-    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    rdfs:isDefinedBy dpv: ;
-    sw:term_status "accepted"@en ;
-    skos:definition "A risk or possibility or uncertainty of negative effects, impacts, or consequences."@en ;
-    skos:inScheme dpv: ;
-    skos:note "Risks can be associated with one or more different concepts such as purpose, processing, personal data, technical or organisational measure."@en ;
-    skos:prefLabel "Risk"@en .
-
 dpv:SellProducts a skos:Concept,
         dpv:Concept ;
     dct:created "2021-09-08"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Sell products or services"@en ;
@@ -4019,22 +4646,6 @@ dpv:DataProcessingAgreement a skos:Concept,
     skos:prefLabel "Data Processing Agreement"@en ;
     dpv:isSubTypeOf dpv:LegalAgreement .
 
-dpv:DataSubject a skos:Concept,
-        dpv:Concept ;
-    dct:created "2019-04-05"^^xsd:date ;
-    dct:creator "Axel Polleres"^^xsd:string,
-        "Javier Fernández"^^xsd:string ;
-    dct:modified "2020-11-04"^^xsd:date ;
-    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_1/oj> ;
-    rdfs:isDefinedBy dpv: ;
-    sw:term_status "accepted"@en ;
-    skos:definition "The individual (or category of individuals) whose personal data is being processed"@en ;
-    skos:inScheme dpv: ;
-    skos:note "The term 'data subject' is specific to the GDPR, but is functionally equivalent to the term 'individual' and the ISO/IEC term 'PII Principle'."@en ;
-    skos:prefLabel "Data Subject"@en ;
-    dpv:isSubTypeOf dpv:LegalEntity,
-        dpv:NaturalPerson .
-
 dpv:LegalAgreement a skos:Concept,
         dpv:Concept ;
     dct:created "2019-04-05"^^xsd:date ;
@@ -4094,6 +4705,17 @@ dpv:OrganisationGovernance a skos:Concept,
     skos:prefLabel "Organisation Governance"@en ;
     dpv:isSubTypeOf dpv:Purpose .
 
+dpv:Risk a skos:Concept,
+        dpv:Concept ;
+    dct:created "2020-11-18"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "A risk or possibility or uncertainty of negative effects, impacts, or consequences."@en ;
+    skos:inScheme dpv: ;
+    skos:note "Risks can be associated with one or more different concepts such as purpose, processing, personal data, technical or organisational measure."@en ;
+    skos:prefLabel "Risk"@en .
+
 dpv:Use a skos:Concept,
         dpv:Concept ;
     dct:created "2019-05-07"^^xsd:date ;
@@ -4105,9 +4727,23 @@ dpv:Use a skos:Concept,
     skos:prefLabel "Use"@en ;
     dpv:isSubTypeOf dpv:Processing .
 
+dpv:Consequence a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-01-26"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "The consequence(s) possible or arising from specified context"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "Consequence"@en ;
+    dpv:isSubTypeOf dpv:Context .
+
 dpv:CustomerManagement a skos:Concept,
         dpv:Concept ;
     dct:created "2021-09-08"^^xsd:date ;
+    dct:creator "Beatriz"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Manage past, current, and future customers"@en ;
@@ -4133,7 +4769,7 @@ dpv:Recipient a skos:Concept,
         "Javier Fernández"^^xsd:string ;
     dct:modified "2020-11-04"^^xsd:date ;
     dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_9/oj>,
-        <https://www.specialprivacy.eu/> ;
+        <https://specialprivacy.ercim.eu/> ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Entities that receive personal data"@en ;
@@ -4171,18 +4807,6 @@ dpv:TechnicalMeasure a skos:Concept,
     skos:prefLabel "Technical Measure"@en ;
     dpv:isSubTypeOf dpv:TechnicalOrganisationalMeasure .
 
-dpv:hasEntity a skos:Concept,
-        dpv:Relation ;
-    dct:created "2022-02-09"^^xsd:date ;
-    rdfs:domain dpv:Concept ;
-    rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:Entity ;
-    sw:term_status "accepted"@en ;
-    skos:definition "Indicates inclusion or applicability of an entity to some concept"@en ;
-    skos:inScheme dpv: ;
-    skos:note "parent property for controller, processor, data subject, authority, etc.?"@en ;
-    skos:prefLabel "has entity"@en .
-
 dpv:hasRecipient a skos:Concept,
         dpv:Relation ;
     dct:created "2019-04-04"^^xsd:date ;
@@ -4192,15 +4816,15 @@ dpv:hasRecipient a skos:Concept,
         "Javier Fernández"^^xsd:string,
         "Mark Lizar"^^xsd:string ;
     dct:modified "2020-11-04"^^xsd:date ;
-    dct:source <https://www.specialprivacy.eu/> ;
-    rdfs:domain dpv:Concept ;
+    dct:source <https://specialprivacy.ercim.eu/> ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:Recipient ;
-    rdfs:subPropertyOf dpv:hasEntity ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates Recipient of Personal Data"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "has recipient"@en .
+    skos:prefLabel "has recipient"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:Recipient ;
+    dpv:isSubTypeOf dpv:hasEntity .
 
 dpv:hasTechnicalOrganisationalMeasure a skos:Concept,
         dpv:Relation ;
@@ -4211,13 +4835,53 @@ dpv:hasTechnicalOrganisationalMeasure a skos:Concept,
         "Javier Fernández"^^xsd:string,
         "Mark Lizar"^^xsd:string ;
     dct:modified "2020-11-04"^^xsd:date ;
-    rdfs:domain dpv:Concept ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:TechnicalOrganisationalMeasure ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates use or applicability of Technical or Organisational measure"@en ;
     skos:inScheme dpv: ;
-    skos:prefLabel "has technical and organisational measure"@en .
+    skos:prefLabel "has technical and organisational measure"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:TechnicalOrganisationalMeasure .
+
+dpv:Impact a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-03-23"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Julian Flake"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "The impact(s) possible or arising as a consequence from specified context"@en ;
+    skos:inScheme dpv: ;
+    skos:note "Impact is a stronger notion of consequence in terms of influence, change, or effect on something e.g. for impact assessments"@en ;
+    skos:prefLabel "Impact"@en ;
+    dpv:isSubTypeOf dpv:Consequence .
+
+dpv:TechnicalOrganisationalMeasure a skos:Concept,
+        dpv:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Bud Bruegger"^^xsd:string ;
+    dct:modified "2020-11-04"^^xsd:date ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "The Technical and Organisational measures used."@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "Technical and Organisational Measure"@en .
+
+dpv:hasEntity a skos:Concept,
+        dpv:Relation ;
+    dct:created "2022-02-09"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Indicates inclusion or applicability of an entity to some concept"@en ;
+    skos:inScheme dpv: ;
+    skos:note "parent property for controller, processor, data subject, authority, etc.?"@en ;
+    skos:prefLabel "has entity"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:Entity .
 
 dpv:Authority a skos:Concept,
         dpv:Concept ;
@@ -4232,6 +4896,44 @@ dpv:Authority a skos:Concept,
     skos:prefLabel "Authority"@en ;
     dpv:isSubTypeOf dpv:GovernmentalOrganisation,
         dpv:LegalEntity .
+
+dpv:Location a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-01-19"^^xsd:date ;
+    dct:creator "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "A location is a position, site, or area where something is located"@en ;
+    skos:inScheme dpv: ;
+    skos:note "Location may be geographic, physical, or virtual."@en ;
+    skos:prefLabel "Location"@en .
+
+dpv:ProcessingContext a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-02-09"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Context or conditions within which processing takes place"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "Processing Context"@en ;
+    dpv:isSubTypeOf dpv:Context .
+
+dpv:Context a skos:Concept,
+        dpv:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Elmar Kiesling"^^xsd:string,
+        "Fajar Ekaputra"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string,
+        "Javier Fernandez"^^xsd:string,
+        "Simon Steyskal"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Contextually relevant information about purpose not possible to represent through other concepts"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "Context"@en .
 
 dpv:Organisation a skos:Concept,
         dpv:Concept ;
@@ -4259,53 +4961,6 @@ dpv:PersonalData a skos:Concept,
     skos:related spl:AnyData ;
     dpv:isSubTypeOf dpv:Data .
 
-dpv:TechnicalOrganisationalMeasure a skos:Concept,
-        dpv:Concept ;
-    dct:created "2019-04-05"^^xsd:date ;
-    dct:creator "Bud Bruegger"^^xsd:string ;
-    dct:modified "2020-11-04"^^xsd:date ;
-    rdfs:isDefinedBy dpv: ;
-    sw:term_status "accepted"@en ;
-    skos:definition "The Technical and Organisational measures used."@en ;
-    skos:inScheme dpv: ;
-    skos:prefLabel "Technical and Organisational Measure"@en .
-
-dpv:Location a skos:Concept,
-        dpv:Concept ;
-    dct:created "2022-01-19"^^xsd:date ;
-    rdfs:isDefinedBy dpv: ;
-    sw:term_status "accepted"@en ;
-    skos:definition "A location is a position, site, or area where something is located"@en ;
-    skos:inScheme dpv: ;
-    skos:note "Location may be geographic, physical, or virtual."@en ;
-    skos:prefLabel "Location"@en .
-
-dpv:Context a skos:Concept,
-        dpv:Concept ;
-    dct:created "2019-04-05"^^xsd:date ;
-    dct:creator "Axel Polleres"^^xsd:string,
-        "Elmar Kiesling"^^xsd:string,
-        "Fajar Ekaputra"^^xsd:string,
-        "Harshvardhan J. Pandit"^^xsd:string,
-        "Javier Fernandez"^^xsd:string,
-        "Simon Steyskal"^^xsd:string ;
-    rdfs:isDefinedBy dpv: ;
-    sw:term_status "accepted"@en ;
-    skos:definition "Contextually relevant information about purpose not possible to represent through other concepts"@en ;
-    skos:inScheme dpv: ;
-    skos:prefLabel "Context"@en .
-
-dpv:ProcessingContext a skos:Concept,
-        dpv:Concept ;
-    dct:created "2022-02-09"^^xsd:date ;
-    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    rdfs:isDefinedBy dpv: ;
-    sw:term_status "accepted"@en ;
-    skos:definition "Context or conditions within which processing takes place"@en ;
-    skos:inScheme dpv: ;
-    skos:prefLabel "Processing Context"@en ;
-    dpv:isSubTypeOf dpv:Context .
-
 dpv:Transform a skos:Concept,
         dpv:Concept ;
     dct:created "2019-05-07"^^xsd:date ;
@@ -4316,17 +4971,6 @@ dpv:Transform a skos:Concept,
     skos:inScheme dpv: ;
     skos:prefLabel "Transform"@en ;
     dpv:isSubTypeOf dpv:Processing .
-
-dpv:LegalEntity a skos:Concept,
-        dpv:Concept ;
-    dct:created "2019-04-05"^^xsd:date ;
-    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    rdfs:isDefinedBy dpv: ;
-    sw:term_status "accepted"@en ;
-    skos:definition "A human or non-human 'thing' that constitutes as an entity and which is recognised and defined in law"@en ;
-    skos:inScheme dpv: ;
-    skos:prefLabel "Legal Entity"@en ;
-    dpv:isSubTypeOf dpv:Entity .
 
 dpv:ServiceProvision a skos:Concept,
         dpv:Concept ;
@@ -4344,9 +4988,32 @@ dpv:ServiceProvision a skos:Concept,
     skos:prefLabel "Service Provision"@en ;
     dpv:isSubTypeOf dpv:Purpose .
 
+dpv:LegalEntity a skos:Concept,
+        dpv:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "A human or non-human 'thing' that constitutes as an entity and which is recognised and defined in law"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "Legal Entity"@en ;
+    dpv:isSubTypeOf dpv:Entity .
+
+dpv:Entity a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-02-02"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "A human or non-human 'thing' that constitutes as an entity"@en ;
+    skos:inScheme dpv: ;
+    skos:prefLabel "Entity"@en .
+
 dpv:LegalBasis a skos:Concept,
         dpv:Concept ;
     dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Javier Fernández"^^xsd:string ;
     dct:modified "2020-11-04"^^xsd:date ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
@@ -4361,7 +5028,7 @@ dpv:Processing a skos:Concept,
     dct:creator "Axel Polleres"^^xsd:string,
         "Javier Fernández"^^xsd:string ;
     dct:modified "2020-11-04"^^xsd:date ;
-    dct:source <https://www.specialprivacy.eu/> ;
+    dct:source <https://specialprivacy.ercim.eu/> ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "The processing performed on personal data"@en ;
@@ -4389,13 +5056,29 @@ dpv:Purpose a skos:Concept,
     dct:creator "Axel Polleres"^^xsd:string,
         "Javier Fernández"^^xsd:string ;
     dct:modified "2020-11-04"^^xsd:date ;
-    dct:source <https://www.specialprivacy.eu/> ;
+    dct:source <https://specialprivacy.ercim.eu/> ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "The purpose of processing personal data"@en ;
     skos:inScheme dpv: ;
     skos:prefLabel "Purpose"@en ;
     skos:related spl:AnyPurpose .
+
+dpv:DataSubject a skos:Concept,
+        dpv:Concept ;
+    dct:created "2019-04-05"^^xsd:date ;
+    dct:creator "Axel Polleres"^^xsd:string,
+        "Javier Fernández"^^xsd:string ;
+    dct:modified "2020-11-04"^^xsd:date ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_1/oj> ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "The individual (or category of individuals) whose personal data is being processed"@en ;
+    skos:inScheme dpv: ;
+    skos:note "The term 'data subject' is specific to the GDPR, but is functionally equivalent to the term 'individual' and the ISO/IEC term 'PII Principle'."@en ;
+    skos:prefLabel "Data Subject"@en ;
+    dpv:isSubTypeOf dpv:LegalEntity,
+        dpv:NaturalPerson .
 
 dpv:Relation rdfs:subPropertyOf skos:semanticRelation ;
     skos:prefLabel "Relation"@en .
@@ -4404,9 +5087,12 @@ dpv:Concept rdfs:subClassOf skos:Concept ;
     skos:prefLabel "Concept"@en .
 
 dpv: a skos:ConceptScheme ;
-    skos:hasTopConcept dpv:Context,
+    skos:hasTopConcept dpv:Authority,
+        dpv:Context,
+        dpv:DataSubject,
         dpv:Entity,
         dpv:LegalBasis,
+        dpv:Organisation,
         dpv:PersonalData,
         dpv:Processing,
         dpv:Purpose,

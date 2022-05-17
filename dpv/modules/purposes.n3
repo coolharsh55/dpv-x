@@ -2,8 +2,8 @@
 @prefix dpv: <https://w3id.org/dpv#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix spl: <http://www.specialprivacy.eu/langs/usage-policy#> .
-@prefix svpu: <http://www.specialprivacy.eu/vocabs/purposes#> .
+@prefix spl: <https://specialprivacy.ercim.eu/langs/usage-policy#> .
+@prefix svpu: <https://specialprivacy.ercim.eu/vocabs/purposes#> .
 @prefix sw: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -50,6 +50,7 @@ dpv:PurposesConcepts a skos:Collection ;
         dpv:Personalisation,
         dpv:PersonalisedAdvertising,
         dpv:PersonalisedBenefits,
+        dpv:PersonnelManagement,
         dpv:PublicRelations,
         dpv:Purpose,
         dpv:RecordManagement,
@@ -67,6 +68,7 @@ dpv:PurposesConcepts a skos:Collection ;
         dpv:ServiceRecordManagement,
         dpv:ServiceUsageAnalytics,
         dpv:SocialMediaMarketing,
+        dpv:TargetedAdvertising,
         dpv:TechnicalServiceProvision,
         dpv:UserInterfacePersonalisation,
         dpv:VendorManagement,
@@ -75,6 +77,12 @@ dpv:PurposesConcepts a skos:Collection ;
         dpv:VendorSelectionAssessment,
         dpv:hasPurpose,
         dpv:hasSector .
+
+dpv:hasDomain rdfs:subPropertyOf skos:semanticRelation ;
+    skos:prefLabel "has domain"@en .
+
+dpv:hasRange rdfs:subPropertyOf skos:semanticRelation ;
+    skos:prefLabel "has range"@en .
 
 dpv:isInstanceOf rdfs:subPropertyOf skos:semanticRelation ;
     skos:prefLabel "isInstanceOf"@en .
@@ -101,6 +109,9 @@ dpv:AcademicResearch a skos:Concept,
 dpv:AccountManagement a skos:Concept,
         dpv:Concept ;
     dct:created "2021-09-08"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Create, maintain, and manage accounts for purposes of providing services"@en ;
@@ -141,7 +152,7 @@ dpv:CreateEventRecommendations a skos:Concept,
     dct:created "2019-11-26"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Rudy Jacob"^^xsd:string ;
-    dct:source <https://www.specialprivacy.eu/> ;
+    dct:source <https://specialprivacy.ercim.eu/> ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Create and provide personalised recommendations for events"@en ;
@@ -167,6 +178,9 @@ dpv:CreateProductRecommendations a skos:Concept,
 dpv:CustomerClaimsManagement a skos:Concept,
         dpv:Concept ;
     dct:created "2021-09-08"^^xsd:date ;
+    dct:creator "Beatriz"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
     dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
@@ -177,6 +191,9 @@ dpv:CustomerClaimsManagement a skos:Concept,
 dpv:CustomerOrderManagement a skos:Concept,
         dpv:Concept ;
     dct:created "2021-09-08"^^xsd:date ;
+    dct:creator "Beatriz"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
     dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
@@ -186,7 +203,10 @@ dpv:CustomerOrderManagement a skos:Concept,
 
 dpv:CustomerSolvencyMonitoring a skos:Concept,
         dpv:Concept ;
-    dct:created "2021-09-09"^^xsd:date ;
+    dct:created "2021-09-08"^^xsd:date ;
+    dct:creator "Beatriz"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
     dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
@@ -225,6 +245,9 @@ dpv:DirectMarketing a skos:Concept,
 dpv:DisputeManagement a skos:Concept,
         dpv:Concept ;
     dct:created "2021-09-08"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
     dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
@@ -451,19 +474,6 @@ dpv:Payment a skos:Concept,
     skos:prefLabel "Payment"@en ;
     dpv:isSubTypeOf dpv:ServiceProvision .
 
-dpv:PersonalisedAdvertising a skos:Concept,
-        dpv:Concept ;
-    dct:created "2020-11-04"^^xsd:date ;
-    dct:creator "Beatriz Esteves"^^xsd:string,
-        "Georg P Krog"^^xsd:string,
-        "Harshvardhan J. Pandit"^^xsd:string ;
-    rdfs:isDefinedBy dpv: ;
-    sw:term_status "accepted"@en ;
-    skos:definition "Create and provide personalised advertising"@en ;
-    skos:prefLabel "Personalised Advertising"@en ;
-    dpv:isSubTypeOf dpv:Advertising,
-        dpv:Personalisation .
-
 dpv:PersonalisedBenefits a skos:Concept,
         dpv:Concept ;
     dct:created "2019-04-05"^^xsd:date ;
@@ -478,6 +488,18 @@ dpv:PersonalisedBenefits a skos:Concept,
     skos:definition "Create and provide personalised benefits for a service"@en ;
     skos:prefLabel "Personalised Benefits"@en ;
     dpv:isSubTypeOf dpv:ServicePersonalization .
+
+dpv:PersonnelManagement a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-03-30"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:source <https://www.privacycommission.be/nl/model-voor-een-register-van-de-verwerkingsactiviteiten> ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Management of personnel associated with the organisation e.g. evaluation and management of employees and intermediaries"@en ;
+    skos:prefLabel "Personnel Management"@en ;
+    dpv:isSubTypeOf dpv:HumanResources .
 
 dpv:PublicRelations a skos:Concept,
         dpv:Concept ;
@@ -569,6 +591,9 @@ dpv:SellProductsToDataSubject a skos:Concept,
 dpv:ServiceRecordManagement a skos:Concept,
         dpv:Concept ;
     dct:created "2021-09-08"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Manage invoicing, orders, and records in relation to services"@en ;
@@ -599,6 +624,16 @@ dpv:SocialMediaMarketing a skos:Concept,
     skos:definition "Conduct marketing through social media"@en ;
     skos:prefLabel "Social Media"@en ;
     dpv:isSubTypeOf dpv:Marketing .
+
+dpv:TargetedAdvertising a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-03-30"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Create and provide pesonalised advertisement where the personalisation is targeted to a specific individual or group of individuals"@en ;
+    skos:prefLabel "Targeted Advertising"@en ;
+    dpv:isSubTypeOf dpv:PersonalisedAdvertising .
 
 dpv:TechnicalServiceProvision a skos:Concept,
         dpv:Concept ;
@@ -676,23 +711,23 @@ dpv:hasPurpose a skos:Concept,
         "Javier Fernández"^^xsd:string,
         "Mark Lizar"^^xsd:string ;
     dct:modified "2020-11-04"^^xsd:date ;
-    dct:source <https://www.specialprivacy.eu/> ;
-    rdfs:domain dpv:Concept ;
+    dct:source <https://specialprivacy.ercim.eu/> ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:Purpose ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates association with Purpose"@en ;
-    skos:prefLabel "has purpose"@en .
+    skos:prefLabel "has purpose"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:Purpose .
 
 dpv:hasSector a skos:Concept,
         dpv:Relation ;
     dct:created "2019-04-05"^^xsd:date ;
-    rdfs:domain dpv:Concept ;
     rdfs:isDefinedBy dpv: ;
-    rdfs:range dpv:Sector ;
     sw:term_status "accepted"@en ;
     skos:definition "Indicates the purpose is associated with activities in the indicated (Economic) Sector(s)"@en ;
-    skos:prefLabel "has sector"@en .
+    skos:prefLabel "has sector"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:Sector .
 
 dpv:Advertising a skos:Concept,
         dpv:Concept ;
@@ -765,12 +800,28 @@ dpv:OptimisationForConsumer a skos:Concept,
     skos:related svpu:Custom ;
     dpv:isSubTypeOf dpv:ServiceOptimization .
 
+dpv:PersonalisedAdvertising a skos:Concept,
+        dpv:Concept ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Create and provide personalised advertising"@en ;
+    skos:prefLabel "Personalised Advertising"@en ;
+    dpv:isSubTypeOf dpv:Advertising,
+        dpv:Personalisation .
+
 dpv:Relation rdfs:subPropertyOf skos:semanticRelation ;
     skos:prefLabel "Relation"@en .
 
 dpv:RequestedServiceProvision a skos:Concept,
         dpv:Concept ;
     dct:created "2021-09-08"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Deliver service as requested by user or consumer"@en ;
@@ -797,7 +848,7 @@ dpv:CreatePersonalizedRecommendations a skos:Concept,
     dct:created "2019-11-26"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Rudy Jacob"^^xsd:string ;
-    dct:source <https://www.specialprivacy.eu/> ;
+    dct:source <https://specialprivacy.ercim.eu/> ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Create and provide personalised recommendations"@en ;
@@ -865,6 +916,9 @@ dpv:ResearchAndDevelopment a skos:Concept,
 dpv:SellProducts a skos:Concept,
         dpv:Concept ;
     dct:created "2021-09-08"^^xsd:date ;
+    dct:creator "Beatriz Esteves"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Sell products or services"@en ;
@@ -948,6 +1002,9 @@ dpv:OrganisationGovernance a skos:Concept,
 dpv:CustomerManagement a skos:Concept,
         dpv:Concept ;
     dct:created "2021-09-08"^^xsd:date ;
+    dct:creator "Beatriz"^^xsd:string,
+        "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "Manage past, current, and future customers"@en ;
@@ -975,7 +1032,7 @@ dpv:Purpose a skos:Concept,
     dct:creator "Axel Polleres"^^xsd:string,
         "Javier Fernández"^^xsd:string ;
     dct:modified "2020-11-04"^^xsd:date ;
-    dct:source <https://www.specialprivacy.eu/> ;
+    dct:source <https://specialprivacy.ercim.eu/> ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "The purpose of processing personal data"@en ;
