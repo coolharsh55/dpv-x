@@ -1,0 +1,139 @@
+@prefix : <https://w3id.org/dpv/use-cases/vocab#> .
+@prefix dpv: <https://w3id.org/dpv#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+: a owl:Ontology ;
+    dct:title "DPV UseCase Vocabulary"@en ;
+    dct:description "Concepts for describing use-cases for requirements and concepts within DPV"@en ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:created "2022-06-10"^^xsd:date ;
+    dct:source <https://www.w3.org/community/dpvcg/> ;
+    vann:preferredNamespacePrefix "uc"^^xsd:string ;
+    vann:preferredNamespaceUri "https://w3id.org/dpv/use-cases/vocab#"^^xsd:string ;
+    owl:versionInfo "0.1"^^xsd:string .
+
+
+:UseCase a skos:Concept, rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "UseCase"@en ;
+    skos:definition "An UseCase provides a description where information within the scope of DPVCG is expected to be relevant or applied, and acts as the basis for identifying requirements (including but not limited to creation of concepts). Use cases can contain descriptions of systems, their operations, actors and entities involved, restrictions or constraints, or any other pertinent detail. They can be a simple textual paragraph or elaborative structured documents (in which case we prefer to reference them here as an URL)."@en ;
+    # SHACL constraints
+    sh:targetClass :UseCase ;
+    sh:property [
+        sh:message "An UseCase MUST have a title provided using dct:title"@en ;
+        sh:path dct:title ; sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:message "An UseCase MUST have a description provided using dct:description"@en ;
+        sh:path dct:description ; sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:message "An UseCase MUST have an identifier with prefix 'U' provided using dct:identifier"@en ;
+        sh:path dct:identifier ; sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:message "An UseCase MUST have a summary provided using dct:abstract"@en ;
+        sh:path dct:abstract ; sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:message "An UseCase MAY have one or more contributors specified using dct:contributor"@en ;
+        sh:path dct:contributor ; sh:minCount 0 ;
+    ] ;
+    sh:property [
+        sh:message "An UseCase MAY have a date (e.g. creation or modification) specified using dct:date"@en ;
+        sh:path dct:date ; sh:minCount 0 ;
+    ] ;
+    sh:property [
+        sh:message "An UseCase MAY specify the source of its information using dct:source"@en ;
+        sh:path dct:source ; sh:minCount 0 ;
+    ] ;
+    sh:property [
+        sh:message "An UseCase MAY specify its primary subject or concept using dct:subject"@en ;
+        sh:path dct:subject ; sh:minCount 0 ;
+    ] ;
+    sh:property [
+        sh:message "An UseCase MAY specify relevant requirements derived from it using dct:references"@en ;
+        sh:path dct:references ; sh:minCount 0 ;
+    ] ;
+    vann:example :U1, :U2, :U3 .
+
+:Requirement a skos:Concept, rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Requirement"@en ;
+    skos:definition "A Requirement is a functional or non-functional requirement desirable to provided by or implemented within DPVCG's outputs, primarily the DPV and its extensions. Requirements can relate to the design of the resource, specific concepts and relations within it, provision of a resource and its documentation, or any other pertinent usage or behaviour exhibited by resources developed within the scope of the DPVCG"@en ;
+    # SHACL constraints
+    sh:targetClass :Requirement ;
+    sh:property [
+        sh:message "A Requirement MUST have a title provided using dct:title"@en ;
+        sh:path dct:title ; sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:message "A Requirement MUST have a description provided using dct:description"@en ;
+        sh:path dct:description ; sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:message "A Requirement MUST have an identifier with prefix 'R' provided using dct:identifier"@en ;
+        sh:path dct:identifier ; sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:message "A Requirement MUST specify the relevant UseCases used to derive it using dct:references"@en ;
+        sh:path dct:references ; sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:message "A Requirement MAY have one or more contributors specified using dct:contributor"@en ;
+        sh:path dct:contributor ; sh:minCount 0 ;
+    ] ;
+    sh:property [
+        sh:message "A Requirement MAY have a date (e.g. creation or modification) specified using dct:date"@en ;
+        sh:path dct:date ; sh:minCount 0 ;
+    ] ;
+    sh:property [
+        sh:message "A Requirement MAY specify the source of its information using dct:source"@en ;
+        sh:path dct:source ; sh:minCount 0 ;
+    ] ;
+    sh:property [
+        sh:message "A Requirement MAY specify its primary subject or concept using dct:subject"@en ;
+        sh:path dct:subject ; sh:minCount 0 ;
+    ] ;
+    vann:example :R1, :R2, :R3 .
+
+:U1 a :UseCase ;
+    dct:title "Example - An Information Title"@en ;
+    dct:description "Description of the use-case - a short summary of what/who/how/where/when etc. goes here. This can be as detailed as you want."@en ;
+    dct:abstract "A short summarised description, e.g. this is just an example"@en ;
+    dct:identifier "U1"^^xsd:string ;
+    dct:subject dpv:Concept, dpv:Relation .
+
+:U2 a :UseCase ;
+    dct:title "Example #2 Dictionary of Concepts"@en ;
+    dct:description "There are a vast number of concepts associated with data processing, with differences and variations across jurisdictions, domains, and sectors. A common dictionary of concepts with information on how they relate to other concepts across such differences would be an invaluable resource on its own. This could be a simple list, a dictionary, or a thesauri."@en ;
+    dct:abstract "There is value in providing a dictionary of concepts"@en ;
+    dct:identifier "U2"^^xsd:string .
+
+:U3 a :UseCase ;
+    dct:title "Example Automating DPVCG usage"@en ;
+    dct:description "The concepts associated with a particular task can be considered the vocabulary necessary for representing information for that particular task. For example choosing the appropriate legal basis requires the concept associated with legal basis as well as the specific legal bases that can be utilised. In order to assist in providing the appropriate contextual vocabulary, the concepts should be encoded in a form that can be automatically queried or retrieved depending on the context."@en ;
+    dct:abstract "The concepts in a vocabulary could be used as sub-vocabularies or in parts for contextual tasks"@en ;
+    dct:identifier "U3"^^xsd:string .
+
+:R1 a :Requirement ;
+    dct:title "Dummy Requirement"@en ;
+    dct:description "This requirement does not entail anything"@en ;
+    dct:identifier "R1"^^xsd:string ;
+    dct:references :U1 .
+
+:R2 a :Requirement ;
+    dct:title "Provide concepts in standardised, consistent, machine-readable form"@en ;
+    dct:description "The encapsulation of concepts must be in a form that is machine-readable, consistent, and using a formal specification - ideally a standard. This will ensure the concepts are correctly parsed, interpreted, and used by machines across use-cases, and will assist in the automation of information and information-based tasks."@en ;
+    dct:identifier "R2"^^xsd:string ;
+    dct:references :U2, :U3 .
+
+:R3 a :Requirement ;
+    dct:title "Provide concepts as a dictionary or thesauri with contextual parts"@en ;
+    dct:description "The concepts should be bundled together and provided as a vocabulary or thesauri with distinct parts or sections (or sub-vocabularies) that relate to specific contextual details. For example, providing purposes as a separate taxonomy enables use of only purposes elsewhere."@en ;
+    dct:identifier "R3"^^xsd:string ;
+    dct:references :U3 .
