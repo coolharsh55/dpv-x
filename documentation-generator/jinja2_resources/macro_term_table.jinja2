@@ -11,7 +11,7 @@
       <h4 id="{% if prefix %}{{prefix}}-{% endif %}{{term.iri|fragment_this}}">{{term.skos_prefLabel}}</h4>
       <table class="definition">
         <tbody>
-          <<tr>
+          <tr>
             <td>IRI</td>
             <td>`{{ term.iri }}`</td>
           </tr>
@@ -31,6 +31,18 @@
               <a href="{{parent.iri}}">{{parent|prefix_this}}</a>{{", " if not loop.last}}
               {% endfor %}{% else %}
               <a href="{{term.dpv_isSubTypeOf.iri}}">{{term.dpv_isSubTypeOf|prefix_this}}</a>
+              {% endif %}
+            </td>
+          </tr>
+          {% endif %}
+          {% if term.dpv_isInstanceOf %}
+          <tr>
+            <td>Instance of:</td>
+            <td>
+              {% if term.dpv_isInstanceOf is sequence and not term.dpv_isInstanceOf is string %}{% for parent in term.dpv_isInstanceOf|sort %}
+              <a href="{{parent.iri}}">{{parent|prefix_this}}</a>{{", " if not loop.last}}
+              {% endfor %}{% else %}
+              <a href="{{term.dpv_isInstanceOf.iri}}">{{term.dpv_isInstanceOf|prefix_this}}</a>
               {% endif %}
             </td>
           </tr>
@@ -141,6 +153,14 @@
             </td>
           </tr>
           {% endif %}
+          <tr>
+            <td>Domain:</td>
+            <td>{% if term.dpv_hasDomain %}<a href="{{ term.dpv_hasDomain}}">{{ term.dpv_hasDomain|prefix_this}}</a>{% else %}<i>unspecified</i>{% endif %}</td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td>{% if term.dpv_hasRange %}<a href="{{ term.dpv_hasRange}}">{{ term.dpv_hasRange|prefix_this}}</a>{% else %}<i>unspecified</i>{% endif %}</td>
+          </tr>
           {% if term.dct_source %}
           <tr>
             <td>Source:</td>

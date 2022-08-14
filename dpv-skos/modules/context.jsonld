@@ -1,56 +1,9 @@
 [
   {
-    "@id": "https://w3id.org/dpv/dpv-skos#hasFrequency",
-    "@type": [
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-02-16"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Harshvardhan J. Pandit"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#Frequency"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "Indicates the frequency with which something takes place"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "has frequency"
-      }
-    ]
-  },
-  {
     "@id": "https://w3id.org/dpv/dpv-skos#Necessity",
     "@type": [
       "http://www.w3.org/2004/02/skos/core#Concept",
-      "http://www.w3.org/2000/01/rdf-schema#Class",
-      "https://w3id.org/dpv/dpv-skos#Context"
+      "http://www.w3.org/2000/01/rdf-schema#Class"
     ],
     "http://purl.org/dc/terms/created": [
       {
@@ -80,13 +33,18 @@
         "@id": "https://w3id.org/dpv/dpv-skos#"
       }
     ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#Context"
+      }
+    ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
       {
         "@language": "en",
         "@value": "accepted"
       }
     ],
-    "http://www.w3.org/2004/02/skos/core#broaderTransitive": [
+    "http://www.w3.org/2004/02/skos/core#broader": [
       {
         "@id": "https://w3id.org/dpv/dpv-skos#Context"
       }
@@ -111,592 +69,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/dpv/dpv-skos#AlgorithmicLogic",
-    "@type": [
-      "http://www.w3.org/2004/02/skos/core#Concept",
-      "http://www.w3.org/2000/01/rdf-schema#Class",
-      "https://w3id.org/dpv/dpv-skos#Context"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-01-26"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Harshvardhan J. Pandit"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#broaderTransitive": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#Context"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "The algorithmic logic applied or used"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#note": [
-      {
-        "@language": "en",
-        "@value": "Algorithmic Logic is intended as a broad concept for explaining the use of algorithms and automated decisions making within Processing. To describe the actual algorithm, see the Algorithm concept."
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "Algorithmic Logic"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-skos#ContextConcepts",
-    "@type": [
-      "http://www.w3.org/2004/02/skos/core#Collection"
-    ],
-    "http://purl.org/dc/terms/title": [
-      {
-        "@value": "Context Concepts"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#member": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#Context"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#Importance"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#PrimaryImportance"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#SecondaryImportance"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#Necessity"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#Required"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#Optional"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#NotRequired"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#Technology"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#AlgorithmicLogic"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#HumanInvolvement"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#Duration"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#Frequency"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#hasContext"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#isImplementedByEntity"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#isImplementedUsingTechnology"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#hasAlgorithmicLogic"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#hasHumanInvolvement"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#hasDuration"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#hasIdentifier"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#hasFrequency"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#isBefore"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#isAfter"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-skos#hasAlgorithmicLogic",
-    "@type": [
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2020-11-04"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Georg P. Krog"
-      },
-      {
-        "@value": "Paul Ryan"
-      },
-      {
-        "@value": "Harshvardhan J. Pandit"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#AlgorithmicLogic"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "Indicates the logic used in processing such as for automated decision making"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "has algorithmic logic"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-skos#hasDuration",
-    "@type": [
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2019-04-05"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Axel Polleres"
-      },
-      {
-        "@value": "Rob Brennan"
-      },
-      {
-        "@value": "Harshvardhan J. Pandit"
-      },
-      {
-        "@value": "Mark Lizar"
-      }
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://specialprivacy.ercim.eu/"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#Duration"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "Indicates information about duration"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "has duration"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-skos#isImplementedUsingTechnology",
-    "@type": [
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-01-26"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Beatriz Esteves"
-      },
-      {
-        "@value": "Harshvardhan J. Pandit"
-      },
-      {
-        "@value": "Paul Ryan"
-      },
-      {
-        "@value": "Julian Flake"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#Technology"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "Indicates implementation details such as technologies or processes"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#note": [
-      {
-        "@language": "en",
-        "@value": "The term 'technology' is inclusive of technologies, processes, and methods."
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "is implemented using technology"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-skos#HumanInvolvement",
-    "@type": [
-      "http://www.w3.org/2004/02/skos/core#Concept",
-      "http://www.w3.org/2000/01/rdf-schema#Class",
-      "https://w3id.org/dpv/dpv-skos#Context"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-01-26"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Harshvardhan J. Pandit"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#broaderTransitive": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#Context"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "The involvement of humans in specified context"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#note": [
-      {
-        "@language": "en",
-        "@value": "Human Involvement here broadly refers to any involvement by a human in the context of carrying out processing. This may include verification of outcomes, providing input data for making decisions, or overseeing activities."
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "Human Involvement"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-skos#Optional",
-    "@type": [
-      "http://www.w3.org/2004/02/skos/core#Concept",
-      "http://www.w3.org/2000/01/rdf-schema#Class",
-      "https://w3id.org/dpv/dpv-skos#Context"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-02-14"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Harshvardhan J. Pandit"
-      },
-      {
-        "@value": "Paul Ryan"
-      },
-      {
-        "@value": "Georg P Krog"
-      },
-      {
-        "@value": "Julian Flake"
-      },
-      {
-        "@value": "Beatriz Esteves"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#broaderTransitive": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#Necessity"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "Indication of 'optional' or 'voluntary'"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "Optional"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-skos#Required",
-    "@type": [
-      "http://www.w3.org/2004/02/skos/core#Concept",
-      "http://www.w3.org/2000/01/rdf-schema#Class",
-      "https://w3id.org/dpv/dpv-skos#Context"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-02-13"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Harshvardhan J. Pandit"
-      },
-      {
-        "@value": "Paul Ryan"
-      },
-      {
-        "@value": "Georg P Krog"
-      },
-      {
-        "@value": "Julian Flake"
-      },
-      {
-        "@value": "Beatriz Esteves"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#broaderTransitive": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#Necessity"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "Indication of 'required' or 'necessary'"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "Required"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-skos#SecondaryImportance",
-    "@type": [
-      "http://www.w3.org/2004/02/skos/core#Concept",
-      "http://www.w3.org/2000/01/rdf-schema#Class",
-      "https://w3id.org/dpv/dpv-skos#Context"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-02-11"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Harshvardhan J. Pandit"
-      },
-      {
-        "@value": "Paul Ryan"
-      },
-      {
-        "@value": "Georg P Krog"
-      },
-      {
-        "@value": "Julian Flake"
-      },
-      {
-        "@value": "Beatriz Esteves"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#broaderTransitive": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#Importance"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "Indication of 'secondary' or 'minor' or 'auxiliary' importance"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "Secondary Importance"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-skos#isBefore",
-    "@type": [
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-03-02"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Georg P. Krog"
-      },
-      {
-        "@value": "Harshvardhan J. Pandit"
-      },
-      {
-        "@value": "Julian Flake"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "Indicates the specified concepts is 'before' this concept in some context"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "is before"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-skos#Duration",
+    "@id": "https://w3id.org/dpv/dpv-skos#Scope",
     "@type": [
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/2000/01/rdf-schema#Class"
@@ -704,7 +77,7 @@
     "http://purl.org/dc/terms/created": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-02-09"
+        "@value": "2022-06-15"
       }
     ],
     "http://purl.org/dc/terms/creator": [
@@ -717,45 +90,9 @@
         "@id": "https://w3id.org/dpv/dpv-skos#"
       }
     ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "The duration or temporal limitation"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "Duration"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-skos#Frequency",
-    "@type": [
-      "http://www.w3.org/2004/02/skos/core#Concept",
-      "http://www.w3.org/2000/01/rdf-schema#Class"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-02-16"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Harshvardhan J. Pandit"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#"
+        "@id": "https://w3id.org/dpv/dpv-skos#Context"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -764,16 +101,21 @@
         "@value": "accepted"
       }
     ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#Context"
+      }
+    ],
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "The frequency or information about periods and repetitions in terms of recurrence."
+        "@value": "Indication of the extent or range or boundaries associated with(in) a context"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
       {
         "@language": "en",
-        "@value": "Frequency"
+        "@value": "Scope"
       }
     ]
   },
@@ -824,6 +166,339 @@
       {
         "@language": "en",
         "@value": "has identifier"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-skos#SingularFrequency",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "https://w3id.org/dpv/dpv-skos#Frequency"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-06-15"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#Frequency"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Frequency where occurences are singular i.e. they take place only once"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "SingularFrequency"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-skos#UntilEventDuration",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "https://w3id.org/dpv/dpv-skos#Duration"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-06-15"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#Duration"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Duration that takes place until a specific event occurs e.g. Account Closure"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "UntilEventDuration"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-skos#NotRequired",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "https://w3id.org/dpv/dpv-skos#Necessity"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-02-15"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
+      },
+      {
+        "@value": "Paul Ryan"
+      },
+      {
+        "@value": "Georg P Krog"
+      },
+      {
+        "@value": "Julian Flake"
+      },
+      {
+        "@value": "Beatriz Esteves"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#Necessity"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Indication of neither being required nor optional i.e. not relevant or needed"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Not Required"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-skos#hasOutcome",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-05-18"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Indicates an outcome of specified concept or context"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has outcome"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-skos#hasScope",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-06-15"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#Scope"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Indicates the scope of specified concept or context"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has scope"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-skos#hasJustification",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-06-15"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#Justification"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Indicates a justification for specified concept or context"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has justification"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-skos#ContinousFrequency",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "https://w3id.org/dpv/dpv-skos#Frequency"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-06-15"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#Frequency"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Frequency where occurences are continous"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Continous Frequency"
       }
     ]
   },
@@ -886,7 +561,122 @@
     ]
   },
   {
-    "@id": "https://w3id.org/dpv/dpv-skos#hasContext",
+    "@id": "https://w3id.org/dpv/dpv-skos#ContextConcepts",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Collection"
+    ],
+    "http://www.w3.org/2004/02/skos/core#member": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#Context"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#Importance"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#PrimaryImportance"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#SecondaryImportance"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#Necessity"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#Required"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#Optional"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#NotRequired"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#Technology"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#Scope"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#Frequency"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#ContinousFrequency"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#OftenFrequency"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#SporadicFrequency"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#SingularFrequency"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#Duration"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#EndlessDuration"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#TemporalDuration"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#UntilEventDuration"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#UntilTimeDuration"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#FixedOccurencesDuration"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#Justification"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#hasContext"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#isImplementedByEntity"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#hasHumanInvolvement"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#hasDuration"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#hasIdentifier"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#hasFrequency"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#isBefore"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#isAfter"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#hasScope"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#hasJustification"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#hasOutcome"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#isImplementedUsingTechnology"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@value": "Context Concepts"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-skos#isBefore",
     "@type": [
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
       "http://www.w3.org/2004/02/skos/core#Concept"
@@ -894,7 +684,59 @@
     "http://purl.org/dc/terms/created": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2019-04-05"
+        "@value": "2022-03-02"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Georg P. Krog"
+      },
+      {
+        "@value": "Harshvardhan J. Pandit"
+      },
+      {
+        "@value": "Julian Flake"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Indicates the specified concepts is 'before' this concept in some context"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "is before"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-skos#hasFrequency",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-02-16"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -904,7 +746,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/dpv/dpv-skos#Context"
+        "@id": "https://w3id.org/dpv/dpv-skos#Frequency"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -916,44 +758,32 @@
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "Indicates a purpose is restricted to the specified context(s)"
+        "@value": "Indicates the frequency with which something takes place"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
       {
         "@language": "en",
-        "@value": "has context"
+        "@value": "has frequency"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/dpv/dpv-skos#Importance",
+    "@id": "https://w3id.org/dpv/dpv-skos#FixedOccurencesDuration",
     "@type": [
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/2000/01/rdf-schema#Class",
-      "https://w3id.org/dpv/dpv-skos#Context"
+      "https://w3id.org/dpv/dpv-skos#Duration"
     ],
     "http://purl.org/dc/terms/created": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-02-09"
+        "@value": "2022-06-15"
       }
     ],
     "http://purl.org/dc/terms/creator": [
       {
         "@value": "Harshvardhan J. Pandit"
-      },
-      {
-        "@value": "Paul Ryan"
-      },
-      {
-        "@value": "Georg P Krog"
-      },
-      {
-        "@value": "Julian Flake"
-      },
-      {
-        "@value": "Beatriz Esteves"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -967,27 +797,21 @@
         "@value": "accepted"
       }
     ],
-    "http://www.w3.org/2004/02/skos/core#broaderTransitive": [
+    "http://www.w3.org/2004/02/skos/core#broader": [
       {
-        "@id": "https://w3id.org/dpv/dpv-skos#Context"
+        "@id": "https://w3id.org/dpv/dpv-skos#Duration"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "An indication of 'importance' within a context"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#note": [
-      {
-        "@language": "en",
-        "@value": "Importance can be used to express importance, desirability, relevance, or significance as a context."
+        "@value": "Duration that takes place a fixed number of times e.g. 3 times"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
       {
         "@language": "en",
-        "@value": "Importance"
+        "@value": "FixedOccurencesDuration"
       }
     ]
   },
@@ -1039,33 +863,72 @@
     ]
   },
   {
-    "@id": "https://w3id.org/dpv/dpv-skos#NotRequired",
+    "@id": "https://w3id.org/dpv/dpv-skos#Frequency",
     "@type": [
       "http://www.w3.org/2004/02/skos/core#Concept",
-      "http://www.w3.org/2000/01/rdf-schema#Class",
-      "https://w3id.org/dpv/dpv-skos#Context"
+      "http://www.w3.org/2000/01/rdf-schema#Class"
     ],
     "http://purl.org/dc/terms/created": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-02-15"
+        "@value": "2022-02-16"
       }
     ],
     "http://purl.org/dc/terms/creator": [
       {
         "@value": "Harshvardhan J. Pandit"
-      },
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@value": "Paul Ryan"
-      },
+        "@id": "https://w3id.org/dpv/dpv-skos#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@value": "Georg P Krog"
-      },
+        "@id": "https://w3id.org/dpv/dpv-skos#Context"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
       {
-        "@value": "Julian Flake"
-      },
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
       {
-        "@value": "Beatriz Esteves"
+        "@id": "https://w3id.org/dpv/dpv-skos#Context"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The frequency or information about periods and repetitions in terms of recurrence."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Frequency"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-skos#UntilTimeDuration",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "https://w3id.org/dpv/dpv-skos#Duration"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-06-15"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -1079,21 +942,115 @@
         "@value": "accepted"
       }
     ],
-    "http://www.w3.org/2004/02/skos/core#broaderTransitive": [
+    "http://www.w3.org/2004/02/skos/core#broader": [
       {
-        "@id": "https://w3id.org/dpv/dpv-skos#Necessity"
+        "@id": "https://w3id.org/dpv/dpv-skos#Duration"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "Indication of neither being required nor optional i.e. not relevant or needed"
+        "@value": "Duration that has a fixed end date e.g. 2022-12-31"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
       {
         "@language": "en",
-        "@value": "Not Required"
+        "@value": "UntilTimeDuration"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-skos#EndlessDuration",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "https://w3id.org/dpv/dpv-skos#Duration"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-06-15"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#Duration"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Duration that is open ended or without an end"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "EndlessDuration"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-skos#isAfter",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-03-02"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Georg P. Krog"
+      },
+      {
+        "@value": "Harshvardhan J. Pandit"
+      },
+      {
+        "@value": "Julian Flake"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Indicates the specified concepts is 'after' this concept in some context"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "is after"
       }
     ]
   },
@@ -1168,16 +1125,76 @@
     ]
   },
   {
-    "@id": "https://w3id.org/dpv/dpv-skos#PrimaryImportance",
+    "@id": "https://w3id.org/dpv/dpv-skos#hasDuration",
     "@type": [
-      "http://www.w3.org/2004/02/skos/core#Concept",
-      "http://www.w3.org/2000/01/rdf-schema#Class",
-      "https://w3id.org/dpv/dpv-skos#Context"
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2004/02/skos/core#Concept"
     ],
     "http://purl.org/dc/terms/created": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-02-10"
+        "@value": "2019-04-05"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Axel Polleres"
+      },
+      {
+        "@value": "Rob Brennan"
+      },
+      {
+        "@value": "Harshvardhan J. Pandit"
+      },
+      {
+        "@value": "Mark Lizar"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://specialprivacy.ercim.eu/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#Duration"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Indicates information about duration"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has duration"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-skos#SecondaryImportance",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "https://w3id.org/dpv/dpv-skos#Importance"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-02-11"
       }
     ],
     "http://purl.org/dc/terms/creator": [
@@ -1208,7 +1225,7 @@
         "@value": "accepted"
       }
     ],
-    "http://www.w3.org/2004/02/skos/core#broaderTransitive": [
+    "http://www.w3.org/2004/02/skos/core#broader": [
       {
         "@id": "https://w3id.org/dpv/dpv-skos#Importance"
       }
@@ -1216,18 +1233,18 @@
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "Indication of 'primary' or 'main' or 'core' importance"
+        "@value": "Indication of 'secondary' or 'minor' or 'auxiliary' importance"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
       {
         "@language": "en",
-        "@value": "Primary Importance"
+        "@value": "Secondary Importance"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/dpv/dpv-skos#isAfter",
+    "@id": "https://w3id.org/dpv/dpv-skos#isImplementedUsingTechnology",
     "@type": [
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
       "http://www.w3.org/2004/02/skos/core#Concept"
@@ -1235,18 +1252,200 @@
     "http://purl.org/dc/terms/created": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-03-02"
+        "@value": "2022-01-26"
       }
     ],
     "http://purl.org/dc/terms/creator": [
       {
-        "@value": "Georg P. Krog"
+        "@value": "Beatriz Esteves"
       },
       {
         "@value": "Harshvardhan J. Pandit"
       },
       {
+        "@value": "Paul Ryan"
+      },
+      {
         "@value": "Julian Flake"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-06-15"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#Technology"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "changed"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Indicates implementation details such as technologies or processes"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@language": "en",
+        "@value": "The term 'technology' is inclusive of technologies, processes, and methods."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "is implemented using technology"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-skos#Justification",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-06-15"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#Context"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#Context"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A form of documentation providing reaosns, explanations, or justifications"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Justification"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-skos#Importance",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-02-09"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
+      },
+      {
+        "@value": "Paul Ryan"
+      },
+      {
+        "@value": "Georg P Krog"
+      },
+      {
+        "@value": "Julian Flake"
+      },
+      {
+        "@value": "Beatriz Esteves"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#Context"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#Context"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "An indication of 'importance' within a context"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@language": "en",
+        "@value": "Importance can be used to express importance, desirability, relevance, or significance as a context."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Importance"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-skos#SporadicFrequency",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "https://w3id.org/dpv/dpv-skos#Frequency"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-06-15"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -1260,16 +1459,219 @@
         "@value": "accepted"
       }
     ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#Frequency"
+      }
+    ],
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "Indicates the specified concepts is 'after' this concept in some context"
+        "@value": "Frequency where occurences are sporadic or infrequent or sparse"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
       {
         "@language": "en",
-        "@value": "is after"
+        "@value": "SporadicFrequency"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-skos#OftenFrequency",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "https://w3id.org/dpv/dpv-skos#Frequency"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-06-15"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#Frequency"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Frequency where occurences are often or frequent, but not continous"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Often Frequency"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-skos#Optional",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "https://w3id.org/dpv/dpv-skos#Necessity"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-02-14"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
+      },
+      {
+        "@value": "Paul Ryan"
+      },
+      {
+        "@value": "Georg P Krog"
+      },
+      {
+        "@value": "Julian Flake"
+      },
+      {
+        "@value": "Beatriz Esteves"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#Necessity"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Indication of 'optional' or 'voluntary'"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Optional"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-skos#Duration",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-02-09"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#Context"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#Context"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The duration or temporal limitation"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Duration"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-skos#hasContext",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2019-04-05"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#Context"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Indicates a purpose is restricted to the specified context(s)"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has context"
       }
     ]
   },
@@ -1305,6 +1707,66 @@
         "@value": "Simon Steyskal"
       }
     ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-06-15"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "changed"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Contextually relevant information not possible to represent through other core concepts"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Context"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-skos#PrimaryImportance",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "https://w3id.org/dpv/dpv-skos#Importance"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-02-10"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
+      },
+      {
+        "@value": "Paul Ryan"
+      },
+      {
+        "@value": "Georg P Krog"
+      },
+      {
+        "@value": "Julian Flake"
+      },
+      {
+        "@value": "Beatriz Esteves"
+      }
+    ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
         "@id": "https://w3id.org/dpv/dpv-skos#"
@@ -1316,16 +1778,127 @@
         "@value": "accepted"
       }
     ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#Importance"
+      }
+    ],
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "Contextually relevant information about purpose not possible to represent through other concepts"
+        "@value": "Indication of 'primary' or 'main' or 'core' importance"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
       {
         "@language": "en",
-        "@value": "Context"
+        "@value": "Primary Importance"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-skos#Required",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "https://w3id.org/dpv/dpv-skos#Necessity"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-02-13"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
+      },
+      {
+        "@value": "Paul Ryan"
+      },
+      {
+        "@value": "Georg P Krog"
+      },
+      {
+        "@value": "Julian Flake"
+      },
+      {
+        "@value": "Beatriz Esteves"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#Necessity"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Indication of 'required' or 'necessary'"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Required"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-skos#TemporalDuration",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "https://w3id.org/dpv/dpv-skos#Duration"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-06-15"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#Duration"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Duration that has a fixed temporal duration e.g. 6 months"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "TemporalDuration"
       }
     ]
   }

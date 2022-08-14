@@ -12,8 +12,8 @@
    var respecConfig = {
     shortName: "dpv",
     title: "Data Privacy Vocabulary (DPV)",
-    subtitle: "version 0.6",
-    publishDate: "2022-04-02",
+    subtitle: "version 0.7",
+    publishDate: "2022-05-25",
     specStatus: "CG-DRAFT",
     group: "dpvcg",
     latestVersion: "https://w3id.org/dpv",
@@ -203,6 +203,7 @@
       <img title="DPV Base Vocabulary" alt="DPV base vocabulary" src="diagrams/personaldatahandling.png">
       <figcaption>Base Vocabulary</figcaption>
     </figure>
+    <p>DPV's terms are defined using abstract semantic notions <span data-dfn-for="Concept"><dfn>Concept</dfn></span> and <span data-dfn-for="Relation"><dfn>Relation</dfn></span> derived from SKOS concepts and semantic relations respectively. The use of relations is bounded using <span data-dfn-for="hasDomain"><dfn>hasDomain</dfn></span> and <span data-dfn-for="hasRange"><dfn>hasRange</dfn></span>. This is to permit its interpretation in various semantic expressions, such as a vocabulary (collection of concepts), or as ontologies in OWL2 or RDFS or something else. The <a href="#dpv-document-family">DPV Family of Documents</a> provides an overview of such semantic interpretations provided by the DPVCG.</p>
     <p>The 'Base' or 'Core' concepts in DPV represent the most relevant concepts for representing information regarding the what, how, where, who, why of personal data and its processing. Each of these concepts is further elaborated as a taxonomy of concepts in a hierarchical fashion. The DPV provides the following as 'top-level' concepts and relations to associate them with other concepts:</p>
     <table>
       <thead>
@@ -213,6 +214,11 @@
         </tr>
       </thead>
       <tbody>
+        <tr>
+          <td>[=Concept=]</td>
+          <td>[=Relation=]</td>
+          <td>Semantics of Concepts and Relationships</td>
+        </tr>
         <tr>
           <td>[=PersonalData=]</td>
           <td>[=hasPersonalData=]</td>
@@ -413,6 +419,28 @@
     {{ table_properties(technical_organisational_measures_properties) }}
   </section>
   {% endif %}
+  <h3>Technical Measures</h3>
+  {% if technical_measures_classes %}
+  <section id="technical_measures-classes">
+    {{ table_classes(technical_measures_classes) }}
+  </section>
+  {% endif %}
+  {% if technical_measures_properties %}
+  <section id="technical_measures-properties">
+    {{ table_properties(technical_measures_properties) }}
+  </section>
+  {% endif %}
+  <h3>Organisational Measures</h3>
+  {% if organisational_measures_classes %}
+  <section id="organisational_measures-classes">
+    {{ table_classes(organisational_measures_classes) }}
+  </section>
+  {% endif %}
+  {% if organisational_measures_properties %}
+  <section id="organisational_measures-properties">
+    {{ table_properties(organisational_measures_properties) }}
+  </section>
+  {% endif %}
 </section>
 
 <section id="vocab-context">
@@ -439,6 +467,34 @@
   {% if processing_context_properties %}
   <section id="processing-context-properties">
     {{ table_properties(processing_context_properties) }}
+  </section>
+  {% endif %}
+</section>
+
+<section id="vocab-processing-scale">
+  <h2>Scale of Processing</h2>
+    {% if processing_scale_classes %}
+  <section id="processing-scale-classes">
+    {{ table_classes(processing_scale_classes) }}
+  </section>
+  {% endif %}
+  {% if processing_scale_properties %}
+  <section id="processing-scale-properties">
+    {{ table_properties(processing_scale_properties) }}
+  </section>
+  {% endif %}
+</section>
+
+<section id="vocab-status">
+  <h2>Status</h2>
+    {% if status_classes %}
+  <section id="status-classes">
+    {{ table_classes(status_classes) }}
+  </section>
+  {% endif %}
+  {% if status_properties %}
+  <section id="status-properties">
+    {{ table_properties(status_properties) }}
   </section>
   {% endif %}
 </section>
@@ -532,7 +588,7 @@
       <tr>
         <td>is subtype of</td>
         <td><code>dpv:isSubTypeOf</code>
-        </td><td><code>skos:broaderTransitive</code></td>
+        </td><td><code>skos:broader</code></td>
         <td><code>owl:subClassOf</code></td>
       </tr>
       <tr>

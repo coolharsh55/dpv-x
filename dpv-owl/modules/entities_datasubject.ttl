@@ -15,15 +15,25 @@ dpvo:Adult a owl:Class ;
     rdfs:subClassOf dpvo:DataSubject ;
     sw:term_status "accepted"@en .
 
+dpvo:AsylumSeeker a owl:Class ;
+    rdfs:label "Asylum Seeker"@en ;
+    dct:created "2022-06-15"^^xsd:date ;
+    dct:creator "Georg P Krog"^^xsd:string ;
+    dct:description "Data subjects that are asylum seekers"@en ;
+    rdfs:isDefinedBy dpvo: ;
+    rdfs:subClassOf dpvo:VulnerableDataSubject ;
+    sw:term_status "accepted"@en .
+
 dpvo:Child a owl:Class ;
     rdfs:label "Child"@en ;
     dct:created "2020-11-25"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:description "A 'child' is a natural legal person who is below a certain legal age depending on the legal jurisdiction."@en ;
+    dct:modified "2022-06-22"^^xsd:date ;
     rdfs:comment "The legality of age defining a child varies by jurisdiction. In addition, 'child' is distinct from a 'minor'. For example, the legal age for consumption of alcohol can be 21, which makes a person of age 20 a 'minor' in this context. In other cases, 'minor' and 'child' are used interchangeably to refer to a person below some legally defined age."@en ;
     rdfs:isDefinedBy dpvo: ;
-    rdfs:subClassOf dpvo:NatualPerson ;
-    sw:term_status "accepted"@en .
+    rdfs:subClassOf dpvo:DataSubject ;
+    sw:term_status "changed"@en .
 
 dpvo:Citizen a owl:Class ;
     rdfs:label "Citizen"@en ;
@@ -64,6 +74,15 @@ dpvo:Consumer a owl:Class ;
     rdfs:subClassOf dpvo:DataSubject ;
     sw:term_status "accepted"@en .
 
+dpvo:ElderlyDataSubject a owl:Class ;
+    rdfs:label "Elderly Data Subject"@en ;
+    dct:created "2022-06-15"^^xsd:date ;
+    dct:creator "Georg P Krog"^^xsd:string ;
+    dct:description "Data subjects that are considered elderly (i.e. based on age)"@en ;
+    rdfs:isDefinedBy dpvo: ;
+    rdfs:subClassOf dpvo:VulnerableDataSubject ;
+    sw:term_status "accepted"@en .
+
 dpvo:Employee a owl:Class ;
     rdfs:label "Employee"@en ;
     dct:created "2022-04-06"^^xsd:date ;
@@ -73,6 +92,15 @@ dpvo:Employee a owl:Class ;
         "Julian Flake"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Data subjects that are employees"@en ;
+    rdfs:isDefinedBy dpvo: ;
+    rdfs:subClassOf dpvo:DataSubject ;
+    sw:term_status "accepted"@en .
+
+dpvo:GuardianOfDataSubject a owl:Class ;
+    rdfs:label "Guardian(s) of Data Subject"@en ;
+    dct:created "2022-08-03"^^xsd:date ;
+    dct:creator "Georg P Krog"^^xsd:string ;
+    dct:description "Guardian(s) of data subjects such as children"@en ;
     rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:DataSubject ;
     sw:term_status "accepted"@en .
@@ -116,6 +144,15 @@ dpvo:Member a owl:Class ;
     rdfs:subClassOf dpvo:DataSubject ;
     sw:term_status "accepted"@en .
 
+dpvo:MentallyVulnerableDataSubject a owl:Class ;
+    rdfs:label "Mentally Vulnerable Data Subject"@en ;
+    dct:created "2022-06-15"^^xsd:date ;
+    dct:creator "Georg P Krog"^^xsd:string ;
+    dct:description "Data subjects that are considered mentally vulnerable"@en ;
+    rdfs:isDefinedBy dpvo: ;
+    rdfs:subClassOf dpvo:VulnerableDataSubject ;
+    sw:term_status "accepted"@en .
+
 dpvo:NonCitizen a owl:Class ;
     rdfs:label "NonCitizen"@en ;
     dct:created "2022-04-06"^^xsd:date ;
@@ -125,6 +162,15 @@ dpvo:NonCitizen a owl:Class ;
         "Julian Flake"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Data subjects that are not citizens (for a jurisdiction)"@en ;
+    rdfs:isDefinedBy dpvo: ;
+    rdfs:subClassOf dpvo:DataSubject ;
+    sw:term_status "accepted"@en .
+
+dpvo:ParentOfDataSubject a owl:Class ;
+    rdfs:label "Parent(s) of Data Subject"@en ;
+    dct:created "2022-08-03"^^xsd:date ;
+    dct:creator "Georg P Krog"^^xsd:string ;
+    dct:description "Parent(s) of data subjects such as children"@en ;
     rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:DataSubject ;
     sw:term_status "accepted"@en .
@@ -221,18 +267,6 @@ dpvo:Visitor a owl:Class ;
     rdfs:subClassOf dpvo:DataSubject ;
     sw:term_status "accepted"@en .
 
-dpvo:VulnerableDataSubject a owl:Class ;
-    rdfs:label "Vulnerable Data Subject"@en ;
-    dct:created "2020-11-04"^^xsd:date ;
-    dct:creator "Georg Krog"^^xsd:string,
-        "Harshvardhan Pandit"^^xsd:string,
-        "Paul Ryan"^^xsd:string ;
-    dct:description "Data Subjects which should be considered 'vulnerable' and therefore would require additional measures and safeguards"@en ;
-    rdfs:comment "This concept denotes a Data Subject or a group are vulnerable, but not what vulnerability they possess or its context. This information can be provided additionally as comments, or as separate concepts and relations. Proposals for this are welcome."@en ;
-    rdfs:isDefinedBy dpvo: ;
-    rdfs:subClassOf dpvo:DataSubject ;
-    sw:term_status "accepted"@en .
-
 dpvo:hasDataSubject a rdf:Property,
         owl:ObjectProperty ;
     rdfs:label "has data subject"@en ;
@@ -273,6 +307,18 @@ dpvo:Customer a owl:Class ;
         "Paul Ryan"^^xsd:string ;
     dct:description "Data subjects that purchase goods or services"@en ;
     rdfs:comment "note: for B2B relations where customers are organisations, this concept only applies for data subjects"@en ;
+    rdfs:isDefinedBy dpvo: ;
+    rdfs:subClassOf dpvo:DataSubject ;
+    sw:term_status "accepted"@en .
+
+dpvo:VulnerableDataSubject a owl:Class ;
+    rdfs:label "Vulnerable Data Subject"@en ;
+    dct:created "2020-11-04"^^xsd:date ;
+    dct:creator "Georg Krog"^^xsd:string,
+        "Harshvardhan Pandit"^^xsd:string,
+        "Paul Ryan"^^xsd:string ;
+    dct:description "Data Subjects which should be considered 'vulnerable' and therefore would require additional measures and safeguards"@en ;
+    rdfs:comment "This concept denotes a Data Subject or a group are vulnerable, but not what vulnerability they possess or its context. This information can be provided additionally as comments, or as separate concepts and relations. Proposals for this are welcome."@en ;
     rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:DataSubject ;
     sw:term_status "accepted"@en .

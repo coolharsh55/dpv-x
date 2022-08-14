@@ -1,5 +1,225 @@
 [
   {
+    "@id": "https://w3id.org/dpv/dpv-gdpr#A18",
+    "@type": [
+      "https://w3id.org/dpv#Concept",
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2020-11-04"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Beatriz Esteves"
+      },
+      {
+        "@value": "Georg Krog"
+      },
+      {
+        "@value": "Harshvardhan J. Pandit"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://eur-lex.europa.eu/eli/reg/2016/679/art_18/oj"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-gdpr#"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Right to restriction of processing"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "A18 Right to Restrict Processing"
+      }
+    ],
+    "https://w3id.org/dpv#isSubTypeOf": [
+      {
+        "@id": "https://w3id.org/dpv#DataSubjectRight"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-gdpr#A22",
+    "@type": [
+      "https://w3id.org/dpv#Concept",
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2020-11-04"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Beatriz Esteves"
+      },
+      {
+        "@value": "Georg Krog"
+      },
+      {
+        "@value": "Harshvardhan J. Pandit"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://eur-lex.europa.eu/eli/reg/2016/679/art_22/oj"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-gdpr#"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Right not to be subject to a decision based solely on automated processing including profiling"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "A22 Right to object to automated decision making"
+      }
+    ],
+    "https://w3id.org/dpv#isSubTypeOf": [
+      {
+        "@id": "https://w3id.org/dpv#DataSubjectRight"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-gdpr#RightsConcepts",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Collection"
+    ],
+    "http://www.w3.org/2004/02/skos/core#member": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-gdpr#A13"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-gdpr#A14"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-gdpr#A15"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-gdpr#A16"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-gdpr#A17"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-gdpr#A18"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-gdpr#A19"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-gdpr#A20"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-gdpr#A21"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-gdpr#A22"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-gdpr#A7-3"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-gdpr#A77"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@value": "Rights Concepts"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-gdpr#A15",
+    "@type": [
+      "https://w3id.org/dpv#Concept",
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2020-11-04"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Beatriz Esteves"
+      },
+      {
+        "@value": "Georg Krog"
+      },
+      {
+        "@value": "Harshvardhan J. Pandit"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://eur-lex.europa.eu/eli/reg/2016/679/art_15/oj"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-gdpr#"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Right of access"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "A15 Right of Access"
+      }
+    ],
+    "https://w3id.org/dpv#isSubTypeOf": [
+      {
+        "@id": "https://w3id.org/dpv#DataSubjectRight"
+      }
+    ]
+  },
+  {
     "@id": "https://w3id.org/dpv/dpv-gdpr#A19",
     "@type": [
       "https://w3id.org/dpv#Concept",
@@ -114,291 +334,6 @@
     ]
   },
   {
-    "@id": "https://w3id.org/dpv/dpv-gdpr#A21",
-    "@type": [
-      "https://w3id.org/dpv#Concept",
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2020-11-04"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Beatriz Esteves"
-      },
-      {
-        "@value": "Georg Krog"
-      },
-      {
-        "@value": "Harshvardhan J. Pandit"
-      }
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://eur-lex.europa.eu/eli/reg/2016/679/art_21/oj"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-gdpr#"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "Right to object to processing of personal data"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "A21 Right to object"
-      }
-    ],
-    "https://w3id.org/dpv#isSubTypeOf": [
-      {
-        "@id": "https://w3id.org/dpv#DataSubjectRight"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-gdpr#A20",
-    "@type": [
-      "https://w3id.org/dpv#Concept",
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2020-11-04"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Beatriz Esteves"
-      },
-      {
-        "@value": "Georg Krog"
-      },
-      {
-        "@value": "Harshvardhan J. Pandit"
-      }
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://eur-lex.europa.eu/eli/reg/2016/679/art_20/oj"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-gdpr#"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "Right to data portability"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "A20 Right to Data Portability"
-      }
-    ],
-    "https://w3id.org/dpv#isSubTypeOf": [
-      {
-        "@id": "https://w3id.org/dpv#DataSubjectRight"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-gdpr#A7-3",
-    "@type": [
-      "https://w3id.org/dpv#Concept",
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2020-11-04"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Beatriz Esteves"
-      },
-      {
-        "@value": "Georg Krog"
-      },
-      {
-        "@value": "Harshvardhan J. Pandit"
-      }
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://eur-lex.europa.eu/eli/reg/2016/679/art_7/par_3/oj"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-gdpr#"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "Right to withdraw consent"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "A7-3 Right to Withdraw Consent"
-      }
-    ],
-    "https://w3id.org/dpv#isSubTypeOf": [
-      {
-        "@id": "https://w3id.org/dpv#DataSubjectRight"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-gdpr#A77",
-    "@type": [
-      "https://w3id.org/dpv#Concept",
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2020-11-04"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Beatriz Esteves"
-      },
-      {
-        "@value": "Georg Krog"
-      },
-      {
-        "@value": "Harshvardhan J. Pandit"
-      }
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://eur-lex.europa.eu/eli/reg/2016/679/art_77/oj"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-gdpr#"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "Right to lodge a complaint with a supervisory authority"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "A77 Right to Complaint"
-      }
-    ],
-    "https://w3id.org/dpv#isSubTypeOf": [
-      {
-        "@id": "https://w3id.org/dpv#DataSubjectRight"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-gdpr#A22",
-    "@type": [
-      "https://w3id.org/dpv#Concept",
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2020-11-04"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Beatriz Esteves"
-      },
-      {
-        "@value": "Georg Krog"
-      },
-      {
-        "@value": "Harshvardhan J. Pandit"
-      }
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://eur-lex.europa.eu/eli/reg/2016/679/art_22/oj"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-gdpr#"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "Right not to be subject to a decision based solely on automated processing including profiling"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "A22 Right to object to automated decision making"
-      }
-    ],
-    "https://w3id.org/dpv#isSubTypeOf": [
-      {
-        "@id": "https://w3id.org/dpv#DataSubjectRight"
-      }
-    ]
-  },
-  {
     "@id": "https://w3id.org/dpv/dpv-gdpr#A13",
     "@type": [
       "https://w3id.org/dpv#Concept",
@@ -447,120 +382,6 @@
       {
         "@language": "en",
         "@value": "A13 Right to be Informed"
-      }
-    ],
-    "https://w3id.org/dpv#isSubTypeOf": [
-      {
-        "@id": "https://w3id.org/dpv#DataSubjectRight"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-gdpr#A14",
-    "@type": [
-      "https://w3id.org/dpv#Concept",
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2020-11-04"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Beatriz Esteves"
-      },
-      {
-        "@value": "Georg Krog"
-      },
-      {
-        "@value": "Harshvardhan J. Pandit"
-      }
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://eur-lex.europa.eu/eli/reg/2016/679/art_14/oj"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-gdpr#"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "information to be provided where personal data is collected from other sources"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "A14 Right to be Informed"
-      }
-    ],
-    "https://w3id.org/dpv#isSubTypeOf": [
-      {
-        "@id": "https://w3id.org/dpv#DataSubjectRight"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-gdpr#A15",
-    "@type": [
-      "https://w3id.org/dpv#Concept",
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2020-11-04"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Beatriz Esteves"
-      },
-      {
-        "@value": "Georg Krog"
-      },
-      {
-        "@value": "Harshvardhan J. Pandit"
-      }
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://eur-lex.europa.eu/eli/reg/2016/679/art_15/oj"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-gdpr#"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "Right of access"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "A15 Right of Access"
       }
     ],
     "https://w3id.org/dpv#isSubTypeOf": [
@@ -627,7 +448,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/dpv/dpv-gdpr#A18",
+    "@id": "https://w3id.org/dpv/dpv-gdpr#A20",
     "@type": [
       "https://w3id.org/dpv#Concept",
       "http://www.w3.org/2004/02/skos/core#Concept"
@@ -651,7 +472,7 @@
     ],
     "http://purl.org/dc/terms/source": [
       {
-        "@id": "https://eur-lex.europa.eu/eli/reg/2016/679/art_18/oj"
+        "@id": "https://eur-lex.europa.eu/eli/reg/2016/679/art_20/oj"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -668,13 +489,13 @@
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "Right to restriction of processing"
+        "@value": "Right to data portability"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
       {
         "@language": "en",
-        "@value": "A18 Right to Restrict Processing"
+        "@value": "A20 Right to Data Portability"
       }
     ],
     "https://w3id.org/dpv#isSubTypeOf": [
@@ -684,51 +505,230 @@
     ]
   },
   {
-    "@id": "https://w3id.org/dpv/dpv-gdpr#RightsConcepts",
+    "@id": "https://w3id.org/dpv/dpv-gdpr#A77",
     "@type": [
-      "http://www.w3.org/2004/02/skos/core#Collection"
+      "https://w3id.org/dpv#Concept",
+      "http://www.w3.org/2004/02/skos/core#Concept"
     ],
-    "http://purl.org/dc/terms/title": [
+    "http://purl.org/dc/terms/created": [
       {
-        "@value": "Rights Concepts"
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2020-11-04"
       }
     ],
-    "http://www.w3.org/2004/02/skos/core#member": [
+    "http://purl.org/dc/terms/creator": [
       {
-        "@id": "https://w3id.org/dpv/dpv-gdpr#A13"
+        "@value": "Beatriz Esteves"
       },
       {
-        "@id": "https://w3id.org/dpv/dpv-gdpr#A14"
+        "@value": "Georg Krog"
       },
       {
-        "@id": "https://w3id.org/dpv/dpv-gdpr#A15"
+        "@value": "Harshvardhan J. Pandit"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://eur-lex.europa.eu/eli/reg/2016/679/art_77/oj"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-gdpr#"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Right to lodge a complaint with a supervisory authority"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "A77 Right to Complaint"
+      }
+    ],
+    "https://w3id.org/dpv#isSubTypeOf": [
+      {
+        "@id": "https://w3id.org/dpv#DataSubjectRight"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-gdpr#A7-3",
+    "@type": [
+      "https://w3id.org/dpv#Concept",
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2020-11-04"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Beatriz Esteves"
       },
       {
-        "@id": "https://w3id.org/dpv/dpv-gdpr#A16"
+        "@value": "Georg Krog"
       },
       {
-        "@id": "https://w3id.org/dpv/dpv-gdpr#A17"
+        "@value": "Harshvardhan J. Pandit"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://eur-lex.europa.eu/eli/reg/2016/679/art_7/par_3/oj"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-gdpr#"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Right to withdraw consent"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "A7-3 Right to Withdraw Consent"
+      }
+    ],
+    "https://w3id.org/dpv#isSubTypeOf": [
+      {
+        "@id": "https://w3id.org/dpv#DataSubjectRight"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-gdpr#A14",
+    "@type": [
+      "https://w3id.org/dpv#Concept",
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2020-11-04"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Beatriz Esteves"
       },
       {
-        "@id": "https://w3id.org/dpv/dpv-gdpr#A18"
+        "@value": "Georg Krog"
       },
       {
-        "@id": "https://w3id.org/dpv/dpv-gdpr#A19"
+        "@value": "Harshvardhan J. Pandit"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://eur-lex.europa.eu/eli/reg/2016/679/art_14/oj"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-gdpr#"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "information to be provided where personal data is collected from other sources"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "A14 Right to be Informed"
+      }
+    ],
+    "https://w3id.org/dpv#isSubTypeOf": [
+      {
+        "@id": "https://w3id.org/dpv#DataSubjectRight"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-gdpr#A21",
+    "@type": [
+      "https://w3id.org/dpv#Concept",
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2020-11-04"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Beatriz Esteves"
       },
       {
-        "@id": "https://w3id.org/dpv/dpv-gdpr#A20"
+        "@value": "Georg Krog"
       },
       {
-        "@id": "https://w3id.org/dpv/dpv-gdpr#A21"
-      },
+        "@value": "Harshvardhan J. Pandit"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
       {
-        "@id": "https://w3id.org/dpv/dpv-gdpr#A22"
-      },
+        "@id": "https://eur-lex.europa.eu/eli/reg/2016/679/art_21/oj"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@id": "https://w3id.org/dpv/dpv-gdpr#A7-3"
-      },
+        "@id": "https://w3id.org/dpv/dpv-gdpr#"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
       {
-        "@id": "https://w3id.org/dpv/dpv-gdpr#A77"
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Right to object to processing of personal data"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "A21 Right to object"
+      }
+    ],
+    "https://w3id.org/dpv#isSubTypeOf": [
+      {
+        "@id": "https://w3id.org/dpv#DataSubjectRight"
       }
     ]
   }

@@ -9,8 +9,8 @@
    var respecConfig = {
     shortName: "dpvo-pd",
     title: "DPVO-PD: Extended Personal Data concepts for DPV-OWL",
-    subtitle: "version 0.6",
-    publishDate: "2022-04-02",
+    subtitle: "version 0.7",
+    publishDate: "2022-05-25",
     specStatus: "CG-DRAFT",
     group: "dpvcg",
     latestVersion: "https://w3id.org/dpv/dpv-owl/dpv-pd",
@@ -136,6 +136,10 @@
   "DPV-LEGAL": {
     "href": "https://www.w3id.org/dpv/dpv-legal",
     "title": "Legal Extension providing Jurisdictions, Laws, and Authorities for Data Privacy Vocabulary (DPV-LEGAL)"
+  },
+  "DPV-TECH": {
+    "href": "https://www.w3id.org/dpv/dpv-tech",
+    "title": "Extension providing Technology concepts for Data Privacy Vocabulary (DPV-TECH)"
   },
   "DPV-SKOS": {
     "href": "https://www.w3id.org/dpv/dpv-skos",
@@ -294,6 +298,7 @@
         <li>[[[DPV-GDPR]]]:  extends DPV concepts for [[GDPR]]</li>
         <li>[[[DPV-PD]]] (this document)</li>
         <li>[[[DPV-LEGAL]]] </li>
+        <li>[[[DPV-TECH]]] </li>
         </ul></li>
       <li>[[[DPV-GUIDES]]]: <ul>
         <li>[[[DPV-GUIDE-OWL2]]] </li>
@@ -330,6 +335,8 @@
       <code><a href="#AccountIdentifier">Account Identifier</a></code> |
       <code><a href="#Acquantaince">Acquantaince</a></code> |
       <code><a href="#Age">Age</a></code> |
+      <code><a href="#AgeExact">Age Exact</a></code> |
+      <code><a href="#AgeRange">Age Range</a></code> |
       <code><a href="#ApartmentOwned">Apartment Owned</a></code> |
       <code><a href="#Association">Association</a></code> |
       <code><a href="#Attitude">Attitude</a></code> |
@@ -338,8 +345,11 @@
       <code><a href="#BankAccount">Bank Account</a></code> |
       <code><a href="#Behavioral">Behavioral</a></code> |
       <code><a href="#Biometric">Biometric</a></code> |
+      <code><a href="#BirthDate">Birth Date</a></code> |
+      <code><a href="#BirthPlace">Birth Place</a></code> |
       <code><a href="#BloodType">Blood Type</a></code> |
       <code><a href="#BrowserFingerprint">Browser Fingerprint</a></code> |
+      <code><a href="#BrowserHistory">Browser History</a></code> |
       <code><a href="#BrowsingBehavior">Browsing Behavior</a></code> |
       <code><a href="#BrowsingReferral">Browsing Referral</a></code> |
       <code><a href="#CallLog">Call Log</a></code> |
@@ -361,6 +371,7 @@
       <code><a href="#CriminalCharge">Criminal Charge</a></code> |
       <code><a href="#CriminalConviction">Criminal Conviction</a></code> |
       <code><a href="#CriminalPardon">Criminal Pardon</a></code> |
+      <code><a href="#CurrentEmployment">Current Employment</a></code> |
       <code><a href="#Demeanor">Demeanor</a></code> |
       <code><a href="#Demographic">Demographic</a></code> |
       <code><a href="#DeviceApplications">Device Applications</a></code> |
@@ -368,18 +379,25 @@
       <code><a href="#DeviceOperatingSystem">Device Operating System</a></code> |
       <code><a href="#DeviceSoftware">Device Software</a></code> |
       <code><a href="#Dialect">Dialect</a></code> |
+      <code><a href="#DigitalFingerprint">Digital Fingerprint</a></code> |
       <code><a href="#Disability">Disability</a></code> |
       <code><a href="#DisciplinaryAction">Disciplinary Action</a></code> |
       <code><a href="#Dislike">Dislike</a></code> |
       <code><a href="#Divorce">Divorce</a></code> |
       <code><a href="#DNACode">DNA Code</a></code> |
       <code><a href="#DrugTestResult">Drug Test Result</a></code> |
+      <code><a href="#Education">Education</a></code> |
+      <code><a href="#EducationExperience">Education Experience</a></code> |
+      <code><a href="#EducationQualification">Education Qualification</a></code> |
       <code><a href="#EmailAddress">Email Address</a></code> |
+      <code><a href="#EmailAddressPersonal">Email Address Personal</a></code> |
+      <code><a href="#EmailAddressWork">Email Address Work</a></code> |
       <code><a href="#EmailContent">Email Content</a></code> |
       <code><a href="#EmploymentHistory">Employment History</a></code> |
       <code><a href="#Ethnicity">Ethnicity</a></code> |
       <code><a href="#EthnicOrigin">Ethnic Origin</a></code> |
       <code><a href="#External">External</a></code> |
+      <code><a href="#FacialPrint">Facial Print</a></code> |
       <code><a href="#Family">Family</a></code> |
       <code><a href="#FamilyHealthHistory">Family Health History</a></code> |
       <code><a href="#FamilyStructure">Family Structure</a></code> |
@@ -391,10 +409,12 @@
       <code><a href="#Financial">Financial</a></code> |
       <code><a href="#FinancialAccount">Financial Account</a></code> |
       <code><a href="#FinancialAccountNumber">Financial Account Number</a></code> |
+      <code><a href="#FinancialStatus">Financial Status</a></code> |
       <code><a href="#Fingerprint">Fingerprint</a></code> |
       <code><a href="#Friend">Friend</a></code> |
       <code><a href="#Gender">Gender</a></code> |
       <code><a href="#GeneralReputation">General Reputation</a></code> |
+      <code><a href="#GeneticData">Genetic Data</a></code> |
       <code><a href="#Geographic">Geographic</a></code> |
       <code><a href="#GPSCoordinate">GPS Coordinate</a></code> |
       <code><a href="#GroupMembership">Group Membership</a></code> |
@@ -404,11 +424,14 @@
       <code><a href="#HealthRecord">Health Record</a></code> |
       <code><a href="#Height">Height</a></code> |
       <code><a href="#Historical">Historical</a></code> |
+      <code><a href="#HouseholdData">Household Data</a></code> |
       <code><a href="#HouseOwned">House Owned</a></code> |
+      <code><a href="#Identifier">Identifier</a></code> |
       <code><a href="#Identifying">Identifying</a></code> |
       <code><a href="#Income">Income</a></code> |
       <code><a href="#IncomeBracket">Income Bracket</a></code> |
       <code><a href="#IndividualHealthHistory">Individual Health History</a></code> |
+      <code><a href="#Insurance">Insurance</a></code> |
       <code><a href="#Intention">Intention</a></code> |
       <code><a href="#Interaction">Interaction</a></code> |
       <code><a href="#Interest">Interest</a></code> |
@@ -428,15 +451,20 @@
       <code><a href="#MedicalHealth">MedicalHealth</a></code> |
       <code><a href="#MentalHealth">Mental Health</a></code> |
       <code><a href="#Name">Name</a></code> |
+      <code><a href="#Nationality">Nationality</a></code> |
       <code><a href="#OfficialID">Official ID</a></code> |
       <code><a href="#Offspring">Offspring</a></code> |
       <code><a href="#Opinion">Opinion</a></code> |
       <code><a href="#Ownership">Ownership</a></code> |
       <code><a href="#Parent">Parent</a></code> |
+      <code><a href="#Passport">Passport</a></code> |
       <code><a href="#Password">Password</a></code> |
+      <code><a href="#PastEmployment">Past Employment</a></code> |
       <code><a href="#PaymentCard">Payment Card</a></code> |
       <code><a href="#PaymentCardExpiry">Payment Card Expiry</a></code> |
       <code><a href="#PaymentCardNumber">Payment Card Number</a></code> |
+      <code><a href="#PerformanceAtWork">Performance at Work</a></code> |
+      <code><a href="#PersonalDocuments">Personal Documents</a></code> |
       <code><a href="#Personality">Personality</a></code> |
       <code><a href="#PersonalPossession">Personal Possession</a></code> |
       <code><a href="#PhilosophicalBelief">Philosophical Belief</a></code> |
@@ -448,6 +476,7 @@
       <code><a href="#Piercing">Piercing</a></code> |
       <code><a href="#PINCode">PIN Code</a></code> |
       <code><a href="#PoliticalAffiliation">Political Affiliation</a></code> |
+      <code><a href="#PoliticalOpinion">Political Opinion</a></code> |
       <code><a href="#Preference">Preference</a></code> |
       <code><a href="#Prescription">Prescription</a></code> |
       <code><a href="#PrivacyPreference">Privacy Preference</a></code> |
@@ -456,12 +485,15 @@
       <code><a href="#ProfessionalCertification">Professional Certification</a></code> |
       <code><a href="#ProfessionalEvaluation">Professional Evaluation</a></code> |
       <code><a href="#ProfessionalInterview">Professional Interview</a></code> |
+      <code><a href="#Profile">Profile</a></code> |
       <code><a href="#PublicLife">Public Life</a></code> |
+      <code><a href="#PubliclyAvailableSocialMediaData">Publicly Available Social Media Data</a></code> |
       <code><a href="#Purchase">Purchase</a></code> |
       <code><a href="#PurchasesAndSpendingHabit">Purchases and Spending Habit</a></code> |
       <code><a href="#Race">Race</a></code> |
       <code><a href="#Reference">Reference</a></code> |
       <code><a href="#Relationship">Relationship</a></code> |
+      <code><a href="#Reliability">Reliability</a></code> |
       <code><a href="#Religion">Religion</a></code> |
       <code><a href="#ReligiousBelief">Religious Belief</a></code> |
       <code><a href="#Retina">Retina</a></code> |
@@ -478,6 +510,7 @@
       <code><a href="#SkinTone">Skin Tone</a></code> |
       <code><a href="#Social">Social</a></code> |
       <code><a href="#SocialMediaCommunication">Social Media Communication</a></code> |
+      <code><a href="#SocialMediaData">Social Media Data</a></code> |
       <code><a href="#SocialNetwork">Social Network</a></code> |
       <code><a href="#SocialStatus">Social Status</a></code> |
       <code><a href="#Tattoo">Tattoo</a></code> |
@@ -485,14 +518,23 @@
       <code><a href="#TelephoneNumber">Telephone Number</a></code> |
       <code><a href="#Thought">Thought</a></code> |
       <code><a href="#Tracking">Tracking</a></code> |
+      <code><a href="#TradeUnionMembership">Trade Union Membership</a></code> |
       <code><a href="#Transaction">Transaction</a></code> |
       <code><a href="#Transactional">Transactional</a></code> |
+      <code><a href="#TravelHistory">Travel History</a></code> |
       <code><a href="#TVViewingBehavior">TV Viewing Behavior</a></code> |
       <code><a href="#UID">UID</a></code> |
+      <code><a href="#UserAgent">User agent</a></code> |
       <code><a href="#Username">Username</a></code> |
+      <code><a href="#VehicalLicenseNumber">Vehicle License Number</a></code> |
+      <code><a href="#VehicalLicenseRegistration">Vehicle License Number</a></code> |
+      <code><a href="#VehicleData">Vehicle Data</a></code> |
+      <code><a href="#VehicleLicense">Vehicle License</a></code> |
+      <code><a href="#VehicleUsageData">Vehicle Usage Data</a></code> |
       <code><a href="#VoiceCommunicationRecording">Voice Communication Recording</a></code> |
       <code><a href="#VoiceMail">Voice Mail</a></code> |
       <code><a href="#Weight">Weight</a></code> |
+      <code><a href="#WorkEnvironment">Work Environment</a></code> |
       <code><a href="#WorkHistory">Work History</a></code>
     </p>
 
@@ -652,6 +694,13 @@
             </td>
           </tr>
           <tr>
+            <td>SuperClass Of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#AgeRange">dpvo-pd:AgeRange</a>, 
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#BirthDate">dpvo-pd:BirthDate</a>
+            </td>
+          </tr>
+          <tr>
             <td>Source:</td>
             <td>
               <a href="https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf">EnterPrivacy Categories of Personal Information</a>
@@ -666,6 +715,82 @@
             <td>
               Elmar Kiesling; Harshvardhan J. Pandit, 
               Fajar Ekaputra
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="AgeExact">
+      <h4 id="AgeExact">Age Exact</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td>`https://w3id.org/dpv/dpv-owl/dpv-pd#AgeExact`</td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>AgeExact</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Information about the exact age (i.e. to some degree within a year, month, or day)</td>
+          </tr>
+          <tr>
+            <td>SubClass of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#AgeRange">dpvo-pd:AgeRange</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-04-20</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="AgeRange">
+      <h4 id="AgeRange">Age Range</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td>`https://w3id.org/dpv/dpv-owl/dpv-pd#AgeRange`</td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>AgeRange</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Information about age range i.e. inexact age to some degree (i.e. some years)</td>
+          </tr>
+          <tr>
+            <td>SubClass of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Age">dpvo-pd:Age</a>
+            </td>
+          </tr>
+          <tr>
+            <td>SuperClass Of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#AgeExact">dpvo-pd:AgeExact</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-04-20</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
             </td>
           </tr>
         </tbody>
@@ -961,8 +1086,11 @@
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#CallLog">dpvo-pd:CallLog</a>, 
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Demeanor">dpvo-pd:Demeanor</a>, 
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#LinkClicked">dpvo-pd:LinkClicked</a>, 
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#PerformanceAtWork">dpvo-pd:PerformanceAtWork</a>, 
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Personality">dpvo-pd:Personality</a>, 
-              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#ServiceConsumptionBehavior">dpvo-pd:ServiceConsumptionBehavior</a>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Reliability">dpvo-pd:Reliability</a>, 
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#ServiceConsumptionBehavior">dpvo-pd:ServiceConsumptionBehavior</a>, 
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#VehicleUsageData">dpvo-pd:VehicleUsageData</a>
             </td>
           </tr>
           <tr>
@@ -1017,6 +1145,7 @@
           <tr>
             <td>SuperClass Of:</td>
             <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#FacialPrint">dpvo-pd:FacialPrint</a>, 
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Fingerprint">dpvo-pd:Fingerprint</a>, 
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Retina">dpvo-pd:Retina</a>
             </td>
@@ -1036,6 +1165,76 @@
             <td>
               Elmar Kiesling; Harshvardhan J. Pandit, 
               Fajar Ekaputra
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="BirthDate">
+      <h4 id="BirthDate">Birth Date</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td>`https://w3id.org/dpv/dpv-owl/dpv-pd#BirthDate`</td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>BirthDate</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Information about birth date</td>
+          </tr>
+          <tr>
+            <td>SubClass of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Age">dpvo-pd:Age</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-04-20</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="BirthPlace">
+      <h4 id="BirthPlace">Birth Place</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td>`https://w3id.org/dpv/dpv-owl/dpv-pd#BirthPlace`</td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>BirthPlace</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Information about birth place</td>
+          </tr>
+          <tr>
+            <td>SubClass of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Location">dpvo-pd:Location</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-04-20</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
             </td>
           </tr>
         </tbody>
@@ -1125,6 +1324,41 @@
         </tbody>
       </table>
     </section>
+    <section data-dfn-for="BrowserHistory">
+      <h4 id="BrowserHistory">Browser History</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td>`https://w3id.org/dpv/dpv-owl/dpv-pd#BrowserHistory`</td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>BrowserHistory</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Information about and including web browsing history</td>
+          </tr>
+          <tr>
+            <td>SubClass of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#BrowsingBehavior">dpvo-pd:BrowsingBehavior</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-06-15</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
     <section data-dfn-for="BrowsingBehavior">
       <h4 id="BrowsingBehavior">Browsing Behavior</h4>
       <table class="definition">
@@ -1150,6 +1384,7 @@
           <tr>
             <td>SuperClass Of:</td>
             <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#BrowserHistory">dpvo-pd:BrowserHistory</a>, 
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#BrowsingReferral">dpvo-pd:BrowsingReferral</a>
             </td>
           </tr>
@@ -1373,6 +1608,7 @@
             <td>
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#EmailContent">dpvo-pd:EmailContent</a>, 
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#SocialMediaCommunication">dpvo-pd:SocialMediaCommunication</a>, 
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#SocialMediaData">dpvo-pd:SocialMediaData</a>, 
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#VoiceCommunicationRecording">dpvo-pd:VoiceCommunicationRecording</a>, 
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#VoiceMail">dpvo-pd:VoiceMail</a>
             </td>
@@ -2076,6 +2312,41 @@
         </tbody>
       </table>
     </section>
+    <section data-dfn-for="CurrentEmployment">
+      <h4 id="CurrentEmployment">Current Employment</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td>`https://w3id.org/dpv/dpv-owl/dpv-pd#CurrentEmployment`</td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>CurrentEmployment</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Information about current employment</td>
+          </tr>
+          <tr>
+            <td>SubClass of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#EmploymentHistory">dpvo-pd:EmploymentHistory</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-04-20</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
     <section data-dfn-for="Demeanor">
       <h4 id="Demeanor">Demeanor</h4>
       <table class="definition">
@@ -2406,6 +2677,41 @@
         </tbody>
       </table>
     </section>
+    <section data-dfn-for="DigitalFingerprint">
+      <h4 id="DigitalFingerprint">Digital Fingerprint</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td>`https://w3id.org/dpv/dpv-owl/dpv-pd#DigitalFingerprint`</td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>DigitalFingerprint</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Information about a &#39;digital fingerprint&#39; created for identification</td>
+          </tr>
+          <tr>
+            <td>SubClass of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Tracking">dpvo-pd:Tracking</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-06-15</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
     <section data-dfn-for="Disability">
       <h4 id="Disability">Disability</h4>
       <table class="definition">
@@ -2658,6 +2964,118 @@
         </tbody>
       </table>
     </section>
+    <section data-dfn-for="Education">
+      <h4 id="Education">Education</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td>`https://w3id.org/dpv/dpv-owl/dpv-pd#Education`</td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>Education</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Information about education</td>
+          </tr>
+          <tr>
+            <td>SubClass of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Professional">dpvo-pd:Professional</a>
+            </td>
+          </tr>
+          <tr>
+            <td>SuperClass Of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#EducationExperience">dpvo-pd:EducationExperience</a>, 
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#EducationQualification">dpvo-pd:EducationQualification</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-04-20</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="EducationExperience">
+      <h4 id="EducationExperience">Education Experience</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td>`https://w3id.org/dpv/dpv-owl/dpv-pd#EducationExperience`</td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>EducationExperience</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Information about education experience e.g. attending a university</td>
+          </tr>
+          <tr>
+            <td>SubClass of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Education">dpvo-pd:Education</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-04-20</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="EducationQualification">
+      <h4 id="EducationQualification">Education Qualification</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td>`https://w3id.org/dpv/dpv-owl/dpv-pd#EducationQualification`</td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>EducationQualification</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Information about educational qualifications</td>
+          </tr>
+          <tr>
+            <td>SubClass of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Education">dpvo-pd:Education</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-04-20</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
     <section data-dfn-for="EmailAddress">
       <h4 id="EmailAddress">Email Address</h4>
       <table class="definition">
@@ -2681,6 +3099,13 @@
             </td>
           </tr>
           <tr>
+            <td>SuperClass Of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#EmailAddressPersonal">dpvo-pd:EmailAddressPersonal</a>, 
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#EmailAddressWork">dpvo-pd:EmailAddressWork</a>
+            </td>
+          </tr>
+          <tr>
             <td>Source:</td>
             <td>
               <a href="https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf">EnterPrivacy Categories of Personal Information</a>
@@ -2695,6 +3120,76 @@
             <td>
               Elmar Kiesling; Harshvardhan J. Pandit, 
               Fajar Ekaputra
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="EmailAddressPersonal">
+      <h4 id="EmailAddressPersonal">Email Address Personal</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td>`https://w3id.org/dpv/dpv-owl/dpv-pd#EmailAddressPersonal`</td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>EmailAddressPersonal</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Information about Email address used in Personal capacity</td>
+          </tr>
+          <tr>
+            <td>SubClass of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#EmailAddress">dpvo-pd:EmailAddress</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-04-20</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="EmailAddressWork">
+      <h4 id="EmailAddressWork">Email Address Work</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td>`https://w3id.org/dpv/dpv-owl/dpv-pd#EmailAddressWork`</td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>EmailAddressWork</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Information about Email address used for Work or in Professional capacity</td>
+          </tr>
+          <tr>
+            <td>SubClass of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#EmailAddress">dpvo-pd:EmailAddress</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-04-20</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
             </td>
           </tr>
         </tbody>
@@ -2762,6 +3257,13 @@
             <td>SubClass of:</td>
             <td>
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Professional">dpvo-pd:Professional</a>
+            </td>
+          </tr>
+          <tr>
+            <td>SuperClass Of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#CurrentEmployment">dpvo-pd:CurrentEmployment</a>, 
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#PastEmployment">dpvo-pd:PastEmployment</a>
             </td>
           </tr>
           <tr>
@@ -2907,8 +3409,11 @@
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Identifying">dpvo-pd:Identifying</a>, 
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Language">dpvo-pd:Language</a>, 
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#MedicalHealth">dpvo-pd:MedicalHealth</a>, 
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Nationality">dpvo-pd:Nationality</a>, 
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#PersonalDocuments">dpvo-pd:PersonalDocuments</a>, 
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#PhysicalCharacteristic">dpvo-pd:PhysicalCharacteristic</a>, 
-              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Sexual">dpvo-pd:Sexual</a>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Sexual">dpvo-pd:Sexual</a>, 
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#VehicleData">dpvo-pd:VehicleData</a>
             </td>
           </tr>
           <tr>
@@ -2926,6 +3431,41 @@
             <td>
               Elmar Kiesling; Harshvardhan J. Pandit, 
               Fajar Ekaputra
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="FacialPrint">
+      <h4 id="FacialPrint">Facial Print</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td>`https://w3id.org/dpv/dpv-owl/dpv-pd#FacialPrint`</td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>FacialPrint</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Information about facial print or pattern</td>
+          </tr>
+          <tr>
+            <td>SubClass of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Biometric">dpvo-pd:Biometric</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-06-15</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
             </td>
           </tr>
         </tbody>
@@ -3318,6 +3858,8 @@
             <td>SuperClass Of:</td>
             <td>
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#FinancialAccount">dpvo-pd:FinancialAccount</a>, 
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#FinancialStatus">dpvo-pd:FinancialStatus</a>, 
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Insurance">dpvo-pd:Insurance</a>, 
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Ownership">dpvo-pd:Ownership</a>, 
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Transactional">dpvo-pd:Transactional</a>
             </td>
@@ -3435,6 +3977,41 @@
             <td>
               Elmar Kiesling; Harshvardhan J. Pandit, 
               Fajar Ekaputra
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="FinancialStatus">
+      <h4 id="FinancialStatus">Financial Status</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td>`https://w3id.org/dpv/dpv-owl/dpv-pd#FinancialStatus`</td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>FinancialStatus</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Information about financial status or standing</td>
+          </tr>
+          <tr>
+            <td>SubClass of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Financial">dpvo-pd:Financial</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-06-15</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
             </td>
           </tr>
         </tbody>
@@ -3608,6 +4185,41 @@
         </tbody>
       </table>
     </section>
+    <section data-dfn-for="GeneticData">
+      <h4 id="GeneticData">Genetic Data</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td>`https://w3id.org/dpv/dpv-owl/dpv-pd#GeneticData`</td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>GeneticData</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Information about inherited or acquired genetic characteristics</td>
+          </tr>
+          <tr>
+            <td>SubClass of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl#HealthData">dpvo:HealthData</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-05-18</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
     <section data-dfn-for="Geographic">
       <h4 id="Geographic">Geographic</h4>
       <table class="definition">
@@ -3712,6 +4324,12 @@
             <td>SubClass of:</td>
             <td>
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#SocialNetwork">dpvo-pd:SocialNetwork</a>
+            </td>
+          </tr>
+          <tr>
+            <td>SuperClass Of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#TradeUnionMembership">dpvo-pd:TradeUnionMembership</a>
             </td>
           </tr>
           <tr>
@@ -4012,6 +4630,41 @@
         </tbody>
       </table>
     </section>
+    <section data-dfn-for="HouseholdData">
+      <h4 id="HouseholdData">Household Data</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td>`https://w3id.org/dpv/dpv-owl/dpv-pd#HouseholdData`</td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>HouseholdData</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Information about personal or household activities</td>
+          </tr>
+          <tr>
+            <td>SubClass of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl#PersonalData">dpvo:PersonalData</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-06-15</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
     <section data-dfn-for="HouseOwned">
       <h4 id="HouseOwned">House Owned</h4>
       <table class="definition">
@@ -4060,6 +4713,41 @@
         </tbody>
       </table>
     </section>
+    <section data-dfn-for="Identifier">
+      <h4 id="Identifier">Identifier</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td>`https://w3id.org/dpv/dpv-owl/dpv-pd#Identifier`</td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>Identifier</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Information about an identifier or name used for identification</td>
+          </tr>
+          <tr>
+            <td>SubClass of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Tracking">dpvo-pd:Tracking</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-06-15</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
     <section data-dfn-for="Identifying">
       <h4 id="Identifying">Identifying</h4>
       <table class="definition">
@@ -4090,7 +4778,8 @@
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#OfficialID">dpvo-pd:OfficialID</a>, 
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Picture">dpvo-pd:Picture</a>, 
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#UID">dpvo-pd:UID</a>, 
-              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Username">dpvo-pd:Username</a>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Username">dpvo-pd:Username</a>, 
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#VehicleLicense">dpvo-pd:VehicleLicense</a>
             </td>
           </tr>
           <tr>
@@ -4234,6 +4923,41 @@
             <td>
               Elmar Kiesling; Harshvardhan J. Pandit, 
               Fajar Ekaputra
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="Insurance">
+      <h4 id="Insurance">Insurance</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td>`https://w3id.org/dpv/dpv-owl/dpv-pd#Insurance`</td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>Insurance</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Information about Insurance</td>
+          </tr>
+          <tr>
+            <td>SubClass of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Financial">dpvo-pd:Financial</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-04-20</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
             </td>
           </tr>
         </tbody>
@@ -4808,9 +5532,11 @@
           <tr>
             <td>SuperClass Of:</td>
             <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#BirthPlace">dpvo-pd:BirthPlace</a>, 
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Country">dpvo-pd:Country</a>, 
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#GPSCoordinate">dpvo-pd:GPSCoordinate</a>, 
-              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#RoomNumber">dpvo-pd:RoomNumber</a>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#RoomNumber">dpvo-pd:RoomNumber</a>, 
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#TravelHistory">dpvo-pd:TravelHistory</a>
             </td>
           </tr>
           <tr>
@@ -5105,6 +5831,41 @@
         </tbody>
       </table>
     </section>
+    <section data-dfn-for="Nationality">
+      <h4 id="Nationality">Nationality</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td>`https://w3id.org/dpv/dpv-owl/dpv-pd#Nationality`</td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>Nationality</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Information about nationality</td>
+          </tr>
+          <tr>
+            <td>SubClass of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#External">dpvo-pd:External</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-04-20</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              https://www.w3.org/2022/04/20-dpvcg-minutes.html
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
     <section data-dfn-for="OfficialID">
       <h4 id="OfficialID">Official ID</h4>
       <table class="definition">
@@ -5125,6 +5886,12 @@
             <td>SubClass of:</td>
             <td>
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Identifying">dpvo-pd:Identifying</a>
+            </td>
+          </tr>
+          <tr>
+            <td>SuperClass Of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Passport">dpvo-pd:Passport</a>
             </td>
           </tr>
           <tr>
@@ -5329,6 +6096,41 @@
         </tbody>
       </table>
     </section>
+    <section data-dfn-for="Passport">
+      <h4 id="Passport">Passport</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td>`https://w3id.org/dpv/dpv-owl/dpv-pd#Passport`</td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>Passport</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Information about passport</td>
+          </tr>
+          <tr>
+            <td>SubClass of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#OfficialID">dpvo-pd:OfficialID</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-04-20</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
     <section data-dfn-for="Password">
       <h4 id="Password">Password</h4>
       <table class="definition">
@@ -5366,6 +6168,41 @@
             <td>
               Elmar Kiesling; Harshvardhan J. Pandit, 
               Fajar Ekaputra
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="PastEmployment">
+      <h4 id="PastEmployment">Past Employment</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td>`https://w3id.org/dpv/dpv-owl/dpv-pd#PastEmployment`</td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>PastEmployment</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Information about past employment</td>
+          </tr>
+          <tr>
+            <td>SubClass of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#EmploymentHistory">dpvo-pd:EmploymentHistory</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-04-20</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
             </td>
           </tr>
         </tbody>
@@ -5503,6 +6340,77 @@
             <td>Contributor(s):</td>
             <td>
               Georg P Krog
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="PerformanceAtWork">
+      <h4 id="PerformanceAtWork">Performance at Work</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td>`https://w3id.org/dpv/dpv-owl/dpv-pd#PerformanceAtWork`</td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>PerformanceAtWork</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Information about performance at work or within work environments</td>
+          </tr>
+          <tr>
+            <td>SubClass of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Behavioral">dpvo-pd:Behavioral</a>, 
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Professional">dpvo-pd:Professional</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-06-15</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="PersonalDocuments">
+      <h4 id="PersonalDocuments">Personal Documents</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td>`https://w3id.org/dpv/dpv-owl/dpv-pd#PersonalDocuments`</td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>PersonalDocuments</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Information about and including personal documents e.g. diaries or journals</td>
+          </tr>
+          <tr>
+            <td>SubClass of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#External">dpvo-pd:External</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-06-15</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
             </td>
           </tr>
         </tbody>
@@ -5997,6 +6905,42 @@
         </tbody>
       </table>
     </section>
+    <section data-dfn-for="PoliticalOpinion">
+      <h4 id="PoliticalOpinion">Political Opinion</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td>`https://w3id.org/dpv/dpv-owl/dpv-pd#PoliticalOpinion`</td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>PoliticalOpinion</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Information about opinions regarding politics and political topics</td>
+          </tr>
+          <tr>
+            <td>SubClass of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl#SpecialCategoryPersonalData">dpvo:SpecialCategoryPersonalData</a>, 
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#PublicLife">dpvo-pd:PublicLife</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-05-18</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
     <section data-dfn-for="Preference">
       <h4 id="Preference">Preference</h4>
       <table class="definition">
@@ -6207,14 +7151,17 @@
             <td>SuperClass Of:</td>
             <td>
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#DisciplinaryAction">dpvo-pd:DisciplinaryAction</a>, 
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Education">dpvo-pd:Education</a>, 
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#EmploymentHistory">dpvo-pd:EmploymentHistory</a>, 
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Job">dpvo-pd:Job</a>, 
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#PerformanceAtWork">dpvo-pd:PerformanceAtWork</a>, 
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#ProfessionalCertification">dpvo-pd:ProfessionalCertification</a>, 
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#ProfessionalEvaluation">dpvo-pd:ProfessionalEvaluation</a>, 
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#ProfessionalInterview">dpvo-pd:ProfessionalInterview</a>, 
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Reference">dpvo-pd:Reference</a>, 
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Salary">dpvo-pd:Salary</a>, 
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#School">dpvo-pd:School</a>, 
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#WorkEnvironment">dpvo-pd:WorkEnvironment</a>, 
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#WorkHistory">dpvo-pd:WorkHistory</a>
             </td>
           </tr>
@@ -6364,6 +7311,41 @@
         </tbody>
       </table>
     </section>
+    <section data-dfn-for="Profile">
+      <h4 id="Profile">Profile</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td>`https://w3id.org/dpv/dpv-owl/dpv-pd#Profile`</td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>Profile</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Profile or user profile is information and representation of characteristics associated with person(s) or group(s)</td>
+          </tr>
+          <tr>
+            <td>SubClass of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl#PersonalData">dpvo:PersonalData</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-06-15</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
     <section data-dfn-for="PublicLife">
       <h4 id="PublicLife">Public Life</h4>
       <table class="definition">
@@ -6395,6 +7377,7 @@
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Interaction">dpvo-pd:Interaction</a>, 
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#MaritalStatus">dpvo-pd:MaritalStatus</a>, 
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#PoliticalAffiliation">dpvo-pd:PoliticalAffiliation</a>, 
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#PoliticalOpinion">dpvo-pd:PoliticalOpinion</a>, 
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Religion">dpvo-pd:Religion</a>, 
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#SocialStatus">dpvo-pd:SocialStatus</a>
             </td>
@@ -6414,6 +7397,41 @@
             <td>
               Elmar Kiesling; Harshvardhan J. Pandit, 
               Fajar Ekaputra
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="PubliclyAvailableSocialMediaData">
+      <h4 id="PubliclyAvailableSocialMediaData">Publicly Available Social Media Data</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td>`https://w3id.org/dpv/dpv-owl/dpv-pd#PubliclyAvailableSocialMediaData`</td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>PubliclyAvailableSocialMediaData</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Information about social media that is publicly available</td>
+          </tr>
+          <tr>
+            <td>SubClass of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#SocialMediaData">dpvo-pd:SocialMediaData</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-06-15</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
             </td>
           </tr>
         </tbody>
@@ -6631,6 +7649,41 @@
             <td>
               Elmar Kiesling; Harshvardhan J. Pandit, 
               Fajar Ekaputra
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="Reliability">
+      <h4 id="Reliability">Reliability</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td>`https://w3id.org/dpv/dpv-owl/dpv-pd#Reliability`</td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>Reliability</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Information about reliability (e.g. of a person)</td>
+          </tr>
+          <tr>
+            <td>SubClass of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Behavioral">dpvo-pd:Behavioral</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-06-15</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
             </td>
           </tr>
         </tbody>
@@ -7343,6 +8396,47 @@
         </tbody>
       </table>
     </section>
+    <section data-dfn-for="SocialMediaData">
+      <h4 id="SocialMediaData">Social Media Data</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td>`https://w3id.org/dpv/dpv-owl/dpv-pd#SocialMediaData`</td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>SocialMediaData</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Information about social media</td>
+          </tr>
+          <tr>
+            <td>SubClass of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Communication">dpvo-pd:Communication</a>
+            </td>
+          </tr>
+          <tr>
+            <td>SuperClass Of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#PubliclyAvailableSocialMediaData">dpvo-pd:PubliclyAvailableSocialMediaData</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-06-15</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
     <section data-dfn-for="SocialNetwork">
       <h4 id="SocialNetwork">Social Network</h4>
       <table class="definition">
@@ -7632,7 +8726,10 @@
             <td>
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Contact">dpvo-pd:Contact</a>, 
               <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#DeviceBased">dpvo-pd:DeviceBased</a>, 
-              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Location">dpvo-pd:Location</a>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#DigitalFingerprint">dpvo-pd:DigitalFingerprint</a>, 
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Identifier">dpvo-pd:Identifier</a>, 
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Location">dpvo-pd:Location</a>, 
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#UserAgent">dpvo-pd:UserAgent</a>
             </td>
           </tr>
           <tr>
@@ -7650,6 +8747,42 @@
             <td>
               Elmar Kiesling; Harshvardhan J. Pandit, 
               Fajar Ekaputra
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="TradeUnionMembership">
+      <h4 id="TradeUnionMembership">Trade Union Membership</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td>`https://w3id.org/dpv/dpv-owl/dpv-pd#TradeUnionMembership`</td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>TradeUnionMembership</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Information about trade union memberships and related topics</td>
+          </tr>
+          <tr>
+            <td>SubClass of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl#SpecialCategoryPersonalData">dpvo:SpecialCategoryPersonalData</a>, 
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#GroupMembership">dpvo-pd:GroupMembership</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-05-18</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
             </td>
           </tr>
         </tbody>
@@ -7752,6 +8885,41 @@
         </tbody>
       </table>
     </section>
+    <section data-dfn-for="TravelHistory">
+      <h4 id="TravelHistory">Travel History</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td>`https://w3id.org/dpv/dpv-owl/dpv-pd#TravelHistory`</td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>TravelHistory</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Information about travel history</td>
+          </tr>
+          <tr>
+            <td>SubClass of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Location">dpvo-pd:Location</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-04-20</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
     <section data-dfn-for="TVViewingBehavior">
       <h4 id="TVViewingBehavior">TV Viewing Behavior</h4>
       <table class="definition">
@@ -7842,6 +9010,41 @@
         </tbody>
       </table>
     </section>
+    <section data-dfn-for="UserAgent">
+      <h4 id="UserAgent">User agent</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td>`https://w3id.org/dpv/dpv-owl/dpv-pd#UserAgent`</td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>UserAgent</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Information about software acting on behalf of users e.g. web browser</td>
+          </tr>
+          <tr>
+            <td>SubClass of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Tracking">dpvo-pd:Tracking</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-06-15</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Georg P Krog
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
     <section data-dfn-for="Username">
       <h4 id="Username">Username</h4>
       <table class="definition">
@@ -7879,6 +9082,197 @@
             <td>
               Elmar Kiesling; Harshvardhan J. Pandit, 
               Fajar Ekaputra
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="VehicalLicenseNumber">
+      <h4 id="VehicalLicenseNumber">Vehicle License Number</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td>`https://w3id.org/dpv/dpv-owl/dpv-pd#VehicalLicenseNumber`</td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>VehicalLicenseNumber</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Information about vehicle license number</td>
+          </tr>
+          <tr>
+            <td>SubClass of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#VehicleLicense">dpvo-pd:VehicleLicense</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-06-15</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="VehicalLicenseRegistration">
+      <h4 id="VehicalLicenseRegistration">Vehicle License Number</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td>`https://w3id.org/dpv/dpv-owl/dpv-pd#VehicalLicenseRegistration`</td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>VehicalLicenseRegistration</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Information about vehicle license registration</td>
+          </tr>
+          <tr>
+            <td>SubClass of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#VehicleLicense">dpvo-pd:VehicleLicense</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-06-15</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="VehicleData">
+      <h4 id="VehicleData">Vehicle Data</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td>`https://w3id.org/dpv/dpv-owl/dpv-pd#VehicleData`</td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>VehicleData</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Information about vehicles</td>
+          </tr>
+          <tr>
+            <td>SubClass of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#External">dpvo-pd:External</a>
+            </td>
+          </tr>
+          <tr>
+            <td>SuperClass Of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#VehicleLicense">dpvo-pd:VehicleLicense</a>, 
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#VehicleUsageData">dpvo-pd:VehicleUsageData</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-06-15</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="VehicleLicense">
+      <h4 id="VehicleLicense">Vehicle License</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td>`https://w3id.org/dpv/dpv-owl/dpv-pd#VehicleLicense`</td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>VehicleLicense</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Information about vehicle license</td>
+          </tr>
+          <tr>
+            <td>SubClass of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Identifying">dpvo-pd:Identifying</a>, 
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#VehicleData">dpvo-pd:VehicleData</a>
+            </td>
+          </tr>
+          <tr>
+            <td>SuperClass Of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#VehicalLicenseNumber">dpvo-pd:VehicalLicenseNumber</a>, 
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#VehicalLicenseRegistration">dpvo-pd:VehicalLicenseRegistration</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-06-15</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="VehicleUsageData">
+      <h4 id="VehicleUsageData">Vehicle Usage Data</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td>`https://w3id.org/dpv/dpv-owl/dpv-pd#VehicleUsageData`</td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>VehicleUsageData</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Information about usage of vehicles, e.g. driving statistics</td>
+          </tr>
+          <tr>
+            <td>SubClass of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Behavioral">dpvo-pd:Behavioral</a>, 
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#VehicleData">dpvo-pd:VehicleData</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-06-15</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
             </td>
           </tr>
         </tbody>
@@ -8010,6 +9404,41 @@
         </tbody>
       </table>
     </section>
+    <section data-dfn-for="WorkEnvironment">
+      <h4 id="WorkEnvironment">Work Environment</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td>`https://w3id.org/dpv/dpv-owl/dpv-pd#WorkEnvironment`</td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn>WorkEnvironment</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Definition:</td>
+            <td>Information about work environments</td>
+          </tr>
+          <tr>
+            <td>SubClass of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-owl/dpv-pd#Professional">dpvo-pd:Professional</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-06-15</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
     <section data-dfn-for="WorkHistory">
       <h4 id="WorkHistory">Work History</h4>
       <table class="definition">
@@ -8060,24 +9489,8 @@
 <section id="proposed-terms" class="appendix">
   <h2>Proposed Terms</h2>
   <p>The following terms have been proposed for inclusion, and are under discussion. They are provided here for illustrative purposes and should not be considered as part of DPV.</p>
-    <ul>      <li>AgeExact</li>
-      <li>AgeRange</li>
-      <li>BirthDate</li>
-      <li>BirthPlace</li>
-      <li>EmailAddressWork</li>
-      <li>EmailAddressPersonal</li>
-      <li>CurrentEmployment</li>
-      <li>PastEmployment</li>
-      <li>Insurance</li>
-      <li>Nationality</li>
-      <li>Education</li>
-      <li>EducationExperience</li>
-      <li>EducationQualification</li>
-      <li>TravelHistory</li>
-      <li>CustomerOrder</li>
-      <li>RequestTarget</li>
-      <li>UsageHistory</li>
-      <li>UserAgent</li>
+    <ul>      <li>IndividualProfile</li>
+      <li>GroupProfile</li>
 </ul>
 </section>
 </body>

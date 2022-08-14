@@ -8,6 +8,18 @@
 @prefix sw: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+dpvs:Access a rdfs:Class,
+        skos:Concept,
+        dpvs:Processing ;
+    dct:created "2022-06-15"^^xsd:date ;
+    dct:creator "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpvs: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpvs:Use ;
+    skos:definition "to access data"@en ;
+    skos:prefLabel "Access"@en .
+
 dpvs:Acquire a rdfs:Class,
         skos:Concept,
         dpvs:Processing ;
@@ -15,7 +27,7 @@ dpvs:Acquire a rdfs:Class,
     dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     rdfs:isDefinedBy dpvs: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpvs:Obtain ;
+    skos:broader dpvs:Obtain ;
     skos:definition "to come into possession or control of the data"@en ;
     skos:prefLabel "Acquire"@en .
 
@@ -26,7 +38,7 @@ dpvs:Adapt a rdfs:Class,
     dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     rdfs:isDefinedBy dpvs: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpvs:Transform ;
+    skos:broader dpvs:Transform ;
     skos:definition "to modify the data, often rewritten into a new form for a new use"@en ;
     skos:prefLabel "Adapt"@en .
 
@@ -37,7 +49,7 @@ dpvs:Align a rdfs:Class,
     dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     rdfs:isDefinedBy dpvs: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpvs:Transform ;
+    skos:broader dpvs:Transform ;
     skos:definition "to adjust the data to be in relation to another data"@en ;
     skos:prefLabel "Align"@en .
 
@@ -48,7 +60,7 @@ dpvs:Alter a rdfs:Class,
     dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     rdfs:isDefinedBy dpvs: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpvs:Transform ;
+    skos:broader dpvs:Transform ;
     skos:definition "to change the data without changing it into something else"@en ;
     skos:prefLabel "Alter"@en .
 
@@ -59,7 +71,7 @@ dpvs:Analyse a rdfs:Class,
     dct:source <https://specialprivacy.ercim.eu/vocabs/processing> ;
     rdfs:isDefinedBy dpvs: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpvs:Use ;
+    skos:broader dpvs:Use ;
     skos:definition "to study or examine the data in detail"@en ;
     skos:prefLabel "Analyse"@en ;
     skos:related svpr:Analyse .
@@ -71,10 +83,22 @@ dpvs:Anonymise a rdfs:Class,
     dct:source <https://specialprivacy.ercim.eu/vocabs/processing> ;
     rdfs:isDefinedBy dpvs: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpvs:Transform ;
+    skos:broader dpvs:Transform ;
     skos:definition "to irreversibly alter personal data in such a way that an unique data subject can no longer be identified directly or indirectly or in combination with other data"@en ;
     skos:prefLabel "Anonymise"@en ;
     skos:related svpr:Anonymize .
+
+dpvs:Assess a rdfs:Class,
+        skos:Concept,
+        dpvs:Processing ;
+    dct:created "2022-06-15"^^xsd:date ;
+    dct:creator "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpvs: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpvs:Use ;
+    skos:definition "to assess data for some criteria"@en ;
+    skos:prefLabel "Assess"@en .
 
 dpvs:Collect a rdfs:Class,
         skos:Concept,
@@ -84,7 +108,7 @@ dpvs:Collect a rdfs:Class,
         <https://specialprivacy.ercim.eu/vocabs/processing> ;
     rdfs:isDefinedBy dpvs: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpvs:Obtain ;
+    skos:broader dpvs:Obtain ;
     skos:definition "to gather data from someone"@en ;
     skos:prefLabel "Collect"@en ;
     skos:related svpr:Collect .
@@ -97,7 +121,7 @@ dpvs:Combine a rdfs:Class,
         <https://specialprivacy.ercim.eu/vocabs/processing> ;
     rdfs:isDefinedBy dpvs: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpvs:Transform ;
+    skos:broader dpvs:Transform ;
     skos:definition "to join or merge data"@en ;
     skos:prefLabel "Combine"@en ;
     skos:related svpr:Aggregate .
@@ -110,7 +134,7 @@ dpvs:Consult a rdfs:Class,
         <https://specialprivacy.ercim.eu/vocabs/processing> ;
     rdfs:isDefinedBy dpvs: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpvs:Use ;
+    skos:broader dpvs:Use ;
     skos:definition "to consult or query data"@en ;
     skos:prefLabel "Consult"@en ;
     skos:related svpr:Query .
@@ -122,7 +146,7 @@ dpvs:Copy a rdfs:Class,
     dct:source <https://specialprivacy.ercim.eu/vocabs/processing> ;
     rdfs:isDefinedBy dpvs: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpvs:Processing ;
+    skos:broader dpvs:Processing ;
     skos:definition "to produce an exact reprodution of the data"@en ;
     skos:prefLabel "Copy"@en ;
     skos:related svpr:Copy .
@@ -134,7 +158,7 @@ dpvs:Derive a rdfs:Class,
     dct:source <https://specialprivacy.ercim.eu/vocabs/processing> ;
     rdfs:isDefinedBy dpvs: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpvs:Transform ;
+    skos:broader dpvs:Transform ;
     skos:definition "to create new derivative data from the original data"@en ;
     skos:note "Derive indicates data is present or obtainable from existing data. For data that is created without such existence, see Infer."@en ;
     skos:prefLabel "Derive"@en ;
@@ -147,7 +171,7 @@ dpvs:Destruct a rdfs:Class,
     dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     rdfs:isDefinedBy dpvs: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpvs:Remove ;
+    skos:broader dpvs:Remove ;
     skos:definition "to process data in a way it no longer exists or cannot be repaired"@en ;
     skos:prefLabel "Destruct"@en .
 
@@ -158,7 +182,7 @@ dpvs:Disclose a rdfs:Class,
     dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     rdfs:isDefinedBy dpvs: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpvs:Processing ;
+    skos:broader dpvs:Processing ;
     skos:definition "to make data known"@en ;
     skos:prefLabel "Disclose"@en .
 
@@ -169,7 +193,7 @@ dpvs:DiscloseByTransmission a rdfs:Class,
     dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     rdfs:isDefinedBy dpvs: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpvs:Disclose ;
+    skos:broader dpvs:Disclose ;
     skos:definition "to disclose data by means of transmission"@en ;
     skos:prefLabel "Disclose by Transmission"@en .
 
@@ -180,7 +204,7 @@ dpvs:Disseminate a rdfs:Class,
     dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     rdfs:isDefinedBy dpvs: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpvs:Disclose ;
+    skos:broader dpvs:Disclose ;
     skos:definition "to spread data throughout"@en ;
     skos:prefLabel "Disseminate"@en .
 
@@ -191,9 +215,44 @@ dpvs:Erase a rdfs:Class,
     dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     rdfs:isDefinedBy dpvs: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpvs:Remove ;
+    skos:broader dpvs:Remove ;
     skos:definition "to delete data"@en ;
     skos:prefLabel "Erase"@en .
+
+dpvs:Filter a rdfs:Class,
+        skos:Concept,
+        dpvs:Processing ;
+    dct:created "2022-06-15"^^xsd:date ;
+    dct:creator "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpvs: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpvs:Transform ;
+    skos:definition "to filter or keep data for some criteria"@en ;
+    skos:prefLabel "Filter"@en .
+
+dpvs:Generate a rdfs:Class,
+        skos:Concept,
+        dpvs:Processing ;
+    dct:created "2022-04-20"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpvs: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpvs:Obtain ;
+    skos:definition "to generate or create data"@en ;
+    skos:prefLabel "Generate"@en .
+
+dpvs:Infer a rdfs:Class,
+        skos:Concept,
+        dpvs:Processing ;
+    dct:created "2022-04-20"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpvs: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpvs:Derive ;
+    skos:definition "to infer data from existing data"@en ;
+    skos:note "Infer indicates data that is derived without it being present or obtainable from existing data. For data that is presented, and is 'extracted' or 'obtained' from existing data, see Derive."@en ;
+    skos:prefLabel "Infer"@en .
 
 dpvs:MakeAvailable a rdfs:Class,
         skos:Concept,
@@ -202,9 +261,45 @@ dpvs:MakeAvailable a rdfs:Class,
     dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     rdfs:isDefinedBy dpvs: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpvs:Disclose ;
+    skos:broader dpvs:Disclose ;
     skos:definition "to transform or publish data to be used"@en ;
     skos:prefLabel "Make Available"@en .
+
+dpvs:Match a rdfs:Class,
+        skos:Concept,
+        dpvs:Processing ;
+    dct:created "2022-04-20"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:source <https://ec.europa.eu/newsroom/article29/items/611236> ;
+    rdfs:isDefinedBy dpvs: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpvs:Use ;
+    skos:definition "to combine, compare, or match data from different sources"@en ;
+    skos:prefLabel "Match"@en .
+
+dpvs:Modify a rdfs:Class,
+        skos:Concept,
+        dpvs:Processing ;
+    dct:created "2022-06-15"^^xsd:date ;
+    dct:creator "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpvs: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpvs:Alter ;
+    skos:definition "to modify or change data"@en ;
+    skos:prefLabel "Modify"@en .
+
+dpvs:Monitor a rdfs:Class,
+        skos:Concept,
+        dpvs:Processing ;
+    dct:created "2022-06-15"^^xsd:date ;
+    dct:creator "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpvs: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpvs:Consult ;
+    skos:definition "to monitor data for some criteria"@en ;
+    skos:prefLabel "Monitor"@en .
 
 dpvs:Move a rdfs:Class,
         skos:Concept,
@@ -213,10 +308,22 @@ dpvs:Move a rdfs:Class,
     dct:source <https://specialprivacy.ercim.eu/vocabs/processing> ;
     rdfs:isDefinedBy dpvs: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpvs:Transfer ;
+    skos:broader dpvs:Transfer ;
     skos:definition "to move data from one location to another including deleting the original copy"@en ;
     skos:prefLabel "Move"@en ;
     skos:related svpr:Move .
+
+dpvs:Observe a rdfs:Class,
+        skos:Concept,
+        dpvs:Processing ;
+    dct:created "2022-06-15"^^xsd:date ;
+    dct:creator "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpvs: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpvs:Obtain ;
+    skos:definition "to obtain data through observation"@en ;
+    skos:prefLabel "Observe"@en .
 
 dpvs:Obtain a rdfs:Class,
         skos:Concept,
@@ -225,7 +332,7 @@ dpvs:Obtain a rdfs:Class,
     dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     rdfs:isDefinedBy dpvs: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpvs:Processing ;
+    skos:broader dpvs:Processing ;
     skos:definition "to solicit or gather data from someone"@en ;
     skos:prefLabel "Obtain"@en .
 
@@ -236,7 +343,7 @@ dpvs:Organise a rdfs:Class,
     dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     rdfs:isDefinedBy dpvs: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpvs:Processing ;
+    skos:broader dpvs:Processing ;
     skos:definition "to organize data for arranging or classifying"@en ;
     skos:prefLabel "Organise"@en .
 
@@ -260,7 +367,7 @@ dpvs:Profiling a rdfs:Class,
     dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     rdfs:isDefinedBy dpvs: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpvs:Use ;
+    skos:broader dpvs:Use ;
     skos:definition "to create a profile that describes or represents a person"@en ;
     skos:prefLabel "Profiling"@en .
 
@@ -271,9 +378,20 @@ dpvs:PseudoAnonymise a rdfs:Class,
     dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     rdfs:isDefinedBy dpvs: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpvs:Transform ;
+    skos:broader dpvs:Transform ;
     skos:definition "to replace personal identifiable information by artificial identifiers"@en ;
     skos:prefLabel "Pseudo-Anonymise"@en .
+
+dpvs:Query a rdfs:Class,
+        skos:Concept,
+        dpvs:Processing ;
+    dct:created "2022-06-15"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpvs: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpvs:Consult ;
+    skos:definition "to query or make enquiries over data"@en ;
+    skos:prefLabel "Query"@en .
 
 dpvs:Record a rdfs:Class,
         skos:Concept,
@@ -282,7 +400,7 @@ dpvs:Record a rdfs:Class,
     dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     rdfs:isDefinedBy dpvs: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpvs:Obtain ;
+    skos:broader dpvs:Obtain ;
     skos:definition "to make a record (especially media)"@en ;
     skos:prefLabel "Record"@en .
 
@@ -293,7 +411,7 @@ dpvs:Remove a rdfs:Class,
     dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     rdfs:isDefinedBy dpvs: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpvs:Processing ;
+    skos:broader dpvs:Processing ;
     skos:definition "to destruct or erase data"@en ;
     skos:prefLabel "Remove"@en .
 
@@ -304,7 +422,7 @@ dpvs:Restrict a rdfs:Class,
     dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     rdfs:isDefinedBy dpvs: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpvs:Transform ;
+    skos:broader dpvs:Transform ;
     skos:definition "to apply a restriction on the processsing of specific records"@en ;
     skos:prefLabel "Restrict"@en .
 
@@ -315,9 +433,21 @@ dpvs:Retrieve a rdfs:Class,
     dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     rdfs:isDefinedBy dpvs: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpvs:Use ;
+    skos:broader dpvs:Use ;
     skos:definition "to retrieve data, often in an automated manner"@en ;
     skos:prefLabel "Retrieve"@en .
+
+dpvs:Screen a rdfs:Class,
+        skos:Concept,
+        dpvs:Processing ;
+    dct:created "2022-06-15"^^xsd:date ;
+    dct:creator "Georg P Krog"^^xsd:string,
+        "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpvs: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpvs:Transform ;
+    skos:definition "to remove data for some criteria"@en ;
+    skos:prefLabel "Screen"@en .
 
 dpvs:Share a rdfs:Class,
         skos:Concept,
@@ -326,7 +456,7 @@ dpvs:Share a rdfs:Class,
     dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     rdfs:isDefinedBy dpvs: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpvs:Disclose ;
+    skos:broader dpvs:Disclose ;
     skos:definition "to give data (or a portion of it) to others"@en ;
     skos:prefLabel "Share"@en .
 
@@ -337,7 +467,7 @@ dpvs:Store a rdfs:Class,
     dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     rdfs:isDefinedBy dpvs: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpvs:Processing ;
+    skos:broader dpvs:Processing ;
     skos:definition "to keep data for future use"@en ;
     skos:prefLabel "Store"@en .
 
@@ -348,7 +478,7 @@ dpvs:Structure a rdfs:Class,
     dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     rdfs:isDefinedBy dpvs: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpvs:Organise ;
+    skos:broader dpvs:Organise ;
     skos:definition "to arrange data according to a structure"@en ;
     skos:prefLabel "Structure"@en .
 
@@ -359,7 +489,7 @@ dpvs:Transfer a rdfs:Class,
     dct:source <https://specialprivacy.ercim.eu/vocabs/processing> ;
     rdfs:isDefinedBy dpvs: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpvs:Processing ;
+    skos:broader dpvs:Processing ;
     skos:definition "to move data from one place to another"@en ;
     skos:prefLabel "Transfer"@en ;
     skos:related svpr:Transfer .
@@ -371,7 +501,7 @@ dpvs:Transform a rdfs:Class,
     dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     rdfs:isDefinedBy dpvs: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpvs:Processing ;
+    skos:broader dpvs:Processing ;
     skos:definition "to change the form or nature of data"@en ;
     skos:prefLabel "Transform"@en .
 
@@ -382,7 +512,7 @@ dpvs:Transmit a rdfs:Class,
     dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     rdfs:isDefinedBy dpvs: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpvs:Disclose ;
+    skos:broader dpvs:Disclose ;
     skos:definition "to send out data"@en ;
     skos:prefLabel "Transmit"@en .
 
@@ -393,18 +523,19 @@ dpvs:Use a rdfs:Class,
     dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     rdfs:isDefinedBy dpvs: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpvs:Processing ;
+    skos:broader dpvs:Processing ;
     skos:definition "to use data"@en ;
     skos:prefLabel "Use"@en .
 
 dpvs:ProcessingConcepts a skos:Collection ;
-    dct:title "Processing Concepts"^^xsd:string ;
-    skos:member dpvs:Acquire,
+    skos:member dpvs:Access,
+        dpvs:Acquire,
         dpvs:Adapt,
         dpvs:Align,
         dpvs:Alter,
         dpvs:Analyse,
         dpvs:Anonymise,
+        dpvs:Assess,
         dpvs:Collect,
         dpvs:Combine,
         dpvs:Consult,
@@ -415,17 +546,26 @@ dpvs:ProcessingConcepts a skos:Collection ;
         dpvs:DiscloseByTransmission,
         dpvs:Disseminate,
         dpvs:Erase,
+        dpvs:Filter,
+        dpvs:Generate,
+        dpvs:Infer,
         dpvs:MakeAvailable,
+        dpvs:Match,
+        dpvs:Modify,
+        dpvs:Monitor,
         dpvs:Move,
+        dpvs:Observe,
         dpvs:Obtain,
         dpvs:Organise,
         dpvs:Processing,
         dpvs:Profiling,
         dpvs:PseudoAnonymise,
+        dpvs:Query,
         dpvs:Record,
         dpvs:Remove,
         dpvs:Restrict,
         dpvs:Retrieve,
+        dpvs:Screen,
         dpvs:Share,
         dpvs:Store,
         dpvs:Structure,
@@ -433,7 +573,8 @@ dpvs:ProcessingConcepts a skos:Collection ;
         dpvs:Transform,
         dpvs:Transmit,
         dpvs:Use,
-        dpvs:hasProcessing .
+        dpvs:hasProcessing ;
+    skos:prefLabel "Processing Concepts"^^xsd:string .
 
 dpvs:hasProcessing a rdf:Property,
         skos:Concept ;

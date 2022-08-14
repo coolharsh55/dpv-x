@@ -16,6 +16,8 @@ EXPORT_DPV_PD_HTML_PATH = '../dpv-owl/dpv-pd'
 IMPORT_DPV_LEGAL_PATH = '../dpv-owl/dpv-legal/dpv-legal.ttl'
 IMPORT_DPV_LEGAL_MODULES_PATH = '../dpv-owl/dpv-legal/modules'
 EXPORT_DPV_LEGAL_HTML_PATH = '../dpv-owl/dpv-legal'
+IMPORT_DPV_TECH_PATH = '../dpv-owl/dpv-tech/dpv-tech.ttl'
+EXPORT_DPV_TECH_HTML_PATH = '../dpv-owl/dpv-tech'
 
 from rdflib import Graph, Namespace
 from rdflib import RDF, RDFS, OWL
@@ -45,7 +47,14 @@ def load_data(label, filepath):
     G = DataGraph()
     G.load(g)
     G.graph.ns = { k:v for k,v in G.graph.namespaces() }
-    TEMPLATE_DATA[f'{label}_classes'] = G.get_instances_of('owl_Class')
+    classes = G.get_instances_of('owl_Class')
+    instances = G.get_instances_of('owl_NamedIndividual')
+    data = []
+    if classes:
+        data += classes
+    if instances:
+        data += instances
+    TEMPLATE_DATA[f'{label}_classes'] = data if data else None
     TEMPLATE_DATA[f'{label}_properties'] = G.get_instances_of('rdf_Property')
 
 
@@ -107,15 +116,19 @@ load_data('personaldata', f'{IMPORT_DPV_MODULES_PATH}/personal_data.ttl')
 load_data('purpose', f'{IMPORT_DPV_MODULES_PATH}/purposes.ttl')
 load_data('processing', f'{IMPORT_DPV_MODULES_PATH}/processing.ttl')
 load_data('technical_organisational_measures', f'{IMPORT_DPV_MODULES_PATH}/technical_organisational_measures.ttl')
+load_data('technical_measures', f'{IMPORT_DPV_MODULES_PATH}/technical_measures.ttl')
+load_data('organisational_measures', f'{IMPORT_DPV_MODULES_PATH}/organisational_measures.ttl')
 load_data('entities', f'{IMPORT_DPV_MODULES_PATH}/entities.ttl')
 load_data('entities_authority', f'{IMPORT_DPV_MODULES_PATH}/entities_authority.ttl')
 load_data('entities_legalrole', f'{IMPORT_DPV_MODULES_PATH}/entities_legalrole.ttl')
 load_data('entities_organisation', f'{IMPORT_DPV_MODULES_PATH}/entities_organisation.ttl')
 load_data('entities_datasubject', f'{IMPORT_DPV_MODULES_PATH}/entities_datasubject.ttl')
 load_data('context', f'{IMPORT_DPV_MODULES_PATH}/context.ttl')
+load_data('status', f'{IMPORT_DPV_MODULES_PATH}/status.ttl')
 load_data('risk', f'{IMPORT_DPV_MODULES_PATH}/risk.ttl')
 load_data('processing_context', f'{IMPORT_DPV_MODULES_PATH}/processing_context.ttl')
-load_data('jurisdictions', f'{IMPORT_DPV_MODULES_PATH}/jurisdictions.ttl')
+load_data('processing_scale', f'{IMPORT_DPV_MODULES_PATH}/processing_scale.ttl')
+load_data('jurisdiction', f'{IMPORT_DPV_MODULES_PATH}/jurisdiction.ttl')
 load_data('legal_basis', f'{IMPORT_DPV_MODULES_PATH}/legal_basis.ttl')
 load_data('consent', f'{IMPORT_DPV_MODULES_PATH}/consent.ttl')
 g = Graph()
@@ -205,5 +218,22 @@ DEBUG(f'wrote DPV-LEGAL spec at f{EXPORT_DPV_LEGAL_HTML_PATH}/index.html')
 with open(f'{EXPORT_DPV_LEGAL_HTML_PATH}/dpv-legal.html', 'w+') as fd:
     fd.write(template.render(**TEMPLATE_DATA))
 DEBUG(f'wrote DPV-LEGAL spec at f{EXPORT_DPV_LEGAL_HTML_PATH}/dpv-legal.html')
+
+# DPV-TECH: generate HTML
+
+with open(f'{EXPORT_DPV_TECH_HTML_PATH}/proposed.json') as fd:
+    TEMPLATE_DATA['proposed'] = json.load(fd)  
+
+load_data('dpv_tech', f'{IMPORT_DPV_TECH_PATH}')
+g = Graph()
+g.load(f'{IMPORT_DPV_TECH_PATH}', format='turtle')
+G.load(g)
+template = template_env.get_template('template_dpv_owl_tech.jinja2')
+with open(f'{EXPORT_DPV_TECH_HTML_PATH}/index.html', 'w+') as fd:
+    fd.write(template.render(**TEMPLATE_DATA))
+DEBUG(f'wrote DPV-TECH spec at f{EXPORT_DPV_TECH_HTML_PATH}/index.html')
+with open(f'{EXPORT_DPV_TECH_HTML_PATH}/dpv-tech.html', 'w+') as fd:
+    fd.write(template.render(**TEMPLATE_DATA))
+DEBUG(f'wrote DPV-TECH spec at f{EXPORT_DPV_TECH_HTML_PATH}/dpv-tech.html')
 
 DEBUG('--- END ---')

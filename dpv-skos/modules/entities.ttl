@@ -22,7 +22,7 @@ dpvs:LegalEntity a rdfs:Class,
     rdfs:isDefinedBy dpvs: ;
     rdfs:subClassOf dpvs:Entity ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpvs:Entity ;
+    skos:broader dpvs:Entity ;
     skos:definition "A human or non-human 'thing' that constitutes as an entity and which is recognised and defined in law"@en ;
     skos:prefLabel "Legal Entity"@en .
 
@@ -33,7 +33,7 @@ dpvs:NaturalPerson a rdfs:Class,
     rdfs:isDefinedBy dpvs: ;
     rdfs:subClassOf dpvs:Entity ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpvs:Entity ;
+    skos:broader dpvs:Entity ;
     skos:definition "A human"@en ;
     skos:prefLabel "Natural Person"@en .
 
@@ -48,12 +48,11 @@ dpvs:Representative a rdfs:Class,
     rdfs:isDefinedBy dpvs: ;
     rdfs:subClassOf dpvs:LegalEntity ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpvs:LegalEntity ;
+    skos:broader dpvs:LegalEntity ;
     skos:definition "A representative of a legal entity"@en ;
     skos:prefLabel "Representative"@en .
 
 dpvs:EntitiesConcepts a skos:Collection ;
-    dct:title "Entities Concepts"^^xsd:string ;
     skos:member dpvs:Entity,
         dpvs:LegalEntity,
         dpvs:NaturalPerson,
@@ -63,7 +62,8 @@ dpvs:EntitiesConcepts a skos:Collection ;
         dpvs:hasEntity,
         dpvs:hasName,
         dpvs:hasRepresentative,
-        dpvs:hasResponsibleEntity .
+        dpvs:hasResponsibleEntity ;
+    skos:prefLabel "Entities Concepts"^^xsd:string .
 
 dpvs:hasAddress a rdf:Property,
         skos:Concept ;

@@ -6,30 +6,41 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 dpv:ContextConcepts a skos:Collection ;
-    dct:title "Context Concepts"^^xsd:string ;
-    skos:member dpv:AlgorithmicLogic,
-        dpv:Context,
+    skos:member dpv:Context,
+        dpv:ContinousFrequency,
         dpv:Duration,
+        dpv:EndlessDuration,
+        dpv:FixedOccurencesDuration,
         dpv:Frequency,
-        dpv:HumanInvolvement,
         dpv:Importance,
+        dpv:Justification,
         dpv:Necessity,
         dpv:NotRequired,
+        dpv:OftenFrequency,
         dpv:Optional,
         dpv:PrimaryImportance,
         dpv:Required,
+        dpv:Scope,
         dpv:SecondaryImportance,
+        dpv:SingularFrequency,
+        dpv:SporadicFrequency,
         dpv:Technology,
-        dpv:hasAlgorithmicLogic,
+        dpv:TemporalDuration,
+        dpv:UntilEventDuration,
+        dpv:UntilTimeDuration,
         dpv:hasContext,
         dpv:hasDuration,
         dpv:hasFrequency,
         dpv:hasHumanInvolvement,
         dpv:hasIdentifier,
+        dpv:hasJustification,
+        dpv:hasOutcome,
+        dpv:hasScope,
         dpv:isAfter,
         dpv:isBefore,
         dpv:isImplementedByEntity,
-        dpv:isImplementedUsingTechnology .
+        dpv:isImplementedUsingTechnology ;
+    skos:prefLabel "Context Concepts"^^xsd:string .
 
 dpv:hasDomain rdfs:subPropertyOf skos:semanticRelation ;
     skos:prefLabel "has domain"@en .
@@ -40,8 +51,38 @@ dpv:hasRange rdfs:subPropertyOf skos:semanticRelation ;
 dpv:isInstanceOf rdfs:subPropertyOf skos:semanticRelation ;
     skos:prefLabel "isInstanceOf"@en .
 
-dpv:isSubTypeOf rdfs:subPropertyOf skos:broaderTransitive ;
+dpv:isSubTypeOf rdfs:subPropertyOf skos:broader ;
     skos:prefLabel "isSubTypeOf"@en .
+
+dpv:ContinousFrequency a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-06-15"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Frequency where occurences are continous"@en ;
+    skos:prefLabel "Continous Frequency"@en ;
+    dpv:isInstanceOf dpv:Frequency .
+
+dpv:EndlessDuration a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-06-15"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Duration that is open ended or without an end"@en ;
+    skos:prefLabel "EndlessDuration"@en ;
+    dpv:isInstanceOf dpv:Duration .
+
+dpv:FixedOccurencesDuration a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-06-15"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Duration that takes place a fixed number of times e.g. 3 times"@en ;
+    skos:prefLabel "FixedOccurencesDuration"@en ;
+    dpv:isInstanceOf dpv:Duration .
 
 dpv:NotRequired a skos:Concept,
         dpv:Concept ;
@@ -55,7 +96,17 @@ dpv:NotRequired a skos:Concept,
     sw:term_status "accepted"@en ;
     skos:definition "Indication of neither being required nor optional i.e. not relevant or needed"@en ;
     skos:prefLabel "Not Required"@en ;
-    dpv:isSubTypeOf dpv:Necessity .
+    dpv:isInstanceOf dpv:Necessity .
+
+dpv:OftenFrequency a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-06-15"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Frequency where occurences are often or frequent, but not continous"@en ;
+    skos:prefLabel "Often Frequency"@en ;
+    dpv:isInstanceOf dpv:Frequency .
 
 dpv:Optional a skos:Concept,
         dpv:Concept ;
@@ -69,7 +120,7 @@ dpv:Optional a skos:Concept,
     sw:term_status "accepted"@en ;
     skos:definition "Indication of 'optional' or 'voluntary'"@en ;
     skos:prefLabel "Optional"@en ;
-    dpv:isSubTypeOf dpv:Necessity .
+    dpv:isInstanceOf dpv:Necessity .
 
 dpv:PrimaryImportance a skos:Concept,
         dpv:Concept ;
@@ -83,7 +134,7 @@ dpv:PrimaryImportance a skos:Concept,
     sw:term_status "accepted"@en ;
     skos:definition "Indication of 'primary' or 'main' or 'core' importance"@en ;
     skos:prefLabel "Primary Importance"@en ;
-    dpv:isSubTypeOf dpv:Importance .
+    dpv:isInstanceOf dpv:Importance .
 
 dpv:Required a skos:Concept,
         dpv:Concept ;
@@ -97,7 +148,7 @@ dpv:Required a skos:Concept,
     sw:term_status "accepted"@en ;
     skos:definition "Indication of 'required' or 'necessary'"@en ;
     skos:prefLabel "Required"@en ;
-    dpv:isSubTypeOf dpv:Necessity .
+    dpv:isInstanceOf dpv:Necessity .
 
 dpv:SecondaryImportance a skos:Concept,
         dpv:Concept ;
@@ -111,20 +162,57 @@ dpv:SecondaryImportance a skos:Concept,
     sw:term_status "accepted"@en ;
     skos:definition "Indication of 'secondary' or 'minor' or 'auxiliary' importance"@en ;
     skos:prefLabel "Secondary Importance"@en ;
-    dpv:isSubTypeOf dpv:Importance .
+    dpv:isInstanceOf dpv:Importance .
 
-dpv:hasAlgorithmicLogic a skos:Concept,
-        dpv:Relation ;
-    dct:created "2020-11-04"^^xsd:date ;
-    dct:creator "Georg P. Krog"^^xsd:string,
-        "Harshvardhan J. Pandit"^^xsd:string,
-        "Paul Ryan"^^xsd:string ;
+dpv:SingularFrequency a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-06-15"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
-    skos:definition "Indicates the logic used in processing such as for automated decision making"@en ;
-    skos:prefLabel "has algorithmic logic"@en ;
-    dpv:hasDomain dpv:Concept ;
-    dpv:hasRange dpv:AlgorithmicLogic .
+    skos:definition "Frequency where occurences are singular i.e. they take place only once"@en ;
+    skos:prefLabel "SingularFrequency"@en ;
+    dpv:isInstanceOf dpv:Frequency .
+
+dpv:SporadicFrequency a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-06-15"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Frequency where occurences are sporadic or infrequent or sparse"@en ;
+    skos:prefLabel "SporadicFrequency"@en ;
+    dpv:isInstanceOf dpv:Frequency .
+
+dpv:TemporalDuration a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-06-15"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Duration that has a fixed temporal duration e.g. 6 months"@en ;
+    skos:prefLabel "TemporalDuration"@en ;
+    dpv:isInstanceOf dpv:Duration .
+
+dpv:UntilEventDuration a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-06-15"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Duration that takes place until a specific event occurs e.g. Account Closure"@en ;
+    skos:prefLabel "UntilEventDuration"@en ;
+    dpv:isInstanceOf dpv:Duration .
+
+dpv:UntilTimeDuration a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-06-15"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Duration that has a fixed end date e.g. 2022-12-31"@en ;
+    skos:prefLabel "UntilTimeDuration"@en ;
+    dpv:isInstanceOf dpv:Duration .
 
 dpv:hasContext a skos:Concept,
         dpv:Relation ;
@@ -190,6 +278,39 @@ dpv:hasIdentifier a skos:Concept,
     dpv:hasDomain dpv:Concept ;
     dpv:hasRange dpv:Concept .
 
+dpv:hasJustification a skos:Concept,
+        dpv:Relation ;
+    dct:created "2022-06-15"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Indicates a justification for specified concept or context"@en ;
+    skos:prefLabel "has justification"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:Justification .
+
+dpv:hasOutcome a skos:Concept,
+        dpv:Relation ;
+    dct:created "2022-05-18"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Indicates an outcome of specified concept or context"@en ;
+    skos:prefLabel "has outcome"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:Concept .
+
+dpv:hasScope a skos:Concept,
+        dpv:Relation ;
+    dct:created "2022-06-15"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "Indicates the scope of specified concept or context"@en ;
+    skos:prefLabel "has scope"@en ;
+    dpv:hasDomain dpv:Concept ;
+    dpv:hasRange dpv:Scope .
+
 dpv:isAfter a skos:Concept,
         dpv:Relation ;
     dct:created "2022-03-02"^^xsd:date ;
@@ -240,52 +361,33 @@ dpv:isImplementedUsingTechnology a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
+    dct:modified "2022-06-15"^^xsd:date ;
     rdfs:isDefinedBy dpv: ;
-    sw:term_status "accepted"@en ;
+    sw:term_status "changed"@en ;
     skos:definition "Indicates implementation details such as technologies or processes"@en ;
     skos:note "The term 'technology' is inclusive of technologies, processes, and methods."@en ;
     skos:prefLabel "is implemented using technology"@en ;
     dpv:hasDomain dpv:Concept ;
     dpv:hasRange dpv:Technology .
 
-dpv:AlgorithmicLogic a skos:Concept,
+dpv:Justification a skos:Concept,
         dpv:Concept ;
-    dct:created "2022-01-26"^^xsd:date ;
+    dct:created "2022-06-15"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
-    skos:definition "The algorithmic logic applied or used"@en ;
-    skos:note "Algorithmic Logic is intended as a broad concept for explaining the use of algorithms and automated decisions making within Processing. To describe the actual algorithm, see the Algorithm concept."@en ;
-    skos:prefLabel "Algorithmic Logic"@en ;
+    skos:definition "A form of documentation providing reaosns, explanations, or justifications"@en ;
+    skos:prefLabel "Justification"@en ;
     dpv:isSubTypeOf dpv:Context .
 
-dpv:Duration a skos:Concept,
+dpv:Scope a skos:Concept,
         dpv:Concept ;
-    dct:created "2022-02-09"^^xsd:date ;
+    dct:created "2022-06-15"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
-    skos:definition "The duration or temporal limitation"@en ;
-    skos:prefLabel "Duration"@en .
-
-dpv:Frequency a skos:Concept,
-        dpv:Concept ;
-    dct:created "2022-02-16"^^xsd:date ;
-    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    rdfs:isDefinedBy dpv: ;
-    sw:term_status "accepted"@en ;
-    skos:definition "The frequency or information about periods and repetitions in terms of recurrence."@en ;
-    skos:prefLabel "Frequency"@en .
-
-dpv:HumanInvolvement a skos:Concept,
-        dpv:Concept ;
-    dct:created "2022-01-26"^^xsd:date ;
-    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    rdfs:isDefinedBy dpv: ;
-    sw:term_status "accepted"@en ;
-    skos:definition "The involvement of humans in specified context"@en ;
-    skos:note "Human Involvement here broadly refers to any involvement by a human in the context of carrying out processing. This may include verification of outcomes, providing input data for making decisions, or overseeing activities."@en ;
-    skos:prefLabel "Human Involvement"@en ;
+    skos:definition "Indication of the extent or range or boundaries associated with(in) a context"@en ;
+    skos:prefLabel "Scope"@en ;
     dpv:isSubTypeOf dpv:Context .
 
 dpv:Technology a skos:Concept,
@@ -328,6 +430,26 @@ dpv:Necessity a skos:Concept,
     skos:prefLabel "Necessity"@en ;
     dpv:isSubTypeOf dpv:Context .
 
+dpv:Frequency a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-02-16"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "The frequency or information about periods and repetitions in terms of recurrence."@en ;
+    skos:prefLabel "Frequency"@en ;
+    dpv:isSubTypeOf dpv:Context .
+
+dpv:Duration a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-02-09"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:definition "The duration or temporal limitation"@en ;
+    skos:prefLabel "Duration"@en ;
+    dpv:isSubTypeOf dpv:Context .
+
 dpv:Context a skos:Concept,
         dpv:Concept ;
     dct:created "2019-04-05"^^xsd:date ;
@@ -337,9 +459,10 @@ dpv:Context a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
+    dct:modified "2022-06-15"^^xsd:date ;
     rdfs:isDefinedBy dpv: ;
-    sw:term_status "accepted"@en ;
-    skos:definition "Contextually relevant information about purpose not possible to represent through other concepts"@en ;
+    sw:term_status "changed"@en ;
+    skos:definition "Contextually relevant information not possible to represent through other core concepts"@en ;
     skos:prefLabel "Context"@en .
 
 dpv:Relation rdfs:subPropertyOf skos:semanticRelation ;

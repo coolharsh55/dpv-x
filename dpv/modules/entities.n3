@@ -6,7 +6,6 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 dpv:EntitiesConcepts a skos:Collection ;
-    dct:title "Entities Concepts"^^xsd:string ;
     skos:member dpv:Entity,
         dpv:LegalEntity,
         dpv:NaturalPerson,
@@ -16,7 +15,8 @@ dpv:EntitiesConcepts a skos:Collection ;
         dpv:hasEntity,
         dpv:hasName,
         dpv:hasRepresentative,
-        dpv:hasResponsibleEntity .
+        dpv:hasResponsibleEntity ;
+    skos:prefLabel "Entities Concepts"^^xsd:string .
 
 dpv:hasDomain rdfs:subPropertyOf skos:semanticRelation ;
     skos:prefLabel "has domain"@en .
@@ -27,7 +27,7 @@ dpv:hasRange rdfs:subPropertyOf skos:semanticRelation ;
 dpv:isInstanceOf rdfs:subPropertyOf skos:semanticRelation ;
     skos:prefLabel "isInstanceOf"@en .
 
-dpv:isSubTypeOf rdfs:subPropertyOf skos:broaderTransitive ;
+dpv:isSubTypeOf rdfs:subPropertyOf skos:broader ;
     skos:prefLabel "isSubTypeOf"@en .
 
 dpv:NaturalPerson a skos:Concept,

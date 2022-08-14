@@ -2,6 +2,7 @@
 @prefix dpvs: <https://w3id.org/dpv/dpv-skos#> .
 @prefix dpvs-legal: <https://w3id.org/dpv/dpv-skos/dpv-legal#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sw: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -33,6 +34,7 @@ dpvs-legal:AuthoritiesConcepts a skos:Collection ;
         dpvs-legal:DPA-ES,
         dpvs-legal:DPA-FI,
         dpvs-legal:DPA-FR,
+        dpvs-legal:DPA-GB,
         dpvs-legal:DPA-GR,
         dpvs-legal:DPA-HR,
         dpvs-legal:DPA-HU,
@@ -124,6 +126,8 @@ dpvs-legal:FI dpvs:hasAuthority dpvs-legal:DPA-FI .
 
 dpvs-legal:FR dpvs:hasAuthority dpvs-legal:DPA-FR .
 
+dpvs-legal:GB dpvs:hasAuthority dpvs-legal:DPA-GB .
+
 dpvs-legal:GR dpvs:hasAuthority dpvs-legal:DPA-GR .
 
 dpvs-legal:HR dpvs:hasAuthority dpvs-legal:DPA-HR .
@@ -156,6 +160,10 @@ dpvs-legal:SI dpvs:hasAuthority dpvs-legal:DPA-SI .
 
 dpvs-legal:SK dpvs:hasAuthority dpvs-legal:DPA-SK .
 
+dpvs-legal:UK-DPA-2018 dpvs:hasAuthority dpvs-legal:DPA-GB .
+
+dpvs-legal:UK-GDPR dpvs:hasAuthority dpvs-legal:DPA-GB .
+
 dpvs-legal:DE-BY dpvs:hasAuthority dpvs-legal:DPA-DE-BY-non-public,
         dpvs-legal:DPA-DE-BY-public .
 
@@ -166,7 +174,7 @@ dpvs-legal:DPA-AT a skos:Concept,
         dpvs:DataProtectionAuthority ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Austrian Data Protection Authority"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Austrian Data Protection Authority"@en ;
     foaf:homepage "https://dsb.gv.at"^^xsd:anyURI ;
@@ -177,7 +185,7 @@ dpvs-legal:DPA-BE a skos:Concept,
         dpvs:DataProtectionAuthority ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Belgian Data Protection Authority"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Belgian Data Protection Authority"@en ;
     foaf:homepage "https://www.dataprotectionauthority.be/"^^xsd:anyURI ;
@@ -188,7 +196,7 @@ dpvs-legal:DPA-BG a skos:Concept,
         dpvs:DataProtectionAuthority ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Commission for Personal Data Protection"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Commission for Personal Data Protection"@en ;
     foaf:homepage "https://www.cpdp.bg/"^^xsd:anyURI ;
@@ -199,7 +207,7 @@ dpvs-legal:DPA-CZ a skos:Concept,
         dpvs:DataProtectionAuthority ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Office for Personal Data Protection"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Office for Personal Data Protection"@en ;
     foaf:homepage "https://www.uoou.cz/"^^xsd:anyURI ;
@@ -210,7 +218,7 @@ dpvs-legal:DPA-DK a skos:Concept,
         dpvs:DataProtectionAuthority ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Danish Data Protection Agency"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Danish Data Protection Agency"@en ;
     foaf:homepage "http://www.datatilsynet.dk/"^^xsd:anyURI ;
@@ -221,7 +229,7 @@ dpvs-legal:DPA-EE a skos:Concept,
         dpvs:DataProtectionAuthority ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Estonian Data Protection Inspectorate"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Estonian Data Protection Inspectorate"@en ;
     foaf:homepage "http://www.aki.ee/"^^xsd:anyURI ;
@@ -232,7 +240,7 @@ dpvs-legal:DPA-ES a skos:Concept,
         dpvs:DataProtectionAuthority ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Spanish Data Protection Agency (AEPD)"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Spanish Data Protection Agency (AEPD)"@en ;
     foaf:homepage "https://www.aepd.es/"^^xsd:anyURI ;
@@ -243,7 +251,7 @@ dpvs-legal:DPA-FI a skos:Concept,
         dpvs:DataProtectionAuthority ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Office of the Data Protection Ombudsman"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Office of the Data Protection Ombudsman"@en ;
     foaf:homepage "https://tietosuoja.fi/"^^xsd:anyURI ;
@@ -254,7 +262,7 @@ dpvs-legal:DPA-FR a skos:Concept,
         dpvs:DataProtectionAuthority ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "National Commission on Informatics and Liberty (CNIL)"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "National Commission on Informatics and Liberty (CNIL)"@en ;
     foaf:homepage "https://www.cnil.fr/"^^xsd:anyURI ;
@@ -265,7 +273,7 @@ dpvs-legal:DPA-GR a skos:Concept,
         dpvs:DataProtectionAuthority ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Hellenic Data Protection Authority"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Hellenic Data Protection Authority"@en ;
     foaf:homepage "http://dpa.gr"^^xsd:anyURI ;
@@ -276,7 +284,7 @@ dpvs-legal:DPA-HR a skos:Concept,
         dpvs:DataProtectionAuthority ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Croatian Personal Data Protection Agency"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Croatian Personal Data Protection Agency"@en ;
     foaf:homepage "http://www.azop.hr/"^^xsd:anyURI ;
@@ -287,7 +295,7 @@ dpvs-legal:DPA-HU a skos:Concept,
         dpvs:DataProtectionAuthority ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Hungarian National Authority for Data Protection and Freedom of Information"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Hungarian National Authority for Data Protection and Freedom of Information"@en ;
     foaf:homepage "http://www.naih.hu/"^^xsd:anyURI ;
@@ -298,7 +306,7 @@ dpvs-legal:DPA-IE a skos:Concept,
         dpvs:DataProtectionAuthority ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Data Protection Commission (DPC)"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Data Protection Commission (DPC)"@en ;
     foaf:homepage "http://www.dataprotection.ie"^^xsd:anyURI ;
@@ -309,7 +317,7 @@ dpvs-legal:DPA-IT a skos:Concept,
         dpvs:DataProtectionAuthority ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Data Protection Commission"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Data Protection Commission"@en ;
     foaf:homepage "https://www.garanteprivacy.it/"^^xsd:anyURI ;
@@ -320,7 +328,7 @@ dpvs-legal:DPA-LT a skos:Concept,
         dpvs:DataProtectionAuthority ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "State Data Protection Inspectorate"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "State Data Protection Inspectorate"@en ;
     foaf:homepage "https://ada.lt"^^xsd:anyURI ;
@@ -331,7 +339,7 @@ dpvs-legal:DPA-LU a skos:Concept,
         dpvs:DataProtectionAuthority ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "National Commission for Data Protection"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "National Commission for Data Protection"@en ;
     foaf:homepage "https://cnpd.public.lu"^^xsd:anyURI ;
@@ -342,7 +350,7 @@ dpvs-legal:DPA-LV a skos:Concept,
         dpvs:DataProtectionAuthority ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Data State Inspectorate"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Data State Inspectorate"@en ;
     foaf:homepage "http://www.dvi.gov.lv/"^^xsd:anyURI ;
@@ -353,7 +361,7 @@ dpvs-legal:DPA-MT a skos:Concept,
         dpvs:DataProtectionAuthority ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Office of the Information and Data Protection Commissioner"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Office of the Information and Data Protection Commissioner"@en ;
     foaf:homepage "https://idpc.org.mt"^^xsd:anyURI ;
@@ -364,7 +372,7 @@ dpvs-legal:DPA-NL a skos:Concept,
         dpvs:DataProtectionAuthority ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Dutch Data Protection Authority"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Dutch Data Protection Authority"@en ;
     foaf:homepage "https://autoriteitpersoonsgegevens.nl"^^xsd:anyURI ;
@@ -375,7 +383,7 @@ dpvs-legal:DPA-PL a skos:Concept,
         dpvs:DataProtectionAuthority ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Personal Data Protection Office"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Personal Data Protection Office"@en ;
     foaf:homepage "https://uodo.gov.pl/"^^xsd:anyURI ;
@@ -386,7 +394,7 @@ dpvs-legal:DPA-PT a skos:Concept,
         dpvs:DataProtectionAuthority ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Comissão Nacional de Protecção de Dados"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Comissão Nacional de Protecção de Dados"@en ;
     foaf:homepage "https://www.cnpd.pt"^^xsd:anyURI ;
@@ -397,7 +405,7 @@ dpvs-legal:DPA-RO a skos:Concept,
         dpvs:DataProtectionAuthority ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "National Supervisory Authority for Personal Data Processing"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "National Supervisory Authority for Personal Data Processing"@en ;
     foaf:homepage "http://www.dataprotection.ro/"^^xsd:anyURI ;
@@ -408,7 +416,7 @@ dpvs-legal:DPA-SE a skos:Concept,
         dpvs:DataProtectionAuthority ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Swedish Authority for Privacy Protection"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Swedish Authority for Privacy Protection"@en ;
     foaf:homepage "https://www.imy.se/"^^xsd:anyURI ;
@@ -419,7 +427,7 @@ dpvs-legal:DPA-SI a skos:Concept,
         dpvs:DataProtectionAuthority ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Information Commissioner of the Republic of Slovenia"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Information Commissioner of the Republic of Slovenia"@en ;
     foaf:homepage "https://www.ip-rs.si/"^^xsd:anyURI ;
@@ -430,7 +438,7 @@ dpvs-legal:DPA-SK a skos:Concept,
         dpvs:DataProtectionAuthority ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Office for Personal Data Protection of the Slovak Republic"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Office for Personal Data Protection of the Slovak Republic"@en ;
     foaf:homepage "http://www.dataprotection.gov.sk/"^^xsd:anyURI ;
@@ -441,7 +449,7 @@ dpvs-legal:DPA-DE a skos:Concept,
         dpvs:DataProtectionAuthority ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "The Federal Commissioner for Data Protection and Freedom of Information"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "The Federal Commissioner for Data Protection and Freedom of Information"@en ;
     foaf:homepage "http://www.bfdi.bund.de/"^^xsd:anyURI ;
@@ -449,13 +457,24 @@ dpvs-legal:DPA-DE a skos:Concept,
     dpvs:hasLaw dpvs-legal:DE-BDSG,
         dpvs-legal:EU-GDPR .
 
+dpvs-legal:DPA-GB a skos:Concept,
+        dpvs:DataProtectionAuthority ;
+    dct:created "2022-07-20"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpvs-legal: ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "Information Commissioner's Office"@en ;
+    foaf:homepage "https://ico.org.uk/"^^xsd:anyURI ;
+    dpvs:hasJurisdiction dpvs-legal:GB ;
+    dpvs:hasLaw dpvs-legal:UK-DPA-2018,
+        dpvs-legal:UK-GDPR .
+
 dpvs-legal:DPA-DE-BB a skos:Concept,
         dpvs:DataProtectionAuthority ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Die Landesbeauftragte für den Datenschutz und für das Recht auf Akteneinsicht Brandenburg"@de,
-        "The state representative for data protection and the right to inspect files in Brandenburg"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Die Landesbeauftragte für den Datenschutz und für das Recht auf Akteneinsicht Brandenburg"@de,
         "The state representative for data protection and the right to inspect files in Brandenburg"@en ;
@@ -470,8 +489,7 @@ dpvs-legal:DPA-DE-BE a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Berliner Beauftragte für Datenschutz und Informationsfreiheit"@de,
-        "Berlin Commissioner for Data Protection and Freedom of Information"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Berliner Beauftragte für Datenschutz und Informationsfreiheit"@de,
         "Berlin Commissioner for Data Protection and Freedom of Information"@en ;
@@ -486,8 +504,7 @@ dpvs-legal:DPA-DE-BY-non-public a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Bayerisches Landesamt für Datenschutzaufsicht"@de,
-        "Bavarian State Office for Data Protection Supervision"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Bayerisches Landesamt für Datenschutzaufsicht"@de,
         "Bavarian State Office for Data Protection Supervision"@en ;
@@ -502,8 +519,7 @@ dpvs-legal:DPA-DE-BY-public a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Der Bayerische Landesbeauftragte für den Datenschutz"@de,
-        "The Bavarian State Commissioner for Data Protection"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Der Bayerische Landesbeauftragte für den Datenschutz"@de,
         "The Bavarian State Commissioner for Data Protection"@en ;
@@ -518,8 +534,7 @@ dpvs-legal:DPA-DE-HB a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Die Landesbeauftragte für Datenschutz und Informationsfreiheit der Freien Hansestadt Bremen"@de,
-        "The State Commissioner for Data Protection and Freedom of Information of the Free Hanseatic City of Bremen"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Die Landesbeauftragte für Datenschutz und Informationsfreiheit der Freien Hansestadt Bremen"@de,
         "The State Commissioner for Data Protection and Freedom of Information of the Free Hanseatic City of Bremen"@en ;
@@ -534,8 +549,7 @@ dpvs-legal:DPA-DE-HE a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Der Hessische Beauftragte für Datenschutz und Informationsfreiheit"@de,
-        "The Hessian Commissioner for Data Protection and Freedom of Information"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Der Hessische Beauftragte für Datenschutz und Informationsfreiheit"@de,
         "The Hessian Commissioner for Data Protection and Freedom of Information"@en ;
@@ -550,8 +564,7 @@ dpvs-legal:DPA-DE-HH a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Der Hamburgische Beauftragte für Datenschutz und Informationsfreiheit"@de,
-        "The Hamburg Commissioner for Data Protection and Freedom of Information"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Der Hamburgische Beauftragte für Datenschutz und Informationsfreiheit"@de,
         "The Hamburg Commissioner for Data Protection and Freedom of Information"@en ;
@@ -566,8 +579,7 @@ dpvs-legal:DPA-DE-MV a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Der Landesbeauftragte für Datenschutz und Informationsfreiheit Mecklenburg-Vorpommern"@de,
-        "The State Commissioner for Data Protection and Freedom of Information Mecklenburg-West Pomerania"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Der Landesbeauftragte für Datenschutz und Informationsfreiheit Mecklenburg-Vorpommern"@de,
         "The State Commissioner for Data Protection and Freedom of Information Mecklenburg-West Pomerania"@en ;
@@ -582,8 +594,7 @@ dpvs-legal:DPA-DE-NI a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Die Landesbeauftragte für den Datenschutz Niedersachsen"@de,
-        "The State Commissioner for Data Protection Lower Saxony"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Die Landesbeauftragte für den Datenschutz Niedersachsen"@de,
         "The State Commissioner for Data Protection Lower Saxony"@en ;
@@ -598,8 +609,7 @@ dpvs-legal:DPA-DE-NW a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen"@de,
-        "State Commissioner for Data Protection and Freedom of Information North Rhine-Westphalia"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen"@de,
         "State Commissioner for Data Protection and Freedom of Information North Rhine-Westphalia"@en ;
@@ -614,8 +624,7 @@ dpvs-legal:DPA-DE-SH a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Unabhängiges Landeszentrum für Datenschutz Schleswig-Holstein"@de,
-        "Independent State Center for Data Protection Schleswig-Holstein"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Unabhängiges Landeszentrum für Datenschutz Schleswig-Holstein"@de,
         "Independent State Center for Data Protection Schleswig-Holstein"@en ;
@@ -630,8 +639,7 @@ dpvs-legal:DPA-DE-SL a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Unabhängiges Datenschutzzentrum Saarland - Landesbeauftragte für Datenschutz und Informationsfreiheit"@de,
-        "Independent Data Protection Center Saarland - State Commissioner for Data Protection and Freedom of Information"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Unabhängiges Datenschutzzentrum Saarland - Landesbeauftragte für Datenschutz und Informationsfreiheit"@de,
         "Independent Data Protection Center Saarland - State Commissioner for Data Protection and Freedom of Information"@en ;
@@ -646,8 +654,7 @@ dpvs-legal:DPA-DE-SN a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Die Sächsische Datenschutzbeauftragte"@de,
-        "The Saxon data protection officer"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Die Sächsische Datenschutzbeauftragte"@de,
         "The Saxon data protection officer"@en ;
@@ -662,8 +669,7 @@ dpvs-legal:DPA-DE-ST a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Landesbeauftragter für den Datenschutz Sachsen-Anhalt"@de,
-        "State representative for data protection in Saxony-Anhalt"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Landesbeauftragter für den Datenschutz Sachsen-Anhalt"@de,
         "State representative for data protection in Saxony-Anhalt"@en ;
@@ -678,8 +684,7 @@ dpvs-legal:DPA-DE-TH a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Thüringer Landesbeauftragter für den Datenschutz und die Informationsfreiheit"@de,
-        "Thuringia state commissioner for data protection and freedom of information"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Thüringer Landesbeauftragter für den Datenschutz und die Informationsfreiheit"@de,
         "Thuringia state commissioner for data protection and freedom of information"@en ;
@@ -693,8 +698,7 @@ dpvs-legal:DPA-DE-RP a skos:Concept,
         dpvs:DataProtectionAuthority ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Rheinland-Pfalz"@de,
-        "The state commissioner for data protection and freedom of information in Rhineland-Palatinate"@en ;
+    rdfs:isDefinedBy dpvs-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Rheinland-Pfalz"@de,
         "The state commissioner for data protection and freedom of information in Rhineland-Palatinate"@en ;

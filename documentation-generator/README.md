@@ -19,6 +19,20 @@ In between steps 2 and 3, there can be a series of tests done to ensure the RDF 
 `./003_generate_respec_html.py` will generate HTML documentation for DPV and DPV-GDPR from RDF.
 
 The `9**` series offers convenience in running the other scripts in some combination. `902` executes all the RDF generation scripts, `903` executes all the HTML generation scripts, and `999` executes all scripts.
+
+In addition to these, `1**` series offers convenience with tasks. `101` converts the DPV-OWL RDF files into OWL (Manchester Syntax). It will be run automatically through the `902` script so that every update will auto-generate these files.
+
+The `8**` series provides packaging and release management tasks. `801` will generate zips for creating a new release, stored in `repo-base/releases` which is gitignored. 
+
+## Requirements
+
+- Internet connectivity - for downloading the spreadsheets from Google Sheets hosting the DPV terms and metadata with `100` script.
+- Python 3.9+ (preferably as close to the latest version as possible) - for executing scripts
+- Python modules to be installed using `pip` - see `requirements.txt`
+- Java runtime 18+ (preferably as close to the latest version as possible) - for executing SHACL validations
+- TopBraid SHACL validation binary from https://github.com/TopQuadrant/shacl (grab the latest release from https://repo1.maven.org/maven2/org/topbraid/shacl/)
+- Ontology Converter v2.0 from https://github.com/sszuev/ont-converter (grab the latest release from https://github.com/sszuev/ont-converter/releases) - required to convert RDF to Manchester Syntax with `101` script.
+
 ## How everything works
 
 ### Downloading CSV data

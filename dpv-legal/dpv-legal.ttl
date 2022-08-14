@@ -19,12 +19,12 @@
     dct:creator "Harshvardhan J. Pandit" ;
     dct:description "DPV-PD is an extension to the Data Privacy Vocabulary that provides additional terms related to Jurisdictions, Laws, and Authorities."@en ;
     dct:license <https://www.w3.org/Consortium/Legal/2015/doc-license> ;
-    dct:modified "2022-04-02"^^xsd:date ;
+    dct:modified "2022-05-25"^^xsd:date ;
     dct:source <https://www.w3.org/community/dpvcg/> ;
     dct:title "DPV-LEGAL: Extension providing Jurisdictions, Laws, and Authorities for DPV"@en ;
     vann:preferredNamespacePrefix "dpv-legal" ;
-    vann:preferredNamespaceUri "https://w3id.org/dpv/dpv-legal"^^xsd:string ;
-    owl:versionInfo "0.6"^^xsd:string .
+    vann:preferredNamespaceUri "https://w3id.org/dpv/dpv-legal#"^^xsd:string ;
+    owl:versionInfo "0.7"^^xsd:string .
 
 dpv-legal:AdequacyConcepts a skos:Collection ;
     skos:member dpv-legal:Adequacy-EU-AD,
@@ -68,6 +68,7 @@ dpv-legal:AuthoritiesConcepts a skos:Collection ;
         dpv-legal:DPA-ES,
         dpv-legal:DPA-FI,
         dpv-legal:DPA-FR,
+        dpv-legal:DPA-GB,
         dpv-legal:DPA-GR,
         dpv-legal:DPA-HR,
         dpv-legal:DPA-HU,
@@ -112,6 +113,8 @@ dpv-legal:LawConcepts a skos:Collection ;
         dpv-legal:DE-SN-SächsDSG,
         dpv-legal:DE-TH-ThürDSG,
         dpv-legal:EU-GDPR,
+        dpv-legal:UK-DPA-2018,
+        dpv-legal:UK-GDPR,
         dpv-legal:US-CA-CCPA,
         dpv-legal:US-CA-CPRA .
 
@@ -526,7 +529,7 @@ dpv-legal:AE a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "United Arab Emirates"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "United Arab Emirates"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -541,7 +544,7 @@ dpv-legal:AF a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Afghanistan"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Afghanistan"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -556,7 +559,7 @@ dpv-legal:AG a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Antigua and Barbuda"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Antigua and Barbuda"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -572,7 +575,7 @@ dpv-legal:AI a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Anguilla"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Anguilla"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -588,7 +591,7 @@ dpv-legal:AL a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Albania"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Albania"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -603,7 +606,7 @@ dpv-legal:AM a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Armenia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Armenia"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -618,7 +621,7 @@ dpv-legal:AO a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Angola"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Angola"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -634,7 +637,7 @@ dpv-legal:AQ a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Antarctica"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Antarctica"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -647,7 +650,7 @@ dpv-legal:AS a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "American Samoa"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "American Samoa"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -662,7 +665,7 @@ dpv-legal:AU a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Australia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Australia"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -677,7 +680,7 @@ dpv-legal:AW a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Aruba"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Aruba"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -693,7 +696,7 @@ dpv-legal:AX a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Åland Islands"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Åland Islands"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -708,7 +711,7 @@ dpv-legal:AZ a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Azerbaijan"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Azerbaijan"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -725,8 +728,9 @@ dpv-legal:Adequacy-EU-AD a skos:Concept,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:temporal [ a time:ProperInterval ;
             time:hasBeginning [ time:inXSDDate "2010-10-21"^^xsd:date ] ] ;
-    dct:title "EU Adequacy Decision for Andorra"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
+    skos:prefLabel "EU Adequacy Decision for Andorra"@en ;
     foaf:homepage "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32010D0625?"^^xsd:anyURI ;
     dpv:hasJurisdiction dpv-legal:AD,
         dpv-legal:EU ;
@@ -738,8 +742,9 @@ dpv-legal:Adequacy-EU-AR a skos:Concept,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:temporal [ a time:ProperInterval ;
             time:hasBeginning [ time:inXSDDate "2003-07-05"^^xsd:date ] ] ;
-    dct:title "EU Adequacy Decision for Argentina"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
+    skos:prefLabel "EU Adequacy Decision for Argentina"@en ;
     foaf:homepage "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32003D0490"^^xsd:anyURI ;
     dpv:hasJurisdiction dpv-legal:AR,
         dpv-legal:EU ;
@@ -751,8 +756,9 @@ dpv-legal:Adequacy-EU-CA a skos:Concept,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:temporal [ a time:ProperInterval ;
             time:hasBeginning [ time:inXSDDate "2002-01-04"^^xsd:date ] ] ;
-    dct:title "EU Adequacy Decision for Canada (commercial organisations)"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
+    skos:prefLabel "EU Adequacy Decision for Canada (commercial organisations)"@en ;
     foaf:homepage "https://eur-lex.europa.eu/legal-content/en/TXT/?uri=CELEX%3A32002D0002"^^xsd:anyURI ;
     dpv:hasJurisdiction dpv-legal:CA,
         dpv-legal:EU ;
@@ -764,8 +770,9 @@ dpv-legal:Adequacy-EU-CH a skos:Concept,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:temporal [ a time:ProperInterval ;
             time:hasBeginning [ time:inXSDDate "2000-08-25"^^xsd:date ] ] ;
-    dct:title "EU Adequacy Decision for Switzerland"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
+    skos:prefLabel "EU Adequacy Decision for Switzerland"@en ;
     foaf:homepage "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32000D0518"^^xsd:anyURI ;
     dpv:hasJurisdiction dpv-legal:CH,
         dpv-legal:EU ;
@@ -777,8 +784,9 @@ dpv-legal:Adequacy-EU-FO a skos:Concept,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:temporal [ a time:ProperInterval ;
             time:hasBeginning [ time:inXSDDate "2010-03-09"^^xsd:date ] ] ;
-    dct:title "EU Adequacy Decision for Faroe Islands"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
+    skos:prefLabel "EU Adequacy Decision for Faroe Islands"@en ;
     foaf:homepage "https://eur-lex.europa.eu/legal-content/en/ALL/?uri=CELEX%3A32010D0146"^^xsd:anyURI ;
     dpv:hasJurisdiction dpv-legal:EU,
         dpv-legal:FO ;
@@ -790,8 +798,9 @@ dpv-legal:Adequacy-EU-GB a skos:Concept,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:temporal [ a time:ProperInterval ;
             time:hasBeginning [ time:inXSDDate "2021-06-28"^^xsd:date ] ] ;
-    dct:title "EU Adequacy Decision for United Kingdom"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
+    skos:prefLabel "EU Adequacy Decision for United Kingdom"@en ;
     foaf:homepage "https://ec.europa.eu/info/files/decision-adequate-protection-personal-data-united-kingdom-general-data-protection-regulation_en"^^xsd:anyURI ;
     dpv:hasJurisdiction dpv-legal:EU,
         dpv-legal:GB ;
@@ -803,8 +812,9 @@ dpv-legal:Adequacy-EU-GG a skos:Concept,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:temporal [ a time:ProperInterval ;
             time:hasBeginning [ time:inXSDDate "2003-11-21"^^xsd:date ] ] ;
-    dct:title "EU Adequacy Decision for Guernsey"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
+    skos:prefLabel "EU Adequacy Decision for Guernsey"@en ;
     foaf:homepage "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32003D0821"^^xsd:anyURI ;
     dpv:hasJurisdiction dpv-legal:EU,
         dpv-legal:GG ;
@@ -816,8 +826,9 @@ dpv-legal:Adequacy-EU-IL a skos:Concept,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:temporal [ a time:ProperInterval ;
             time:hasBeginning [ time:inXSDDate "2011-02-01"^^xsd:date ] ] ;
-    dct:title "EU Adequacy Decision for Israel"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
+    skos:prefLabel "EU Adequacy Decision for Israel"@en ;
     foaf:homepage "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32011D0061"^^xsd:anyURI ;
     dpv:hasJurisdiction dpv-legal:EU,
         dpv-legal:IL ;
@@ -829,8 +840,9 @@ dpv-legal:Adequacy-EU-IM a skos:Concept,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:temporal [ a time:ProperInterval ;
             time:hasBeginning [ time:inXSDDate "2004-04-30"^^xsd:date ] ] ;
-    dct:title "EU Adequacy Decision for Isle of Man"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
+    skos:prefLabel "EU Adequacy Decision for Isle of Man"@en ;
     foaf:homepage "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32004D0411"^^xsd:anyURI ;
     dpv:hasJurisdiction dpv-legal:EU,
         dpv-legal:IM ;
@@ -842,8 +854,9 @@ dpv-legal:Adequacy-EU-JE a skos:Concept,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:temporal [ a time:ProperInterval ;
             time:hasBeginning [ time:inXSDDate "2008-05-26"^^xsd:date ] ] ;
-    dct:title "EU Adequacy Decision for Jersey"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
+    skos:prefLabel "EU Adequacy Decision for Jersey"@en ;
     foaf:homepage "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32008D0393"^^xsd:anyURI ;
     dpv:hasJurisdiction dpv-legal:EU,
         dpv-legal:JE ;
@@ -855,8 +868,9 @@ dpv-legal:Adequacy-EU-JP a skos:Concept,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:temporal [ a time:ProperInterval ;
             time:hasBeginning [ time:inXSDDate "2019-01-23"^^xsd:date ] ] ;
-    dct:title "EU Adequacy Decision for Japan"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
+    skos:prefLabel "EU Adequacy Decision for Japan"@en ;
     foaf:homepage "http://data.europa.eu/eli/dec_impl/2019/419/oj"^^xsd:anyURI ;
     dpv:hasJurisdiction dpv-legal:EU,
         dpv-legal:JP ;
@@ -868,8 +882,9 @@ dpv-legal:Adequacy-EU-NZ a skos:Concept,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:temporal [ a time:ProperInterval ;
             time:hasBeginning [ time:inXSDDate "2012-12-20"^^xsd:date ] ] ;
-    dct:title "EU Adequacy Decision for New Zealand"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
+    skos:prefLabel "EU Adequacy Decision for New Zealand"@en ;
     foaf:homepage "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32013D0065"^^xsd:anyURI ;
     dpv:hasJurisdiction dpv-legal:EU,
         dpv-legal:NZ ;
@@ -881,8 +896,9 @@ dpv-legal:Adequacy-EU-UY a skos:Concept,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:temporal [ a time:ProperInterval ;
             time:hasBeginning [ time:inXSDDate "2012-08-22"^^xsd:date ] ] ;
-    dct:title "EU Adequacy Decision for Uruguay"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
+    skos:prefLabel "EU Adequacy Decision for Uruguay"@en ;
     foaf:homepage "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32012D0484"^^xsd:anyURI ;
     dpv:hasJurisdiction dpv-legal:EU,
         dpv-legal:UY ;
@@ -892,7 +908,7 @@ dpv-legal:BA a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Bosnia and Herzegovina"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Bosnia and Herzegovina"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -907,7 +923,7 @@ dpv-legal:BB a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Barbados"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Barbados"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -923,7 +939,7 @@ dpv-legal:BD a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Bangladesh"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Bangladesh"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -938,7 +954,7 @@ dpv-legal:BF a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Burkina Faso"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Burkina Faso"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -954,7 +970,7 @@ dpv-legal:BH a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Bahrain"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Bahrain"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -969,7 +985,7 @@ dpv-legal:BI a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Burundi"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Burundi"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -985,7 +1001,7 @@ dpv-legal:BJ a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Benin"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Benin"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1001,7 +1017,7 @@ dpv-legal:BL a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Saint Barthélemy"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Saint Barthélemy"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1017,7 +1033,7 @@ dpv-legal:BM a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Bermuda"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Bermuda"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1032,7 +1048,7 @@ dpv-legal:BN a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Brunei Darussalam"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Brunei Darussalam"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1047,7 +1063,7 @@ dpv-legal:BO a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Bolivia (Plurinational State of)"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Bolivia (Plurinational State of)"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1063,7 +1079,7 @@ dpv-legal:BQ a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Bonaire, Sint Eustatius and Saba"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Bonaire, Sint Eustatius and Saba"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1079,7 +1095,7 @@ dpv-legal:BR a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Brazil"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Brazil"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1095,7 +1111,7 @@ dpv-legal:BS a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Bahamas"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Bahamas"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1111,7 +1127,7 @@ dpv-legal:BT a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Bhutan"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Bhutan"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1126,7 +1142,7 @@ dpv-legal:BV a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Bouvet Island"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Bouvet Island"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1142,7 +1158,7 @@ dpv-legal:BW a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Botswana"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Botswana"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1158,7 +1174,7 @@ dpv-legal:BY a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Belarus"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Belarus"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1173,7 +1189,7 @@ dpv-legal:BZ a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Belize"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Belize"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1189,7 +1205,7 @@ dpv-legal:CC a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Cocos (Keeling) Islands"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Cocos (Keeling) Islands"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1204,7 +1220,7 @@ dpv-legal:CD a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Democratic Republic of the Congo"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Democratic Republic of the Congo"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1220,7 +1236,7 @@ dpv-legal:CF a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Central African Republic"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Central African Republic"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1236,7 +1252,7 @@ dpv-legal:CG a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Congo"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Congo"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1252,7 +1268,7 @@ dpv-legal:CI a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Côte d’Ivoire"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Côte d’Ivoire"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1268,7 +1284,7 @@ dpv-legal:CK a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Cook Islands"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Cook Islands"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1283,7 +1299,7 @@ dpv-legal:CL a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Chile"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Chile"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1299,7 +1315,7 @@ dpv-legal:CM a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Cameroon"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Cameroon"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1315,7 +1331,7 @@ dpv-legal:CN a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "China"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "China"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1330,7 +1346,7 @@ dpv-legal:CO a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Colombia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Colombia"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1346,7 +1362,7 @@ dpv-legal:CR a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Costa Rica"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Costa Rica"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1362,7 +1378,7 @@ dpv-legal:CU a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Cuba"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Cuba"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1378,7 +1394,7 @@ dpv-legal:CV a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Cabo Verde"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Cabo Verde"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1394,7 +1410,7 @@ dpv-legal:CW a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Curaçao"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Curaçao"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1410,7 +1426,7 @@ dpv-legal:CX a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Christmas Island"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Christmas Island"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1425,7 +1441,7 @@ dpv-legal:DJ a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Djibouti"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Djibouti"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1441,7 +1457,7 @@ dpv-legal:DM a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Dominica"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Dominica"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1457,7 +1473,7 @@ dpv-legal:DO a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Dominican Republic"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Dominican Republic"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1473,7 +1489,7 @@ dpv-legal:DZ a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Algeria"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Algeria"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1488,7 +1504,7 @@ dpv-legal:EC a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Ecuador"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Ecuador"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1504,7 +1520,7 @@ dpv-legal:EG a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Egypt"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Egypt"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1519,7 +1535,7 @@ dpv-legal:EH a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Western Sahara"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Western Sahara"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1534,7 +1550,7 @@ dpv-legal:ER a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Eritrea"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Eritrea"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1550,7 +1566,7 @@ dpv-legal:ET a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Ethiopia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Ethiopia"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1566,7 +1582,7 @@ dpv-legal:FJ a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Fiji"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Fiji"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1581,7 +1597,7 @@ dpv-legal:FK a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Falkland Islands (Malvinas)"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Falkland Islands (Malvinas)"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1597,7 +1613,7 @@ dpv-legal:FM a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Micronesia (Federated States of)"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Micronesia (Federated States of)"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1612,7 +1628,7 @@ dpv-legal:GA a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Gabon"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Gabon"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1628,7 +1644,7 @@ dpv-legal:GD a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Grenada"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Grenada"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1644,7 +1660,7 @@ dpv-legal:GE a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Georgia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Georgia"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1659,7 +1675,7 @@ dpv-legal:GF a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "French Guiana"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "French Guiana"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1675,7 +1691,7 @@ dpv-legal:GH a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Ghana"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Ghana"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1691,7 +1707,7 @@ dpv-legal:GI a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Gibraltar"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Gibraltar"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1706,7 +1722,7 @@ dpv-legal:GL a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Greenland"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Greenland"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1721,7 +1737,7 @@ dpv-legal:GM a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Gambia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Gambia"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1737,7 +1753,7 @@ dpv-legal:GN a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Guinea"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Guinea"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1753,7 +1769,7 @@ dpv-legal:GP a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Guadeloupe"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Guadeloupe"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1769,7 +1785,7 @@ dpv-legal:GQ a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Equatorial Guinea"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Equatorial Guinea"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1785,7 +1801,7 @@ dpv-legal:GS a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "South Georgia and the South Sandwich Islands"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "South Georgia and the South Sandwich Islands"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1801,7 +1817,7 @@ dpv-legal:GT a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Guatemala"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Guatemala"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1817,7 +1833,7 @@ dpv-legal:GU a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Guam"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Guam"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1832,7 +1848,7 @@ dpv-legal:GW a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Guinea-Bissau"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Guinea-Bissau"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1848,7 +1864,7 @@ dpv-legal:GY a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Guyana"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Guyana"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1864,7 +1880,7 @@ dpv-legal:HK a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "China, Hong Kong Special Administrative Region"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "China, Hong Kong Special Administrative Region"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1879,7 +1895,7 @@ dpv-legal:HM a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Heard Island and McDonald Islands"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Heard Island and McDonald Islands"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1894,7 +1910,7 @@ dpv-legal:HN a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Honduras"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Honduras"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1910,7 +1926,7 @@ dpv-legal:HT a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Haiti"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Haiti"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1926,7 +1942,7 @@ dpv-legal:ID a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Indonesia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Indonesia"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1941,7 +1957,7 @@ dpv-legal:IN a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "India"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "India"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1956,7 +1972,7 @@ dpv-legal:IO a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "British Indian Ocean Territory"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "British Indian Ocean Territory"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1972,7 +1988,7 @@ dpv-legal:IQ a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Iraq"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Iraq"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -1987,7 +2003,7 @@ dpv-legal:IR a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Iran (Islamic Republic of)"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Iran (Islamic Republic of)"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2002,7 +2018,7 @@ dpv-legal:IS a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Iceland"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Iceland"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2017,7 +2033,7 @@ dpv-legal:JM a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Jamaica"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Jamaica"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2033,7 +2049,7 @@ dpv-legal:JO a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Jordan"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Jordan"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2048,7 +2064,7 @@ dpv-legal:KE a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Kenya"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Kenya"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2064,7 +2080,7 @@ dpv-legal:KG a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Kyrgyzstan"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Kyrgyzstan"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2079,7 +2095,7 @@ dpv-legal:KH a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Cambodia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Cambodia"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2094,7 +2110,7 @@ dpv-legal:KI a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Kiribati"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Kiribati"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2109,7 +2125,7 @@ dpv-legal:KM a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Comoros"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Comoros"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2125,7 +2141,7 @@ dpv-legal:KN a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Saint Kitts and Nevis"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Saint Kitts and Nevis"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2141,7 +2157,7 @@ dpv-legal:KP a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Democratic People's Republic of Korea"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Democratic People's Republic of Korea"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2156,7 +2172,7 @@ dpv-legal:KR a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Republic of Korea"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Republic of Korea"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2171,7 +2187,7 @@ dpv-legal:KW a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Kuwait"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Kuwait"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2186,7 +2202,7 @@ dpv-legal:KY a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Cayman Islands"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Cayman Islands"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2202,7 +2218,7 @@ dpv-legal:KZ a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Kazakhstan"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Kazakhstan"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2217,7 +2233,7 @@ dpv-legal:LA a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Lao People's Democratic Republic"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Lao People's Democratic Republic"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2232,7 +2248,7 @@ dpv-legal:LB a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Lebanon"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Lebanon"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2247,7 +2263,7 @@ dpv-legal:LC a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Saint Lucia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Saint Lucia"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2263,7 +2279,7 @@ dpv-legal:LI a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Liechtenstein"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Liechtenstein"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2278,7 +2294,7 @@ dpv-legal:LK a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Sri Lanka"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Sri Lanka"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2293,7 +2309,7 @@ dpv-legal:LR a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Liberia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Liberia"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2309,7 +2325,7 @@ dpv-legal:LS a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Lesotho"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Lesotho"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2325,7 +2341,7 @@ dpv-legal:LY a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Libya"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Libya"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2340,7 +2356,7 @@ dpv-legal:MA a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Morocco"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Morocco"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2355,7 +2371,7 @@ dpv-legal:MC a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Monaco"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Monaco"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2370,7 +2386,7 @@ dpv-legal:MD a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Republic of Moldova"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Republic of Moldova"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2385,7 +2401,7 @@ dpv-legal:ME a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Montenegro"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Montenegro"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2400,7 +2416,7 @@ dpv-legal:MF a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Saint Martin (French Part)"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Saint Martin (French Part)"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2416,7 +2432,7 @@ dpv-legal:MG a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Madagascar"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Madagascar"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2432,7 +2448,7 @@ dpv-legal:MH a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Marshall Islands"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Marshall Islands"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2447,7 +2463,7 @@ dpv-legal:MK a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "North Macedonia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "North Macedonia"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2462,7 +2478,7 @@ dpv-legal:ML a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Mali"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Mali"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2478,7 +2494,7 @@ dpv-legal:MM a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Myanmar"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Myanmar"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2493,7 +2509,7 @@ dpv-legal:MN a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Mongolia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Mongolia"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2508,7 +2524,7 @@ dpv-legal:MO a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "China, Macao Special Administrative Region"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "China, Macao Special Administrative Region"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2523,7 +2539,7 @@ dpv-legal:MP a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Northern Mariana Islands"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Northern Mariana Islands"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2538,7 +2554,7 @@ dpv-legal:MQ a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Martinique"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Martinique"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2554,7 +2570,7 @@ dpv-legal:MR a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Mauritania"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Mauritania"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2570,7 +2586,7 @@ dpv-legal:MS a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Montserrat"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Montserrat"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2586,7 +2602,7 @@ dpv-legal:MU a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Mauritius"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Mauritius"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2602,7 +2618,7 @@ dpv-legal:MV a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Maldives"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Maldives"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2617,7 +2633,7 @@ dpv-legal:MW a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Malawi"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Malawi"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2633,7 +2649,7 @@ dpv-legal:MX a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Mexico"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Mexico"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2649,7 +2665,7 @@ dpv-legal:MY a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Malaysia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Malaysia"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2664,7 +2680,7 @@ dpv-legal:MZ a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Mozambique"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Mozambique"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2680,7 +2696,7 @@ dpv-legal:NA a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Namibia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Namibia"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2696,7 +2712,7 @@ dpv-legal:NC a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "New Caledonia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "New Caledonia"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2711,7 +2727,7 @@ dpv-legal:NE a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Niger"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Niger"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2727,7 +2743,7 @@ dpv-legal:NF a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Norfolk Island"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Norfolk Island"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2742,7 +2758,7 @@ dpv-legal:NG a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Nigeria"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Nigeria"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2758,7 +2774,7 @@ dpv-legal:NI a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Nicaragua"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Nicaragua"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2774,7 +2790,7 @@ dpv-legal:NO a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Norway"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Norway"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2789,7 +2805,7 @@ dpv-legal:NP a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Nepal"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Nepal"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2804,7 +2820,7 @@ dpv-legal:NR a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Nauru"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Nauru"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2819,7 +2835,7 @@ dpv-legal:NU a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Niue"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Niue"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2834,7 +2850,7 @@ dpv-legal:OM a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Oman"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Oman"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2849,7 +2865,7 @@ dpv-legal:PA a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Panama"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Panama"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2865,7 +2881,7 @@ dpv-legal:PE a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Peru"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Peru"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2881,7 +2897,7 @@ dpv-legal:PF a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "French Polynesia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "French Polynesia"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2896,7 +2912,7 @@ dpv-legal:PG a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Papua New Guinea"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Papua New Guinea"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2911,7 +2927,7 @@ dpv-legal:PH a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Philippines"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Philippines"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2926,7 +2942,7 @@ dpv-legal:PK a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Pakistan"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Pakistan"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2941,7 +2957,7 @@ dpv-legal:PM a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Saint Pierre and Miquelon"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Saint Pierre and Miquelon"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2956,7 +2972,7 @@ dpv-legal:PN a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Pitcairn"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Pitcairn"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2971,7 +2987,7 @@ dpv-legal:PR a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Puerto Rico"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Puerto Rico"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -2987,7 +3003,7 @@ dpv-legal:PS a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "State of Palestine"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "State of Palestine"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3002,7 +3018,7 @@ dpv-legal:PW a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Palau"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Palau"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3017,7 +3033,7 @@ dpv-legal:PY a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Paraguay"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Paraguay"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3033,7 +3049,7 @@ dpv-legal:QA a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Qatar"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Qatar"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3048,7 +3064,7 @@ dpv-legal:RE a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Réunion"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Réunion"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3064,7 +3080,7 @@ dpv-legal:RS a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Serbia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Serbia"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3079,7 +3095,7 @@ dpv-legal:RU a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Russian Federation"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Russian Federation"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3094,7 +3110,7 @@ dpv-legal:RW a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Rwanda"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Rwanda"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3110,7 +3126,7 @@ dpv-legal:SA a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Saudi Arabia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Saudi Arabia"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3125,7 +3141,7 @@ dpv-legal:SB a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Solomon Islands"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Solomon Islands"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3140,7 +3156,7 @@ dpv-legal:SC a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Seychelles"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Seychelles"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3156,7 +3172,7 @@ dpv-legal:SD a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Sudan"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Sudan"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3171,7 +3187,7 @@ dpv-legal:SG a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Singapore"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Singapore"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3186,7 +3202,7 @@ dpv-legal:SH a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Saint Helena"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Saint Helena"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3202,7 +3218,7 @@ dpv-legal:SJ a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Svalbard and Jan Mayen Islands"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Svalbard and Jan Mayen Islands"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3217,7 +3233,7 @@ dpv-legal:SL a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Sierra Leone"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Sierra Leone"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3233,7 +3249,7 @@ dpv-legal:SM a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "San Marino"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "San Marino"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3248,7 +3264,7 @@ dpv-legal:SN a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Senegal"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Senegal"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3264,7 +3280,7 @@ dpv-legal:SO a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Somalia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Somalia"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3280,7 +3296,7 @@ dpv-legal:SR a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Suriname"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Suriname"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3296,7 +3312,7 @@ dpv-legal:SS a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "South Sudan"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "South Sudan"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3312,7 +3328,7 @@ dpv-legal:ST a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Sao Tome and Principe"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Sao Tome and Principe"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3328,7 +3344,7 @@ dpv-legal:SV a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "El Salvador"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "El Salvador"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3344,7 +3360,7 @@ dpv-legal:SX a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Sint Maarten (Dutch part)"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Sint Maarten (Dutch part)"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3360,7 +3376,7 @@ dpv-legal:SY a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Syrian Arab Republic"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Syrian Arab Republic"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3375,7 +3391,7 @@ dpv-legal:SZ a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Eswatini"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Eswatini"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3391,7 +3407,7 @@ dpv-legal:Sark a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Sark"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Sark"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -3403,7 +3419,7 @@ dpv-legal:TC a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Turks and Caicos Islands"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Turks and Caicos Islands"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3419,7 +3435,7 @@ dpv-legal:TD a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Chad"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Chad"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3435,7 +3451,7 @@ dpv-legal:TF a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "French Southern Territories"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "French Southern Territories"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3451,7 +3467,7 @@ dpv-legal:TG a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Togo"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Togo"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3467,7 +3483,7 @@ dpv-legal:TH a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Thailand"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Thailand"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3482,7 +3498,7 @@ dpv-legal:TJ a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Tajikistan"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Tajikistan"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3497,7 +3513,7 @@ dpv-legal:TK a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Tokelau"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Tokelau"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3512,7 +3528,7 @@ dpv-legal:TL a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Timor-Leste"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Timor-Leste"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3527,7 +3543,7 @@ dpv-legal:TM a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Turkmenistan"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Turkmenistan"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3542,7 +3558,7 @@ dpv-legal:TN a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Tunisia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Tunisia"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3557,7 +3573,7 @@ dpv-legal:TO a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Tonga"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Tonga"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3572,7 +3588,7 @@ dpv-legal:TR a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Turkey"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Turkey"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3587,7 +3603,7 @@ dpv-legal:TT a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Trinidad and Tobago"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Trinidad and Tobago"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3603,7 +3619,7 @@ dpv-legal:TV a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Tuvalu"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Tuvalu"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3618,7 +3634,7 @@ dpv-legal:TW a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Taiwan (Province of China)"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Taiwan (Province of China)"@en ;
     dpv:isInstanceOf dpv:Country .
@@ -3627,7 +3643,7 @@ dpv-legal:TZ a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "United Republic of Tanzania"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "United Republic of Tanzania"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3643,7 +3659,7 @@ dpv-legal:UA a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Ukraine"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Ukraine"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3658,7 +3674,7 @@ dpv-legal:UG a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Uganda"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Uganda"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3674,7 +3690,7 @@ dpv-legal:UM a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "United States Minor Outlying Islands"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "United States Minor Outlying Islands"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -3689,7 +3705,7 @@ dpv-legal:US-AK a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Alaska"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Alaska"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -3699,7 +3715,7 @@ dpv-legal:US-AL a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Alabama"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Alabama"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -3709,7 +3725,7 @@ dpv-legal:US-AR a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Arkansas"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Arkansas"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -3719,7 +3735,7 @@ dpv-legal:US-AS a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "American Samoa"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "American Samoa"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -3729,7 +3745,7 @@ dpv-legal:US-AZ a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Arizona"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Arizona"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -3739,7 +3755,7 @@ dpv-legal:US-CO a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Colorado"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Colorado"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -3749,7 +3765,7 @@ dpv-legal:US-CT a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Connecticut"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Connecticut"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -3759,7 +3775,7 @@ dpv-legal:US-DC a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "District of Columbia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "District of Columbia"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -3769,7 +3785,7 @@ dpv-legal:US-DE a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Delaware"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Delaware"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -3779,7 +3795,7 @@ dpv-legal:US-FL a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Florida"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Florida"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -3789,7 +3805,7 @@ dpv-legal:US-GA a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Georgia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Georgia"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -3799,7 +3815,7 @@ dpv-legal:US-GU a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Guam"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Guam"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -3809,7 +3825,7 @@ dpv-legal:US-HI a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Hawaii"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Hawaii"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -3819,7 +3835,7 @@ dpv-legal:US-IA a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Iowa"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Iowa"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -3829,7 +3845,7 @@ dpv-legal:US-ID a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Idaho"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Idaho"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -3839,7 +3855,7 @@ dpv-legal:US-IL a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Illinois"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Illinois"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -3849,7 +3865,7 @@ dpv-legal:US-IN a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Indiana"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Indiana"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -3859,7 +3875,7 @@ dpv-legal:US-KS a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Kansas"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Kansas"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -3869,7 +3885,7 @@ dpv-legal:US-KY a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Kentucky"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Kentucky"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -3879,7 +3895,7 @@ dpv-legal:US-LA a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Louisiana"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Louisiana"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -3889,7 +3905,7 @@ dpv-legal:US-MA a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Massachusetts"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Massachusetts"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -3899,7 +3915,7 @@ dpv-legal:US-MD a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Maryland"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Maryland"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -3909,7 +3925,7 @@ dpv-legal:US-ME a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Maine"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Maine"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -3919,7 +3935,7 @@ dpv-legal:US-MI a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Michigan"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Michigan"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -3929,7 +3945,7 @@ dpv-legal:US-MN a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Minnesota"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Minnesota"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -3939,7 +3955,7 @@ dpv-legal:US-MO a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Missouri"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Missouri"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -3949,7 +3965,7 @@ dpv-legal:US-MP a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Northern Mariana Islands"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Northern Mariana Islands"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -3959,7 +3975,7 @@ dpv-legal:US-MS a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Mississippi"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Mississippi"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -3969,7 +3985,7 @@ dpv-legal:US-MT a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Montana"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Montana"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -3979,7 +3995,7 @@ dpv-legal:US-NC a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "North Carolina"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "North Carolina"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -3989,7 +4005,7 @@ dpv-legal:US-ND a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "North Dakota"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "North Dakota"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -3999,7 +4015,7 @@ dpv-legal:US-NE a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Nebraska"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Nebraska"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -4009,7 +4025,7 @@ dpv-legal:US-NH a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "New Hampshire"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "New Hampshire"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -4019,7 +4035,7 @@ dpv-legal:US-NJ a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "New Jersey"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "New Jersey"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -4029,7 +4045,7 @@ dpv-legal:US-NM a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "New Mexico"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "New Mexico"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -4039,7 +4055,7 @@ dpv-legal:US-NV a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Nevada"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Nevada"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -4049,7 +4065,7 @@ dpv-legal:US-NY a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "New York"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "New York"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -4059,7 +4075,7 @@ dpv-legal:US-OH a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Ohio"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Ohio"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -4069,7 +4085,7 @@ dpv-legal:US-OK a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Oklahoma"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Oklahoma"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -4079,7 +4095,7 @@ dpv-legal:US-OR a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Oregon"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Oregon"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -4089,7 +4105,7 @@ dpv-legal:US-PA a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Pennsylvania"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Pennsylvania"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -4099,7 +4115,7 @@ dpv-legal:US-PR a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Puerto Rico"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Puerto Rico"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -4109,7 +4125,7 @@ dpv-legal:US-RI a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Rhode Island"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Rhode Island"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -4119,7 +4135,7 @@ dpv-legal:US-SC a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "South Carolina"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "South Carolina"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -4129,7 +4145,7 @@ dpv-legal:US-SD a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "South Dakota"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "South Dakota"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -4139,7 +4155,7 @@ dpv-legal:US-TN a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Tennessee"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Tennessee"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -4149,7 +4165,7 @@ dpv-legal:US-TX a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Texas"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Texas"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -4159,7 +4175,7 @@ dpv-legal:US-UM a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "United States Minor Outlying Islands"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "United States Minor Outlying Islands"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -4169,7 +4185,7 @@ dpv-legal:US-UT a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Utah"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Utah"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -4179,7 +4195,7 @@ dpv-legal:US-VA a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Virginia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Virginia"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -4189,7 +4205,7 @@ dpv-legal:US-VI a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "U.S. Virgin Islands"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "U.S. Virgin Islands"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -4199,7 +4215,7 @@ dpv-legal:US-VT a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Vermont"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Vermont"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -4209,7 +4225,7 @@ dpv-legal:US-WA a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Washington"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Washington"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -4219,7 +4235,7 @@ dpv-legal:US-WI a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Wisconsin"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Wisconsin"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -4229,7 +4245,7 @@ dpv-legal:US-WV a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "West Virginia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "West Virginia"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -4239,7 +4255,7 @@ dpv-legal:US-WY a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Wyoming"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Wyoming"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -4249,7 +4265,7 @@ dpv-legal:UZ a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Uzbekistan"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Uzbekistan"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -4264,7 +4280,7 @@ dpv-legal:VA a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Holy See"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Holy See"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -4279,7 +4295,7 @@ dpv-legal:VC a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Saint Vincent and the Grenadines"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Saint Vincent and the Grenadines"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -4295,7 +4311,7 @@ dpv-legal:VE a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Venezuela (Bolivarian Republic of)"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Venezuela (Bolivarian Republic of)"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -4311,7 +4327,7 @@ dpv-legal:VG a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "British Virgin Islands"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "British Virgin Islands"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -4327,7 +4343,7 @@ dpv-legal:VI a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "United States Virgin Islands"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "United States Virgin Islands"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -4343,7 +4359,7 @@ dpv-legal:VN a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Viet Nam"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Viet Nam"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -4358,7 +4374,7 @@ dpv-legal:VU a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Vanuatu"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Vanuatu"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -4373,7 +4389,7 @@ dpv-legal:WF a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Wallis and Futuna Islands"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Wallis and Futuna Islands"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -4388,7 +4404,7 @@ dpv-legal:WS a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Samoa"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Samoa"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -4403,7 +4419,7 @@ dpv-legal:YE a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Yemen"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Yemen"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -4418,7 +4434,7 @@ dpv-legal:YT a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Mayotte"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Mayotte"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -4434,7 +4450,7 @@ dpv-legal:ZA a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "South Africa"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "South Africa"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -4450,7 +4466,7 @@ dpv-legal:ZM a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Zambia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Zambia"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -4466,7 +4482,7 @@ dpv-legal:ZW a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Zimbabwe"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Zimbabwe"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -4482,7 +4498,7 @@ dpv-legal:AD a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Andorra"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Andorra"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -4497,7 +4513,7 @@ dpv-legal:AR a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Argentina"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Argentina"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -4513,7 +4529,7 @@ dpv-legal:CA a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Canada"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Canada"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -4528,7 +4544,7 @@ dpv-legal:CH a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Switzerland"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Switzerland"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -4544,8 +4560,7 @@ dpv-legal:DE-BW-LDSG a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Landesdatenschutzgesetz (LDSG) (BW)"@de,
-        "State Data Protection Act (LDSG) (BW)"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Landesdatenschutzgesetz (LDSG) (BW)"@de,
         "State Data Protection Act (LDSG) (BW)"@en ;
@@ -4557,7 +4572,7 @@ dpv-legal:FO a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Faroe Islands"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Faroe Islands"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -4572,7 +4587,7 @@ dpv-legal:GG a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Guernsey"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Guernsey"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -4588,7 +4603,7 @@ dpv-legal:IL a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Israel"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Israel"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -4603,7 +4618,7 @@ dpv-legal:IM a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Isle of Man"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Isle of Man"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -4618,7 +4633,7 @@ dpv-legal:JE a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Jersey"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Jersey"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -4634,7 +4649,7 @@ dpv-legal:JP a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Japan"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Japan"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -4649,7 +4664,7 @@ dpv-legal:NZ a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "New Zealand"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "New Zealand"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -4666,7 +4681,7 @@ dpv-legal:US-CA-CCPA a skos:Concept,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:temporal [ a time:ProperInterval ;
             time:hasBeginning [ time:inXSDDate "2020-01-01"^^xsd:date ] ] ;
-    dct:title "California Consumer Privacy Act (CCPA)"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "California Consumer Privacy Act (CCPA)"@en ;
     foaf:homepage "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201720180AB375"^^xsd:anyURI ;
@@ -4679,7 +4694,7 @@ dpv-legal:US-CA-CPRA a skos:Concept,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:temporal [ a time:ProperInterval ;
             time:hasBeginning [ time:inXSDDate "2023-01-01"^^xsd:date ] ] ;
-    dct:title "California Privacy Rights Act (CPRA)"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "California Privacy Rights Act (CPRA)"@en ;
     foaf:homepage "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201720180AB375"^^xsd:anyURI ;
@@ -4690,7 +4705,7 @@ dpv-legal:UY a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Uruguay"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Uruguay"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -4707,8 +4722,7 @@ dpv-legal:DE-BE-BbgDSG a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Brandenburgisches Datenschutzgesetz (BbgDSG)"@de,
-        "Brandenburg Data Protection Act (BbgDSG)"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Brandenburgisches Datenschutzgesetz (BbgDSG)"@de,
         "Brandenburg Data Protection Act (BbgDSG)"@en ;
@@ -4722,8 +4736,7 @@ dpv-legal:DE-BE-BlnDSG a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Berliner Datenschutzgesetz (BlnDSG)"@de,
-        "Berlin Data Protection Act (BlnDSG)"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Berliner Datenschutzgesetz (BlnDSG)"@de,
         "Berlin Data Protection Act (BlnDSG)"@en ;
@@ -4737,8 +4750,7 @@ dpv-legal:DE-HB-BremDSGVOAG a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Bremisches Ausführungsgesetz zur EU-Datenschutz-Grundverordnung (BremDSGVOAG)"@de,
-        "Bremen Implementing Act for the EU General Data Protection Regulation (BremDSGVOAG)"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Bremisches Ausführungsgesetz zur EU-Datenschutz-Grundverordnung (BremDSGVOAG)"@de,
         "Bremen Implementing Act for the EU General Data Protection Regulation (BremDSGVOAG)"@en ;
@@ -4752,8 +4764,7 @@ dpv-legal:DE-HE-HDISG a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Hessisches Datenschutz- und Informationsfreiheitsgesetz (HDSIG)"@de,
-        "Hessian Data Protection and Freedom of Information Act (HDSIG)"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Hessisches Datenschutz- und Informationsfreiheitsgesetz (HDSIG)"@de,
         "Hessian Data Protection and Freedom of Information Act (HDSIG)"@en ;
@@ -4767,8 +4778,7 @@ dpv-legal:DE-HH-HmbDSG a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Hamburgisches Datenschutzgesetz (HmbDSG)"@de,
-        "Hamburg Data Protection Act (HmbDSG)"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Hamburgisches Datenschutzgesetz (HmbDSG)"@de,
         "Hamburg Data Protection Act (HmbDSG)"@en ;
@@ -4782,8 +4792,7 @@ dpv-legal:DE-LSA-DSG a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Gesetz zum Schutz personenbezogener Daten der Bürger (Datenschutzgesetz Sachsen-Anhalt - DSG LSA)"@de,
-        "Law on the protection of personal data of citizens (Saxony-Anhalt Data Protection Act - DSG LSA)"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Gesetz zum Schutz personenbezogener Daten der Bürger (Datenschutzgesetz Sachsen-Anhalt - DSG LSA)"@de,
         "Law on the protection of personal data of citizens (Saxony-Anhalt Data Protection Act - DSG LSA)"@en ;
@@ -4797,8 +4806,7 @@ dpv-legal:DE-MV-DSG a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Gesetz zur Anpassung des Landesdatenschutzgesetzes und weiterer datenschutzrechtlicher Vorschriften im Zuständigkeitsbereich des Ministeriums für Inneres und Europa Mecklenburg-Vorpommern an die Verordnung (EU) 2016/679 und zur Umsetzung der Richtlinie (EU) 2016/680"@de,
-        "Act to adapt the State Data Protection Act and other data protection regulations in the area of ​​responsibility of the Ministry of the Interior and Europe Mecklenburg-West Pomerania to Regulation (EU) 2016/679 and to implement Directive (EU) 2016/680"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Gesetz zur Anpassung des Landesdatenschutzgesetzes und weiterer datenschutzrechtlicher Vorschriften im Zuständigkeitsbereich des Ministeriums für Inneres und Europa Mecklenburg-Vorpommern an die Verordnung (EU) 2016/679 und zur Umsetzung der Richtlinie (EU) 2016/680"@de,
         "Act to adapt the State Data Protection Act and other data protection regulations in the area of ​​responsibility of the Ministry of the Interior and Europe Mecklenburg-West Pomerania to Regulation (EU) 2016/679 and to implement Directive (EU) 2016/680"@en ;
@@ -4812,8 +4820,7 @@ dpv-legal:DE-NI-NDSG a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Niedersächsisches Datenschutzgesetz (NDSG)"@de,
-        "Lower Saxony Data Protection Act (NDSG)"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Niedersächsisches Datenschutzgesetz (NDSG)"@de,
         "Lower Saxony Data Protection Act (NDSG)"@en ;
@@ -4827,8 +4834,7 @@ dpv-legal:DE-NW-DSG a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Datenschutzgesetz Nordrhein-Westfalen (DSG NRW)"@de,
-        "North Rhine-Westphalia Data Protection Act (DSG NRW)"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Datenschutzgesetz Nordrhein-Westfalen (DSG NRW)"@de,
         "North Rhine-Westphalia Data Protection Act (DSG NRW)"@en ;
@@ -4842,8 +4848,7 @@ dpv-legal:DE-RP-LDSG a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Landesdatenschutzgesetz (LDSG)"@de,
-        "State Data Protection Act (LDSG)"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Landesdatenschutzgesetz (LDSG)"@de,
         "State Data Protection Act (LDSG)"@en ;
@@ -4857,8 +4862,7 @@ dpv-legal:DE-SH-LDSG a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Schleswig-Holsteinisches Gesetz zum Schutz personenbezogener Daten (Landesdatenschutzgesetz - LDSG)"@de,
-        "Schleswig-Holstein law for the protection of personal data (state data protection law - LDSG)"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Schleswig-Holsteinisches Gesetz zum Schutz personenbezogener Daten (Landesdatenschutzgesetz - LDSG)"@de,
         "Schleswig-Holstein law for the protection of personal data (state data protection law - LDSG)"@en ;
@@ -4872,8 +4876,7 @@ dpv-legal:DE-SL-SDSG a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Saarländisches Datenschutzgesetz"@de,
-        "Saarland Data Protection Act"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Saarländisches Datenschutzgesetz"@de,
         "Saarland Data Protection Act"@en ;
@@ -4887,8 +4890,7 @@ dpv-legal:DE-SN-SächsDSG a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Gesetz zum Schutz der informationellen Selbstbestimmung im Freistaat Sachsen (Sächsisches Datenschutzgesetz – SächsDSG)"@de,
-        "Law for the Protection of Informational Self-Determination in the Free State of Saxony (Saxon Data Protection Act - SächsDSG)"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Gesetz zum Schutz der informationellen Selbstbestimmung im Freistaat Sachsen (Sächsisches Datenschutzgesetz – SächsDSG)"@de,
         "Law for the Protection of Informational Self-Determination in the Free State of Saxony (Saxon Data Protection Act - SächsDSG)"@en ;
@@ -4902,8 +4904,7 @@ dpv-legal:DE-TH-ThürDSG a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Thüringer Datenschutzgesetz (ThürDSG)"@de,
-        "Thuringian Data Protection Act (ThürDSG)"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Thüringer Datenschutzgesetz (ThürDSG)"@de,
         "Thuringian Data Protection Act (ThürDSG)"@en ;
@@ -4916,7 +4917,7 @@ dpv-legal:DPA-AT a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Austrian Data Protection Authority"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Austrian Data Protection Authority"@en ;
     foaf:homepage "https://dsb.gv.at"^^xsd:anyURI ;
@@ -4928,7 +4929,7 @@ dpv-legal:DPA-BE a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Belgian Data Protection Authority"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Belgian Data Protection Authority"@en ;
     foaf:homepage "https://www.dataprotectionauthority.be/"^^xsd:anyURI ;
@@ -4940,7 +4941,7 @@ dpv-legal:DPA-BG a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Commission for Personal Data Protection"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Commission for Personal Data Protection"@en ;
     foaf:homepage "https://www.cpdp.bg/"^^xsd:anyURI ;
@@ -4952,7 +4953,7 @@ dpv-legal:DPA-CZ a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Office for Personal Data Protection"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Office for Personal Data Protection"@en ;
     foaf:homepage "https://www.uoou.cz/"^^xsd:anyURI ;
@@ -4964,7 +4965,7 @@ dpv-legal:DPA-DK a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Danish Data Protection Agency"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Danish Data Protection Agency"@en ;
     foaf:homepage "http://www.datatilsynet.dk/"^^xsd:anyURI ;
@@ -4976,7 +4977,7 @@ dpv-legal:DPA-EE a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Estonian Data Protection Inspectorate"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Estonian Data Protection Inspectorate"@en ;
     foaf:homepage "http://www.aki.ee/"^^xsd:anyURI ;
@@ -4988,7 +4989,7 @@ dpv-legal:DPA-ES a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Spanish Data Protection Agency (AEPD)"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Spanish Data Protection Agency (AEPD)"@en ;
     foaf:homepage "https://www.aepd.es/"^^xsd:anyURI ;
@@ -5000,7 +5001,7 @@ dpv-legal:DPA-FI a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Office of the Data Protection Ombudsman"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Office of the Data Protection Ombudsman"@en ;
     foaf:homepage "https://tietosuoja.fi/"^^xsd:anyURI ;
@@ -5012,7 +5013,7 @@ dpv-legal:DPA-FR a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "National Commission on Informatics and Liberty (CNIL)"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "National Commission on Informatics and Liberty (CNIL)"@en ;
     foaf:homepage "https://www.cnil.fr/"^^xsd:anyURI ;
@@ -5024,7 +5025,7 @@ dpv-legal:DPA-GR a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Hellenic Data Protection Authority"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Hellenic Data Protection Authority"@en ;
     foaf:homepage "http://dpa.gr"^^xsd:anyURI ;
@@ -5036,7 +5037,7 @@ dpv-legal:DPA-HR a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Croatian Personal Data Protection Agency"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Croatian Personal Data Protection Agency"@en ;
     foaf:homepage "http://www.azop.hr/"^^xsd:anyURI ;
@@ -5048,7 +5049,7 @@ dpv-legal:DPA-HU a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Hungarian National Authority for Data Protection and Freedom of Information"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Hungarian National Authority for Data Protection and Freedom of Information"@en ;
     foaf:homepage "http://www.naih.hu/"^^xsd:anyURI ;
@@ -5060,7 +5061,7 @@ dpv-legal:DPA-IE a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Data Protection Commission (DPC)"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Data Protection Commission (DPC)"@en ;
     foaf:homepage "http://www.dataprotection.ie"^^xsd:anyURI ;
@@ -5072,7 +5073,7 @@ dpv-legal:DPA-IT a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Data Protection Commission"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Data Protection Commission"@en ;
     foaf:homepage "https://www.garanteprivacy.it/"^^xsd:anyURI ;
@@ -5084,7 +5085,7 @@ dpv-legal:DPA-LT a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "State Data Protection Inspectorate"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "State Data Protection Inspectorate"@en ;
     foaf:homepage "https://ada.lt"^^xsd:anyURI ;
@@ -5096,7 +5097,7 @@ dpv-legal:DPA-LU a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "National Commission for Data Protection"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "National Commission for Data Protection"@en ;
     foaf:homepage "https://cnpd.public.lu"^^xsd:anyURI ;
@@ -5108,7 +5109,7 @@ dpv-legal:DPA-LV a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Data State Inspectorate"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Data State Inspectorate"@en ;
     foaf:homepage "http://www.dvi.gov.lv/"^^xsd:anyURI ;
@@ -5120,7 +5121,7 @@ dpv-legal:DPA-MT a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Office of the Information and Data Protection Commissioner"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Office of the Information and Data Protection Commissioner"@en ;
     foaf:homepage "https://idpc.org.mt"^^xsd:anyURI ;
@@ -5132,7 +5133,7 @@ dpv-legal:DPA-NL a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Dutch Data Protection Authority"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Dutch Data Protection Authority"@en ;
     foaf:homepage "https://autoriteitpersoonsgegevens.nl"^^xsd:anyURI ;
@@ -5144,7 +5145,7 @@ dpv-legal:DPA-PL a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Personal Data Protection Office"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Personal Data Protection Office"@en ;
     foaf:homepage "https://uodo.gov.pl/"^^xsd:anyURI ;
@@ -5156,7 +5157,7 @@ dpv-legal:DPA-PT a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Comissão Nacional de Protecção de Dados"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Comissão Nacional de Protecção de Dados"@en ;
     foaf:homepage "https://www.cnpd.pt"^^xsd:anyURI ;
@@ -5168,7 +5169,7 @@ dpv-legal:DPA-RO a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "National Supervisory Authority for Personal Data Processing"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "National Supervisory Authority for Personal Data Processing"@en ;
     foaf:homepage "http://www.dataprotection.ro/"^^xsd:anyURI ;
@@ -5180,7 +5181,7 @@ dpv-legal:DPA-SE a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Swedish Authority for Privacy Protection"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Swedish Authority for Privacy Protection"@en ;
     foaf:homepage "https://www.imy.se/"^^xsd:anyURI ;
@@ -5192,7 +5193,7 @@ dpv-legal:DPA-SI a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Information Commissioner of the Republic of Slovenia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Information Commissioner of the Republic of Slovenia"@en ;
     foaf:homepage "https://www.ip-rs.si/"^^xsd:anyURI ;
@@ -5204,7 +5205,7 @@ dpv-legal:DPA-SK a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Office for Personal Data Protection of the Slovak Republic"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Office for Personal Data Protection of the Slovak Republic"@en ;
     foaf:homepage "http://www.dataprotection.gov.sk/"^^xsd:anyURI ;
@@ -5212,11 +5213,39 @@ dpv-legal:DPA-SK a skos:Concept,
     dpv:hasLaw dpv-legal:EU-GDPR ;
     dpv:isInstanceOf dpv:DataProtectionAuthority .
 
+dpv-legal:UK-DPA-2018 a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-07-20"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:temporal [ a time:ProperInterval ;
+            time:hasBeginning [ time:inXSDDate "2022-05-23"^^xsd:date ] ] ;
+    rdfs:isDefinedBy dpv-legal: ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "Data Protection Act (DPA)"@en ;
+    foaf:homepage "https://www.legislation.gov.uk/ukpga/2018/12/contents"^^xsd:anyURI ;
+    dpv:hasAuthority dpv-legal:DPA-GB ;
+    dpv:hasJurisdiction dpv-legal:GB ;
+    dpv:isInstanceOf dpv:Law .
+
+dpv-legal:UK-GDPR a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-07-20"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:temporal [ a time:ProperInterval ;
+            time:hasBeginning [ time:inXSDDate "2019-02-28"^^xsd:date ] ] ;
+    rdfs:isDefinedBy dpv-legal: ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "General Data Protection Regulation (GDPR)"@en ;
+    foaf:homepage "https://www.legislation.gov.uk/eur/2016/679/contents"^^xsd:anyURI ;
+    dpv:hasAuthority dpv-legal:DPA-GB ;
+    dpv:hasJurisdiction dpv-legal:GB ;
+    dpv:isInstanceOf dpv:Law .
+
 dpv-legal:US-CA a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "California"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "California"@en ;
     dpv:hasLaw dpv-legal:US-CA-CCPA,
@@ -5228,7 +5257,7 @@ dpv-legal:ChannelIslands a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "ChannelIslands"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "ChannelIslands"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -5238,7 +5267,7 @@ dpv-legal:DE-BW a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Baden-Württemberg"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Baden-Württemberg"@en ;
     dpv:hasLaw dpv-legal:DE-BDSG,
@@ -5252,8 +5281,7 @@ dpv-legal:DE-BY-BayDSG a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Bayerisches Datenschutzgesetz (BayDSG)"@de,
-        "Bavarian Data Protection Act (BayDSG)"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Bayerisches Datenschutzgesetz (BayDSG)"@de,
         "Bavarian Data Protection Act (BayDSG)"@en ;
@@ -5267,7 +5295,7 @@ dpv-legal:DE-RP a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Rhineland-Palatinate"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Rhineland-Palatinate"@en ;
     dpv:hasLaw dpv-legal:DE-BDSG,
@@ -5280,7 +5308,7 @@ dpv-legal:DPA-DE a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "The Federal Commissioner for Data Protection and Freedom of Information"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "The Federal Commissioner for Data Protection and Freedom of Information"@en ;
     foaf:homepage "http://www.bfdi.bund.de/"^^xsd:anyURI ;
@@ -5289,11 +5317,24 @@ dpv-legal:DPA-DE a skos:Concept,
         dpv-legal:EU-GDPR ;
     dpv:isInstanceOf dpv:DataProtectionAuthority .
 
+dpv-legal:DPA-GB a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-07-20"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv-legal: ;
+    sw:term_status "accepted"@en ;
+    skos:prefLabel "Information Commissioner's Office"@en ;
+    foaf:homepage "https://ico.org.uk/"^^xsd:anyURI ;
+    dpv:hasJurisdiction dpv-legal:GB ;
+    dpv:hasLaw dpv-legal:UK-DPA-2018,
+        dpv-legal:UK-GDPR ;
+    dpv:isInstanceOf dpv:DataProtectionAuthority .
+
 dpv-legal:DE-BB a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Brandenburg"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Brandenburg"@en ;
     dpv:hasAuthority dpv-legal:DPA-DE-BB ;
@@ -5307,7 +5348,7 @@ dpv-legal:DE-BE a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Berlin"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Berlin"@en ;
     dpv:hasAuthority dpv-legal:DPA-DE-BE ;
@@ -5321,7 +5362,7 @@ dpv-legal:DE-HB a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Bremen"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Bremen"@en ;
     dpv:hasAuthority dpv-legal:DPA-DE-HB ;
@@ -5335,7 +5376,7 @@ dpv-legal:DE-HE a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Hesse"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Hesse"@en ;
     dpv:hasAuthority dpv-legal:DPA-DE-HE ;
@@ -5349,7 +5390,7 @@ dpv-legal:DE-HH a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Hamburg"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Hamburg"@en ;
     dpv:hasAuthority dpv-legal:DPA-DE-HH ;
@@ -5363,7 +5404,7 @@ dpv-legal:DE-MV a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Mecklenburg-Western-Pomerania"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Mecklenburg-Western-Pomerania"@en ;
     dpv:hasAuthority dpv-legal:DPA-DE-MV ;
@@ -5377,7 +5418,7 @@ dpv-legal:DE-NI a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Lower-Saxony"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Lower-Saxony"@en ;
     dpv:hasAuthority dpv-legal:DPA-DE-NI ;
@@ -5391,7 +5432,7 @@ dpv-legal:DE-NW a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "North-Rhine Westphalia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "North-Rhine Westphalia"@en ;
     dpv:hasAuthority dpv-legal:DPA-DE-NW ;
@@ -5405,7 +5446,7 @@ dpv-legal:DE-SH a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Schleswig-Holstein"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Schleswig-Holstein"@en ;
     dpv:hasAuthority dpv-legal:DPA-DE-SH ;
@@ -5419,7 +5460,7 @@ dpv-legal:DE-SL a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Saarland"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Saarland"@en ;
     dpv:hasAuthority dpv-legal:DPA-DE-SL ;
@@ -5433,7 +5474,7 @@ dpv-legal:DE-SN a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Saxony"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Saxony"@en ;
     dpv:hasAuthority dpv-legal:DPA-DE-SN ;
@@ -5447,7 +5488,7 @@ dpv-legal:DE-ST a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Saxony-Anhalt"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Saxony-Anhalt"@en ;
     dpv:hasAuthority dpv-legal:DPA-DE-ST ;
@@ -5461,7 +5502,7 @@ dpv-legal:DE-TH a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Thuringia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Thuringia"@en ;
     dpv:hasAuthority dpv-legal:DPA-DE-TH ;
@@ -5476,8 +5517,7 @@ dpv-legal:DPA-DE-BB a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Die Landesbeauftragte für den Datenschutz und für das Recht auf Akteneinsicht Brandenburg"@de,
-        "The state representative for data protection and the right to inspect files in Brandenburg"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Die Landesbeauftragte für den Datenschutz und für das Recht auf Akteneinsicht Brandenburg"@de,
         "The state representative for data protection and the right to inspect files in Brandenburg"@en ;
@@ -5493,8 +5533,7 @@ dpv-legal:DPA-DE-BE a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Berliner Beauftragte für Datenschutz und Informationsfreiheit"@de,
-        "Berlin Commissioner for Data Protection and Freedom of Information"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Berliner Beauftragte für Datenschutz und Informationsfreiheit"@de,
         "Berlin Commissioner for Data Protection and Freedom of Information"@en ;
@@ -5510,8 +5549,7 @@ dpv-legal:DPA-DE-BY-non-public a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Bayerisches Landesamt für Datenschutzaufsicht"@de,
-        "Bavarian State Office for Data Protection Supervision"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Bayerisches Landesamt für Datenschutzaufsicht"@de,
         "Bavarian State Office for Data Protection Supervision"@en ;
@@ -5527,8 +5565,7 @@ dpv-legal:DPA-DE-BY-public a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Der Bayerische Landesbeauftragte für den Datenschutz"@de,
-        "The Bavarian State Commissioner for Data Protection"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Der Bayerische Landesbeauftragte für den Datenschutz"@de,
         "The Bavarian State Commissioner for Data Protection"@en ;
@@ -5544,8 +5581,7 @@ dpv-legal:DPA-DE-HB a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Die Landesbeauftragte für Datenschutz und Informationsfreiheit der Freien Hansestadt Bremen"@de,
-        "The State Commissioner for Data Protection and Freedom of Information of the Free Hanseatic City of Bremen"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Die Landesbeauftragte für Datenschutz und Informationsfreiheit der Freien Hansestadt Bremen"@de,
         "The State Commissioner for Data Protection and Freedom of Information of the Free Hanseatic City of Bremen"@en ;
@@ -5561,8 +5597,7 @@ dpv-legal:DPA-DE-HE a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Der Hessische Beauftragte für Datenschutz und Informationsfreiheit"@de,
-        "The Hessian Commissioner for Data Protection and Freedom of Information"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Der Hessische Beauftragte für Datenschutz und Informationsfreiheit"@de,
         "The Hessian Commissioner for Data Protection and Freedom of Information"@en ;
@@ -5578,8 +5613,7 @@ dpv-legal:DPA-DE-HH a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Der Hamburgische Beauftragte für Datenschutz und Informationsfreiheit"@de,
-        "The Hamburg Commissioner for Data Protection and Freedom of Information"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Der Hamburgische Beauftragte für Datenschutz und Informationsfreiheit"@de,
         "The Hamburg Commissioner for Data Protection and Freedom of Information"@en ;
@@ -5595,8 +5629,7 @@ dpv-legal:DPA-DE-MV a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Der Landesbeauftragte für Datenschutz und Informationsfreiheit Mecklenburg-Vorpommern"@de,
-        "The State Commissioner for Data Protection and Freedom of Information Mecklenburg-West Pomerania"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Der Landesbeauftragte für Datenschutz und Informationsfreiheit Mecklenburg-Vorpommern"@de,
         "The State Commissioner for Data Protection and Freedom of Information Mecklenburg-West Pomerania"@en ;
@@ -5612,8 +5645,7 @@ dpv-legal:DPA-DE-NI a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Die Landesbeauftragte für den Datenschutz Niedersachsen"@de,
-        "The State Commissioner for Data Protection Lower Saxony"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Die Landesbeauftragte für den Datenschutz Niedersachsen"@de,
         "The State Commissioner for Data Protection Lower Saxony"@en ;
@@ -5629,8 +5661,7 @@ dpv-legal:DPA-DE-NW a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen"@de,
-        "State Commissioner for Data Protection and Freedom of Information North Rhine-Westphalia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen"@de,
         "State Commissioner for Data Protection and Freedom of Information North Rhine-Westphalia"@en ;
@@ -5646,8 +5677,7 @@ dpv-legal:DPA-DE-SH a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Unabhängiges Landeszentrum für Datenschutz Schleswig-Holstein"@de,
-        "Independent State Center for Data Protection Schleswig-Holstein"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Unabhängiges Landeszentrum für Datenschutz Schleswig-Holstein"@de,
         "Independent State Center for Data Protection Schleswig-Holstein"@en ;
@@ -5663,8 +5693,7 @@ dpv-legal:DPA-DE-SL a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Unabhängiges Datenschutzzentrum Saarland - Landesbeauftragte für Datenschutz und Informationsfreiheit"@de,
-        "Independent Data Protection Center Saarland - State Commissioner for Data Protection and Freedom of Information"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Unabhängiges Datenschutzzentrum Saarland - Landesbeauftragte für Datenschutz und Informationsfreiheit"@de,
         "Independent Data Protection Center Saarland - State Commissioner for Data Protection and Freedom of Information"@en ;
@@ -5680,8 +5709,7 @@ dpv-legal:DPA-DE-SN a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Die Sächsische Datenschutzbeauftragte"@de,
-        "The Saxon data protection officer"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Die Sächsische Datenschutzbeauftragte"@de,
         "The Saxon data protection officer"@en ;
@@ -5697,8 +5725,7 @@ dpv-legal:DPA-DE-ST a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Landesbeauftragter für den Datenschutz Sachsen-Anhalt"@de,
-        "State representative for data protection in Saxony-Anhalt"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Landesbeauftragter für den Datenschutz Sachsen-Anhalt"@de,
         "State representative for data protection in Saxony-Anhalt"@en ;
@@ -5714,8 +5741,7 @@ dpv-legal:DPA-DE-TH a skos:Concept,
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string,
         "Julian Flake"^^xsd:string ;
-    dct:title "Thüringer Landesbeauftragter für den Datenschutz und die Informationsfreiheit"@de,
-        "Thuringia state commissioner for data protection and freedom of information"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Thüringer Landesbeauftragter für den Datenschutz und die Informationsfreiheit"@de,
         "Thuringia state commissioner for data protection and freedom of information"@en ;
@@ -5730,7 +5756,7 @@ dpv-legal:CentralAsia a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "CentralAsia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "CentralAsia"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -5740,7 +5766,7 @@ dpv-legal:DE-BY a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Bavaria"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Bavaria"@en ;
     dpv:hasAuthority dpv-legal:DPA-DE-BY-non-public,
@@ -5755,8 +5781,7 @@ dpv-legal:DPA-DE-RP a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Rheinland-Pfalz"@de,
-        "The state commissioner for data protection and freedom of information in Rhineland-Palatinate"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Rheinland-Pfalz"@de,
         "The state commissioner for data protection and freedom of information in Rhineland-Palatinate"@en ;
@@ -5768,28 +5793,11 @@ dpv-legal:DPA-DE-RP a skos:Concept,
         dpv-legal:EU-GDPR ;
     dpv:isInstanceOf dpv:DataProtectionAuthority .
 
-dpv-legal:GB a skos:Concept,
-        dpv:Concept ;
-    dct:created "2022-03-30"^^xsd:date ;
-    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "United Kingdom of Great Britain and Northern Ireland"@en ;
-    sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpv-legal:EEA31,
-        dpv-legal:EU28 ;
-    skos:prefLabel "United Kingdom of Great Britain and Northern Ireland"@en ;
-    dpv:isInstanceOf dpv:Country ;
-    dpv:isSubTypeOf dpv-legal:Europe,
-        dpv-legal:NorthernEurope ;
-    dpv-legal:iso_alpha2 "GB"^^xsd:string ;
-    dpv-legal:iso_alpha3 "GBR"^^xsd:string ;
-    dpv-legal:iso_numeric "826"^^xsd:string ;
-    dpv-legal:un_m49 "826"^^xsd:string .
-
 dpv-legal:Melanesia a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Melanesia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Melanesia"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -5799,7 +5807,7 @@ dpv-legal:NorthernAmerica a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "NorthernAmerica"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "NorthernAmerica"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -5809,7 +5817,7 @@ dpv-legal:SouthernAfrica a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "SouthernAfrica"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "SouthernAfrica"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -5819,7 +5827,7 @@ dpv-legal:AustraliaandNewZealand a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "AustraliaandNewZealand"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "AustraliaandNewZealand"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -5829,7 +5837,7 @@ dpv-legal:EasternAsia a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "EasternAsia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "EasternAsia"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -5839,7 +5847,7 @@ dpv-legal:NorthernAfrica a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "NorthernAfrica"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "NorthernAfrica"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -5849,17 +5857,37 @@ dpv-legal:CentralAmerica a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "CentralAmerica"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "CentralAmerica"@en ;
     dpv:isInstanceOf dpv:Region ;
     dpv:isSubTypeOf dpv-legal:LatinAmericaandtheCaribbean .
 
+dpv-legal:GB a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-03-30"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpv-legal: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv-legal:EEA31,
+        dpv-legal:EU28 ;
+    skos:prefLabel "United Kingdom of Great Britain and Northern Ireland"@en ;
+    dpv:hasAuthority dpv-legal:DPA-GB ;
+    dpv:hasLaw dpv-legal:UK-DPA-2018,
+        dpv-legal:UK-GDPR ;
+    dpv:isInstanceOf dpv:Country ;
+    dpv:isSubTypeOf dpv-legal:Europe,
+        dpv-legal:NorthernEurope ;
+    dpv-legal:iso_alpha2 "GB"^^xsd:string ;
+    dpv-legal:iso_alpha3 "GBR"^^xsd:string ;
+    dpv-legal:iso_numeric "826"^^xsd:string ;
+    dpv-legal:un_m49 "826"^^xsd:string .
+
 dpv-legal:Micronesia a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Micronesia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Micronesia"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -5869,7 +5897,7 @@ dpv-legal:MiddleAfrica a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "MiddleAfrica"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "MiddleAfrica"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -5879,7 +5907,7 @@ dpv-legal:SouthernAsia a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "SouthernAsia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "SouthernAsia"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -5889,7 +5917,7 @@ dpv-legal:WesternEurope a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "WesternEurope"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "WesternEurope"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -5899,7 +5927,7 @@ dpv-legal:EasternEurope a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "EasternEurope"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "EasternEurope"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -5909,7 +5937,7 @@ dpv-legal:Polynesia a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Polynesia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Polynesia"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -5919,7 +5947,7 @@ dpv-legal:SoutheasternAsia a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "SoutheasternAsia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "SoutheasternAsia"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -5929,9 +5957,9 @@ dpv-legal:CY a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Cyprus"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpv-legal:EEA,
+    skos:broader dpv-legal:EEA,
         dpv-legal:EEA30,
         dpv-legal:EEA31,
         dpv-legal:EU,
@@ -5951,9 +5979,9 @@ dpv-legal:AT a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Austria"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpv-legal:EEA,
+    skos:broader dpv-legal:EEA,
         dpv-legal:EEA30,
         dpv-legal:EEA31,
         dpv-legal:EU,
@@ -5974,9 +6002,9 @@ dpv-legal:BE a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Belgium"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpv-legal:EEA,
+    skos:broader dpv-legal:EEA,
         dpv-legal:EEA30,
         dpv-legal:EEA31,
         dpv-legal:EU,
@@ -5997,9 +6025,9 @@ dpv-legal:BG a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Bulgaria"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpv-legal:EEA,
+    skos:broader dpv-legal:EEA,
         dpv-legal:EEA30,
         dpv-legal:EEA31,
         dpv-legal:EU,
@@ -6020,9 +6048,9 @@ dpv-legal:CZ a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Czechia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpv-legal:EEA,
+    skos:broader dpv-legal:EEA,
         dpv-legal:EEA30,
         dpv-legal:EEA31,
         dpv-legal:EU,
@@ -6043,9 +6071,9 @@ dpv-legal:DK a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Denmark"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpv-legal:EEA,
+    skos:broader dpv-legal:EEA,
         dpv-legal:EEA30,
         dpv-legal:EEA31,
         dpv-legal:EU,
@@ -6066,9 +6094,9 @@ dpv-legal:EE a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Estonia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpv-legal:EEA,
+    skos:broader dpv-legal:EEA,
         dpv-legal:EEA30,
         dpv-legal:EEA31,
         dpv-legal:EU,
@@ -6089,9 +6117,9 @@ dpv-legal:ES a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Spain"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpv-legal:EEA,
+    skos:broader dpv-legal:EEA,
         dpv-legal:EEA30,
         dpv-legal:EEA31,
         dpv-legal:EU,
@@ -6112,9 +6140,9 @@ dpv-legal:FI a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Finland"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpv-legal:EEA,
+    skos:broader dpv-legal:EEA,
         dpv-legal:EEA30,
         dpv-legal:EEA31,
         dpv-legal:EU,
@@ -6135,9 +6163,9 @@ dpv-legal:FR a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "France"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpv-legal:EEA,
+    skos:broader dpv-legal:EEA,
         dpv-legal:EEA30,
         dpv-legal:EEA31,
         dpv-legal:EU,
@@ -6158,9 +6186,9 @@ dpv-legal:GR a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Greece"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpv-legal:EEA,
+    skos:broader dpv-legal:EEA,
         dpv-legal:EEA30,
         dpv-legal:EEA31,
         dpv-legal:EU,
@@ -6181,9 +6209,9 @@ dpv-legal:HR a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Croatia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpv-legal:EEA,
+    skos:broader dpv-legal:EEA,
         dpv-legal:EEA30,
         dpv-legal:EEA31,
         dpv-legal:EU,
@@ -6204,9 +6232,9 @@ dpv-legal:HU a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Hungary"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpv-legal:EEA,
+    skos:broader dpv-legal:EEA,
         dpv-legal:EEA30,
         dpv-legal:EEA31,
         dpv-legal:EU,
@@ -6227,9 +6255,9 @@ dpv-legal:IE a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Ireland"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpv-legal:EEA,
+    skos:broader dpv-legal:EEA,
         dpv-legal:EEA30,
         dpv-legal:EEA31,
         dpv-legal:EU,
@@ -6250,9 +6278,9 @@ dpv-legal:IT a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Italy"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpv-legal:EEA,
+    skos:broader dpv-legal:EEA,
         dpv-legal:EEA30,
         dpv-legal:EEA31,
         dpv-legal:EU,
@@ -6273,9 +6301,9 @@ dpv-legal:LT a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Lithuania"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpv-legal:EEA,
+    skos:broader dpv-legal:EEA,
         dpv-legal:EEA30,
         dpv-legal:EEA31,
         dpv-legal:EU,
@@ -6296,9 +6324,9 @@ dpv-legal:LU a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Luxembourg"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpv-legal:EEA,
+    skos:broader dpv-legal:EEA,
         dpv-legal:EEA30,
         dpv-legal:EEA31,
         dpv-legal:EU,
@@ -6319,9 +6347,9 @@ dpv-legal:LV a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Latvia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpv-legal:EEA,
+    skos:broader dpv-legal:EEA,
         dpv-legal:EEA30,
         dpv-legal:EEA31,
         dpv-legal:EU,
@@ -6342,9 +6370,9 @@ dpv-legal:MT a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Malta"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpv-legal:EEA,
+    skos:broader dpv-legal:EEA,
         dpv-legal:EEA30,
         dpv-legal:EEA31,
         dpv-legal:EU,
@@ -6365,9 +6393,9 @@ dpv-legal:NL a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Netherlands"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpv-legal:EEA,
+    skos:broader dpv-legal:EEA,
         dpv-legal:EEA30,
         dpv-legal:EEA31,
         dpv-legal:EU,
@@ -6388,9 +6416,9 @@ dpv-legal:PL a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Poland"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpv-legal:EEA,
+    skos:broader dpv-legal:EEA,
         dpv-legal:EEA30,
         dpv-legal:EEA31,
         dpv-legal:EU,
@@ -6411,9 +6439,9 @@ dpv-legal:PT a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Portugal"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpv-legal:EEA,
+    skos:broader dpv-legal:EEA,
         dpv-legal:EEA30,
         dpv-legal:EEA31,
         dpv-legal:EU,
@@ -6434,9 +6462,9 @@ dpv-legal:RO a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Romania"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpv-legal:EEA,
+    skos:broader dpv-legal:EEA,
         dpv-legal:EEA30,
         dpv-legal:EEA31,
         dpv-legal:EU,
@@ -6457,9 +6485,9 @@ dpv-legal:SE a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Sweden"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpv-legal:EEA,
+    skos:broader dpv-legal:EEA,
         dpv-legal:EEA30,
         dpv-legal:EEA31,
         dpv-legal:EU,
@@ -6480,9 +6508,9 @@ dpv-legal:SI a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Slovenia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpv-legal:EEA,
+    skos:broader dpv-legal:EEA,
         dpv-legal:EEA30,
         dpv-legal:EEA31,
         dpv-legal:EU,
@@ -6503,9 +6531,9 @@ dpv-legal:SK a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Slovakia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpv-legal:EEA,
+    skos:broader dpv-legal:EEA,
         dpv-legal:EEA30,
         dpv-legal:EEA31,
         dpv-legal:EU,
@@ -6526,7 +6554,7 @@ dpv-legal:SouthAmerica a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "SouthAmerica"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "SouthAmerica"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -6536,7 +6564,7 @@ dpv-legal:SouthernEurope a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "SouthernEurope"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "SouthernEurope"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -6546,7 +6574,7 @@ dpv-legal:WesternAfrica a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "WesternAfrica"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "WesternAfrica"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -6556,7 +6584,7 @@ dpv-legal:NorthernEurope a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "NorthernEurope"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "NorthernEurope"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -6566,7 +6594,7 @@ dpv-legal:WesternAsia a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "WesternAsia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "WesternAsia"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -6576,7 +6604,7 @@ dpv-legal:EasternAfrica a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "EasternAfrica"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "EasternAfrica"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -6586,7 +6614,7 @@ dpv-legal:Caribbean a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Caribbean"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Caribbean"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -6598,10 +6626,10 @@ dpv-legal:EEA30 a skos:Concept,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:temporal [ a time:ProperInterval ;
             time:hasBeginning [ time:inXSDDate "2020-02-01"^^xsd:date ] ] ;
-    dct:title "European Economic Area (EEA-30)"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpv-legal:EEA ;
-    skos:narrowerTransitive dpv-legal:AT,
+    skos:broader dpv-legal:EEA ;
+    skos:narrower dpv-legal:AT,
         dpv-legal:BE,
         dpv-legal:BG,
         dpv-legal:CY,
@@ -6628,6 +6656,7 @@ dpv-legal:EEA30 a skos:Concept,
         dpv-legal:SE,
         dpv-legal:SI,
         dpv-legal:SK ;
+    skos:prefLabel "European Economic Area (EEA-30)"@en ;
     dpv:hasCountry dpv-legal:AT,
         dpv-legal:BE,
         dpv-legal:BG,
@@ -6663,10 +6692,10 @@ dpv-legal:EU27 a skos:Concept,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:temporal [ a time:ProperInterval ;
             time:hasBeginning [ time:inXSDDate "2020-02-01"^^xsd:date ] ] ;
-    dct:title "European Union (EU-27)"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpv-legal:EU ;
-    skos:narrowerTransitive dpv-legal:AT,
+    skos:broader dpv-legal:EU ;
+    skos:narrower dpv-legal:AT,
         dpv-legal:BE,
         dpv-legal:BG,
         dpv-legal:CY,
@@ -6693,6 +6722,7 @@ dpv-legal:EU27 a skos:Concept,
         dpv-legal:SE,
         dpv-legal:SI,
         dpv-legal:SK ;
+    skos:prefLabel "European Union (EU-27)"@en ;
     dpv:hasCountry dpv-legal:AT,
         dpv-legal:BE,
         dpv-legal:BG,
@@ -6726,9 +6756,9 @@ dpv-legal:EEA a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "European Economic Area (EEA)"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
-    skos:narrowerTransitive dpv-legal:AT,
+    skos:narrower dpv-legal:AT,
         dpv-legal:BE,
         dpv-legal:BG,
         dpv-legal:CY,
@@ -6757,6 +6787,7 @@ dpv-legal:EEA a skos:Concept,
         dpv-legal:SE,
         dpv-legal:SI,
         dpv-legal:SK ;
+    skos:prefLabel "European Economic Area (EEA)"@en ;
     dpv:hasCountry dpv-legal:AT,
         dpv-legal:BE,
         dpv-legal:BG,
@@ -6793,10 +6824,10 @@ dpv-legal:EEA31 a skos:Concept,
     dct:temporal [ a time:ProperInterval ;
             time:hasBeginning [ time:inXSDDate "2014-04-12"^^xsd:date ] ;
             time:hasEnd [ time:inXSDDate "2020-01-31"^^xsd:date ] ] ;
-    dct:title "European Economic Area (EEA-31)"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpv-legal:EEA ;
-    skos:narrowerTransitive dpv-legal:AT,
+    skos:broader dpv-legal:EEA ;
+    skos:narrower dpv-legal:AT,
         dpv-legal:BE,
         dpv-legal:BG,
         dpv-legal:CY,
@@ -6824,6 +6855,7 @@ dpv-legal:EEA31 a skos:Concept,
         dpv-legal:SE,
         dpv-legal:SI,
         dpv-legal:SK ;
+    skos:prefLabel "European Economic Area (EEA-31)"@en ;
     dpv:hasCountry dpv-legal:AT,
         dpv-legal:BE,
         dpv-legal:BG,
@@ -6861,10 +6893,10 @@ dpv-legal:EU28 a skos:Concept,
     dct:temporal [ a time:ProperInterval ;
             time:hasBeginning [ time:inXSDDate "2013-07-01"^^xsd:date ] ;
             time:hasEnd [ time:inXSDDate "2020-01-31"^^xsd:date ] ] ;
-    dct:title "European Union (EU-28)"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpv-legal:EU ;
-    skos:narrowerTransitive dpv-legal:AT,
+    skos:broader dpv-legal:EU ;
+    skos:narrower dpv-legal:AT,
         dpv-legal:BE,
         dpv-legal:BG,
         dpv-legal:CY,
@@ -6892,6 +6924,7 @@ dpv-legal:EU28 a skos:Concept,
         dpv-legal:SE,
         dpv-legal:SI,
         dpv-legal:SK ;
+    skos:prefLabel "European Union (EU-28)"@en ;
     dpv:hasCountry dpv-legal:AT,
         dpv-legal:BE,
         dpv-legal:BG,
@@ -6926,9 +6959,9 @@ dpv-legal:DE a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Germany"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
-    skos:broaderTransitive dpv-legal:EEA,
+    skos:broader dpv-legal:EEA,
         dpv-legal:EEA30,
         dpv-legal:EEA31,
         dpv-legal:EU,
@@ -6950,7 +6983,7 @@ dpv-legal:Oceania a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Oceania"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Oceania"@en ;
     dpv:isInstanceOf dpv:Region .
@@ -6962,8 +6995,7 @@ dpv-legal:DE-BDSG a skos:Concept,
         "Julian Flake"^^xsd:string ;
     dct:temporal [ a time:ProperInterval ;
             time:hasBeginning [ time:inXSDDate "2019-11-20"^^xsd:date ] ] ;
-    dct:title "Bundesdatenschutzgesetz (BDSG)"@de,
-        "Federal Data Protection Act (BDSG)"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Bundesdatenschutzgesetz (BDSG)"@de,
         "Federal Data Protection Act (BDSG)"@en ;
@@ -7008,9 +7040,9 @@ dpv-legal:EU a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "European Union (EU)"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
-    skos:narrowerTransitive dpv-legal:AT,
+    skos:narrower dpv-legal:AT,
         dpv-legal:BE,
         dpv-legal:BG,
         dpv-legal:CY,
@@ -7039,6 +7071,7 @@ dpv-legal:EU a skos:Concept,
         dpv-legal:SE,
         dpv-legal:SI,
         dpv-legal:SK ;
+    skos:prefLabel "European Union (EU)"@en ;
     dpv:hasCountry dpv-legal:AT,
         dpv-legal:BE,
         dpv-legal:BG,
@@ -7072,7 +7105,7 @@ dpv-legal:Asia a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Asia"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Asia"@en ;
     dpv:isInstanceOf dpv:Region .
@@ -7081,7 +7114,7 @@ dpv-legal:LatinAmericaandtheCaribbean a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "LatinAmericaandtheCaribbean"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "LatinAmericaandtheCaribbean"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -7091,7 +7124,7 @@ dpv-legal:Europe a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Europe"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Europe"@en ;
     dpv:isInstanceOf dpv:Region .
@@ -7100,7 +7133,7 @@ dpv-legal:SubSaharanAfrica a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "SubSaharanAfrica"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "SubSaharanAfrica"@en ;
     dpv:isInstanceOf dpv:Region ;
@@ -7110,7 +7143,7 @@ dpv-legal:US a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "United States of America"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "United States of America"@en ;
     dpv:isInstanceOf dpv:Country ;
@@ -7125,7 +7158,7 @@ dpv-legal:Americas a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Americas"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Americas"@en ;
     dpv:isInstanceOf dpv:Region .
@@ -7134,7 +7167,7 @@ dpv-legal:Africa a skos:Concept,
         dpv:Concept ;
     dct:created "2022-03-30"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:title "Africa"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "Africa"@en ;
     dpv:isInstanceOf dpv:Region .
@@ -7145,7 +7178,7 @@ dpv-legal:EU-GDPR a skos:Concept,
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:temporal [ a time:ProperInterval ;
             time:hasBeginning [ time:inXSDDate "2018-05-25"^^xsd:date ] ] ;
-    dct:title "General Data Protection Regulation (GDPR)"@en ;
+    rdfs:isDefinedBy dpv-legal: ;
     sw:term_status "accepted"@en ;
     skos:prefLabel "General Data Protection Regulation (GDPR)"@en ;
     foaf:homepage "http://data.europa.eu/eli/reg/2016/679/oj"^^xsd:anyURI ;

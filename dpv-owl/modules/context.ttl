@@ -6,7 +6,35 @@
 @prefix sw: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-dpvo:NotRequired a owl:Class ;
+dpvo:ContinousFrequency a owl:NamedIndividual,
+        dpvo:Frequency ;
+    rdfs:label "Continous Frequency"@en ;
+    dct:created "2022-06-15"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "Frequency where occurences are continous"@en ;
+    rdfs:isDefinedBy dpvo: ;
+    sw:term_status "accepted"@en .
+
+dpvo:EndlessDuration a owl:NamedIndividual,
+        dpvo:Duration ;
+    rdfs:label "EndlessDuration"@en ;
+    dct:created "2022-06-15"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "Duration that is open ended or without an end"@en ;
+    rdfs:isDefinedBy dpvo: ;
+    sw:term_status "accepted"@en .
+
+dpvo:FixedOccurencesDuration a owl:NamedIndividual,
+        dpvo:Duration ;
+    rdfs:label "FixedOccurencesDuration"@en ;
+    dct:created "2022-06-15"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "Duration that takes place a fixed number of times e.g. 3 times"@en ;
+    rdfs:isDefinedBy dpvo: ;
+    sw:term_status "accepted"@en .
+
+dpvo:NotRequired a owl:NamedIndividual,
+        dpvo:Necessity ;
     rdfs:label "Not Required"@en ;
     dct:created "2022-02-15"^^xsd:date ;
     dct:creator "Beatriz Esteves"^^xsd:string,
@@ -16,10 +44,19 @@ dpvo:NotRequired a owl:Class ;
         "Paul Ryan"^^xsd:string ;
     dct:description "Indication of neither being required nor optional i.e. not relevant or needed"@en ;
     rdfs:isDefinedBy dpvo: ;
-    rdfs:subClassOf dpvo:Necessity ;
     sw:term_status "accepted"@en .
 
-dpvo:Optional a owl:Class ;
+dpvo:OftenFrequency a owl:NamedIndividual,
+        dpvo:Frequency ;
+    rdfs:label "Often Frequency"@en ;
+    dct:created "2022-06-15"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "Frequency where occurences are often or frequent, but not continous"@en ;
+    rdfs:isDefinedBy dpvo: ;
+    sw:term_status "accepted"@en .
+
+dpvo:Optional a owl:NamedIndividual,
+        dpvo:Necessity ;
     rdfs:label "Optional"@en ;
     dct:created "2022-02-14"^^xsd:date ;
     dct:creator "Beatriz Esteves"^^xsd:string,
@@ -29,10 +66,10 @@ dpvo:Optional a owl:Class ;
         "Paul Ryan"^^xsd:string ;
     dct:description "Indication of 'optional' or 'voluntary'"@en ;
     rdfs:isDefinedBy dpvo: ;
-    rdfs:subClassOf dpvo:Necessity ;
     sw:term_status "accepted"@en .
 
-dpvo:PrimaryImportance a owl:Class ;
+dpvo:PrimaryImportance a owl:NamedIndividual,
+        dpvo:Importance ;
     rdfs:label "Primary Importance"@en ;
     dct:created "2022-02-10"^^xsd:date ;
     dct:creator "Beatriz Esteves"^^xsd:string,
@@ -42,10 +79,10 @@ dpvo:PrimaryImportance a owl:Class ;
         "Paul Ryan"^^xsd:string ;
     dct:description "Indication of 'primary' or 'main' or 'core' importance"@en ;
     rdfs:isDefinedBy dpvo: ;
-    rdfs:subClassOf dpvo:Importance ;
     sw:term_status "accepted"@en .
 
-dpvo:Required a owl:Class ;
+dpvo:Required a owl:NamedIndividual,
+        dpvo:Necessity ;
     rdfs:label "Required"@en ;
     dct:created "2022-02-13"^^xsd:date ;
     dct:creator "Beatriz Esteves"^^xsd:string,
@@ -55,10 +92,10 @@ dpvo:Required a owl:Class ;
         "Paul Ryan"^^xsd:string ;
     dct:description "Indication of 'required' or 'necessary'"@en ;
     rdfs:isDefinedBy dpvo: ;
-    rdfs:subClassOf dpvo:Necessity ;
     sw:term_status "accepted"@en .
 
-dpvo:SecondaryImportance a owl:Class ;
+dpvo:SecondaryImportance a owl:NamedIndividual,
+        dpvo:Importance ;
     rdfs:label "Secondary Importance"@en ;
     dct:created "2022-02-11"^^xsd:date ;
     dct:creator "Beatriz Esteves"^^xsd:string,
@@ -68,20 +105,51 @@ dpvo:SecondaryImportance a owl:Class ;
         "Paul Ryan"^^xsd:string ;
     dct:description "Indication of 'secondary' or 'minor' or 'auxiliary' importance"@en ;
     rdfs:isDefinedBy dpvo: ;
-    rdfs:subClassOf dpvo:Importance ;
     sw:term_status "accepted"@en .
 
-dpvo:hasAlgorithmicLogic a rdf:Property,
-        owl:ObjectProperty ;
-    rdfs:label "has algorithmic logic"@en ;
-    dct:created "2020-11-04"^^xsd:date ;
-    dct:creator "Georg P. Krog"^^xsd:string,
-        "Harshvardhan J. Pandit"^^xsd:string,
-        "Paul Ryan"^^xsd:string ;
-    dct:description "Indicates the logic used in processing such as for automated decision making"@en ;
-    rdfs:domain owl:Thing ;
+dpvo:SingularFrequency a owl:NamedIndividual,
+        dpvo:Frequency ;
+    rdfs:label "SingularFrequency"@en ;
+    dct:created "2022-06-15"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "Frequency where occurences are singular i.e. they take place only once"@en ;
     rdfs:isDefinedBy dpvo: ;
-    rdfs:range dpvo:AlgorithmicLogic ;
+    sw:term_status "accepted"@en .
+
+dpvo:SporadicFrequency a owl:NamedIndividual,
+        dpvo:Frequency ;
+    rdfs:label "SporadicFrequency"@en ;
+    dct:created "2022-06-15"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "Frequency where occurences are sporadic or infrequent or sparse"@en ;
+    rdfs:isDefinedBy dpvo: ;
+    sw:term_status "accepted"@en .
+
+dpvo:TemporalDuration a owl:NamedIndividual,
+        dpvo:Duration ;
+    rdfs:label "TemporalDuration"@en ;
+    dct:created "2022-06-15"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "Duration that has a fixed temporal duration e.g. 6 months"@en ;
+    rdfs:isDefinedBy dpvo: ;
+    sw:term_status "accepted"@en .
+
+dpvo:UntilEventDuration a owl:NamedIndividual,
+        dpvo:Duration ;
+    rdfs:label "UntilEventDuration"@en ;
+    dct:created "2022-06-15"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "Duration that takes place until a specific event occurs e.g. Account Closure"@en ;
+    rdfs:isDefinedBy dpvo: ;
+    sw:term_status "accepted"@en .
+
+dpvo:UntilTimeDuration a owl:NamedIndividual,
+        dpvo:Duration ;
+    rdfs:label "UntilTimeDuration"@en ;
+    dct:created "2022-06-15"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "Duration that has a fixed end date e.g. 2022-12-31"@en ;
+    rdfs:isDefinedBy dpvo: ;
     sw:term_status "accepted"@en .
 
 dpvo:hasContext a rdf:Property,
@@ -148,6 +216,39 @@ dpvo:hasIdentifier a rdf:Property,
     rdfs:range owl:Thing ;
     sw:term_status "accepted"@en .
 
+dpvo:hasJustification a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "has justification"@en ;
+    dct:created "2022-06-15"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "Indicates a justification for specified concept or context"@en ;
+    rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
+    rdfs:range dpvo:Justification ;
+    sw:term_status "accepted"@en .
+
+dpvo:hasOutcome a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "has outcome"@en ;
+    dct:created "2022-05-18"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "Indicates an outcome of specified concept or context"@en ;
+    rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
+    rdfs:range owl:Thing ;
+    sw:term_status "accepted"@en .
+
+dpvo:hasScope a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "has scope"@en ;
+    dct:created "2022-06-15"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "Indicates the scope of specified concept or context"@en ;
+    rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy dpvo: ;
+    rdfs:range dpvo:Scope ;
+    sw:term_status "accepted"@en .
+
 dpvo:isAfter a rdf:Property,
         owl:ObjectProperty ;
     rdfs:label "is after"@en ;
@@ -200,44 +301,27 @@ dpvo:isImplementedUsingTechnology a rdf:Property,
         "Julian Flake"^^xsd:string,
         "Paul Ryan"^^xsd:string ;
     dct:description "Indicates implementation details such as technologies or processes"@en ;
+    dct:modified "2022-06-15"^^xsd:date ;
     rdfs:comment "The term 'technology' is inclusive of technologies, processes, and methods."@en ;
     rdfs:domain owl:Thing ;
     rdfs:isDefinedBy dpvo: ;
     rdfs:range dpvo:Technology ;
-    sw:term_status "accepted"@en .
+    sw:term_status "changed"@en .
 
-dpvo:AlgorithmicLogic a owl:Class ;
-    rdfs:label "Algorithmic Logic"@en ;
-    dct:created "2022-01-26"^^xsd:date ;
+dpvo:Justification a owl:Class ;
+    rdfs:label "Justification"@en ;
+    dct:created "2022-06-15"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:description "The algorithmic logic applied or used"@en ;
-    rdfs:comment "Algorithmic Logic is intended as a broad concept for explaining the use of algorithms and automated decisions making within Processing. To describe the actual algorithm, see the Algorithm concept."@en ;
+    dct:description "A form of documentation providing reaosns, explanations, or justifications"@en ;
     rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Context ;
     sw:term_status "accepted"@en .
 
-dpvo:Duration a owl:Class ;
-    rdfs:label "Duration"@en ;
-    dct:created "2022-02-09"^^xsd:date ;
+dpvo:Scope a owl:Class ;
+    rdfs:label "Scope"@en ;
+    dct:created "2022-06-15"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:description "The duration or temporal limitation"@en ;
-    rdfs:isDefinedBy dpvo: ;
-    sw:term_status "accepted"@en .
-
-dpvo:Frequency a owl:Class ;
-    rdfs:label "Frequency"@en ;
-    dct:created "2022-02-16"^^xsd:date ;
-    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:description "The frequency or information about periods and repetitions in terms of recurrence."@en ;
-    rdfs:isDefinedBy dpvo: ;
-    sw:term_status "accepted"@en .
-
-dpvo:HumanInvolvement a owl:Class ;
-    rdfs:label "Human Involvement"@en ;
-    dct:created "2022-01-26"^^xsd:date ;
-    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    dct:description "The involvement of humans in specified context"@en ;
-    rdfs:comment "Human Involvement here broadly refers to any involvement by a human in the context of carrying out processing. This may include verification of outcomes, providing input data for making decisions, or overseeing activities."@en ;
+    dct:description "Indication of the extent or range or boundaries associated with(in) a context"@en ;
     rdfs:isDefinedBy dpvo: ;
     rdfs:subClassOf dpvo:Context ;
     sw:term_status "accepted"@en .
@@ -279,6 +363,24 @@ dpvo:Necessity a owl:Class ;
     rdfs:subClassOf dpvo:Context ;
     sw:term_status "accepted"@en .
 
+dpvo:Frequency a owl:Class ;
+    rdfs:label "Frequency"@en ;
+    dct:created "2022-02-16"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "The frequency or information about periods and repetitions in terms of recurrence."@en ;
+    rdfs:isDefinedBy dpvo: ;
+    rdfs:subClassOf dpvo:Context ;
+    sw:term_status "accepted"@en .
+
+dpvo:Duration a owl:Class ;
+    rdfs:label "Duration"@en ;
+    dct:created "2022-02-09"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "The duration or temporal limitation"@en ;
+    rdfs:isDefinedBy dpvo: ;
+    rdfs:subClassOf dpvo:Context ;
+    sw:term_status "accepted"@en .
+
 dpvo:Context a owl:Class ;
     rdfs:label "Context"@en ;
     dct:created "2019-04-05"^^xsd:date ;
@@ -288,7 +390,8 @@ dpvo:Context a owl:Class ;
         "Harshvardhan J. Pandit"^^xsd:string,
         "Javier Fernandez"^^xsd:string,
         "Simon Steyskal"^^xsd:string ;
-    dct:description "Contextually relevant information about purpose not possible to represent through other concepts"@en ;
+    dct:description "Contextually relevant information not possible to represent through other core concepts"@en ;
+    dct:modified "2022-06-15"^^xsd:date ;
     rdfs:isDefinedBy dpvo: ;
-    sw:term_status "accepted"@en .
+    sw:term_status "changed"@en .
 

@@ -26,6 +26,7 @@ EXPORT_DPV_GDPR_MODULE_PATH = '../dpv-owl/dpv-gdpr/modules'
 EXPORT_DPV_PD_PATH = '../dpv-owl/dpv-pd'
 EXPORT_DPV_LEGAL_PATH = '../dpv-owl/dpv-legal'
 EXPORT_DPV_LEGAL_MODULE_PATH = '../dpv-owl/dpv-legal/modules'
+EXPORT_DPV_TECH_PATH = '../dpv-owl/dpv-tech'
 
 import csv
 from collections import namedtuple
@@ -55,15 +56,20 @@ NAMESPACES_DPV_OWL = {
     'dpv-nace': DPV_NACE,
     'dpv-gdpr': DPVO_GDPR,
     'dpv-pd': DPVO_PD,
+    'dpv-tech': DPVO_TECH,
     'dpvo': DPVO,
     'dpvo-gdpr': DPVO_GDPR,
     'dpvo-pd': DPVO_PD,
+    'dpvo-tech': DPVO_TECH,
+    'dpvo-risk': DPVO_RISK,
+    'dpvo-rights-eu': DPVO_RIGHTS_EU,
 }
 
 # the field labels are based on what they should be translated to
 
 DPV_Class = namedtuple('DPV_Class', [
     'term', 'rdfs_label', 'dct_description', 'rdfs_subclassof', 
+    'parent_type', 'value', 
     'rdfs_seealso', 'relation', 'rdfs_comment', 'rdfs_isdefinedby', 
     'dct_created', 'dct_modified', 'sw_termstatus', 'dct_creator', 
     'resolution'])
@@ -183,32 +189,27 @@ def add_triples_for_classes(classes, graph):
             continue
         # rdf:type
         DEBUG(cls.term)
-        graph.add((BASE[f'{cls.term}'], RDF.type, OWL.Class))
         # rdfs:subClassOf
         if cls.rdfs_subclassof:
             parents = [p.strip() for p in cls.rdfs_subclassof.split(',')]
             for parent in parents:
                 if parent == 'dpv:Concept':
+                    graph.add((BASE[f'{cls.term}'], RDF.type, OWL.Class))
                     continue
-                if parent.startswith('http'):
-                    graph.add((BASE[f'{cls.term}'], RDFS.subClassOf, URIRef(parent)))
-                elif ':' in parent:
-                    # assuming something like rdfs:Resource
-                    prefix, term = parent.split(':')
-                    prefix = prefix.replace("sc__", "")
-                    # gets the namespace from registered ones and create URI
-                    # will throw an error if namespace is not registered
-                    # dpv internal terms are expected to have the prefix i.e. dpv:term
-                    if 'o__' in prefix:
-                        # explicit owl declaration
-                        prefix = prefix.replace('o__')
-                        parent = NAMESPACES[prefix][f'{term}']
-                    else:
-                        parent = NAMESPACES_DPV_OWL[f'{prefix}'][f'{term}']
-                    DEBUG(f'has parent: {parent}')
+                prefix, term = parent.split(':')
+                # gets the namespace from registered ones and create URI
+                # will throw an error if namespace is not registered
+                # dpv internal terms are expected to have the prefix i.e. dpv:term
+                parent = NAMESPACES_DPV_OWL[f'{prefix}'][f'{term}']
+                DEBUG(f'has parent: {parent}')
+                if cls.parent_type == 'sc':
+                    graph.add((BASE[f'{cls.term}'], RDF.type, OWL.Class))
                     graph.add((BASE[f'{cls.term}'], RDFS.subClassOf, parent))
+                elif cls.parent_type == 'a':
+                    graph.add((BASE[f'{cls.term}'], RDF.type, OWL.NamedIndividual))
+                    graph.add((BASE[f'{cls.term}'], RDF.type, parent))
                 else:
-                    graph.add((BASE[f'{cls.term}'], RDFS.subClassOf, Literal(parent, datatype=XSD.string)))
+                    raise Exception(f'Parent Type Unknown: {cls.parent_type} ')
         
         add_common_triples_for_all_terms(cls, graph)
 
@@ -239,11 +240,7 @@ def add_triples_for_properties(properties, graph):
         if prop.rdfs_domain:
             # assuming something like rdfs:Resource
             prefix, label = prop.rdfs_domain.split(':')
-            if 'o__' in prefix:
-                # explicit owl declaration
-                link = prefix.replace('o__')
-                link = NAMESPACES[prefix][f'{label}']
-            elif prefix == 'dpv':
+            if prefix == 'dpv':
                 if label == 'Concept':
                     link = OWL.Thing
                 else:
@@ -258,11 +255,7 @@ def add_triples_for_properties(properties, graph):
         if prop.rdfs_range:
             # assuming something like rdfs:Resource
             prefix, label = prop.rdfs_range.split(':')
-            if 'o__' in prefix:
-                # explicit owl declaration
-                link = prefix.replace('o__')
-                link = NAMESPACES[prefix][f'{label}']
-            elif prefix == 'dpv':
+            if prefix == 'dpv':
                 if label == 'Concept':
                     link = OWL.Thing
                 else:
@@ -318,13 +311,12 @@ DPV_CSV_FILES = {
     'base': {
         'classes': f'{IMPORT_CSV_PATH}/BaseOntology.csv',
         'properties': f'{IMPORT_CSV_PATH}/BaseOntology_properties.csv',
-        'model': 'vocabulary',
+        'model': 'ontology',
         },
     'personal_data': {
         'classes': f'{IMPORT_CSV_PATH}/PersonalData.csv',
         'properties': f'{IMPORT_CSV_PATH}/PersonalData_properties.csv',
         'model': 'ontology',
-        'topconcept': BASE['PersonalData'],
         },
     'purposes': {
         'classes': f'{IMPORT_CSV_PATH}/Purpose.csv',
@@ -335,8 +327,12 @@ DPV_CSV_FILES = {
     'context': {
         'classes': f'{IMPORT_CSV_PATH}/Context.csv',
         'properties': f'{IMPORT_CSV_PATH}/Context_properties.csv',
-        'model': 'taxonomy',
-        'topconcept': BASE['Context'],
+        'model': 'ontology',
+        },
+    'status': {
+        'classes': f'{IMPORT_CSV_PATH}/Status.csv',
+        'properties': f'{IMPORT_CSV_PATH}/Status_properties.csv',
+        'model': 'ontology',
         },
     'risk': {
         'classes': f'{IMPORT_CSV_PATH}/Risk.csv',
@@ -352,25 +348,37 @@ DPV_CSV_FILES = {
     'processing_context': {
         'classes': f'{IMPORT_CSV_PATH}/ProcessingContext.csv',
         'properties': f'{IMPORT_CSV_PATH}/ProcessingContext_properties.csv',
-        'model': 'taxonomy',
+        'model': 'ontology',
+        },
+    'processing_scale': {
+        'classes': f'{IMPORT_CSV_PATH}/ProcessingScale.csv',
+        'properties': f'{IMPORT_CSV_PATH}/ProcessingScale_properties.csv',
+        'model': 'ontology',
         },
     'technical_organisational_measures': {
         'classes': f'{IMPORT_CSV_PATH}/TechnicalOrganisationalMeasure.csv',
         'properties': f'{IMPORT_CSV_PATH}/TechnicalOrganisationalMeasure_properties.csv',
+        'model': 'ontology',
+        },
+    'technical_measures': {
+        'classes': f'{IMPORT_CSV_PATH}/TechnicalMeasure.csv',
         'model': 'taxonomy',
-        'topconcept': BASE['TechnicalOrganisationalMeasure'],
+        'topconcept': BASE['TechnicalMeasure'],
+        },
+    'organisational_measures': {
+        'classes': f'{IMPORT_CSV_PATH}/OrganisationalMeasure.csv',
+        'model': 'taxonomy',
+        'topconcept': BASE['OrganisationalMeasure'],
         },
     'entities': {
         'classes': f'{IMPORT_CSV_PATH}/Entities.csv',
         'properties': f'{IMPORT_CSV_PATH}/Entities_properties.csv',
         'model': 'ontology',
-        'topconcept': BASE['Entity'],
         },
     'entities_authority': {
         'classes': f'{IMPORT_CSV_PATH}/Entities_Authority.csv',
         'properties': f'{IMPORT_CSV_PATH}/Entities_Authority_properties.csv',
         'model': 'ontology',
-        'topconcept': BASE['Authority'],
         },
     'entities_legalrole': {
         'classes': f'{IMPORT_CSV_PATH}/Entities_LegalRole.csv',
@@ -380,13 +388,11 @@ DPV_CSV_FILES = {
     'entities_organisation': {
         'classes': f'{IMPORT_CSV_PATH}/Entities_Organisation.csv',
         'model': 'ontology',
-        'topconcept': BASE['Organisation'],
         },
     'entities_datasubject': {
         'classes': f'{IMPORT_CSV_PATH}/Entities_DataSubject.csv',
         'properties': f'{IMPORT_CSV_PATH}/Entities_DataSubject_properties.csv',
         'model': 'ontology',
-        'topconcept': BASE['DataSubject'],
         },
     'jurisdiction': {
         'classes': f'{IMPORT_CSV_PATH}/Jurisdiction.csv',
@@ -402,6 +408,7 @@ DPV_CSV_FILES = {
     'consent': {
         # 'classes': f'{IMPORT_CSV_PATH}/Consent.csv',
         'properties': f'{IMPORT_CSV_PATH}/Consent_properties.csv',
+        'model': 'ontology',
     },
 }
 
@@ -585,10 +592,7 @@ DEBUG(f'Processing DPV-LEGAL classes and properties')
 # if returnval:
 #         proposed_terms.extend(returnval)
 # add collection representing concepts
-# DPV_LEGAL_GRAPH.add((BASE[f'LegalConcepts'], RDF.type, SKOS.Collection))
 # DPV_LEGAL_GRAPH.add((BASE[f'LegalConcepts'], DCT.title, Literal(f'Legal Concepts', datatype=XSD.string)))
-# for concept, _, _ in DPV_LEGAL_GRAPH.triples((None, RDF.type, SKOS.Concept)):
-#     DPV_LEGAL_GRAPH.add((BASE[f'LegalConcepts'], SKOS.member, concept))
 properties = extract_terms_from_csv(
     f'{IMPORT_CSV_PATH}/legal_properties.csv', DPV_Property)
 DEBUG(f'there are {len(properties)} properties in DPV-LEGAL')
@@ -621,6 +625,7 @@ for row in concepts:
     parent = row.ParentTerm.replace("dpv:", "")
     graph.add((term, RDF.type, DPVO[f'{parent}']))
     graph.add((term, RDF.type, OWL.NamedIndividual))
+    graph.add((term, RDFS.isDefinedBy, BASE['']))
     graph.add((term, DCT.title, Literal(row.Label, lang='en')))
     graph.add((term, RDFS.label, Literal(row.Label, lang='en')))
     if row.Alpha2:
@@ -675,6 +680,7 @@ for row in concepts:
     term = BASE[row.term]
     graph.add((term, RDF.type, DPVO.Law))
     graph.add((term, RDF.type, OWL.NamedIndividual))
+    graph.add((term, RDFS.isDefinedBy, BASE['']))
     graph.add((term, DCT.title, Literal(row.label_en, lang='en')))
     graph.add((term, RDFS.label, Literal(row.label_en, lang='en')))
     if row.label_de:
@@ -730,6 +736,7 @@ for row in concepts:
     term = BASE[row.term]
     graph.add((term, RDF.type, DPVO[f'{row.type.replace("dpv:","")}']))
     graph.add((term, RDF.type, OWL.NamedIndividual))
+    graph.add((term, RDFS.isDefinedBy, BASE['']))
     graph.add((term, DCT.title, Literal(row.label_en, lang='en')))
     graph.add((term, RDFS.label, Literal(row.label_en, lang='en')))
     if row.label_de:
@@ -756,8 +763,6 @@ for row in concepts:
         authors = [a.strip() for a in row.contributors.split(',')]
         for author in authors:
             graph.add((term, DCT.creator, Literal(author, datatype=XSD.string)))
-    graph.add((BASE['AuthoritiesConcepts'], SKOS.member, term))
-graph.add((BASE['AuthoritiesConcepts'], RDF.type, SKOS.Collection))
 serialize_graph(graph, f'{EXPORT_DPV_LEGAL_MODULE_PATH}/authorities')
 DPV_LEGAL_GRAPH += graph
 if proposed:
@@ -780,6 +785,7 @@ for row in concepts:
     term = BASE[row.term]
     graph.add((term, RDF.type, DPVO[f'{row.type.replace("dpv:","")}']))
     graph.add((term, RDF.type, OWL.NamedIndividual))
+    graph.add((term, RDFS.isDefinedBy, BASE['']))
     graph.add((term, DCT.title, Literal(row.label, lang='en')))
     if row.broader:
         graph.add((term, DCT.isPartOf, BASE[f'{row.broader.replace("dpv-legal:","")}']))
@@ -836,6 +842,7 @@ for row in concepts:
     graph.add((term, RDF.type, DPVO.Law))
     graph.add((term, RDF.type, OWL.NamedIndividual))
     graph.add((term, RDF.type, DPVO_GDPR['A45-3']))
+    graph.add((term, RDFS.isDefinedBy, BASE['']))
     graph.add((term, DCT.title, Literal(row.label, lang='en')))
     graph.add((term, FOAF.homepage, Literal(row.webpage, datatype=XSD.anyURI)))
     graph.add((term, DPVO.hasJurisdiction, BASE[f'{row.countryA.replace("dpv-legal:","")}']))
@@ -876,5 +883,43 @@ if proposed_terms:
     DEBUG(f'exported proposed terms to {EXPORT_DPV_LEGAL_PATH}/proposed.json')
 else:
     DEBUG('no proposed terms in DPV-LEGAL')
+
+# #############################################################################
+
+# DPV-TECH #
+
+DPV_TECH_CSV_FILES = [
+    f'{IMPORT_CSV_PATH}/dpv-tech.csv',
+    f'{IMPORT_CSV_PATH}/dpv-tech_properties.csv',
+    ]
+
+BASE = NAMESPACES['dpv-tech']
+DPV_TECH_GRAPH = Graph()
+proposed_terms = []
+DEBUG('------')
+DEBUG(f'Processing DPV-TECH')
+for prefix, namespace in NAMESPACES.items():
+    DPV_TECH_GRAPH.namespace_manager.bind(prefix, namespace)
+classes = extract_terms_from_csv(DPV_TECH_CSV_FILES[0], DPV_Class)
+properties = extract_terms_from_csv(DPV_TECH_CSV_FILES[1], DPV_Property)
+DEBUG(f'there are {len(classes)} classes and {len(properties)} properties in {name}')
+returnval = add_triples_for_classes(classes, DPV_TECH_GRAPH)
+if returnval:
+        proposed_terms.extend(returnval)
+returnval = add_triples_for_properties(properties, DPV_TECH_GRAPH)
+if returnval:
+        proposed_terms.extend(returnval)
+if proposed_terms:
+    with open(f'{EXPORT_DPV_TECH_PATH}/proposed.json', 'w') as fd:
+        json.dump(proposed_terms, fd)
+    DEBUG(f'exported proposed terms to {EXPORT_DPV_TECH_PATH}/proposed.json')
+else:
+    DEBUG('no proposed terms in DPV-TECH')
+# serialize
+DPV_TECH_GRAPH.load('ontology_metadata/dpv-owl-tech.ttl', format='turtle')
+
+for prefix, namespace in NAMESPACES.items():
+    DPV_TECH_GRAPH.namespace_manager.bind(prefix, namespace)
+serialize_graph(DPV_TECH_GRAPH, f'{EXPORT_DPV_TECH_PATH}/dpv-tech')
 
 # #############################################################################
