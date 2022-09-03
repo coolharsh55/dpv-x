@@ -463,6 +463,7 @@
   </section>
   <div class="issue" title="For each subsection, add links to visit that section in DPV spec as well as SKOS and OWL specs"></div>
   <div class="issue" title="If there is a guide for a particular section, add a link to the guide in that section"></div>
+  <div class="issue" title="Change skos:broaderTransitive to skos:broader"></div>
   <section id="introduction">
     <h2>Introduction</h2>
     <p>The <a href="https://www.w3.org/community/dpvcg/">[[[DPVCG]]]</a> was formed in 2018 through the <a href="https://www.specialprivacy.eu/">[[[SPECIAL]]]</a> with the ambition of providing a machine-readable and interoperable vocabulary for representing information about the use and processing of personal data, whilst inviting perspectives and contributions from a diverse set of stakeholders across computer science, IT, law, sociology, philosophy – representing academia, industry, policy-makers, and activists. It identified the following issues through the <a href="https://www.w3.org/2018/vocabws/report">W3C Workshop on Privacy and Linked Data</a>:
@@ -1604,7 +1605,7 @@ ex:AcmeEUOrg rdf:type dpv:LegalEntity, dpv:DataProtectionOfficer ;
     <section>
         <h4>Identifiers, Location, and Duration</h4>
         <div class="issue" title="Make Frequency and Duration its own subsection">remove identifier</div>
-        <div class="issue" title="Make Location and Jurisdiction its own section">remove identifier</div>
+        <div class="issue" title="Make Location and Jurisdiction its own section">remove identifier, have subsections for dpv-legal</div>
         <div class="issue" title="Add subsection for Scope and Justification"></div>
         <div class="issue" title="Add subsection for Scale of Data, Data Subjects, and Processing"></div>
         <p>To indicate an identifier for a concept, such as its registration number or internal reference, or other forms of defined names, the relation <code>hasIdentifier</code> can be used. This permits entities, processing operations, purposes, personal data handling instances, and other concepts to be represented along with their identifiers used within a use-case or organisation.</p>
@@ -1626,6 +1627,9 @@ ex:AcmeEUOrg rdf:type dpv:LegalEntity, dpv:DataProtectionOfficer ;
   </section>
 
 </section>
+
+<div class="issue" title="Add section on dpv-tech"></div>
+<div class="issue" title="Add section on dpv-gdpr"></div>
 
   <section>
     <h2 id="contributing-to-dpv">Contributing to DPV</h2>
