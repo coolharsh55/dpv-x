@@ -48,8 +48,11 @@ DPV_MODULES = (
     )
 DPV_GDPR_MODULES = (
     'legal_basis',
+    'legal_basis_special',
+    'legal_basis_data_transfer',
     'rights',
     'data_transfers',
+    'dpia',
     )
 DPV_LEGAL_MODULES = (
     'authorities',
@@ -60,7 +63,7 @@ DPV_LEGAL_MODULES = (
     'ontology',
     )
 RISK_MODULES = (
-    'consequences',
+    'risk_consequences',
     'risk_assessment',
     'risk_controls',
     'risk_levels',

@@ -30,12 +30,18 @@ echo "DONE"
 
 # Step3: generate HTML
 echo -n "Step3: generate HTML ..."
-./903_html.sh > logs/903.txt 2>&1
+./993_html_all.sh > logs/993.txt 2>&1
 CHECK_ERROR
 echo "DONE"
 
 # Step4: generate changelog
 echo -n "Step4: generate changelog ..."
 ./changelog.py > logs/changelog.txt 2>&1
+CHECK_ERROR
+echo "DONE"
+
+# Step5: generate releases
+echo -n "Generating Releases..."
+./801_generate_releases.sh > logs/releases.txt 2>&1
 CHECK_ERROR
 echo "DONE"

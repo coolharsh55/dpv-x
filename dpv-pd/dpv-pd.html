@@ -9,8 +9,8 @@
    var respecConfig = {
     shortName: "dpv-pd",
     title: "DPV-PD: Extended Personal Data concepts for DPV",
-    subtitle: "version 0.7",
-    publishDate: "2022-05-25",
+    subtitle: "version 0.8",
+    publishDate: "2022-08-26",
     specStatus: "CG-DRAFT",
     group: "dpvcg",
     latestVersion: "https://w3id.org/dpv/dpv-pd",
@@ -117,13 +117,18 @@
       }
     ],
     localBiblio: {
+  "DPVCG": {
+    "href": "https://www.w3.org/community/dpvcg/",
+    "title": "W3C Data Privacy Vocabularies and Controls Community Group (DPVCG)"
+  },
+  "__001": "DPV Core Family",
   "DPV": {
     "href": "https://www.w3id.org/dpv",
     "title": "Data Privacy Vocabulary (DPV) Specification"
   },
   "DPV-GDPR": {
     "href": "https://www.w3id.org/dpv/dpv-gdpr",
-    "title": "GDPR Extension for Data Privacy Vocabulary (DPV-GDPR)"
+    "title": "DPV-GDPR: Extension providing GDPR concepts"
   },
   "DPV-NACE": {
     "href": "https://www.w3id.org/dpv/dpv-nace",
@@ -131,40 +136,136 @@
   },
   "DPV-PD": {
     "href": "https://www.w3id.org/dpv/dpv-pd",
-    "title": "Personal Data Categories Extension for Data Privacy Vocabulary (DPV-PD)"
+    "title": "DPV-PD: Extension providing Personal Data Categories"
   },
   "DPV-LEGAL": {
     "href": "https://www.w3id.org/dpv/dpv-legal",
-    "title": "Legal Extension providing Jurisdictions, Laws, and Authorities for Data Privacy Vocabulary (DPV-LEGAL)"
+    "title": "DPV-LEGAL: Extension providing Jurisdiction-relevant concepts"
   },
   "DPV-TECH": {
     "href": "https://www.w3id.org/dpv/dpv-tech",
-    "title": "Extension providing Technology concepts for Data Privacy Vocabulary (DPV-TECH)"
+    "title": "DPV-TECH: Extension providing Technology-relevant concepts"
   },
+  "RISK": {
+    "href": "https://www.w3id.org/dpv/risk",
+    "title": "Risk Extension for DPV"
+  },
+  "RIGHTS": {
+    "href": "https://www.w3id.org/dpv/rights",
+    "title": "Rights Extension for Data Privacy Vocabulary"
+  },
+  "RIGHTS-EU": {
+    "href": "https://www.w3id.org/dpv/rights",
+    "title": "Extension providing EU Rights"
+  },
+  "__002": "DPV-SKOS Family",
   "DPV-SKOS": {
     "href": "https://www.w3id.org/dpv/dpv-skos",
-    "title": "Data Privacy Vocabulary serialised using SKOS+RDFS (DPV-SKOS)"
+    "title": "DPV-SKOS: Data Privacy Vocabulary serialised in RDFS & SKOS"
   },
+  "DPV-SKOS-GDPR": {
+    "href": "https://www.w3id.org/dpv/dpv-skos/dpv-gdpr",
+    "title": "DPV-SKOS-GDPR: Extension providing GDPR concepts"
+  },
+  "DPV-SKOS-PD": {
+    "href": "https://www.w3id.org/dpv/dpv-skos/dpv-pd",
+    "title": "DPV-SKOS-PD: Extension providing Personal Data Categories"
+  },
+  "DPV-SKOS-LEGAL": {
+    "href": "https://www.w3id.org/dpv/dpv-skos/dpv-legal",
+    "title": "DPV-SKOS-LEGAL: Extension providing Jurisdiction-relevant concepts"
+  },
+  "DPV-SKOS-TECH": {
+    "href": "https://www.w3id.org/dpv/dpv-skos/dpv-tech",
+    "title": "DPV-SKOS-TECH: Extension providing Technology-relevant concepts"
+  },
+  "RISK-SKOS": {
+    "href": "https://www.w3id.org/dpv/dpv-skos/risk",
+    "title": "Risk Extension for DPV"
+  },
+  "RIGHTS-SKOS": {
+    "href": "https://www.w3id.org/dpv/dpv-skos/rights",
+    "title": "Rights Extension for Data Privacy Vocabulary"
+  },
+  "RIGHTS-EU-SKOS": {
+    "href": "https://www.w3id.org/dpv/dpv-skos/rights/eu",
+    "title": "Extension providing EU Rights"
+  },
+  "__003": "DPV-OWL Family",
   "DPV-OWL": {
     "href": "https://www.w3id.org/dpv/dpv-owl",
-    "title": "Data Privacy Vocabulary serialised using OWL2 (DPV-OWL)"
+    "title": "DPV-OWL: Data Privacy Vocabulary serialised in OWL2"
   },
+  "DPV-OWL-GDPR": {
+    "href": "https://www.w3id.org/dpv/dpv-owl/dpv-gdpr",
+    "title": "DPV-OWL-GDPR: Extension providing GDPR concepts"
+  },
+  "DPV-OWL-NACE": {
+    "href": "https://www.w3id.org/dpv/dpv-owl/dpv-nace",
+    "title": "NACE Taxonomy serialised in RDFS"
+  },
+  "DPV-OWL-PD": {
+    "href": "https://www.w3id.org/dpv/dpv-owl/dpv-pd",
+    "title": "DPV-OWL-PD: Extension providing Personal Data Categories"
+  },
+  "DPV-OWL-LEGAL": {
+    "href": "https://www.w3id.org/dpv/dpv-owl/dpv-legal",
+    "title": "DPV-OWL-LEGAL: Extension providing Jurisdiction-relevant concepts"
+  },
+  "DPV-OWL-TECH": {
+    "href": "https://www.w3id.org/dpv/dpv-owl/dpv-tech",
+    "title": "DPV-OWL-TECH: Extension providing Technology-relevant concepts"
+  },
+  "RISK-OWL": {
+    "href": "https://www.w3id.org/dpv/dpv-owl/risk",
+    "title": "Risk Extension for DPV"
+  },
+  "RIGHTS-OWL": {
+    "href": "https://www.w3id.org/dpv/dpv-owl/rights",
+    "title": "Rights Extension for Data Privacy Vocabulary"
+  },
+  "RIGHTS-EU-OWL": {
+    "href": "https://www.w3id.org/dpv/dpv-owl/rights/eu",
+    "title": "Extension providing EU Rights"
+  },
+  "__004": "DPV Documentation & Guides",
   "DPV-Primer": {
     "href": "https://www.w3id.org/dpv/primer",
     "title": "Primer for Data Privacy Vocabulary"
   },
-  "DPVCG": {
-    "href": "https://www.w3.org/community/dpvcg/",
-    "title": "W3C Data Privacy Vocabularies and Controls Community Group (DPVCG)"
+  "DPV-ADOPTION": {
+    "href": "https://www.w3.org/community/dpvcg/wiki/Adoption_of_DPVCG",
+    "title": "Listing of DPV adoption and applications"
   },
-  "GDPR": {
-    "href": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
-    "title": "General Data Protection Regulation (GDPR)"
+  "DPV-GUIDES": {
+    "href": "https://w3id.org/dpv/guides",
+    "title": "Guidelines for Adoption and Use of DPV"
   },
-  "SPECIAL": {
-    "href": "https://www.specialprivacy.eu/",
-    "title": "SPECIAL H2020 Project"
+  "DPV-GUIDE-Consent": {
+    "href": "https://w3id.org/dpv/guides/consent",
+    "title": "Guide for Conesnt Records using DPV"
   },
+  "DPV-GUIDE-Serialisations": {
+    "href": "https://w3id.org/dpv/guides/serialisations",
+    "title": "Guide on DPV's serialisations and semantics"
+  },
+  "DPV-GUIDE-SKOS": {
+    "href": "https://w3id.org/dpv/guides/dpv-skos",
+    "title": "Guide for using DPV with RDFS and SKOS"
+  },
+  "DPV-GUIDE-OWL2": {
+    "href": "https://w3id.org/dpv/guides/dpv-owl",
+    "title": "Guide for using DPV in OWL2"
+  },
+  "DPV-GUIDE-GDPR-DPIA": {
+    "href": "https://w3id.org/dpv/dpv-gdpr/dpia",
+    "title": "Guide for GDPR DPIA's using DPV"
+  },
+  "DPV-GUIDE-GDPR-ROPA": {
+    "href": "https://w3id.org/dpv/dpv-gdpr/ropa",
+    "title": "Guide for GDPR ROPA's using DPV"
+  },
+  "__005": "External Vocabularies",
   "RDF": {
     "href": "https://www.w3.org/TR/rdf11-concepts/",
     "title": "RDF 1.1 Concepts and Abstract Syntax"
@@ -181,17 +282,14 @@
     "href": "https://www.w3.org/TR/skos-reference/",
     "title": "SKOS Simple Knowledge Organization System"
   },
-  "DPV-ADOPTION": {
-    "href": "https://www.w3.org/community/dpvcg/wiki/Adoption_of_DPVCG",
-    "title": "Listing of DPV adoption and applications"
+  "__006": "External References",
+  "SPECIAL": {
+    "href": "https://www.specialprivacy.eu/",
+    "title": "SPECIAL H2020 Project"
   },
-  "DPV-GUIDES": {
-    "href": "https://w3id.org/dpv/guides",
-    "title": "Guidelines for Adoption and Use of DPV"
-  },
-  "DPV-GUIDE-OWL2": {
-    "href": "https://w3id.org/dpv/guides/dpv-owl",
-    "title": "Using DPV in OWL2"
+  "GDPR": {
+    "href": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+    "title": "General Data Protection Regulation (GDPR)"
   },
   "NACE": {
     "href": "https://ec.europa.eu/eurostat/ramon/nomenclatures/index.cfm?TargetUrl=LST_NOM_DTL&StrNom=NACE_REV2",
@@ -287,23 +385,25 @@
     <section id="dpv-document-family" class="noTOC">
     <h2>DPV Family of Documents</h2>
     <ul>
-      <li>[[[DPV-Primer]]]:  introductory document to DPV concepts
-      <p class="note">Newcomers to the DPV are <strong>strongly recommended to first read through the Primer</strong> to familiarise themselves with the semantics and concepts of DPV.</p>
+      <li>[[[DPV-Primer]]]:  An introductory document for DPV's concepts and taxonomies.
+        <p class="note">Newcomers to the DPV are <strong>strongly recommended to first read through the Primer</strong> to familiarise themselves with the semantics and concepts of DPV.</p>
       </li>
-      <li>[[[DPV]]]:  formal and normative description of DPV and its concepts.</li>
-      <li>Serialisations of DPV: <ul>
-        <li>[[[DPV-SKOS]]]:  serialisation of DPV with [[SKOS]] and [[RDFS]] semantics</li>
-        <li>[[[DPV-OWL]]]: serialisation of DPV using [[OWL]] semantics</li></ul></li>
+      <li>[[[DPV]]]:  The formal and normative description of DPV and its concepts, with serialisations in RDFS & SKOS [[DPV-SKOS]] and OWL2 [[DPV-OWL]]</li>
       <li>Extensions to Concepts: <ul>
-        <li>[[[DPV-GDPR]]]:  extends DPV concepts for [[GDPR]]</li>
-        <li>[[[DPV-PD]]] (this document)</li>
-        <li>[[[DPV-LEGAL]]] </li>
-        <li>[[[DPV-TECH]]] </li>
+        <li>[[[DPV-GDPR]]]:  serialisations: [[DPV-SKOS-GDPR]], [[DPV-OWL-GDPR]]</li>
+        <li>[[[DPV-PD]]] (this document) serialisations: [[DPV-SKOS-PD]], [[DPV-OWL-PD]]</li>
+        <li>[[[DPV-LEGAL]]]  serialisations: [[DPV-SKOS-LEGAL]], [[DPV-OWL-LEGAL]]</li>
+        <li>[[[DPV-TECH]]]  serialisations: [[DPV-SKOS-TECH]], [[DPV-OWL-TECH]]</li>
+        <li>[[[RISK]]]  serialisations: [[RISK-SKOS]], [[RISK-OWL]]</li>
         </ul></li>
       <li>[[[DPV-GUIDES]]]: <ul>
+        <li>[[[DPV-GUIDE-Serialisations]]] </li>
         <li>[[[DPV-GUIDE-OWL2]]] </li>
         </ul></li>
-      <li>Other Resources:<ul><li>[[[DPV-NACE]]]</li></ul></li>
+      <li>Other Resources:<ul>
+        <li>[[[DPV-NACE]]]</li>
+        <li>[[[RIGHTS-EU]]] serialisations: [[RIGHTS-EU-SKOS]], [[RIGHTS-EU-OWL]]</li>
+        </ul></li>
     </ul>
     <p><strong>Related Links</strong></p>
     <ul>
@@ -329,7 +429,7 @@
     <h2>Taxonomy</h2>
 
     <section id="dpv-pd-classes">
-      <h3>Classes</h3>
+    <h3>Classes</h3>
     <p>
       <code><a href="#Accent">Accent</a></code> |
       <code><a href="#AccountIdentifier">Account Identifier</a></code> |
@@ -544,11 +644,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Accent`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Accent</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Accent</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Accent</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -586,11 +690,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#AccountIdentifier`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#AccountIdentifier</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>AccountIdentifier</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Account Identifier</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -628,11 +736,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Acquantaince`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Acquantaince</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Acquantaince</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Acquantaince</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -670,11 +782,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Age`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Age</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Age</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Age</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -712,11 +828,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#AgeExact`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#AgeExact</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>AgeExact</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Age Exact</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -747,11 +867,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#AgeRange`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#AgeRange</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>AgeRange</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Age Range</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -782,11 +906,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#ApartmentOwned`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#ApartmentOwned</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>ApartmentOwned</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Apartment Owned</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -824,11 +952,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Association`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Association</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Association</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Association</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -866,11 +998,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Attitude`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Attitude</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Attitude</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Attitude</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -908,11 +1044,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Authenticating`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Authenticating</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Authenticating</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Authenticating</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -950,11 +1090,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#AuthenticationHistory`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#AuthenticationHistory</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>AuthenticationHistory</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Authentication History</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -991,11 +1135,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#BankAccount`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#BankAccount</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>BankAccount</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Bank Account</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1033,11 +1181,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Behavioral`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Behavioral</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Behavioral</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Behavioral</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1081,11 +1233,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Biometric`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Biometric</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Biometric</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Biometric</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1124,11 +1280,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#BirthDate`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#BirthDate</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>BirthDate</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Birth Date</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1159,11 +1319,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#BirthPlace`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#BirthPlace</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>BirthPlace</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Birth Place</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1194,11 +1358,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#BloodType`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#BloodType</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>BloodType</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Blood Type</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1236,11 +1404,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#BrowserFingerprint`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#BrowserFingerprint</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>BrowserFingerprint</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Browser Fingerprint</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1278,11 +1450,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#BrowserHistory`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#BrowserHistory</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>BrowserHistory</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Browser History</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1313,11 +1489,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#BrowsingBehavior`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#BrowsingBehavior</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>BrowsingBehavior</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Browsing Behavior</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1361,11 +1541,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#BrowsingReferral`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#BrowsingReferral</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>BrowsingReferral</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Browsing Referral</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1402,11 +1586,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#CallLog`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#CallLog</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>CallLog</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Call Log</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1444,11 +1632,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#CarOwned`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#CarOwned</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>CarOwned</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Car Owned</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1486,11 +1678,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Character`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Character</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Character</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Character</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1528,11 +1724,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Communication`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Communication</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Communication</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Communication</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1570,11 +1770,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#CommunicationsMetadata`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#CommunicationsMetadata</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>CommunicationsMetadata</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Communications Metadata</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1618,11 +1822,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Connection`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Connection</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Connection</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Connection</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1660,11 +1868,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Contact`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Contact</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Contact</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Contact</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1708,11 +1920,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Country`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Country</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Country</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Country</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1750,11 +1966,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Credit`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Credit</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Credit</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Credit</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1792,11 +2012,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#CreditCapacity`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#CreditCapacity</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>CreditCapacity</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Credit Capacity</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1834,11 +2058,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#CreditCardNumber`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#CreditCardNumber</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>CreditCardNumber</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Credit Card Number</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1876,11 +2104,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#CreditRecord`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#CreditRecord</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>CreditRecord</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Credit Record</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1918,11 +2150,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#CreditScore`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#CreditScore</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>CreditScore</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Credit Score</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1960,11 +2196,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#CreditStanding`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#CreditStanding</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>CreditStanding</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Credit Standing</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -2002,11 +2242,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#CreditWorthiness`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#CreditWorthiness</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>CreditWorthiness</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Credit Worthiness</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -2044,11 +2288,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Criminal`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Criminal</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Criminal</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Criminal</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -2092,11 +2340,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#CriminalCharge`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#CriminalCharge</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>CriminalCharge</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Criminal Charge</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -2134,11 +2386,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#CriminalConviction`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#CriminalConviction</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>CriminalConviction</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Criminal Conviction</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -2176,11 +2432,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#CriminalPardon`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#CriminalPardon</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>CriminalPardon</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Criminal Pardon</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -2218,11 +2478,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#CurrentEmployment`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#CurrentEmployment</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>CurrentEmployment</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Current Employment</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -2253,11 +2517,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Demeanor`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Demeanor</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Demeanor</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Demeanor</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -2295,11 +2563,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Demographic`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Demographic</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Demographic</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Demographic</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -2337,11 +2609,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#DeviceApplications`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#DeviceApplications</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>DeviceApplications</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Device Applications</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -2381,11 +2657,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#DeviceBased`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#DeviceBased</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>DeviceBased</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Device Based</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -2429,11 +2709,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#DeviceOperatingSystem`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#DeviceOperatingSystem</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>DeviceOperatingSystem</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Device Operating System</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -2473,11 +2757,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#DeviceSoftware`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#DeviceSoftware</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>DeviceSoftware</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Device Software</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -2517,11 +2805,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Dialect`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Dialect</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Dialect</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Dialect</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -2559,11 +2851,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#DigitalFingerprint`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#DigitalFingerprint</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>DigitalFingerprint</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Digital Fingerprint</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -2594,11 +2890,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Disability`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Disability</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Disability</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Disability</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -2636,11 +2936,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#DisciplinaryAction`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#DisciplinaryAction</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>DisciplinaryAction</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Disciplinary Action</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -2678,11 +2982,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Dislike`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Dislike</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Dislike</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Dislike</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -2720,11 +3028,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Divorce`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Divorce</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Divorce</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Divorce</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -2762,11 +3074,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#DNACode`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#DNACode</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>DNACode</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>DNA Code</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -2804,11 +3120,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#DrugTestResult`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#DrugTestResult</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>DrugTestResult</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Drug Test Result</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -2846,11 +3166,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Education`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Education</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Education</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Education</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -2881,11 +3205,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#EducationExperience`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#EducationExperience</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>EducationExperience</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Education Experience</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -2916,11 +3244,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#EducationQualification`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#EducationQualification</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>EducationQualification</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Education Qualification</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -2951,11 +3283,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#EmailAddress`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#EmailAddress</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>EmailAddress</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Email Address</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -2993,11 +3329,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#EmailAddressPersonal`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#EmailAddressPersonal</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>EmailAddressPersonal</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Email Address Personal</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -3028,11 +3368,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#EmailAddressWork`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#EmailAddressWork</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>EmailAddressWork</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Email Address Work</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -3063,11 +3407,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#EmailContent`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#EmailContent</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>EmailContent</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Email Content</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -3105,11 +3453,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#EmploymentHistory`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#EmploymentHistory</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>EmploymentHistory</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Employment History</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -3147,11 +3499,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Ethnicity`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Ethnicity</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Ethnicity</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Ethnicity</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -3189,11 +3545,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#EthnicOrigin`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#EthnicOrigin</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>EthnicOrigin</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Ethnic Origin</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -3232,11 +3592,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#External`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#External</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>External</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>External</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -3274,11 +3638,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#FacialPrint`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#FacialPrint</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>FacialPrint</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Facial Print</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -3309,11 +3677,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Family`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Family</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Family</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Family</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -3351,11 +3723,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#FamilyHealthHistory`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#FamilyHealthHistory</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>FamilyHealthHistory</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Family Health History</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -3393,11 +3769,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#FamilyStructure`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#FamilyStructure</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>FamilyStructure</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Family Structure</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -3435,11 +3815,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Favorite`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Favorite</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Favorite</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Favorite</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -3477,11 +3861,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#FavoriteColor`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#FavoriteColor</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>FavoriteColor</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Favorite Color</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -3519,11 +3907,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#FavoriteFood`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#FavoriteFood</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>FavoriteFood</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Favorite Food</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -3561,11 +3953,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#FavoriteMusic`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#FavoriteMusic</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>FavoriteMusic</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Favorite Music</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -3603,11 +3999,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Fetish`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Fetish</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Fetish</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Fetish</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -3645,11 +4045,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Financial`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Financial</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Financial</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Financial</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -3693,11 +4097,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#FinancialAccount`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#FinancialAccount</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>FinancialAccount</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Financial Account</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -3735,11 +4143,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#FinancialAccountNumber`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#FinancialAccountNumber</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>FinancialAccountNumber</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Financial Account Number</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -3777,11 +4189,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#FinancialStatus`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#FinancialStatus</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>FinancialStatus</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Financial Status</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -3812,11 +4228,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Fingerprint`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Fingerprint</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Fingerprint</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Fingerprint</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -3854,11 +4274,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Friend`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Friend</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Friend</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Friend</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -3896,11 +4320,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Gender`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Gender</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Gender</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Gender</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -3938,11 +4366,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#GeneralReputation`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#GeneralReputation</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>GeneralReputation</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>General Reputation</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -3980,11 +4412,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#GeneticData`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#GeneticData</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>GeneticData</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Genetic Data</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -4015,11 +4451,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Geographic`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Geographic</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Geographic</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Geographic</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -4057,11 +4497,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#GPSCoordinate`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#GPSCoordinate</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>GPSCoordinate</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>GPS Coordinate</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -4099,11 +4543,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#GroupMembership`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#GroupMembership</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>GroupMembership</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Group Membership</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -4141,11 +4589,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#HairColor`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#HairColor</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>HairColor</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Hair Color</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -4183,11 +4635,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Health`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Health</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Health</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Health</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -4231,11 +4687,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#HealthHistory`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#HealthHistory</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>HealthHistory</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Health History</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -4273,11 +4733,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#HealthRecord`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#HealthRecord</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>HealthRecord</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Health Record</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -4315,11 +4779,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Height`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Height</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Height</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Height</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -4357,11 +4825,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Historical`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Historical</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Historical</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Historical</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -4399,11 +4871,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#HouseholdData`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#HouseholdData</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>HouseholdData</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Household Data</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -4434,11 +4910,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#HouseOwned`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#HouseOwned</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>HouseOwned</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>House Owned</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -4476,11 +4956,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Identifier`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Identifier</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Identifier</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Identifier</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -4511,11 +4995,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Identifying`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Identifying</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Identifying</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Identifying</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -4553,11 +5041,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Income`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Income</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Income</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Income</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -4595,11 +5087,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#IncomeBracket`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#IncomeBracket</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>IncomeBracket</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Income Bracket</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -4637,11 +5133,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#IndividualHealthHistory`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#IndividualHealthHistory</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>IndividualHealthHistory</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Individual Health History</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -4679,11 +5179,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Insurance`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Insurance</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Insurance</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Insurance</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -4714,11 +5218,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Intention`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Intention</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Intention</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Intention</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -4756,11 +5264,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Interaction`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Interaction</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Interaction</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Interaction</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -4798,11 +5310,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Interest`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Interest</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Interest</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Interest</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -4840,11 +5356,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Internal`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Internal</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Internal</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Internal</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -4882,11 +5402,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#IPAddress`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#IPAddress</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>IPAddress</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>IP Address</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -4924,11 +5448,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Job`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Job</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Job</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Job</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -4966,11 +5494,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#KnowledgeBelief`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#KnowledgeBelief</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>KnowledgeBelief</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Knowledge and Beliefs</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -5008,11 +5540,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Language`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Language</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Language</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Language</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -5054,11 +5590,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#LifeHistory`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#LifeHistory</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>LifeHistory</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Life History</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -5096,11 +5636,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Like`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Like</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Like</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Like</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -5138,11 +5682,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#LinkClicked`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#LinkClicked</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>LinkClicked</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>LinkClicked</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -5186,11 +5734,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#LoanRecord`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#LoanRecord</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>LoanRecord</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Loan Record</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -5228,11 +5780,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Location`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Location</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Location</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Location</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -5276,11 +5832,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#MACAddress`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#MACAddress</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>MACAddress</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>MAC Address</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -5318,11 +5878,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#MaritalStatus`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#MaritalStatus</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>MaritalStatus</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Marital Status</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -5360,11 +5924,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Marriage`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Marriage</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Marriage</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Marriage</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -5402,11 +5970,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#MedicalHealth`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#MedicalHealth</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>MedicalHealth</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>MedicalHealth</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -5445,11 +6017,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#MentalHealth`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#MentalHealth</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>MentalHealth</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Mental Health</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -5487,11 +6063,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Name`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Name</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Name</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Name</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -5529,11 +6109,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Nationality`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Nationality</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Nationality</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Nationality</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -5564,11 +6148,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#OfficialID`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#OfficialID</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>OfficialID</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Official ID</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -5612,11 +6200,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Offspring`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Offspring</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Offspring</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Offspring</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -5654,11 +6246,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Opinion`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Opinion</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Opinion</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Opinion</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -5696,11 +6292,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Ownership`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Ownership</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Ownership</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Ownership</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -5738,11 +6338,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Parent`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Parent</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Parent</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Parent</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -5780,11 +6384,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Passport`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Passport</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Passport</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Passport</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -5815,11 +6423,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Password`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Password</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Password</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Password</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -5857,11 +6469,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#PastEmployment`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#PastEmployment</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>PastEmployment</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Past Employment</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -5892,11 +6508,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#PaymentCard`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#PaymentCard</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>PaymentCard</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Payment Card</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -5933,11 +6553,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#PaymentCardExpiry`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#PaymentCardExpiry</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>PaymentCardExpiry</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Payment Card Expiry</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -5974,11 +6598,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#PaymentCardNumber`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#PaymentCardNumber</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>PaymentCardNumber</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Payment Card Number</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -6016,11 +6644,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#PerformanceAtWork`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#PerformanceAtWork</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>PerformanceAtWork</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Performance at Work</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -6052,11 +6684,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#PersonalDocuments`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#PersonalDocuments</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>PersonalDocuments</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Personal Documents</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -6087,11 +6723,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Personality`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Personality</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Personality</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Personality</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -6129,11 +6769,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#PersonalPossession`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#PersonalPossession</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>PersonalPossession</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Personal Possession</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -6171,11 +6815,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#PhilosophicalBelief`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#PhilosophicalBelief</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>PhilosophicalBelief</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Philosophical Belief</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -6214,11 +6862,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#PhysicalAddress`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#PhysicalAddress</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>PhysicalAddress</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Physical Address</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -6256,11 +6908,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#PhysicalCharacteristic`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#PhysicalCharacteristic</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>PhysicalCharacteristic</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>PhysicalCharacteristic</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -6304,11 +6960,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#PhysicalHealth`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#PhysicalHealth</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>PhysicalHealth</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Physical Health</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -6346,11 +7006,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#PhysicalTrait`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#PhysicalTrait</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>PhysicalTrait</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Physical Trait</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -6388,11 +7052,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Picture`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Picture</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Picture</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Picture</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -6430,11 +7098,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Piercing`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Piercing</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Piercing</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Piercing</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -6472,11 +7144,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#PINCode`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#PINCode</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>PINCode</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>PIN Code</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -6514,11 +7190,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#PoliticalAffiliation`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#PoliticalAffiliation</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>PoliticalAffiliation</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Political Affiliation</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -6563,11 +7243,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#PoliticalOpinion`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#PoliticalOpinion</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>PoliticalOpinion</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Political Opinion</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -6599,11 +7283,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Preference`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Preference</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Preference</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Preference</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -6647,11 +7335,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Prescription`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Prescription</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Prescription</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Prescription</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -6689,11 +7381,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#PrivacyPreference`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#PrivacyPreference</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>PrivacyPreference</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Privacy Preference</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -6731,11 +7427,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Proclivitie`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Proclivitie</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Proclivitie</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Proclivitie</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -6773,11 +7473,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Professional`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Professional</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Professional</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Professional</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -6815,11 +7519,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#ProfessionalCertification`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#ProfessionalCertification</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>ProfessionalCertification</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Professional Certification</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -6857,11 +7565,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#ProfessionalEvaluation`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#ProfessionalEvaluation</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>ProfessionalEvaluation</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Professional Evaluation</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -6899,11 +7611,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#ProfessionalInterview`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#ProfessionalInterview</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>ProfessionalInterview</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Professional Interview</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -6941,11 +7657,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Profile`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Profile</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Profile</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Profile</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -6976,11 +7696,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#PublicLife`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#PublicLife</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>PublicLife</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Public Life</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -7018,11 +7742,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#PubliclyAvailableSocialMediaData`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#PubliclyAvailableSocialMediaData</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>PubliclyAvailableSocialMediaData</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Publicly Available Social Media Data</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -7053,11 +7781,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Purchase`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Purchase</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Purchase</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Purchase</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -7101,11 +7833,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#PurchasesAndSpendingHabit`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#PurchasesAndSpendingHabit</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>PurchasesAndSpendingHabit</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Purchases and Spending Habit</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -7143,11 +7879,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Race`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Race</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Race</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Race</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -7186,11 +7926,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Reference`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Reference</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Reference</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Reference</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -7228,11 +7972,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Relationship`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Relationship</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Relationship</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Relationship</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -7270,11 +8018,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Reliability`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Reliability</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Reliability</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Reliability</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -7305,11 +8057,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Religion`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Religion</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Religion</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Religion</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -7348,11 +8104,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#ReligiousBelief`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#ReligiousBelief</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>ReligiousBelief</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Religious Belief</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -7391,11 +8151,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Retina`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Retina</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Retina</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Retina</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -7433,11 +8197,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#RoomNumber`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#RoomNumber</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>RoomNumber</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Room Number</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -7475,11 +8243,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Salary`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Salary</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Salary</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Salary</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -7517,11 +8289,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Sale`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Sale</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Sale</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Sale</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -7559,11 +8335,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#School`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#School</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>School</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>School</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -7601,11 +8381,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#SecretText`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#SecretText</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>SecretText</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Secret Text</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -7643,11 +8427,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#ServiceConsumptionBehavior`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#ServiceConsumptionBehavior</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>ServiceConsumptionBehavior</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Service Consumption Behavior</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -7685,11 +8473,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Sexual`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Sexual</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Sexual</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Sexual</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -7728,11 +8520,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#SexualHistory`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#SexualHistory</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>SexualHistory</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Sexual History</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -7770,11 +8566,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#SexualPreference`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#SexualPreference</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>SexualPreference</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Sexual Preference</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -7812,11 +8612,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Sibling`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Sibling</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Sibling</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Sibling</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -7854,11 +8658,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#SkinTone`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#SkinTone</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>SkinTone</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Skin Tone</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -7896,11 +8704,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Social`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Social</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Social</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Social</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -7938,11 +8750,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#SocialMediaCommunication`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#SocialMediaCommunication</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>SocialMediaCommunication</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Social Media Communication</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -7986,11 +8802,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#SocialMediaData`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#SocialMediaData</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>SocialMediaData</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Social Media Data</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -8021,11 +8841,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#SocialNetwork`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#SocialNetwork</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>SocialNetwork</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Social Network</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -8063,11 +8887,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#SocialStatus`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#SocialStatus</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>SocialStatus</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Social Status</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -8105,11 +8933,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Tattoo`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Tattoo</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Tattoo</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Tattoo</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -8147,11 +8979,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Tax`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Tax</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Tax</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Tax</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -8189,11 +9025,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#TelephoneNumber`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#TelephoneNumber</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>TelephoneNumber</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Telephone Number</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -8231,11 +9071,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Thought`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Thought</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Thought</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Thought</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -8273,11 +9117,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Tracking`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Tracking</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Tracking</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Tracking</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -8315,11 +9163,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#TradeUnionMembership`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#TradeUnionMembership</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>TradeUnionMembership</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Trade Union Membership</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -8351,11 +9203,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Transaction`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Transaction</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Transaction</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Transaction</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -8393,11 +9249,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Transactional`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Transactional</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Transactional</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Transactional</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -8435,11 +9295,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#TravelHistory`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#TravelHistory</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>TravelHistory</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Travel History</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -8470,11 +9334,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#TVViewingBehavior`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#TVViewingBehavior</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>TVViewingBehavior</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>TV Viewing Behavior</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -8512,11 +9380,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#UID`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#UID</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>UID</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>UID</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -8560,11 +9432,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#UserAgent`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#UserAgent</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>UserAgent</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>User agent</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -8595,11 +9471,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Username`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Username</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Username</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Username</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -8637,11 +9517,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#VehicalLicenseNumber`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#VehicalLicenseNumber</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>VehicalLicenseNumber</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Vehicle License Number</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -8672,11 +9556,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#VehicalLicenseRegistration`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#VehicalLicenseRegistration</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>VehicalLicenseRegistration</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Vehicle License Number</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -8707,11 +9595,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#VehicleData`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#VehicleData</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>VehicleData</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Vehicle Data</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -8742,11 +9634,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#VehicleLicense`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#VehicleLicense</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>VehicleLicense</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Vehicle License</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -8778,11 +9674,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#VehicleUsageData`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#VehicleUsageData</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>VehicleUsageData</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Vehicle Usage Data</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -8814,11 +9714,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#VoiceCommunicationRecording`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#VoiceCommunicationRecording</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>VoiceCommunicationRecording</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Voice Communication Recording</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -8856,11 +9760,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#VoiceMail`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#VoiceMail</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>VoiceMail</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Voice Mail</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -8898,11 +9806,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#Weight`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#Weight</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Weight</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Weight</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -8940,11 +9852,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#WorkEnvironment`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#WorkEnvironment</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>WorkEnvironment</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Work Environment</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -8975,11 +9891,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-pd#WorkHistory`</td>
+            <td><code>https://w3id.org/dpv/dpv-pd#WorkHistory</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>WorkHistory</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Work History</td>
           </tr>
           <tr>
             <td>Definition:</td>

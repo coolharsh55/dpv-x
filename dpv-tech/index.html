@@ -9,8 +9,8 @@
    var respecConfig = {
     shortName: "dpv-tech",
     title: "DPV-TECH: Extension providing Technology concepts for DPV",
-    subtitle: "version 0.7",
-    publishDate: "2022-06-15",
+    subtitle: "version 0.8",
+    publishDate: "2022-08-26",
     specStatus: "CG-DRAFT",
     group: "dpvcg",
     latestVersion: "https://w3id.org/dpv/dpv-tech",
@@ -53,13 +53,18 @@
       }
     ],
     localBiblio: {
+  "DPVCG": {
+    "href": "https://www.w3.org/community/dpvcg/",
+    "title": "W3C Data Privacy Vocabularies and Controls Community Group (DPVCG)"
+  },
+  "__001": "DPV Core Family",
   "DPV": {
     "href": "https://www.w3id.org/dpv",
     "title": "Data Privacy Vocabulary (DPV) Specification"
   },
   "DPV-GDPR": {
     "href": "https://www.w3id.org/dpv/dpv-gdpr",
-    "title": "GDPR Extension for Data Privacy Vocabulary (DPV-GDPR)"
+    "title": "DPV-GDPR: Extension providing GDPR concepts"
   },
   "DPV-NACE": {
     "href": "https://www.w3id.org/dpv/dpv-nace",
@@ -67,40 +72,136 @@
   },
   "DPV-PD": {
     "href": "https://www.w3id.org/dpv/dpv-pd",
-    "title": "Personal Data Categories Extension for Data Privacy Vocabulary (DPV-PD)"
+    "title": "DPV-PD: Extension providing Personal Data Categories"
   },
   "DPV-LEGAL": {
     "href": "https://www.w3id.org/dpv/dpv-legal",
-    "title": "Legal Extension providing Jurisdictions, Laws, and Authorities for Data Privacy Vocabulary (DPV-LEGAL)"
+    "title": "DPV-LEGAL: Extension providing Jurisdiction-relevant concepts"
   },
   "DPV-TECH": {
     "href": "https://www.w3id.org/dpv/dpv-tech",
-    "title": "Extension providing Technology concepts for Data Privacy Vocabulary (DPV-TECH)"
+    "title": "DPV-TECH: Extension providing Technology-relevant concepts"
   },
+  "RISK": {
+    "href": "https://www.w3id.org/dpv/risk",
+    "title": "Risk Extension for DPV"
+  },
+  "RIGHTS": {
+    "href": "https://www.w3id.org/dpv/rights",
+    "title": "Rights Extension for Data Privacy Vocabulary"
+  },
+  "RIGHTS-EU": {
+    "href": "https://www.w3id.org/dpv/rights",
+    "title": "Extension providing EU Rights"
+  },
+  "__002": "DPV-SKOS Family",
   "DPV-SKOS": {
     "href": "https://www.w3id.org/dpv/dpv-skos",
-    "title": "Data Privacy Vocabulary serialised using SKOS+RDFS (DPV-SKOS)"
+    "title": "DPV-SKOS: Data Privacy Vocabulary serialised in RDFS & SKOS"
   },
+  "DPV-SKOS-GDPR": {
+    "href": "https://www.w3id.org/dpv/dpv-skos/dpv-gdpr",
+    "title": "DPV-SKOS-GDPR: Extension providing GDPR concepts"
+  },
+  "DPV-SKOS-PD": {
+    "href": "https://www.w3id.org/dpv/dpv-skos/dpv-pd",
+    "title": "DPV-SKOS-PD: Extension providing Personal Data Categories"
+  },
+  "DPV-SKOS-LEGAL": {
+    "href": "https://www.w3id.org/dpv/dpv-skos/dpv-legal",
+    "title": "DPV-SKOS-LEGAL: Extension providing Jurisdiction-relevant concepts"
+  },
+  "DPV-SKOS-TECH": {
+    "href": "https://www.w3id.org/dpv/dpv-skos/dpv-tech",
+    "title": "DPV-SKOS-TECH: Extension providing Technology-relevant concepts"
+  },
+  "RISK-SKOS": {
+    "href": "https://www.w3id.org/dpv/dpv-skos/risk",
+    "title": "Risk Extension for DPV"
+  },
+  "RIGHTS-SKOS": {
+    "href": "https://www.w3id.org/dpv/dpv-skos/rights",
+    "title": "Rights Extension for Data Privacy Vocabulary"
+  },
+  "RIGHTS-EU-SKOS": {
+    "href": "https://www.w3id.org/dpv/dpv-skos/rights/eu",
+    "title": "Extension providing EU Rights"
+  },
+  "__003": "DPV-OWL Family",
   "DPV-OWL": {
     "href": "https://www.w3id.org/dpv/dpv-owl",
-    "title": "Data Privacy Vocabulary serialised using OWL2 (DPV-OWL)"
+    "title": "DPV-OWL: Data Privacy Vocabulary serialised in OWL2"
   },
+  "DPV-OWL-GDPR": {
+    "href": "https://www.w3id.org/dpv/dpv-owl/dpv-gdpr",
+    "title": "DPV-OWL-GDPR: Extension providing GDPR concepts"
+  },
+  "DPV-OWL-NACE": {
+    "href": "https://www.w3id.org/dpv/dpv-owl/dpv-nace",
+    "title": "NACE Taxonomy serialised in RDFS"
+  },
+  "DPV-OWL-PD": {
+    "href": "https://www.w3id.org/dpv/dpv-owl/dpv-pd",
+    "title": "DPV-OWL-PD: Extension providing Personal Data Categories"
+  },
+  "DPV-OWL-LEGAL": {
+    "href": "https://www.w3id.org/dpv/dpv-owl/dpv-legal",
+    "title": "DPV-OWL-LEGAL: Extension providing Jurisdiction-relevant concepts"
+  },
+  "DPV-OWL-TECH": {
+    "href": "https://www.w3id.org/dpv/dpv-owl/dpv-tech",
+    "title": "DPV-OWL-TECH: Extension providing Technology-relevant concepts"
+  },
+  "RISK-OWL": {
+    "href": "https://www.w3id.org/dpv/dpv-owl/risk",
+    "title": "Risk Extension for DPV"
+  },
+  "RIGHTS-OWL": {
+    "href": "https://www.w3id.org/dpv/dpv-owl/rights",
+    "title": "Rights Extension for Data Privacy Vocabulary"
+  },
+  "RIGHTS-EU-OWL": {
+    "href": "https://www.w3id.org/dpv/dpv-owl/rights/eu",
+    "title": "Extension providing EU Rights"
+  },
+  "__004": "DPV Documentation & Guides",
   "DPV-Primer": {
     "href": "https://www.w3id.org/dpv/primer",
     "title": "Primer for Data Privacy Vocabulary"
   },
-  "DPVCG": {
-    "href": "https://www.w3.org/community/dpvcg/",
-    "title": "W3C Data Privacy Vocabularies and Controls Community Group (DPVCG)"
+  "DPV-ADOPTION": {
+    "href": "https://www.w3.org/community/dpvcg/wiki/Adoption_of_DPVCG",
+    "title": "Listing of DPV adoption and applications"
   },
-  "GDPR": {
-    "href": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
-    "title": "General Data Protection Regulation (GDPR)"
+  "DPV-GUIDES": {
+    "href": "https://w3id.org/dpv/guides",
+    "title": "Guidelines for Adoption and Use of DPV"
   },
-  "SPECIAL": {
-    "href": "https://www.specialprivacy.eu/",
-    "title": "SPECIAL H2020 Project"
+  "DPV-GUIDE-Consent": {
+    "href": "https://w3id.org/dpv/guides/consent",
+    "title": "Guide for Conesnt Records using DPV"
   },
+  "DPV-GUIDE-Serialisations": {
+    "href": "https://w3id.org/dpv/guides/serialisations",
+    "title": "Guide on DPV's serialisations and semantics"
+  },
+  "DPV-GUIDE-SKOS": {
+    "href": "https://w3id.org/dpv/guides/dpv-skos",
+    "title": "Guide for using DPV with RDFS and SKOS"
+  },
+  "DPV-GUIDE-OWL2": {
+    "href": "https://w3id.org/dpv/guides/dpv-owl",
+    "title": "Guide for using DPV in OWL2"
+  },
+  "DPV-GUIDE-GDPR-DPIA": {
+    "href": "https://w3id.org/dpv/dpv-gdpr/dpia",
+    "title": "Guide for GDPR DPIA's using DPV"
+  },
+  "DPV-GUIDE-GDPR-ROPA": {
+    "href": "https://w3id.org/dpv/dpv-gdpr/ropa",
+    "title": "Guide for GDPR ROPA's using DPV"
+  },
+  "__005": "External Vocabularies",
   "RDF": {
     "href": "https://www.w3.org/TR/rdf11-concepts/",
     "title": "RDF 1.1 Concepts and Abstract Syntax"
@@ -117,17 +218,14 @@
     "href": "https://www.w3.org/TR/skos-reference/",
     "title": "SKOS Simple Knowledge Organization System"
   },
-  "DPV-ADOPTION": {
-    "href": "https://www.w3.org/community/dpvcg/wiki/Adoption_of_DPVCG",
-    "title": "Listing of DPV adoption and applications"
+  "__006": "External References",
+  "SPECIAL": {
+    "href": "https://www.specialprivacy.eu/",
+    "title": "SPECIAL H2020 Project"
   },
-  "DPV-GUIDES": {
-    "href": "https://w3id.org/dpv/guides",
-    "title": "Guidelines for Adoption and Use of DPV"
-  },
-  "DPV-GUIDE-OWL2": {
-    "href": "https://w3id.org/dpv/guides/dpv-owl",
-    "title": "Using DPV in OWL2"
+  "GDPR": {
+    "href": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+    "title": "General Data Protection Regulation (GDPR)"
   },
   "NACE": {
     "href": "https://ec.europa.eu/eurostat/ramon/nomenclatures/index.cfm?TargetUrl=LST_NOM_DTL&StrNom=NACE_REV2",
@@ -223,23 +321,25 @@
     <section id="dpv-document-family" class="noTOC">
     <h2>DPV Family of Documents</h2>
     <ul>
-      <li>[[[DPV-Primer]]]:  introductory document to DPV concepts
-      <p class="note">Newcomers to the DPV are <strong>strongly recommended to first read through the Primer</strong> to familiarise themselves with the semantics and concepts of DPV.</p>
+      <li>[[[DPV-Primer]]]:  An introductory document for DPV's concepts and taxonomies.
+        <p class="note">Newcomers to the DPV are <strong>strongly recommended to first read through the Primer</strong> to familiarise themselves with the semantics and concepts of DPV.</p>
       </li>
-      <li>[[[DPV]]]:  formal and normative description of DPV and its concepts.</li>
-      <li>Serialisations of DPV: <ul>
-        <li>[[[DPV-SKOS]]]:  serialisation of DPV with [[SKOS]] and [[RDFS]] semantics</li>
-        <li>[[[DPV-OWL]]]: serialisation of DPV using [[OWL]] semantics</li></ul></li>
+      <li>[[[DPV]]]:  The formal and normative description of DPV and its concepts, with serialisations in RDFS & SKOS [[DPV-SKOS]] and OWL2 [[DPV-OWL]]</li>
       <li>Extensions to Concepts: <ul>
-        <li>[[[DPV-GDPR]]]:  extends DPV concepts for [[GDPR]]</li>
-        <li>[[[DPV-PD]]] </li>
-        <li>[[[DPV-LEGAL]]] </li>
-        <li>[[[DPV-TECH]]] (this document)</li>
+        <li>[[[DPV-GDPR]]]:  serialisations: [[DPV-SKOS-GDPR]], [[DPV-OWL-GDPR]]</li>
+        <li>[[[DPV-PD]]]  serialisations: [[DPV-SKOS-PD]], [[DPV-OWL-PD]]</li>
+        <li>[[[DPV-LEGAL]]]  serialisations: [[DPV-SKOS-LEGAL]], [[DPV-OWL-LEGAL]]</li>
+        <li>[[[DPV-TECH]]] (this document) serialisations: [[DPV-SKOS-TECH]], [[DPV-OWL-TECH]]</li>
+        <li>[[[RISK]]]  serialisations: [[RISK-SKOS]], [[RISK-OWL]]</li>
         </ul></li>
       <li>[[[DPV-GUIDES]]]: <ul>
+        <li>[[[DPV-GUIDE-Serialisations]]] </li>
         <li>[[[DPV-GUIDE-OWL2]]] </li>
         </ul></li>
-      <li>Other Resources:<ul><li>[[[DPV-NACE]]]</li></ul></li>
+      <li>Other Resources:<ul>
+        <li>[[[DPV-NACE]]]</li>
+        <li>[[[RIGHTS-EU]]] serialisations: [[RIGHTS-EU-SKOS]], [[RIGHTS-EU-OWL]]</li>
+        </ul></li>
     </ul>
     <p><strong>Related Links</strong></p>
     <ul>
@@ -347,7 +447,7 @@
     <h2>Taxonomy</h2>
 
     <section id="dpv-tech-classes">
-        <h3>Classes</h3>
+      <h3>Classes</h3>
     <p>
       <code><a href="#Algorithmic">Algorithmic</a></code> |
       <code><a href="#Application">Application</a></code> |
@@ -417,11 +517,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#Algorithmic`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#Algorithmic</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Algorithmic</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Algorithmic</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -452,11 +556,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#Application`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#Application</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Application</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Application</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -487,11 +595,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#Bluetooth`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#Bluetooth</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Bluetooth</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Bluetooth</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -522,11 +634,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#CellularNetwork`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#CellularNetwork</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>CellularNetwork</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>CellularNetwork</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -557,11 +673,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#CommunicationMechanism`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#CommunicationMechanism</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>CommunicationMechanism</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>CommunicationMechanism</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -586,11 +706,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#Component`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#Component</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Component</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Component</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -621,11 +745,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#Cookie`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#Cookie</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Cookie</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Cookie</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -656,11 +784,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#CovertSurveillanceTechnology`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#CovertSurveillanceTechnology</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>CovertSurveillanceTechnology</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Covert SurveillanceTechnology</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -695,11 +827,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#Database`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#Database</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Database</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Database</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -730,11 +866,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#DataCopyingTechnology`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#DataCopyingTechnology</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>DataCopyingTechnology</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Data Copying Technology</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -765,11 +905,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#DataDisclosureTechnology`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#DataDisclosureTechnology</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>DataDisclosureTechnology</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Data Disclosure Technology</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -800,11 +944,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#DataManagementTechnology`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#DataManagementTechnology</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>DataManagementTechnology</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Data Management Technology</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -836,11 +984,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#DataObtainingTechnology`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#DataObtainingTechnology</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>DataObtainingTechnology</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Data Obtaining Technology</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -871,11 +1023,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#DataOrganisingTechnology`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#DataOrganisingTechnology</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>DataOrganisingTechnology</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Data Organising Technology</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -906,11 +1062,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#DataRemovalTechnology`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#DataRemovalTechnology</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>DataRemovalTechnology</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Data Removal Technology</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -941,11 +1101,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#DataSecurityTechnology`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#DataSecurityTechnology</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>DataSecurityTechnology</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Data Security Technology</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -977,11 +1141,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#DataStorageTechnology`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#DataStorageTechnology</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>DataStorageTechnology</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Data Storage Technology</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1012,11 +1180,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#DataTechnology`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#DataTechnology</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>DataTechnology</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Data Technology</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1047,11 +1219,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#DataTransferTechnology`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#DataTransferTechnology</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>DataTransferTechnology</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Data Transfer Technology</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1082,11 +1258,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#DataTransformationTechnology`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#DataTransformationTechnology</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>DataTransformationTechnology</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Data Transformation Technology</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1117,11 +1297,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#DataUsageTechnology`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#DataUsageTechnology</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>DataUsageTechnology</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Data Usage Technology</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1152,11 +1336,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#DetectionSecurityTechnology`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#DetectionSecurityTechnology</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>DetectionSecurityTechnology</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Detection Security Technology</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1190,11 +1378,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#FileSystem`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#FileSystem</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>FileSystem</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>FileSystem</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1225,11 +1417,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#FixedUse`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#FixedUse</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>FixedUse</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>FixedUse</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1260,11 +1456,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#Goods`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#Goods</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Goods</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Goods</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1295,11 +1495,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#GPS`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#GPS</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>GPS</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>GPS</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1330,11 +1534,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#IdentityManagementTechnology`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#IdentityManagementTechnology</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>IdentityManagementTechnology</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>IdentityManagementTechnology</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1366,11 +1574,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#IdentityTechnology`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#IdentityTechnology</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>IdentityTechnology</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Identity Technology</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1401,11 +1613,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#IdentityWallet`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#IdentityWallet</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>IdentityWallet</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>IdentityWallet</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1437,11 +1653,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#Internet`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#Internet</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Internet</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Internet</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1472,11 +1692,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#LocalNetwork`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#LocalNetwork</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>LocalNetwork</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>LocalNetwork</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1507,11 +1731,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#ManagementTechnology`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#ManagementTechnology</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>ManagementTechnology</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Management Technology</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1542,11 +1770,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#MitigationSecurityTechnology`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#MitigationSecurityTechnology</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>MitigationSecurityTechnology</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Mitigation Security Technology</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1580,11 +1812,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#MonitoringSecurityTechnology`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#MonitoringSecurityTechnology</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>MonitoringSecurityTechnology</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Monitoring Security Technology</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1618,11 +1854,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#Networking`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#Networking</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Networking</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Networking</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1653,11 +1893,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#OperationalTechnology`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#OperationalTechnology</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>OperationalTechnology</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Operational Technology</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1688,11 +1932,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#OperationDevice`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#OperationDevice</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>OperationDevice</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Operation Device</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1723,11 +1971,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#OperationEnvironment`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#OperationEnvironment</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>OperationEnvironment</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Operation Environment</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1758,11 +2010,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#OperationManagement`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#OperationManagement</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>OperationManagement</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Operation Management</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1793,11 +2049,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#OvertSurveillanceTechnology`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#OvertSurveillanceTechnology</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>OvertSurveillanceTechnology</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Overt Surveillance Technology</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1832,11 +2092,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#PersonalInformationManagementSystem`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#PersonalInformationManagementSystem</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>PersonalInformationManagementSystem</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>PersonalInformationManagementSystem</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1867,11 +2131,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#PET`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#PET</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>PET</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>PET (Privacy Enhancing Technology)</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1905,11 +2173,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#PreventionSecurityTechnology`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#PreventionSecurityTechnology</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>PreventionSecurityTechnology</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Prevention Security Technology</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1943,11 +2215,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#Product`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#Product</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Product</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Product</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -1978,11 +2254,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#SecurityManagementTechnology`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#SecurityManagementTechnology</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>SecurityManagementTechnology</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Security Management Technology</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -2017,11 +2297,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#SecurityTechnology`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#SecurityTechnology</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>SecurityTechnology</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Security Technology</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -2052,11 +2336,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#Services`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#Services</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Services</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Services</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -2087,11 +2375,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#SmartphoneApplication`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#SmartphoneApplication</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>SmartphoneApplication</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>SmartphoneApplication</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -2122,11 +2414,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#Subscription`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#Subscription</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>Subscription</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Subscription</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -2157,11 +2453,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#SurveillanceTechnology`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#SurveillanceTechnology</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>SurveillanceTechnology</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Surveillance Technology</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -2192,11 +2492,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#System`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#System</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>System</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>System</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -2227,18 +2531,22 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#TechnologyActor`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#TechnologyActor</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>TechnologyActor</dfn></code></td>
           </tr>
           <tr>
+            <td>Label:</td>
+            <td>TechnologyActor</td>
+          </tr>
+          <tr>
             <td>Definition:</td>
             <td>Actors and Entities involved in provision, use, and management of Technology</td>
           </tr>
           <tr>
-            <td>Instance of:</td>
+            <td>SubType of:</td>
             <td>
               <a href="https://w3id.org/dpv#Entity">dpv:Entity</a>
             </td>
@@ -2262,11 +2570,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#TechnologyDeveloper`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#TechnologyDeveloper</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>TechnologyDeveloper</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>TechnologyDeveloper</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -2297,11 +2609,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#TechnologyProvider`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#TechnologyProvider</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>TechnologyProvider</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>TechnologyProvider</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -2332,11 +2648,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#TechnologyProvisionMethod`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#TechnologyProvisionMethod</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>TechnologyProvisionMethod</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>Technology Provision Method</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -2361,11 +2681,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#TechnologyReadinessLevel`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#TechnologyReadinessLevel</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>TechnologyReadinessLevel</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>TechnologyReadinessLevel</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -2396,11 +2720,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#TechnologySubject`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#TechnologySubject</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>TechnologySubject</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>TechnologySubject</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -2431,11 +2759,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#TechnologyUsageLocation`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#TechnologyUsageLocation</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>TechnologyUsageLocation</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>TechnologyUsageLocation</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -2466,11 +2798,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#TechnologyUser`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#TechnologyUser</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>TechnologyUser</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>TechnologyUser</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -2501,11 +2837,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#WiFi`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#WiFi</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>WiFi</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>WiFi</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -2533,8 +2873,7 @@
 
     </section>
     <section id="dpv-tech-properties">
-        <h3>Properties</h3>
-    <p>
+      <h3>Properties</h3>    <p>
       <code><a href="#hasCommunicationMechanism">hasCommunicationMechanism</a></code> |
       <code><a href="#hasDeveloper">hasDeveloper</a></code> |
       <code><a href="#hasProvider">hasProvider</a></code> |
@@ -2550,11 +2889,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#hasCommunicationMechanism`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#hasCommunicationMechanism</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>hasCommunicationMechanism</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>hasCommunicationMechanism</td>
           </tr>
           <tr>
             <td>Description:</td>
@@ -2587,11 +2930,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#hasDeveloper`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#hasDeveloper</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>hasDeveloper</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>hasDeveloper</td>
           </tr>
           <tr>
             <td>Description:</td>
@@ -2624,11 +2971,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#hasProvider`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#hasProvider</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>hasProvider</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>hasProvider</td>
           </tr>
           <tr>
             <td>Description:</td>
@@ -2661,11 +3012,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#hasProvisionMethod`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#hasProvisionMethod</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>hasProvisionMethod</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>hasProvisionMethod</td>
           </tr>
           <tr>
             <td>Description:</td>
@@ -2698,11 +3053,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#hasSubject`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#hasSubject</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>hasSubject</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>hasSubject</td>
           </tr>
           <tr>
             <td>Description:</td>
@@ -2735,11 +3094,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#hasTRL`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#hasTRL</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>hasTRL</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>hasTRL</td>
           </tr>
           <tr>
             <td>Description:</td>
@@ -2772,11 +3135,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-tech#hasUser`</td>
+            <td><code>https://w3id.org/dpv/dpv-tech#hasUser</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code><dfn>hasUser</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>hasUser</td>
           </tr>
           <tr>
             <td>Description:</td>

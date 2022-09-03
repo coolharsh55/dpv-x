@@ -1,5 +1,680 @@
 [
   {
+    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#Adequacy-EU-AR",
+    "@type": [
+      "https://w3id.org/dpv/dpv-owl#Law",
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/dpv/dpv-owl/dpv-gdpr#A45-3"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-03-30"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
+      }
+    ],
+    "http://purl.org/dc/terms/temporal": [
+      {
+        "@id": "_:Ndc17c1a56a79456abdf9068f2aae098f"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "EU Adequacy Decision for Argentina"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/homepage": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+        "@value": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32003D0490"
+      }
+    ],
+    "https://w3id.org/dpv/dpv-owl#hasJurisdiction": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#AR"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ndc17c1a56a79456abdf9068f2aae098f",
+    "@type": [
+      "http://www.w3.org/2006/time#ProperInterval"
+    ],
+    "http://www.w3.org/2006/time#hasBeginning": [
+      {
+        "@id": "_:N029bdff9060348e98edd6cce9268b7f1"
+      }
+    ]
+  },
+  {
+    "@id": "_:N029bdff9060348e98edd6cce9268b7f1",
+    "http://www.w3.org/2006/time#inXSDDate": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2003-07-05"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#Adequacy-EU-IM",
+    "@type": [
+      "https://w3id.org/dpv/dpv-owl#Law",
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/dpv/dpv-owl/dpv-gdpr#A45-3"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-03-30"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
+      }
+    ],
+    "http://purl.org/dc/terms/temporal": [
+      {
+        "@id": "_:Naaaaa5777fe046dc8704e8c10911f9a3"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "EU Adequacy Decision for Isle of Man"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/homepage": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+        "@value": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32004D0411"
+      }
+    ],
+    "https://w3id.org/dpv/dpv-owl#hasJurisdiction": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#IM"
+      }
+    ]
+  },
+  {
+    "@id": "_:Naaaaa5777fe046dc8704e8c10911f9a3",
+    "@type": [
+      "http://www.w3.org/2006/time#ProperInterval"
+    ],
+    "http://www.w3.org/2006/time#hasBeginning": [
+      {
+        "@id": "_:Nd363d7a0329a4d3db7d81adc26f5278b"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nd363d7a0329a4d3db7d81adc26f5278b",
+    "http://www.w3.org/2006/time#inXSDDate": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2004-04-30"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#Adequacy-EU-UY",
+    "@type": [
+      "https://w3id.org/dpv/dpv-owl#Law",
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/dpv/dpv-owl/dpv-gdpr#A45-3"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-03-30"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
+      }
+    ],
+    "http://purl.org/dc/terms/temporal": [
+      {
+        "@id": "_:N02aefb7f09144d08a0acdafd6d432fb1"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "EU Adequacy Decision for Uruguay"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/homepage": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+        "@value": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32012D0484"
+      }
+    ],
+    "https://w3id.org/dpv/dpv-owl#hasJurisdiction": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#UY"
+      }
+    ]
+  },
+  {
+    "@id": "_:N02aefb7f09144d08a0acdafd6d432fb1",
+    "@type": [
+      "http://www.w3.org/2006/time#ProperInterval"
+    ],
+    "http://www.w3.org/2006/time#hasBeginning": [
+      {
+        "@id": "_:N6631072046154d0bbb1d8ee4afa3ce25"
+      }
+    ]
+  },
+  {
+    "@id": "_:N6631072046154d0bbb1d8ee4afa3ce25",
+    "http://www.w3.org/2006/time#inXSDDate": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2012-08-22"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#Adequacy-EU-AD",
+    "@type": [
+      "https://w3id.org/dpv/dpv-owl#Law",
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/dpv/dpv-owl/dpv-gdpr#A45-3"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-03-30"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
+      }
+    ],
+    "http://purl.org/dc/terms/temporal": [
+      {
+        "@id": "_:Ndcb15d25418a4347855b5415ce0ce96c"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "EU Adequacy Decision for Andorra"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/homepage": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+        "@value": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32010D0625?"
+      }
+    ],
+    "https://w3id.org/dpv/dpv-owl#hasJurisdiction": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#AD"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ndcb15d25418a4347855b5415ce0ce96c",
+    "@type": [
+      "http://www.w3.org/2006/time#ProperInterval"
+    ],
+    "http://www.w3.org/2006/time#hasBeginning": [
+      {
+        "@id": "_:Nea39989eb14849ac9473f6546ecbd9f2"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nea39989eb14849ac9473f6546ecbd9f2",
+    "http://www.w3.org/2006/time#inXSDDate": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2010-10-21"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#Adequacy-EU-NZ",
+    "@type": [
+      "https://w3id.org/dpv/dpv-owl#Law",
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/dpv/dpv-owl/dpv-gdpr#A45-3"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-03-30"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
+      }
+    ],
+    "http://purl.org/dc/terms/temporal": [
+      {
+        "@id": "_:Nb5d78a4edf014d3b96c086a07b6c9d2d"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "EU Adequacy Decision for New Zealand"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/homepage": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+        "@value": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32013D0065"
+      }
+    ],
+    "https://w3id.org/dpv/dpv-owl#hasJurisdiction": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#NZ"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nb5d78a4edf014d3b96c086a07b6c9d2d",
+    "@type": [
+      "http://www.w3.org/2006/time#ProperInterval"
+    ],
+    "http://www.w3.org/2006/time#hasBeginning": [
+      {
+        "@id": "_:Nbd9a34d8c0344fc48cc79aa22a3fce8e"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nbd9a34d8c0344fc48cc79aa22a3fce8e",
+    "http://www.w3.org/2006/time#inXSDDate": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2012-12-20"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#Adequacy-EU-JE",
+    "@type": [
+      "https://w3id.org/dpv/dpv-owl#Law",
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/dpv/dpv-owl/dpv-gdpr#A45-3"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-03-30"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
+      }
+    ],
+    "http://purl.org/dc/terms/temporal": [
+      {
+        "@id": "_:Nf859641ca8fb4854add9ee436d54a7d3"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "EU Adequacy Decision for Jersey"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/homepage": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+        "@value": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32008D0393"
+      }
+    ],
+    "https://w3id.org/dpv/dpv-owl#hasJurisdiction": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#JE"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nf859641ca8fb4854add9ee436d54a7d3",
+    "@type": [
+      "http://www.w3.org/2006/time#ProperInterval"
+    ],
+    "http://www.w3.org/2006/time#hasBeginning": [
+      {
+        "@id": "_:Nd23ad2f1d14f4a929ef42e7bafbceb72"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nd23ad2f1d14f4a929ef42e7bafbceb72",
+    "http://www.w3.org/2006/time#inXSDDate": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2008-05-26"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#Adequacy-EU-GG",
+    "@type": [
+      "https://w3id.org/dpv/dpv-owl#Law",
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/dpv/dpv-owl/dpv-gdpr#A45-3"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-03-30"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
+      }
+    ],
+    "http://purl.org/dc/terms/temporal": [
+      {
+        "@id": "_:N46e07b15c6aa4612ac815ca0c6cfc717"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "EU Adequacy Decision for Guernsey"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/homepage": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+        "@value": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32003D0821"
+      }
+    ],
+    "https://w3id.org/dpv/dpv-owl#hasJurisdiction": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#GG"
+      }
+    ]
+  },
+  {
+    "@id": "_:N46e07b15c6aa4612ac815ca0c6cfc717",
+    "@type": [
+      "http://www.w3.org/2006/time#ProperInterval"
+    ],
+    "http://www.w3.org/2006/time#hasBeginning": [
+      {
+        "@id": "_:N34f0f87d549a41169e46af4c4f644cd6"
+      }
+    ]
+  },
+  {
+    "@id": "_:N34f0f87d549a41169e46af4c4f644cd6",
+    "http://www.w3.org/2006/time#inXSDDate": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2003-11-21"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#Adequacy-EU-GB",
+    "@type": [
+      "https://w3id.org/dpv/dpv-owl#Law",
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/dpv/dpv-owl/dpv-gdpr#A45-3"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-03-30"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
+      }
+    ],
+    "http://purl.org/dc/terms/temporal": [
+      {
+        "@id": "_:Nba20650a9dc14be79c527daf4f091a94"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "EU Adequacy Decision for United Kingdom"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/homepage": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+        "@value": "https://ec.europa.eu/info/files/decision-adequate-protection-personal-data-united-kingdom-general-data-protection-regulation_en"
+      }
+    ],
+    "https://w3id.org/dpv/dpv-owl#hasJurisdiction": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#GB"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nba20650a9dc14be79c527daf4f091a94",
+    "@type": [
+      "http://www.w3.org/2006/time#ProperInterval"
+    ],
+    "http://www.w3.org/2006/time#hasBeginning": [
+      {
+        "@id": "_:Nf62e9b6a5a874590b6b129e9f6097dc6"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nf62e9b6a5a874590b6b129e9f6097dc6",
+    "http://www.w3.org/2006/time#inXSDDate": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2021-06-28"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#Adequacy-EU-FO",
+    "@type": [
+      "https://w3id.org/dpv/dpv-owl#Law",
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/dpv/dpv-owl/dpv-gdpr#A45-3"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-03-30"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
+      }
+    ],
+    "http://purl.org/dc/terms/temporal": [
+      {
+        "@id": "_:N909bbb102477413998f66a57105bd205"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "EU Adequacy Decision for Faroe Islands"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/homepage": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+        "@value": "https://eur-lex.europa.eu/legal-content/en/ALL/?uri=CELEX%3A32010D0146"
+      }
+    ],
+    "https://w3id.org/dpv/dpv-owl#hasJurisdiction": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#FO"
+      }
+    ]
+  },
+  {
+    "@id": "_:N909bbb102477413998f66a57105bd205",
+    "@type": [
+      "http://www.w3.org/2006/time#ProperInterval"
+    ],
+    "http://www.w3.org/2006/time#hasBeginning": [
+      {
+        "@id": "_:N381fb0c6020b4149aa1aef1b09894de6"
+      }
+    ]
+  },
+  {
+    "@id": "_:N381fb0c6020b4149aa1aef1b09894de6",
+    "http://www.w3.org/2006/time#inXSDDate": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2010-03-09"
+      }
+    ]
+  },
+  {
     "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#Adequacy-EU-IL",
     "@type": [
       "https://w3id.org/dpv/dpv-owl#Law",
@@ -19,18 +694,18 @@
     ],
     "http://purl.org/dc/terms/temporal": [
       {
-        "@id": "_:Nb58a10f10b7f43e9b9ace9119382720c"
-      }
-    ],
-    "http://purl.org/dc/terms/title": [
-      {
-        "@language": "en",
-        "@value": "EU Adequacy Decision for Israel"
+        "@id": "_:N0db4eb5d22044499ab9346ca88ce99f8"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
         "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "EU Adequacy Decision for Israel"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -55,18 +730,18 @@
     ]
   },
   {
-    "@id": "_:Nb58a10f10b7f43e9b9ace9119382720c",
+    "@id": "_:N0db4eb5d22044499ab9346ca88ce99f8",
     "@type": [
       "http://www.w3.org/2006/time#ProperInterval"
     ],
     "http://www.w3.org/2006/time#hasBeginning": [
       {
-        "@id": "_:N704798f7f9ee437c8acbd0e09fce2ee9"
+        "@id": "_:N24799b69f64f4cffb5d8b4a7e3373211"
       }
     ]
   },
   {
-    "@id": "_:N704798f7f9ee437c8acbd0e09fce2ee9",
+    "@id": "_:N24799b69f64f4cffb5d8b4a7e3373211",
     "http://www.w3.org/2006/time#inXSDDate": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
@@ -94,18 +769,18 @@
     ],
     "http://purl.org/dc/terms/temporal": [
       {
-        "@id": "_:Ne26a00fe56a543239cd77da268c76f32"
-      }
-    ],
-    "http://purl.org/dc/terms/title": [
-      {
-        "@language": "en",
-        "@value": "EU Adequacy Decision for Switzerland"
+        "@id": "_:N75da0b475b0e4aaf8255a7e30b16e91a"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
         "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "EU Adequacy Decision for Switzerland"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -130,172 +805,22 @@
     ]
   },
   {
-    "@id": "_:Ne26a00fe56a543239cd77da268c76f32",
+    "@id": "_:N75da0b475b0e4aaf8255a7e30b16e91a",
     "@type": [
       "http://www.w3.org/2006/time#ProperInterval"
     ],
     "http://www.w3.org/2006/time#hasBeginning": [
       {
-        "@id": "_:N66d1583fe3054ca59a3e19fe75a46804"
+        "@id": "_:N32fed405c64544249b9fdaad5337303e"
       }
     ]
   },
   {
-    "@id": "_:N66d1583fe3054ca59a3e19fe75a46804",
+    "@id": "_:N32fed405c64544249b9fdaad5337303e",
     "http://www.w3.org/2006/time#inXSDDate": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
         "@value": "2000-08-25"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#Adequacy-EU-JE",
-    "@type": [
-      "https://w3id.org/dpv/dpv-owl#Law",
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/dpv/dpv-owl/dpv-gdpr#A45-3"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-03-30"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Harshvardhan J. Pandit"
-      }
-    ],
-    "http://purl.org/dc/terms/temporal": [
-      {
-        "@id": "_:N4e0b2d8b5ca74023aae7d94969d17573"
-      }
-    ],
-    "http://purl.org/dc/terms/title": [
-      {
-        "@language": "en",
-        "@value": "EU Adequacy Decision for Jersey"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://xmlns.com/foaf/0.1/homepage": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-        "@value": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32008D0393"
-      }
-    ],
-    "https://w3id.org/dpv/dpv-owl#hasJurisdiction": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#JE"
-      }
-    ]
-  },
-  {
-    "@id": "_:N4e0b2d8b5ca74023aae7d94969d17573",
-    "@type": [
-      "http://www.w3.org/2006/time#ProperInterval"
-    ],
-    "http://www.w3.org/2006/time#hasBeginning": [
-      {
-        "@id": "_:Nc03b669805004bdfa4289dc983c9cf27"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nc03b669805004bdfa4289dc983c9cf27",
-    "http://www.w3.org/2006/time#inXSDDate": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2008-05-26"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#Adequacy-EU-NZ",
-    "@type": [
-      "https://w3id.org/dpv/dpv-owl#Law",
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/dpv/dpv-owl/dpv-gdpr#A45-3"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-03-30"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Harshvardhan J. Pandit"
-      }
-    ],
-    "http://purl.org/dc/terms/temporal": [
-      {
-        "@id": "_:Neafee73feb364ecb9eb599c4b3adad3c"
-      }
-    ],
-    "http://purl.org/dc/terms/title": [
-      {
-        "@language": "en",
-        "@value": "EU Adequacy Decision for New Zealand"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://xmlns.com/foaf/0.1/homepage": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-        "@value": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32013D0065"
-      }
-    ],
-    "https://w3id.org/dpv/dpv-owl#hasJurisdiction": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#NZ"
-      }
-    ]
-  },
-  {
-    "@id": "_:Neafee73feb364ecb9eb599c4b3adad3c",
-    "@type": [
-      "http://www.w3.org/2006/time#ProperInterval"
-    ],
-    "http://www.w3.org/2006/time#hasBeginning": [
-      {
-        "@id": "_:N94ac47b4b7e6496babad1403e18daa16"
-      }
-    ]
-  },
-  {
-    "@id": "_:N94ac47b4b7e6496babad1403e18daa16",
-    "http://www.w3.org/2006/time#inXSDDate": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2012-12-20"
       }
     ]
   },
@@ -319,18 +844,18 @@
     ],
     "http://purl.org/dc/terms/temporal": [
       {
-        "@id": "_:N59a19fe1a9e1403d946cbf904cd40efc"
-      }
-    ],
-    "http://purl.org/dc/terms/title": [
-      {
-        "@language": "en",
-        "@value": "EU Adequacy Decision for Canada (commercial organisations)"
+        "@id": "_:Ncde0f63fcec943ada7fc39eee69ac035"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
         "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "EU Adequacy Decision for Canada (commercial organisations)"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -355,97 +880,22 @@
     ]
   },
   {
-    "@id": "_:N59a19fe1a9e1403d946cbf904cd40efc",
+    "@id": "_:Ncde0f63fcec943ada7fc39eee69ac035",
     "@type": [
       "http://www.w3.org/2006/time#ProperInterval"
     ],
     "http://www.w3.org/2006/time#hasBeginning": [
       {
-        "@id": "_:N19f353f5ba2d448b98e8d2fa7928476b"
+        "@id": "_:Ncfe03b6d035d46939837c597be2e957a"
       }
     ]
   },
   {
-    "@id": "_:N19f353f5ba2d448b98e8d2fa7928476b",
+    "@id": "_:Ncfe03b6d035d46939837c597be2e957a",
     "http://www.w3.org/2006/time#inXSDDate": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
         "@value": "2002-01-04"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#Adequacy-EU-GB",
-    "@type": [
-      "https://w3id.org/dpv/dpv-owl#Law",
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/dpv/dpv-owl/dpv-gdpr#A45-3"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-03-30"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Harshvardhan J. Pandit"
-      }
-    ],
-    "http://purl.org/dc/terms/temporal": [
-      {
-        "@id": "_:N5b208285446c4b869d1e7fb53fbb8c12"
-      }
-    ],
-    "http://purl.org/dc/terms/title": [
-      {
-        "@language": "en",
-        "@value": "EU Adequacy Decision for United Kingdom"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://xmlns.com/foaf/0.1/homepage": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-        "@value": "https://ec.europa.eu/info/files/decision-adequate-protection-personal-data-united-kingdom-general-data-protection-regulation_en"
-      }
-    ],
-    "https://w3id.org/dpv/dpv-owl#hasJurisdiction": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#GB"
-      }
-    ]
-  },
-  {
-    "@id": "_:N5b208285446c4b869d1e7fb53fbb8c12",
-    "@type": [
-      "http://www.w3.org/2006/time#ProperInterval"
-    ],
-    "http://www.w3.org/2006/time#hasBeginning": [
-      {
-        "@id": "_:Nbd40582e6c21481fb2070b15615c940e"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nbd40582e6c21481fb2070b15615c940e",
-    "http://www.w3.org/2006/time#inXSDDate": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2021-06-28"
       }
     ]
   },
@@ -469,18 +919,18 @@
     ],
     "http://purl.org/dc/terms/temporal": [
       {
-        "@id": "_:N9d7f265aca8c4a5286db7fecfb69dbad"
-      }
-    ],
-    "http://purl.org/dc/terms/title": [
-      {
-        "@language": "en",
-        "@value": "EU Adequacy Decision for Japan"
+        "@id": "_:N1b61a22f3bfc4dc7a4afc44033a66422"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
         "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "EU Adequacy Decision for Japan"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -505,472 +955,22 @@
     ]
   },
   {
-    "@id": "_:N9d7f265aca8c4a5286db7fecfb69dbad",
+    "@id": "_:N1b61a22f3bfc4dc7a4afc44033a66422",
     "@type": [
       "http://www.w3.org/2006/time#ProperInterval"
     ],
     "http://www.w3.org/2006/time#hasBeginning": [
       {
-        "@id": "_:N972d7bc74e0b494da793d138de8f3095"
+        "@id": "_:N25e2e0123833419d848abf7628d7a08b"
       }
     ]
   },
   {
-    "@id": "_:N972d7bc74e0b494da793d138de8f3095",
+    "@id": "_:N25e2e0123833419d848abf7628d7a08b",
     "http://www.w3.org/2006/time#inXSDDate": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
         "@value": "2019-01-23"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#Adequacy-EU-UY",
-    "@type": [
-      "https://w3id.org/dpv/dpv-owl#Law",
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/dpv/dpv-owl/dpv-gdpr#A45-3"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-03-30"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Harshvardhan J. Pandit"
-      }
-    ],
-    "http://purl.org/dc/terms/temporal": [
-      {
-        "@id": "_:N4a282bb9bcb343bfb247f5f1d0eea4fb"
-      }
-    ],
-    "http://purl.org/dc/terms/title": [
-      {
-        "@language": "en",
-        "@value": "EU Adequacy Decision for Uruguay"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://xmlns.com/foaf/0.1/homepage": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-        "@value": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32012D0484"
-      }
-    ],
-    "https://w3id.org/dpv/dpv-owl#hasJurisdiction": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#UY"
-      }
-    ]
-  },
-  {
-    "@id": "_:N4a282bb9bcb343bfb247f5f1d0eea4fb",
-    "@type": [
-      "http://www.w3.org/2006/time#ProperInterval"
-    ],
-    "http://www.w3.org/2006/time#hasBeginning": [
-      {
-        "@id": "_:N5f941c8f0e6f42a5bb2a0d854f5e2800"
-      }
-    ]
-  },
-  {
-    "@id": "_:N5f941c8f0e6f42a5bb2a0d854f5e2800",
-    "http://www.w3.org/2006/time#inXSDDate": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2012-08-22"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#Adequacy-EU-IM",
-    "@type": [
-      "https://w3id.org/dpv/dpv-owl#Law",
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/dpv/dpv-owl/dpv-gdpr#A45-3"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-03-30"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Harshvardhan J. Pandit"
-      }
-    ],
-    "http://purl.org/dc/terms/temporal": [
-      {
-        "@id": "_:Ncc02f5008dc144828472c7e4865b2b0a"
-      }
-    ],
-    "http://purl.org/dc/terms/title": [
-      {
-        "@language": "en",
-        "@value": "EU Adequacy Decision for Isle of Man"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://xmlns.com/foaf/0.1/homepage": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-        "@value": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32004D0411"
-      }
-    ],
-    "https://w3id.org/dpv/dpv-owl#hasJurisdiction": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#IM"
-      }
-    ]
-  },
-  {
-    "@id": "_:Ncc02f5008dc144828472c7e4865b2b0a",
-    "@type": [
-      "http://www.w3.org/2006/time#ProperInterval"
-    ],
-    "http://www.w3.org/2006/time#hasBeginning": [
-      {
-        "@id": "_:Nbb8b3b731abf40a190df404da2c17c97"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nbb8b3b731abf40a190df404da2c17c97",
-    "http://www.w3.org/2006/time#inXSDDate": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2004-04-30"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#Adequacy-EU-FO",
-    "@type": [
-      "https://w3id.org/dpv/dpv-owl#Law",
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/dpv/dpv-owl/dpv-gdpr#A45-3"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-03-30"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Harshvardhan J. Pandit"
-      }
-    ],
-    "http://purl.org/dc/terms/temporal": [
-      {
-        "@id": "_:Ncc79b53453e3444fbd8056bc319cf125"
-      }
-    ],
-    "http://purl.org/dc/terms/title": [
-      {
-        "@language": "en",
-        "@value": "EU Adequacy Decision for Faroe Islands"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://xmlns.com/foaf/0.1/homepage": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-        "@value": "https://eur-lex.europa.eu/legal-content/en/ALL/?uri=CELEX%3A32010D0146"
-      }
-    ],
-    "https://w3id.org/dpv/dpv-owl#hasJurisdiction": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#FO"
-      }
-    ]
-  },
-  {
-    "@id": "_:Ncc79b53453e3444fbd8056bc319cf125",
-    "@type": [
-      "http://www.w3.org/2006/time#ProperInterval"
-    ],
-    "http://www.w3.org/2006/time#hasBeginning": [
-      {
-        "@id": "_:Nb970a31cf1e244059eb7608de37bb0df"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nb970a31cf1e244059eb7608de37bb0df",
-    "http://www.w3.org/2006/time#inXSDDate": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2010-03-09"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#Adequacy-EU-AR",
-    "@type": [
-      "https://w3id.org/dpv/dpv-owl#Law",
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/dpv/dpv-owl/dpv-gdpr#A45-3"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-03-30"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Harshvardhan J. Pandit"
-      }
-    ],
-    "http://purl.org/dc/terms/temporal": [
-      {
-        "@id": "_:N6ee733cfae764b79884104b30af57037"
-      }
-    ],
-    "http://purl.org/dc/terms/title": [
-      {
-        "@language": "en",
-        "@value": "EU Adequacy Decision for Argentina"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://xmlns.com/foaf/0.1/homepage": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-        "@value": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32003D0490"
-      }
-    ],
-    "https://w3id.org/dpv/dpv-owl#hasJurisdiction": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#AR"
-      }
-    ]
-  },
-  {
-    "@id": "_:N6ee733cfae764b79884104b30af57037",
-    "@type": [
-      "http://www.w3.org/2006/time#ProperInterval"
-    ],
-    "http://www.w3.org/2006/time#hasBeginning": [
-      {
-        "@id": "_:N74e6b4b4b3f74df7a0a863331facd4cd"
-      }
-    ]
-  },
-  {
-    "@id": "_:N74e6b4b4b3f74df7a0a863331facd4cd",
-    "http://www.w3.org/2006/time#inXSDDate": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2003-07-05"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#Adequacy-EU-GG",
-    "@type": [
-      "https://w3id.org/dpv/dpv-owl#Law",
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/dpv/dpv-owl/dpv-gdpr#A45-3"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-03-30"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Harshvardhan J. Pandit"
-      }
-    ],
-    "http://purl.org/dc/terms/temporal": [
-      {
-        "@id": "_:N0bb9b7238dfe4b389bf2fb23002c34ff"
-      }
-    ],
-    "http://purl.org/dc/terms/title": [
-      {
-        "@language": "en",
-        "@value": "EU Adequacy Decision for Guernsey"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://xmlns.com/foaf/0.1/homepage": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-        "@value": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32003D0821"
-      }
-    ],
-    "https://w3id.org/dpv/dpv-owl#hasJurisdiction": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#GG"
-      }
-    ]
-  },
-  {
-    "@id": "_:N0bb9b7238dfe4b389bf2fb23002c34ff",
-    "@type": [
-      "http://www.w3.org/2006/time#ProperInterval"
-    ],
-    "http://www.w3.org/2006/time#hasBeginning": [
-      {
-        "@id": "_:Nce397f0da0a44c40bbed16efc4679492"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nce397f0da0a44c40bbed16efc4679492",
-    "http://www.w3.org/2006/time#inXSDDate": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2003-11-21"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#Adequacy-EU-AD",
-    "@type": [
-      "https://w3id.org/dpv/dpv-owl#Law",
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/dpv/dpv-owl/dpv-gdpr#A45-3"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-03-30"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Harshvardhan J. Pandit"
-      }
-    ],
-    "http://purl.org/dc/terms/temporal": [
-      {
-        "@id": "_:Ne0a309a0076648bc8261b12f020a45bf"
-      }
-    ],
-    "http://purl.org/dc/terms/title": [
-      {
-        "@language": "en",
-        "@value": "EU Adequacy Decision for Andorra"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://xmlns.com/foaf/0.1/homepage": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-        "@value": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32010D0625?"
-      }
-    ],
-    "https://w3id.org/dpv/dpv-owl#hasJurisdiction": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#AD"
-      }
-    ]
-  },
-  {
-    "@id": "_:Ne0a309a0076648bc8261b12f020a45bf",
-    "@type": [
-      "http://www.w3.org/2006/time#ProperInterval"
-    ],
-    "http://www.w3.org/2006/time#hasBeginning": [
-      {
-        "@id": "_:N8f4b8f4af0584c4887e5c3169a15a212"
-      }
-    ]
-  },
-  {
-    "@id": "_:N8f4b8f4af0584c4887e5c3169a15a212",
-    "http://www.w3.org/2006/time#inXSDDate": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2010-10-21"
       }
     ]
   }

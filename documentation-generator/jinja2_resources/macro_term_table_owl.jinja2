@@ -1,5 +1,6 @@
-{% macro table_classes(term_list, prefix=None) %}
-  <h3>Classes</h3>
+{% macro table_classes(term_list, prefix=None, skip_heading=False) %}
+  {% if not skip_heading %}<h3>Classes</h3>
+  {% endif %}
     <p>
       {% for term in term_list | sort(attribute='iri') %}
       <code><a href="#{% if prefix %}{{prefix}}-{% endif %}{{term.iri|fragment_this}}">{{term.rdfs_label}}</a></code>{{" |" if not loop.last }}
@@ -13,11 +14,15 @@
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`{{ term.iri }}`</td>
+            <td><code>{{ term.iri }}</code></td>
           </tr>
           <tr>
             <td>Term:</td>
             <td><code>{% if not prefix %}<dfn>{{term.iri|fragment_this}}</dfn>{% else %}{{term.iri|fragment_this}}{% endif %}</code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>{{term.rdfs_label}}</td>
           </tr>
           <tr>
             <td>Definition:</td>
@@ -51,6 +56,12 @@
             </td>
           </tr>
           {% endif %}
+          {% if term.rdf_value %}
+          <tr>
+            <td>rdf:value</td>
+            <td>{{ term.rdf_value }}</td>
+          </tr>
+          {% endif %}
           {% if term.rdfs_comment %}
           <tr>
             <td>Note:</td>
@@ -69,6 +80,11 @@
             </td>
           </tr>
           {% endif %}
+          {% for prop in term.metadata %}
+            {% if prop.startswith('dpvo_') %}
+          <tr><td>{{ prop.replace('_',':') }}</td><td>{{ term|attr(prop)|prefix_this }}</td></tr>
+            {% endif %}
+          {% endfor %}
           <tr>
             <td>Created:</td>
             <td><time>{{term.dct_created}}</time></td>
@@ -109,8 +125,8 @@
     {% endfor %}
 {% endmacro %}
 
-{% macro table_properties(term_list, prefix=None) %}
-  <h3>Properties</h3>
+{% macro table_properties(term_list, prefix=None, skip_heading=False) %}
+  {% if not skip_heading %}<h3>Properties</h3>{% endif %}
     <p>
       {% for term in term_list | sort(attribute='iri') %}
       <code><a href="#{% if prefix %}{{prefix}}-{% endif %}{{term.iri|fragment_this}}">{{term.rdfs_label}}</a></code> |
@@ -129,6 +145,10 @@
           <tr>
             <td>Term:</td>
             <td><code>{% if not prefix %}<dfn>{{term.iri|fragment_this}}</dfn>{% else %}{{term.iri|fragment_this}}{% endif %}</code></td>
+          </tr>
+          <tr>
+            <td>Label:</td>
+            <td>{{term.rdfs_label}}</td>
           </tr>
           <tr>
             <td>Description:</td>
