@@ -17,7 +17,7 @@
     subjectPrefix: "[primer]",
     doJsonLd: true,
     maxToclevel: 3,
-    // GitHub: "https://GitHub.com/w3c/dpv/",
+    github: "w3c/dpv",
     GitHub: {
       repoURL: "https://GitHub.com/<coolharsh55/dpv-x",
       branch: "master"
@@ -75,7 +75,7 @@
     "title": "Rights Extension for Data Privacy Vocabulary"
   },
   "RIGHTS-EU": {
-    "href": "https://www.w3id.org/dpv/rights",
+    "href": "https://www.w3id.org/dpv/rights/eu",
     "title": "Extension providing EU Rights"
   },
   "__002": "DPV-SKOS Family",
@@ -413,7 +413,12 @@
       <li>Self-contained examples that illustrate how the concepts and data models provided by DPV can represent information associated with personal data handling; and</li>
       <li>Guidance towards application of DPV in use-cases and technologies.</li>
     </ul>
-    <section id="dpv-document-family" class="noTOC">
+    <section id="dpv-v0.8.1-rc" class="note">
+        <h2>Call for Comments/Feedbacks for DPV v1.0 release</h2>
+        <p>Please provide your comments by <strong>15-OCT-2022</strong> via <a href="https://github.com/w3c/dpv/issues/50">GitHub</a> or <a href="https://lists.w3.org/Archives/Public/public-dpvcg/">public-dpvcg@w3.org</a> (mailing list).</p>
+        <p>While v0.8.1 is a regular 0.x style release, it also acts as the v1.0 release candidate. This means if there are no major issues raised and unable to be resolved, including missing parts, errors or bugs, or requirements that must be added, then after 15-OCT-2022, this version will be re-released as DPV v1.0 along with any further enhancements, fixes, minor additions, or documentations that have been developed until then.</p>
+    </section>
+<section id="dpv-document-family" class="noTOC">
     <h2>DPV Family of Documents</h2>
     <ul>
       <li>[[[DPV-Primer]]]: (this document) An introductory document for DPV's concepts and taxonomies.
@@ -428,7 +433,6 @@
         <li>[[[RISK]]]  serialisations: [[RISK-SKOS]], [[RISK-OWL]]</li>
         </ul></li>
       <li>[[[DPV-GUIDES]]]: <ul>
-        <li>[[[DPV-GUIDE-Serialisations]]] </li>
         <li>[[[DPV-GUIDE-OWL2]]] </li>
         </ul></li>
       <li>Other Resources:<ul>
@@ -1595,6 +1599,7 @@ ex:UserConsent a dpv:ExpressedConsent .
 
     <section>
       <h4>Consent Status</h4>
+      <div class="issue" title="todo: Consent Status">
     </section>
 
 <section>

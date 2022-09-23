@@ -23,6 +23,7 @@ IMPORT_DPV_TECH_PATH = '../dpv-tech/dpv-tech.ttl'
 EXPORT_DPV_TECH_HTML_PATH = '../dpv-tech'
 IMPORT_RIGHTS_EU_PATH = '../rights/eu/rights-eu.ttl'
 EXPORT_RIGHTS_EU_HTML_PATH = '../rights/eu'
+EXPORT_RIGHTS_HTML_PATH = '../rights'
 
 import json
 from rdflib import Graph, Namespace
@@ -34,6 +35,8 @@ import logging
 logging.basicConfig(
     level=logging.DEBUG, format='%(levelname)s - %(funcName)s :: %(lineno)d - %(message)s')
 DEBUG = logging.debug
+
+from vocab_management import generate_author_affiliation
 
 TEMPLATE_DATA = {}
 
@@ -49,9 +52,9 @@ with open(f'{EXPORT_DPV_HTML_PATH}/proposed.json') as fd:
 def load_data(label, filepath):
     DEBUG(f'loading data for {label}')
     g = Graph()
-    g.load(filepath, format='turtle')
+    g.parse(filepath, format='turtle')
     G = DataGraph()
-    G.load(g)
+    G.parse(g)
     G.graph.ns = { k:v for k,v in G.graph.namespaces() }
     TEMPLATE_DATA[f'{label}_classes'] = G.get_instances_of('dpv_Concept')
     TEMPLATE_DATA[f'{label}_properties'] = G.get_instances_of('dpv_Relation')
@@ -100,6 +103,7 @@ JINJA2_FILTERS = {
     'prefix_this': prefix_this,
     'subclasses': get_subclasses,
     'saved_label': saved_label,
+    'generate_author_affiliation': generate_author_affiliation,
 }
 
 template_loader = FileSystemLoader(searchpath='./jinja2_resources')
@@ -133,8 +137,8 @@ load_data('consent', f'{IMPORT_DPV_MODULES_PATH}/consent.ttl')
 load_data('consent_types', f'{IMPORT_DPV_MODULES_PATH}/consent_types.ttl')
 load_data('consent_status', f'{IMPORT_DPV_MODULES_PATH}/consent_status.ttl')
 g = Graph()
-g.load(f'{IMPORT_DPV_PATH}', format='turtle')
-G.load(g)
+g.parse(f'{IMPORT_DPV_PATH}', format='turtle')
+G.parse(g)
 
 # DPV: generate HTML
 
@@ -158,8 +162,8 @@ load_data('rights', f'{IMPORT_DPV_GDPR_MODULES_PATH}/rights.ttl')
 load_data('data_transfers', f'{IMPORT_DPV_GDPR_MODULES_PATH}/data_transfers.ttl')
 load_data('dpia', f'{IMPORT_DPV_GDPR_MODULES_PATH}/dpia.ttl')
 g = Graph()
-g.load(f'{IMPORT_DPV_GDPR_PATH}', format='turtle')
-G.load(g)
+g.parse(f'{IMPORT_DPV_GDPR_PATH}', format='turtle')
+G.parse(g)
 
 template = template_env.get_template('template_dpv_gdpr.jinja2')
 with open(f'{EXPORT_DPV_GDPR_HTML_PATH}/index.html', 'w+') as fd:
@@ -177,8 +181,8 @@ with open(f'{EXPORT_DPV_PD_HTML_PATH}/proposed.json') as fd:
 
 load_data('dpv_pd', f'{IMPORT_DPV_PD_PATH}')
 g = Graph()
-g.load(f'{IMPORT_DPV_PD_PATH}', format='turtle')
-G.load(g)
+g.parse(f'{IMPORT_DPV_PD_PATH}', format='turtle')
+G.parse(g)
 
 template = template_env.get_template('template_dpv_pd.jinja2')
 with open(f'{EXPORT_DPV_PD_HTML_PATH}/index.html', 'w+') as fd:
@@ -196,9 +200,9 @@ with open(f'{EXPORT_DPV_LEGAL_HTML_PATH}/proposed.json') as fd:
 def load_legal_data(label, filepath):
     DEBUG(f'loading data for {label}')
     g = Graph()
-    g.load(filepath, format='turtle')
+    g.parse(filepath, format='turtle')
     G = DataGraph()
-    G.load(g)
+    G.parse(g)
     G.graph.ns = { k:v for k,v in G.graph.namespaces() }
     # TODO: Take the instance variable so that template has contextual info
     # e.g. Law can specify jurisdiction label, authorities, etc.,
@@ -211,8 +215,8 @@ load_legal_data('authorities', f'{IMPORT_DPV_LEGAL_MODULES_PATH}/authorities.ttl
 load_legal_data('EU_EEA', f'{IMPORT_DPV_LEGAL_MODULES_PATH}/eu_eea.ttl')
 load_legal_data('EU_Adequacy', f'{IMPORT_DPV_LEGAL_MODULES_PATH}/eu_adequacy.ttl')
 g = Graph()
-g.load(f'{IMPORT_DPV_LEGAL_PATH}', format='turtle')
-G.load(g)
+g.parse(f'{IMPORT_DPV_LEGAL_PATH}', format='turtle')
+G.parse(g)
 
 template = template_env.get_template('template_dpv_legal.jinja2')
 with open(f'{EXPORT_DPV_LEGAL_HTML_PATH}/index.html', 'w+') as fd:
@@ -229,8 +233,8 @@ with open(f'{EXPORT_DPV_TECH_HTML_PATH}/proposed.json') as fd:
 
 load_data('dpv_tech', f'{IMPORT_DPV_TECH_PATH}')
 g = Graph()
-g.load(f'{IMPORT_DPV_TECH_PATH}', format='turtle')
-G.load(g)
+g.parse(f'{IMPORT_DPV_TECH_PATH}', format='turtle')
+G.parse(g)
 template = template_env.get_template('template_dpv_tech.jinja2')
 with open(f'{EXPORT_DPV_TECH_HTML_PATH}/index.html', 'w+') as fd:
     fd.write(template.render(**TEMPLATE_DATA))
@@ -251,8 +255,8 @@ load_data('risk_controls', f'{IMPORT_RISK_MODULES_PATH}/risk_controls.ttl')
 load_data('risk_assessment', f'{IMPORT_RISK_MODULES_PATH}/risk_assessment.ttl')
 load_data('risk_methodology', f'{IMPORT_RISK_MODULES_PATH}/risk_methodology.ttl')
 g = Graph()
-g.load(f'{IMPORT_RISK_PATH}', format='turtle')
-G.load(g)
+g.parse(f'{IMPORT_RISK_PATH}', format='turtle')
+G.parse(g)
 
 template = template_env.get_template('template_risk.jinja2')
 with open(f'{EXPORT_RISK_HTML_PATH}/index.html', 'w+') as fd:
@@ -269,8 +273,8 @@ with open(f'{EXPORT_RIGHTS_EU_HTML_PATH}/proposed.json') as fd:
 
 load_data('rights_eu', f'{IMPORT_RIGHTS_EU_PATH}')
 g = Graph()
-g.load(f'{IMPORT_RIGHTS_EU_PATH}', format='turtle')
-G.load(g)
+g.parse(f'{IMPORT_RIGHTS_EU_PATH}', format='turtle')
+G.parse(g)
 
 template = template_env.get_template('template_rights_eu.jinja2')
 with open(f'{EXPORT_RIGHTS_EU_HTML_PATH}/index.html', 'w+') as fd:
@@ -279,5 +283,13 @@ DEBUG(f'wrote RIGHTS-EU spec at f{EXPORT_RIGHTS_EU_HTML_PATH}/index.html')
 with open(f'{EXPORT_RIGHTS_EU_HTML_PATH}/rights-eu.html', 'w+') as fd:
     fd.write(template.render(**TEMPLATE_DATA))
 DEBUG(f'wrote RIGHTS-EU spec at f{EXPORT_RIGHTS_EU_HTML_PATH}/rights-eu.html')
+
+template = template_env.get_template('template_rights.jinja2')
+with open(f'{EXPORT_RIGHTS_HTML_PATH}/index.html', 'w+') as fd:
+    fd.write(template.render())
+DEBUG(f'wrote RIGHTS spec at f{EXPORT_RIGHTS_HTML_PATH}/index.html')
+with open(f'{EXPORT_RIGHTS_HTML_PATH}/rights.html', 'w+') as fd:
+    fd.write(template.render())
+DEBUG(f'wrote RIGHTS spec at f{EXPORT_RIGHTS_HTML_PATH}/rights.html')
 
 DEBUG('--- END ---')

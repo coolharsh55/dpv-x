@@ -3,11 +3,25 @@ Data Privacy Vocabularies and Controls Community Group (DPVCG) repository
 
 [Community Group](https://www.w3.org/community/dpvcg/) | [(W3C) wiki](https://www.w3.org/community/dpvcg/wiki/Main_Page)
 
+> **Call for Comments/Feedbacks for DPV v1.0 release**
+>Please provide your comments by **15-OCT-2022** via [GitHub](https://github.com/w3c/dpv/issues/50) or public-dpvcg@w3.org (mailing list).
+
 The mission of the W3C Data Privacy Vocabularies and Controls CG (DPVCG) is to develop a taxonomy of privacy and data protection related terms, which include in particular terms from the new European General Data Protection Regulation (GDPR), such as a taxonomy of personal data as well as a classification of purposes (i.e., purposes for data collection), and events of disclosures, consent, and processing such personal data.
 
 > Newcomers to the DPV are recommended to start with the [Primer](https://w3id.org/dpv/primer) to familiarise themselves with the concepts, semantics, and usefulness of the DPV.
 
 License: All work produced by DPVCG and provided through this repo or elsewhere is provided by contributors under the [W3C Document License](https://www.w3.org/Consortium/Legal/2015/doc-license). A copy of the license is provided in the [LICENSE.md](./LICENSE.md) file.
+
+## Releases
+
+> [latest release](https://github.com/w3c/dpv/releases/latest)
+
+Releases are provided through the GitHub feature at [https://github.com/w3c/dpv/releases](https://github.com/w3c/dpv/releases). These contained zipped collections of DPV specifications, modules, extensions, and accompanying documents, categorised by serialisation. Currently, the following types of releases are provided:
+
+- dpv (`dpv.zip`) : The core and canocical DPV specification serialised as a SKOS collection of terms
+- dpv-skos (`dpv-skos.zip`) : DPV serialised using RDFS and SKOS semantics
+- dpv-owl (`dpv-owl.zip`) : DPV serialised using OWL2 semantics
+- dpv (`dpv.xlsx`) : DPV's terms provided in a spreadsheet
 
 ## DPV Family of Documents
 
@@ -28,6 +42,10 @@ License: All work produced by DPVCG and provided through this repo or elsewhere 
 -   [GDPR Extension for Data Privacy Vocabulary (DPV-GDPR)](https://www.w3id.org/dpv/dpv-gdpr): extends DPV concepts for GDPR
 -   [Personal Data Categories Extension for Data Privacy Vocabulary (DPV-PD)](https://www.w3id.org/dpv/dpv-pd)
 -   [Legal Extension providing Jurisdictions, Laws, and Authorities for Data Privacy Vocabulary (DPV-LEGAL)](https://www.w3id.org/dpv/dpv-legal)
+-   [Risk Extension providing concepts related to risk assessment and management (RISK)](https://www.w3id.org/dpv/risk)
+-   [Rights Extension providing concepts related to rights (RIGHTS)](https://www.w3id.org/dpv/rights)
+
+**Guides and Tutorials**
 -   [Guidelines for Adoption and Use of DPV](https://w3id.org/dpv/guides): [Using DPV in OWL2](https://w3id.org/dpv/guides/dpv-owl)
 
 **Other Resources:**
@@ -87,7 +105,7 @@ The development and maintainence of DPV takes place primarily through a shared s
 
 Therefore, whenever adding a new term or changing existing ones, the following steps are recommended to update the DPV vocabulary and documentation:
 
-1. Make changes appropriately in the shared spreadsheet. The links to this are available to the DPVCG members.
+1. Make changes appropriately in the shared spreadsheet. The links to this are available to the DPVCG members. For others, please see the CSV files in `documentation_generator/vocab_csv`. Ideally, create an GitHub issue for discussions and follow ups.
 2. Use the [documentation-generator](https://github.com/w3c/dpv/tree/master/documentation-generator) tooling to download the spreadsheet, generate RDF, test it, generate HTML output. 
 3. Manually inspect whether the changes have been made. Tools, scripts, and software in general can propogate errors silently. 
 4. The variables and parameters in  [documentation-generator](https://github.com/w3c/dpv/tree/master/documentation-generator) tooling can be used to define the path where files are exported to can be set to the `dpv` repository to make changes in this directory. For e.g. `EXPORT_DPV_HTML_PATH = ~/code/dpvcg/dpv` will generate the HTML documentation in the `dpv` directory. 
