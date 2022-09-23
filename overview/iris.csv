@@ -1,0 +1,493 @@
+label,x
+SupraNationalAuthority,https://w3id.org/dpv#SupraNationalAuthority
+Compliance Unknown,https://w3id.org/dpv#ComplianceUnknown
+Storage Deletion,https://w3id.org/dpv#StorageDeletion
+Sell Data to Third Parties,https://w3id.org/dpv#SellDataToThirdParties
+Cybersecurity Assessments,https://w3id.org/dpv#CybersecurityAssessments
+Audit Approved,https://w3id.org/dpv#AuditApproved
+SingularScaleOfDataSubjects,https://w3id.org/dpv#SingularScaleOfDataSubjects
+Structure,https://w3id.org/dpv#Structure
+Consequence of Failure,https://w3id.org/dpv#ConsequenceOfFailure
+Data Subject,https://w3id.org/dpv#DataSubject
+Vital Interest of Natural Person,https://w3id.org/dpv#VitalInterestOfNaturalPerson
+Use,https://w3id.org/dpv#Use
+Legitimate Interest Assessment,https://w3id.org/dpv#LegitimateInterestAssessment
+Controller-Processor Agreement,https://w3id.org/dpv#ControllerProcessorAgreement
+Uninformed Consent,https://w3id.org/dpv#UninformedConsent
+Obtain,https://w3id.org/dpv#Obtain
+Personalised Benefits,https://w3id.org/dpv#PersonalisedBenefits
+Third Party Security Procedures,https://w3id.org/dpv#ThirdPartySecurityProcedures
+Federated Locations,https://w3id.org/dpv#FederatedLocations
+Automated Decision Making,https://w3id.org/dpv#AutomatedDecisionMaking
+Security Assessments,https://w3id.org/dpv#SecurityAssessments
+LocalityScale,https://w3id.org/dpv#LocalityScale
+Privacy Notice,https://w3id.org/dpv#PrivacyNotice
+Hash-based Message Authentication Code (HMAC),https://w3id.org/dpv#HashMessageAuthenticationCode
+Create Event Recommendations,https://w3id.org/dpv#CreateEventRecommendations
+ContractualTerms,https://w3id.org/dpv#ContractualTerms
+Safeguard for Data Transfer,https://w3id.org/dpv#SafeguardForDataTransfer
+Vulnerable Data Subject,https://w3id.org/dpv#VulnerableDataSubject
+Query,https://w3id.org/dpv#Query
+Legal Basis,https://w3id.org/dpv#LegalBasis
+LargeDataVolume,https://w3id.org/dpv#LargeDataVolume
+Generate,https://w3id.org/dpv#Generate
+AcademicScientificOrganisation,https://w3id.org/dpv#AcademicScientificOrganisation
+UntilTimeDuration,https://w3id.org/dpv#UntilTimeDuration
+Regularity of Re-certification,https://w3id.org/dpv#RegularityOfRecertification
+Organisational Unit,https://w3id.org/dpv#OrganisationalUnit
+Legitimate Interest of Third Party,https://w3id.org/dpv#LegitimateInterestOfThirdParty
+Records of Activities,https://w3id.org/dpv#RecordsOfActivities
+Necessity,https://w3id.org/dpv#Necessity
+MaintainFraudDatabase,https://w3id.org/dpv#MaintainFraudDatabase
+Continous Frequency,https://w3id.org/dpv#ContinousFrequency
+Official Authority of Controller,https://w3id.org/dpv#OfficialAuthorityOfController
+Collect,https://w3id.org/dpv#Collect
+Human Involvement,https://w3id.org/dpv#HumanInvolvement
+Renewed Consent Given,https://w3id.org/dpv#RenewedConsentGiven
+Digital Rights Management,https://w3id.org/dpv#DigitalRightsManagement
+Location Locality,https://w3id.org/dpv#LocationLocality
+Fixed Multiple Locations,https://w3id.org/dpv#FixedMultipleLocations
+Incident Management Procedures,https://w3id.org/dpv#IncidentManagementProcedures
+Legal Entity,https://w3id.org/dpv#LegalEntity
+Likelihood,https://w3id.org/dpv#Likelihood
+Security Method,https://w3id.org/dpv#SecurityMethod
+Evaluation and Scoring,https://w3id.org/dpv#EvaluationScoring
+Communication for Customer Care,https://w3id.org/dpv#CommunicationForCustomerCare
+Vital Interest,https://w3id.org/dpv#VitalInterest
+Asymmetric Encryption,https://w3id.org/dpv#AsymmetricEncryption
+Legal Compliance,https://w3id.org/dpv#LegalCompliance
+Retrieve,https://w3id.org/dpv#Retrieve
+Partially Compliant,https://w3id.org/dpv#PartiallyCompliant
+Collected Personal Data,https://w3id.org/dpv#CollectedPersonalData
+Message Authentication Codes (MAC),https://w3id.org/dpv#MessageAuthenticationCodes
+Adapt,https://w3id.org/dpv#Adapt
+Quantum Cryptography,https://w3id.org/dpv#QuantumCryptography
+Staff Training,https://w3id.org/dpv#StaffTraining
+Human Involvement for Oversight,https://w3id.org/dpv#HumanInvolvementForOversight
+GlobalScale,https://w3id.org/dpv#GlobalScale
+Within Device,https://w3id.org/dpv#WithinDevice
+Consent Notice,https://w3id.org/dpv#ConsentNotice
+Virtualisation Security,https://w3id.org/dpv#VirtualisationSecurity
+TemporalDuration,https://w3id.org/dpv#TemporalDuration
+Data Transfer Legal Basis,https://w3id.org/dpv#DataTransferLegalBasis
+Sub-Processor Agreement,https://w3id.org/dpv#SubProcessorAgreement
+Professional Training,https://w3id.org/dpv#ProfessionalTraining
+Network Security Protocols,https://w3id.org/dpv#NetworkSecurityProtocols
+Trusted Execution Environments,https://w3id.org/dpv#TrustedExecutionEnvironments
+Legitimate Interest of Controller,https://w3id.org/dpv#LegitimateInterestOfController
+Research and Development,https://w3id.org/dpv#ResearchAndDevelopment
+Disclose by Transmission,https://w3id.org/dpv#DiscloseByTransmission
+Cryptographic Authentication,https://w3id.org/dpv#CryptographicAuthentication
+Monotonic Counter Pseudoanonymisation,https://w3id.org/dpv#MonotonicCounterPseudoanonymisation
+De-Identification,https://w3id.org/dpv#DeIdentification
+Processing,https://w3id.org/dpv#Processing
+Enforce Access Control,https://w3id.org/dpv#EnforceAccessControl
+Consent Refused,https://w3id.org/dpv#ConsentRefused
+Storage Location,https://w3id.org/dpv#StorageLocation
+Natural Person,https://w3id.org/dpv#NaturalPerson
+Password Authentication,https://w3id.org/dpv#PasswordAuthentication
+Analytics,https://w3id.org/dpv#ServiceUsageAnalytics
+NonProfitOrganisation,https://w3id.org/dpv#NonProfitOrganisation
+Consultation with Data Subject,https://w3id.org/dpv#ConsultationWithDataSubject
+Context,https://w3id.org/dpv#Context
+Scale,https://w3id.org/dpv#Scale
+Data Controller,https://w3id.org/dpv#DataController
+Consultation with DPO,https://w3id.org/dpv#ConsultationWithDPO
+Non Compliant,https://w3id.org/dpv#NonCompliant
+Compliance Violation,https://w3id.org/dpv#ComplianceViolation
+Complete Anonymisation,https://w3id.org/dpv#CompleteAnonymisation
+Align,https://w3id.org/dpv#Align
+NonCitizen,https://w3id.org/dpv#NonCitizen
+Fraud Prevention and Detection,https://w3id.org/dpv#FraudPreventionAndDetection
+Anonymised Data,https://w3id.org/dpv#AnonymisedData
+Use of Synthetic Data,https://w3id.org/dpv#UseSyntheticData
+Activity Proposed,https://w3id.org/dpv#ActivityProposed
+RegionalAuthority,https://w3id.org/dpv#RegionalAuthority
+Location,https://w3id.org/dpv#Location
+Activity Monitoring,https://w3id.org/dpv#ActivityMonitoring
+Post-Quantum Cryptography,https://w3id.org/dpv#PostQuantumCryptography
+Symmetric Cryptography,https://w3id.org/dpv#SymmetricCryptography
+RNG Pseudoanonymisation,https://w3id.org/dpv#RNGPseudoanonymisation
+Primary Importance,https://w3id.org/dpv#PrimaryImportance
+Impact Assessment,https://w3id.org/dpv#ImpactAssessment
+Transfer,https://w3id.org/dpv#Transfer
+Disseminate,https://w3id.org/dpv#Disseminate
+Compliance Status,https://w3id.org/dpv#ComplianceStatus
+Data Processing Records,https://w3id.org/dpv#DataProcessingRecords
+Automated Processing with Human Verification,https://w3id.org/dpv#AutomatedProcessingWithHumanVerification
+Audit Rejected,https://w3id.org/dpv#AuditRejected
+Fully Randomised Pseudonymisation,https://w3id.org/dpv#FullyRandomisedPseudonymisation
+Optimisation for Controller,https://w3id.org/dpv#OptimisationForController
+Data Exporter,https://w3id.org/dpv#DataExporter
+Medium Scale Processing,https://w3id.org/dpv#MediumScaleProcessing
+Pseudo-Anonymise,https://w3id.org/dpv#PseudoAnonymise
+Requested Service Provision,https://w3id.org/dpv#RequestedServiceProvision
+Customer Order Management,https://w3id.org/dpv#CustomerOrderManagement
+Entity,https://w3id.org/dpv#Entity
+Consultation,https://w3id.org/dpv#Consultation
+Educational Training,https://w3id.org/dpv#EducationalTraining
+Consent Status Invalid for Processing,https://w3id.org/dpv#ConsentStatusInvalidForProcessing
+Anonymisation,https://w3id.org/dpv#Anonymisation
+Non-Public Data Source,https://w3id.org/dpv#NonPublicDataSource
+Observe,https://w3id.org/dpv#Observe
+Optimisation for Consumer,https://w3id.org/dpv#OptimisationForConsumer
+Harm,https://w3id.org/dpv#Harm
+Material Damage,https://w3id.org/dpv#MaterialDamage
+Assessment,https://w3id.org/dpv#Assessment
+Credential Management,https://w3id.org/dpv#CredentialManagement
+Adult,https://w3id.org/dpv#Adult
+Record Management,https://w3id.org/dpv#RecordManagement
+Encryption in Transfer,https://w3id.org/dpv#EncryptionInTransfer
+SingularFrequency,https://w3id.org/dpv#SingularFrequency
+Data Processor,https://w3id.org/dpv#DataProcessor
+Commercial Research,https://w3id.org/dpv#CommercialResearch
+Storage Condition,https://w3id.org/dpv#StorageCondition
+Intrusion Detection System,https://w3id.org/dpv#IntrusionDetectionSystem
+Data Subject Right,https://w3id.org/dpv#DataSubjectRight
+Differential Privacy,https://w3id.org/dpv#DifferentialPrivacy
+Third Party,https://w3id.org/dpv#ThirdParty
+Region,https://w3id.org/dpv#Region
+Sell Products,https://w3id.org/dpv#SellProducts
+Alter,https://w3id.org/dpv#Alter
+Consequence,https://w3id.org/dpv#Consequence
+Consent,https://w3id.org/dpv#Consent
+Joint Data Controllers Agreement,https://w3id.org/dpv#JointDataControllersAgreement
+Storage Restoration,https://w3id.org/dpv#StorageRestoration
+Pseudo-anonymised Data,https://w3id.org/dpv#PseudoAnonymisedData
+Member,https://w3id.org/dpv#Member
+Analyse,https://w3id.org/dpv#Analyse
+International Organisation,https://w3id.org/dpv#InternationalOrganisation
+Data Anonymisation Technique,https://w3id.org/dpv#DataAnonymisationTechnique
+Expressed Consent,https://w3id.org/dpv#ExpressedConsent
+Purpose,https://w3id.org/dpv#Purpose
+Monitoring Policies,https://w3id.org/dpv#MonitoringPolicies
+Tourist,https://w3id.org/dpv#Tourist
+Legitimate Interest,https://w3id.org/dpv#LegitimateInterest
+Identify and Repair Impairments,https://w3id.org/dpv#IdentifyRectifyImpairments
+Code of Conduct,https://w3id.org/dpv#CodeOfConduct
+Joint Data Controllers,https://w3id.org/dpv#JointDataControllers
+Private Information Retrieval,https://w3id.org/dpv#PrivateInformationRetrieval
+Organise,https://w3id.org/dpv#Organise
+Risk Mitigation Measure,https://w3id.org/dpv#RiskMitigationMeasure
+Customer Care,https://w3id.org/dpv#CustomerCare
+GovernmentalOrganisation,https://w3id.org/dpv#GovernmentalOrganisation
+Service Provision,https://w3id.org/dpv#ServiceProvision
+Enforce Security,https://w3id.org/dpv#EnforceSecurity
+Technical Measure,https://w3id.org/dpv#TechnicalMeasure
+Data Protection Training,https://w3id.org/dpv#DataProtectionTraining
+Law,https://w3id.org/dpv#Law
+Activity Halted,https://w3id.org/dpv#ActivityHalted
+Asset Management Procedures,https://w3id.org/dpv#AssetManagementProcedures
+Citizen,https://w3id.org/dpv#Citizen
+Not Required,https://w3id.org/dpv#NotRequired
+Asymmetric Cryptography,https://w3id.org/dpv#AsymmetricCryptography
+Data Subject Scale,https://w3id.org/dpv#DataSubjectScale
+Compliance Indeterminate,https://w3id.org/dpv#ComplianceIndeterminate
+Consent Expired,https://w3id.org/dpv#ConsentExpired
+Cybersecurity Training,https://w3id.org/dpv#CybersecurityTraining
+Encryption in Rest,https://w3id.org/dpv#EncryptionInRest
+Legal Agreement,https://w3id.org/dpv#LegalAgreement
+Audit Conditionally Approved,https://w3id.org/dpv#AuditConditionallyApproved
+Disclose,https://w3id.org/dpv#Disclose
+Optimise User Interface,https://w3id.org/dpv#OptimiseUserInterface
+Organisation Governance,https://w3id.org/dpv#OrganisationGovernance
+Consent Withdrawn,https://w3id.org/dpv#ConsentWithdrawn
+Guardian(s) of Data Subject,https://w3id.org/dpv#GuardianOfDataSubject
+Delivery of Goods,https://w3id.org/dpv#DeliveryOfGoods
+Employee,https://w3id.org/dpv#Employee
+Right,https://w3id.org/dpv#Right
+Restrict,https://w3id.org/dpv#Restrict
+Non-Personal Data,https://w3id.org/dpv#NonPersonalData
+Seal,https://w3id.org/dpv#Seal
+Erase,https://w3id.org/dpv#Erase
+Personalised Advertising,https://w3id.org/dpv#PersonalisedAdvertising
+Implied Consent,https://w3id.org/dpv#ImpliedConsent
+Screen,https://w3id.org/dpv#Screen
+Partially Automated Processing,https://w3id.org/dpv#PartiallyAutomatedProcessing
+Network Proxy Routing,https://w3id.org/dpv#NetworkProxyRouting
+Sector,https://w3id.org/dpv#Sector
+LocalEnvironmentScale,https://w3id.org/dpv#LocalEnvironmentScale
+Consent Status Valid for Processing,https://w3id.org/dpv#ConsentStatusValidForProcessing
+HugeScaleOfDataSubjects,https://w3id.org/dpv#HugeScaleOfDataSubjects
+Audit Requested,https://w3id.org/dpv#AuditRequested
+Vital Interest of Data Subject,https://w3id.org/dpv#VitalInterestOfDataSubject
+Disaster Recovery Procedures,https://w3id.org/dpv#DisasterRecoveryProcedures
+Move,https://w3id.org/dpv#Move
+Audit Status,https://w3id.org/dpv#AuditStatus
+Transmit,https://w3id.org/dpv#Transmit
+Targeted Advertising,https://w3id.org/dpv#TargetedAdvertising
+Vulnerability Testing Methods,https://w3id.org/dpv#VulnerabilityTestingMethods
+Personal Data Handling,https://w3id.org/dpv#PersonalDataHandling
+Data Volume,https://w3id.org/dpv#DataVolume
+Justification,https://w3id.org/dpv#Justification
+Technical and Organisational Measure,https://w3id.org/dpv#TechnicalOrganisationalMeasure
+Certification and Seal,https://w3id.org/dpv#CertificationSeal
+Cryptographic Key Management,https://w3id.org/dpv#CryptographicKeyManagement
+Logging Policies,https://w3id.org/dpv#LoggingPolicies
+Incident Reporting Communication,https://w3id.org/dpv#IncidentReportingCommunication
+SmallScaleOfDataSubjects,https://w3id.org/dpv#SmallScaleOfDataSubjects
+SporadicScaleOfDataSubjects,https://w3id.org/dpv#SporadicScaleOfDataSubjects
+Mentally Vulnerable Data Subject,https://w3id.org/dpv#MentallyVulnerableDataSubject
+Student,https://w3id.org/dpv#Student
+Symmetric Encryption,https://w3id.org/dpv#SymmetricEncryption
+Authentication using ABC,https://w3id.org/dpv#Authentication-ABC
+Automated Processing with Human Oversight,https://w3id.org/dpv#AutomatedProcessingWithHumanOversight
+Authorisation Procedure,https://w3id.org/dpv#AuthorisationProcedure
+WebBrowser Security,https://w3id.org/dpv#WebBrowserSecurity
+Single Sign On,https://w3id.org/dpv#SingleSignOn
+MediumScaleOfDataSubjects,https://w3id.org/dpv#MediumScaleOfDataSubjects
+Sensitive Personal Data,https://w3id.org/dpv#SensitivePersonalData
+Social Media,https://w3id.org/dpv#SocialMediaMarketing
+Privacy Preserving Protocol,https://w3id.org/dpv#PrivacyPreservingProtocol
+Fixed Singular Location,https://w3id.org/dpv#FixedSingularLocation
+Algorithmic Logic,https://w3id.org/dpv#AlgorithmicLogic
+Biometric Authentication,https://w3id.org/dpv#BiometricAuthentication
+Technical Service Provision,https://w3id.org/dpv#TechnicalServiceProvision
+Observed Personal Data,https://w3id.org/dpv#ObservedPersonalData
+Often Frequency,https://w3id.org/dpv#OftenFrequency
+Internal Resource Optimisation,https://w3id.org/dpv#InternalResourceOptimisation
+SingularDataVolume,https://w3id.org/dpv#SingularDataVolume
+Customer Solvency Monitoring,https://w3id.org/dpv#CustomerSolvencyMonitoring
+Informed Consent,https://w3id.org/dpv#InformedConsent
+Data Processing Agreement,https://w3id.org/dpv#DataProcessingAgreement
+Consultation with Authority,https://w3id.org/dpv#ConsultationWithAuthority
+Customer Management,https://w3id.org/dpv#CustomerManagement
+Access,https://w3id.org/dpv#Access
+Organisation Compliance Management,https://w3id.org/dpv#OrganisationComplianceManagement
+HugeDataVolume,https://w3id.org/dpv#HugeDataVolume
+Data Backup Protocols,https://w3id.org/dpv#DataBackupProtocols
+Policy,https://w3id.org/dpv#Policy
+Data Protection Authority,https://w3id.org/dpv#DataProtectionAuthority
+Technology,https://w3id.org/dpv#Technology
+Homomorphic Encryption,https://w3id.org/dpv#HomomorphicEncryption
+Applicant,https://w3id.org/dpv#Applicant
+Inferred Personal Data,https://w3id.org/dpv#InferredPersonalData
+Compliance Monitoring,https://w3id.org/dpv#ComplianceMonitoring
+Small Scale Processing,https://w3id.org/dpv#SmallScaleProcessing
+Payment,https://w3id.org/dpv#Payment
+Decision Making,https://w3id.org/dpv#DecisionMaking
+Improve Existing Products and Services,https://w3id.org/dpv#ImproveExistingProductsAndServices
+NonGovernmentalOrganisation,https://w3id.org/dpv#NonGovernmentalOrganisation
+Consent Request Deferred,https://w3id.org/dpv#ConsentRequestDeferred
+Derive,https://w3id.org/dpv#Derive
+Service Optimization,https://w3id.org/dpv#ServiceOptimization
+Representative,https://w3id.org/dpv#Representative
+Remove,https://w3id.org/dpv#Remove
+Anonymise,https://w3id.org/dpv#Anonymise
+Vendor Records Management,https://w3id.org/dpv#VendorRecordsManagement
+Document Randomised Pseudonymisation,https://w3id.org/dpv#DocumentRandomisedPseudonymisation
+Create Personalized Recommendations,https://w3id.org/dpv#CreatePersonalizedRecommendations
+Service Personalization,https://w3id.org/dpv#ServicePersonalization
+Contract,https://w3id.org/dpv#Contract
+Wireless Security Protocols,https://w3id.org/dpv#WirelessSecurityProtocols
+Patient,https://w3id.org/dpv#Patient
+Modify,https://w3id.org/dpv#Modify
+Privacy by Design,https://w3id.org/dpv#PrivacyByDesign
+Vendor Selection Assessment,https://w3id.org/dpv#VendorSelectionAssessment
+Automation of Processing,https://w3id.org/dpv#AutomationOfProcessing
+Geographic Coverage,https://w3id.org/dpv#GeographicCoverage
+Background Checks,https://w3id.org/dpv#BackgroundChecks
+Communication Management,https://w3id.org/dpv#CommunicationManagement
+Secondary Importance,https://w3id.org/dpv#SecondaryImportance
+Location Fixture,https://w3id.org/dpv#LocationFixture
+Processing Context,https://w3id.org/dpv#ProcessingContext
+Data Sanitisation Technique,https://w3id.org/dpv#DataSanitisationTechnique
+Risk Management Policy,https://w3id.org/dpv#RiskManagementPolicy
+Deterministic Pseudonymisation,https://w3id.org/dpv#DeterministicPseudonymisation
+Processing Scale,https://w3id.org/dpv#ProcessingScale
+Compliant,https://w3id.org/dpv#Compliant
+Consequence as Side-Effect,https://w3id.org/dpv#ConsequenceAsSideEffect
+Data Sub-Processor,https://w3id.org/dpv#DataSubProcessor
+ForProfitOrganisation,https://w3id.org/dpv#ForProfitOrganisation
+Sell Insights from Data,https://w3id.org/dpv#SellInsightsFromData
+Risk Management Process,https://w3id.org/dpv#RiskManagementProcess
+Risk Management Plan,https://w3id.org/dpv#RiskManagementPlan
+Large Scale Processing,https://w3id.org/dpv#LargeScaleProcessing
+Customer,https://w3id.org/dpv#Customer
+NationalAuthority,https://w3id.org/dpv#NationalAuthority
+SupraNationalUnion,https://w3id.org/dpv#SupraNationalUnion
+Consent Status,https://w3id.org/dpv#ConsentStatus
+Register of Processing Activities,https://w3id.org/dpv#RegisterOfProcessingActivities
+Design Standard,https://w3id.org/dpv#DesignStandard
+Assess,https://w3id.org/dpv#Assess
+Consult,https://w3id.org/dpv#Consult
+EndlessDuration,https://w3id.org/dpv#EndlessDuration
+Human Involvement for Verification,https://w3id.org/dpv#HumanInvolvementForVerification
+Account Management,https://w3id.org/dpv#AccountManagement
+Visitor,https://w3id.org/dpv#Visitor
+Document Security,https://w3id.org/dpv#DocumentSecurity
+Trusted Computing,https://w3id.org/dpv#TrustedComputing
+Consent Given,https://w3id.org/dpv#ConsentGiven
+MediumDataVolume,https://w3id.org/dpv#MediumDataVolume
+Distributed System Security,https://w3id.org/dpv#DistributedSystemSecurity
+Data Importer,https://w3id.org/dpv#DataImporter
+Participant,https://w3id.org/dpv#Participant
+User Interface Personalisation,https://w3id.org/dpv#UserInterfacePersonalisation
+Third Country,https://w3id.org/dpv#ThirdCountry
+Notice,https://w3id.org/dpv#Notice
+Activity Status,https://w3id.org/dpv#ActivityStatus
+Members and Partners Management,https://w3id.org/dpv#MemberPartnerManagement
+Increase Service Robustness,https://w3id.org/dpv#IncreaseServiceRobustness
+Consumer,https://w3id.org/dpv#Consumer
+Automated Processing with Human Input,https://w3id.org/dpv#AutomatedProcessingWithHumanInput
+Organisational Measure,https://w3id.org/dpv#OrganisationalMeasure
+Store,https://w3id.org/dpv#Store
+Consent Record,https://w3id.org/dpv#ConsentRecord
+Authentication using PABC,https://w3id.org/dpv#Authentication-PABC
+Public Interest,https://w3id.org/dpv#PublicInterest
+Direct Marketing,https://w3id.org/dpv#DirectMarketing
+Security Knowledge Training,https://w3id.org/dpv#SecurityKnowledgeTraining
+Damage,https://w3id.org/dpv#Damage
+Explicitly Expressed Consent,https://w3id.org/dpv#ExplicitlyExpressedConsent
+Audit Not Required,https://w3id.org/dpv#AuditNotRequired
+Web Security Protocols,https://w3id.org/dpv#WebSecurityProtocols
+IndustryConsortium,https://w3id.org/dpv#IndustryConsortium
+Public Data Source,https://w3id.org/dpv#PublicDataSource
+Enter Into Contract,https://w3id.org/dpv#EnterIntoContract
+Consent Invalidated,https://w3id.org/dpv#ConsentInvalidated
+SmallDataVolume,https://w3id.org/dpv#SmallDataVolume
+Innovative Use of New Technologies,https://w3id.org/dpv#InnovativeUseOfNewTechnologies
+Child,https://w3id.org/dpv#Child
+Variable Location,https://w3id.org/dpv#VariableLocation
+Make Available,https://w3id.org/dpv#MakeAvailable
+Filter,https://w3id.org/dpv#Filter
+Impact,https://w3id.org/dpv#Impact
+Counter Money Laundering,https://w3id.org/dpv#CounterMoneyLaundering
+Human Resources Management,https://w3id.org/dpv#HumanResourceManagement
+Public Relations,https://w3id.org/dpv#PublicRelations
+Consent Requested,https://w3id.org/dpv#ConsentRequested
+Audit Required,https://w3id.org/dpv#AuditRequired
+Storage Duration,https://w3id.org/dpv#StorageDuration
+Mobile Platform Security,https://w3id.org/dpv#MobilePlatformSecurity
+Hash Functions,https://w3id.org/dpv#HashFunctions
+Authentication Protocols,https://w3id.org/dpv#AuthenticationProtocols
+Zero Knowledge Authentication,https://w3id.org/dpv#ZeroKnowledgeAuthentication
+Anti-Terrorism Operations,https://w3id.org/dpv#AntiTerrorismOperations
+EconomicUnion,https://w3id.org/dpv#EconomicUnion
+Subscriber,https://w3id.org/dpv#Subscriber
+Fixed Location,https://w3id.org/dpv#FixedLocation
+Usage Control,https://w3id.org/dpv#UsageControl
+Service Order Management,https://w3id.org/dpv#ServiceRecordManagement
+Destruct,https://w3id.org/dpv#Destruct
+Privacy by Default,https://w3id.org/dpv#PrivacyByDefault
+Customer Claims Management,https://w3id.org/dpv#CustomerClaimsManagement
+Random Location,https://w3id.org/dpv#RandomLocation
+Secret Sharing Schemes,https://w3id.org/dpv#SecretSharingSchemes
+MaintainCreditRatingDatabase,https://w3id.org/dpv#MaintainCreditRatingDatabase
+User,https://w3id.org/dpv#User
+Digital Signatures,https://w3id.org/dpv#DigitalSignatures
+UntilEventDuration,https://w3id.org/dpv#UntilEventDuration
+File System Security,https://w3id.org/dpv#FileSystemSecurity
+Remote Location,https://w3id.org/dpv#RemoteLocation
+Synthetic Data,https://w3id.org/dpv#SyntheticData
+Create Product Recommendations,https://w3id.org/dpv#CreateProductRecommendations
+Special Category Personal Data,https://w3id.org/dpv#SpecialCategoryPersonalData
+Security Procedure,https://w3id.org/dpv#SecurityProcedure
+Personalisation,https://w3id.org/dpv#Personalisation
+Security Role Procedures,https://w3id.org/dpv#SecurityRoleProcedures
+Cryptographic Methods,https://w3id.org/dpv#CryptographicMethods
+Organisation Risk Management,https://w3id.org/dpv#OrganisationRiskManagement
+Personal Data,https://w3id.org/dpv#PersonalData
+Scope,https://w3id.org/dpv#Scope
+Infer,https://w3id.org/dpv#Infer
+Importance,https://w3id.org/dpv#Importance
+Personnel Hiring,https://w3id.org/dpv#PersonnelHiring
+RegionalScale,https://w3id.org/dpv#RegionalScale
+Completely Manual Processing,https://w3id.org/dpv#CompletelyManualProcessing
+Elderly Data Subject,https://w3id.org/dpv#ElderlyDataSubject
+SporadicDataVolume,https://w3id.org/dpv#SporadicDataVolume
+Decentralised Locations,https://w3id.org/dpv#DecentralisedLocations
+Advertising,https://w3id.org/dpv#Advertising
+Generated Personal Data,https://w3id.org/dpv#GeneratedPersonalData
+Effectiveness Determination Procedures,https://w3id.org/dpv#EffectivenessDeterminationProcedures
+Severity,https://w3id.org/dpv#Severity
+Optional,https://w3id.org/dpv#Optional
+Combine,https://w3id.org/dpv#Combine
+Contract Performance,https://w3id.org/dpv#ContractPerformance
+Information Flow Control,https://w3id.org/dpv#InformationFlowControl
+Record,https://w3id.org/dpv#Record
+Benefit,https://w3id.org/dpv#Benefit
+Local Location,https://w3id.org/dpv#LocalLocation
+Governance Procedures,https://w3id.org/dpv#GovernanceProcedures
+Match,https://w3id.org/dpv#Match
+Duration,https://w3id.org/dpv#Duration
+Human Involvement for Input,https://w3id.org/dpv#HumanInvolvementForInput
+Systematic Monitoring,https://w3id.org/dpv#SystematicMonitoring
+Non-Commercial Research,https://w3id.org/dpv#NonCommercialResearch
+Data,https://w3id.org/dpv#Data
+Recipient,https://w3id.org/dpv#Recipient
+Cloud Location,https://w3id.org/dpv#CloudLocation
+GuidelinesPrinciple,https://w3id.org/dpv#GuidelinesPrinciple
+Identity Management Method,https://w3id.org/dpv#IdentityManagementMethod
+Non-Disclosure Agreement (NDA),https://w3id.org/dpv#NDA
+Country,https://w3id.org/dpv#Country
+Operating System Security,https://w3id.org/dpv#OperatingSystemSecurity
+End-to-End Encryption (E2EE),https://w3id.org/dpv#EndToEndEncryption
+FixedOccurencesDuration,https://w3id.org/dpv#FixedOccurencesDuration
+Improve Internal CRM Processes,https://w3id.org/dpv#ImproveInternalCRMProcesses
+Dispute Management,https://w3id.org/dpv#DisputeManagement
+Certification,https://w3id.org/dpv#Certification
+Privacy Impact Assessment,https://w3id.org/dpv#PIA
+Vendor Management,https://w3id.org/dpv#VendorManagement
+Encryption,https://w3id.org/dpv#Encryption
+Authorisation Protocols,https://w3id.org/dpv#AuthorisationProtocols
+Safeguard,https://w3id.org/dpv#Safeguard
+Pseudo-Anonymisation,https://w3id.org/dpv#PseudoAnonymisation
+Activity Completed,https://w3id.org/dpv#ActivityCompleted
+Consent Unknown,https://w3id.org/dpv#ConsentUnknown
+Consequence of Success,https://w3id.org/dpv#ConsequenceOfSuccess
+Physical Access Control Method,https://w3id.org/dpv#PhysicalAccessControlMethod
+Legal Obligation,https://w3id.org/dpv#LegalObligation
+Authority,https://w3id.org/dpv#Authority
+Profiling,https://w3id.org/dpv#Profiling
+Access Control Method,https://w3id.org/dpv#AccessControlMethod
+Data Protection Officer,https://w3id.org/dpv#DataProtectionOfficer
+Penetration Testing Methods,https://w3id.org/dpv#PenetrationTestingMethods
+NearlyGlobalScale,https://w3id.org/dpv#NearlyGlobalScale
+Derived Personal Data,https://w3id.org/dpv#DerivedPersonalData
+Data Transfer Impact Assessment,https://w3id.org/dpv#DataTransferImpactAssessment
+JobApplicant,https://w3id.org/dpv#JobApplicant
+Identity Verification,https://w3id.org/dpv#IdentityVerification
+Organisation,https://w3id.org/dpv#Organisation
+Credit Checking,https://w3id.org/dpv#CreditChecking
+Frequency,https://w3id.org/dpv#Frequency
+Customer Relationship Management,https://w3id.org/dpv#CustomerRelationshipManagement
+NationalScale,https://w3id.org/dpv#NationalScale
+Risk,https://w3id.org/dpv#Risk
+Secure Multi-Party Computation,https://w3id.org/dpv#SecureMultiPartyComputation
+Data Source,https://w3id.org/dpv#DataSource
+MultiNationalScale,https://w3id.org/dpv#MultiNationalScale
+Immigrant,https://w3id.org/dpv#Immigrant
+Activity Ongoing,https://w3id.org/dpv#ActivityOngoing
+Marketing,https://w3id.org/dpv#Marketing
+MaintainCreditCheckingDatabase,https://w3id.org/dpv#MaintainCreditCheckingDatabase
+LargeScaleOfDataSubjects,https://w3id.org/dpv#LargeScaleOfDataSubjects
+Monitor,https://w3id.org/dpv#Monitor
+Share,https://w3id.org/dpv#Share
+Personnel Management,https://w3id.org/dpv#PersonnelManagement
+Parent(s) of Data Subject,https://w3id.org/dpv#ParentOfDataSubject
+Fully Automated Processing,https://w3id.org/dpv#FullyAutomatedProcessing
+Risk Level,https://w3id.org/dpv#RiskLevel
+Data published by Data Subject,https://w3id.org/dpv#DataPublishedByDataSubject
+Required,https://w3id.org/dpv#Required
+Data Protection Impact Assessment (DPIA),https://w3id.org/dpv#DPIA
+Registration and Authentication,https://w3id.org/dpv#RegistrationAuthentication
+Personnel Payment,https://w3id.org/dpv#PersonnelPayment
+Hardware Security Protocols,https://w3id.org/dpv#HardwareSecurityProtocols
+Transform,https://w3id.org/dpv#Transform
+Copy,https://w3id.org/dpv#Copy
+Trusted Third Party Utilisation,https://w3id.org/dpv#TrustedThirdPartyUtilisation
+Academic Research,https://w3id.org/dpv#AcademicResearch
+Third-Party Agreement,https://w3id.org/dpv#ThirdPartyAgreement
+Asylum Seeker,https://w3id.org/dpv#AsylumSeeker
+Sell Products to Data Subject,https://w3id.org/dpv#SellProductsToDataSubject
+Status,https://w3id.org/dpv#Status
+Vendor Payment,https://w3id.org/dpv#VendorPayment
+Consent Revoked,https://w3id.org/dpv#ConsentRevoked
+Multi-Factor Authentication (MFA),https://w3id.org/dpv#MultiFactorAuthentication
+Information Security Policy,https://w3id.org/dpv#InformationSecurityPolicy
+Detriment,https://w3id.org/dpv#Detriment
+Client,https://w3id.org/dpv#Client
+Acquire,https://w3id.org/dpv#Acquire
+Non-Material Damage,https://w3id.org/dpv#NonMaterialDamage
+SporadicFrequency,https://w3id.org/dpv#SporadicFrequency

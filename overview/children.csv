@@ -1,0 +1,481 @@
+concept,parent
+Data Subject,Vulnerable Data Subject
+Data Subject,NonCitizen
+Data Subject,Adult
+Data Subject,Member
+Data Subject,Tourist
+Data Subject,Citizen
+Data Subject,Guardian(s) of Data Subject
+Data Subject,Employee
+Data Subject,Student
+Data Subject,Applicant
+Data Subject,Patient
+Data Subject,Customer
+Data Subject,Visitor
+Data Subject,Participant
+Data Subject,Consumer
+Data Subject,Child
+Data Subject,Subscriber
+Data Subject,User
+Data Subject,Immigrant
+Data Subject,Parent(s) of Data Subject
+Vital Interest of Natural Person,Vital Interest of Data Subject
+Use,Retrieve
+Use,Analyse
+Use,Access
+Use,Assess
+Use,Consult
+Use,Match
+Use,Profiling
+Obtain,Generate
+Obtain,Collect
+Obtain,Observe
+Obtain,Record
+Obtain,Acquire
+Privacy Notice,Consent Notice
+Vulnerable Data Subject,Mentally Vulnerable Data Subject
+Vulnerable Data Subject,Elderly Data Subject
+Vulnerable Data Subject,Asylum Seeker
+Legal Basis,Official Authority of Controller
+Legal Basis,Vital Interest
+Legal Basis,Data Transfer Legal Basis
+Legal Basis,Consent
+Legal Basis,Legitimate Interest
+Legal Basis,Contract
+Legal Basis,Public Interest
+Legal Basis,Legal Obligation
+Records of Activities,Data Processing Records
+Necessity,Not Required
+Necessity,Optional
+Necessity,Required
+Human Involvement,Human Involvement for Oversight
+Human Involvement,Human Involvement for Verification
+Human Involvement,Human Involvement for Input
+Location Locality,Remote Location
+Location Locality,Local Location
+Legal Entity,Data Subject
+Legal Entity,Data Controller
+Legal Entity,Data Exporter
+Legal Entity,Representative
+Legal Entity,Recipient
+Legal Entity,Authority
+Legal Entity,Organisation
+Security Method,Virtualisation Security
+Security Method,Network Security Protocols
+Security Method,Use of Synthetic Data
+Security Method,Intrusion Detection System
+Security Method,Network Proxy Routing
+Security Method,Vulnerability Testing Methods
+Security Method,WebBrowser Security
+Security Method,Wireless Security Protocols
+Security Method,Document Security
+Security Method,Distributed System Security
+Security Method,Web Security Protocols
+Security Method,Mobile Platform Security
+Security Method,File System Security
+Security Method,Operating System Security
+Security Method,Penetration Testing Methods
+Security Method,Hardware Security Protocols
+Vital Interest,Vital Interest of Natural Person
+Collected Personal Data,Observed Personal Data
+Staff Training,Professional Training
+Staff Training,Educational Training
+Staff Training,Data Protection Training
+Staff Training,Cybersecurity Training
+Staff Training,Security Knowledge Training
+Human Involvement for Oversight,Automated Processing with Human Oversight
+Research and Development,Commercial Research
+Research and Development,Non-Commercial Research
+Research and Development,Academic Research
+Cryptographic Authentication,Hash-based Message Authentication Code (HMAC)
+Cryptographic Authentication,Message Authentication Codes (MAC)
+Cryptographic Authentication,Authentication using ABC
+Cryptographic Authentication,Authentication using PABC
+Processing,Use
+Processing,Obtain
+Processing,Transfer
+Processing,Organise
+Processing,Disclose
+Processing,Remove
+Processing,Store
+Processing,Transform
+Processing,Copy
+Natural Person,Data Subject
+Context,Necessity
+Context,Justification
+Context,Processing Context
+Context,Scope
+Context,Importance
+Context,Duration
+Context,Frequency
+Context,Status
+Scale,Data Subject Scale
+Scale,Data Volume
+Scale,Geographic Coverage
+Scale,Processing Scale
+Data Controller,Joint Data Controllers
+Fraud Prevention and Detection,MaintainFraudDatabase
+Fraud Prevention and Detection,Counter Money Laundering
+Location,Storage Location
+Location,Region
+Location,SupraNationalUnion
+Location,EconomicUnion
+Location,Country
+Impact Assessment,Privacy Impact Assessment
+Impact Assessment,Data Transfer Impact Assessment
+Impact Assessment,Data Protection Impact Assessment (DPIA)
+Transfer,Move
+Compliance Status,Compliance Unknown
+Compliance Status,Partially Compliant
+Compliance Status,Non Compliant
+Compliance Status,Compliance Violation
+Compliance Status,Compliance Indeterminate
+Compliance Status,Compliant
+Optimisation for Controller,Internal Resource Optimisation
+Optimisation for Controller,Improve Existing Products and Services
+Optimisation for Controller,Increase Service Robustness
+Optimisation for Controller,Improve Internal CRM Processes
+Requested Service Provision,Delivery of Goods
+Entity,Organisational Unit
+Entity,Legal Entity
+Entity,Natural Person
+Consultation,Consultation with Data Subject
+Consultation,Consultation with DPO
+Consultation,Consultation with Authority
+Consent Status Invalid for Processing,Consent Refused
+Consent Status Invalid for Processing,Consent Expired
+Consent Status Invalid for Processing,Consent Withdrawn
+Consent Status Invalid for Processing,Consent Request Deferred
+Consent Status Invalid for Processing,Consent Invalidated
+Consent Status Invalid for Processing,Consent Requested
+Consent Status Invalid for Processing,Consent Unknown
+Consent Status Invalid for Processing,Consent Revoked
+Anonymisation,Monotonic Counter Pseudoanonymisation
+Anonymisation,De-Identification
+Anonymisation,Complete Anonymisation
+Anonymisation,RNG Pseudoanonymisation
+Anonymisation,Fully Randomised Pseudonymisation
+Anonymisation,Data Anonymisation Technique
+Anonymisation,Document Randomised Pseudonymisation
+Anonymisation,Deterministic Pseudonymisation
+Anonymisation,Pseudo-Anonymisation
+Optimisation for Consumer,Optimise User Interface
+Assessment,Cybersecurity Assessments
+Assessment,Legitimate Interest Assessment
+Assessment,Security Assessments
+Assessment,Impact Assessment
+Assessment,Effectiveness Determination Procedures
+Data Processor,Data Sub-Processor
+Storage Condition,Storage Deletion
+Storage Condition,Storage Location
+Storage Condition,Storage Restoration
+Storage Condition,Storage Duration
+Sell Products,Sell Data to Third Parties
+Sell Products,Sell Insights from Data
+Sell Products,Sell Products to Data Subject
+Alter,Modify
+Consequence,Consequence of Failure
+Consequence,Consequence as Side-Effect
+Consequence,Impact
+Consequence,Consequence of Success
+Consent,Uninformed Consent
+Consent,Informed Consent
+Expressed Consent,Explicitly Expressed Consent
+Purpose,Legal Compliance
+Purpose,Research and Development
+Purpose,Record Management
+Purpose,Service Provision
+Purpose,Enforce Security
+Purpose,Organisation Governance
+Purpose,Customer Management
+Purpose,Communication Management
+Purpose,Account Management
+Purpose,Human Resources Management
+Purpose,Personalisation
+Purpose,Vendor Management
+Purpose,Marketing
+Legitimate Interest,Legitimate Interest of Third Party
+Legitimate Interest,Legitimate Interest of Controller
+Organise,Structure
+Customer Care,Communication for Customer Care
+GovernmentalOrganisation,Authority
+Service Provision,Analytics
+Service Provision,Requested Service Provision
+Service Provision,Sell Products
+Service Provision,Identify and Repair Impairments
+Service Provision,Technical Service Provision
+Service Provision,Payment
+Service Provision,Service Optimization
+Service Provision,Service Personalization
+Service Provision,Service Order Management
+Service Provision,Registration and Authentication
+Enforce Security,Enforce Access Control
+Enforce Security,Fraud Prevention and Detection
+Enforce Security,Anti-Terrorism Operations
+Enforce Security,Identity Verification
+Technical Measure,Digital Rights Management
+Technical Measure,Security Method
+Technical Measure,Activity Monitoring
+Technical Measure,Anonymisation
+Technical Measure,Data Backup Protocols
+Technical Measure,Data Sanitisation Technique
+Technical Measure,Authentication Protocols
+Technical Measure,Cryptographic Methods
+Technical Measure,Information Flow Control
+Technical Measure,Encryption
+Technical Measure,Authorisation Protocols
+Technical Measure,Access Control Method
+Data Subject Scale,SingularScaleOfDataSubjects
+Data Subject Scale,HugeScaleOfDataSubjects
+Data Subject Scale,SmallScaleOfDataSubjects
+Data Subject Scale,SporadicScaleOfDataSubjects
+Data Subject Scale,MediumScaleOfDataSubjects
+Data Subject Scale,LargeScaleOfDataSubjects
+Data Processing Records,Register of Processing Activities
+Data Processing Records,Consent Record
+Legal Agreement,ContractualTerms
+Legal Agreement,Data Processing Agreement
+Legal Agreement,Contract
+Legal Agreement,Non-Disclosure Agreement (NDA)
+Disclose,Disclose by Transmission
+Disclose,Disseminate
+Disclose,Transmit
+Disclose,Make Available
+Disclose,Share
+Organisation Governance,Organisation Compliance Management
+Organisation Governance,Members and Partners Management
+Organisation Governance,Organisation Risk Management
+Organisation Governance,Dispute Management
+Right,Data Subject Right
+Non-Personal Data,Anonymised Data
+Personalised Advertising,Targeted Advertising
+Consent Status Valid for Processing,Renewed Consent Given
+Consent Status Valid for Processing,Consent Given
+Audit Status,Audit Approved
+Audit Status,Audit Rejected
+Audit Status,Audit Conditionally Approved
+Audit Status,Audit Requested
+Audit Status,Audit Not Required
+Audit Status,Audit Required
+Data Volume,LargeDataVolume
+Data Volume,SingularDataVolume
+Data Volume,HugeDataVolume
+Data Volume,MediumDataVolume
+Data Volume,SmallDataVolume
+Data Volume,SporadicDataVolume
+Technical and Organisational Measure,Risk Mitigation Measure
+Technical and Organisational Measure,Technical Measure
+Technical and Organisational Measure,Organisational Measure
+Certification and Seal,Seal
+Certification and Seal,Certification
+Authorisation Procedure,Credential Management
+Authorisation Procedure,Identity Management Method
+Sensitive Personal Data,Special Category Personal Data
+Customer Solvency Monitoring,Credit Checking
+Informed Consent,Expressed Consent
+Informed Consent,Implied Consent
+Data Processing Agreement,Controller-Processor Agreement
+Data Processing Agreement,Sub-Processor Agreement
+Data Processing Agreement,Joint Data Controllers Agreement
+Data Processing Agreement,Third-Party Agreement
+Customer Management,Customer Order Management
+Customer Management,Customer Care
+Customer Management,Customer Solvency Monitoring
+Customer Management,Customer Claims Management
+Customer Management,Customer Relationship Management
+Policy,Risk Management Policy
+Policy,Information Security Policy
+Applicant,JobApplicant
+Decision Making,Automated Decision Making
+Derive,Infer
+Service Optimization,Optimisation for Controller
+Service Optimization,Optimisation for Consumer
+Representative,Data Protection Officer
+Remove,Erase
+Remove,Destruct
+Create Personalized Recommendations,Create Event Recommendations
+Create Personalized Recommendations,Create Product Recommendations
+Service Personalization,Personalised Benefits
+Service Personalization,Create Personalized Recommendations
+Service Personalization,User Interface Personalisation
+Contract,Enter Into Contract
+Contract,Contract Performance
+Automation of Processing,Automated Decision Making
+Automation of Processing,Human Involvement
+Automation of Processing,Automated Processing with Human Verification
+Automation of Processing,Partially Automated Processing
+Automation of Processing,Automated Processing with Human Oversight
+Automation of Processing,Algorithmic Logic
+Automation of Processing,Automated Processing with Human Input
+Automation of Processing,Completely Manual Processing
+Automation of Processing,Fully Automated Processing
+Geographic Coverage,LocalityScale
+Geographic Coverage,GlobalScale
+Geographic Coverage,LocalEnvironmentScale
+Geographic Coverage,RegionalScale
+Geographic Coverage,NearlyGlobalScale
+Geographic Coverage,NationalScale
+Geographic Coverage,MultiNationalScale
+Communication Management,Communication for Customer Care
+Location Fixture,Federated Locations
+Location Fixture,Variable Location
+Location Fixture,Fixed Location
+Location Fixture,Random Location
+Location Fixture,Decentralised Locations
+Processing Context,Evaluation and Scoring
+Processing Context,Scale
+Processing Context,Storage Condition
+Processing Context,Decision Making
+Processing Context,Automation of Processing
+Processing Context,Innovative Use of New Technologies
+Processing Context,Systematic Monitoring
+Processing Context,Data Source
+Processing Scale,Medium Scale Processing
+Processing Scale,Small Scale Processing
+Processing Scale,Large Scale Processing
+Customer,Client
+Consent Status,Consent Status Invalid for Processing
+Consent Status,Consent Status Valid for Processing
+Consult,Query
+Consult,Monitor
+Human Involvement for Verification,Automated Processing with Human Verification
+Notice,Privacy Notice
+Activity Status,Activity Proposed
+Activity Status,Activity Halted
+Activity Status,Activity Completed
+Activity Status,Activity Ongoing
+Organisational Measure,Regularity of Re-certification
+Organisational Measure,Records of Activities
+Organisational Measure,Staff Training
+Organisational Measure,Consultation
+Organisational Measure,Assessment
+Organisational Measure,Legal Agreement
+Organisational Measure,Certification and Seal
+Organisational Measure,Authorisation Procedure
+Organisational Measure,Policy
+Organisational Measure,Privacy by Design
+Organisational Measure,Notice
+Organisational Measure,Security Procedure
+Organisational Measure,Governance Procedures
+Organisational Measure,GuidelinesPrinciple
+Organisational Measure,Safeguard
+Damage,Harm
+Damage,Material Damage
+Damage,Non-Material Damage
+Impact,Damage
+Impact,Benefit
+Impact,Detriment
+Authentication Protocols,Cryptographic Authentication
+Authentication Protocols,Password Authentication
+Authentication Protocols,Single Sign On
+Authentication Protocols,Biometric Authentication
+Authentication Protocols,Zero Knowledge Authentication
+Authentication Protocols,Multi-Factor Authentication (MFA)
+Fixed Location,Fixed Multiple Locations
+Fixed Location,Fixed Singular Location
+Remote Location,Cloud Location
+Security Procedure,Third Party Security Procedures
+Security Procedure,Security Assessments
+Security Procedure,Background Checks
+Security Procedure,Risk Management Policy
+Security Procedure,Risk Management Process
+Security Procedure,Risk Management Plan
+Security Procedure,Security Role Procedures
+Security Procedure,Trusted Third Party Utilisation
+Personalisation,Personalised Advertising
+Personalisation,Service Personalization
+Cryptographic Methods,Cryptographic Authentication
+Cryptographic Methods,Differential Privacy
+Cryptographic Methods,Asymmetric Cryptography
+Cryptographic Methods,Cryptographic Key Management
+Cryptographic Methods,Homomorphic Encryption
+Cryptographic Methods,Hash Functions
+Cryptographic Methods,Zero Knowledge Authentication
+Cryptographic Methods,Digital Signatures
+Personal Data,Collected Personal Data
+Personal Data,Pseudo-anonymised Data
+Personal Data,Sensitive Personal Data
+Personal Data,Generated Personal Data
+Personal Data,Derived Personal Data
+Importance,Primary Importance
+Importance,Secondary Importance
+Advertising,Personalised Advertising
+Generated Personal Data,Inferred Personal Data
+Local Location,Within Device
+Governance Procedures,Incident Management Procedures
+Governance Procedures,Monitoring Policies
+Governance Procedures,Asset Management Procedures
+Governance Procedures,Disaster Recovery Procedures
+Governance Procedures,Logging Policies
+Governance Procedures,Incident Reporting Communication
+Governance Procedures,Compliance Monitoring
+Duration,UntilTimeDuration
+Duration,TemporalDuration
+Duration,EndlessDuration
+Duration,Storage Duration
+Duration,UntilEventDuration
+Duration,FixedOccurencesDuration
+Human Involvement for Input,Automated Processing with Human Input
+Data,Non-Personal Data
+Data,Synthetic Data
+Data,Personal Data
+Recipient,Data Processor
+Recipient,Third Party
+Recipient,Data Importer
+GuidelinesPrinciple,Code of Conduct
+GuidelinesPrinciple,Design Standard
+GuidelinesPrinciple,Privacy by Default
+Country,Third Country
+Vendor Management,Vendor Records Management
+Vendor Management,Vendor Selection Assessment
+Vendor Management,Vendor Payment
+Encryption,Asymmetric Encryption
+Encryption,Encryption in Transfer
+Encryption,Encryption in Rest
+Encryption,Symmetric Encryption
+Encryption,End-to-End Encryption (E2EE)
+Safeguard,Safeguard for Data Transfer
+Authority,SupraNationalAuthority
+Authority,RegionalAuthority
+Authority,Data Protection Authority
+Authority,NationalAuthority
+Access Control Method,Usage Control
+Access Control Method,Physical Access Control Method
+Derived Personal Data,Inferred Personal Data
+Organisation,AcademicScientificOrganisation
+Organisation,NonProfitOrganisation
+Organisation,International Organisation
+Organisation,GovernmentalOrganisation
+Organisation,NonGovernmentalOrganisation
+Organisation,ForProfitOrganisation
+Organisation,IndustryConsortium
+Credit Checking,MaintainCreditRatingDatabase
+Credit Checking,MaintainCreditCheckingDatabase
+Frequency,Continous Frequency
+Frequency,SingularFrequency
+Frequency,Often Frequency
+Frequency,SporadicFrequency
+Customer Relationship Management,Improve Internal CRM Processes
+Data Source,Non-Public Data Source
+Data Source,Public Data Source
+Data Source,Data published by Data Subject
+Marketing,Social Media
+Marketing,Direct Marketing
+Marketing,Public Relations
+Marketing,Advertising
+Personnel Management,Personnel Hiring
+Personnel Management,Personnel Payment
+Transform,Adapt
+Transform,Align
+Transform,Pseudo-Anonymise
+Transform,Alter
+Transform,Restrict
+Transform,Screen
+Transform,Derive
+Transform,Anonymise
+Transform,Filter
+Transform,Combine
+Status,Compliance Status
+Status,Audit Status
+Status,Consent Status
+Status,Activity Status

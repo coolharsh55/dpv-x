@@ -1,0 +1,9 @@
+PREFIX dpv: <https://w3id.org/dpv#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?concept
+WHERE {
+    ?x a dpv:Concept .
+    ?x skos:prefLabel ?concept .
+    FILTER NOT EXISTS { ?x skos:broader ?y } .
+}
