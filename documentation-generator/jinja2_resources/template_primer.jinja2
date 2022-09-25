@@ -1066,6 +1066,8 @@ ex:PreventTransactionFraud a dpv:Purpose ;
         <img src="img/TechnicalMeasure.png">
         <figcaption>Overview of Technical Measures in DPV</figcaption>
       </figure>
+      <p>Technical Measures are implemented through technological means, such as machine-processing or automation or tools and services that are primarily technological in nature. To distinguish these with organisational measures, consider whether the measure is for human organisation and management (which makes it <i>organisational</i>) or an implementation detail (which makes it <i>technical</i>).</p>
+      <p>Examples of technical measures include use of specific access control methods, encryption, anonymisation, security protocols, and other similar concepts.</p>
       <aside class="example" title="Protecting data using encryption and access control">
         <p>To indicate data is encrypted using the <a href="https://en.wikipedia.org/wiki/RSA_(cryptosystem)">Rivest-Shamir-Adleman (RSA) method</a>, one would extend the <a href="https://www.w3id.org/dpv#Encryption"><code>Encryption</code></a> concept within DPV to represent <code>RSA</code>, and then instantiate it with the specific implementation used (e.g. to indicate key size). Access to this data is further restricted by requiring a password or credential.</p>
         <div class="ex-skos"><pre class="nohighlight">
@@ -1085,6 +1087,8 @@ ex:RBACCredential rdf:type dpv:TechnicalMeasure ;
         <img src="img/OrganisationalMeasure.png">
         <figcaption>Overview of Technical Measures in DPV</figcaption>
       </figure>
+      <p>Organisational measures are a corresponding counterpart to technical measures, and are intended to be implemented or realised through <i>human action</i>, whether directly by an individual, teams, or through an organisation's management (hence the term <i>organisational</i>). Implementing such measures may include use of technology or a tool, for example - a security training exercise that is carried out using some software, or to use information systems such as dashboards to keep track of information. However, the concepts themselves are structured as organisational based on who or what has to <i>decide</i> or <i>implement</i> the action. If it is to be performed through a technological means, then it is a technical measure. If it is to be performed through a human or organisation management, then it is an organisational measure.</p>
+      <p>Examplese of organisational measures include staff training, policies, notices, and other such concepts - which indicate that reflect organisational decisions and actions (e.g. privacy notices, policy for how to train new recruits).</p>
       <aside class="example" title="Indicating staff training for use of Credentials">
         <p>To indicate staff are trained in the use of credentials, and that a policy exists regarding this, the use of <code>OrganisationalMeasure</code> concepts can be combined in several ways. Note that the interpretations for how staff training is associated with credentials, or contains training regarding credentials is arbitrary in notation. It is intended to demonstrate how different perspectives can be represented so as to be suitable to the organisation's documentation practices.</p>
         <div class="ex-skos"><pre class="nohighlight">
@@ -1589,7 +1593,7 @@ ex:AcmeEUOrg rdf:type dpv:LegalEntity, dpv:DataProtectionOfficer ;
         <h4>Importance and Necessity</h4>
         <p>DPV provides two subtypes of concepts to denote contextual - <code>Importance</code> and <code>Necessity</code>, which can be applied to specific contexts such as <code>PersonalDataHandling</code>, <code>Purpose</code>, <code>PersonalData</code>.</p>
         <p><code>Importance</code> is similar in application to <code>Necessity</code>, and provides a way to indicate how <i>central</i> or <i>significant</i> the indicated operation(s) are to the context (e.g. to the Controller). Subtypes of importance are <code>PrimaryImportance</code> to indicate 'main' or 'central' or 'primary' importance, and <code>SecondaryImportance</code> to indicate 'auxiliary' or 'peripheral' or 'secondary' importance.</p>
-        <p><code>Necessity</code> enables specifying whether the contextual information is <code>Required</code>, is <code>Optional</code>, or is <code>NotRequired</code>. These can be used to indicate, for example, which parts of processing operations (e.g. purposes, personal data) are optional, and whether a particular processing operation is required to be carried out.</i>
+        <p><code>Necessity</code> enables specifying whether the contextual information is <code>Required</code>, is <code>Optional</code>, or is <code>NotRequired</code>. These can be used to indicate, for example, which parts of processing operations (e.g. purposes, personal data) are optional, and whether a particular processing operation is required to be carried out.</i></p>
     <aside class="example" title="Example of Contextual Necessity">
       <p>In this example, a <code>PersonalDataHandling</code> instance is comprised of two nested <code>PersonalDataHandling</code> instances for each of the optional and required parts. The personal data category 'Account Identifier' is indicated as being required for 'Communication for Customer Care', while the use of 'Email' is optional for the same purpose.</p>
       <div class="ex-skos"><p>Example using [[DPV-SKOS]]</p><pre class="nohighlight">
@@ -1848,8 +1852,7 @@ ex:AcmeEUOrg rdf:type dpv:LegalEntity, dpv:DataProtectionOfficer ;
     <p>DPVCG was initiated as part of the <a href="https://specialprivacy.ercim.eu/">SPECIAL H2020 Project</a>, which received funding from European Union’s Horizon 2020 research and innovation programme under grant agreement No. 731601. This work and Harshvardhan J. Pandit have been funded by the Irish Research Council  Government of Ireland Postdoctoral Fellowship Grant #GOIPD/2020/790.</p>
     <p>Thanks to Georg P Krog (Signatu), Piero Bonatti (Universita' di Napoli Federico II), and Beatriz Esteves (Universidad Politécnica de Madrid) for their comments on drafts of this document.</p>
   </section>
-  <section class="appendix" id="issue-summary">
-  </section>
+  <section class="appendix" id="issue-summary"></section>
 </body>
 
 </html>
