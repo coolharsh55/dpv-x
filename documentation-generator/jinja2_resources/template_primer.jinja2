@@ -210,14 +210,14 @@
     </ul>
     {{ dpv_document_family(document='primer') }}
       {{ sotd() }}
-    <p><strong>Format for examples</strong></p>
+    <!-- <p><strong>Format for examples</strong></p>
     <p> 
     <input id="hide-skos-examples" type="button" value="Hide DPV-SKOS Examples" onclick="document.querySelectorAll('.ex-skos').forEach(x=>x.classList.toggle('invisible'))">
     <input id="hide-owl-examples" type="button" value="Hide DPV-OWL Examples" onclick="document.querySelectorAll('.ex-owl').forEach(x=>x.classList.toggle('invisible'))">
-   </p>
+   </p> -->
   </section>
-  <div class="issue" title="For each subsection, add links to visit that section in DPV spec as well as SKOS and OWL specs"></div>
-  <div class="issue" title="If there is a guide for a particular section, add a link to the guide in that section"></div>
+  <div class="issue-done" title="For each subsection, add links to visit that section in DPV spec as well as SKOS and OWL specs"></div>
+  <div class="issue-done" title="If there is a guide for a particular section, add a link to the guide in that section"></div>
   <div class="issue-done" title="Change skos:broader to skos:broader"></div>
   <section id="introduction">
     <h2>Introduction</h2>
@@ -513,12 +513,28 @@ exA:TVServiceOptimisation skos:closeMatch exB:TVServiceOptimisation .
         <img src="img/overview_PD.png"/>
         <figcaption>Indicating applicable or relevant <code>PersonalData</code></figcaption>
       </figure>
+    <blockquote>
+      <p>see more information: 
+        <a href="#personal-data">primer</a> | 
+        <a href="/dpv#vocab-personaldata">DPV</a> | 
+        <a href="/dpv-skos#vocab-personaldata">DPV-SKOS</a> | 
+        <a href="/dpv-owl#vocab-personaldata">DPV-OWL</a>
+      </p>
+    </blockquote>
     <p>‘Personal data’ refers to any data about a natural person that can be used to identify them directly or, in combination with other information, indirectly. ‘Personal data’ is also commonly referred to as ‘personally identifiable information (PII)’. However the terms should not be interchangeably used as based on definitions (e.g. those in GDPR), ‘personal data’ can be interpreted as a broader term than PII, and where PII may refer to <u>only</u> to information that can directly identify a person. DPV’s definition of personal data is based on the broadest possible definition (i.e. from GDPR) as it covers a wider range of information considered ‘personal data’. Personal data can be declared as a category, such as ‘Email’, or an instance, such as ‘x@y.z’. <code>PersonalData</code> is associated to using the relation <code>hasPersonalData</code>.</p></section>
     <section class="notoc"><h4>Purpose</h4>
     <figure>
         <img src="img/overview_Purpose.png"/>
         <figcaption>Indicating applicable or relevant <code>Purpose</code></figcaption>
       </figure>
+    <blockquote>
+      <p>see more information: 
+        <a href="#purpose">primer</a> | 
+        <a href="/dpv#vocab-purpose">DPV</a> | 
+        <a href="/dpv-skos#vocab-purpose">DPV-SKOS</a> | 
+        <a href="/dpv-owl#vocab-purpose">DPV-OWL</a>
+      </p>
+    </blockquote>
     <p>Representing the <em>purpose</em> for which personal data is processed, for e.g. ‘Personalisation’ as a broad category of purpose. Information about the purpose can be further specified by denoting information about its interpretation within a particular <code>Sector</code>, such as from standardised authoritative lists e.g. [[NACE]].</p>
   </section>
     <section class="notoc"><h4>Processing</h4>
@@ -526,6 +542,14 @@ exA:TVServiceOptimisation skos:closeMatch exB:TVServiceOptimisation .
         <img src="img/overview_Processing.png"/>
         <figcaption>Indicating applicable or relevant <code>Processing</code></figcaption>
       </figure>
+    <blockquote>
+      <p>see more information: 
+        <a href="#processing-categories">primer</a> | 
+        <a href="/dpv#vocab-processing">DPV</a> | 
+        <a href="/dpv-skos#vocab-processing">DPV-SKOS</a> | 
+        <a href="/dpv-owl#vocab-processing">DPV-OWL</a>
+      </p>
+    </blockquote>
     <p>Representing <em>processing</em> as in the actions or operations over personal data, for e.g. collect, use, share, store. To indicate the origin or source of data, the concept <code>DataSource</code> along with relation <code>hasDataSource</code> is provided. For additional <i>contextual</i> information regarding operations or processing, such as whether it include humans or automation, the concept <code>ProcessingContext</code> is provided which can be associated using the relation <code>hasContext</code> (description of <code>Context</code> is provided later in the document). Examples of <i>ProcessingContext</i> include conditions such as profiling, automated decision making, human involvement.</p>
     </section>
     <section class="notoc"><h4>LegalBasis</h4>
@@ -533,6 +557,14 @@ exA:TVServiceOptimisation skos:closeMatch exB:TVServiceOptimisation .
         <img src="img/overview_LegalBasis.png"/>
         <figcaption>Indicating applicable or relevant <code>LegalBasis</code></figcaption>
       </figure>
+    <blockquote>
+      <p>see more information: 
+        <a href="#legal-basis">primer</a> | 
+        <a href="/dpv#vocab-legal_basis">DPV</a> | 
+        <a href="/dpv-skos#vocab-legal_basis">DPV-SKOS</a> | 
+        <a href="/dpv-owl#vocab-legal_basis">DPV-OWL</a>
+      </p>
+    </blockquote>
     <p> A legal basis is a law or a clause in a law that justifies or permits the processing of personal data in the specified manner. It is a jurisdictional concept given the scoping of laws to specified countries or regions, as well as a domain-specific concept given the specific laws enacted scoped to particular domains. A law, such as the GDPR, that regulates the use of personal data requires that every processing of personal data must be justified with some legal basis to ensure it is lawful, and to further assess its correctness, accountability, and impact based on the obligations applicable. However, what is considered a legal basis varies greatly across cultures, domains, use-cases, and laws themselves. The aim of DPV is therefore to provide an upper-level abstract taxonomy of categories of legal bases that can be customised and applied as needed.</p>
     </section>
     <section class="notoc"><h4>Entities</h4>
@@ -540,6 +572,14 @@ exA:TVServiceOptimisation skos:closeMatch exB:TVServiceOptimisation .
         <img src="img/overview_Entities.png"/>
         <figcaption>Indicating applicable or relevant <code>Entities</code></figcaption>
       </figure>
+    <blockquote>
+      <p>see more information: 
+        <a href="#legal-entities">primer</a> | 
+        <a href="/dpv#vocab-entities">DPV</a> | 
+        <a href="/dpv-skos#vocab-entities">DPV-SKOS</a> | 
+        <a href="/dpv-owl#vocab-entities">DPV-OWL</a>
+      </p>
+    </blockquote>
     <p>Representing the ‘entities’ or ‘actors’ involved in the processing of personal data. DPV provides a broad categorisation of entities based on their relevance in jurisprudence (i.e. legal roles) as well as categorisation in real-world (e.g. organisation types).</p>
     </section>
     <section class="notoc"><h4>DataController</h4>
@@ -568,6 +608,14 @@ exA:TVServiceOptimisation skos:closeMatch exB:TVServiceOptimisation .
         <img src="img/overview_TechnicalOrganisationalMeasure.png"/>
         <figcaption>Indicating applicable or relevant <code>TechnicalOrganisationalMeasure</code></figcaption>
       </figure>
+    <blockquote>
+      <p>see more information: 
+        <a href="#technical-and-organisational-measures">primer</a> | 
+        <a href="/dpv#vocab-technical_organisational_measures">DPV</a> | 
+        <a href="/dpv-skos#vocab-technical_organisational_measures">DPV-SKOS</a> | 
+        <a href="/dpv-owl#vocab-technical_organisational_measures">DPV-OWL</a>
+      </p>
+    </blockquote>
     <p>DPV provides a taxonomy of technical and organisational measures for representing information about how the processing of personal data is technically and organisationally protected, safeguarded, secured, or otherwise managed. This is distinct from what technology is used for carrying out processing, and instead refers to what <i>measures</i> are in place (i.e. what the technology intends to provide in terms of features).</p>
     <p>Technical and Organisational measures consist of activities, processes, or procedures used in connection with ensuring data protection, carrying out processing in a secure manner, and complying with legal obligations. Such measures are required by regulations depending on the context of processing involving personal data. For example, GDPR (Article 32) states implementing appropriate measures by taking into account the state of the art, the costs of implementation and the nature, scope, context and purposes of processing, as well as risks, rights and freedoms.</p>
     <p>The broad concept <code>TechnicalOrganisationalMeasure</code> represents all technical and organisational measures, which are associated through the relation <code>hasTechnicalOrganisationalMeasure</code>. The concept <code>TechnicalMeasure</code>, associated using the relation <code>hasTechnicalMeasure</code>, concerns measures primarily achieved using some technology. Similarly, <code>OrganisationalMeasure</code> and the relation <code>hasOrganisationalMeasure</code> represent measures carried out through activities and processes at the management and organisational levels, which may or may not be assisted by technology.</p>
@@ -599,6 +647,14 @@ exA:TVServiceOptimisation skos:closeMatch exB:TVServiceOptimisation .
         <img src="img/overview_Risk.png"/>
         <figcaption>Indicating applicable or relevant <code>Risk</code></figcaption>
       </figure>
+    <blockquote>
+      <p>see more information: 
+        <a href="#risk-management">primer</a> | 
+        <a href="/dpv#vocab-risk">DPV</a> | 
+        <a href="/dpv-skos#vocab-risk">DPV-SKOS</a> | 
+        <a href="/dpv-owl#vocab-risk">DPV-OWL</a>
+      </p>
+    </blockquote>
     <p>Representing risk(s) associated with a concept, for e.g. risk of unauthorised data disclosure related to processing, technical measure, or vulnerability of data subjects</p>
   </section>
   <section class="notoc"><h4>Technology</h4>
@@ -622,6 +678,14 @@ exA:TVServiceOptimisation skos:closeMatch exB:TVServiceOptimisation .
         <img src="img/overview_Location.png"/>
         <figcaption>Indicating applicable or relevant <code>Jurisdiction</code></figcaption>
       </figure>
+    <blockquote>
+      <p>see more information: 
+        <a href="#location-and-jurisdiction">primer</a> | 
+        <a href="/dpv#vocab-jurisdiction">DPV</a> | 
+        <a href="/dpv-skos#vocab-jurisdiction">DPV-SKOS</a> | 
+        <a href="/dpv-owl#vocab-jurisdiction">DPV-OWL</a>
+      </p>
+    </blockquote>
     <p>Representing the rights available, applicable, or afforded by a law or regulation, either to data subjects or data controllers, or other entities</p>
     </section>
 
@@ -713,6 +777,13 @@ ex:SendingNewsletters rdf:type dpv:PersonalDataHandling ;
         <img src="img/Purpose.png" style="width:100%;height:auto;" /></p>
         <figcaption>Overview of top-level concepts in <code>Purpose</code> taxonomy</figcaption>
       </figure>
+    <blockquote>
+      <p>goto spec: 
+        <a href="/dpv#vocab-purpose">DPV</a> | 
+        <a href="/dpv-skos#vocab-purpose">DPV-SKOS</a> | 
+        <a href="/dpv-owl#vocab-purpose">DPV-OWL</a>
+      </p>
+    </blockquote>
     <p>DPV’s taxonomy of purposes is used to represent the <em>reason</em> or <em>justification</em> for processing of personal data. For this, purposes are organised within DPV based on how they relate to the processing of personal data in terms of several factors, such as: management functions related to information (e.g. records, account, finance), fulfilment of objectives (e.g. delivery of goods), providing goods and services (e.g. service provision), intended benefits (e.g. optimisations for service provider or consumer), and legal compliance.</p>
     <div class="note" title="Purposes do not have a strict structure as used in real-world use-cases">
       <p>It is important to note the following for real-world implications of <code>Purpose</code>:</p>
@@ -770,6 +841,13 @@ ex:PreventTransactionFraud a dpv:Purpose ;
       <img src="img/Processing.png">
       <figcaption>Overview of top-concepts in <code>Processing</code> taxonomy</figcaption>
     </figure>
+    <blockquote>
+      <p>goto spec: 
+        <a href="/dpv#vocab-propcessing">DPV</a> | 
+        <a href="/dpv-skos#vocab-propcessing">DPV-SKOS</a> | 
+        <a href="/dpv-owl#vocab-propcessing">DPV-OWL</a>
+      </p>
+    </blockquote>
     <p>DPV’s taxonomy of processing concepts reflects the variety of terms used to denote processing activities or operations involving personal data, such as those from [[GDPR]] Article.4-2 definition of <i>processing</i>. Real-world use of terms associated with processing rarely uses this same wording or terms, except in cases of specific domains and in legal documentation. On the other hand, common terms associated with processing are generally restricted to: collect, use, store, share, and delete.</p>
     <p>DPV provides a taxonomy that aligns both the legal terminologies such as those defined by GDPR with those commonly used. For this, concepts are organised based on whether they subsume other concepts, e.g. <a href="https://www.w3id.org/dpv#Use"><code>Use</code></a> is a broad concept indicating data is used, which DPV extends to define specific processing concepts for <a href="https://www.w3id.org/dpv#Analyse"><code>Analyse</code></a>, <a href="https://www.w3id.org/dpv#Consult"><code>Consult</code></a>, <a href="https://www.w3id.org/dpv#Profiling"><code>Profiling</code></a>, and <a href="https://www.w3id.org/dpv#Retrieving"><code>Retrieving</code></a>. Through this mechanism, whenever an use-case indicates it <i>consults</i> some data, it can be inferred that it also <i>uses</i> that data.</p>
     <div class="note" title="Need for ensuring accuracy of processing terms in an use-case">
@@ -873,7 +951,15 @@ ex:PreventTransactionFraud a dpv:Purpose ;
       <img src="img/PersonalData.png">
       <figcaption>Personal Data concepts within DPV and their extension in <code>dpv-pd</code></figcaption>
     </figure>
+    <blockquote>
+      <p>goto spec: 
+        <a href="/dpv#vocab-personaldata">DPV</a> | 
+        <a href="/dpv-skos#vocab-personaldata">DPV-SKOS</a> | 
+        <a href="/dpv-owl#vocab-personaldata">DPV-OWL</a>
+      </p>
+    </blockquote>
     <p>DPV provides the concept <a href="https://www.w3id.org/dpv#PersonalData"><code>PersonalData</code></a> and the relation <a href="https://www.w3id.org/dpv#hasPersonalData"><code>hasPersonalData</code></a> to indicate what categories or instances of personal data are being processed. As described earlier, common use of personal data concepts in the real-world consists of specifying as concepts both categories (e.g. <i>Location</i>) and instances (e.g. your <i>exact location right now</i>).</p>
+    <p>The DPV main or core specification only provides a structure for describing personal data, e.g. as being sensitive. For specific categories of personal data for use-cases, [[[DPV-PD]]] provides additional concepts that extend the DPV's personal data taxonomy. This separation is to enable adopters to decide whether the extension's concepts are useful to them, or to use other external vocabularies, or define their own.</p>
     <div class="note" title="Clarity on Personal Data concepts being Categories and Instances">
       <p>Real-world and common usage of <i>personal data</i> is at both an abstract level as well as specific level. For example, consider the sentence "We use your Email information...", which uses "<i>Email</i>" to represent a reference to what personal data is involved. Here, one may interpret <i>Email</i> as representing only the <i>email address</i>, or as a broad set of possible information related to emails, such as <i>email address, email senders and recipients list, email service provider, email usage statistics</i> and so on.</p>
       <p>For ensuring clarity and resolving any potential ambiguity, DPV recommends being as specific as possible. This means where there is ambiguity as to what the information may be associated with or within a concept, it is advisable to resolve that ambiguity - either by choosing a more accurate concept from the taxonomy and/or by creating one through extension of an existing concept.</p>
@@ -954,21 +1040,6 @@ ex:PreventTransactionFraud a dpv:Purpose ;
       <p>We are exploring the provision of the concept <i>ContextuallyAnonymisedData</i> as a subtype of <i>PseudoAnonymisedData</i> to indicate situations where data is locally or contextually considered anonymised without any guarentees of its anonymity outside of that context.</p>
     </section>
 
-    <section id="personal-data-dpv-pd">
-      <div class="issue-done" title="Add subsection for Anonymised Data"></div>
-      <h4><code>dpv-pd</code> extension</h4>
-      <p>The [[DPV-PD]] extension provides additional concepts that extend the DPV's personal data taxonomy based on an opinionated structure contributed by R. Jason Cronk from <a href="https://enterprivacy.com/">EnterPrivacy</a>. This separation is to enable adopters to decide whether the extension's concepts are useful to them, or to use other external vocabularies, or define their own.</p>
-      <p>Concepts within [[DPV-PD]] are broadly structured in top-down fashion by utilising their relevance and origin as:</p>
-      <ul>
-        <li>Internal (within the person): e.g. Preferences, Knowledge, Beliefs</li>
-        <li>External (visible to others): e.g. Behavioural, Demographics, Physical, Sexual, Identifying</li>
-        <li>Social: e.g. Family, Friends, Professional, Public Life, Communication</li>
-        <li>Financial: e.g. Transactional, Ownership, Financial Account</li>
-        <li>Tracking: e.g. Location, Device based, Contact</li>
-        <li>Historical: e.g. Life History</li>
-      </ul>
-    </section>
-
   </section>
 
   <section id="technical-and-organisational-measures">
@@ -978,7 +1049,13 @@ ex:PreventTransactionFraud a dpv:Purpose ;
       <img src="img/TechnicalOrganisationalMeasure.png">
       <figcaption>Overview of Technical and Organisational Measure concepts in DPV</figcaption>
     </figure>
-
+    <blockquote>
+      <p>goto spec: 
+        <a href="/dpv#vocab-technical_organisational_measures">DPV</a> | 
+        <a href="/dpv-skos#vocab-technical_organisational_measures">DPV-SKOS</a> | 
+        <a href="/dpv-owl#vocab-technical_organisational_measures">DPV-OWL</a>
+      </p>
+    </blockquote>
     <p>DPV's taxonomy of tech/org measures are structured into two groups representing and <code>TechnicalMeasure</code> and <code>OrganisationalMeasure</code> along with specific properties for each. Each term has a dedicated taxonomy that expands upon the core idea to provide a rich list of technial and organisational measures that are intended to protect personal data (and its associated entities and consequences).</p>
     <div class="note"><p>DPV is looking to enrich its taxonomy of technical and organisational measures through adoption of existing standards, best practices, and widely relevant practices. For this, we welcome contribution of concepts from sources such as ISO/IEC standards, ENISA, NIST, IETF, and others.</p></div>
 
@@ -1234,6 +1311,13 @@ ex:TransferPolicy a dpv:ControllerProcessorAgreement,
         <img src="img/LegalBasis.png">
         <figcaption>Overview of Legal Basis concepts in DPV</figcaption>
       </figure>
+    <blockquote>
+      <p>goto spec: 
+        <a href="/dpv#vocab-legal_basis">DPV</a> | 
+        <a href="/dpv-skos#vocab-legal_basis">DPV-SKOS</a> | 
+        <a href="/dpv-owl#vocab-legal_basis">DPV-OWL</a>
+      </p>
+    </blockquote>
     <p>DPV provides the following categories of legal bases based on [[GDPR]] Article 6: consent of the data subject, contract, compliance with legal obligation, protecting vital interests of individuals, legitimate interests, public interest, and official authorities. Though derived from GDPR, these concepts can be applied for other jurisdictions and general use-cases. The legal bases are represented by the concept <code>LegalBasis</code> and associated using the relation <code>hasLegalBasis</code>.</p>
 
     <p>When declaring a legal basis, it is important to denote under what law or jurisdiction that legal basis applies. For instance, using <code>Consent</code> as a legal basis has different obligations and requirements in EU (i.e. [[GDPR]]) as compared to other jurisdictions. Therefore, unless the information is to be implicitly interpreted through some specific legal lens or jurisdictional law, DPV recommends indicating the specific law or legal clause associated with the legal basis so as to scope its interpretation. This can be done using the relation <code>hasJurisdiction</code> or <code>hasLaw</code>.</p>
@@ -1280,6 +1364,13 @@ ex:UserConsent rdf:type dpv:LegalBasis ;
         <img src="img/Consent.png">
         <figcaption>Denoting information using <code>Consent</code></figcaption>
       </figure>
+    <blockquote>
+      <p>goto spec: 
+        <a href="/dpv#vocab-consent">DPV</a> | 
+        <a href="/dpv-skos#vocab-consent">DPV-SKOS</a> | 
+        <a href="/dpv-owl#vocab-consent">DPV-OWL</a>
+      </p>
+    </blockquote>
     <p><code>Consent</code> is an important legal basis given its emphasis on individual empowerment and control, as well as the attention and relevance it receives from being part of direct interactions with individuals. DPV provides concepts for representing information about how consent, as a legal basis, is utilised (by the Controller), provided or given (by the Data Subject), how long it is considered to be valid (its duration), and how it can be withdrawn. It also provides concepts related to management of information, such as keeping track of whether the consent has been requested, was refused, or has been given. This information can be utilised in applications associated with consent, such as creating a ‘record’ of consent or building and executing rules for compliance.</p>
     <p>Given the reliance of consent as a legal basis whose validity is associated with requirements and obligations based on jurisdictional laws, DPV does not explicitly provide contraints on what should be considered a ‘valid’ consent. Instead, it focuses on providing declaration of information about consent so as to aid in the determination of its validity, and to record its use and changes over time. Further information concerning compliance obligations and requirements related to consent are considered within the scope of the DPVCG, and we welcome contributions on how this can be represented in a coherent manner that is compatible with the rest of DPV.</p>
     <p>The concept <code>Consent</code> can be used as is or with another concept as its legal basis e.g. <code>PersonalDataHandling</code> and <code>hasLegalBasis</code>. Similarly, the relevant information, such as purposes or personal data for which consent is expressed can be associated with consent or the concept it is used within using relations such as <code>hasPurpose</code> and <code>Purpose</code></a>. The <a href="#example-consent-record">example on consent records</a> demonstrates how DPV can be used to create a record of consent. The below example demonstrates how the consent concepts can be utilised to describe where consent is used as a legal basis, as well as to represent information about an individual's consent.</p>
@@ -1392,7 +1483,13 @@ ex:UserConsent a dpv:ExpressedConsent .
         <img src="img/Entities.png">
         <figcaption>Overview of Entities in DPV</figcaption>
     </figure>
-
+    <blockquote>
+      <p>goto spec: 
+        <a href="/dpv#vocab-entities">DPV</a> | 
+        <a href="/dpv-skos#vocab-entities">DPV-SKOS</a> | 
+        <a href="/dpv-owl#vocab-entities">DPV-OWL</a>
+      </p>
+    </blockquote>
     <p>A ‘legal entity’ is an entity whose role is defined legally or within legal norms. DPV provides a taxonomy of entities based on their application within laws and use-cases. Alongside <code>DataController</code> and <code>DataSubject</code>, the DPV also defines other types of entities involved in the processing of personal data such as <code>DataProcessor</code>, <code>ThirdParty</code>, or terms associated with data transfers such as <code>DataImporter</code> and <code>DataExporter</code>. In addition to these, various kinds of <code>Authority</code>, including <code>DataProtectionAuthority</code> are also provided</code>.</p>
 
     <section>
@@ -1461,13 +1558,31 @@ ex:AcmeEUOrg rdf:type dpv:LegalEntity, dpv:DataProtectionOfficer ;
   </section>
 
   <section>
-    <div class="issue" title="Make Location and Jurisdiction its own section">remove identifier, have subsections for dpv-legal</div>
+    <div class="issue-done" title="Make Location and Jurisdiction its own section"></div>
     <h3>Location and Jurisdiction</h3>
+    <blockquote>
+      <p>goto spec: 
+        <a href="/dpv#vocab-jurisdiction">DPV</a> | 
+        <a href="/dpv-skos#vocab-jurisdiction">DPV-SKOS</a> | 
+        <a href="/dpv-owl#vocab-jurisdiction">DPV-OWL</a>
+      </p>
+    </blockquote>
+    <p>To represent location, the concept <code>Location</code> along with relations <code>hasLocation</code> is provided. For geo-political locations, the concepts such as <code>Country</code> and <code>SupraNationalUnion</code> are subtyped, with <code>hasCountry</code> and <code>ThirdCountry</code> with <code>hasThirdCountry</code> provided for convenience in common uses (e.g. data storage, transfers).</p>
+    <p>To define contextual location concepts, such as there being several locations, or that the location is 'local' to an event, DPV provides two concepts. <code>LocationFixture</code> specifies whether the location is 'fixed' or 'deterministic', with subtypes for <i>fixed single</i>, <i>fixed multiple</i>, and <i>variable</i> locations. <code>LocationLocality</code> specifies whether the location is 'local' within the context, with subtypes for <i>local</i>, <i>remote</i>, <i>within a device</i>, or <i>in cloud</i>.</p>
+    <p>To represent locations as jurisdictions, the relation <code>hasJurisdiction</code> is provided. The concept <code>Law</code> represents an official or authoritative law or regulation created by a government or an authority. To indicate applicability of laws within a jurisdiction, the relation <code>hasApplicableLaw</code> is provided.</p>
+    <p>The [[[DPV-LEGAL]]] provides taxonomies extending these concepts, such as to represent specific countries, their laws, authorities, memberships, adequacy decisions, and other information.</p>
   </section>
 
   <section>
-        <h3 id="context">Contextual Information</h3>
-        <div class="issue" title="Add diagram for context"></div>
+    <h3 id="context">Contextual Information</h3>
+    <div class="issue" title="Add diagram for context"></div>
+    <blockquote>
+      <p>goto spec: 
+        <a href="/dpv#vocab-context">DPV</a> | 
+        <a href="/dpv-skos#vocab-context">DPV-SKOS</a> | 
+        <a href="/dpv-owl#vocab-context">DPV-OWL</a>
+      </p>
+    </blockquote>
     <p>For indicating additional information regarding how the expressed information should be interpreted, or how it applies within a particular <i>context</i>, the <code>Context</code> concept along with the <code>hasContext</code></a> relationship can be used. <code>Context</code> refers to a generic collection of concepts that assist in indicating information such as the necessity, importance, environment - which aid in the interpretation or application of other core concepts.</p>
 
     <section>
@@ -1536,6 +1651,13 @@ ex:AcmeEUOrg rdf:type dpv:LegalEntity, dpv:DataProtectionOfficer ;
     <div class="issue-done" title="Add subsection for Statuses"></div>
     <section>
       <h4>Statuses</h4>
+      <blockquote>
+      <p>goto spec: 
+        <a href="/dpv#vocab-status">DPV</a> | 
+        <a href="/dpv-skos#vocab-status">DPV-SKOS</a> | 
+        <a href="/dpv-owl#vocab-status">DPV-OWL</a>
+      </p>
+    </blockquote>
       <p>To assist with expressing the state or status associated with various activities, DPV provides the <code>Status</code> concept that can be associated contextually using the <code>hasStatus</code> relation. Specific subtypes are provided as <code>ActivityStatus</code>, <code>ComplianceStatus</code>, and <code>AuditStatus</code>.</p>
       <p>The Activity statuses are further subtyped to refer to the activity being: <i>Proposed</i>, <i>Ongoing</i>, <i>Halted</i>, and <i>Completed</i>. These can be used to refer to any activity, for example, processing operations, or audits, or impact assessments.</p>
       <p>The Compliance statuses are subtyped to indicate: <i>Compliant</i>, <i>NonCompliant</i>, <i>PartiallyCompliant</i>, <i>Compliance Violation</i>, and <i>Unkown</i>. These can be used to refer to any compliance assessments, for example for specific laws, or requirements, or certifications, or internal guidelines.</p>
@@ -1546,6 +1668,13 @@ ex:AcmeEUOrg rdf:type dpv:LegalEntity, dpv:DataProtectionOfficer ;
 
   <section id="risk-management">
     <h3>Risk Management</h3>
+    <blockquote>
+      <p>goto spec: 
+        <a href="/dpv#vocab-risk">DPV</a> | 
+        <a href="/dpv-skos#vocab-risk">DPV-SKOS</a> | 
+        <a href="/dpv-owl#vocab-risk">DPV-OWL</a>
+      </p>
+    </blockquote>
     <div class="issue-done" title="Move risk to its own separate section called Risk and Impacts">Provide overview of core concepts. Describe how the risk extension extends the core concepts.</div>
     <div class="issue" title="Add diagram for Risk"></div>
     <p>For risk management, DPV's provides a lightweight risk ontology based on commonly utilised concepts regarding risk mitigation and risk management. While these concepts permit rudimentary association of risks and mitigations within a use-case, it is important to note that DPV (currently)
@@ -1602,57 +1731,75 @@ ex:AcmeEUOrg rdf:type dpv:LegalEntity, dpv:DataProtectionOfficer ;
 
 <section>
   <h2>Extensions</h2>
-  <section>
-    <div class="issue" title="Add section on dpv-pd"></div>
-    <h3>DPV-PD: Personal Data</h3>
+  <section id="dpv-pd">
+    <div class="issue-done" title="Add section on dpv-pd"></div>
+    <h3>DPV-PD (Personal Data)</h3>
+      <div class="issue-done" title="Add subsection for Anonymised Data"></div>
+      <p>[[[DPV-PD]]] provides additional concepts that extend the DPV's personal data taxonomy based on an opinionated structure contributed by R. Jason Cronk from <a href="https://enterprivacy.com/">EnterPrivacy</a>. This separation is to enable adopters to decide whether the extension's concepts are useful to them, or to use other external vocabularies, or define their own.</p>
+      <p>Concepts within [[DPV-PD]] are broadly structured in top-down fashion by utilising their relevance and origin as:</p>
+      <ul>
+        <li>Internal (within the person): e.g. Preferences, Knowledge, Beliefs</li>
+        <li>External (visible to others): e.g. Behavioural, Demographics, Physical, Sexual, Identifying</li>
+        <li>Social: e.g. Family, Friends, Professional, Public Life, Communication</li>
+        <li>Financial: e.g. Transactional, Ownership, Financial Account</li>
+        <li>Tracking: e.g. Location, Device based, Contact</li>
+        <li>Historical: e.g. Life History</li>
+      </ul>
   </section>
+
   <section id="dpv-gdpr">
-    <div class="issue" title="Add section on dpv-gdpr"></div>
+    <div class="issue-done" title="Add section on dpv-gdpr"></div>
     <h3>DPV-GDPR</h3>
-    
-    ## Legal Bases
-    ## Legal Bases (Art. 9)
-    ## Legal Bases (Data Transfers)
-      <p>Given the importance of data transfers or movement across jurisdictional borders, DPV also defines the concept <a href="https://www.w3id.org/dpv#DataTransferLegalBasis"><code>DataTransferLegalBasis</code></a> to represent the category of legal bases applicable for justifying such cross-border data flows. For GDPR, these involve Articles 45, 46, and 49, and are defined within the [[DPV-GDPR]] extension. When representing such cross-border data flows, concepts such as jurisdiction and countries are also required so as to indicate which laws apply, and whether political treaties exist between regions. We welcome contributions for expressing this information within the framework of the DPV.</p>
-    ## Data Transfer Tools
-    ## DPIA
+    <p>While several of DPV's concepts are inspired from the GDPR, the use of DPV itself does not point towards specific concepts from GDPR such as legal bases in Article.6. This is to enable use of DPV with different jurisdictional and domain terminologies through the use of extensions. [[DPV-GDPR]] provides an extension of DPV's concepts for the GDPR for the following.</p>
+    <ul>
+      <li><strong>Legal Bases (Art.6)</strong> - DPV's legal bases are extended to represent specific clauses from GDPR Art.6 (e.g. A.6-1a consent).</li>
+      <li><strong>Legal Bases (Art.9)</strong> - DPV's legal bases are extended to represent specific clauses from GDPR Art.9 (e.g. A.9-2a explicit consent).</li>
+      <li><strong>Legal Bases (Data Transfers)</strong> - DPV's <code>DataTransferLegalBasis</code> is extended to represent GDPR's Articles 45, 46, and 49.</li>
+      <li><strong>Data Transfer Tools</strong> - Mechanisms defined by the GDPR for data transfers, e.g. contractual clauses.</li>
+      <li><strong>DPIA</strong> - Statuses for representing DPIA related procedures and outcomes, e.g. necessity, high-risk, and consultation required.</li>
+    </ul>
     
   </section>
 
   <section id="dpv-tech">
-    <div class="issue" title="Add section on dpv-tech"></div>
-    <h3>Technologies</h3>
-    ## Type: Data, Operational, Security, Management, Identity, Surveillance
-    ## Provision: System, Component, Algorithm, Service, Goods, Product, Subscription, Fixed Use
-    ## Communication: WiFi, Bluetooth, GPS, Cellular Network
-    ## Actors: Developer, Provider, User, Subject
+    <div class="issue-done" title="Add section on dpv-tech"></div>
+    <h3>DPV-TECH</h3>
+    <p>[[[DPV-TECH]]] extends the DPV's terms to represent further specific details regarding technologies, their management, and relevance to actual real-world tools and systems. It provides concepts for the following:</p>
+    <ul>
+      <li><strong>Type of technology</strong>: Data, Operational, Security, Management, Identity, Surveillance</li>
+      <li><strong>Provision method</strong>: System, Component, Algorithm, Service, Goods, Product, Subscription, Fixed Use</li>
+      <li><strong>Communication method</strong>: WiFi, Bluetooth, GPS, Cellular Network</li>
+      <li><strong>Actors</strong>: Developer, Provider, User, Subject</li>
+    </ul>
+    <p>The intention and aim of developing the DPV-TECH extension is to describe real-world tools and services, such as a specific cloud storage provider, and provide categorisation and metadata to connect it to DPV's concepts, such as to indicate the cloud storage instance features encryption at rest as a technical measure. Through these, the management and documentation of use-cases can be made easier by providing the relationships between tools/services and technical measures as a 'knowledge graph'.</p>
   </section>
 
   <section id="dpv-legal">
-    <div class="issue" title="Add section on dpv-legal"></div>
-    <h3>Jurisdictions and Laws</h3>
-    ## Locations
-    ## Laws
-    ## Authorities
-    ## EU Membership
-    ## EU Adequacy Decision
+    <div class="issue-done" title="Add section on dpv-legal"></div>
+    <h3>DPV-LEGAL</h3>
+    <p>[[DPV-LEGAL]] provides jurisdictional concepts such as locations (countries), memberships (e.g EU/EEA), laws (e.g. GDPR), authorities (e.g. CNIL for FR), and adequacy decisions (e.g. EU - UK). It also provides relationships between these, e.g. to indicate country FR has law GDPR which is enforced by CNIL authority.</p>
+    <p>The goal of the DPV-LEGAL extension is to assist with identifying relevant laws, authorities, and data transfer implications. It also provides information about these concepts, e.g. authority contact information or website.</p>
+    <p>As with the rest of DPV, we welcome contributions and discussions to expand the DPV-LEGAL taxonomies.</p>
   </section>
 
   <section id="risk">
-    <div class="issue" title="Add section on risk"></div>
-    <h3>Risk</h3>
-    ## Risk Controls
-    ## Consequences and Impacts
-    ## Scale for Risk Levels, Severity, and Likelihood
-    ## Risk Matrix (3x3, 5x5, 7x7)
-    ## Risk Assessment Techniques
-    ## Risk Methodologies
+    <div class="issue-done" title="Add section on risk"></div>
+    <h3>RISK</h3>
+    <p>[[[RISK]]] builds on top of the lightweight risk framework within DPV by providing the following extensive concepts related to risk assessment and managemnt. We are in the process of identifying additional concepts and taxonomies for the risk extension, such as for risk management procedures and the creation of a risk ontology based on ISO standards.</p>
+    <ul>
+      <li><strong>Risk Controls</strong> - categories of measures such as those related to risk source, likelihood, consequence, vulnerability, as well as the intended effect in terms of monitoring, controlling, halting, removing, or reducing.</li>
+      <li><strong>Consequences and Impacts</strong> - list of consequences such as data breaches, costs, identity theft and several others that are categorised based on DPV's impact framework i.e. damage, harm, or detriment.</li>
+      <li><strong>Scale for Risk Levels, Severity, and Likelihood</strong> - a 7 point qualitative scale to express concepts associated with levels, severity, and likelihood of risk and its consequences.</li>
+      <li><strong>Risk Matrix</strong> - an encoded form of risk matrices based on combinations of severity and likelihood along with the resulting risk level. Risk matrice nodes and values are provided for dimensions 3x3, 5x5, and 7x7.</li>
+      <li><strong>Risk Assessment Techniques</strong> - list of risk assessment techniques, based primarily on IEC 31010:2019, and other sources.</li>
+      <li><strong>Risk Methodologies</strong> -list of risk methodologies based on ISO standards, ENISA reports, and other sources.</li>
+    </ul>
   </section>
 
   <section id="rights">
-    <div class="issue" title="Add section on rights"></div>
-    <h3>Rights</h3>
-    ## EU Charter of Fundamental Rights
+    <div class="issue-done" title="Add section on rights"></div>
+    <h3>RIGHTS</h3>
+    <p>Impact assessments related to impact on individuals and society require representation of rights as concepts which may be affected or impacted. To assist with these, [[[RIGHTS]]] is provided. Currently, it provides a taxonomy of concepts to represent EU Charter of Fundamental Rights.</p>
   </section>
 </section>
 
