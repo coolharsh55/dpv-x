@@ -1,4 +1,5 @@
-@prefix : <https://w3id.org/dpv/use-cases/vocab#> .
+@prefix : <https://w3id.org/dpv/use-cases/ucr#> .
+@prefix ucr: <https://w3id.org/dpv/use-cases/ucr#> .
 @prefix dpv: <https://w3id.org/dpv#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -8,15 +9,19 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 
+#######################################################################
+# VOCABULARY
+#######################################################################
+
 : a owl:Ontology ;
-    dct:title "DPV UseCase Vocabulary"@en ;
+    dct:title "DPV UseCase & Requirements Vocabulary"@en ;
     dct:description "Concepts for describing use-cases for requirements and concepts within DPV"@en ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
     dct:created "2022-06-10"^^xsd:date ;
     dct:source <https://www.w3.org/community/dpvcg/> ;
-    vann:preferredNamespacePrefix "uc"^^xsd:string ;
-    vann:preferredNamespaceUri "https://w3id.org/dpv/use-cases/vocab#"^^xsd:string ;
-    owl:versionInfo "0.1"^^xsd:string .
+    vann:preferredNamespacePrefix "ucr"^^xsd:string ;
+    vann:preferredNamespaceUri "https://w3id.org/dpv/use-cases/ucr#"^^xsd:string ;
+    owl:versionInfo "0.2"^^xsd:string .
 
 
 :UseCase a skos:Concept, rdfs:Class, sh:NodeShape ;
@@ -96,37 +101,3 @@
         sh:path dct:subject ; sh:minCount 0 ;
     ] ;
     vann:example :R1, :R2, :R3 .
-
-:U1 a :UseCase ;
-    dct:title "Example - An Information Title"@en ;
-    dct:description "Description of the use-case - a short summary of what/who/how/where/when etc. goes here. This can be as detailed as you want."@en ;
-    dct:identifier "U1"^^xsd:string ;
-    dct:subject dpv:Concept, dpv:Relation .
-
-:U2 a :UseCase ;
-    dct:title "Example #2 Dictionary of Concepts"@en ;
-    dct:description "There are a vast number of concepts associated with data processing, with differences and variations across jurisdictions, domains, and sectors. A common dictionary of concepts with information on how they relate to other concepts across such differences would be an invaluable resource on its own. This could be a simple list, a dictionary, or a thesauri."@en ;
-    dct:identifier "U2"^^xsd:string .
-
-:U3 a :UseCase ;
-    dct:title "Example Automating DPVCG usage"@en ;
-    dct:description "The concepts associated with a particular task can be considered the vocabulary necessary for representing information for that particular task. For example choosing the appropriate legal basis requires the concept associated with legal basis as well as the specific legal bases that can be utilised. In order to assist in providing the appropriate contextual vocabulary, the concepts should be encoded in a form that can be automatically queried or retrieved depending on the context."@en ;
-    dct:identifier "U3"^^xsd:string .
-
-:R1 a :Requirement ;
-    dct:title "Dummy Requirement"@en ;
-    dct:description "This requirement does not entail anything"@en ;
-    dct:identifier "R1"^^xsd:string ;
-    dct:references :U1 .
-
-:R2 a :Requirement ;
-    dct:title "Provide concepts in standardised, consistent, machine-readable form"@en ;
-    dct:description "The encapsulation of concepts must be in a form that is machine-readable, consistent, and using a formal specification - ideally a standard. This will ensure the concepts are correctly parsed, interpreted, and used by machines across use-cases, and will assist in the automation of information and information-based tasks."@en ;
-    dct:identifier "R2"^^xsd:string ;
-    dct:references :U2, :U3 .
-
-:R3 a :Requirement ;
-    dct:title "Provide concepts as a dictionary or thesauri with contextual parts"@en ;
-    dct:description "The concepts should be bundled together and provided as a vocabulary or thesauri with distinct parts or sections (or sub-vocabularies) that relate to specific contextual details. For example, providing purposes as a separate taxonomy enables use of only purposes elsewhere."@en ;
-    dct:identifier "R3"^^xsd:string ;
-    dct:references :U3 .

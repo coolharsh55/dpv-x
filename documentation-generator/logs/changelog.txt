@@ -13,9 +13,7 @@ MODULE: consent_types
 added: 0 ; removed: 0
 ---
 MODULE: context
-added: 0 ; removed: 1
-Concepts Removed
-https://w3id.org/dpv#hasHumanInvolvement
+added: 0 ; removed: 0
 ---
 MODULE: entities_authority
 added: 0 ; removed: 0
@@ -45,25 +43,10 @@ MODULE: personal_data
 added: 0 ; removed: 0
 ---
 MODULE: processing_context
-added: 5 ; removed: 1
-Concepts Removed
-https://w3id.org/dpv#LargeScaleProcessing
-
-Concepts Added
-https://w3id.org/dpv#hasHumanInvolvement
-https://w3id.org/dpv#DecisionMaking
-https://w3id.org/dpv#HumanInvolvementForVerification
-https://w3id.org/dpv#HumanInvolvementForOversight
-https://w3id.org/dpv#HumanInvolvementForInput
+added: 0 ; removed: 0
 ---
 MODULE: processing_scale
-added: 4 ; removed: 0
-
-Concepts Added
-https://w3id.org/dpv#MediumScaleProcessing
-https://w3id.org/dpv#SmallScaleProcessing
-https://w3id.org/dpv#ProcessingScale
-https://w3id.org/dpv#LargeScaleProcessing
+added: 0 ; removed: 0
 ---
 MODULE: processing
 added: 0 ; removed: 0
@@ -75,17 +58,7 @@ MODULE: risk
 added: 0 ; removed: 0
 ---
 MODULE: status
-added: 4 ; removed: 3
-Concepts Removed
-https://w3id.org/dpv#Incompliant
-https://w3id.org/dpv#NotCompliant
-https://w3id.org/dpv#ViolationOfCompliance
-
-Concepts Added
-https://w3id.org/dpv#ComplianceViolation
-https://w3id.org/dpv#ComplianceUnknown
-https://w3id.org/dpv#NonCompliant
-https://w3id.org/dpv#ComplianceIndeterminate
+added: 0 ; removed: 0
 ---
 MODULE: technical_measures
 added: 0 ; removed: 0
@@ -96,10 +69,7 @@ added: 0 ; removed: 0
 
 --- DPV-GDPR --- 
 MODULE: legal_basis
-added: 1 ; removed: 0
-
-Concepts Added
-https://w3id.org/dpv/dpv-gdpr#A6-1-a
+added: 0 ; removed: 0
 ---
 MODULE: legal_basis_special
 added: 0 ; removed: 0
@@ -144,12 +114,7 @@ added: 0 ; removed: 0
 
 --- DPV-TECH --- 
 MODULE: dpv-tech
-added: 1 ; removed: 1
-Concepts Removed
-https://w3id.org/dpv/dpv-tech#Services
-
-Concepts Added
-https://w3id.org/dpv/dpv-tech#Service
+added: 0 ; removed: 0
 ---
 
 --- RISK --- 
