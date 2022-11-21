@@ -58,7 +58,7 @@ ObjectProperty: <https://w3id.org/dpv/dpv-owl#hasPersonalData>
 Class: <https://w3id.org/dpv/dpv-owl#AnonymisedData>
 
     Annotations: 
-        rdfs:comment "It is advised to carefully consider indicating data is fully or completely anonymised by determining whether the data by itself or in combination with other data can identify a person. Failing this condition, the data should be denoted as PseudoAnonymisedData. To indicate data is anonymised only for a specified entity (e.g. within an organisation), the concept AnonymisedDataWithinScope (as subclass of PseudoAnonymisedData) should be used instead of AnonymisedData."@en,
+        rdfs:comment "It is advised to carefully consider indicating data is fully or completely anonymised by determining whether the data by itself or in combination with other data can identify a person. Failing this condition, the data should be denoted as PseudonymisedData. To indicate data is anonymised only for a specified entity (e.g. within an organisation), the concept ContextuallyAnonymisedData (as subclass of PseudonymisedData) should be used instead of AnonymisedData."@en,
         rdfs:isDefinedBy <https://w3id.org/dpv/dpv-owl#>,
         rdfs:label "Anonymised Data"@en
     
@@ -107,6 +107,16 @@ Class: <https://w3id.org/dpv/dpv-owl#GeneratedPersonalData>
         <https://w3id.org/dpv/dpv-owl#PersonalData>
     
     
+Class: <https://w3id.org/dpv/dpv-owl#IncorrectData>
+
+    Annotations: 
+        rdfs:isDefinedBy <https://w3id.org/dpv/dpv-owl#>,
+        rdfs:label "Incorrect Data"@en
+    
+    SubClassOf: 
+        <https://w3id.org/dpv/dpv-owl#Data>
+    
+    
 Class: <https://w3id.org/dpv/dpv-owl#InferredPersonalData>
 
     Annotations: 
@@ -152,11 +162,11 @@ Class: <https://w3id.org/dpv/dpv-owl#PersonalData>
         <https://w3id.org/dpv/dpv-owl#Data>
     
     
-Class: <https://w3id.org/dpv/dpv-owl#PseudoAnonymisedData>
+Class: <https://w3id.org/dpv/dpv-owl#PseudonymisedData>
 
     Annotations: 
         rdfs:isDefinedBy <https://w3id.org/dpv/dpv-owl#>,
-        rdfs:label "Pseudo-anonymised Data"@en
+        rdfs:label "Pseudonymised Data"@en
     
     SubClassOf: 
         <https://w3id.org/dpv/dpv-owl#PersonalData>
@@ -189,6 +199,26 @@ Class: <https://w3id.org/dpv/dpv-owl#SyntheticData>
     Annotations: 
         rdfs:isDefinedBy <https://w3id.org/dpv/dpv-owl#>,
         rdfs:label "Synthetic Data"@en
+    
+    SubClassOf: 
+        <https://w3id.org/dpv/dpv-owl#Data>
+    
+    
+Class: <https://w3id.org/dpv/dpv-owl#UnverifiedData>
+
+    Annotations: 
+        rdfs:isDefinedBy <https://w3id.org/dpv/dpv-owl#>,
+        rdfs:label "Unverified Data"@en
+    
+    SubClassOf: 
+        <https://w3id.org/dpv/dpv-owl#Data>
+    
+    
+Class: <https://w3id.org/dpv/dpv-owl#VerifiedData>
+
+    Annotations: 
+        rdfs:isDefinedBy <https://w3id.org/dpv/dpv-owl#>,
+        rdfs:label "Verified Data"@en
     
     SubClassOf: 
         <https://w3id.org/dpv/dpv-owl#Data>

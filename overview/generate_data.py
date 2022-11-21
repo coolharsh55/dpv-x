@@ -11,7 +11,8 @@ with open('iris.csv', 'r') as fd:
     next(reader)
     for row in reader:
         label, iri = row
-        iris[label] = iri
+        iris[iri] = label
+    print(iris.keys())
 
 with open('parents.csv', 'r') as fd:
     reader = csv.reader(fd)
@@ -39,7 +40,7 @@ with open('children.csv', 'r') as fd:
 export = []
 
 def get_children(key):
-    data = {"name": f'<a href="{iris[key]}">{key}</a>'}
+    data = {"name": f'<a href="{key}">{iris[key]}</a>'}
     data_family = []
     children = nodes[key]
     print(key, children)

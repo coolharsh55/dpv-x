@@ -1,10 +1,8 @@
 PREFIX dpv: <https://w3id.org/dpv#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
-SELECT ?concept ?parent
+SELECT ?x ?y
 WHERE {
     ?x a dpv:Concept .
-    ?x skos:prefLabel ?concept .
-    ?y skos:broader ?x .
-    ?y skos:prefLabel ?parent .
+    ?x skos:narrower ?y .
 }

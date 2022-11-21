@@ -3,31 +3,35 @@
   {% endif %}
     <p>
       {% for term in term_list | sort(attribute='iri') %}
-      <code><a href="#{% if prefix %}{{prefix}}-{% endif %}{{term.iri|fragment_this}}">{{term.skos_prefLabel}}</a></code>{{" |" if not loop.last }}
+      <code><a href="#{% if term|get_namespace_reference %}{{prefix}}-{{term.iri|prefix_this}}{% else %}{{term.iri|fragment_this}}{% endif %}">{{term.skos_prefLabel}}</a></code> |
       {% endfor %}
     </p>
 
     {% for term in term_list | sort(attribute='iri') %}
-    <section {% if not prefix %}data-dfn-for="{{term.iri|fragment_this}}"{% endif %}>
-      <h4 id="{% if prefix %}{{prefix}}-{% endif %}{{term.iri|fragment_this}}">{{term.skos_prefLabel}}</h4>
+    <section {% if prefix %}data-dfn-for="{{prefix}}"{% endif %}>
+      <h4 id="{% if term|get_namespace_reference %}{{prefix}}-{{term.iri|prefix_this}}{% else %}{{term.iri|fragment_this}}{% endif %}">{{term.skos_prefLabel}}</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>{{ term.iri }}</code></td>
+            <td>{% if term|get_namespace_reference %}<a href="{{term.iri}}"><code>{{ term.iri }}</code></a>{% else %}<code>{{ term.iri }}</code></a>{% endif %}</td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code>{% if not prefix %}<dfn>{{term.iri|fragment_this}}</dfn>{% else %}{{term.iri|fragment_this}}{% endif %}</code></td>
+            <td><dfn>{% if term|get_namespace_reference %}<a href="{{term.iri}}">{{term.iri|prefix_this}}</a>{% else %}{{term.iri|fragment_this}}{% endif %}</dfn></td>
           </tr>
-          <tr>
+          {% if not term|get_namespace_reference %}<tr>
             <td>Label:</td>
             <td>{{term.skos_prefLabel}}</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>{{term.skos_definition}}</td>
           </tr>
+          {% else %}
+            <tr><td>Vocabulary:</td><td>{% set prefix, iri = term.skos_prefLabel|get_namespace_reference %}[[[{{prefix}}]]]</a></td></tr>
+            <tr><td>Usage Note:</td><td>{{ term.skos_scopeNote }}</td></tr>
+          {% endif %}
           {% if term.dpv_isSubTypeOf %}
           <tr>
             <td>SubType of:</td>
@@ -98,10 +102,12 @@
           <tr><td>{{ prop.replace('_',':') }}</td><td>{{ term|attr(prop)|prefix_this }}</td></tr>
             {% endif %}
           {% endfor %}
+          {% if term.dct_created %}
           <tr>
             <td>Created:</td>
             <td><time>{{term.dct_created}}</time></td>
           </tr>
+          {% endif %}
           {% if term.dct_modified %}
           <tr>
             <td>Modified:</td>
@@ -132,6 +138,12 @@
             </td>
           </tr>
           {% endif %}
+          {% if term.vann_example %}
+            <tr>
+              <td>Examples:</td>
+              <td>{% if term.vann_example is sequence %}{% for ex in term.vann_example|sort(attribute='iri') %}<a href="{{ex}}">{{ ex|prefix_this }} - {{ ex|get_example_title }}</a>{{ "<br/>"|safe if not loop.last }}{% endfor %}{% else %}<a href="{{term.vann_example}}">{{ term.vann_example|prefix_this }} - {{ term.vann_example|get_example_title }}</a>{% endif %}</td>
+            </tr>
+          {% endif %}
         </tbody>
       </table>
     </section>
@@ -142,24 +154,24 @@
   {% if not skip_heading %}<h3>Properties</h3>{% endif %}
     <p>
       {% for term in term_list | sort(attribute='iri') %}
-      <code><a href="#{% if prefix %}{{prefix}}-{% endif %}{{term.iri|fragment_this}}">{{term.skos_prefLabel}}</a></code> |
+      <code><a href="#{% if term|get_namespace_reference %}{{prefix}}-{{term.iri|prefix_this}}{% else %}{{term.iri|fragment_this}}{% endif %}">{{term.skos_prefLabel}}</a></code> |
       {% endfor %}
     </p>
 
     {% for term in term_list | sort(attribute='iri') %}
-    <section {% if not prefix %}data-dfn-for="{{term.iri|fragment_this}}"{% endif %}>
-      <h4 id="{% if prefix %}{{prefix}}-{% endif %}{{term.iri|fragment_this}}">{{term.skos_prefLabel}}</h4>
+    <section {% if prefix %}data-dfn-for="{{prefix}}"{% endif %}>
+      <h4 id="{% if term|get_namespace_reference %}{{prefix}}-{{term.iri|prefix_this}}{% else %}{{term.iri|fragment_this}}{% endif %}">{{term.skos_prefLabel}}</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>{{ term.iri }}</code></td>
+            <td>{% if term|get_namespace_reference %}<a href="{{term.iri}}"><code>{{ term.iri }}</code></a>{% else %}<code>{{ term.iri }}</code></a>{% endif %}</td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code>{% if not prefix %}<dfn>{{term.iri|fragment_this}}</dfn>{% else %}{{term.iri|fragment_this}}{% endif %}</code></td>
+            <td><dfn>{% if term|get_namespace_reference %}{{ term.iri|prefix_this }}{% else %}{{term.iri|fragment_this}}{% endif %}</dfn></td>
           </tr>
-          <tr>
+          {% if not term|get_namespace_reference %}<tr>
             <td>Label:</td>
             <td>{{term.skos_prefLabel}}</td>
           </tr>
@@ -167,6 +179,10 @@
             <td>Description:</td>
             <td>{{term.skos_definition}}</td>
           </tr>
+          {% else %}
+            <tr><td>Vocabulary:</td><td>{% set prefix, iri = term.skos_prefLabel|get_namespace_reference %}[[[{{prefix}}]]]</a></td></tr>
+            <tr><td>Usage Note:</td><td>{{ term.skos_scopeNote }}</td></tr>
+          {% endif %}
           {% if term.rdfs_subPropertyOf %}
           <tr>
             <td>Sub-Property Of:</td>
@@ -217,10 +233,12 @@
              <td style="color: red">{{ term.skos_editorialNote }}</td>
           </tr>
           {% endif %}
+          {% if term.dct_created %}
           <tr>
             <td>Created:</td>
             <td><time>{{term.dct_created}}</time></td>
           </tr>
+          {% endif %}
           {% if term.dct_date_approved %}
           <tr>
             <td>Approved:</td>
@@ -250,6 +268,12 @@
               {% endif %}
             </td>
           </tr>
+          {% endif %}
+          {% if term.vann_example %}
+            <tr>
+              <td>Examples:</td>
+              <td>{% if term.vann_example is sequence %}{% for ex in term.vann_example|sort(attribute='iri') %}<a href="{{ex}}">{{ ex|prefix_this }} - {{ ex|get_example_title }}</a>{{ "<br/>"|safe if not loop.last }}{% endfor %}{% else %}<a href="{{term.vann_example}}">{{ term.vann_example|prefix_this }} - {{ term.vann_example|get_example_title }}</a>{% endif %}</td>
+            </tr>
           {% endif %}
         </tbody>
       </table>

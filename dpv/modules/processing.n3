@@ -1,10 +1,12 @@
 @prefix dct: <http://purl.org/dc/terms/> .
+@prefix dex: <https://w3id.org/dpv/examples#> .
 @prefix dpv: <https://w3id.org/dpv#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix spl: <https://specialprivacy.ercim.eu/langs/usage-policy#> .
 @prefix svpr: <https://specialprivacy.ercim.eu/vocabs/processing#> .
 @prefix sw: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 dpv:ProcessingConcepts a skos:Collection ;
@@ -39,7 +41,7 @@ dpv:ProcessingConcepts a skos:Collection ;
         dpv:Organise,
         dpv:Processing,
         dpv:Profiling,
-        dpv:PseudoAnonymise,
+        dpv:Pseudonymise,
         dpv:Query,
         dpv:Record,
         dpv:Remove,
@@ -174,6 +176,7 @@ dpv:Collect a skos:Concept,
     dct:created "2019-05-07"^^xsd:date ;
     dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj>,
         <https://specialprivacy.ercim.eu/vocabs/processing> ;
+    vann:example dex:E0018 ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:broader dpv:Obtain ;
@@ -278,8 +281,10 @@ dpv:Infer a skos:Concept,
         dpv:Concept ;
     dct:created "2022-04-20"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:modified "2022-10-14"^^xsd:date ;
+    vann:example dex:E0014 ;
     rdfs:isDefinedBy dpv: ;
-    sw:term_status "accepted"@en ;
+    sw:term_status "modified"@en ;
     skos:broader dpv:Derive ;
     skos:definition "to infer data from existing data"@en ;
     skos:note "Infer indicates data that is derived without it being present or obtainable from existing data. For data that is presented, and is 'extracted' or 'obtained' from existing data, see Derive."@en ;
@@ -368,15 +373,16 @@ dpv:Profiling a skos:Concept,
     skos:prefLabel "Profiling"@en ;
     dpv:isSubTypeOf dpv:Use .
 
-dpv:PseudoAnonymise a skos:Concept,
+dpv:Pseudonymise a skos:Concept,
         dpv:Concept ;
     dct:created "2019-05-07"^^xsd:date ;
+    dct:creator "2022-10-14"^^xsd:string ;
     dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
     rdfs:isDefinedBy dpv: ;
-    sw:term_status "accepted"@en ;
+    sw:term_status "modified"@en ;
     skos:broader dpv:Transform ;
     skos:definition "to replace personal identifiable information by artificial identifiers"@en ;
-    skos:prefLabel "Pseudo-Anonymise"@en ;
+    skos:prefLabel "Pseudonymise"@en ;
     dpv:isSubTypeOf dpv:Transform .
 
 dpv:Query a skos:Concept,
@@ -495,15 +501,16 @@ dpv:Derive a skos:Concept,
         dpv:Concept ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:source <https://specialprivacy.ercim.eu/vocabs/processing> ;
+    vann:example dex:E0014 ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
-    skos:broader dpv:Transform ;
+    skos:broader dpv:Obtain ;
     skos:definition "to create new derivative data from the original data"@en ;
     skos:narrower dpv:Infer ;
     skos:note "Derive indicates data is present or obtainable from existing data. For data that is created without such existence, see Infer."@en ;
     skos:prefLabel "Derive"@en ;
     skos:related svpr:Derive ;
-    dpv:isSubTypeOf dpv:Transform .
+    dpv:isSubTypeOf dpv:Obtain .
 
 dpv:Organise a skos:Concept,
         dpv:Concept ;
@@ -521,6 +528,7 @@ dpv:Transfer a skos:Concept,
         dpv:Concept ;
     dct:created "2019-05-07"^^xsd:date ;
     dct:source <https://specialprivacy.ercim.eu/vocabs/processing> ;
+    vann:example dex:E0020 ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:broader dpv:Processing ;
@@ -584,6 +592,7 @@ dpv:Obtain a skos:Concept,
     skos:definition "to solicit or gather data from someone"@en ;
     skos:narrower dpv:Acquire,
         dpv:Collect,
+        dpv:Derive,
         dpv:Generate,
         dpv:Observe,
         dpv:Record ;
@@ -615,6 +624,9 @@ dpv:Processing a skos:Concept,
         "Javier Fernández"^^xsd:string ;
     dct:modified "2020-11-04"^^xsd:date ;
     dct:source <https://specialprivacy.ercim.eu/> ;
+    vann:example dex:E0005,
+        dex:E0011,
+        dex:E0014 ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:definition "The processing performed on personal data"@en ;
@@ -643,9 +655,8 @@ dpv:Transform a skos:Concept,
         dpv:Alter,
         dpv:Anonymise,
         dpv:Combine,
-        dpv:Derive,
         dpv:Filter,
-        dpv:PseudoAnonymise,
+        dpv:Pseudonymise,
         dpv:Restrict,
         dpv:Screen ;
     skos:prefLabel "Transform"@en ;

@@ -8,14 +8,6 @@
    xmlns:sw="http://www.w3.org/2003/06/sw-vocab-status/ns#"
    xmlns:time="http://www.w3.org/2006/time#"
 >
-  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#LV">
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA30"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA31"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU27"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU28"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA31">
     <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos#SupraNationalUnion"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -78,10 +70,34 @@
     <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#SI"/>
     <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#SK"/>
     <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#CZ"/>
-    <dct:temporal rdf:nodeID="N154a7192d66d4b428a464bfb79122c3b"/>
+    <dct:temporal rdf:nodeID="N888540f227764f5d8dc80b6b7b9156d7"/>
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-03-30</dct:created>
     <sw:term_status xml:lang="en">accepted</sw:term_status>
     <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#HR">
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA30"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA31"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU27"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU28"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#PL">
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA30"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA31"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU27"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU28"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#BG">
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA30"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA31"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU27"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU28"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#EU">
     <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos#SupraNationalUnion"/>
@@ -148,71 +164,6 @@
     <sw:term_status xml:lang="en">accepted</sw:term_status>
     <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
   </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA30">
-    <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos#SupraNationalUnion"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#"/>
-    <skos:prefLabel xml:lang="en">European Economic Area (EEA-30)</skos:prefLabel>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
-    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#DE"/>
-    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#CY"/>
-    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#AT"/>
-    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#BE"/>
-    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#BG"/>
-    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#DK"/>
-    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EE"/>
-    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#ES"/>
-    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#FI"/>
-    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#FR"/>
-    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#GR"/>
-    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#HR"/>
-    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#HU"/>
-    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#IE"/>
-    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#IT"/>
-    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#LT"/>
-    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#LU"/>
-    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#LV"/>
-    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#MT"/>
-    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#NL"/>
-    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#PL"/>
-    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#PT"/>
-    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#RO"/>
-    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#SE"/>
-    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#SI"/>
-    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#SK"/>
-    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#CZ"/>
-    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#DE"/>
-    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#CY"/>
-    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#AT"/>
-    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#BE"/>
-    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#BG"/>
-    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#DK"/>
-    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EE"/>
-    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#ES"/>
-    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#FI"/>
-    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#FR"/>
-    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#GR"/>
-    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#HR"/>
-    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#HU"/>
-    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#IE"/>
-    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#IT"/>
-    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#LT"/>
-    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#LU"/>
-    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#LV"/>
-    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#MT"/>
-    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#NL"/>
-    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#PL"/>
-    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#PT"/>
-    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#RO"/>
-    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#SE"/>
-    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#SI"/>
-    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#SK"/>
-    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#CZ"/>
-    <dct:temporal rdf:nodeID="N43c95743d9a34b4b97d97764d4a6f1ff"/>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-03-30</dct:created>
-    <sw:term_status xml:lang="en">accepted</sw:term_status>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
-  </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#EU27">
     <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos#SupraNationalUnion"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -273,34 +224,10 @@
     <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#SI"/>
     <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#SK"/>
     <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#CZ"/>
-    <dct:temporal rdf:nodeID="N6e86581f6a0d4ef7911b97bf6ed2afd2"/>
+    <dct:temporal rdf:nodeID="N2ed978c59d814a99826e7c880bff64ec"/>
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-03-30</dct:created>
     <sw:term_status xml:lang="en">accepted</sw:term_status>
     <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#DE">
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA30"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA31"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU27"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU28"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#LU">
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA30"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA31"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU27"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU28"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#LT">
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA30"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA31"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU27"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU28"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA">
     <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos#SupraNationalUnion"/>
@@ -367,13 +294,86 @@
     <sw:term_status xml:lang="en">accepted</sw:term_status>
     <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
   </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#DK">
+  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#PT">
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA30"/>
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA31"/>
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU27"/>
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU28"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#HU">
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA30"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA31"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU27"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU28"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA30">
+    <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos#SupraNationalUnion"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#"/>
+    <skos:prefLabel xml:lang="en">European Economic Area (EEA-30)</skos:prefLabel>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
+    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#DE"/>
+    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#CY"/>
+    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#AT"/>
+    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#BE"/>
+    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#BG"/>
+    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#DK"/>
+    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EE"/>
+    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#ES"/>
+    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#FI"/>
+    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#FR"/>
+    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#GR"/>
+    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#HR"/>
+    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#HU"/>
+    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#IE"/>
+    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#IT"/>
+    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#LT"/>
+    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#LU"/>
+    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#LV"/>
+    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#MT"/>
+    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#NL"/>
+    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#PL"/>
+    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#PT"/>
+    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#RO"/>
+    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#SE"/>
+    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#SI"/>
+    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#SK"/>
+    <dpvs:hasCountry rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#CZ"/>
+    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#DE"/>
+    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#CY"/>
+    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#AT"/>
+    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#BE"/>
+    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#BG"/>
+    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#DK"/>
+    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EE"/>
+    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#ES"/>
+    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#FI"/>
+    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#FR"/>
+    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#GR"/>
+    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#HR"/>
+    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#HU"/>
+    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#IE"/>
+    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#IT"/>
+    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#LT"/>
+    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#LU"/>
+    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#LV"/>
+    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#MT"/>
+    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#NL"/>
+    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#PL"/>
+    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#PT"/>
+    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#RO"/>
+    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#SE"/>
+    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#SI"/>
+    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#SK"/>
+    <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#CZ"/>
+    <dct:temporal rdf:nodeID="Nd4f1554ad19144f5a3022a9ba5ad4e34"/>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-03-30</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#NL">
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
@@ -383,7 +383,44 @@
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU27"/>
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU28"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#AT">
+  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#DK">
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA30"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA31"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU27"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU28"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#ES">
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA30"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA31"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU27"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU28"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncce175d99a714ce3b7bc877166984e64">
+    <rdf:type rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
+    <time:hasBeginning rdf:nodeID="Nd3e7b0ecc10244d8b197b6672f572eff"/>
+    <time:hasEnd rdf:nodeID="N695aa06c529f451a9b1433ace0016332"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#SI">
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA30"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA31"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU27"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU28"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#CZ">
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA30"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA31"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU27"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU28"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#FI">
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA30"/>
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA31"/>
@@ -453,16 +490,12 @@
     <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#SI"/>
     <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#SK"/>
     <skos:narrowerTransitive rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#CZ"/>
-    <dct:temporal rdf:nodeID="Naf613ba900a140959b901397437e404e"/>
+    <dct:temporal rdf:nodeID="Ncce175d99a714ce3b7bc877166984e64"/>
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-03-30</dct:created>
     <sw:term_status xml:lang="en">accepted</sw:term_status>
     <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
   </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#GB">
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA31"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU28"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#CZ">
+  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#MT">
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA30"/>
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA31"/>
@@ -470,7 +503,7 @@
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU27"/>
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU28"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#GR">
+  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#IE">
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA30"/>
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA31"/>
@@ -478,13 +511,32 @@
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU27"/>
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU28"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#EE">
+  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#LT">
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA30"/>
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA31"/>
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU27"/>
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU28"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#SK">
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA30"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA31"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU27"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU28"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#BE">
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA30"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA31"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU27"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU28"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9642fc50665f4b84bc1678080d684851">
+    <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-01</time:inXSDDate>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#FR">
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
@@ -494,7 +546,26 @@
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU27"/>
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU28"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#HU">
+  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#RO">
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA30"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA31"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU27"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU28"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#AT">
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA30"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA31"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU27"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU28"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0f6925a05c1b444db285139dcf691229">
+    <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-01</time:inXSDDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#IT">
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA30"/>
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA31"/>
@@ -511,7 +582,7 @@
     <skos:member rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU28"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#MT">
+  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#EE">
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA30"/>
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA31"/>
@@ -519,37 +590,8 @@
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU27"/>
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU28"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#IT">
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA30"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA31"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU27"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU28"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#BE">
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA30"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA31"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU27"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU28"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#SI">
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA30"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA31"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU27"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU28"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#PL">
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA30"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA31"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU27"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU28"/>
+  <rdf:Description rdf:nodeID="N695aa06c529f451a9b1433ace0016332">
+    <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-01-31</time:inXSDDate>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#CY">
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
@@ -559,10 +601,7 @@
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU27"/>
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU28"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N37c7a70a034b44c69e8728e36ce9455b">
-    <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-01</time:inXSDDate>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#PT">
+  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#DE">
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA30"/>
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA31"/>
@@ -570,7 +609,7 @@
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU27"/>
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU28"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#RO">
+  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#LV">
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA30"/>
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA31"/>
@@ -578,23 +617,7 @@
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU27"/>
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU28"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#SK">
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA30"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA31"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU27"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU28"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#FI">
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA30"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA31"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU27"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU28"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#BG">
+  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#GR">
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA30"/>
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA31"/>
@@ -610,61 +633,38 @@
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU27"/>
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU28"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N6e86581f6a0d4ef7911b97bf6ed2afd2">
+  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#LU">
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA30"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA31"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU27"/>
+    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU28"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2ed978c59d814a99826e7c880bff64ec">
     <rdf:type rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
-    <time:hasBeginning rdf:nodeID="Nfcc245dd10a7468e80879c9d33a99be6"/>
+    <time:hasBeginning rdf:nodeID="N9642fc50665f4b84bc1678080d684851"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N84068617a86541aa8c2c2ae0fa29218f">
-    <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-01-31</time:inXSDDate>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Naeef1069e5154268878ae5ed94daeead">
-    <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-07-01</time:inXSDDate>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#ES">
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA30"/>
+  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#GB">
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA31"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU27"/>
     <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU28"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#HR">
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA30"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA31"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU27"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU28"/>
+  <rdf:Description rdf:nodeID="N888540f227764f5d8dc80b6b7b9156d7">
+    <rdf:type rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
+    <time:hasBeginning rdf:nodeID="Nac07dc47c9c4400d832e5e893c704a7a"/>
+    <time:hasEnd rdf:nodeID="Nae2ff628d98545c5b0e8490c96cbede7"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nfcc245dd10a7468e80879c9d33a99be6">
-    <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-01</time:inXSDDate>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N6233a2e89dc8426e9278df9dd81720b6">
-    <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-01-31</time:inXSDDate>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N9125dc45ce8c45c6ad688e3b229916c4">
+  <rdf:Description rdf:nodeID="Nac07dc47c9c4400d832e5e893c704a7a">
     <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-04-12</time:inXSDDate>
   </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#IE">
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA30"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EEA31"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU27"/>
-    <skos:broader rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU28"/>
+  <rdf:Description rdf:nodeID="Nae2ff628d98545c5b0e8490c96cbede7">
+    <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-01-31</time:inXSDDate>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Naf613ba900a140959b901397437e404e">
-    <rdf:type rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
-    <time:hasBeginning rdf:nodeID="Naeef1069e5154268878ae5ed94daeead"/>
-    <time:hasEnd rdf:nodeID="N6233a2e89dc8426e9278df9dd81720b6"/>
+  <rdf:Description rdf:nodeID="Nd3e7b0ecc10244d8b197b6672f572eff">
+    <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-07-01</time:inXSDDate>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N154a7192d66d4b428a464bfb79122c3b">
+  <rdf:Description rdf:nodeID="Nd4f1554ad19144f5a3022a9ba5ad4e34">
     <rdf:type rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
-    <time:hasBeginning rdf:nodeID="N9125dc45ce8c45c6ad688e3b229916c4"/>
-    <time:hasEnd rdf:nodeID="N84068617a86541aa8c2c2ae0fa29218f"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N43c95743d9a34b4b97d97764d4a6f1ff">
-    <rdf:type rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
-    <time:hasBeginning rdf:nodeID="N37c7a70a034b44c69e8728e36ce9455b"/>
+    <time:hasBeginning rdf:nodeID="N0f6925a05c1b444db285139dcf691229"/>
   </rdf:Description>
 </rdf:RDF>

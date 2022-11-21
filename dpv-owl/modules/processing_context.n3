@@ -1,10 +1,24 @@
 @prefix dct: <http://purl.org/dc/terms/> .
+@prefix dpv: <https://w3id.org/dpv#> .
 @prefix dpvo: <https://w3id.org/dpv/dpv-owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sw: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dpv:DataController a owl:Class ;
+    rdfs:label "dpv:DataController"@en ;
+    skos:scopeNote "An Data Controller can be a Data Source, e.g. a Controller inferring data or generating data"@en .
+
+dpv:DataSubject a owl:Class ;
+    rdfs:label "dpv:DataSubject"@en ;
+    skos:scopeNote "A Data Subject as a Data Source, e.g. when data is collected via a form or observed from their activities"@en .
+
+dpv:ThirdParty a owl:Class ;
+    rdfs:label "dpv:ThirdParty"@en ;
+    skos:scopeNote "A Third Party can be a Data Source, e.g. when data is collected from an entity that is neither the Controller nor the Data Subject"@en .
 
 dpvo:AutomatedDecisionMaking a owl:Class ;
     rdfs:label "Automated Decision Making"@en ;
@@ -76,6 +90,16 @@ dpvo:DataPublishedByDataSubject a owl:NamedIndividual,
     rdfs:isDefinedBy dpvo: ;
     sw:term_status "accepted"@en .
 
+dpvo:EvaluationOfIndividuals a owl:Class ;
+    rdfs:label "Evaluation of Individuals"@en ;
+    dct:created "2022-10-22"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "Processing that involves evaluation of individuals"@en ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
+    rdfs:subClassOf dpvo:ProcessingContext ;
+    sw:term_status "accepted"@en .
+
 dpvo:EvaluationScoring a owl:Class ;
     rdfs:label "Evaluation and Scoring"@en ;
     dct:created "2020-11-04"^^xsd:date ;
@@ -142,6 +166,16 @@ dpvo:PublicDataSource a owl:NamedIndividual,
     dct:description "A source of data that is publicly accessible or available"@en ;
     rdfs:comment "The term 'Public' is used here in a broad sense. Actual consideration of what is 'Public Data' can vary based on several contextual or jurisdictional factors such as  definition of open, methods of access, permissions and licenses."@en ;
     rdfs:isDefinedBy dpvo: ;
+    sw:term_status "accepted"@en .
+
+dpvo:ScoringOfIndividuals a owl:Class ;
+    rdfs:label "Scoring of Individuals"@en ;
+    dct:created "2022-10-22"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:description "Processing that involves scoring of individuals"@en ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpvo: ;
+    rdfs:subClassOf dpvo:ProcessingContext ;
     sw:term_status "accepted"@en .
 
 dpvo:StorageDeletion a owl:Class ;

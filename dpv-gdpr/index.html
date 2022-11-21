@@ -9,8 +9,8 @@
    var respecConfig = {
     shortName: "dpv-gdpr",
     title: "DPV-GDPR: GDPR Extension for DPV",
-    subtitle: "version 0.8.2",
-    publishDate: "2022-10-06",
+    subtitle: "version 0.9",
+    publishDate: "2022-10-22",
     specStatus: "CG-DRAFT",
     group: "dpvcg",
     latestVersion: "https://w3id.org/dpv/dpv-gdpr",
@@ -23,7 +23,7 @@
     {
       name: "Harshvardhan J. Pandit",
       url: "https://harshp.com",
-      "company": "ADAPT Centre, Trinity College Dublin"
+      "company": "ADAPT Centre, Dublin City University"
     }
     ],
     formerEditors: [
@@ -72,7 +72,7 @@
       },
       {
         "name": "Harshvardhan J. Pandit",
-        "company": "ADAPT Centre, Trinity College Dublin"
+        "company": "ADAPT Centre, Dublin City University"
       },
       {
         "name": "Javier D. Fernández",
@@ -317,6 +317,18 @@
   "ISO-27017": {
     "href": "https://www.iso.org/standard/43757.html",
     "title": "ISO/IEC 27017:2015 Information technology — Security techniques — Code of practice for information security controls based on ISO/IEC 27002 for cloud services"
+  },
+  "SHACL-UseCases": {
+    "href": "https://www.w3.org/TR/shacl-ucr/",
+    "title": "SHACL Use Cases and Requirements"
+  },
+  "DCT": {
+    "title": "DCMI Metadata Terms (DCT)",
+    "href": "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/"
+  },
+  "DCAT": {
+    "title": "Data Catalog Vocabulary (DCAT) - Version 2",
+    "href": "http://www.w3.org/ns/dcat"
   }
 }  };
 </script>
@@ -377,11 +389,11 @@
     <p>The namespace for terms in DPV-GDPR is <a href="http://www.w3id.org/dpv/dpv-gdpr#"><code>https://www.w3id.org/dpv/dpv-gdpr#</code></a><br/>
       The suggested prefix for the namespace is <code>dpv-gdpr</code><br/>
       The DPV-GDPR vocabulary and its documentation is available on <a href="https://github.com/w3c/dpv">GitHub</a>.</p>
-    <section id="dpv-v1-rc" class="note">
-        <h2>Call for Comments/Feedbacks for DPV v1.0 release</h2>
-        <p>Please provide your comments by <strong>15-OCT-2022</strong> via <a href="https://github.com/w3c/dpv/issues/50">GitHub</a> or <a href="https://lists.w3.org/Archives/Public/public-dpvcg/">public-dpvcg@w3.org</a> (mailing list).</p>
-        <p>While v0.8.1 is a regular 0.x style release, it also acts as the v1.0 release candidate. This means if there are no major issues raised and unable to be resolved, including missing parts, errors or bugs, or requirements that must be added, then after 15-OCT-2022, this version will be re-released as DPV v1.0 along with any further enhancements, fixes, minor additions, or documentations that have been developed until then.</p>
-    </section>
+    <div id="dpv-v1-rc" class="note">
+    <p><strong>Release Candidate for DPV v1.0</strong>
+      The current release is the final point/minor version before the scheduled release of v1 approx. around <strong>15-NOV-2022</strong>. Feedback can be provided via <a href="https://github.com/w3c/dpv/issues/50">GitHub</a> or <a href="https://lists.w3.org/Archives/Public/public-dpvcg/">public-dpvcg@w3.org</a> (mailing list).
+    </p>
+</div>
 <section id="dpv-document-family" class="noTOC">
     <h2>DPV Family of Documents</h2>
     <ul>
@@ -434,7 +446,11 @@
     <p>Regulations such as the GDPR specify certain legal basis for carrying out the processing of personal data, which makes it mandatory for every processing to have one (or more) legal basis that justifies their compliance. DPV provides a list of legal bases as per the GDPR under the separate namespace of dpv-gdpr. Additional legal bases can be declared by subclassing <code>dpv:LegalBasis</code>.</p>
     <p>The taxonomy lists the legal bases as provided by GDPR Article 6 regarding processing of personal data, those defined in GDPR Article 9 regarding processing of special categories of personal data, and those provided by GDPR Articles 45, 46, and 49 in connection with transfer of personal data. The legal basis of ‘consent’ as defined in Article 6(1)(a) has been declared using the terms ‘explicit’ and ‘non-explicit’ to differentiate the requirements of the two in accordance of their requirements of compliance. Furthermore, legal basis provided by Article 6 apply to processing involving personal data whereas those in Article 9 apply specifically to processing involving special categories of personal data.</p>
 
-        <p>
+    <section id="vocab-legal-basis-GDPR">
+    <h3>Core Legal Bases</h3>
+    <section id="legal_basis-classes">
+    <h3>Classes</h3>
+    <p>
       <code><a href="#A6-1-a">Art.6(1-a) consent</a></code> |
       <code><a href="#A6-1-a-explicit-consent">Art 6(1-a) explicit consent</a></code> |
       <code><a href="#A6-1-a-non-explicit-consent">Art.6(1-a) regular consent</a></code> |
@@ -444,27 +460,27 @@
       <code><a href="#A6-1-e">Art 6(1-e) public interest or official authority</a></code> |
       <code><a href="#A6-1-e-official-authority">Art 6(1-e) official authority</a></code> |
       <code><a href="#A6-1-e-public-interest">Art 6(1-e) public interest</a></code> |
-      <code><a href="#A6-1-f">Art 6(1-f) legitimate interest</a></code>
+      <code><a href="#A6-1-f">Art 6(1-f) legitimate interest</a></code> |
     </p>
 
-    <section data-dfn-for="A6-1-a">
+    <section >
       <h4 id="A6-1-a">Art.6(1-a) consent</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A6-1-a</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A6-1-a</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A6-1-a</dfn></code></td>
+            <td><dfn>A6-1-a</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Art.6(1-a) consent</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>consent of the data subject</td>
           </tr>
           <tr>
@@ -496,24 +512,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A6-1-a-explicit-consent">
+    <section >
       <h4 id="A6-1-a-explicit-consent">Art 6(1-a) explicit consent</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A6-1-a-explicit-consent</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A6-1-a-explicit-consent</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A6-1-a-explicit-consent</dfn></code></td>
+            <td><dfn>A6-1-a-explicit-consent</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Art 6(1-a) explicit consent</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>consent (explicit) of the data subject</td>
           </tr>
           <tr>
@@ -553,24 +569,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A6-1-a-non-explicit-consent">
+    <section >
       <h4 id="A6-1-a-non-explicit-consent">Art.6(1-a) regular consent</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A6-1-a-non-explicit-consent</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A6-1-a-non-explicit-consent</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A6-1-a-non-explicit-consent</dfn></code></td>
+            <td><dfn>A6-1-a-non-explicit-consent</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Art.6(1-a) regular consent</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>consent (non-explicit or regular) of the data subject</td>
           </tr>
           <tr>
@@ -610,24 +626,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A6-1-b">
+    <section >
       <h4 id="A6-1-b">Art 6(1-b) contract</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A6-1-b</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A6-1-b</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A6-1-b</dfn></code></td>
+            <td><dfn>A6-1-b</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Art 6(1-b) contract</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>performance of a contract</td>
           </tr>
           <tr>
@@ -660,24 +676,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A6-1-c">
+    <section >
       <h4 id="A6-1-c">Art 6(1-c) legal obligation</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A6-1-c</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A6-1-c</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A6-1-c</dfn></code></td>
+            <td><dfn>A6-1-c</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Art 6(1-c) legal obligation</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>compliance with a legal obligation</td>
           </tr>
           <tr>
@@ -710,24 +726,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A6-1-d">
+    <section >
       <h4 id="A6-1-d">Art 6(1-d) protect vital interests</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A6-1-d</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A6-1-d</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A6-1-d</dfn></code></td>
+            <td><dfn>A6-1-d</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Art 6(1-d) protect vital interests</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>protection of the vital interests</td>
           </tr>
           <tr>
@@ -760,24 +776,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A6-1-e">
+    <section >
       <h4 id="A6-1-e">Art 6(1-e) public interest or official authority</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A6-1-e</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A6-1-e</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A6-1-e</dfn></code></td>
+            <td><dfn>A6-1-e</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Art 6(1-e) public interest or official authority</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>public interest or official authority</td>
           </tr>
           <tr>
@@ -811,24 +827,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A6-1-e-official-authority">
+    <section >
       <h4 id="A6-1-e-official-authority">Art 6(1-e) official authority</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A6-1-e-official-authority</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A6-1-e-official-authority</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A6-1-e-official-authority</dfn></code></td>
+            <td><dfn>A6-1-e-official-authority</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Art 6(1-e) official authority</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>official authority</td>
           </tr>
           <tr>
@@ -857,24 +873,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A6-1-e-public-interest">
+    <section >
       <h4 id="A6-1-e-public-interest">Art 6(1-e) public interest</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A6-1-e-public-interest</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A6-1-e-public-interest</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A6-1-e-public-interest</dfn></code></td>
+            <td><dfn>A6-1-e-public-interest</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Art 6(1-e) public interest</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>public interest</td>
           </tr>
           <tr>
@@ -903,24 +919,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A6-1-f">
+    <section >
       <h4 id="A6-1-f">Art 6(1-f) legitimate interest</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A6-1-f</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A6-1-f</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A6-1-f</dfn></code></td>
+            <td><dfn>A6-1-f</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Art 6(1-f) legitimate interest</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>legitimate interests</td>
           </tr>
           <tr>
@@ -954,10 +970,14 @@
       </table>
     </section>
 
+    </section>
+    </section>
 
     <section id="vocab-legal-basis-special">
       <h3>Special Category Personal Data</h3>
-          <p>
+      <section id="legal_basis_special-classes">
+      <h3>Classes</h3>
+    <p>
       <code><a href="#A9-2-a">Art 9(2-a) explicit consent</a></code> |
       <code><a href="#A9-2-b">Art 9(2-b) employment, social security, social protection law</a></code> |
       <code><a href="#A9-2-c">Art 9(2-c) protect vital interest</a></code> |
@@ -967,27 +987,27 @@
       <code><a href="#A9-2-g">Art 9(2-g) public interest</a></code> |
       <code><a href="#A9-2-h">Art 9(2-h) health &amp; medicine</a></code> |
       <code><a href="#A9-2-i">Art 9(2-i) public interest in public health</a></code> |
-      <code><a href="#A9-2-j">Art 9(2-j) public interest, scientific research, statistical purpose</a></code>
+      <code><a href="#A9-2-j">Art 9(2-j) public interest, scientific research, statistical purpose</a></code> |
     </p>
 
-    <section data-dfn-for="A9-2-a">
+    <section >
       <h4 id="A9-2-a">Art 9(2-a) explicit consent</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A9-2-a</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A9-2-a</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A9-2-a</dfn></code></td>
+            <td><dfn>A9-2-a</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Art 9(2-a) explicit consent</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>explicit consent with special categories of data</td>
           </tr>
           <tr>
@@ -1020,24 +1040,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A9-2-b">
+    <section >
       <h4 id="A9-2-b">Art 9(2-b) employment, social security, social protection law</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A9-2-b</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A9-2-b</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A9-2-b</dfn></code></td>
+            <td><dfn>A9-2-b</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Art 9(2-b) employment, social security, social protection law</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>employment and social security and social protection law</td>
           </tr>
           <tr>
@@ -1066,24 +1086,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A9-2-c">
+    <section >
       <h4 id="A9-2-c">Art 9(2-c) protect vital interest</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A9-2-c</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A9-2-c</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A9-2-c</dfn></code></td>
+            <td><dfn>A9-2-c</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Art 9(2-c) protect vital interest</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>protection of the vital interests</td>
           </tr>
           <tr>
@@ -1116,24 +1136,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A9-2-d">
+    <section >
       <h4 id="A9-2-d">Art 9(2-d) legitimate activities</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A9-2-d</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A9-2-d</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A9-2-d</dfn></code></td>
+            <td><dfn>A9-2-d</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Art 9(2-d) legitimate activities</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>legitimate activities with appropriate safeguards by a foundation, association or any other not-for-profit body with a political, philosophical, religious or trade union aim and on condition that the processing relates solely to the members or to former members of the body or to persons who have regular contact with it in connection with its purposes and that the personal data are not disclosed outside that body without the consent of the data subjects;</td>
           </tr>
           <tr>
@@ -1166,24 +1186,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A9-2-e">
+    <section >
       <h4 id="A9-2-e">Art 9(2-e) data made public</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A9-2-e</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A9-2-e</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A9-2-e</dfn></code></td>
+            <td><dfn>A9-2-e</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Art 9(2-e) data made public</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>data manifestly made public by the data subject</td>
           </tr>
           <tr>
@@ -1212,24 +1232,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A9-2-f">
+    <section >
       <h4 id="A9-2-f">Art 9(2-f) judicial process</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A9-2-f</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A9-2-f</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A9-2-f</dfn></code></td>
+            <td><dfn>A9-2-f</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Art 9(2-f) judicial process</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>establishment, exercise or defence of legal claims / courts acting in their judicial capacity</td>
           </tr>
           <tr>
@@ -1258,24 +1278,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A9-2-g">
+    <section >
       <h4 id="A9-2-g">Art 9(2-g) public interest</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A9-2-g</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A9-2-g</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A9-2-g</dfn></code></td>
+            <td><dfn>A9-2-g</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Art 9(2-g) public interest</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>substantial public interest, on the basis of Union or Member State law</td>
           </tr>
           <tr>
@@ -1308,24 +1328,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A9-2-h">
+    <section >
       <h4 id="A9-2-h">Art 9(2-h) health &amp; medicine</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A9-2-h</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A9-2-h</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A9-2-h</dfn></code></td>
+            <td><dfn>A9-2-h</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Art 9(2-h) health &amp; medicine</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>preventive or occupational medicine, for the assessment of the working capacity of the employee, medical diagnosis, the provision of health or social care or treatment or the management of health or social care systems and services on the basis of Union or Member State law or pursuant to contract with a health professional and subject to the conditions and safeguards referred to in paragraph 3</td>
           </tr>
           <tr>
@@ -1354,24 +1374,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A9-2-i">
+    <section >
       <h4 id="A9-2-i">Art 9(2-i) public interest in public health</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A9-2-i</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A9-2-i</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A9-2-i</dfn></code></td>
+            <td><dfn>A9-2-i</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Art 9(2-i) public interest in public health</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>public interest in public health</td>
           </tr>
           <tr>
@@ -1404,24 +1424,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A9-2-j">
+    <section >
       <h4 id="A9-2-j">Art 9(2-j) public interest, scientific research, statistical purpose</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A9-2-j</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A9-2-j</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A9-2-j</dfn></code></td>
+            <td><dfn>A9-2-j</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Art 9(2-j) public interest, scientific research, statistical purpose</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>public interest, scientific or historical research purposes or statistical purposes based on Union or Member State law</td>
           </tr>
           <tr>
@@ -1455,12 +1475,15 @@
       </table>
     </section>
 
+      </section>
       
     </section>
 
     <section id="vocab-legal-basis-data-transfer">
       <h3>Data Transfer</h3>
-          <p>
+      <section id="legal_basis_data_transfer-classes">
+      <h3>Classes</h3>
+    <p>
       <code><a href="#A45-3">Art 45(3) adequacy decision</a></code> |
       <code><a href="#A46-2-a">Art 46(2-a) legal instrument</a></code> |
       <code><a href="#A46-2-b">Art 46(2-b) Binding Corporate Rules (BCR)</a></code> |
@@ -1477,27 +1500,27 @@
       <code><a href="#A49-1-e">Art 49(1-e) legal claims</a></code> |
       <code><a href="#A49-1-f">Art 49(1-f) protect vital interests</a></code> |
       <code><a href="#A49-1-g">Art 49(1-g) public register</a></code> |
-      <code><a href="#A49-2">Art 49(2) legitimate interests</a></code>
+      <code><a href="#A49-2">Art 49(2) legitimate interests</a></code> |
     </p>
 
-    <section data-dfn-for="A45-3">
+    <section >
       <h4 id="A45-3">Art 45(3) adequacy decision</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A45-3</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A45-3</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A45-3</dfn></code></td>
+            <td><dfn>A45-3</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Art 45(3) adequacy decision</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>Personal data can flow freely from the EU to a third country with an Adequacy Decision without any further safeguard being necessary.</td>
           </tr>
           <tr>
@@ -1533,24 +1556,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A46-2-a">
+    <section >
       <h4 id="A46-2-a">Art 46(2-a) legal instrument</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A46-2-a</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A46-2-a</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A46-2-a</dfn></code></td>
+            <td><dfn>A46-2-a</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Art 46(2-a) legal instrument</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>A legally binding and enforceable instrument between public authorities or bodies</td>
           </tr>
           <tr>
@@ -1586,24 +1609,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A46-2-b">
+    <section >
       <h4 id="A46-2-b">Art 46(2-b) Binding Corporate Rules (BCR)</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A46-2-b</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A46-2-b</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A46-2-b</dfn></code></td>
+            <td><dfn>A46-2-b</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Art 46(2-b) Binding Corporate Rules (BCR)</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>Binding corporate rules</td>
           </tr>
           <tr>
@@ -1640,24 +1663,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A46-2-c">
+    <section >
       <h4 id="A46-2-c">Art 46(2-c) Standard Contractual Clauses (SCC) by EC</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A46-2-c</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A46-2-c</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A46-2-c</dfn></code></td>
+            <td><dfn>A46-2-c</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Art 46(2-c) Standard Contractual Clauses (SCC) by EC</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>Standard data protection clauses adopted by the Commission</td>
           </tr>
           <tr>
@@ -1694,24 +1717,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A46-2-d">
+    <section >
       <h4 id="A46-2-d">Art 46(2-d) Standard Contractual Clauses (SCC) by DPA</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A46-2-d</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A46-2-d</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A46-2-d</dfn></code></td>
+            <td><dfn>A46-2-d</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Art 46(2-d) Standard Contractual Clauses (SCC) by DPA</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>Standard data protection clauses adopted by a Supervisory Authority</td>
           </tr>
           <tr>
@@ -1748,24 +1771,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A46-2-e">
+    <section >
       <h4 id="A46-2-e">Art 46(2-e) code of conduct</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A46-2-e</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A46-2-e</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A46-2-e</dfn></code></td>
+            <td><dfn>A46-2-e</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Art 46(2-e) code of conduct</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>An approved code of conduct pursuant to GDPR Article 40 together with binding and enforceable commitments of the controller or processor in the third country to apply the appropriate safeguards, including as regards individuals´ rights</td>
           </tr>
           <tr>
@@ -1801,24 +1824,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A46-2-f">
+    <section >
       <h4 id="A46-2-f">Art 46(2-f) certification</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A46-2-f</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A46-2-f</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A46-2-f</dfn></code></td>
+            <td><dfn>A46-2-f</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Art 46(2-f) certification</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>An approved certification mechanism pursuant to GDPR Article 42 together with binding and enforceable commitments of the controller or processor in the third country to appy the appropriate safeguards, including as regards individuals` rights</td>
           </tr>
           <tr>
@@ -1854,24 +1877,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A46-3-a">
+    <section >
       <h4 id="A46-3-a">Art 46(3-a) contractual clauses</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A46-3-a</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A46-3-a</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A46-3-a</dfn></code></td>
+            <td><dfn>A46-3-a</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Art 46(3-a) contractual clauses</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>Contractual clauses with controller, processor or recipient of the personal data in the third country or the international organisation.</td>
           </tr>
           <tr>
@@ -1907,24 +1930,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A46-3-b">
+    <section >
       <h4 id="A46-3-b">Art 46(3-b) administrative arrangements</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A46-3-b</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A46-3-b</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A46-3-b</dfn></code></td>
+            <td><dfn>A46-3-b</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Art 46(3-b) administrative arrangements</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>Provisions to be inserted into administrative arrangements between public authorities or bodies which include enforceable and effective data subject rights</td>
           </tr>
           <tr>
@@ -1960,24 +1983,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A49-1-a">
+    <section >
       <h4 id="A49-1-a">Art 49(1-a) explicit consent</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A49-1-a</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A49-1-a</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A49-1-a</dfn></code></td>
+            <td><dfn>A49-1-a</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Art 49(1-a) explicit consent</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>The data subject has explicitly consented to the proposed transfer, after having been informed of the possible risks of such transfers for the data subject due to the absence of an adequacy decision and appropriate safeguards.</td>
           </tr>
           <tr>
@@ -2014,24 +2037,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A49-1-b">
+    <section >
       <h4 id="A49-1-b">Art 49(1-b) performance of contract</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A49-1-b</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A49-1-b</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A49-1-b</dfn></code></td>
+            <td><dfn>A49-1-b</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Art 49(1-b) performance of contract</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>The transfer is necessary for the performance of a contract between the data subject and controller or the implementation of pre-contractual measures taken at the data subject´s request.</td>
           </tr>
           <tr>
@@ -2068,24 +2091,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A49-1-c">
+    <section >
       <h4 id="A49-1-c">Art 49(1-c) conclusion of contract</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A49-1-c</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A49-1-c</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A49-1-c</dfn></code></td>
+            <td><dfn>A49-1-c</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Art 49(1-c) conclusion of contract</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>The transfer is necessary for the conclusion or performance of a contract concluded in the interest of the data subject and controller and another natural or legal person.</td>
           </tr>
           <tr>
@@ -2122,24 +2145,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A49-1-d">
+    <section >
       <h4 id="A49-1-d">Art 49(1-d) public interest</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A49-1-d</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A49-1-d</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A49-1-d</dfn></code></td>
+            <td><dfn>A49-1-d</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Art 49(1-d) public interest</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>The transfer is necessary for important reasons of public interest.</td>
           </tr>
           <tr>
@@ -2176,24 +2199,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A49-1-e">
+    <section >
       <h4 id="A49-1-e">Art 49(1-e) legal claims</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A49-1-e</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A49-1-e</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A49-1-e</dfn></code></td>
+            <td><dfn>A49-1-e</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Art 49(1-e) legal claims</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>The transfer is necessary for the establishment, exercise or defence of legal claims.</td>
           </tr>
           <tr>
@@ -2229,24 +2252,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A49-1-f">
+    <section >
       <h4 id="A49-1-f">Art 49(1-f) protect vital interests</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A49-1-f</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A49-1-f</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A49-1-f</dfn></code></td>
+            <td><dfn>A49-1-f</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Art 49(1-f) protect vital interests</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>The transfer is necessary in order to protect the vital interests of the data subject or of other persons, where the person is physically or legally incapable of giving consent.</td>
           </tr>
           <tr>
@@ -2283,24 +2306,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A49-1-g">
+    <section >
       <h4 id="A49-1-g">Art 49(1-g) public register</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A49-1-g</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A49-1-g</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A49-1-g</dfn></code></td>
+            <td><dfn>A49-1-g</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Art 49(1-g) public register</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>The transfer is made from a register which according to Union or Member State law is intended to provide information to the public in general or by any person who can demonstrate a legitimate interest, but only to the extent that the conditions laid down by Union or Member State law for consultation are fulfilled in the particular case.</td>
           </tr>
           <tr>
@@ -2336,24 +2359,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A49-2">
+    <section >
       <h4 id="A49-2">Art 49(2) legitimate interests</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A49-2</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A49-2</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A49-2</dfn></code></td>
+            <td><dfn>A49-2</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Art 49(2) legitimate interests</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>The transfer is not repetetive, concerns only a limited number of data subjects, is necessary for the purposes of compelling legitimate interests pursued by controller which are not overridden by the interests or rights and freedoms of the data subject, and controller has assessed all the circumstances surrounding the data transfer and have on the basis of that assessment provided suitable safeguards with regard to the protection of personal data.</td>
           </tr>
           <tr>
@@ -2391,6 +2414,7 @@
       </table>
     </section>
 
+      </section>
       
     </section>
 
@@ -2403,6 +2427,7 @@
     <section id="rights-classes">
     <h3>Classes</h3>
     <p>
+      <code><a href="#rights-dcat:Resource">dcat:Resource</a></code> |
       <code><a href="#A13">A13 Right to be Informed</a></code> |
       <code><a href="#A14">A14 Right to be Informed</a></code> |
       <code><a href="#A15">A15 Right of Access</a></code> |
@@ -2414,27 +2439,48 @@
       <code><a href="#A21">A21 Right to object</a></code> |
       <code><a href="#A22">A22 Right to object to automated decision making</a></code> |
       <code><a href="#A7-3">A7-3 Right to Withdraw Consent</a></code> |
-      <code><a href="#A77">A77 Right to Complaint</a></code>
+      <code><a href="#A77">A77 Right to Complaint</a></code> |
+      <code><a href="#DirectDataCollectionNotice">Direct Data Collection Notice</a></code> |
+      <code><a href="#IndirectDataCollectionNotice">Indirect Data Collection Notice</a></code> |
+      <code><a href="#RightsRecipientsNotice">Rights Recipients Notice</a></code> |
+      <code><a href="#SARNotice">SAR Notice</a></code> |
     </p>
 
-    <section data-dfn-for="A13">
+    <section data-dfn-for="rights">
+      <h4 id="rights-dcat:Resource">dcat:Resource</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td><a href="http://www.w3.org/ns/dcat#Resource"><code>http://www.w3.org/ns/dcat#Resource</code></a></td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><dfn><a href="http://www.w3.org/ns/dcat#Resource">dcat:Resource</a></dfn></td>
+          </tr>
+            <tr><td>Vocabulary:</td><td>[[[DCAT]]]</a></td></tr>
+            <tr><td>Usage Note:</td><td>A dataset or catalogue or any other resource provided in fulfilment of a Right Exercise, such as for GDPR&#39;s Art.15 regarding Right of Access or Art.20 regarding Right to Data Portability. The associated properties from DCAT and DCMI DCT vocabularies provide convenient means to express metadata such as URL for accessing the data, its temporal validity and acecss restrictions, and specific datasets present along with their schemas.</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="rights">
       <h4 id="A13">A13 Right to be Informed</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A13</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A13</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A13</dfn></code></td>
+            <td><dfn>A13</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>A13 Right to be Informed</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>information to be provided where personal data is directly collected from data subject</td>
           </tr>
           <tr>
@@ -2464,24 +2510,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A14">
+    <section data-dfn-for="rights">
       <h4 id="A14">A14 Right to be Informed</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A14</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A14</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A14</dfn></code></td>
+            <td><dfn>A14</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>A14 Right to be Informed</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>information to be provided where personal data is collected from other sources</td>
           </tr>
           <tr>
@@ -2511,24 +2557,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A15">
+    <section data-dfn-for="rights">
       <h4 id="A15">A15 Right of Access</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A15</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A15</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A15</dfn></code></td>
+            <td><dfn>A15</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>A15 Right of Access</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>Right of access</td>
           </tr>
           <tr>
@@ -2558,24 +2604,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A16">
+    <section data-dfn-for="rights">
       <h4 id="A16">A16 Right to Rectification</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A16</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A16</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A16</dfn></code></td>
+            <td><dfn>A16</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>A16 Right to Rectification</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>Right to rectification</td>
           </tr>
           <tr>
@@ -2605,24 +2651,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A17">
+    <section data-dfn-for="rights">
       <h4 id="A17">A17 Right to Erasure</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A17</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A17</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A17</dfn></code></td>
+            <td><dfn>A17</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>A17 Right to Erasure</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>Right to erasure (&#39;Right to be forgotten&#39;)</td>
           </tr>
           <tr>
@@ -2652,24 +2698,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A18">
+    <section data-dfn-for="rights">
       <h4 id="A18">A18 Right to Restrict Processing</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A18</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A18</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A18</dfn></code></td>
+            <td><dfn>A18</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>A18 Right to Restrict Processing</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>Right to restriction of processing</td>
           </tr>
           <tr>
@@ -2699,24 +2745,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A19">
+    <section data-dfn-for="rights">
       <h4 id="A19">A19 Right to Rectification</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A19</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A19</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A19</dfn></code></td>
+            <td><dfn>A19</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>A19 Right to Rectification</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>Right to be notified in case of rectification or erasure of personal data or restriction of processing</td>
           </tr>
           <tr>
@@ -2746,24 +2792,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A20">
+    <section data-dfn-for="rights">
       <h4 id="A20">A20 Right to Data Portability</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A20</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A20</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A20</dfn></code></td>
+            <td><dfn>A20</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>A20 Right to Data Portability</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>Right to data portability</td>
           </tr>
           <tr>
@@ -2793,24 +2839,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A21">
+    <section data-dfn-for="rights">
       <h4 id="A21">A21 Right to object</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A21</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A21</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A21</dfn></code></td>
+            <td><dfn>A21</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>A21 Right to object</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>Right to object to processing of personal data</td>
           </tr>
           <tr>
@@ -2840,24 +2886,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A22">
+    <section data-dfn-for="rights">
       <h4 id="A22">A22 Right to object to automated decision making</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A22</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A22</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A22</dfn></code></td>
+            <td><dfn>A22</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>A22 Right to object to automated decision making</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>Right not to be subject to a decision based solely on automated processing including profiling</td>
           </tr>
           <tr>
@@ -2887,25 +2933,25 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A7-3">
+    <section data-dfn-for="rights">
       <h4 id="A7-3">A7-3 Right to Withdraw Consent</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A7-3</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A7-3</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A7-3</dfn></code></td>
+            <td><dfn>A7-3</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>A7-3 Right to Withdraw Consent</td>
           </tr>
           <tr>
-            <td>Definition:</td>
-            <td>Right to withdraw consent</td>
+            <td>Description:</td>
+            <td>Right to withdraw consent at any time</td>
           </tr>
           <tr>
             <td>SubType of:</td>
@@ -2934,24 +2980,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="A77">
+    <section data-dfn-for="rights">
       <h4 id="A77">A77 Right to Complaint</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#A77</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#A77</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>A77</dfn></code></td>
+            <td><dfn>A77</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>A77 Right to Complaint</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>Right to lodge a complaint with a supervisory authority</td>
           </tr>
           <tr>
@@ -2969,6 +3015,170 @@
           <tr>
             <td>Created:</td>
             <td><time>2020-11-04</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Beatriz Esteves, 
+              Georg Krog, 
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="rights">
+      <h4 id="DirectDataCollectionNotice">Direct Data Collection Notice</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#DirectDataCollectionNotice</code></a></td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><dfn>DirectDataCollectionNotice</dfn></td>
+          </tr>
+<tr>
+            <td>Label:</td>
+            <td>Direct Data Collection Notice</td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>A Notice provided in fulfilment of GDPR&#39;s Art.13 regarding information to be provided where personal data are collected from the data subject</td>
+          </tr>
+          <tr>
+            <td>SubType of:</td>
+            <td>
+              <a href="https://w3id.org/dpv#RightFulfilmentNotice">dpv:RightFulfilmentNotice</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-11-09</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Beatriz Esteves, 
+              Georg Krog, 
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="rights">
+      <h4 id="IndirectDataCollectionNotice">Indirect Data Collection Notice</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#IndirectDataCollectionNotice</code></a></td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><dfn>IndirectDataCollectionNotice</dfn></td>
+          </tr>
+<tr>
+            <td>Label:</td>
+            <td>Indirect Data Collection Notice</td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>A Notice provided in fulfilment of GDPR&#39;s Art.14 regarding information to be provided where personal data are not collected from the data subject</td>
+          </tr>
+          <tr>
+            <td>SubType of:</td>
+            <td>
+              <a href="https://w3id.org/dpv#RightFulfilmentNotice">dpv:RightFulfilmentNotice</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-11-09</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Beatriz Esteves, 
+              Georg Krog, 
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="rights">
+      <h4 id="RightsRecipientsNotice">Rights Recipients Notice</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#RightsRecipientsNotice</code></a></td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><dfn>RightsRecipientsNotice</dfn></td>
+          </tr>
+<tr>
+            <td>Label:</td>
+            <td>Rights Recipients Notice</td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>A Notice provided in fulfilment of GDPR&#39;s Art.19 regarding Recipients to whom a rights exercise has been communicated, such as regarding rectification (A.16) or erasure of personal data (A.17) or restriction of processing (A.18)</td>
+          </tr>
+          <tr>
+            <td>SubType of:</td>
+            <td>
+              <a href="https://w3id.org/dpv#RightFulfilmentNotice">dpv:RightFulfilmentNotice</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-11-09</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Beatriz Esteves, 
+              Georg Krog, 
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="rights">
+      <h4 id="SARNotice">SAR Notice</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#SARNotice</code></a></td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><dfn>SARNotice</dfn></td>
+          </tr>
+<tr>
+            <td>Label:</td>
+            <td>SAR Notice</td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>A Notice provided in fulfilment of GDPR&#39;s Art.15 regarding information to be provided for Right of Access or Subject Access Request (SAR)</td>
+          </tr>
+          <tr>
+            <td>SubType of:</td>
+            <td>
+              <a href="https://w3id.org/dpv#RightFulfilmentNotice">dpv:RightFulfilmentNotice</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-11-09</time></td>
           </tr>
           <tr>
             <td>Contributor(s):</td>
@@ -3000,27 +3210,27 @@
       <code><a href="#SCCByCommission">SCCs adopted by Commission</a></code> |
       <code><a href="#SCCBySupervisoryAuthority">SCCs adopted by Supervisory Authority</a></code> |
       <code><a href="#StandardContractualClauses">Standard Contractual Clauses (SCC)</a></code> |
-      <code><a href="#SupplementaryMeasure">Supplementary Measure</a></code>
+      <code><a href="#SupplementaryMeasure">Supplementary Measure</a></code> |
     </p>
 
-    <section data-dfn-for="AdHocContractualClauses">
+    <section >
       <h4 id="AdHocContractualClauses">AdHoc Contractual Clauses</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#AdHocContractualClauses</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#AdHocContractualClauses</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>AdHocContractualClauses</dfn></code></td>
+            <td><dfn>AdHocContractualClauses</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>AdHoc Contractual Clauses</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>Contractual Clauses not drafted by the EU Commission, e.g. by the Controller</td>
           </tr>
           <tr>
@@ -3049,24 +3259,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="BindingCorporateRules">
+    <section >
       <h4 id="BindingCorporateRules">Binding Corporate Rules (BCR)</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#BindingCorporateRules</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#BindingCorporateRules</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>BindingCorporateRules</dfn></code></td>
+            <td><dfn>BindingCorporateRules</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Binding Corporate Rules (BCR)</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>Binding corporate rules (BCR) are data protection policies adhered to by companies established in the EU for transfers of personal data outside the EU within a group of undertakings or enterprises.</td>
           </tr>
           <tr>
@@ -3097,24 +3307,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="CertificationMechanismsForDataTransfers">
+    <section >
       <h4 id="CertificationMechanismsForDataTransfers">Certification Mechanisms for Data Transfers</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#CertificationMechanismsForDataTransfers</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#CertificationMechanismsForDataTransfers</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>CertificationMechanismsForDataTransfers</dfn></code></td>
+            <td><dfn>CertificationMechanismsForDataTransfers</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Certification Mechanisms for Data Transfers</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>Certification and its binding or specified mechanisms intended to provide sufficient safeguards for data transfers</td>
           </tr>
           <tr>
@@ -3142,24 +3352,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="CodesOfConductForDataTransfers">
+    <section >
       <h4 id="CodesOfConductForDataTransfers">Codes of Conduct for Data Transfers</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#CodesOfConductForDataTransfers</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#CodesOfConductForDataTransfers</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>CodesOfConductForDataTransfers</dfn></code></td>
+            <td><dfn>CodesOfConductForDataTransfers</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Codes of Conduct for Data Transfers</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>Codes of Conduct that outline sufficient safeguards for carrying out data transfers</td>
           </tr>
           <tr>
@@ -3187,24 +3397,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="DataTransferTool">
+    <section >
       <h4 id="DataTransferTool">Data Transfer Tool</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#DataTransferTool</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#DataTransferTool</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>DataTransferTool</dfn></code></td>
+            <td><dfn>DataTransferTool</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Data Transfer Tool</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>A legal instrument or tool intended to assist or justify data transfers</td>
           </tr>
           <tr>
@@ -3234,24 +3444,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="SCCByCommission">
+    <section >
       <h4 id="SCCByCommission">SCCs adopted by Commission</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#SCCByCommission</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#SCCByCommission</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>SCCByCommission</dfn></code></td>
+            <td><dfn>SCCByCommission</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>SCCs adopted by Commission</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>Standard contractual clauses adopted by the Commission in accordance with the examination procedure referred to in GDPR Article 93(2)</td>
           </tr>
           <tr>
@@ -3283,24 +3493,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="SCCBySupervisoryAuthority">
+    <section >
       <h4 id="SCCBySupervisoryAuthority">SCCs adopted by Supervisory Authority</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#SCCBySupervisoryAuthority</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#SCCBySupervisoryAuthority</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>SCCBySupervisoryAuthority</dfn></code></td>
+            <td><dfn>SCCBySupervisoryAuthority</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>SCCs adopted by Supervisory Authority</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>Standard data protection clauses adopted by a supervisory authority and approved by the Commission pursuant to the examination procedure referred to in GDPR Article 93(2)</td>
           </tr>
           <tr>
@@ -3332,24 +3542,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="StandardContractualClauses">
+    <section >
       <h4 id="StandardContractualClauses">Standard Contractual Clauses (SCC)</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#StandardContractualClauses</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#StandardContractualClauses</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>StandardContractualClauses</dfn></code></td>
+            <td><dfn>StandardContractualClauses</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Standard Contractual Clauses (SCC)</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>Standard Contractual Clauses (SCCs) are pre-approved clauses by the EU for ensuring appropriate data protection safeguards intended for data transfers from the EU to third countries</td>
           </tr>
           <tr>
@@ -3381,24 +3591,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="SupplementaryMeasure">
+    <section >
       <h4 id="SupplementaryMeasure">Supplementary Measure</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#SupplementaryMeasure</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#SupplementaryMeasure</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>SupplementaryMeasure</dfn></code></td>
+            <td><dfn>SupplementaryMeasure</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>Supplementary Measure</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>Supplementary measures are intended to additionally provide safeguards or guarentees to bring the resulting protection in line with EU requirements</td>
           </tr>
           <tr>
@@ -3437,12 +3647,17 @@
     <h2>DPIA</h2>
     <p>TODO</p>
 
-          <p>
+      <section id="dpia-classes">
+      <h3>Classes</h3>
+    <p>
+      <code><a href="#DPIAConformant">DPIA Conformant</a></code> |
+      <code><a href="#DPIAConformity">DPIA Conformity</a></code> |
       <code><a href="#DPIAIndicatesHighRisk">DPIA Indicates High Risk</a></code> |
       <code><a href="#DPIAIndicatesLowRisk">DPIA Indicates Low Risk</a></code> |
       <code><a href="#DPIAIndicatesNoRisk">DPIA Indicates No Risk</a></code> |
       <code><a href="#DPIANecessityAssessment">DPIA Necessity Assessment</a></code> |
       <code><a href="#DPIANecessityStatus">DPIA Necessity Status</a></code> |
+      <code><a href="#DPIANonConformant">DPIA Non-Conformant</a></code> |
       <code><a href="#DPIANotRequired">DPIA Not Required</a></code> |
       <code><a href="#DPIAOutcome">DPIA Outcome</a></code> |
       <code><a href="#DPIAOutcomeDPAConsultation">DPIA Outcome DPA Consultation</a></code> |
@@ -3450,28 +3665,111 @@
       <code><a href="#DPIAOutcomeRisksMitigated">DPIA Outcome Risks Mitigated</a></code> |
       <code><a href="#DPIAOutcomeStatus">DPIA Outcome Status</a></code> |
       <code><a href="#DPIAProcedure">DPIA Procedure</a></code> |
+      <code><a href="#DPIAProcessingRecommendation">DPIA Processing Recommendation</a></code> |
+      <code><a href="#DPIARecommendsProcessingContinue">DPIA Recommends Processing Continue</a></code> |
+      <code><a href="#DPIARecommendsProcessingNotContinue">DPIA Recommends Processing Not Continue</a></code> |
       <code><a href="#DPIARequired">DPIA Required</a></code> |
-      <code><a href="#DPIARiskStatus">DPIA Risk Status</a></code>
+      <code><a href="#DPIARiskStatus">DPIA Risk Status</a></code> |
     </p>
 
-    <section data-dfn-for="DPIAIndicatesHighRisk">
+    <section >
+      <h4 id="DPIAConformant">DPIA Conformant</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#DPIAConformant</code></a></td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><dfn>DPIAConformant</dfn></td>
+          </tr>
+<tr>
+            <td>Label:</td>
+            <td>DPIA Conformant</td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>Expressing the specified process is conformant with a DPIA</td>
+          </tr>
+          <tr>
+            <td>Instance of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-gdpr#DPIAConformity">dpv-gdpr:DPIAConformity</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-10-22</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Georg P Krog, 
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section >
+      <h4 id="DPIAConformity">DPIA Conformity</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#DPIAConformity</code></a></td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><dfn>DPIAConformity</dfn></td>
+          </tr>
+<tr>
+            <td>Label:</td>
+            <td>DPIA Conformity</td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>Conformity of a process with a DPIA</td>
+          </tr>
+          <tr>
+            <td>SubType of:</td>
+            <td>
+              <a href="https://w3id.org/dpv#ConformanceStatus">dpv:ConformanceStatus</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-10-22</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Georg P Krog, 
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section >
       <h4 id="DPIAIndicatesHighRisk">DPIA Indicates High Risk</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#DPIAIndicatesHighRisk</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#DPIAIndicatesHighRisk</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>DPIAIndicatesHighRisk</dfn></code></td>
+            <td><dfn>DPIAIndicatesHighRisk</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>DPIA Indicates High Risk</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>DPIA identifying high risk levels</td>
           </tr>
           <tr>
@@ -3493,24 +3791,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="DPIAIndicatesLowRisk">
+    <section >
       <h4 id="DPIAIndicatesLowRisk">DPIA Indicates Low Risk</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#DPIAIndicatesLowRisk</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#DPIAIndicatesLowRisk</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>DPIAIndicatesLowRisk</dfn></code></td>
+            <td><dfn>DPIAIndicatesLowRisk</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>DPIA Indicates Low Risk</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>DPIA identifying low risk levels</td>
           </tr>
           <tr>
@@ -3532,24 +3830,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="DPIAIndicatesNoRisk">
+    <section >
       <h4 id="DPIAIndicatesNoRisk">DPIA Indicates No Risk</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#DPIAIndicatesNoRisk</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#DPIAIndicatesNoRisk</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>DPIAIndicatesNoRisk</dfn></code></td>
+            <td><dfn>DPIAIndicatesNoRisk</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>DPIA Indicates No Risk</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>DPIA identifying no risk is present</td>
           </tr>
           <tr>
@@ -3571,24 +3869,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="DPIANecessityAssessment">
+    <section >
       <h4 id="DPIANecessityAssessment">DPIA Necessity Assessment</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#DPIANecessityAssessment</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#DPIANecessityAssessment</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>DPIANecessityAssessment</dfn></code></td>
+            <td><dfn>DPIANecessityAssessment</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>DPIA Necessity Assessment</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>Process that determines whether a DPIA is necessary</td>
           </tr>
           <tr>
@@ -3610,24 +3908,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="DPIANecessityStatus">
+    <section >
       <h4 id="DPIANecessityStatus">DPIA Necessity Status</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#DPIANecessityStatus</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#DPIANecessityStatus</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>DPIANecessityStatus</dfn></code></td>
+            <td><dfn>DPIANecessityStatus</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>DPIA Necessity Status</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>Status reflecting whether a DPIA is necessary</td>
           </tr>
           <tr>
@@ -3649,24 +3947,64 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="DPIANotRequired">
+    <section >
+      <h4 id="DPIANonConformant">DPIA Non-Conformant</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#DPIANonConformant</code></a></td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><dfn>DPIANonConformant</dfn></td>
+          </tr>
+<tr>
+            <td>Label:</td>
+            <td>DPIA Non-Conformant</td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>Expressing the specified process is not conformant with a DPIA</td>
+          </tr>
+          <tr>
+            <td>Instance of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-gdpr#DPIAConformity">dpv-gdpr:DPIAConformity</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-10-22</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Georg P Krog, 
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section >
       <h4 id="DPIANotRequired">DPIA Not Required</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#DPIANotRequired</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#DPIANotRequired</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>DPIANotRequired</dfn></code></td>
+            <td><dfn>DPIANotRequired</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>DPIA Not Required</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>Condition where a DPIA is not required</td>
           </tr>
           <tr>
@@ -3688,24 +4026,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="DPIAOutcome">
+    <section >
       <h4 id="DPIAOutcome">DPIA Outcome</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#DPIAOutcome</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#DPIAOutcome</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>DPIAOutcome</dfn></code></td>
+            <td><dfn>DPIAOutcome</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>DPIA Outcome</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>Process representing determining outcome of a DPIA</td>
           </tr>
           <tr>
@@ -3727,24 +4065,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="DPIAOutcomeDPAConsultation">
+    <section >
       <h4 id="DPIAOutcomeDPAConsultation">DPIA Outcome DPA Consultation</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#DPIAOutcomeDPAConsultation</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#DPIAOutcomeDPAConsultation</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>DPIAOutcomeDPAConsultation</dfn></code></td>
+            <td><dfn>DPIAOutcomeDPAConsultation</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>DPIA Outcome DPA Consultation</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>DPIA outcome status indicating a DPA consultation is required</td>
           </tr>
           <tr>
@@ -3766,25 +4104,25 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="DPIAOutcomeHighResidualRisk">
+    <section >
       <h4 id="DPIAOutcomeHighResidualRisk">DPIA Outcome High Residual Risk</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#DPIAOutcomeHighResidualRisk</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#DPIAOutcomeHighResidualRisk</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>DPIAOutcomeHighResidualRisk</dfn></code></td>
+            <td><dfn>DPIAOutcomeHighResidualRisk</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>DPIA Outcome High Residual Risk</td>
           </tr>
           <tr>
-            <td>Definition:</td>
-            <td>DPIA outcome status indicating high residual risk</td>
+            <td>Description:</td>
+            <td>DPIA outcome status indicating high residual risk which are not acceptable for continuation</td>
           </tr>
           <tr>
             <td>Instance of:</td>
@@ -3805,25 +4143,25 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="DPIAOutcomeRisksMitigated">
+    <section >
       <h4 id="DPIAOutcomeRisksMitigated">DPIA Outcome Risks Mitigated</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#DPIAOutcomeRisksMitigated</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#DPIAOutcomeRisksMitigated</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>DPIAOutcomeRisksMitigated</dfn></code></td>
+            <td><dfn>DPIAOutcomeRisksMitigated</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>DPIA Outcome Risks Mitigated</td>
           </tr>
           <tr>
-            <td>Definition:</td>
-            <td>DPIA outcome status indicated (all) risks have been mitigated</td>
+            <td>Description:</td>
+            <td>DPIA outcome status indicating (all) risks have been mitigated</td>
           </tr>
           <tr>
             <td>Instance of:</td>
@@ -3844,24 +4182,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="DPIAOutcomeStatus">
+    <section >
       <h4 id="DPIAOutcomeStatus">DPIA Outcome Status</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#DPIAOutcomeStatus</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#DPIAOutcomeStatus</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>DPIAOutcomeStatus</dfn></code></td>
+            <td><dfn>DPIAOutcomeStatus</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>DPIA Outcome Status</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>Status reflecting the outcomes of a DPIA</td>
           </tr>
           <tr>
@@ -3883,24 +4221,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="DPIAProcedure">
+    <section >
       <h4 id="DPIAProcedure">DPIA Procedure</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#DPIAProcedure</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#DPIAProcedure</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>DPIAProcedure</dfn></code></td>
+            <td><dfn>DPIAProcedure</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>DPIA Procedure</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>Process representing carrying out a DPIA</td>
           </tr>
           <tr>
@@ -3922,24 +4260,144 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="DPIARequired">
+    <section >
+      <h4 id="DPIAProcessingRecommendation">DPIA Processing Recommendation</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#DPIAProcessingRecommendation</code></a></td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><dfn>DPIAProcessingRecommendation</dfn></td>
+          </tr>
+<tr>
+            <td>Label:</td>
+            <td>DPIA Processing Recommendation</td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>Recommendation from the DPIA regarding processing</td>
+          </tr>
+          <tr>
+            <td>SubType of:</td>
+            <td>
+              <a href="https://w3id.org/dpv#AuditStatus">dpv:AuditStatus</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-10-22</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Georg P Krog, 
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section >
+      <h4 id="DPIARecommendsProcessingContinue">DPIA Recommends Processing Continue</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#DPIARecommendsProcessingContinue</code></a></td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><dfn>DPIARecommendsProcessingContinue</dfn></td>
+          </tr>
+<tr>
+            <td>Label:</td>
+            <td>DPIA Recommends Processing Continue</td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>Recommendation from a DPIA that the processing may continue</td>
+          </tr>
+          <tr>
+            <td>Instance of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-gdpr#DPIAProcessingRecommendation">dpv-gdpr:DPIAProcessingRecommendation</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-10-22</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Georg P Krog, 
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section >
+      <h4 id="DPIARecommendsProcessingNotContinue">DPIA Recommends Processing Not Continue</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#DPIARecommendsProcessingNotContinue</code></a></td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><dfn>DPIARecommendsProcessingNotContinue</dfn></td>
+          </tr>
+<tr>
+            <td>Label:</td>
+            <td>DPIA Recommends Processing Not Continue</td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>Recommendation from a DPIA that the processing should not continue</td>
+          </tr>
+          <tr>
+            <td>Instance of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-gdpr#DPIAProcessingRecommendation">dpv-gdpr:DPIAProcessingRecommendation</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-10-22</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Georg P Krog, 
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section >
       <h4 id="DPIARequired">DPIA Required</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#DPIARequired</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#DPIARequired</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>DPIARequired</dfn></code></td>
+            <td><dfn>DPIARequired</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>DPIA Required</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>Condition where a DPIA is required</td>
           </tr>
           <tr>
@@ -3961,24 +4419,24 @@
         </tbody>
       </table>
     </section>
-    <section data-dfn-for="DPIARiskStatus">
+    <section >
       <h4 id="DPIARiskStatus">DPIA Risk Status</h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td><code>https://w3id.org/dpv/dpv-gdpr#DPIARiskStatus</code></td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#DPIARiskStatus</code></a></td>
           </tr>
           <tr>
             <td>Term:</td>
-            <td><code><dfn>DPIARiskStatus</dfn></code></td>
+            <td><dfn>DPIARiskStatus</dfn></td>
           </tr>
-          <tr>
+<tr>
             <td>Label:</td>
             <td>DPIA Risk Status</td>
           </tr>
           <tr>
-            <td>Definition:</td>
+            <td>Description:</td>
             <td>Status reflecting the status of risk associated with a DPIA</td>
           </tr>
           <tr>
@@ -4001,6 +4459,602 @@
       </table>
     </section>
 
+      </section>
+      <section id="dpia-properties">
+      <h3>Properties</h3>    <p>
+      <code><a href="#DPIA-dct:conformsTo">dct:conformsTo</a></code> |
+      <code><a href="#DPIA-dct:coverage">dct:coverage</a></code> |
+      <code><a href="#DPIA-dct:created">dct:created</a></code> |
+      <code><a href="#DPIA-dct:dateAccepted">dct:dateAccepted</a></code> |
+      <code><a href="#DPIA-dct:dateSubmitted">dct:dateSubmitted</a></code> |
+      <code><a href="#DPIA-dct:description">dct:description</a></code> |
+      <code><a href="#DPIA-dct:hasPart">dct:hasPart</a></code> |
+      <code><a href="#DPIA-dct:identifier">dct:identifier</a></code> |
+      <code><a href="#DPIA-dct:isPartOf">dct:isPartOf</a></code> |
+      <code><a href="#DPIA-dct:isVersionOf">dct:isVersionOf</a></code> |
+      <code><a href="#DPIA-dct:modified">dct:modified</a></code> |
+      <code><a href="#DPIA-dct:subject">dct:subject</a></code> |
+      <code><a href="#DPIA-dct:temporal">dct:temporal</a></code> |
+      <code><a href="#DPIA-dct:title">dct:title</a></code> |
+      <code><a href="#DPIA-dct:valid">dct:valid</a></code> |
+      <code><a href="#DPIA-dpv:hasStatus">dpv:hasStatus</a></code> |
+    </p>
+
+    <section data-dfn-for="DPIA">
+      <h4 id="DPIA-dct:conformsTo">dct:conformsTo</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td><a href="http://purl.org/dc/terms/conformsTo"><code>http://purl.org/dc/terms/conformsTo</code></a></td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><dfn>dct:conformsTo</dfn></td>
+          </tr>
+            <tr><td>Vocabulary:</td><td>[[[DCT]]]</a></td></tr>
+            <tr><td>Usage Note:</td><td>For expressing an existing standard, guideline, or requirements to which the DPIA document or process will be conforming to. This could be external guidelines published by an Authority, or internal guidelines established by the organisation</td></tr>
+          <tr>
+            <td>Domain:</td>
+            <td><i>left blank / unspecified</i></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><i>left blank / unspecified</i></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="DPIA">
+      <h4 id="DPIA-dct:coverage">dct:coverage</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td><a href="http://purl.org/dc/terms/coverage"><code>http://purl.org/dc/terms/coverage</code></a></td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><dfn>dct:coverage</dfn></td>
+          </tr>
+            <tr><td>Vocabulary:</td><td>[[[DCT]]]</a></td></tr>
+            <tr><td>Usage Note:</td><td>For expressing coverage (e.g. jurisdictions, products, services) of the DPIA document or process. For temporal coverage, please see dct:temporal. The coverage can be expressed using dpv:PersonalDataHandling, or using another concept, or even be a link or reference to a document, or a textual description</td></tr>
+          <tr>
+            <td>Domain:</td>
+            <td><i>left blank / unspecified</i></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><i>left blank / unspecified</i></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="DPIA">
+      <h4 id="DPIA-dct:created">dct:created</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td><a href="http://purl.org/dc/terms/created"><code>http://purl.org/dc/terms/created</code></a></td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><dfn>dct:created</dfn></td>
+          </tr>
+            <tr><td>Vocabulary:</td><td>[[[DCT]]]</a></td></tr>
+            <tr><td>Usage Note:</td><td>For expressing when the documentation (e.g. DPIA Necessity Assessment, or DPIA Procedure, or DPIA outcome) was created</td></tr>
+          <tr>
+            <td>Domain:</td>
+            <td><i>left blank / unspecified</i></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><i>left blank / unspecified</i></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="DPIA">
+      <h4 id="DPIA-dct:dateAccepted">dct:dateAccepted</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td><a href="http://purl.org/dc/terms/dateAccepted"><code>http://purl.org/dc/terms/dateAccepted</code></a></td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><dfn>dct:dateAccepted</dfn></td>
+          </tr>
+            <tr><td>Vocabulary:</td><td>[[[DCT]]]</a></td></tr>
+            <tr><td>Usage Note:</td><td>For expressing when the documentation (e.g. DPIA Necessity Assessment, or DPIA Procedure, or DPIA outcome) was accepted through audit or approval</td></tr>
+          <tr>
+            <td>Domain:</td>
+            <td><i>left blank / unspecified</i></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><i>left blank / unspecified</i></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="DPIA">
+      <h4 id="DPIA-dct:dateSubmitted">dct:dateSubmitted</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td><a href="http://purl.org/dc/terms/dateSubmitted"><code>http://purl.org/dc/terms/dateSubmitted</code></a></td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><dfn>dct:dateSubmitted</dfn></td>
+          </tr>
+            <tr><td>Vocabulary:</td><td>[[[DCT]]]</a></td></tr>
+            <tr><td>Usage Note:</td><td>For expressing when the documentation (e.g. DPIA Necessity Assessment, or DPIA Procedure, or DPIA outcome) was submitted for audit or approval</td></tr>
+          <tr>
+            <td>Domain:</td>
+            <td><i>left blank / unspecified</i></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><i>left blank / unspecified</i></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="DPIA">
+      <h4 id="DPIA-dct:description">dct:description</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td><a href="http://purl.org/dc/terms/description"><code>http://purl.org/dc/terms/description</code></a></td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><dfn>dct:description</dfn></td>
+          </tr>
+            <tr><td>Vocabulary:</td><td>[[[DCT]]]</a></td></tr>
+            <tr><td>Usage Note:</td><td>Indicates a description of the DPIA for human comprehension</td></tr>
+          <tr>
+            <td>Domain:</td>
+            <td><i>left blank / unspecified</i></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><i>left blank / unspecified</i></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="DPIA">
+      <h4 id="DPIA-dct:hasPart">dct:hasPart</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td><a href="http://purl.org/dc/terms/hasPart"><code>http://purl.org/dc/terms/hasPart</code></a></td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><dfn>dct:hasPart</dfn></td>
+          </tr>
+            <tr><td>Vocabulary:</td><td>[[[DCT]]]</a></td></tr>
+            <tr><td>Usage Note:</td><td>For expressing something contains a DPIA document or process contains as a part. For example, as some dpv:DPIA dct:hasPart DPIANecessityAssessment</td></tr>
+          <tr>
+            <td>Domain:</td>
+            <td><i>left blank / unspecified</i></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><i>left blank / unspecified</i></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="DPIA">
+      <h4 id="DPIA-dct:identifier">dct:identifier</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td><a href="http://purl.org/dc/terms/identifier"><code>http://purl.org/dc/terms/identifier</code></a></td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><dfn>dct:identifier</dfn></td>
+          </tr>
+            <tr><td>Vocabulary:</td><td>[[[DCT]]]</a></td></tr>
+            <tr><td>Usage Note:</td><td>Indicates an identifier associated with the DPIA documentation or process. Identifiers may be reused from existing systems, or created for the purposes of record management</td></tr>
+          <tr>
+            <td>Domain:</td>
+            <td><i>left blank / unspecified</i></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><i>left blank / unspecified</i></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="DPIA">
+      <h4 id="DPIA-dct:isPartOf">dct:isPartOf</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td><a href="http://purl.org/dc/terms/isPartOf"><code>http://purl.org/dc/terms/isPartOf</code></a></td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><dfn>dct:isPartOf</dfn></td>
+          </tr>
+            <tr><td>Vocabulary:</td><td>[[[DCT]]]</a></td></tr>
+            <tr><td>Usage Note:</td><td>For expressing a DPIA document or process is part of another. For example, as some DPIANecessityAssessment dct:isPartOf some dpv:DPIA</td></tr>
+          <tr>
+            <td>Domain:</td>
+            <td><i>left blank / unspecified</i></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><i>left blank / unspecified</i></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="DPIA">
+      <h4 id="DPIA-dct:isVersionOf">dct:isVersionOf</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td><a href="http://purl.org/dc/terms/isVersionOf"><code>http://purl.org/dc/terms/isVersionOf</code></a></td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><dfn>dct:isVersionOf</dfn></td>
+          </tr>
+            <tr><td>Vocabulary:</td><td>[[[DCT]]]</a></td></tr>
+            <tr><td>Usage Note:</td><td>For expressing prior versions or iterations of the DPIA document or process</td></tr>
+          <tr>
+            <td>Domain:</td>
+            <td><i>left blank / unspecified</i></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><i>left blank / unspecified</i></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="DPIA">
+      <h4 id="DPIA-dct:modified">dct:modified</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td><a href="http://purl.org/dc/terms/modified"><code>http://purl.org/dc/terms/modified</code></a></td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><dfn>dct:modified</dfn></td>
+          </tr>
+            <tr><td>Vocabulary:</td><td>[[[DCT]]]</a></td></tr>
+            <tr><td>Usage Note:</td><td>For expressing when the documentation (e.g. DPIA Necessity Assessment, or DPIA Procedure, or DPIA outcome) was last modified</td></tr>
+          <tr>
+            <td>Domain:</td>
+            <td><i>left blank / unspecified</i></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><i>left blank / unspecified</i></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="DPIA">
+      <h4 id="DPIA-dct:subject">dct:subject</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td><a href="http://purl.org/dc/terms/subject"><code>http://purl.org/dc/terms/subject</code></a></td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><dfn>dct:subject</dfn></td>
+          </tr>
+            <tr><td>Vocabulary:</td><td>[[[DCT]]]</a></td></tr>
+            <tr><td>Usage Note:</td><td>For expressing the subject of the DPIA document or process, where subject refers to the point of focus. For expressing what is affected or included within the DPIA, please see dct:coverage</td></tr>
+          <tr>
+            <td>Domain:</td>
+            <td><i>left blank / unspecified</i></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><i>left blank / unspecified</i></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="DPIA">
+      <h4 id="DPIA-dct:temporal">dct:temporal</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td><a href="http://purl.org/dc/terms/temporal"><code>http://purl.org/dc/terms/temporal</code></a></td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><dfn>dct:temporal</dfn></td>
+          </tr>
+            <tr><td>Vocabulary:</td><td>[[[DCT]]]</a></td></tr>
+            <tr><td>Usage Note:</td><td>For expressing the temporal coverage of the DPIA document or process</td></tr>
+          <tr>
+            <td>Domain:</td>
+            <td><i>left blank / unspecified</i></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><i>left blank / unspecified</i></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="DPIA">
+      <h4 id="DPIA-dct:title">dct:title</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td><a href="http://purl.org/dc/terms/title"><code>http://purl.org/dc/terms/title</code></a></td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><dfn>dct:title</dfn></td>
+          </tr>
+            <tr><td>Vocabulary:</td><td>[[[DCT]]]</a></td></tr>
+            <tr><td>Usage Note:</td><td>Indicates a title of the DPIA for human comprehension</td></tr>
+          <tr>
+            <td>Domain:</td>
+            <td><i>left blank / unspecified</i></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><i>left blank / unspecified</i></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="DPIA">
+      <h4 id="DPIA-dct:valid">dct:valid</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td><a href="http://purl.org/dc/terms/valid"><code>http://purl.org/dc/terms/valid</code></a></td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><dfn>dct:valid</dfn></td>
+          </tr>
+            <tr><td>Vocabulary:</td><td>[[[DCT]]]</a></td></tr>
+            <tr><td>Usage Note:</td><td>For expressing the temporal date or range of validity of the DPIA document or process. This refers to the time period for which the DPIA is considered valid, and does not refer to the temporal period associated with processing (see dct:temporal instead). The assumption is that after this period, the DPIA should be re-evaluated or some process should be triggered</td></tr>
+          <tr>
+            <td>Domain:</td>
+            <td><i>left blank / unspecified</i></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><i>left blank / unspecified</i></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="DPIA">
+      <h4 id="DPIA-dpv:hasStatus">dpv:hasStatus</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td><a href="https://w3id.org/dpv#hasStatus"><code>https://w3id.org/dpv#hasStatus</code></a></td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><dfn>dpv:hasStatus</dfn></td>
+          </tr>
+            <tr><td>Vocabulary:</td><td>[[[DPV]]]</a></td></tr>
+            <tr><td>Usage Note:</td><td>For expressing the status of the DPIA document or process. Here different statuses are used to convey different contextual meanings. For example, dpv:ActivityStatus expresses the state of the activity in terms of whether it is ongoing or completed, and dpv:AuditStatus expresses the state of the audit process in terms of being required, approved, or rejected. These are applied over each step of the DPIA i.e. DPIANecessityAssessment, DPIAProcedure, and DPIAOutcome. Similarly, a process also uses hasStatus with DPIAConformity to indicate adherence to the results of the DPIA process.</td></tr>
+          <tr>
+            <td>Domain:</td>
+            <td><i>left blank / unspecified</i></td>
+          </tr>
+          <tr>
+            <td>Range:</td>
+            <td><i>left blank / unspecified</i></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+      </section>
+  </section>
+
+  <section id="vocab-compliance">
+    <h2>Compliance</h2>
+    <p>TODO</p>
+
+      <section id="compliance-classes">
+      <h3>Classes</h3>
+    <p>
+      <code><a href="#GDPRComplianceUnknown">GDPR Compliance Unknown</a></code> |
+      <code><a href="#GDPRCompliant">GDPR Compliant</a></code> |
+      <code><a href="#GDPRLawfulness">GDPR Lawfulness</a></code> |
+      <code><a href="#GDPRNonCompliant">GDPR Non-compliant</a></code> |
+    </p>
+
+    <section >
+      <h4 id="GDPRComplianceUnknown">GDPR Compliance Unknown</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#GDPRComplianceUnknown</code></a></td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><dfn>GDPRComplianceUnknown</dfn></td>
+          </tr>
+<tr>
+            <td>Label:</td>
+            <td>GDPR Compliance Unknown</td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>State where lawfulness or compliance with GDPR is unknown</td>
+          </tr>
+          <tr>
+            <td>Instance of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-gdpr#GDPRLawulness">dpv-gdpr:GDPRLawulness</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-10-22</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section >
+      <h4 id="GDPRCompliant">GDPR Compliant</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#GDPRCompliant</code></a></td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><dfn>GDPRCompliant</dfn></td>
+          </tr>
+<tr>
+            <td>Label:</td>
+            <td>GDPR Compliant</td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>State of being lawful or legally compliant for GDPR</td>
+          </tr>
+          <tr>
+            <td>Instance of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-gdpr#GDPRLawulness">dpv-gdpr:GDPRLawulness</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-10-22</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section >
+      <h4 id="GDPRLawfulness">GDPR Lawfulness</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#GDPRLawfulness</code></a></td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><dfn>GDPRLawfulness</dfn></td>
+          </tr>
+<tr>
+            <td>Label:</td>
+            <td>GDPR Lawfulness</td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>Status or state associated with being lawful or legally compliant regarding GDPR</td>
+          </tr>
+          <tr>
+            <td>SubType of:</td>
+            <td>
+              <a href="https://w3id.org/dpv#Lawfulness">dpv:Lawfulness</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-10-22</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section >
+      <h4 id="GDPRNonCompliant">GDPR Non-compliant</h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>IRI</td>
+            <td><code>https://w3id.org/dpv/dpv-gdpr#GDPRNonCompliant</code></a></td>
+          </tr>
+          <tr>
+            <td>Term:</td>
+            <td><dfn>GDPRNonCompliant</dfn></td>
+          </tr>
+<tr>
+            <td>Label:</td>
+            <td>GDPR Non-compliant</td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>State of being unlawful or legally non-compliant for GDPR</td>
+          </tr>
+          <tr>
+            <td>Instance of:</td>
+            <td>
+              <a href="https://w3id.org/dpv/dpv-gdpr#GDPRLawulness">dpv-gdpr:GDPRLawulness</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2022-10-22</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Harshvardhan J. Pandit
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+      </section>
   </section>
 
 <section id="proposed-terms" class="appendix">
@@ -4009,6 +5063,16 @@
     <strong>legal_basis</strong>
     <ul>      <li>A10</li>
 </ul>
+    <strong>dpia</strong>
+    <ul>      <li>DPIAOutcomeRisksAcceptable</li>
+</ul>
+    <strong>compliance</strong>
+    <ul>      <li>ProcessingPropotionality</li>
+      <li>SystematicExtensiveEvaluation</li>
+</ul>
+</section>
+
+<section class="appendix" id="issue-summary">
 </section>
 
 <section id="funding-acknowledgements" class="noTOC">

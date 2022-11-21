@@ -20,10 +20,12 @@ IMPORT_DPV_LEGAL_PATH = '../dpv-legal/dpv-legal.ttl'
 IMPORT_DPV_LEGAL_MODULES_PATH = '../dpv-legal/modules'
 EXPORT_DPV_LEGAL_HTML_PATH = '../dpv-legal'
 IMPORT_DPV_TECH_PATH = '../dpv-tech/dpv-tech.ttl'
+IMPORT_DPV_TECH_MODULES_PATH = '../dpv-tech/modules'
 EXPORT_DPV_TECH_HTML_PATH = '../dpv-tech'
 IMPORT_RIGHTS_EU_PATH = '../rights/eu/rights-eu.ttl'
 EXPORT_RIGHTS_EU_HTML_PATH = '../rights/eu'
 EXPORT_RIGHTS_HTML_PATH = '../rights'
+IMPORT_EXAMPLES = '../examples/examples.ttl'
 
 import json
 from rdflib import Graph, Namespace
@@ -36,7 +38,7 @@ logging.basicConfig(
     level=logging.DEBUG, format='%(levelname)s - %(funcName)s :: %(lineno)d - %(message)s')
 DEBUG = logging.debug
 
-from vocab_management import generate_author_affiliation
+from vocab_management import generate_author_affiliation, NAMESPACES
 
 TEMPLATE_DATA = {}
 
@@ -49,15 +51,18 @@ with open(f'{EXPORT_DPV_HTML_PATH}/proposed.json') as fd:
     TEMPLATE_DATA['proposed'] = json.load(fd)    
 
 
-def load_data(label, filepath):
+def load_data(label, filepath, custom_concept=None):
     DEBUG(f'loading data for {label}')
     g = Graph()
     g.parse(filepath, format='turtle')
     G = DataGraph()
     G.parse(g)
     G.graph.ns = { k:v for k,v in G.graph.namespaces() }
-    TEMPLATE_DATA[f'{label}_classes'] = G.get_instances_of('dpv_Concept')
-    TEMPLATE_DATA[f'{label}_properties'] = G.get_instances_of('dpv_Relation')
+    if custom_concept is None:
+        TEMPLATE_DATA[f'{label}_classes'] = G.get_instances_of('dpv_Concept')
+        TEMPLATE_DATA[f'{label}_properties'] = G.get_instances_of('dpv_Relation')
+    else:
+        TEMPLATE_DATA[f'{label}'] = G.get_instances_of(custom_concept)
 
 
 def prefix_this(item):
@@ -77,9 +82,9 @@ def prefix_this(item):
 
 
 def fragment_this(item):
-    if '#' not in item:
-        return item
-    return item.split('#')[-1]
+    if '#' in item:
+        return item.split('#')[-1]
+    return item.split('/')[-1]
 
 
 def get_subclasses(item):
@@ -96,6 +101,20 @@ def saved_label(item):
     return item
 
 
+def get_example_title(resource):
+    for ex in TEMPLATE_DATA['examples']:
+        if ex.iri == resource.iri:
+            return ex.dct_title
+    return None
+
+
+def get_namespace_reference(term):
+    if getattr(term, 'rdfs_isDefinedBy', None) is not None:
+        return None
+    term = str(term).split(':')[0]
+    return term.upper(), NAMESPACES[term]
+
+
 # JINJA2 for templating and generating HTML
 from jinja2 import FileSystemLoader, Environment
 JINJA2_FILTERS = {
@@ -104,6 +123,8 @@ JINJA2_FILTERS = {
     'subclasses': get_subclasses,
     'saved_label': saved_label,
     'generate_author_affiliation': generate_author_affiliation,
+    'get_example_title': get_example_title,
+    'get_namespace_reference': get_namespace_reference
 }
 
 template_loader = FileSystemLoader(searchpath='./jinja2_resources')
@@ -136,12 +157,14 @@ load_data('legal_basis', f'{IMPORT_DPV_MODULES_PATH}/legal_basis.ttl')
 load_data('consent', f'{IMPORT_DPV_MODULES_PATH}/consent.ttl')
 load_data('consent_types', f'{IMPORT_DPV_MODULES_PATH}/consent_types.ttl')
 load_data('consent_status', f'{IMPORT_DPV_MODULES_PATH}/consent_status.ttl')
+load_data('rules', f'{IMPORT_DPV_MODULES_PATH}/rules.ttl')
+load_data('rights', f'{IMPORT_DPV_MODULES_PATH}/rights.ttl')
+load_data('examples', f'{IMPORT_EXAMPLES}', custom_concept='dex_Example')
 g = Graph()
 g.parse(f'{IMPORT_DPV_PATH}', format='turtle')
 G.parse(g)
 
 # DPV: generate HTML
-
 template = template_env.get_template('template_dpv.jinja2')
 with open(f'{EXPORT_DPV_HTML_PATH}/index.html', 'w+') as fd:
     fd.write(template.render(**TEMPLATE_DATA))
@@ -161,6 +184,7 @@ load_data('legal_basis_data_transfer', f'{IMPORT_DPV_GDPR_MODULES_PATH}/legal_ba
 load_data('rights', f'{IMPORT_DPV_GDPR_MODULES_PATH}/rights.ttl')
 load_data('data_transfers', f'{IMPORT_DPV_GDPR_MODULES_PATH}/data_transfers.ttl')
 load_data('dpia', f'{IMPORT_DPV_GDPR_MODULES_PATH}/dpia.ttl')
+load_data('compliance', f'{IMPORT_DPV_GDPR_MODULES_PATH}/compliance.ttl')
 g = Graph()
 g.parse(f'{IMPORT_DPV_GDPR_PATH}', format='turtle')
 G.parse(g)
@@ -231,7 +255,16 @@ DEBUG(f'wrote DPV-LEGAL spec at f{EXPORT_DPV_LEGAL_HTML_PATH}/dpv-legal.html')
 with open(f'{EXPORT_DPV_TECH_HTML_PATH}/proposed.json') as fd:
     TEMPLATE_DATA['proposed'] = json.load(fd)  
 
-load_data('dpv_tech', f'{IMPORT_DPV_TECH_PATH}')
+load_data('core', f'{IMPORT_DPV_TECH_MODULES_PATH}/core.ttl')
+load_data('data', f'{IMPORT_DPV_TECH_MODULES_PATH}/data.ttl')
+load_data('ops', f'{IMPORT_DPV_TECH_MODULES_PATH}/ops.ttl')
+load_data('security', f'{IMPORT_DPV_TECH_MODULES_PATH}/security.ttl')
+load_data('surveillance', f'{IMPORT_DPV_TECH_MODULES_PATH}/surveillance.ttl')
+load_data('provision', f'{IMPORT_DPV_TECH_MODULES_PATH}/provision.ttl')
+load_data('actors', f'{IMPORT_DPV_TECH_MODULES_PATH}/actors.ttl')
+load_data('comms', f'{IMPORT_DPV_TECH_MODULES_PATH}/comms.ttl')
+load_data('tools', f'{IMPORT_DPV_TECH_MODULES_PATH}/tools.ttl')
+
 g = Graph()
 g.parse(f'{IMPORT_DPV_TECH_PATH}', format='turtle')
 G.parse(g)

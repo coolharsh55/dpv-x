@@ -111,6 +111,11 @@
     <p>The namespace for terms in dpvs-tech is <a href="http://www.w3id.org/dpv/dpv-skos/dpv-tech#"><code>https://www.w3id.org/dpv/dpv-skos/dpv-tech#</code></a><br/>
       The suggested prefix for the namespace is <code>dpvs-tech</code><br/>
       The DPVS-TECH vocabulary and its documentation is available on <a href="https://github.com/w3c/dpv">GitHub</a>.</p>
+
+      <div class="issue" title="WARNING: unstable vocabulary" data-number="47">
+      <p><strong>WARNING</strong> This vocabulary will be undergoing major changes based on the necessity to specify cloud technology concepts and to ensure provided concepts are useful. There may be extensive removal/additions of concepts that changes the structure and semantics of this extension.</p>
+      </div>
+
     {{ dpv_document_family(document='dpv-tech-spec') }}
     {{ sotd() }}
   </section>
@@ -197,13 +202,91 @@
   </section> -->
   
   <section id="vocab">
-    <h2>Taxonomy</h2>
+    <h2>Core Concepts</h2>
 
-    <section id="dpv-tech-classes">
-      {{ table_classes(dpv_tech_classes) }}
+    <section id="core-classes">
+      {{ table_classes(core_classes) }}
     </section>
-    <section id="dpv-tech-properties">
-      {{ table_properties(dpv_tech_properties) }}
+    <section id="core-properties">
+      {{ table_properties(core_properties) }}
+    </section>
+
+  </section>
+
+  <section id="data">
+    <h2>Data Tech</h2>
+
+    <section id="data-classes">
+      {{ table_classes(data_classes) }}
+    </section>
+
+  </section>
+
+  <section id="ops">
+    <h2>Operational Tech</h2>
+
+    <section id="ops-classes">
+      {{ table_classes(ops_classes) }}
+    </section>
+
+  </section>
+
+  <section id="security">
+    <h2>Security Tech</h2>
+
+    <section id="security-classes">
+      {{ table_classes(security_classes) }}
+    </section>
+
+  </section>
+
+  <section id="surveillance">
+    <h2>Surveillance Types</h2>
+
+    <section id="surveillance-classes">
+      {{ table_classes(surveillance_classes) }}
+    </section>
+
+  </section>
+
+  <section id="provision">
+    <h2>Provision Method</h2>
+
+    <section id="provision-classes">
+      {{ table_classes(provision_classes) }}
+    </section>
+    <section id="provision-properties">
+      {{ table_properties(provision_properties) }}
+    </section>
+
+  </section>
+
+  <section id="actors">
+    <h2>Actors</h2>
+
+    <section id="actors-classes">
+      {{ table_classes(actors_classes) }}
+    </section>
+    <section id="actors-properties">
+      {{ table_properties(actors_properties) }}
+    </section>
+
+  </section>
+
+  <section id="comms">
+    <h2>Communication Methods</h2>
+
+    <section id="comms-classes">
+      {{ table_classes(comms_classes) }}
+    </section>
+
+  </section>
+
+  <section id="tools">
+    <h2>Tools</h2>
+
+    <section id="tools-classes">
+      {{ table_classes(tools_classes) }}
     </section>
 
   </section>
@@ -217,6 +300,9 @@
     {% endfor %}</ul>
 </section>
 {% endif %}
+
+<section class="appendix" id="issue-summary">
+</section>
 
 <section id="funding-acknowledgements" class="noTOC">
   <h2>Funding Acknowledgements</h2>

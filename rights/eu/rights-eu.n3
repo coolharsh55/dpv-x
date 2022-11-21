@@ -1,6 +1,5 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix dpv: <https://w3id.org/dpv#> .
-@prefix dpv-tech: <https://w3id.org/dpv/dpv-tech#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rights-eu: <https://w3id.org/dpv/rights/eu#> .
@@ -85,92 +84,8 @@ rights-eu:EUFundamentalRightsConcepts a skos:Collection ;
         rights-eu:T4-Solidarity,
         rights-eu:T5-CitizensRights,
         rights-eu:T6-Justice,
-        rights-eu:T7-InterpretationAndApplication,
-        rights-eu:hasCommunicationMechanism,
-        rights-eu:hasDeveloper,
-        rights-eu:hasProvider,
-        rights-eu:hasProvisionMethod,
-        rights-eu:hasSubject,
-        rights-eu:hasTRL,
-        rights-eu:hasUser ;
+        rights-eu:T7-InterpretationAndApplication ;
     skos:prefLabel "EU Fundamental Rights Concepts"^^xsd:string .
-
-rights-eu:hasCommunicationMechanism a skos:Concept,
-        dpv:Relation ;
-    dct:created "2022-07-02"^^xsd:date ;
-    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    rdfs:isDefinedBy rights-eu: ;
-    sw:term_status "changed"@en ;
-    skos:definition "Indicates communication mechanisms used or provided by technology"@en ;
-    skos:prefLabel "hasCommunicationMechanism"@en ;
-    dpv:hasDomain dpv:Technology ;
-    dpv:hasRange dpv-tech:CommunicationMechanism .
-
-rights-eu:hasDeveloper a skos:Concept,
-        dpv:Relation ;
-    dct:created "2022-07-02"^^xsd:date ;
-    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    rdfs:isDefinedBy rights-eu: ;
-    sw:term_status "changed"@en ;
-    skos:definition "Indicates technology developer"@en ;
-    skos:prefLabel "hasDeveloper"@en ;
-    dpv:hasDomain dpv:Technology ;
-    dpv:hasRange dpv-tech:TechnologyDeveloper .
-
-rights-eu:hasProvider a skos:Concept,
-        dpv:Relation ;
-    dct:created "2022-07-02"^^xsd:date ;
-    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    rdfs:isDefinedBy rights-eu: ;
-    sw:term_status "changed"@en ;
-    skos:definition "Indicates technology provider"@en ;
-    skos:prefLabel "hasProvider"@en ;
-    dpv:hasDomain dpv:Technology ;
-    dpv:hasRange dpv-tech:TechnologyProvider .
-
-rights-eu:hasProvisionMethod a skos:Concept,
-        dpv:Relation ;
-    dct:created "2022-07-02"^^xsd:date ;
-    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    rdfs:isDefinedBy rights-eu: ;
-    sw:term_status "changed"@en ;
-    skos:definition "Specifies the provision or usage method of technology"@en ;
-    skos:prefLabel "hasProvisionMethod"@en ;
-    dpv:hasDomain dpv:Technology ;
-    dpv:hasRange dpv-tech:TechnologyProvisionMethod .
-
-rights-eu:hasSubject a skos:Concept,
-        dpv:Relation ;
-    dct:created "2022-07-02"^^xsd:date ;
-    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    rdfs:isDefinedBy rights-eu: ;
-    sw:term_status "changed"@en ;
-    skos:definition "Indicates technology subject"@en ;
-    skos:prefLabel "hasSubject"@en ;
-    dpv:hasDomain dpv:Technology ;
-    dpv:hasRange dpv-tech:TechnologySubject .
-
-rights-eu:hasTRL a skos:Concept,
-        dpv:Relation ;
-    dct:created "2022-07-02"^^xsd:date ;
-    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    rdfs:isDefinedBy rights-eu: ;
-    sw:term_status "changed"@en ;
-    skos:definition "Indicates technology maturity level"@en ;
-    skos:prefLabel "hasTRL"@en ;
-    dpv:hasDomain dpv:Technology ;
-    dpv:hasRange dpv-tech:TechnologyReadinessLevel .
-
-rights-eu:hasUser a skos:Concept,
-        dpv:Relation ;
-    dct:created "2022-07-02"^^xsd:date ;
-    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
-    rdfs:isDefinedBy rights-eu: ;
-    sw:term_status "changed"@en ;
-    skos:definition "Indicates technology user"@en ;
-    skos:prefLabel "hasUser"@en ;
-    dpv:hasDomain dpv:Technology ;
-    dpv:hasRange dpv-tech:TechnologyUser .
 
 dpv:DataSubjectRight skos:narrower rights-eu:EUFundamentalRights .
 

@@ -12,6 +12,7 @@ Prefix: : <https://w3id.org/dpv/dpv-owl/rights/eu>
 
 Ontology: <https://w3id.org/dpv/dpv-owl/rights/eu>
 
+Import: <https://w3id.org/dpv/dpv-owl>
 
 Annotations: 
     owl:versionInfo "0.8.2"
@@ -31,13 +32,6 @@ Datatype: rdf:langString
 Datatype: xsd:string
 
     
-ObjectProperty: <https://w3id.org/dpv/dpv-owl/rights/eu#hasCommunicationMechanism>
-
-    Annotations: 
-        rdfs:isDefinedBy <https://w3id.org/dpv/dpv-owl/rights/eu#>,
-        rdfs:label "hasCommunicationMechanism"@en
-    
-    
 ObjectProperty: <https://w3id.org/dpv/dpv-owl/rights/eu#hasDeveloper>
 
     Annotations: 
@@ -52,25 +46,11 @@ ObjectProperty: <https://w3id.org/dpv/dpv-owl/rights/eu#hasProvider>
         rdfs:label "hasProvider"@en
     
     
-ObjectProperty: <https://w3id.org/dpv/dpv-owl/rights/eu#hasProvisionMethod>
-
-    Annotations: 
-        rdfs:isDefinedBy <https://w3id.org/dpv/dpv-owl/rights/eu#>,
-        rdfs:label "hasProvisionMethod"@en
-    
-    
 ObjectProperty: <https://w3id.org/dpv/dpv-owl/rights/eu#hasSubject>
 
     Annotations: 
         rdfs:isDefinedBy <https://w3id.org/dpv/dpv-owl/rights/eu#>,
         rdfs:label "hasSubject"@en
-    
-    
-ObjectProperty: <https://w3id.org/dpv/dpv-owl/rights/eu#hasTRL>
-
-    Annotations: 
-        rdfs:isDefinedBy <https://w3id.org/dpv/dpv-owl/rights/eu#>,
-        rdfs:label "hasTRL"@en
     
     
 ObjectProperty: <https://w3id.org/dpv/dpv-owl/rights/eu#hasUser>

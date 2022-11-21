@@ -1,9 +1,19 @@
 @prefix dct: <http://purl.org/dc/terms/> .
+@prefix dex: <https://w3id.org/dpv/examples#> .
 @prefix dpv: <https://w3id.org/dpv#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sw: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dpv:DataController a dpv:Concept ;
+    skos:prefLabel "dpv:DataController"@en ;
+    skos:scopeNote "An Data Controller can be a Data Source, e.g. a Controller inferring data or generating data"@en .
+
+dpv:DataSubject a dpv:Concept ;
+    skos:prefLabel "dpv:DataSubject"@en ;
+    skos:scopeNote "A Data Subject as a Data Source, e.g. when data is collected via a form or observed from their activities"@en .
 
 dpv:Processing_ContextConcepts a skos:Collection ;
     skos:member dpv:AlgorithmicLogic,
@@ -16,6 +26,7 @@ dpv:Processing_ContextConcepts a skos:Collection ;
         dpv:DataPublishedByDataSubject,
         dpv:DataSource,
         dpv:DecisionMaking,
+        dpv:EvaluationOfIndividuals,
         dpv:EvaluationScoring,
         dpv:FullyAutomatedProcessing,
         dpv:HumanInvolvement,
@@ -27,6 +38,7 @@ dpv:Processing_ContextConcepts a skos:Collection ;
         dpv:PartiallyAutomatedProcessing,
         dpv:ProcessingContext,
         dpv:PublicDataSource,
+        dpv:ScoringOfIndividuals,
         dpv:StorageCondition,
         dpv:StorageDeletion,
         dpv:StorageDuration,
@@ -39,6 +51,10 @@ dpv:Processing_ContextConcepts a skos:Collection ;
         dpv:hasProcessingAutomation,
         dpv:hasStorageCondition ;
     skos:prefLabel "Processing_Context Concepts"^^xsd:string .
+
+dpv:ThirdParty a dpv:Concept ;
+    skos:prefLabel "dpv:ThirdParty"@en ;
+    skos:scopeNote "A Third Party can be a Data Source, e.g. when data is collected from an entity that is neither the Controller nor the Data Subject"@en .
 
 dpv:hasDomain rdfs:subPropertyOf skos:semanticRelation ;
     skos:prefLabel "has domain"@en .
@@ -147,6 +163,18 @@ dpv:DataPublishedByDataSubject a skos:Concept,
 
 dpv:Duration skos:narrower dpv:StorageDuration .
 
+dpv:EvaluationOfIndividuals a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-10-22"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:ProcessingContext ;
+    skos:definition "Processing that involves evaluation of individuals"@en ;
+    skos:prefLabel "Evaluation of Individuals"@en ;
+    dpv:isSubTypeOf dpv:ProcessingContext .
+
 dpv:EvaluationScoring a skos:Concept,
         dpv:Concept ;
     dct:created "2020-11-04"^^xsd:date ;
@@ -228,6 +256,18 @@ dpv:PublicDataSource a skos:Concept,
     skos:note "The term 'Public' is used here in a broad sense. Actual consideration of what is 'Public Data' can vary based on several contextual or jurisdictional factors such as  definition of open, methods of access, permissions and licenses."@en ;
     skos:prefLabel "Public Data Source"@en ;
     dpv:isInstanceOf dpv:DataSource .
+
+dpv:ScoringOfIndividuals a skos:Concept,
+        dpv:Concept ;
+    dct:created "2022-10-22"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    dct:source <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj> ;
+    rdfs:isDefinedBy dpv: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpv:ProcessingContext ;
+    skos:definition "Processing that involves scoring of individuals"@en ;
+    skos:prefLabel "Scoring of Individuals"@en ;
+    dpv:isSubTypeOf dpv:ProcessingContext .
 
 dpv:StorageDeletion a skos:Concept,
         dpv:Concept ;
@@ -434,6 +474,8 @@ dpv:DataSource a skos:Concept,
     dct:creator "Beatriz Esteves"^^xsd:string,
         "Georg P Krog"^^xsd:string,
         "Harshvardhan J. Pandit"^^xsd:string ;
+    vann:example dex:E0012,
+        dex:E0020 ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:broader dpv:ProcessingContext ;
@@ -468,6 +510,7 @@ dpv:StorageCondition a skos:Concept,
         "Harshvardhan J. Pandit"^^xsd:string,
         "Mark Lizar"^^xsd:string,
         "Rob Brennan"^^xsd:string ;
+    vann:example dex:E0011 ;
     rdfs:isDefinedBy dpv: ;
     sw:term_status "accepted"@en ;
     skos:broader dpv:ProcessingContext ;
@@ -490,8 +533,10 @@ dpv:ProcessingContext a skos:Concept,
     skos:narrower dpv:AutomationOfProcessing,
         dpv:DataSource,
         dpv:DecisionMaking,
+        dpv:EvaluationOfIndividuals,
         dpv:EvaluationScoring,
         dpv:InnovativeUseOfNewTechnologies,
+        dpv:ScoringOfIndividuals,
         dpv:StorageCondition,
         dpv:SystematicMonitoring ;
     skos:prefLabel "Processing Context"@en ;

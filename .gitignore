@@ -137,5 +137,6 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-.DS_Store
+# ont-converter jar files should be skipped
+ont-converter.jar
 releases

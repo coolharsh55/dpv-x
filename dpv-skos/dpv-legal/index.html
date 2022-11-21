@@ -23,13 +23,13 @@
     {
       name: "Harshvardhan J. Pandit",
       url: "https://harshp.com",
-      "company": "ADAPT Centre, Trinity College Dublin"
+      "company": "ADAPT Centre, Dublin City University"
     }
     ],
     authors: [
       {
         "name": "Harshvardhan J. Pandit",
-        "company": "ADAPT Centre, Trinity College Dublin"
+        "company": "ADAPT Centre, Dublin City University"
       },
       {
         "name": "Julian Flake",
@@ -242,6 +242,18 @@
   "ISO-27017": {
     "href": "https://www.iso.org/standard/43757.html",
     "title": "ISO/IEC 27017:2015 Information technology — Security techniques — Code of practice for information security controls based on ISO/IEC 27002 for cloud services"
+  },
+  "SHACL-UseCases": {
+    "href": "https://www.w3.org/TR/shacl-ucr/",
+    "title": "SHACL Use Cases and Requirements"
+  },
+  "DCT": {
+    "title": "DCMI Metadata Terms (DCT)",
+    "href": "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/"
+  },
+  "DCAT": {
+    "title": "Data Catalog Vocabulary (DCAT) - Version 2",
+    "href": "http://www.w3.org/ns/dcat"
   }
 }  };
  </script>
@@ -302,11 +314,16 @@
     <p>The namespace for terms in DPV-LEGAL is <a href="http://www.w3id.org/dpv/dpv-skos/dpv-legal#"><code>https://www.w3id.org/dpv/dpv-skos/dpv-legal#</code></a><br/>
       The suggested prefix for the namespace is <code>dpvs-legal</code><br/>
       The DPV-LEGAL vocabulary and its documentation is available on <a href="https://github.com/w3c/dpv">GitHub</a>.</p>
-    <section id="dpv-v1-rc" class="note">
-        <h2>Call for Comments/Feedbacks for DPV v1.0 release</h2>
-        <p>Please provide your comments by <strong>15-OCT-2022</strong> via <a href="https://github.com/w3c/dpv/issues/50">GitHub</a> or <a href="https://lists.w3.org/Archives/Public/public-dpvcg/">public-dpvcg@w3.org</a> (mailing list).</p>
-        <p>While v0.8.1 is a regular 0.x style release, it also acts as the v1.0 release candidate. This means if there are no major issues raised and unable to be resolved, including missing parts, errors or bugs, or requirements that must be added, then after 15-OCT-2022, this version will be re-released as DPV v1.0 along with any further enhancements, fixes, minor additions, or documentations that have been developed until then.</p>
-    </section>
+
+      <div class="issue" title="WARNING: unstable vocabulary" data-number="46">
+      <p><strong>WARNING</strong> This vocabulary will be undergoing major changes where concepts for regions (i.e. countries) will be removed and replaced with IRIs from an external exhaustive source.</p>
+      </div>
+      
+    <div id="dpv-v1-rc" class="note">
+    <p><strong>Release Candidate for DPV v1.0</strong>
+      The current release is the final point/minor version before the scheduled release of v1 approx. around <strong>15-NOV-2022</strong>. Feedback can be provided via <a href="https://github.com/w3c/dpv/issues/50">GitHub</a> or <a href="https://lists.w3.org/Archives/Public/public-dpvcg/">public-dpvcg@w3.org</a> (mailing list).
+    </p>
+</div>
 <section id="dpv-document-family" class="noTOC">
     <h2>DPV Family of Documents</h2>
     <ul>
@@ -1127,13 +1144,13 @@
         </tbody>
       </table>
     </section>
-    <section id="UK-DPA-2018" data-dfn-for="UK-DPA-2018">
-      <h4><code><dfn>UK-DPA-2018</dfn></code></h4>
+    <section id="GB-DPA-2018" data-dfn-for="GB-DPA-2018">
+      <h4><code><dfn>GB-DPA-2018</dfn></code></h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-skos/dpv-legal#UK-DPA-2018`</td>
+            <td>`https://w3id.org/dpv/dpv-skos/dpv-legal#GB-DPA-2018`</td>
           </tr>
           <tr>
             <td>Type</td>
@@ -1159,6 +1176,10 @@
             <td><time>2022-07-20</time></td>
           </tr>
           <tr>
+            <td>Concept Modified:</td>
+            <td><time>2022-10-14</time></td>
+          </tr>
+          <tr>
             <td>Contributor(s):</td>
             <td>
               Harshvardhan J. Pandit
@@ -1167,13 +1188,13 @@
         </tbody>
       </table>
     </section>
-    <section id="UK-GDPR" data-dfn-for="UK-GDPR">
-      <h4><code><dfn>UK-GDPR</dfn></code></h4>
+    <section id="GB-GDPR" data-dfn-for="GB-GDPR">
+      <h4><code><dfn>GB-GDPR</dfn></code></h4>
       <table class="definition">
         <tbody>
           <tr>
             <td>IRI</td>
-            <td>`https://w3id.org/dpv/dpv-skos/dpv-legal#UK-GDPR`</td>
+            <td>`https://w3id.org/dpv/dpv-skos/dpv-legal#GB-GDPR`</td>
           </tr>
           <tr>
             <td>Type</td>
@@ -1197,6 +1218,10 @@
           <tr>
             <td>Concept Created:</td>
             <td><time>2022-07-20</time></td>
+          </tr>
+          <tr>
+            <td>Concept Modified:</td>
+            <td><time>2022-10-14</time></td>
           </tr>
           <tr>
             <td>Contributor(s):</td>
@@ -3425,7 +3450,7 @@
           </tr>
           <tr>
             <td>Type</td>
-            <td><a href="https://w3id.org/dpv/dpv-skos/dpv-gdpr#A45-3">dpvs-gdpr:A45-3</a><a href="https://w3id.org/dpv/dpv-skos#Law">dpvs:Law</a></td>
+            <td><a href="https://w3id.org/dpv/dpv-skos#Law">dpvs:Law</a><a href="https://w3id.org/dpv/dpv-skos/dpv-gdpr#A45-3">dpvs-gdpr:A45-3</a></td>
           </tr>
           <tr>
             <td>Label:</td>
@@ -3507,7 +3532,7 @@
           </tr>
           <tr>
             <td>Type</td>
-            <td><a href="https://w3id.org/dpv/dpv-skos/dpv-gdpr#A45-3">dpvs-gdpr:A45-3</a><a href="https://w3id.org/dpv/dpv-skos#Law">dpvs:Law</a></td>
+            <td><a href="https://w3id.org/dpv/dpv-skos#Law">dpvs:Law</a><a href="https://w3id.org/dpv/dpv-skos/dpv-gdpr#A45-3">dpvs-gdpr:A45-3</a></td>
           </tr>
           <tr>
             <td>Label:</td>
@@ -3712,7 +3737,7 @@
           </tr>
           <tr>
             <td>Type</td>
-            <td><a href="https://w3id.org/dpv/dpv-skos/dpv-gdpr#A45-3">dpvs-gdpr:A45-3</a><a href="https://w3id.org/dpv/dpv-skos#Law">dpvs:Law</a></td>
+            <td><a href="https://w3id.org/dpv/dpv-skos#Law">dpvs:Law</a><a href="https://w3id.org/dpv/dpv-skos/dpv-gdpr#A45-3">dpvs-gdpr:A45-3</a></td>
           </tr>
           <tr>
             <td>Label:</td>
@@ -3794,7 +3819,7 @@
           </tr>
           <tr>
             <td>Type</td>
-            <td><a href="https://w3id.org/dpv/dpv-skos/dpv-gdpr#A45-3">dpvs-gdpr:A45-3</a><a href="https://w3id.org/dpv/dpv-skos#Law">dpvs:Law</a></td>
+            <td><a href="https://w3id.org/dpv/dpv-skos#Law">dpvs:Law</a><a href="https://w3id.org/dpv/dpv-skos/dpv-gdpr#A45-3">dpvs-gdpr:A45-3</a></td>
           </tr>
           <tr>
             <td>Label:</td>
@@ -18217,7 +18242,25 @@
   <p>Graham Greenleaf does a comprehensive and resourceful job of maintaining a collection of privacy and data protection laws across the world. Adopters can utilise this resource to add concepts to this vocabulary. See: Greenleaf G. (2019). Global Tables of Data Privacy Laws and Bills (6th Ed January 2019) (SSRN Scholarly Paper ID 3380794). Social Science Research Network. <a href="https://papers.ssrn.com/abstract=3380794">https://papers.ssrn.com/abstract=3380794</a></p>
 </section>
 
+<section id="proposed-terms" class="appendix">
+  <h2>Proposed Terms</h2>
+  <p>The following terms have been proposed for inclusion, and are under discussion. They are provided here for illustrative purposes and should not be considered as part of DPV.</p>
+    <strong>vocab</strong>
+    <ul>      <li>ProcessingPropotionality</li>
+      <li>SystematicExtensiveEvaluation</li>
+</ul>
+    <strong>laws</strong>
+    <ul>      <li>EU</li>
+      <li>US</li>
+      <li>UK</li>
+</ul>
+</section>
+
 <section id="conformance" class="noTOC"></section>
+
+<section class="appendix" id="issue-summary">
+</section>
+
 <section id="funding-acknowledgements" class="noTOC">
   <h2>Funding Acknowledgements</h2>
 

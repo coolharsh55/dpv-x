@@ -17,7 +17,7 @@ dpvs:AnonymisedData a rdfs:Class,
     sw:term_status "accepted"@en ;
     skos:broader dpvs:NonPersonalData ;
     skos:definition "Personal Data that has been (fully and completely) anonymised so that it is no longer considered Personal Data"@en ;
-    skos:note "It is advised to carefully consider indicating data is fully or completely anonymised by determining whether the data by itself or in combination with other data can identify a person. Failing this condition, the data should be denoted as PseudoAnonymisedData. To indicate data is anonymised only for a specified entity (e.g. within an organisation), the concept AnonymisedDataWithinScope (as subclass of PseudoAnonymisedData) should be used instead of AnonymisedData."@en ;
+    skos:note "It is advised to carefully consider indicating data is fully or completely anonymised by determining whether the data by itself or in combination with other data can identify a person. Failing this condition, the data should be denoted as PseudonymisedData. To indicate data is anonymised only for a specified entity (e.g. within an organisation), the concept ContextuallyAnonymisedData (as subclass of PseudonymisedData) should be used instead of AnonymisedData."@en ;
     skos:prefLabel "Anonymised Data"@en .
 
 dpvs:CollectedPersonalData a rdfs:Class,
@@ -68,6 +68,17 @@ dpvs:GeneratedPersonalData a rdfs:Class,
     skos:definition "Personal Data that is generated or brought into existence without relation to existing data i.e. it is not derived or inferred from other data"@en ;
     skos:note "Generated Data is used to indicate data that is produced and is not derived or inferred from other data"@en ;
     skos:prefLabel "Generated Personal Data"@en .
+
+dpvs:IncorrectData a rdfs:Class,
+        skos:Concept ;
+    dct:created "2022-11-02"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpvs: ;
+    rdfs:subClassOf dpvs:Data ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpvs:Data ;
+    skos:definition "Data that is known to be incorrect or inconsistent with some quality requirements"@en ;
+    skos:prefLabel "Incorrect Data"@en .
 
 dpvs:InferredPersonalData a rdfs:Class,
         skos:Concept ;
@@ -121,7 +132,7 @@ dpvs:PersonalData a rdfs:Class,
     skos:prefLabel "Personal Data"@en ;
     skos:related spl:AnyData .
 
-dpvs:PseudoAnonymisedData a rdfs:Class,
+dpvs:PseudonymisedData a rdfs:Class,
         skos:Concept ;
     dct:created "2022-01-19"^^xsd:date ;
     dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
@@ -129,8 +140,8 @@ dpvs:PseudoAnonymisedData a rdfs:Class,
     rdfs:subClassOf dpvs:PersonalData ;
     sw:term_status "accepted"@en ;
     skos:broader dpvs:PersonalData ;
-    skos:definition "Personal Data that has undergone a partial (incomplete) anonymisation process such that it is still considered Personal Data"@en ;
-    skos:prefLabel "Pseudo-anonymised Data"@en .
+    skos:definition "Personal Data that has undergone a pseudonymisation process or a partial (incomplete) anonymisation process such that it is still considered Personal Data"@en ;
+    skos:prefLabel "Pseudonymised Data"@en .
 
 dpvs:SensitivePersonalData a rdfs:Class,
         skos:Concept ;
@@ -171,20 +182,45 @@ dpvs:SyntheticData a rdfs:Class,
     skos:definition "Synthetic data reffers to artificially created data such that it is intended to resemble real data (personal or non-personal), but does not refer to any specific identified or identifiable individual, or to the real measure of an observable parameter in the case of non-personal data"@en ;
     skos:prefLabel "Synthetic Data"@en .
 
+dpvs:UnverifiedData a rdfs:Class,
+        skos:Concept ;
+    dct:created "2022-11-02"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpvs: ;
+    rdfs:subClassOf dpvs:Data ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpvs:Data ;
+    skos:definition "Data that has not been verified in terms of accuracy, inconsistency, or quality"@en ;
+    skos:prefLabel "Unverified Data"@en .
+
+dpvs:VerifiedData a rdfs:Class,
+        skos:Concept ;
+    dct:created "2022-11-02"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit"^^xsd:string ;
+    rdfs:isDefinedBy dpvs: ;
+    rdfs:subClassOf dpvs:Data ;
+    sw:term_status "accepted"@en ;
+    skos:broader dpvs:Data ;
+    skos:definition "Data that has been verified in terms of accuracy, inconsistency, or quality"@en ;
+    skos:prefLabel "Verified Data"@en .
+
 dpvs:Personal_DataConcepts a skos:Collection ;
     skos:member dpvs:AnonymisedData,
         dpvs:CollectedPersonalData,
         dpvs:Data,
         dpvs:DerivedPersonalData,
         dpvs:GeneratedPersonalData,
+        dpvs:IncorrectData,
         dpvs:InferredPersonalData,
         dpvs:NonPersonalData,
         dpvs:ObservedPersonalData,
         dpvs:PersonalData,
-        dpvs:PseudoAnonymisedData,
+        dpvs:PseudonymisedData,
         dpvs:SensitivePersonalData,
         dpvs:SpecialCategoryPersonalData,
         dpvs:SyntheticData,
+        dpvs:UnverifiedData,
+        dpvs:VerifiedData,
         dpvs:hasData,
         dpvs:hasPersonalData ;
     skos:prefLabel "Personal_Data Concepts"^^xsd:string .
