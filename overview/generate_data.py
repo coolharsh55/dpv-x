@@ -11,6 +11,8 @@ with open('iris.csv', 'r') as fd:
     next(reader)
     for row in reader:
         label, iri = row
+        if label.startswith('dpv:'):
+            label = label.split(':')[-1]
         iris[iri] = label
     print(iris.keys())
 
