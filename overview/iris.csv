@@ -1,10 +1,10 @@
 label,x
-SupraNationalAuthority,https://w3id.org/dpv#SupraNationalAuthority
+Supra-National Authority,https://w3id.org/dpv#SupraNationalAuthority
 Compliance Unknown,https://w3id.org/dpv#ComplianceUnknown
 Storage Deletion,https://w3id.org/dpv#StorageDeletion
 Sell Data to Third Parties,https://w3id.org/dpv#SellDataToThirdParties
 Audit Approved,https://w3id.org/dpv#AuditApproved
-SingularScaleOfDataSubjects,https://w3id.org/dpv#SingularScaleOfDataSubjects
+Singular Scale Of Data Subjects,https://w3id.org/dpv#SingularScaleOfDataSubjects
 Structure,https://w3id.org/dpv#Structure
 Consequence of Failure,https://w3id.org/dpv#ConsequenceOfFailure
 dpv:DataSubject,https://w3id.org/dpv#DataSubject
@@ -22,7 +22,7 @@ Third Party Security Procedures,https://w3id.org/dpv#ThirdPartySecurityProcedure
 Federated Locations,https://w3id.org/dpv#FederatedLocations
 Automated Decision Making,https://w3id.org/dpv#AutomatedDecisionMaking
 Within Virtual Environment,https://w3id.org/dpv#WithinVirtualEnvironment
-LocalityScale,https://w3id.org/dpv#LocalityScale
+Locality Scale,https://w3id.org/dpv#LocalityScale
 Privacy Notice,https://w3id.org/dpv#PrivacyNotice
 Hash-based Message Authentication Code (HMAC),https://w3id.org/dpv#HashMessageAuthenticationCode
 Contractual Terms,https://w3id.org/dpv#ContractualTerms
@@ -31,9 +31,9 @@ Vulnerable Data Subject,https://w3id.org/dpv#VulnerableDataSubject
 Establish Contractual Agreement,https://w3id.org/dpv#EstablishContractualAgreement
 Query,https://w3id.org/dpv#Query
 Legal Basis,https://w3id.org/dpv#LegalBasis
-LargeDataVolume,https://w3id.org/dpv#LargeDataVolume
+Large Data Volume,https://w3id.org/dpv#LargeDataVolume
 Generate,https://w3id.org/dpv#Generate
-AcademicScientificOrganisation,https://w3id.org/dpv#AcademicScientificOrganisation
+Academic or Scientific Organisation,https://w3id.org/dpv#AcademicScientificOrganisation
 Until Time Duration,https://w3id.org/dpv#UntilTimeDuration
 Regularity of Re-certification,https://w3id.org/dpv#RegularityOfRecertification
 Organisational Unit,https://w3id.org/dpv#OrganisationalUnit
@@ -69,7 +69,7 @@ Adapt,https://w3id.org/dpv#Adapt
 Quantum Cryptography,https://w3id.org/dpv#QuantumCryptography
 Staff Training,https://w3id.org/dpv#StaffTraining
 Human Involvement for Oversight,https://w3id.org/dpv#HumanInvolvementForOversight
-GlobalScale,https://w3id.org/dpv#GlobalScale
+Global Scale,https://w3id.org/dpv#GlobalScale
 Scoring of Individuals,https://w3id.org/dpv#ScoringOfIndividuals
 Within Device,https://w3id.org/dpv#WithinDevice
 Consent Notice,https://w3id.org/dpv#ConsentNotice
@@ -91,7 +91,7 @@ Storage Location,https://w3id.org/dpv#StorageLocation
 Natural Person,https://w3id.org/dpv#NaturalPerson
 Password Authentication,https://w3id.org/dpv#PasswordAuthentication
 Service Usage Analytics,https://w3id.org/dpv#ServiceUsageAnalytics
-NonProfitOrganisation,https://w3id.org/dpv#NonProfitOrganisation
+Non-Profit Organisation,https://w3id.org/dpv#NonProfitOrganisation
 Consultation with Data Subject,https://w3id.org/dpv#ConsultationWithDataSubject
 Context,https://w3id.org/dpv#Context
 Scale,https://w3id.org/dpv#Scale
@@ -102,12 +102,12 @@ Non Compliant,https://w3id.org/dpv#NonCompliant
 Compliance Violation,https://w3id.org/dpv#ComplianceViolation
 Conformant,https://w3id.org/dpv#Conformant
 Align,https://w3id.org/dpv#Align
-NonCitizen,https://w3id.org/dpv#NonCitizen
+Non-Citizen,https://w3id.org/dpv#NonCitizen
 Fraud Prevention and Detection,https://w3id.org/dpv#FraudPreventionAndDetection
 Anonymised Data,https://w3id.org/dpv#AnonymisedData
 Use of Synthetic Data,https://w3id.org/dpv#UseSyntheticData
 Activity Proposed,https://w3id.org/dpv#ActivityProposed
-RegionalAuthority,https://w3id.org/dpv#RegionalAuthority
+Regional Authority,https://w3id.org/dpv#RegionalAuthority
 Right Non-Fulfilment Notice,https://w3id.org/dpv#RightNonFulfilmentNotice
 Location,https://w3id.org/dpv#Location
 Activity Monitoring,https://w3id.org/dpv#ActivityMonitoring
@@ -175,7 +175,7 @@ Private Information Retrieval,https://w3id.org/dpv#PrivateInformationRetrieval
 Organise,https://w3id.org/dpv#Organise
 Risk Mitigation Measure,https://w3id.org/dpv#RiskMitigationMeasure
 Customer Care,https://w3id.org/dpv#CustomerCare
-GovernmentalOrganisation,https://w3id.org/dpv#GovernmentalOrganisation
+Governmental Organisation,https://w3id.org/dpv#GovernmentalOrganisation
 Service Provision,https://w3id.org/dpv#ServiceProvision
 Enforce Security,https://w3id.org/dpv#EnforceSecurity
 Technical Measure,https://w3id.org/dpv#TechnicalMeasure
@@ -215,10 +215,10 @@ Screen,https://w3id.org/dpv#Screen
 Partially Automated Processing,https://w3id.org/dpv#PartiallyAutomatedProcessing
 Network Proxy Routing,https://w3id.org/dpv#NetworkProxyRouting
 Sector,https://w3id.org/dpv#Sector
-LocalEnvironmentScale,https://w3id.org/dpv#LocalEnvironmentScale
+Local Environment Scale,https://w3id.org/dpv#LocalEnvironmentScale
 Data Redaction,https://w3id.org/dpv#DataRedaction
 Consent Status Valid for Processing,https://w3id.org/dpv#ConsentStatusValidForProcessing
-HugeScaleOfDataSubjects,https://w3id.org/dpv#HugeScaleOfDataSubjects
+Huge Scale Of Data Subjects,https://w3id.org/dpv#HugeScaleOfDataSubjects
 Audit Requested,https://w3id.org/dpv#AuditRequested
 Vital Interest of Data Subject,https://w3id.org/dpv#VitalInterestOfDataSubject
 Disaster Recovery Procedures,https://w3id.org/dpv#DisasterRecoveryProcedures
@@ -237,8 +237,8 @@ Certification and Seal,https://w3id.org/dpv#CertificationSeal
 Cryptographic Key Management,https://w3id.org/dpv#CryptographicKeyManagement
 Logging Policies,https://w3id.org/dpv#LoggingPolicies
 Incident Reporting Communication,https://w3id.org/dpv#IncidentReportingCommunication
-SmallScaleOfDataSubjects,https://w3id.org/dpv#SmallScaleOfDataSubjects
-SporadicScaleOfDataSubjects,https://w3id.org/dpv#SporadicScaleOfDataSubjects
+Small Scale Of Data Subjects,https://w3id.org/dpv#SmallScaleOfDataSubjects
+Sporadic Scale Of Data Subjects,https://w3id.org/dpv#SporadicScaleOfDataSubjects
 Mentally Vulnerable Data Subject,https://w3id.org/dpv#MentallyVulnerableDataSubject
 Student,https://w3id.org/dpv#Student
 Symmetric Encryption,https://w3id.org/dpv#SymmetricEncryption
@@ -247,7 +247,7 @@ Automated Processing with Human Oversight,https://w3id.org/dpv#AutomatedProcessi
 Authorisation Procedure,https://w3id.org/dpv#AuthorisationProcedure
 WebBrowser Security,https://w3id.org/dpv#WebBrowserSecurity
 Single Sign On,https://w3id.org/dpv#SingleSignOn
-MediumScaleOfDataSubjects,https://w3id.org/dpv#MediumScaleOfDataSubjects
+Medium Scale Of Data Subjects,https://w3id.org/dpv#MediumScaleOfDataSubjects
 Sensitive Personal Data,https://w3id.org/dpv#SensitivePersonalData
 Social Media Marketing,https://w3id.org/dpv#SocialMediaMarketing
 Privacy Preserving Protocol,https://w3id.org/dpv#PrivacyPreservingProtocol
@@ -259,7 +259,7 @@ Technical Service Provision,https://w3id.org/dpv#TechnicalServiceProvision
 Observed Personal Data,https://w3id.org/dpv#ObservedPersonalData
 Often Frequency,https://w3id.org/dpv#OftenFrequency
 Internal Resource Optimisation,https://w3id.org/dpv#InternalResourceOptimisation
-SingularDataVolume,https://w3id.org/dpv#SingularDataVolume
+Singular Data Volume,https://w3id.org/dpv#SingularDataVolume
 Customer Solvency Monitoring,https://w3id.org/dpv#CustomerSolvencyMonitoring
 Informed Consent,https://w3id.org/dpv#InformedConsent
 Data Processing Agreement,https://w3id.org/dpv#DataProcessingAgreement
@@ -267,7 +267,7 @@ Consultation with Authority,https://w3id.org/dpv#ConsultationWithAuthority
 Customer Management,https://w3id.org/dpv#CustomerManagement
 Access,https://w3id.org/dpv#Access
 Organisation Compliance Management,https://w3id.org/dpv#OrganisationComplianceManagement
-HugeDataVolume,https://w3id.org/dpv#HugeDataVolume
+Huge Data Volume,https://w3id.org/dpv#HugeDataVolume
 Data Backup Protocols,https://w3id.org/dpv#DataBackupProtocols
 Policy,https://w3id.org/dpv#Policy
 Data Protection Authority,https://w3id.org/dpv#DataProtectionAuthority
@@ -281,7 +281,7 @@ Compliance Monitoring,https://w3id.org/dpv#ComplianceMonitoring
 Small Scale Processing,https://w3id.org/dpv#SmallScaleProcessing
 Decision Making,https://w3id.org/dpv#DecisionMaking
 Improve Existing Products and Services,https://w3id.org/dpv#ImproveExistingProductsAndServices
-NonGovernmentalOrganisation,https://w3id.org/dpv#NonGovernmentalOrganisation
+Non-Governmental Organisation,https://w3id.org/dpv#NonGovernmentalOrganisation
 Consent Request Deferred,https://w3id.org/dpv#ConsentRequestDeferred
 Encryption in Use,https://w3id.org/dpv#EncryptionInUse
 Derive,https://w3id.org/dpv#Derive
@@ -318,14 +318,14 @@ Processing Scale,https://w3id.org/dpv#ProcessingScale
 Compliant,https://w3id.org/dpv#Compliant
 Consequence as Side-Effect,https://w3id.org/dpv#ConsequenceAsSideEffect
 Data Sub-Processor,https://w3id.org/dpv#DataSubProcessor
-ForProfitOrganisation,https://w3id.org/dpv#ForProfitOrganisation
+For-Profit Organisation,https://w3id.org/dpv#ForProfitOrganisation
 Sell Insights from Data,https://w3id.org/dpv#SellInsightsFromData
 Risk Management Process,https://w3id.org/dpv#RiskManagementProcess
 Conformance Status,https://w3id.org/dpv#ConformanceStatus
 Risk Management Plan,https://w3id.org/dpv#RiskManagementPlan
 Large Scale Processing,https://w3id.org/dpv#LargeScaleProcessing
 Customer,https://w3id.org/dpv#Customer
-NationalAuthority,https://w3id.org/dpv#NationalAuthority
+National Authority,https://w3id.org/dpv#NationalAuthority
 SupraNationalUnion,https://w3id.org/dpv#SupraNationalUnion
 Provide Personalised Recommendations,https://w3id.org/dpv#ProvidePersonalisedRecommendations
 Consent Status,https://w3id.org/dpv#ConsentStatus
@@ -343,7 +343,7 @@ Document Security,https://w3id.org/dpv#DocumentSecurity
 Automated Processing with Human Review,https://w3id.org/dpv#AutomatedProcessingWithHumanReview
 Trusted Computing,https://w3id.org/dpv#TrustedComputing
 Consent Given,https://w3id.org/dpv#ConsentGiven
-MediumDataVolume,https://w3id.org/dpv#MediumDataVolume
+Medium Data Volume,https://w3id.org/dpv#MediumDataVolume
 Distributed System Security,https://w3id.org/dpv#DistributedSystemSecurity
 Data Importer,https://w3id.org/dpv#DataImporter
 Participant,https://w3id.org/dpv#Participant
@@ -368,11 +368,11 @@ Damage,https://w3id.org/dpv#Damage
 Explicitly Expressed Consent,https://w3id.org/dpv#ExplicitlyExpressedConsent
 Audit Not Required,https://w3id.org/dpv#AuditNotRequired
 Web Security Protocols,https://w3id.org/dpv#WebSecurityProtocols
-IndustryConsortium,https://w3id.org/dpv#IndustryConsortium
+Industry Consortium,https://w3id.org/dpv#IndustryConsortium
 Public Data Source,https://w3id.org/dpv#PublicDataSource
 Enter Into Contract,https://w3id.org/dpv#EnterIntoContract
 Consent Invalidated,https://w3id.org/dpv#ConsentInvalidated
-SmallDataVolume,https://w3id.org/dpv#SmallDataVolume
+Small Data Volume,https://w3id.org/dpv#SmallDataVolume
 Innovative Use of New Technologies,https://w3id.org/dpv#InnovativeUseOfNewTechnologies
 Child,https://w3id.org/dpv#Child
 Variable Location,https://w3id.org/dpv#VariableLocation
@@ -420,10 +420,10 @@ Scope,https://w3id.org/dpv#Scope
 Infer,https://w3id.org/dpv#Infer
 Importance,https://w3id.org/dpv#Importance
 Personnel Hiring,https://w3id.org/dpv#PersonnelHiring
-RegionalScale,https://w3id.org/dpv#RegionalScale
+Regional Scale,https://w3id.org/dpv#RegionalScale
 Completely Manual Processing,https://w3id.org/dpv#CompletelyManualProcessing
 Elderly Data Subject,https://w3id.org/dpv#ElderlyDataSubject
-SporadicDataVolume,https://w3id.org/dpv#SporadicDataVolume
+Sporadic Data Volume,https://w3id.org/dpv#SporadicDataVolume
 Decentralised Locations,https://w3id.org/dpv#DecentralisedLocations
 De-Identification,https://w3id.org/dpv#Deidentification
 Advertising,https://w3id.org/dpv#Advertising
@@ -474,10 +474,10 @@ Access Control Method,https://w3id.org/dpv#AccessControlMethod
 Data Protection Officer,https://w3id.org/dpv#DataProtectionOfficer
 Penetration Testing Methods,https://w3id.org/dpv#PenetrationTestingMethods
 Pseudonymisation,https://w3id.org/dpv#Pseudonymisation
-NearlyGlobalScale,https://w3id.org/dpv#NearlyGlobalScale
+Nearly Global Scale,https://w3id.org/dpv#NearlyGlobalScale
 Derived Personal Data,https://w3id.org/dpv#DerivedPersonalData
 Data Transfer Impact Assessment,https://w3id.org/dpv#DataTransferImpactAssessment
-JobApplicant,https://w3id.org/dpv#JobApplicant
+Job Applicant,https://w3id.org/dpv#JobApplicant
 Identity Verification,https://w3id.org/dpv#IdentityVerification
 Pseudonymise,https://w3id.org/dpv#Pseudonymise
 Organisation,https://w3id.org/dpv#Organisation
@@ -485,18 +485,18 @@ Credit Checking,https://w3id.org/dpv#CreditChecking
 Frequency,https://w3id.org/dpv#Frequency
 Customer Relationship Management,https://w3id.org/dpv#CustomerRelationshipManagement
 dcat:Resource,http://www.w3.org/ns/dcat#Resource
-NationalScale,https://w3id.org/dpv#NationalScale
+National Scale,https://w3id.org/dpv#NationalScale
 Risk,https://w3id.org/dpv#Risk
 Secure Multi-Party Computation,https://w3id.org/dpv#SecureMultiPartyComputation
 Data Source,https://w3id.org/dpv#DataSource
-MultiNationalScale,https://w3id.org/dpv#MultiNationalScale
+Multi National Scale,https://w3id.org/dpv#MultiNationalScale
 Immigrant,https://w3id.org/dpv#Immigrant
 Activity Ongoing,https://w3id.org/dpv#ActivityOngoing
 Marketing,https://w3id.org/dpv#Marketing
 MaintainCreditCheckingDatabase,https://w3id.org/dpv#MaintainCreditCheckingDatabase
 Lawful,https://w3id.org/dpv#Lawful
 Passive Right,https://w3id.org/dpv#PassiveRight
-LargeScaleOfDataSubjects,https://w3id.org/dpv#LargeScaleOfDataSubjects
+Large Scale Of Data Subjects,https://w3id.org/dpv#LargeScaleOfDataSubjects
 Incorrect Data,https://w3id.org/dpv#IncorrectData
 Monitor,https://w3id.org/dpv#Monitor
 Share,https://w3id.org/dpv#Share
