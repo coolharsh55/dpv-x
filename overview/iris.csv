@@ -163,7 +163,6 @@ Member,https://w3id.org/dpv#Member
 Analyse,https://w3id.org/dpv#Analyse
 International Organisation,https://w3id.org/dpv#InternationalOrganisation
 Fulfilment of Obligation,https://w3id.org/dpv#FulfilmentOfObligation
-Data Anonymisation Technique,https://w3id.org/dpv#DataAnonymisationTechnique
 Expressed Consent,https://w3id.org/dpv#ExpressedConsent
 Purpose,https://w3id.org/dpv#Purpose
 Monitoring Policies,https://w3id.org/dpv#MonitoringPolicies
@@ -326,7 +325,7 @@ Risk Management Plan,https://w3id.org/dpv#RiskManagementPlan
 Large Scale Processing,https://w3id.org/dpv#LargeScaleProcessing
 Customer,https://w3id.org/dpv#Customer
 National Authority,https://w3id.org/dpv#NationalAuthority
-SupraNationalUnion,https://w3id.org/dpv#SupraNationalUnion
+Supranational Union,https://w3id.org/dpv#SupraNationalUnion
 Provide Personalised Recommendations,https://w3id.org/dpv#ProvidePersonalisedRecommendations
 Consent Status,https://w3id.org/dpv#ConsentStatus
 Right Exercise Activity,https://w3id.org/dpv#RightExerciseActivity
@@ -390,7 +389,7 @@ Hash Functions,https://w3id.org/dpv#HashFunctions
 Authentication Protocols,https://w3id.org/dpv#AuthenticationProtocols
 Zero Knowledge Authentication,https://w3id.org/dpv#ZeroKnowledgeAuthentication
 Anti-Terrorism Operations,https://w3id.org/dpv#AntiTerrorismOperations
-EconomicUnion,https://w3id.org/dpv#EconomicUnion
+Economic Union,https://w3id.org/dpv#EconomicUnion
 Subscriber,https://w3id.org/dpv#Subscriber
 Fixed Location,https://w3id.org/dpv#FixedLocation
 Usage Control,https://w3id.org/dpv#UsageControl
@@ -400,7 +399,7 @@ Customer Claims Management,https://w3id.org/dpv#CustomerClaimsManagement
 Random Location,https://w3id.org/dpv#RandomLocation
 Public Location,https://w3id.org/dpv#PublicLocation
 Secret Sharing Schemes,https://w3id.org/dpv#SecretSharingSchemes
-MaintainCreditRatingDatabase,https://w3id.org/dpv#MaintainCreditRatingDatabase
+Maintain Credit Rating Database,https://w3id.org/dpv#MaintainCreditRatingDatabase
 User,https://w3id.org/dpv#User
 Digital Signatures,https://w3id.org/dpv#DigitalSignatures
 Until Event Duration,https://w3id.org/dpv#UntilEventDuration
@@ -493,7 +492,7 @@ Multi National Scale,https://w3id.org/dpv#MultiNationalScale
 Immigrant,https://w3id.org/dpv#Immigrant
 Activity Ongoing,https://w3id.org/dpv#ActivityOngoing
 Marketing,https://w3id.org/dpv#Marketing
-MaintainCreditCheckingDatabase,https://w3id.org/dpv#MaintainCreditCheckingDatabase
+Maintain Credit Checking Database,https://w3id.org/dpv#MaintainCreditCheckingDatabase
 Lawful,https://w3id.org/dpv#Lawful
 Passive Right,https://w3id.org/dpv#PassiveRight
 Large Scale Of Data Subjects,https://w3id.org/dpv#LargeScaleOfDataSubjects
