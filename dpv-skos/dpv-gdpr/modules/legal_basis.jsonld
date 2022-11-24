@@ -1,6 +1,6 @@
 [
   {
-    "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-e-public-interest",
+    "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-b-enter-into-contract",
     "@type": [
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/2000/01/rdf-schema#Class",
@@ -9,87 +9,23 @@
     "http://purl.org/dc/terms/created": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-08-24"
+        "@value": "2022-11-24"
       }
     ],
     "http://purl.org/dc/terms/creator": [
       {
-        "@value": "Harshvardhan J. Pandit"
-      }
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_e/oj"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#broader": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-e"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#PublicInterest"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "public interest"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "Art 6(1-e) public interest"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-a-explicit-consent",
-    "@type": [
-      "http://www.w3.org/2004/02/skos/core#Concept",
-      "http://www.w3.org/2000/01/rdf-schema#Class",
-      "https://w3id.org/dpv/dpv-skos#LegalBasis"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-06-22"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Eva Schlehahn"
-      },
-      {
-        "@value": "Bud Bruegger"
-      },
-      {
-        "@value": "Harshvardhan J. Pandit"
-      },
-      {
-        "@value": "Rigo Wenning"
+        "@value": "Georg P Krog"
       }
     ],
     "http://purl.org/dc/terms/modified": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-09-07"
+        "@value": "2022-11-24"
       }
     ],
     "http://purl.org/dc/terms/source": [
       {
-        "@id": "https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_a/oj"
+        "@id": "https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_b/oj"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -105,28 +41,211 @@
     ],
     "http://www.w3.org/2004/02/skos/core#broader": [
       {
-        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1a"
+        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-b"
       },
       {
-        "@id": "https://w3id.org/dpv/dpv-skos#ExplicitlyExpressedConsent"
+        "@id": "https://w3id.org/dpv/dpv-skos#EnterIntoContract"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "consent (explicit) of the data subject"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#note": [
-      {
-        "@language": "en",
-        "@value": "Valid consent in this case would have requirements for being 'explicit' in addition to requirements defined by A4-11. This is also mentioned in the Article 29 Working Party document \"Guidelines on Consent under Regulation 2016/679 (wp259rev.01)\""
+        "@value": "Legal basis based on taking steps at the request of the data subject prior to entering into a contract"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
       {
         "@language": "en",
-        "@value": "Art 6(1-a) explicit consent"
+        "@value": "Art 6(1-b) enter into contract"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-e",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "https://w3id.org/dpv/dpv-skos#LegalBasis"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2019-04-05"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Eva Schlehahn"
+      },
+      {
+        "@value": "Bud Bruegger"
+      },
+      {
+        "@value": "Harshvardhan J. Pandit"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-11-24"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_e/oj"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "changed"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#PublicInterest"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#OfficialAuthorityOfController"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Legal basis based on performance of a task carried out in the public interest or in the exercise of official authority vested in the controller"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Art 6(1-e) public interest or official authority"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-d-natual-person",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "https://w3id.org/dpv/dpv-skos#LegalBasis"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-11-24"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Georg P Krog"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-11-24"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_d/oj"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "changed"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-d"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#VitalInterestOfNaturalPerson"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Legal basis based on protecting the vital interests of another natural person that is not the data subject"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Art 6(1-d) protect vital interests of natural person"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-f-third-party",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "https://w3id.org/dpv/dpv-skos#LegalBasis"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-11-24"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Georg P Krog"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-11-24"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_f/oj"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "changed"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-f"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#LegitimateInterestOfThirdParty"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Legal basis based on the purposes of the legitimate interests pursued by a third party, except where such interests are overridden by the interests or fundamental rights and freedoms of the data subject which require protection of personal data, in particular where the data subject is a child"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Art 6(1-f) legitimate interest of third party"
       }
     ]
   },
@@ -160,7 +279,7 @@
     "http://purl.org/dc/terms/modified": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-09-07"
+        "@value": "2022-11-24"
       }
     ],
     "http://purl.org/dc/terms/source": [
@@ -190,7 +309,7 @@
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "consent (non-explicit or regular) of the data subject"
+        "@value": "Legal basis based on data subject's given non-explicit express consent to the processing of his or her personal data for one or more specific purposes"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#note": [
@@ -207,68 +326,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-f",
-    "@type": [
-      "http://www.w3.org/2004/02/skos/core#Concept",
-      "http://www.w3.org/2000/01/rdf-schema#Class",
-      "https://w3id.org/dpv/dpv-skos#LegalBasis"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2019-04-05"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Eva Schlehahn"
-      },
-      {
-        "@value": "Bud Bruegger"
-      }
-    ],
-    "http://purl.org/dc/terms/modified": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2021-09-08"
-      }
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_f/oj"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#broader": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#LegitimateInterest"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "legitimate interests"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "Art 6(1-f) legitimate interest"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-e-official-authority",
+    "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-e-public-interest",
     "@type": [
       "http://www.w3.org/2004/02/skos/core#Concept",
       "http://www.w3.org/2000/01/rdf-schema#Class",
@@ -285,6 +343,12 @@
         "@value": "Harshvardhan J. Pandit"
       }
     ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-11-24"
+      }
+    ],
     "http://purl.org/dc/terms/source": [
       {
         "@id": "https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_e/oj"
@@ -298,7 +362,7 @@
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
       {
         "@language": "en",
-        "@value": "accepted"
+        "@value": "changed"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#broader": [
@@ -306,19 +370,80 @@
         "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-e"
       },
       {
-        "@id": "https://w3id.org/dpv/dpv-skos#OfficialAuthorityOfController"
+        "@id": "https://w3id.org/dpv/dpv-skos#PublicInterest"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "official authority"
+        "@value": "Legal basis based on performance of a task carried out in the public interest"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
       {
         "@language": "en",
-        "@value": "Art 6(1-e) official authority"
+        "@value": "Art 6(1-e) public interest"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#Legal_BasisConcepts",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Collection"
+    ],
+    "http://www.w3.org/2004/02/skos/core#member": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-a"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-a-non-explicit-consent"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-a-explicit-consent"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-b"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-b-enter-into-contract"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-b-contract-performance"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-c"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-d"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-d-data-subject"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-d-natual-person"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-e"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-e-public-interest"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-e-official-authority"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-f"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-f-controller"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-f-third-party"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@value": "Legal_Basis Concepts"
       }
     ]
   },
@@ -340,6 +465,12 @@
         "@value": "Harshvardhan J. Pandit"
       }
     ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-11-24"
+      }
+    ],
     "http://purl.org/dc/terms/source": [
       {
         "@id": "https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_a/oj"
@@ -353,7 +484,7 @@
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
       {
         "@language": "en",
-        "@value": "accepted"
+        "@value": "changed"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#broader": [
@@ -364,7 +495,7 @@
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "consent of the data subject"
+        "@value": "Legal basis based on data subject's given consent to the processing of his or her personal data for one or more specific purposes"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#note": [
@@ -377,70 +508,6 @@
       {
         "@language": "en",
         "@value": "Art.6(1-a) consent"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-e",
-    "@type": [
-      "http://www.w3.org/2004/02/skos/core#Concept",
-      "http://www.w3.org/2000/01/rdf-schema#Class",
-      "https://w3id.org/dpv/dpv-skos#LegalBasis"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2019-04-05"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Eva Schlehahn"
-      },
-      {
-        "@value": "Bud Bruegger"
-      }
-    ],
-    "http://purl.org/dc/terms/modified": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2021-09-08"
-      }
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_e/oj"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#broader": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#PublicInterest"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos#OfficialAuthorityOfController"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "public interest or official authority"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "Art 6(1-e) public interest or official authority"
       }
     ]
   },
@@ -463,12 +530,15 @@
       },
       {
         "@value": "Bud Bruegger"
+      },
+      {
+        "@value": "Harshvardhan J. Pandit"
       }
     ],
     "http://purl.org/dc/terms/modified": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2021-09-08"
+        "@value": "2022-11-24"
       }
     ],
     "http://purl.org/dc/terms/source": [
@@ -484,7 +554,7 @@
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
       {
         "@language": "en",
-        "@value": "accepted"
+        "@value": "changed"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#broader": [
@@ -495,13 +565,77 @@
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "protection of the vital interests"
+        "@value": "Legal basis based on protecting the vital interests of the data subject or of another natural person"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
       {
         "@language": "en",
         "@value": "Art 6(1-d) protect vital interests"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-f",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "https://w3id.org/dpv/dpv-skos#LegalBasis"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2019-04-05"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Eva Schlehahn"
+      },
+      {
+        "@value": "Bud Bruegger"
+      },
+      {
+        "@value": "Harshvardhan J. Pandit"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-11-24"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_f/oj"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "changed"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#LegitimateInterest"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Legal basis based on the purposes of the legitimate interests pursued by the controller or by a third party, except where such interests are overridden by the interests or fundamental rights and freedoms of the data subject which require protection of personal data, in particular where the data subject is a child"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Art 6(1-f) legitimate interest"
       }
     ]
   },
@@ -524,12 +658,15 @@
       },
       {
         "@value": "Bud Bruegger"
+      },
+      {
+        "@value": "Harshvardhan J. Pandit"
       }
     ],
     "http://purl.org/dc/terms/modified": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2021-09-08"
+        "@value": "2022-11-24"
       }
     ],
     "http://purl.org/dc/terms/source": [
@@ -545,7 +682,7 @@
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
       {
         "@language": "en",
-        "@value": "accepted"
+        "@value": "changed"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#broader": [
@@ -556,7 +693,7 @@
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "performance of a contract"
+        "@value": "Legal basis based on performance of a contract to which the data subject is party or in order to take steps at the request of the data subject prior to entering into a contract"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -585,12 +722,15 @@
       },
       {
         "@value": "Bud Bruegger"
+      },
+      {
+        "@value": "Harshvardhan J. Pandit"
       }
     ],
     "http://purl.org/dc/terms/modified": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2021-09-08"
+        "@value": "2022-11-24"
       }
     ],
     "http://purl.org/dc/terms/source": [
@@ -606,7 +746,7 @@
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
       {
         "@language": "en",
-        "@value": "accepted"
+        "@value": "changed"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#broader": [
@@ -617,7 +757,7 @@
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "compliance with a legal obligation"
+        "@value": "Legal basis based on compliance with a legal obligation to which the controller is subject"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -628,45 +768,322 @@
     ]
   },
   {
-    "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#Legal_BasisConcepts",
+    "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-a-explicit-consent",
     "@type": [
-      "http://www.w3.org/2004/02/skos/core#Collection"
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "https://w3id.org/dpv/dpv-skos#LegalBasis"
     ],
-    "http://www.w3.org/2004/02/skos/core#member": [
+    "http://purl.org/dc/terms/created": [
       {
-        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-a"
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-06-22"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Eva Schlehahn"
       },
       {
-        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-a-non-explicit-consent"
+        "@value": "Bud Bruegger"
       },
       {
-        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-a-explicit-consent"
+        "@value": "Harshvardhan J. Pandit"
       },
       {
-        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-b"
+        "@value": "Rigo Wenning"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-11-24"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_a/oj"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "changed"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1a"
       },
       {
-        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-c"
-      },
+        "@id": "https://w3id.org/dpv/dpv-skos#ExplicitlyExpressedConsent"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
       {
-        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-d"
-      },
+        "@language": "en",
+        "@value": "Legal basis based on data subject's given explicit consent to the processing of his or her personal data for one or more specific purposes"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
       {
-        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-e"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-e-public-interest"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-e-official-authority"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-f"
+        "@language": "en",
+        "@value": "Valid consent in this case would have requirements for being 'explicit' in addition to requirements defined by A4-11. This is also mentioned in the Article 29 Working Party document \"Guidelines on Consent under Regulation 2016/679 (wp259rev.01)\""
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
       {
-        "@value": "Legal_Basis Concepts"
+        "@language": "en",
+        "@value": "Art 6(1-a) explicit consent"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-f-controller",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "https://w3id.org/dpv/dpv-skos#LegalBasis"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-11-24"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Georg P Krog"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-11-24"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_f/oj"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "changed"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-f"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#LegitimateInterestOfController"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Legal basis based on the purposes of the legitimate interests pursued by the controller, except where such interests are overridden by the interests or fundamental rights and freedoms of the data subject which require protection of personal data, in particular where the data subject is a child"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Art 6(1-f) legitimate interest of controller"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-b-contract-performance",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "https://w3id.org/dpv/dpv-skos#LegalBasis"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-11-24"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Georg P Krog"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-11-24"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_b/oj"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "changed"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-b"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#ContractPerformance"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Legal basis based on performance of a contract to which the data subject is party"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Art 6(1-b) contract performance"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-d-data-subject",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "https://w3id.org/dpv/dpv-skos#LegalBasis"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-11-24"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Georg P Krog"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-11-24"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_d/oj"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "changed"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-d"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#VitalInterestOfDataSubject"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Legal basis based on protecting the vital interests of the data subject"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Art 6(1-d) protect vital interests of data subject"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-e-official-authority",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "https://w3id.org/dpv/dpv-skos#LegalBasis"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-08-24"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-11-24"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_e/oj"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "changed"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos/dpv-gdpr#A6-1-e"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-skos#OfficialAuthorityOfController"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Legal basis based on the exercise of official authority vested in the controller"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Art 6(1-e) official authority"
       }
     ]
   }

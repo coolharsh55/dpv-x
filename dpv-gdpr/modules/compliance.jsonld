@@ -51,35 +51,53 @@
     ]
   },
   {
-    "@id": "https://w3id.org/dpv/dpv-gdpr#ComplianceConcepts",
+    "@id": "https://w3id.org/dpv/dpv-gdpr#GDPRLawfulness",
     "@type": [
-      "http://www.w3.org/2004/02/skos/core#Collection"
+      "https://w3id.org/dpv#Concept",
+      "http://www.w3.org/2004/02/skos/core#Concept"
     ],
-    "http://www.w3.org/2004/02/skos/core#member": [
+    "http://purl.org/dc/terms/created": [
       {
-        "@id": "https://w3id.org/dpv/dpv-gdpr#GDPRLawfulness"
-      },
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-10-22"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
       {
-        "@id": "https://w3id.org/dpv/dpv-gdpr#GDPRCompliant"
-      },
+        "@value": "Harshvardhan J. Pandit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@id": "https://w3id.org/dpv/dpv-gdpr#GDPRNonCompliant"
-      },
+        "@id": "https://w3id.org/dpv/dpv-gdpr#"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
       {
-        "@id": "https://w3id.org/dpv/dpv-gdpr#GDPRComplianceUnknown"
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/dpv#Lawfulness"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Status or state associated with being lawful or legally compliant regarding GDPR"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
       {
-        "@value": "Compliance Concepts"
+        "@language": "en",
+        "@value": "GDPR Lawfulness"
       }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv#Lawfulness",
-    "http://www.w3.org/2004/02/skos/core#narrower": [
+    ],
+    "https://w3id.org/dpv#isSubTypeOf": [
       {
-        "@id": "https://w3id.org/dpv/dpv-gdpr#GDPRLawfulness"
+        "@id": "https://w3id.org/dpv#Lawfulness"
       }
     ]
   },
@@ -149,6 +167,31 @@
     ]
   },
   {
+    "@id": "https://w3id.org/dpv/dpv-gdpr#ComplianceConcepts",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Collection"
+    ],
+    "http://www.w3.org/2004/02/skos/core#member": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-gdpr#GDPRLawfulness"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-gdpr#GDPRCompliant"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-gdpr#GDPRNonCompliant"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-gdpr#GDPRComplianceUnknown"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@value": "Compliance Concepts"
+      }
+    ]
+  },
+  {
     "@id": "https://w3id.org/dpv/dpv-gdpr#GDPRCompliant",
     "@type": [
       "https://w3id.org/dpv#Concept",
@@ -200,53 +243,10 @@
     ]
   },
   {
-    "@id": "https://w3id.org/dpv/dpv-gdpr#GDPRLawfulness",
-    "@type": [
-      "https://w3id.org/dpv#Concept",
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://purl.org/dc/terms/created": [
+    "@id": "https://w3id.org/dpv#Lawfulness",
+    "http://www.w3.org/2004/02/skos/core#narrower": [
       {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-10-22"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Harshvardhan J. Pandit"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-gdpr#"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#broader": [
-      {
-        "@id": "https://w3id.org/dpv#Lawfulness"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "Status or state associated with being lawful or legally compliant regarding GDPR"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "GDPR Lawfulness"
-      }
-    ],
-    "https://w3id.org/dpv#isSubTypeOf": [
-      {
-        "@id": "https://w3id.org/dpv#Lawfulness"
+        "@id": "https://w3id.org/dpv/dpv-gdpr#GDPRLawfulness"
       }
     ]
   }

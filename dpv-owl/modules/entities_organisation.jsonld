@@ -104,36 +104,28 @@
     ]
   },
   {
-    "@id": "https://w3id.org/dpv/dpv-owl#IndustryConsortium",
+    "@id": "https://w3id.org/dpv/dpv-owl#OrganisationalUnit",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://purl.org/dc/terms/created": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-02-02"
+        "@value": "2022-03-23"
       }
     ],
     "http://purl.org/dc/terms/creator": [
       {
         "@value": "Harshvardhan J. Pandit"
+      },
+      {
+        "@value": "Paul Ryan"
       }
     ],
     "http://purl.org/dc/terms/description": [
       {
         "@language": "en",
-        "@value": "A consortium established and comprising on industry organisations"
-      }
-    ],
-    "http://purl.org/dc/terms/modified": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2020-10-05"
-      }
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "http://purl.org/adms"
+        "@value": "Entity within an organisation that does not constitute as a separate legal entity"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -144,18 +136,18 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Industry Consortium"
+        "@value": "Organisational Unit"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "https://w3id.org/dpv/dpv-owl#Organisation"
+        "@id": "https://w3id.org/dpv/dpv-owl#Entity"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
       {
         "@language": "en",
-        "@value": "modified"
+        "@value": "accepted"
       }
     ]
   },
@@ -216,7 +208,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/dpv/dpv-owl#AcademicScientificOrganisation",
+    "@id": "https://w3id.org/dpv/dpv-owl#GovernmentalOrganisation",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -234,18 +226,13 @@
     "http://purl.org/dc/terms/description": [
       {
         "@language": "en",
-        "@value": "Organisations related to academia or scientific pursuits e.g. Universities, Schools, Research Bodies"
+        "@value": "An organisation managed or part of government"
       }
     ],
     "http://purl.org/dc/terms/modified": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
         "@value": "2020-10-05"
-      }
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "http://purl.org/adms"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -256,7 +243,7 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Academic or Scientific Organisation"
+        "@value": "Governmental Organisation"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
@@ -268,54 +255,6 @@
       {
         "@language": "en",
         "@value": "modified"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-owl#OrganisationalUnit",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-03-23"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Harshvardhan J. Pandit"
-      },
-      {
-        "@value": "Paul Ryan"
-      }
-    ],
-    "http://purl.org/dc/terms/description": [
-      {
-        "@language": "en",
-        "@value": "Entity within an organisation that does not constitute as a separate legal entity"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Organisational Unit"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl#Entity"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
       }
     ]
   },
@@ -427,7 +366,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/dpv/dpv-owl#GovernmentalOrganisation",
+    "@id": "https://w3id.org/dpv/dpv-owl#IndustryConsortium",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -445,13 +384,18 @@
     "http://purl.org/dc/terms/description": [
       {
         "@language": "en",
-        "@value": "An organisation managed or part of government"
+        "@value": "A consortium established and comprising on industry organisations"
       }
     ],
     "http://purl.org/dc/terms/modified": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
         "@value": "2020-10-05"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "http://purl.org/adms"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -462,7 +406,63 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Governmental Organisation"
+        "@value": "Industry Consortium"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl#Organisation"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "modified"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-owl#AcademicScientificOrganisation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-02-02"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "Organisations related to academia or scientific pursuits e.g. Universities, Schools, Research Bodies"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2020-10-05"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "http://purl.org/adms"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Academic or Scientific Organisation"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [

@@ -9,6 +9,20 @@
    xmlns:sw="http://www.w3.org/2003/06/sw-vocab-status/ns#"
    xmlns:time="http://www.w3.org/2006/time#"
 >
+  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#Adequacy-EU-IL">
+    <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos#Law"/>
+    <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-gdpr#A45-3"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#"/>
+    <skos:prefLabel xml:lang="en">EU Adequacy Decision for Israel</skos:prefLabel>
+    <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32011D0061</foaf:homepage>
+    <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
+    <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#IL"/>
+    <dct:temporal rdf:nodeID="N9efe10154574448f867e0d497bebe9de"/>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-03-30</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
+  </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#Adequacy-EU-UY">
     <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos#Law"/>
     <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-gdpr#A45-3"/>
@@ -18,38 +32,35 @@
     <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32012D0484</foaf:homepage>
     <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
     <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#UY"/>
-    <dct:temporal rdf:nodeID="N76c23eb76ee54567b14499647f4ad185"/>
+    <dct:temporal rdf:nodeID="N974feac0f566431e8f151a77560e5aed"/>
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-03-30</dct:created>
     <sw:term_status xml:lang="en">accepted</sw:term_status>
     <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N4cf20576184a4137bf7a1fd8f5509359">
-    <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-23</time:inXSDDate>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#Adequacy-EU-CH">
+  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#Adequacy-EU-CA">
     <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos#Law"/>
     <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-gdpr#A45-3"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:isDefinedBy rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#"/>
-    <skos:prefLabel xml:lang="en">EU Adequacy Decision for Switzerland</skos:prefLabel>
-    <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32000D0518</foaf:homepage>
+    <skos:prefLabel xml:lang="en">EU Adequacy Decision for Canada (commercial organisations)</skos:prefLabel>
+    <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://eur-lex.europa.eu/legal-content/en/TXT/?uri=CELEX%3A32002D0002</foaf:homepage>
     <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
-    <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#CH"/>
-    <dct:temporal rdf:nodeID="N22f1652b7c8f4ec9bcbbed060e026e5b"/>
+    <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#CA"/>
+    <dct:temporal rdf:nodeID="Nc2795447cc654b0794519128a4df474e"/>
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-03-30</dct:created>
     <sw:term_status xml:lang="en">accepted</sw:term_status>
     <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
   </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#Adequacy-EU-AR">
+  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#Adequacy-EU-AD">
     <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos#Law"/>
     <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-gdpr#A45-3"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:isDefinedBy rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#"/>
-    <skos:prefLabel xml:lang="en">EU Adequacy Decision for Argentina</skos:prefLabel>
-    <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32003D0490</foaf:homepage>
+    <skos:prefLabel xml:lang="en">EU Adequacy Decision for Andorra</skos:prefLabel>
+    <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32010D0625?</foaf:homepage>
     <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
-    <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#AR"/>
-    <dct:temporal rdf:nodeID="N7facd390c2a54c8c9ff0faa53a5af26f"/>
+    <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#AD"/>
+    <dct:temporal rdf:nodeID="N18ed15ad95d649118a54e0c81e900f8e"/>
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-03-30</dct:created>
     <sw:term_status xml:lang="en">accepted</sw:term_status>
     <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
@@ -70,154 +81,16 @@
     <skos:member rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#Adequacy-EU-UY"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N7facd390c2a54c8c9ff0faa53a5af26f">
-    <rdf:type rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
-    <time:hasBeginning rdf:nodeID="N192db506fc284f09b2b55ee517e86abc"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#Adequacy-EU-CA">
+  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#Adequacy-EU-CH">
     <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos#Law"/>
     <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-gdpr#A45-3"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:isDefinedBy rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#"/>
-    <skos:prefLabel xml:lang="en">EU Adequacy Decision for Canada (commercial organisations)</skos:prefLabel>
-    <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://eur-lex.europa.eu/legal-content/en/TXT/?uri=CELEX%3A32002D0002</foaf:homepage>
+    <skos:prefLabel xml:lang="en">EU Adequacy Decision for Switzerland</skos:prefLabel>
+    <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32000D0518</foaf:homepage>
     <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
-    <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#CA"/>
-    <dct:temporal rdf:nodeID="N81423988b53d41b588c1f2f630f32a3b"/>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-03-30</dct:created>
-    <sw:term_status xml:lang="en">accepted</sw:term_status>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#Adequacy-EU-FO">
-    <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos#Law"/>
-    <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-gdpr#A45-3"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#"/>
-    <skos:prefLabel xml:lang="en">EU Adequacy Decision for Faroe Islands</skos:prefLabel>
-    <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://eur-lex.europa.eu/legal-content/en/ALL/?uri=CELEX%3A32010D0146</foaf:homepage>
-    <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
-    <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#FO"/>
-    <dct:temporal rdf:nodeID="Ndf43b6ad4c1741569a254f3ad17f424d"/>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-03-30</dct:created>
-    <sw:term_status xml:lang="en">accepted</sw:term_status>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#Adequacy-EU-GB">
-    <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos#Law"/>
-    <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-gdpr#A45-3"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#"/>
-    <skos:prefLabel xml:lang="en">EU Adequacy Decision for United Kingdom</skos:prefLabel>
-    <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://ec.europa.eu/info/files/decision-adequate-protection-personal-data-united-kingdom-general-data-protection-regulation_en</foaf:homepage>
-    <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
-    <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#GB"/>
-    <dct:temporal rdf:nodeID="N9a47652342b0433c8d334f49d883585f"/>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-03-30</dct:created>
-    <sw:term_status xml:lang="en">accepted</sw:term_status>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#Adequacy-EU-AD">
-    <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos#Law"/>
-    <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-gdpr#A45-3"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#"/>
-    <skos:prefLabel xml:lang="en">EU Adequacy Decision for Andorra</skos:prefLabel>
-    <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32010D0625?</foaf:homepage>
-    <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
-    <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#AD"/>
-    <dct:temporal rdf:nodeID="N3ea5f371aa5d43bc98712b5625c11905"/>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-03-30</dct:created>
-    <sw:term_status xml:lang="en">accepted</sw:term_status>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N76c23eb76ee54567b14499647f4ad185">
-    <rdf:type rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
-    <time:hasBeginning rdf:nodeID="Na01eba7282cc4e52a890295fa7a4a5c9"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N22f1652b7c8f4ec9bcbbed060e026e5b">
-    <rdf:type rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
-    <time:hasBeginning rdf:nodeID="N713b784662c142539b8d537401754946"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N9a47652342b0433c8d334f49d883585f">
-    <rdf:type rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
-    <time:hasBeginning rdf:nodeID="N9a98b7e650d249a1bba25b59bc785425"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N28ddee88d2a7473783e9d095faea9bd3">
-    <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2004-04-30</time:inXSDDate>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#Adequacy-EU-NZ">
-    <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos#Law"/>
-    <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-gdpr#A45-3"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#"/>
-    <skos:prefLabel xml:lang="en">EU Adequacy Decision for New Zealand</skos:prefLabel>
-    <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32013D0065</foaf:homepage>
-    <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
-    <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#NZ"/>
-    <dct:temporal rdf:nodeID="N94660a45d2c24b018b09e9efdda05a85"/>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-03-30</dct:created>
-    <sw:term_status xml:lang="en">accepted</sw:term_status>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#Adequacy-EU-JE">
-    <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos#Law"/>
-    <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-gdpr#A45-3"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#"/>
-    <skos:prefLabel xml:lang="en">EU Adequacy Decision for Jersey</skos:prefLabel>
-    <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32008D0393</foaf:homepage>
-    <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
-    <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#JE"/>
-    <dct:temporal rdf:nodeID="Ncaff67727fb2466cb608779c09f5e3ca"/>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-03-30</dct:created>
-    <sw:term_status xml:lang="en">accepted</sw:term_status>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N81423988b53d41b588c1f2f630f32a3b">
-    <rdf:type rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
-    <time:hasBeginning rdf:nodeID="Nccdbf1f1a9e54309a8d4d479063f2544"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N0e477a6a0fe14f31a8d0f0982852dc57">
-    <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2003-11-21</time:inXSDDate>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#Adequacy-EU-GG">
-    <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos#Law"/>
-    <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-gdpr#A45-3"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#"/>
-    <skos:prefLabel xml:lang="en">EU Adequacy Decision for Guernsey</skos:prefLabel>
-    <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32003D0821</foaf:homepage>
-    <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
-    <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#GG"/>
-    <dct:temporal rdf:nodeID="Na467de1345d344029c4c4fdfe8c20c44"/>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-03-30</dct:created>
-    <sw:term_status xml:lang="en">accepted</sw:term_status>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#Adequacy-EU-IL">
-    <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos#Law"/>
-    <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-gdpr#A45-3"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#"/>
-    <skos:prefLabel xml:lang="en">EU Adequacy Decision for Israel</skos:prefLabel>
-    <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32011D0061</foaf:homepage>
-    <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
-    <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#IL"/>
-    <dct:temporal rdf:nodeID="N85cb7122db68437b90091c702e2d01b6"/>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-03-30</dct:created>
-    <sw:term_status xml:lang="en">accepted</sw:term_status>
-    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#Adequacy-EU-JP">
-    <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos#Law"/>
-    <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-gdpr#A45-3"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#"/>
-    <skos:prefLabel xml:lang="en">EU Adequacy Decision for Japan</skos:prefLabel>
-    <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://data.europa.eu/eli/dec_impl/2019/419/oj</foaf:homepage>
-    <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
-    <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#JP"/>
-    <dct:temporal rdf:nodeID="N0eca19eb314c49ecaf78dc8d21f36719"/>
+    <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#CH"/>
+    <dct:temporal rdf:nodeID="N16fa9b2508a34c92acfb5ed74720f317"/>
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-03-30</dct:created>
     <sw:term_status xml:lang="en">accepted</sw:term_status>
     <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
@@ -231,71 +104,198 @@
     <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32004D0411</foaf:homepage>
     <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
     <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#IM"/>
-    <dct:temporal rdf:nodeID="N1c46fceea5ca402fae1ceda8c4334224"/>
+    <dct:temporal rdf:nodeID="N8f7f5c5163ea40088d8636de28bc05de"/>
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-03-30</dct:created>
     <sw:term_status xml:lang="en">accepted</sw:term_status>
     <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nccdbf1f1a9e54309a8d4d479063f2544">
+  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#Adequacy-EU-AR">
+    <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos#Law"/>
+    <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-gdpr#A45-3"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#"/>
+    <skos:prefLabel xml:lang="en">EU Adequacy Decision for Argentina</skos:prefLabel>
+    <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32003D0490</foaf:homepage>
+    <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
+    <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#AR"/>
+    <dct:temporal rdf:nodeID="N7e35dd810901400a9dc32e8568f79bca"/>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-03-30</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#Adequacy-EU-NZ">
+    <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos#Law"/>
+    <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-gdpr#A45-3"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#"/>
+    <skos:prefLabel xml:lang="en">EU Adequacy Decision for New Zealand</skos:prefLabel>
+    <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32013D0065</foaf:homepage>
+    <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
+    <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#NZ"/>
+    <dct:temporal rdf:nodeID="N343803c7f256400da3b747c88d42d0bf"/>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-03-30</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N16fa9b2508a34c92acfb5ed74720f317">
+    <rdf:type rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
+    <time:hasBeginning rdf:nodeID="N4ecf955505a647f8a77f8c5efc162ed6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#Adequacy-EU-GB">
+    <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos#Law"/>
+    <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-gdpr#A45-3"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#"/>
+    <skos:prefLabel xml:lang="en">EU Adequacy Decision for United Kingdom</skos:prefLabel>
+    <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://ec.europa.eu/info/files/decision-adequate-protection-personal-data-united-kingdom-general-data-protection-regulation_en</foaf:homepage>
+    <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
+    <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#GB"/>
+    <dct:temporal rdf:nodeID="Nee333f3451024b4fb89feb94e80debab"/>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-03-30</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#Adequacy-EU-JP">
+    <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos#Law"/>
+    <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-gdpr#A45-3"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#"/>
+    <skos:prefLabel xml:lang="en">EU Adequacy Decision for Japan</skos:prefLabel>
+    <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://data.europa.eu/eli/dec_impl/2019/419/oj</foaf:homepage>
+    <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
+    <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#JP"/>
+    <dct:temporal rdf:nodeID="N0475cd31af324c23843df5d9044f4796"/>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-03-30</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N78a47bb26cf041518d39b1019338ee76">
     <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2002-01-04</time:inXSDDate>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Ndf43b6ad4c1741569a254f3ad17f424d">
-    <rdf:type rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
-    <time:hasBeginning rdf:nodeID="N55ce418eac1149c98601c6544d900575"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Na3c9f9d854bb4f2d8d02efd7435b8bcb">
-    <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-02-01</time:inXSDDate>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N1c46fceea5ca402fae1ceda8c4334224">
-    <rdf:type rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
-    <time:hasBeginning rdf:nodeID="N28ddee88d2a7473783e9d095faea9bd3"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nf9d1f1acc9c64b0fbb62a2468b122c29">
-    <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-10-21</time:inXSDDate>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N94660a45d2c24b018b09e9efdda05a85">
-    <rdf:type rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
-    <time:hasBeginning rdf:nodeID="N41b3e389e6074188bc79bce9879ca796"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N41b3e389e6074188bc79bce9879ca796">
-    <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-12-20</time:inXSDDate>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N9a98b7e650d249a1bba25b59bc785425">
-    <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-28</time:inXSDDate>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N192db506fc284f09b2b55ee517e86abc">
+  <rdf:Description rdf:nodeID="N5caeaa5b02dd49d8886407c4944d7484">
     <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2003-07-05</time:inXSDDate>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N0eca19eb314c49ecaf78dc8d21f36719">
-    <rdf:type rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
-    <time:hasBeginning rdf:nodeID="N4cf20576184a4137bf7a1fd8f5509359"/>
+  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#Adequacy-EU-JE">
+    <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos#Law"/>
+    <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-gdpr#A45-3"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#"/>
+    <skos:prefLabel xml:lang="en">EU Adequacy Decision for Jersey</skos:prefLabel>
+    <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32008D0393</foaf:homepage>
+    <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
+    <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#JE"/>
+    <dct:temporal rdf:nodeID="N62cf1133f358473d8270d8ac9a4dccbd"/>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-03-30</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Na467de1345d344029c4c4fdfe8c20c44">
+  <rdf:Description rdf:nodeID="N1d289fe5f5a84271b18c90ee08b77fa3">
     <rdf:type rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
-    <time:hasBeginning rdf:nodeID="N0e477a6a0fe14f31a8d0f0982852dc57"/>
+    <time:hasBeginning rdf:nodeID="Ne9bd45b52acf4711a74a42e4a0baa675"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Na01eba7282cc4e52a890295fa7a4a5c9">
+  <rdf:Description rdf:nodeID="Nee333f3451024b4fb89feb94e80debab">
+    <rdf:type rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
+    <time:hasBeginning rdf:nodeID="Nb7c53f58d3564c7aa32d618498da7bea"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#Adequacy-EU-GG">
+    <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos#Law"/>
+    <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-gdpr#A45-3"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#"/>
+    <skos:prefLabel xml:lang="en">EU Adequacy Decision for Guernsey</skos:prefLabel>
+    <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32003D0821</foaf:homepage>
+    <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
+    <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#GG"/>
+    <dct:temporal rdf:nodeID="N8a594cdd3cb84405ae4f73153f417b05"/>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-03-30</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N62cf1133f358473d8270d8ac9a4dccbd">
+    <rdf:type rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
+    <time:hasBeginning rdf:nodeID="Nfd614632ed544178a3de80acf667a7c9"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7e35dd810901400a9dc32e8568f79bca">
+    <rdf:type rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
+    <time:hasBeginning rdf:nodeID="N5caeaa5b02dd49d8886407c4944d7484"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbdcca8133a3b44e38a2452f70f217710">
+    <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-10-21</time:inXSDDate>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N21486695d6cd476faefb6edd900bf132">
+    <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2004-04-30</time:inXSDDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dpv/dpv-skos/dpv-legal#Adequacy-EU-FO">
+    <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos#Law"/>
+    <rdf:type rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-gdpr#A45-3"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#"/>
+    <skos:prefLabel xml:lang="en">EU Adequacy Decision for Faroe Islands</skos:prefLabel>
+    <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://eur-lex.europa.eu/legal-content/en/ALL/?uri=CELEX%3A32010D0146</foaf:homepage>
+    <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#EU"/>
+    <dpvs:hasJurisdiction rdf:resource="https://w3id.org/dpv/dpv-skos/dpv-legal#FO"/>
+    <dct:temporal rdf:nodeID="N1d289fe5f5a84271b18c90ee08b77fa3"/>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-03-30</dct:created>
+    <sw:term_status xml:lang="en">accepted</sw:term_status>
+    <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</dct:creator>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N343803c7f256400da3b747c88d42d0bf">
+    <rdf:type rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
+    <time:hasBeginning rdf:nodeID="N62f63b63b71e4be4988c1cb2e574c15f"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N62f63b63b71e4be4988c1cb2e574c15f">
+    <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-12-20</time:inXSDDate>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0475cd31af324c23843df5d9044f4796">
+    <rdf:type rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
+    <time:hasBeginning rdf:nodeID="N48dc6b596a2d40318ac60c4595d77834"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndc3c6582a13e4677bcb713bd38f7419c">
+    <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2003-11-21</time:inXSDDate>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N974feac0f566431e8f151a77560e5aed">
+    <rdf:type rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
+    <time:hasBeginning rdf:nodeID="N61c6e6fb919a48d3877bec9f69696470"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8f7f5c5163ea40088d8636de28bc05de">
+    <rdf:type rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
+    <time:hasBeginning rdf:nodeID="N21486695d6cd476faefb6edd900bf132"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N61c6e6fb919a48d3877bec9f69696470">
     <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-08-22</time:inXSDDate>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N85cb7122db68437b90091c702e2d01b6">
+  <rdf:Description rdf:nodeID="Nc2795447cc654b0794519128a4df474e">
     <rdf:type rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
-    <time:hasBeginning rdf:nodeID="Na3c9f9d854bb4f2d8d02efd7435b8bcb"/>
+    <time:hasBeginning rdf:nodeID="N78a47bb26cf041518d39b1019338ee76"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N55ce418eac1149c98601c6544d900575">
-    <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-03-09</time:inXSDDate>
+  <rdf:Description rdf:nodeID="N48dc6b596a2d40318ac60c4595d77834">
+    <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-23</time:inXSDDate>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N3ea5f371aa5d43bc98712b5625c11905">
+  <rdf:Description rdf:nodeID="N9efe10154574448f867e0d497bebe9de">
     <rdf:type rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
-    <time:hasBeginning rdf:nodeID="Nf9d1f1acc9c64b0fbb62a2468b122c29"/>
+    <time:hasBeginning rdf:nodeID="N03c0fbc8bd6e40d6912ac5f90e09ebf2"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Ncaff67727fb2466cb608779c09f5e3ca">
+  <rdf:Description rdf:nodeID="N8a594cdd3cb84405ae4f73153f417b05">
     <rdf:type rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
-    <time:hasBeginning rdf:nodeID="N048ccc398a7f4edfb6f655acd82b322e"/>
+    <time:hasBeginning rdf:nodeID="Ndc3c6582a13e4677bcb713bd38f7419c"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N713b784662c142539b8d537401754946">
+  <rdf:Description rdf:nodeID="Nfd614632ed544178a3de80acf667a7c9">
+    <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-05-26</time:inXSDDate>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4ecf955505a647f8a77f8c5efc162ed6">
     <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-08-25</time:inXSDDate>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N048ccc398a7f4edfb6f655acd82b322e">
-    <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-05-26</time:inXSDDate>
+  <rdf:Description rdf:nodeID="Ne9bd45b52acf4711a74a42e4a0baa675">
+    <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-03-09</time:inXSDDate>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N03c0fbc8bd6e40d6912ac5f90e09ebf2">
+    <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-02-01</time:inXSDDate>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N18ed15ad95d649118a54e0c81e900f8e">
+    <rdf:type rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
+    <time:hasBeginning rdf:nodeID="Nbdcca8133a3b44e38a2452f70f217710"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb7c53f58d3564c7aa32d618498da7bea">
+    <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-28</time:inXSDDate>
   </rdf:Description>
 </rdf:RDF>

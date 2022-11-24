@@ -1,5 +1,346 @@
 [
   {
+    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#SI",
+    "http://purl.org/dc/terms/hasPart": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA30"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA31"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU27"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU28"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#SE",
+    "http://purl.org/dc/terms/hasPart": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA30"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA31"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU27"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU28"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EE",
+    "http://purl.org/dc/terms/hasPart": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA30"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA31"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU27"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU28"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#SK",
+    "http://purl.org/dc/terms/hasPart": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA30"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA31"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU27"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU28"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU28",
+    "@type": [
+      "https://w3id.org/dpv/dpv-owl#SupraNationalUnion",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-03-30"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
+      }
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#DE"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#GB"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#CY"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#AT"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#BE"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#BG"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#DK"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EE"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#ES"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#FI"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#FR"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#GR"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#HR"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#HU"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#IE"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#IT"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#LT"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#LU"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#LV"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#MT"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#NL"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#PL"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#PT"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#RO"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#SE"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#SI"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#SK"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#CZ"
+      }
+    ],
+    "http://purl.org/dc/terms/temporal": [
+      {
+        "@id": "_:Nca60138f36ad4e81a96e860a8c07f1ec"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "European Union (EU-28)"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "https://w3id.org/dpv/dpv-owl#hasCountry": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#DE"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#GB"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#CY"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#AT"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#BE"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#BG"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#DK"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EE"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#ES"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#FI"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#FR"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#GR"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#HR"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#HU"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#IE"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#IT"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#LT"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#LU"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#LV"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#MT"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#NL"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#PL"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#PT"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#RO"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#SE"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#SI"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#SK"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#CZ"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nca60138f36ad4e81a96e860a8c07f1ec",
+    "@type": [
+      "http://www.w3.org/2006/time#ProperInterval"
+    ],
+    "http://www.w3.org/2006/time#hasBeginning": [
+      {
+        "@id": "_:N057fc7c8190648cd843e1441ea8191e1"
+      }
+    ],
+    "http://www.w3.org/2006/time#hasEnd": [
+      {
+        "@id": "_:Nbe642636882a47d7803143340ec5f202"
+      }
+    ]
+  },
+  {
+    "@id": "_:N057fc7c8190648cd843e1441ea8191e1",
+    "http://www.w3.org/2006/time#inXSDDate": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2013-07-01"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nbe642636882a47d7803143340ec5f202",
+    "http://www.w3.org/2006/time#inXSDDate": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2020-01-31"
+      }
+    ]
+  },
+  {
     "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU27",
     "@type": [
       "https://w3id.org/dpv/dpv-owl#SupraNationalUnion",
@@ -104,7 +445,7 @@
     ],
     "http://purl.org/dc/terms/temporal": [
       {
-        "@id": "_:Nd4871a0fa6ff4bc28db8e8c9327f35bf"
+        "@id": "_:N49409fb15ab543c880b09f2b803a19c0"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -209,114 +550,22 @@
     ]
   },
   {
-    "@id": "_:Nd4871a0fa6ff4bc28db8e8c9327f35bf",
+    "@id": "_:N49409fb15ab543c880b09f2b803a19c0",
     "@type": [
       "http://www.w3.org/2006/time#ProperInterval"
     ],
     "http://www.w3.org/2006/time#hasBeginning": [
       {
-        "@id": "_:N7d40cee4502b42ada8424c5b2d0b08ac"
+        "@id": "_:N54ff30faa274461c9c77ccce6235703d"
       }
     ]
   },
   {
-    "@id": "_:N7d40cee4502b42ada8424c5b2d0b08ac",
+    "@id": "_:N54ff30faa274461c9c77ccce6235703d",
     "http://www.w3.org/2006/time#inXSDDate": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
         "@value": "2020-02-01"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#BG",
-    "http://purl.org/dc/terms/hasPart": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA30"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA31"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU27"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU28"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#PL",
-    "http://purl.org/dc/terms/hasPart": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA30"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA31"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU27"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU28"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#RO",
-    "http://purl.org/dc/terms/hasPart": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA30"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA31"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU27"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU28"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#SI",
-    "http://purl.org/dc/terms/hasPart": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA30"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA31"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU27"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU28"
       }
     ]
   },
@@ -344,22 +593,10 @@
     ]
   },
   {
-    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#CY",
+    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#GB",
     "http://purl.org/dc/terms/hasPart": [
       {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA30"
-      },
-      {
         "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA31"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU27"
       },
       {
         "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU28"
@@ -367,53 +604,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#BE",
-    "http://purl.org/dc/terms/hasPart": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA30"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA31"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU27"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU28"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#IE",
-    "http://purl.org/dc/terms/hasPart": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA30"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA31"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU27"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU28"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA30",
+    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU",
     "@type": [
       "https://w3id.org/dpv/dpv-owl#SupraNationalUnion",
       "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -429,10 +620,15 @@
         "@value": "Harshvardhan J. Pandit"
       }
     ],
-    "http://purl.org/dc/terms/isPartOf": [
+    "http://purl.org/dc/terms/hasPart": [
       {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA"
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU27"
       },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU28"
+      }
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
       {
         "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#DE"
       },
@@ -515,11 +711,6 @@
         "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#CZ"
       }
     ],
-    "http://purl.org/dc/terms/temporal": [
-      {
-        "@id": "_:Nd1c0e01378f843d99857359df8e06943"
-      }
-    ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
         "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#"
@@ -528,7 +719,7 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "European Economic Area (EEA-30)"
+        "@value": "European Union (EU)"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -622,27 +813,256 @@
     ]
   },
   {
-    "@id": "_:Nd1c0e01378f843d99857359df8e06943",
+    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA31",
+    "@type": [
+      "https://w3id.org/dpv/dpv-owl#SupraNationalUnion",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-03-30"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Harshvardhan J. Pandit"
+      }
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#DE"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#GB"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#CY"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#AT"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#BE"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#BG"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#DK"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EE"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#ES"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#FI"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#FR"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#GR"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#HR"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#HU"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#IE"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#IT"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#LT"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#LU"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#LV"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#MT"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#NL"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#PL"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#PT"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#RO"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#SE"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#SI"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#SK"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#CZ"
+      }
+    ],
+    "http://purl.org/dc/terms/temporal": [
+      {
+        "@id": "_:Nab4fccc762b8478a8ad64181647a24af"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "European Economic Area (EEA-31)"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@language": "en",
+        "@value": "accepted"
+      }
+    ],
+    "https://w3id.org/dpv/dpv-owl#hasCountry": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#DE"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#GB"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#CY"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#AT"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#BE"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#BG"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#DK"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EE"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#ES"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#FI"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#FR"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#GR"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#HR"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#HU"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#IE"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#IT"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#LT"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#LU"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#LV"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#MT"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#NL"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#PL"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#PT"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#RO"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#SE"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#SI"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#SK"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#CZ"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nab4fccc762b8478a8ad64181647a24af",
     "@type": [
       "http://www.w3.org/2006/time#ProperInterval"
     ],
     "http://www.w3.org/2006/time#hasBeginning": [
       {
-        "@id": "_:N506108e378654290bdd94dd66ac008ec"
+        "@id": "_:N3a12e25b159040de90eb8690d4602cdc"
+      }
+    ],
+    "http://www.w3.org/2006/time#hasEnd": [
+      {
+        "@id": "_:Nf68917eeac9444c1991938ca8bf67d9c"
       }
     ]
   },
   {
-    "@id": "_:N506108e378654290bdd94dd66ac008ec",
+    "@id": "_:N3a12e25b159040de90eb8690d4602cdc",
     "http://www.w3.org/2006/time#inXSDDate": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2020-02-01"
+        "@value": "2014-04-12"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#ES",
+    "@id": "_:Nf68917eeac9444c1991938ca8bf67d9c",
+    "http://www.w3.org/2006/time#inXSDDate": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2020-01-31"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#GR",
     "http://purl.org/dc/terms/hasPart": [
       {
         "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA"
@@ -665,64 +1085,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#GB",
-    "http://purl.org/dc/terms/hasPart": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA31"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU28"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#HR",
-    "http://purl.org/dc/terms/hasPart": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA30"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA31"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU27"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU28"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#FI",
-    "http://purl.org/dc/terms/hasPart": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA30"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA31"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU27"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU28"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#AT",
+    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#MT",
     "http://purl.org/dc/terms/hasPart": [
       {
         "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA"
@@ -768,7 +1131,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#FR",
+    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#PL",
     "http://purl.org/dc/terms/hasPart": [
       {
         "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA"
@@ -791,7 +1154,145 @@
     ]
   },
   {
-    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#MT",
+    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#LV",
+    "http://purl.org/dc/terms/hasPart": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA30"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA31"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU27"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU28"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#PT",
+    "http://purl.org/dc/terms/hasPart": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA30"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA31"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU27"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU28"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#LU",
+    "http://purl.org/dc/terms/hasPart": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA30"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA31"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU27"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU28"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#CY",
+    "http://purl.org/dc/terms/hasPart": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA30"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA31"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU27"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU28"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#NL",
+    "http://purl.org/dc/terms/hasPart": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA30"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA31"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU27"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU28"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#DE",
+    "http://purl.org/dc/terms/hasPart": [
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA30"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA31"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU27"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU28"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#ES",
     "http://purl.org/dc/terms/hasPart": [
       {
         "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA"
@@ -1023,7 +1524,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#NL",
+    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#BG",
     "http://purl.org/dc/terms/hasPart": [
       {
         "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA"
@@ -1046,256 +1547,76 @@
     ]
   },
   {
-    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA31",
-    "@type": [
-      "https://w3id.org/dpv/dpv-owl#SupraNationalUnion",
-      "http://www.w3.org/2002/07/owl#NamedIndividual"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-03-30"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Harshvardhan J. Pandit"
-      }
-    ],
-    "http://purl.org/dc/terms/isPartOf": [
+    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#HR",
+    "http://purl.org/dc/terms/hasPart": [
       {
         "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA"
       },
       {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#DE"
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA30"
       },
       {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#GB"
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA31"
       },
       {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#CY"
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
       },
       {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#AT"
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU27"
       },
       {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#BE"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#BG"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#DK"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EE"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#ES"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#FI"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#FR"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#GR"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#HR"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#HU"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#IE"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#IT"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#LT"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#LU"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#LV"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#MT"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#NL"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#PL"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#PT"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#RO"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#SE"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#SI"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#SK"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#CZ"
-      }
-    ],
-    "http://purl.org/dc/terms/temporal": [
-      {
-        "@id": "_:Naeeb2c65cbdf42aaae243cf4d99978a1"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "European Economic Area (EEA-31)"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "https://w3id.org/dpv/dpv-owl#hasCountry": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#DE"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#GB"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#CY"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#AT"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#BE"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#BG"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#DK"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EE"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#ES"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#FI"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#FR"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#GR"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#HR"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#HU"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#IE"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#IT"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#LT"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#LU"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#LV"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#MT"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#NL"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#PL"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#PT"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#RO"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#SE"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#SI"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#SK"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#CZ"
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU28"
       }
     ]
   },
   {
-    "@id": "_:Naeeb2c65cbdf42aaae243cf4d99978a1",
-    "@type": [
-      "http://www.w3.org/2006/time#ProperInterval"
-    ],
-    "http://www.w3.org/2006/time#hasBeginning": [
+    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#AT",
+    "http://purl.org/dc/terms/hasPart": [
       {
-        "@id": "_:N70285c51e8e74891994dac72da55a564"
-      }
-    ],
-    "http://www.w3.org/2006/time#hasEnd": [
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA"
+      },
       {
-        "@id": "_:N689aaa41b3a54174bdf999bb2703cc5e"
-      }
-    ]
-  },
-  {
-    "@id": "_:N70285c51e8e74891994dac72da55a564",
-    "http://www.w3.org/2006/time#inXSDDate": [
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA30"
+      },
       {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2014-04-12"
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA31"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU27"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU28"
       }
     ]
   },
   {
-    "@id": "_:N689aaa41b3a54174bdf999bb2703cc5e",
-    "http://www.w3.org/2006/time#inXSDDate": [
+    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#FI",
+    "http://purl.org/dc/terms/hasPart": [
       {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2020-01-31"
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA30"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA31"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU27"
+      },
+      {
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU28"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#LU",
+    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#IE",
     "http://purl.org/dc/terms/hasPart": [
       {
         "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA"
@@ -1341,238 +1662,6 @@
     ]
   },
   {
-    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#LV",
-    "http://purl.org/dc/terms/hasPart": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA30"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA31"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU27"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU28"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU",
-    "@type": [
-      "https://w3id.org/dpv/dpv-owl#SupraNationalUnion",
-      "http://www.w3.org/2002/07/owl#NamedIndividual"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-03-30"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Harshvardhan J. Pandit"
-      }
-    ],
-    "http://purl.org/dc/terms/hasPart": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU27"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU28"
-      }
-    ],
-    "http://purl.org/dc/terms/isPartOf": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#DE"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#CY"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#AT"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#BE"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#BG"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#DK"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EE"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#ES"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#FI"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#FR"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#GR"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#HR"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#HU"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#IE"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#IT"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#LT"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#LU"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#LV"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#MT"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#NL"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#PL"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#PT"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#RO"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#SE"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#SI"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#SK"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#CZ"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "European Union (EU)"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@language": "en",
-        "@value": "accepted"
-      }
-    ],
-    "https://w3id.org/dpv/dpv-owl#hasCountry": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#DE"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#CY"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#AT"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#BE"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#BG"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#DK"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EE"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#ES"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#FI"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#FR"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#GR"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#HR"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#HU"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#IE"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#IT"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#LT"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#LU"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#LV"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#MT"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#NL"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#PL"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#PT"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#RO"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#SE"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#SI"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#SK"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#CZ"
-      }
-    ]
-  },
-  {
     "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#IT",
     "http://purl.org/dc/terms/hasPart": [
       {
@@ -1596,7 +1685,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#DE",
+    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#RO",
     "http://purl.org/dc/terms/hasPart": [
       {
         "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA"
@@ -1619,7 +1708,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#SE",
+    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#BE",
     "http://purl.org/dc/terms/hasPart": [
       {
         "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA"
@@ -1642,30 +1731,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#CZ",
-    "http://purl.org/dc/terms/hasPart": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA30"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA31"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU27"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU28"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU28",
+    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA30",
     "@type": [
       "https://w3id.org/dpv/dpv-owl#SupraNationalUnion",
       "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -1683,13 +1749,10 @@
     ],
     "http://purl.org/dc/terms/isPartOf": [
       {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
+        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA"
       },
       {
         "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#DE"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#GB"
       },
       {
         "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#CY"
@@ -1772,7 +1835,7 @@
     ],
     "http://purl.org/dc/terms/temporal": [
       {
-        "@id": "_:N78e6fbd511d24e68917f41795ea16320"
+        "@id": "_:Nbd945bfe5ce04ae2a6e7653f1f104dd8"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -1783,7 +1846,7 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "European Union (EU-28)"
+        "@value": "European Economic Area (EEA-30)"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -1795,9 +1858,6 @@
     "https://w3id.org/dpv/dpv-owl#hasCountry": [
       {
         "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#DE"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#GB"
       },
       {
         "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#CY"
@@ -1880,41 +1940,27 @@
     ]
   },
   {
-    "@id": "_:N78e6fbd511d24e68917f41795ea16320",
+    "@id": "_:Nbd945bfe5ce04ae2a6e7653f1f104dd8",
     "@type": [
       "http://www.w3.org/2006/time#ProperInterval"
     ],
     "http://www.w3.org/2006/time#hasBeginning": [
       {
-        "@id": "_:Nd32629eb72504615b09b4f3eb9f17be9"
-      }
-    ],
-    "http://www.w3.org/2006/time#hasEnd": [
-      {
-        "@id": "_:Nd399d368d76449beadc230b6a38454d9"
+        "@id": "_:N3479abfecd9a42a588fc32495531c5a3"
       }
     ]
   },
   {
-    "@id": "_:Nd32629eb72504615b09b4f3eb9f17be9",
+    "@id": "_:N3479abfecd9a42a588fc32495531c5a3",
     "http://www.w3.org/2006/time#inXSDDate": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2013-07-01"
+        "@value": "2020-02-01"
       }
     ]
   },
   {
-    "@id": "_:Nd399d368d76449beadc230b6a38454d9",
-    "http://www.w3.org/2006/time#inXSDDate": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2020-01-31"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#PT",
+    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#CZ",
     "http://purl.org/dc/terms/hasPart": [
       {
         "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA"
@@ -1937,53 +1983,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EE",
-    "http://purl.org/dc/terms/hasPart": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA30"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA31"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU27"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU28"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#SK",
-    "http://purl.org/dc/terms/hasPart": [
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA30"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA31"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU27"
-      },
-      {
-        "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EU28"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#GR",
+    "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#FR",
     "http://purl.org/dc/terms/hasPart": [
       {
         "@id": "https://w3id.org/dpv/dpv-owl/dpv-legal#EEA"
