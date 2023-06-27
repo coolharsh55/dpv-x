@@ -49,7 +49,7 @@
 <body>
     <!-- <h1>DPV Data Breach Extension</h1> -->
     <section id="abstract">
-        <p>This document details an extension to the Data Privacy Vocabulary (DPV) for representing information associated with data breaches in terms of the breach event, its detection, preliminary and subsequent investigations, notifications and communicatinos, risk and impact assessments, and mitigations.</p>
+        <p>This document details an extension to the Data Privacy Vocabulary (DPV) for representing information associated with data breaches in terms of the breach event, its detection, preliminary and subsequent investigations, notifications and communications, risk and impact assessments, and mitigations.</p>
     </section>
 
     <section id="sotd">
@@ -69,40 +69,52 @@
     <li>Investigation of the Data Breach i.e. report specifying when it was detected, what has been affected, who has it been reported to</li>
     <li>Notifications i.e. communication about the breach between entities, e.g. Controller to DPA</li>
     <li>Impact Assessment that assesses the risks and impacts based on available information</li>
-    <li>Breach Mitigation assessment which identifes the causes of the breach and specifes what changes were made to prevent further breaches or mitigate consequences of existing breach</li>
+    <li>Breach Mitigation assessment which identifies the causes of the breach and specifies what changes were made to prevent further breaches or mitigate consequences of existing breach</li>
     <li>Details about the organisation, including its establishments and lead authorities for handling the data breach.</li>
 </ol>
 
+<p>The following sources were used in the development of this document:</p>
+<ul>
+    <li>Guidelines 9/2022 on personal data breach notification under GDPR Version 2.0. (2023). European Data Protection Board (EDPB). <a href="https://edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-92022-personal-data-breach-notification-under_en">link</a></li>
+    <li>Recommendations for a methodology of the assessment of severity of personal data breaches. (2013). ENISA. <a href="https://www.enisa.europa.eu/publications/dbn-severity">link</a></li>
+</ul>
 
-<!-- TODO: Move to DPV -->
+
+<p class="issue" title="TODO: Move to DPV">
 Note: Security reporting requires strict and clear information i.e. to be explicit in cases where something is or isn't applicable. Due to the open world assumption of semantic web, where if information is not specified then it can mean it is not applicable or not available or something else - this ambiguity is problematic for cases such as data breach reporting. To assist with this, we should add special instances in DPV to assist with explicitly indicating information and to address the ambiguity arising from "open world" assumptions. These are grouped under the status `InformationAvailability` and can be used anywhere:
 1) dpv:UnknownApplicability - a special instance indicating information is unknown i.e. it is not known if the information exists or is applicable and therefore statements about its availability cannot be made (yet)
 2) dpv:NotApplicable - a special instance indicating context is not applicable
-3) dpv:NotAvailale - a special instance indicating the information is applicable but is not yet available
+3) dpv:NotAvailable - a special instance indicating the information is applicable but is not yet available
+
+<code>DataBreachHandlingProcedure</code> to add to Organisational Measures.
 <!-- END -->
+</p>
 
 <!-- <p>For risk management associated with <code>dpv-breach:DataBreach</code> is defined as a subclass of dpv:Risk, which means we can specify `dpv:hasRisk dpv-breach:DataBreach` and `dpv:isMitigatedByMeasure` to indicate potential breaches and how they have been addressed.</p> -->
 
 <p>The following namespaces are used throughout this document:</p>
-<pre>
-base https://w3id.org/dpv/databreach#
-dpv https://w3id.org/dpv#
-dpv-breach https://w3id.org/dpv/databreach#
-dct 
-ex https://example.com/
-</pre>
+<table>
+    <thead><td>prefix</td><td>URI</td></thead>
+    <tbody>
+        <tr><td>base (default)</td> <td><a href="https://w3id.org/dpv/databreach">https://w3id.org/dpv/databreach#</a></td></tr>
+        <tr><td>dpv</td> <td><a href="https://w3id.org/dpv">https://w3id.org/dpv#</a></td></tr>
+        <tr><td>dpv-breach</td> <td><a href="https://w3id.org/dpv/databreach">https://w3id.org/dpv/databreach#</a></td></tr>
+        <tr><td>dct</td> <td><a href="http://purl.org/dc/terms">http://purl.org/dc/terms/</a></td></tr>
+        <tr><td>ex</td> <td><a href="https://example.com">https://example.com/</a></td></tr>
+    </tbody>
+</table>
 
 <section>
     <h2>Lifecycle of a Data Breach</h2>
-    <p>A data breach incident starts from when a breach is suspected or detected, and ends with a final report detailing all impacts and mitigation measures taken in connection with it. In addition to these, organisational processes may involve unclear or ambigious information such as where sufficient information is not available to state whether a breach exists, or where a breach is suspected but not yet confirmed, and so on.</p>
+    <p>A data breach incident starts from when a breach is suspected or detected, and ends with a final report detailing all impacts and mitigation measures taken in connection with it. In addition to these, organisational processes may involve unclear or ambiguous information such as where sufficient information is not available to state whether a breach exists, or where a breach is suspected but not yet confirmed, and so on.</p>
     <p>In between these stages, there are various stages that correlate with the availability of information, carrying out investigations based on available information, communicating with other entities - including authorities and data subjects - in connection with the breach, and carrying out assessments as part of investigations regarding risk management and impacts on data subjects. Each of these stages may require keeping record-keeping and documentation outlining the facts as they stand at that point in time. To represent this, the DPV's Data Breach extension considers the following lifecycle for data breach related activities:</p>
     <ol>
         <li>Detection: a data breach has been detected or is suspected of having occurred.</li>
         <li>Preliminary investigation: a preliminary investigation is undertaken which reveals some details about the breach. This is the stage at which communications may be associated, for example to report the breach from processor to controller, or from controller to authorities or data subjects.</li>
         <li>Ongoing investigation: an investigation is currently ongoing, and new information may be available as it progresses. This is the stage at which the scale, scope, and extent of the breach becomes apparent. It enables identifying the risk and impact of the breach, reveal causes and vulnerabilities, and to plan and implementation measures to stop and mitigate the breach as well as its associated impacts. There may be further communications regarding these to stakeholders.</li>
-        <li>Concluded investigation: the investigation has been concluded, and all activities that need to be carried out have been carried out. This is the final activity which represents a cessation of the breach handling process. Any ongoing breach has been stopped, mitigations have been put into place to avoid its recurrence, communications have been completed, and all relevant risk and impact measures have been deployed. This stage represents no further is needed in connection with the breach.</li>
+        <li>Concluded investigation: the investigation has been concluded, and all activities that need to be carried out have been carried out. This is the final activity which represents a cessation of the breach handling process. Any ongoing breach has been stopped, mitigations have been put into place to avoid its recurrence, communications have been completed, and all relevant risk and impact measures have been deployed. This stage represents no further action is needed in connection with the breach.</li>
     </ol>
-    <p>In the above, the term <i>investigation</i> can also be substituted with <i>breach handling process</i> or a similar term. We prefer the use of investigation for consistency with earlier and later stages of breach hangling procedures, and to denote the exploratory nature of the process in finding new information and determining effectiveness of implemented measures - as a form of investigation. Based on these, the documented activities in connection with a data breach are <i>reports</i> of the following types. These reports also represent information that is communicated to stakeholders to inform them about the data breach.</p>
+    <p>In the above, the term <i>investigation</i> can also be substituted with <i>breach handling process</i> or a similar term. We prefer the use of investigation for consistency with earlier and later stages of breach handling procedures, and to denote the exploratory nature of the process in finding new information and determining effectiveness of implemented measures - as a form of investigation. Based on these, the documented activities in connection with a data breach are <i>reports</i> of the following types. These reports also represent information that is communicated to stakeholders to inform them about the data breach.</p>
     <ol>
         <li>Data Breach Detection Report</li>
         <li>Data Breach Preliminary Report</li>
@@ -121,13 +133,13 @@ ex https://example.com/
 <section>
     <h2>Data Breach event</h2>
     
-    <p>The concept <code>DataBreach</code> represents the event of a data breach. It is a subtype of <code>dpv:Risk</code> to denote the common use and reference of referring to "risk of data breach". This allows risk assessment and managment concepts to be applied to data breaches, and to associate consequences and impacts arising from it.</p>
+    <p>The concept <code>DataBreach</code> represents the event of a data breach. It is a subtype of <code>dpv:Risk</code> to denote the common use and reference of referring to "risk of data breach". This allows risk assessment and management concepts to be applied to data breaches, and to associate consequences and impacts arising from it.</p>
 
-    <p>The temporal properties associated with a breach include its occurence i.e. when the breach started and ended - as its duration. This is indicated using the relation <code>dct:temporal</code> to specify the start (if known) and end (if known). If both are not available, then <code>dpv:NotAvailale</code> is used as the value. There can be multiple durations associated for the same breach, for example where data has been accessed on three different non-continous days. Whether to represent this as a single or three different instances of data breaches is a contextual choice and decision. For example, where the three events accessed different data or systems or need different mitigation measures - it may be sensible to treat them as separate breaches.</p>
+    <p>The temporal properties associated with a breach include its occurrence i.e. when the breach started and ended - as its duration. This is indicated using the relation <code>dct:temporal</code> to specify the start (if known) and end (if known). If both are not available, then <code>dpv:NotAvailable</code> is used as the value. There can be multiple duration associated for the same breach, for example where data has been accessed on three different non-continuous days. Whether to represent this as a single or three different instances of data breaches is a contextual choice and decision. For example, where the three events accessed different data or systems or need different mitigation measures - it may be sensible to treat them as separate breaches.</p>
 
     <p>The 'source' of a breach is the event which led to the breach taking place. It is represented using the concept <code>dpv:RiskSource</code> and associated with the breach using <code>dpv:hasRiskSource</code> relation. An example of a source of data breach is where an employee left their office computer unattended without locking it. The lack of security in securing office machines is a vulnerability, represented using the concept <code>risk:Vulnerability</code> and associated using the relation <code>risk:hasVulnerability</code>. Vulnerabilities represent a weakness or limitation that was exploited in order to create the risk source event which then leads to the data breach. Vulnerabilities are not necessary for a risk source to realise, for example an accident can occur without a vulnerability.</p>
 
-    <p>The 'cause' of a breach is the actor or agent that casued the breach to take place through intentional or unintentional means, and regardless of malicious intent or accidents. It is represented by <code>risk:ThreatActor</code> and associated using <code>risk:hasThreatActor</code> In the above case of an unattended office computer, the threat actor is whomever accessed the system after the employee left - this could be another employee, a cleaner, or an external person entering the premises. The existence of an actor is not a necessity for a breach to take place. For example, a disk drive containing sensitive data being thrown away is considered a data breach regardless of whetehr anyone actually accesses the data on it or not.</p>
+    <p>The 'cause' of a breach is the actor or agent that caused the breach to take place through intentional or unintentional means, and regardless of malicious intent or accidents. It is represented by <code>risk:ThreatActor</code> and associated using <code>risk:hasThreatActor</code> In the above case of an unattended office computer, the threat actor is whomever accessed the system after the employee left - this could be another employee, a cleaner, or an external person entering the premises. The existence of an actor is not a necessity for a breach to take place. For example, a disk drive containing sensitive data being thrown away is considered a data breach regardless of whether anyone actually accesses the data on it or not.</p>
 
     <p>The 'status' of a data breach refers to whether the breach has been concluded or is still ongoing. This is represented by <code>DataBreachStatus</code> and associated using <code>dpv:hasStatus</code>. The following statuses are defined to represent commonly encountered stages:</p>
     <ul>
@@ -139,9 +151,9 @@ ex https://example.com/
         <li><code>DataBreachTerminated</code>: the data breach has been stopped or terminated through the use of a mitigation or deterrent measure with a low likelihood of resuming or recurring</li>
         <li><code>DataBreachMitigated</code>: the data breach has been mitigated against future recurrences i.e. a measure has been applied to prevent the same or similar data breach from recurring</li>
     </ul>
-    <p>In these statuses, the use of 'halted' refers to a breach being stopped but with uncertainty regarding it being resumed - where if it resumes the 'ongoing' status is applicable again. The status 'concluded' refers to situations where the breach has stopped without active effort from the breached entity, whereas 'terminated' means the actions of the breached entity have caused it to be stopped, and 'mitigated' means it has also been prevented from happening again. These distinctions are relevant as the measures used in termination can be found ineffective, or may be effective only for a short duration or in limited cases, whereas the concluded breach has no mitigation associated with it being stopped - and hence there is a risk of the breach happening again. Mitigated is distinct from these as it also refers to future breaches of the same type being prevented from occuring. The measures used to stop an ongiong breach (termination) may be distinct from those used to prevent it in the future (mitigation).</p> 
+    <p>In these statuses, the use of 'halted' refers to a breach being stopped but with uncertainty regarding it being resumed - where if it resumes the 'ongoing' status is applicable again. The status 'concluded' refers to situations where the breach has stopped without active effort from the breached entity, whereas 'terminated' means the actions of the breached entity have caused it to be stopped, and 'mitigated' means it has also been prevented from happening again. These distinctions are relevant as the measures used in termination can be found ineffective, or may be effective only for a short duration or in limited cases, whereas the concluded breach has no mitigation associated with it being stopped - and hence there is a risk of the breach happening again. Mitigated is distinct from these as it also refers to future breaches of the same type being prevented from occurring. The measures used to stop an ongoing breach (termination) may be distinct from those used to prevent it in the future (mitigation).</p> 
 
-    <p>The 'type' of a data breach refers to categorisation based on the effect of the breach on the affected data. The Data Protection Authorities suggest three categories - 'confidentiality breach' where the breach takes place due to failure of authorisation i.e. unauthorised access, 'integrity breach' where the data has been modified, and 'availability breach' where data access has been compromised. These explanations are simplified, and their origin is in the 'CIA model' used in information security. Specifying the type of breach is important as it represents what 'definition' of a breach should be interpreted and informs the follow-up investigations and reporting. The typical notion of a data breach only occuring when someone else has access to data is only one of these definitions (confidentiality). The type of breach is indicated using <code>rdf:type</code> with values <code>dpv-breach:ConfidentialityBreach</code>, <code>dpv-breach:AvailabilityBreach</code>, and </code>dpv-breach:IntegrityBreach - which are defined as subtypes of <code>dpv-breach:DataBreach</code>.</p>
+    <p>The 'type' of a data breach refers to categorisation based on the effect of the breach on the affected data. The Data Protection Authorities suggest three categories - '<i>confidentiality breach</i>' where there is unauthorised or accidental disclosure of or access to data; '<i>integrity breach</i>' where there is unauthorised or accidental alteration or modification of data; and '<i>availability breach</i>' where there is unauthorised or accidental loss of access or loss of data (e.g. via destruction or transformation). These explanations are simplified, and their origin is in the 'CIA model' used in information security to categorise incidents using these three categories. Specifying the type of breach is important as it represents what 'definition' of a breach should be interpreted and informs the follow-up investigations and reporting. The typical notion of a data breach only occurring when someone else has access to data is only one of these definitions (confidentiality). The type of breach is indicated using <code>rdf:type</code> with values <code>dpv-breach:ConfidentialityBreach</code>, <code>dpv-breach:AvailabilityBreach</code>, and </code>dpv-breach:IntegrityBreach - which are defined as subtype of <code>dpv-breach:DataBreach</code>. A single data breach incident can have one or more types i.e. these types are not mutually exclusive.</p>
 
     <p>A data breach can have several identifiers - for example those within an organisation, across organisations, or in correspondence with authorities. To indicate these, the concept <code>dpv-breach:DataBreachIdentifier</code> is used and associated with using <code>dpv:hasIdentifier</code>. The distinct concept allows further categorisation of identifiers, and more importantly to distinguish who has provided which identifier, e.g. using <code>dct:creator</code> and <code>dct:publisher</code>.</p>
 
@@ -181,7 +193,7 @@ ex:WeakAuthentication a risk:Vulnerability ;
 
 <section>
     <h2>Data Breach Reports</h2>
-    <p>Reports about a data breach document information about the breach as well as its investigation and handling activities. They are represented by <code>DataBreachReport</code>, and are separated into types to represent detection of a breach and stage of investigation/breach handling - preliminary, ongiong, concluded. These are represented by <code>DataBreachPreliminaryReport</code>, <code>DataBreachOngoingReport</code> and <code>DataBreachConcludingReport</code> respectively. Reports can be embedded or linked to each other. For example, a single larger report as an instance of <code>DataBreachReport</code> can reference instances representing the different stages through <code>dct:hasPart</code>, for example to represent a comprehensive or grouped reporting of data breach when communicating with authorities.</p>
+    <p>Reports about a data breach document information about the breach as well as its investigation and handling activities. They are represented by <code>DataBreachReport</code>, and are separated into types to represent detection of a breach and stage of investigation/breach handling - preliminary, ongoing, concluded. These are represented by <code>DataBreachPreliminaryReport</code>, <code>DataBreachOngoingReport</code> and <code>DataBreachConcludingReport</code> respectively. Reports can be embedded or linked to each other. For example, a single larger report as an instance of <code>DataBreachReport</code> can reference instances representing the different stages through <code>dct:hasPart</code>, for example to represent a comprehensive or grouped reporting of data breach when communicating with authorities.</p>
 
     <section>
         <h3>Detection Report</h3>
@@ -194,6 +206,7 @@ ex:WeakAuthentication a risk:Vulnerability ;
 
     <p>To specify any communications providing information about the breach (detection), the property <code>dpv:hasNotice</code> should be used. This can be incoming information (entity is recipient) or outgoing (entity is sender). To specify information contents of a notice as a form of communication, <code>schema:Message</code> should be used to document details such as sender and recipient. To report on the status of detection (as a form of investigation), the existing <code>dpv:ActivityStatus</code> concepts should be used.</p>
 
+    <aside class="example" title="Data Breach detection report">
     <p>Example: A data breach detection report which specifies the subject of the report i.e. which data breach it is about, the temporal and provenance metadata for that report, and the source of information i.e. how was the breach information sourced. It also represents the status of the activity (breach detection) as completed.</p>
 
 <pre><code>ex:IncidentReport2A a dpv-breach:DataBreachDetectionReport ;
@@ -205,7 +218,9 @@ ex:WeakAuthentication a risk:Vulnerability ;
     dpv:hasDataSource ex:Processor ; # breach was reported by a Processor
     dpv:hasActivityStatus dpv:ActivityCompleted . # status of the detection reporting
 </code></pre>
+</aside>
 
+    <aside class="example" title="Data Breach detection report with Notice">
     <p>Example: Another data breach detection report which also denotes a notice sent by a processor about the breach and a notice sent to the authority about the breach. Note that the notice relation is the same for incoming and outgoing communications - the distinction being evident in the notice's sender and recipient fields.</p>
 
 <pre><code>ex:IncidentReport2B a dpv-breach:DataBreachDetectionReport ;
@@ -235,6 +250,7 @@ ex:ReportedBreachToAuthority a dpv-breach:DataBreachNotice, schema:Message ;
         dct:description &quot;here&#039;s what actually happened ...&quot;@en ;
         ] .
 </code></pre>
+</aside>
 
 </section>
 
@@ -247,20 +263,21 @@ ex:ReportedBreachToAuthority a dpv-breach:DataBreachNotice, schema:Message ;
     
     <p>To indicate what personal data has been affected, the relation <code>dpv:hasPersonalData</code> is to be used, with values of type <code>dpv:PersonalData</code> or its categories such as <code>dpv:SpecialCategoryPersonalData</code>. To indicate the scale of data, <code>dpv:hasDataVolume</code> is to be used. Qualifiers can reuse the existing DPV concepts, e.g. <code>dpv:HugeDataVolume</code>, and quantifiers where indicating the actual number of data records affected is necessary can directly specify the value or use an instance or subtype of <code>dpv:DataVolume</code> with <code>rdf:value</code> to denote the quantity.
 
-    <p>To indicate data subjects affected, the relation <code>dpv:hasDataSubject</code> is to be used to denote the category of daata data subjects, and the relation <code>dpv:hasDataSubjectScale</code> to be used to denote their scale. Similar to how Data Volume can be a qualifier or a quantifier, the scale of data subjects can be based on <code>dpv:DataSubjectScale</code> or a quantity.</p>
+    <p>To indicate data subjects affected, the relation <code>dpv:hasDataSubject</code> is to be used to denote the category of data data subjects, and the relation <code>dpv:hasDataSubjectScale</code> to be used to denote their scale. Similar to how Data Volume can be a qualifier or a quantifier, the scale of data subjects can be based on <code>dpv:DataSubjectScale</code> or a quantity.</p>
 
     <p>To indicate processing activities, the relation <code>dpv:hasProcessing</code> is to be used to denote the specific types of processing taking place, and the relation <code>dpv:hasProcessingScale</code> is to be used to indicate its scale - with <code>dpv:ProcessingScale</code> or a quantifier to indicate number of data records. To indicate the geographic coverage, the relation <code>dpv:hasJurisdiction</code> is be used to indicate the affected jurisdictions. To only indicate locations without associating jurisdiction, the relation <code>dpv:hasLocation</code> can be used.</p> To indicate what technologies were involved, the relation <code>dpv:isImplementedUsingTechnology</code> is to be used, and to specify who implemented it the relation <code>dpv:isImplementedByEntity</code> is to be used.</p>
 
-    <p>In addition to scale of data, data subjects, and processing, the Data Protection Authorities also require reporting whether there is any cross-border context to the data breach including data subjects or processing activities in multiple jurisdictions. While this information can be derived from the values of <code>dpv:hasJurisdiction</code>, the concept <code>CrossBorderDataBreach</code> is provided as a subtype of <code>DataBreach</code> to explicitly indicate this information. Here, 'cross-border' can mean one or more of the following: data subjects from multiple jurisdictions are involved, processing (including storage and transfer) takes place in multiple jurisdictions, or the organissation is based on or operates in multiple jurisdictions. To distinguish between these, no further subtypes are defined as, instead the information is to be represented directly in its appropriate context, e.g. through <code>dpv:hasJurisdiction</code> to directly indicate affected jurisdictions, or to indicate jurisdictions in connection with values of <code>dpv:hasDataSubject</code>, <code>dpv:hasProcessing</code> or <code>dpv:ProcessingContext</code>, and associating jurisdictions with an entity.</p>
+    <p>In addition to scale of data, data subjects, and processing, the Data Protection Authorities also require reporting whether there is any cross-border context to the data breach including data subjects or processing activities in multiple jurisdictions. While this information can be derived from the values of <code>dpv:hasJurisdiction</code>, the concept <code>CrossBorderDataBreach</code> is provided as a subtype of <code>DataBreach</code> to explicitly indicate this information. Here, 'cross-border' can mean one or more of the following: data subjects from multiple jurisdictions are involved, processing (including storage and transfer) takes place in multiple jurisdictions, or the organisation is based on or operates in multiple jurisdictions. To distinguish between these, no further subtype are defined as, instead the information is to be represented directly in its appropriate context, e.g. through <code>dpv:hasJurisdiction</code> to directly indicate affected jurisdictions, or to indicate jurisdictions in connection with values of <code>dpv:hasDataSubject</code>, <code>dpv:hasProcessing</code> or <code>dpv:ProcessingContext</code>, and associating jurisdictions with an entity.</p>
 
     <p>The personal data, data subjects, processing, and other details can be grouped using <code>dpv:PersonalDataHandling</code> to indicate separation, such as for jurisdictions affected, or technologies affected. The granularity of this information is unbound as the 'graph' of what was affected can be as large or small as required. From the data breach reporting forms present on authority websites, in most cases it is sufficient to indicate the abstract or summary information at the preliminary stage.</p>
 
     <p>To indicate risks the relation <code>dpv:hasRisk</code> is to be used, for consequence the relation <code>dpv:hasConsequence</code> is to be used, and for impact the relation <code>dpv:hasImpact</code> is to be used. The [[RISK]] extension provides taxonomies that can be used with these. The risks, consequences, and impacts can be specified directly in connection with the breach or the report, or through an impact assessment. The impact assessment associated with a data breach is represented by <code>DataBreachImpactAssessment</code> as a subtype of <code>dpv:hasImpactAssessment</code>. Note that the concept of impact assessment here refers to impact on or for data subjects - the internal assessment of impact (e.g. loss of business) is not part of this impact assessment and could be represented separately through a risk assessment.</p>
 
-    <p>The data breach reporting requires explicitly indicating whether there will be an impact to fundamental rights - most commonly as a Yes / No option. To indicate this, the concept <code>risk:ImpactOnFundamentalRights</code> from [[RISK]] is to be used with the relation <code>dpv:hasImpact</code>. To express whether risks or impacts will materialise i.e. take place or not, the relation <code>risk:hasLikelihood</code> is to be used. Here, rather than specifying the likelihood as impossible or 0, it is better to specify the lowest value as as the likelihood being <i>extremely unlikely</i> - which in [[RISK]] is modelled as the value <code>0.01</code>. If any information is not available, then <code>dpv:NotAvailale</code> should be used.</code>
+    <p>The data breach reporting requires explicitly indicating whether there will be an impact to fundamental rights - most commonly as a Yes / No option. To indicate this, the concept <code>risk:ImpactOnFundamentalRights</code> from [[RISK]] is to be used with the relation <code>dpv:hasImpact</code>. To express whether risks or impacts will materialise i.e. take place or not, the relation <code>risk:hasLikelihood</code> is to be used. Here, rather than specifying the likelihood as impossible or 0, it is better to specify the lowest value as as the likelihood being <i>extremely unlikely</i> - which in [[RISK]] is modelled as the value <code>0.01</code>. If any information is not available, then <code>dpv:NotAvailable</code> should be used.</code>
 
     <p>Data breach reporting also requires information on what technical and organisational measures were in place before the breach, deficiencies identified, and any changes or additional measures taken to address the breach. To specify the affected TOMs, the relations <code>dpv:hasTechincalMeasure</code> and <code>dpv:hasOrganisationalMeasure</code> are to be used. To specify their limitations or failures, the relation <code>risk:hasVulnerability</code> is to be used, with <code>dpv:isMitigatedByMeasure</code> and <code>dpv-breach:DataBreachMitigationMeasure</code> to indicate how the data breach has been addressed.</p>
 
+    <aside class="example" title="Data Breach preliminary report">
     <p>Example: A data breach preliminary report outlining services affected by the breach with a note on incomplete assessment of consequences.</p>
 
 <pre><code>ex:IncidentReport3A a dpv-breach:DataBreachPreliminaryReport ;
@@ -271,10 +288,12 @@ ex:ReportedBreachToAuthority a dpv-breach:DataBreachNotice, schema:Message ;
     dpv:hasDataSource ex:Processor ; # breach was reported by a Processor
     dpv:hasNotice ex:ReportedBreachToAuthority ; # breach reported to DPA
     dpv:hasConsequenceOn ex:ServiceA, ex:PDH9 ; # services affected
-    dpv:hasConsequenceOn dpv-breach:NotAvailale ; # further consequences not known yet
+    dpv:hasConsequenceOn dpv-breach:NotAvailable ; # further consequences not known yet
     dpv:hasActivityStatus dpv:ActivityCompleted . # status of report 
 </code></pre>
+</aside>
 
+    <aside class="example" title="Data Breach preliminary report with details of affected processes">
     <p>Example: A data breach preliminary report outlining the software involved in the breach, personal data affected, its volume, affected data subjects and their scale, affected processing and its scale, and the jurisdictions of relevance.</p>
 
 <pre><code>ex:IncidentReport3B a dpv-breach:DataBreachPreliminaryReport ;
@@ -292,7 +311,9 @@ ex:ReportedBreachToAuthority a dpv-breach:DataBreachNotice, schema:Message ;
     dpv:isImplementedUsingTechnology ex:Software ;
     dpv:hasActivityStatus dpv:ActivityCompleted . # status of report
 </code></pre>
+</aside>
 
+    <aside class="example" title="Data Breach preliminary report with details about scales and scopes of affected processes">
     <p>Example: A data breach preliminary report more detailed information on the scale and scope of data subjects, personal data categories and volume, processing scale, and jurisdictions for each.</p>
 
 <pre><code>ex:IncidentReport3C a dpv-breach:DataBreachPreliminaryReport ;
@@ -303,13 +324,13 @@ ex:ReportedBreachToAuthority a dpv-breach:DataBreachNotice, schema:Message ;
     dpv:hasPersonalData [
         rdfs:subClassOf dpv:SpecialCategoryPersonalData ;
         dpv:hasDataVolume dpv:HugeDataVolume ;
-        dpv:hasDataVolume &quot;300000&quot; ; # records affected
+        dpv:hasDataVolume &quot;300000&quot;^^xsd:int ; # records affected
         ] .
     dpv:hasDataSubject [
         rdfs:subClassOf dpv:VulnerableDataSubject ;
         dpv:hasJurisdiction legal:IE, legal:FR, legal:DE ;
         dpv:hasDataSubjectScale dpv:LargeScaleOfDataSubjects ;
-        dpv:hasDataSubjectScale &quot;300000&quot; ; # people affected
+        dpv:hasDataSubjectScale &quot;300000&quot;^^xsd:int ; # people affected
         ] .
     dpv:hasProcessing [
         rdf:type dpv:Store ;
@@ -318,7 +339,9 @@ ex:ReportedBreachToAuthority a dpv-breach:DataBreachNotice, schema:Message ;
         ] .
     dpv:hasActivityStatus dpv:ActivityCompleted . # status of report
 </code></pre>
+</aside>
 
+    <aside class="example" title="Data Breach preliminary report using PersonalDataHandling to group contextual information">
 <p>Example: A data breach preliminary report containing use of <code>dpv:PersonalDataHandling</code> to organise information and group it based on specific contexts - such as services, affected data subjects, different implementing entities, and scales.</p>
 
 <pre><code>ex:IncidentReport3D a dpv-breach:DataBreachPreliminaryReport ;
@@ -331,11 +354,11 @@ ex:ReportedBreachToAuthority a dpv-breach:DataBreachNotice, schema:Message ;
         dpv:hasService ex:ServiceA ;
         dpv:hasPersonalData dpv:SpecialCategoryPersonalData ;
         dpv:hasDataVolume dpv:HugeDataVolume ;
-        dpv:hasDataVolume &quot;300000&quot; ; 
+        dpv:hasDataVolume &quot;300000&quot;^^xsd:int ; 
         dpv:hasDataSubject dpv:VulnerableDataSubject ;
         dpv:hasJurisdiction legal:IE, legal:FR, legal:DE ;
         dpv:hasDataSubjectScale dpv:LargeScaleOfDataSubjects ;
-        dpv:hasDataSubjectScale &quot;300000&quot; ; 
+        dpv:hasDataSubjectScale &quot;300000&quot;^^xsd:int ; 
         dpv:hasProcessing dpv:Store ;
         dpv:hasProcessingScale dpv:LargeScaleProcessing ;
         dpv:isImplementedByEntity ex:Processor ;
@@ -351,7 +374,9 @@ ex:ReportedBreachToAuthority a dpv-breach:DataBreachNotice, schema:Message ;
         ] ;
     dpv:hasActivityStatus dpv:ActivityCompleted . # status of report
 </code></pre>
-
+</aside>
+    
+    <aside class="example" title="Data Breach preliminary report with Risk and Impact Assessment">
 <p>Example: A data breach preliminary report outlining risks associated with the breach and its impact assessment.</p>
 
 <pre><code>ex:IncidentReport3E a dpv-breach:DataBreachPreliminaryReport ;
@@ -366,7 +391,9 @@ ex:ReportedBreachToAuthority a dpv-breach:DataBreachNotice, schema:Message ;
     dpv:hasImpactAssessment ex:SomeImpactAssessment ;
     dpv:hasActivityStatus dpv:ActivityCompleted . # status of report
 </code></pre>
+</aside>
 
+    <aside class="example" title="Data Breach preliminary report with contextual Risk and Impact Assessments">
 <p>Example: A data breach preliminary report outlining risk and impact assessments for specific contexts through separate instances of <code>dpv:PersonalDataHandling</code>. This indicates the difference in risks and impacts for each of the two services and contexts.</p>
 
 <pre><code>ex:IncidentReport3F a dpv-breach:DataBreachPreliminaryReport ;
@@ -398,7 +425,9 @@ ex:ReportedBreachToAuthority a dpv-breach:DataBreachNotice, schema:Message ;
         ] ;
     dpv:hasActivityStatus dpv:ActivityCompleted . # status of report
 </code></pre>
+</aside>
 
+    <aside class="example" title="Data Breach preliminary report with mitigation measures">
 <p>Example: A data breach preliminary report outlining technical and organisational measures associated with the breach taking place and their specific vulnerabilities, as well as the specific measures undertaken to mitigate the breach.</p>
 
 <pre><code>ex:IncidentReport3G a dpv-breach:DataBreachPreliminaryReport ;
@@ -426,6 +455,7 @@ ex:LackOfSecurityTraining a risk:RiskSource ;
 ex:WeakAuthentication a risk:Vulnerability ;
     risk:isVulnerabilityOf ex:Software .
 </code></pre>
+</aside>
 </section>
 
 </section>
@@ -436,7 +466,7 @@ ex:WeakAuthentication a risk:Vulnerability ;
 
     <p>The earlier examples showed messages being passed to inform other entities about data breaches, for examples from Processor to Controller, and from Controller to the DPA. The message contents are expected to be accompanied with a report of appropriate form, e.g. for detection, preliminary or final investigation, or containing the impact assessment. Other than these, the notifications to data subjects are also of a similar form but with different contents - where there may be information on steps to be taken for the data subjects to mitigate impacts.</p>
 
-    <p>To distinguish between these different types of communications, the following subtypes of <code>dpv:Notice</code> are defined:</p>
+    <p>To distinguish between these different types of communications, the following subtype of <code>dpv:Notice</code> are defined:</p>
     <ol>
         <li><code>AuthorityDataBreachNotice</code>: A Notice sent to an Authority from a Processor or Controller or an Authority or Data Subject.</li>
         <li><code>ProcessorDataBreachNotice</code>: A Notice sent to a Processor from another Processor or a Controller or an Authority.</li>
@@ -450,7 +480,7 @@ ex:WeakAuthentication a risk:Vulnerability ;
 
     <p>To indicate whether some notifications are being planned, are ongoing, or have been completed - <code>dpv:ActivityStatus</code> is to be used. This is relevant to indicate and differentiate between planned activities and those that have been completed - which is relevant for demonstration of legal obligations.</p>
 
-    <aside class="example" title="Describing a Data Breach event">
+    <aside class="example" title="Processor describing a Data Breach event to a Controller">
         <pre><code>ex:ProcessorReportsBreach a dpv-breach:ProcessorDataBreachNotice, schema:Message ;
     rdfs:comment &quot;Processor to Controller&quot; ;
     dct:subject ex:Incident1A ;
@@ -461,7 +491,7 @@ ex:WeakAuthentication a risk:Vulnerability ;
     </aside>
         
 
-    <aside class="example" title="Describing a Data Breach event">
+    <aside class="example" title="Controller describing a Data Breach event to an Authority">
         <pre><code>ex:ControllerReportsBreach a dpv-breach:AuthorityDataBreachNotice, schema:Message ;
     rdfs:comment &quot;Controller to Authority&quot; ;
     dct:subject ex:Incident1A ;
@@ -471,7 +501,7 @@ ex:WeakAuthentication a risk:Vulnerability ;
     schema:messageAttachment &lt;report.pdf&gt; . # what were the contents</code></pre>
     </aside>
 
-    <aside class="example" title="Describing a Data Breach event">
+    <aside class="example" title="Controller describing a Data Breach event to Data Subjects">
         <pre><code>ex:DataSubjectNotified a dpv-breach:AuthorityDataBreachNotice, schema:Message ;
     rdfs:comment &quot;Controller to Data Subjects&quot; ;
     dct:subject ex:Incident1A ; # can provide all or some info about breach 
@@ -502,7 +532,7 @@ ex:WeakAuthentication a risk:Vulnerability ;
 
     <p>For EU/EEA establishments, DPV contains the concept <code>dpv:Establishment</code> which is to be used along with the relation <code>dpv:isMainEstablishmentFor</code> to indicate the main establishment for a given jurisdiction, and the relation <code>dpv:isEstablishmentOf</code> to indicate parent company.</p>
 
-    <aside class="example" title="Describing a Data Breach event">
+    <aside class="example" title="Describing a Controller in terms of establishments">
         <pre><code>ex:Controller a dpv:DataController ;
     a dpv:PrivateOrganisation ;
     dpv:hasSector &quot;&lt;NACE code&gt;&quot; ;
@@ -518,12 +548,31 @@ ex:ParentController a dpv:DataController ;
 
 <section>
     <h2>Data Breach Impact Assessment</h2>
-    <p>What is a DBIA</p>
+    <h3>What is a DBIA</h3>
+    <p>A Data Breach Impact Assessment (DBIA) is similar to a Data Protection Impact Assessment (DPIA) in that it is undertaken to assess the risks and impacts to data subjects, where the DPIA is intended to address a planned process and the DBIA relates to a data breach that has taken place. A DBIA is essential in order to determine whether to notify authorities and data subjects regarding the breach, and to plan the necessary measures to handle the breach. If the DBIA indicates that the breach is likely to result in a risk to the rights and freedoms of individuals - then the authorities have to be notified. If the DBIA indicates a high risk to the rights and freedoms of individuals - then both the authorities and data subjects have to be notified.</p>
+    <p>A DBIA is based on the information available at a given time. Therefore, it can be undertaken at any stage in the Data Breach handling process - from preliminary where fewer information is known to final where all information is available. As such, the same DBIA (i.e. addressing the same data breach) can evolve over time in terms of its identified risks and impacts based on the corresponding changes in information.</p>
     <p>What information is present in a DBIA</p>
+    <ol>
+        <li>Type of breach</li>
+        <li>Nature, sensitivity, and volume of personal data</li>
+        <li>Ease of identification of individuals</li>
+        <li>Severity of consequences for individuals</li>
+        <li>Special characteristics of the individual</li>
+        <li>Special characteristics of the data controller</li>
+        <li>Number of affected individuals </li>
+        <li>Risk level for risks and impacts to rights and freedoms</li>
+        <li>Outcomes</li>
+    </ol>
+
+    <h3>Risk Assessment</h3>
     <p>How to indicate risks, consequences, impacts</p>
     <p>Examples</p>
+
+    <h3>Impact on Rights and Freedoms</h3>
     <p>How to express risk to fundamental rights - present, not present</p>
     <p>Examples</p>
+
+    <h3>Mitigations and Residual Risks</h3>
     <p>How to show mitigations</p>
     <p>Examples</p>
 </section>
