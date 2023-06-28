@@ -77,6 +77,7 @@
 <ul>
     <li>Guidelines 9/2022 on personal data breach notification under GDPR Version 2.0. (2023). European Data Protection Board (EDPB). <a href="https://edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-92022-personal-data-breach-notification-under_en">link</a></li>
     <li>Recommendations for a methodology of the assessment of severity of personal data breaches. (2013). ENISA. <a href="https://www.enisa.europa.eu/publications/dbn-severity">link</a></li>
+    <li>UK GDPR data breach reporting (DPA 2018). (2023). Information Commissioner’s Office. <a href="https://ico.org.uk/for-organisations/report-a-breach/personal-data-breach/">link</a></li>
 </ul>
 
 
@@ -510,8 +511,7 @@ ex:WeakAuthentication a risk:Vulnerability ;
     schema:sender ex:Controller ; # who sent it
     schema:recipient dpv:User ; # all users received this
     schema:recipient dpv-breach:BreachedDataSubjects ; # only breach affected subjects
-    dct:medium &quot;website&quot;, &quot;public announcement&quot; ; # notifications provided<
-
+    dct:medium &quot;website&quot;, &quot;public announcement&quot; ; # notifications provided
     dpv:hasPersonalData pd:Email ; # what data has been breached
     dpv:hasImpact [
         a risk:Fraud ;
@@ -548,24 +548,27 @@ ex:ParentController a dpv:DataController ;
 
 <section>
     <h2>Data Breach Impact Assessment</h2>
-    <h3>What is a DBIA</h3>
+    <h3>What is a DBIA?</h3>
     <p>A Data Breach Impact Assessment (DBIA) is similar to a Data Protection Impact Assessment (DPIA) in that it is undertaken to assess the risks and impacts to data subjects, where the DPIA is intended to address a planned process and the DBIA relates to a data breach that has taken place. A DBIA is essential in order to determine whether to notify authorities and data subjects regarding the breach, and to plan the necessary measures to handle the breach. If the DBIA indicates that the breach is likely to result in a risk to the rights and freedoms of individuals - then the authorities have to be notified. If the DBIA indicates a high risk to the rights and freedoms of individuals - then both the authorities and data subjects have to be notified.</p>
     <p>A DBIA is based on the information available at a given time. Therefore, it can be undertaken at any stage in the Data Breach handling process - from preliminary where fewer information is known to final where all information is available. As such, the same DBIA (i.e. addressing the same data breach) can evolve over time in terms of its identified risks and impacts based on the corresponding changes in information.</p>
-    <p>What information is present in a DBIA</p>
+    
+    <h3>Information in a DBIA</h3>
+    <p>A Data Breach Impact Assessment (DBIA) typically contains the following information, which here is categorised into three distinct categories:
     <ol>
-        <li>Type of breach</li>
-        <li>Nature, sensitivity, and volume of personal data</li>
-        <li>Ease of identification of individuals</li>
-        <li>Severity of consequences for individuals</li>
-        <li>Special characteristics of the individual</li>
-        <li>Special characteristics of the data controller</li>
-        <li>Number of affected individuals </li>
-        <li>Risk level for risks and impacts to rights and freedoms</li>
-        <li>Outcomes</li>
+        <li><b>Information about the Breach:</b> 
+            Type of breach; 
+            Nature, sensitivity, and volume of personal data; 
+            Special characteristics of the individual; 
+            Special characteristics of the data controller; 
+            Number of affected individuals </li>
+        <li><b>Risk Assessment</b>: risks and impacts to rights and freedoms, their risk levels, likelihoods, and severity of consequences for individuals. Additionally also specific risks such as ease of identification of individuals or extent and ability to comprehend and reuse data.</li>
+        <li><b>Outcomes</b>: activities to be undertaken based on the assessment</li>
     </ol>
+    <p>The information about the breach in terms of what data or individuals have been affected is the same as that present in a <i>Data Breach Report</i>, and therefore can be included through a link to the report itself or explicitly added to the assessment in a manner similar to that of the report.</p>
+    <p>Information about the risk assessment includes the specifics of what risks are applicable, the consequences and impacts arising from it, their severity and likelihood, and the impacted stakeholders. In these, the specific risks and impacts to the rights and freedoms of individuals are an important consideration that must be present. Additionally, specific risks commonly associated with data breaches should also be mentioned. Such risks include (re-)identification of individuals through breached data e.g. because the data contained identifying information, or could be combined with other available data; or the risk of breached data not being safeguarded sufficiently (e.g. weak encryption) which could lead to its potential misuses.</p>
 
     <h3>Risk Assessment</h3>
-    <p>How to indicate risks, consequences, impacts</p>
+    <p>A typical risk assessment undertaken for data breach incidents informs about risks associated with data (e.g. unauthorised access, restoration) and individuals (e.g. identifiability, harms). To represent these, we use [[[RISK]]] concepts. The following examples demonstrate risk assessments based on data breach incidents.</p>
     <p>Examples</p>
 
     <h3>Impact on Rights and Freedoms</h3>
@@ -578,7 +581,7 @@ ex:ParentController a dpv:DataController ;
 </section>
 
 <section>
-    <h2>Mitigating Data Breaches</h2>
+    <h2>Preventing Data Breaches</h2>
     <p>How to document that a data breach has been prevented - using risk assessment</p>
     <p>Risk of data breach - mitigated by measure</p>
     <p>Examples</p>
