@@ -551,6 +551,24 @@ ex:ParentController a dpv:DataController ;
     <h3>What is a DBIA?</h3>
     <p>A Data Breach Impact Assessment (DBIA) is similar to a Data Protection Impact Assessment (DPIA) in that it is undertaken to assess the risks and impacts to data subjects, where the DPIA is intended to address a planned process and the DBIA relates to a data breach that has taken place. A DBIA is essential in order to determine whether to notify authorities and data subjects regarding the breach, and to plan the necessary measures to handle the breach. If the DBIA indicates that the breach is likely to result in a risk to the rights and freedoms of individuals - then the authorities have to be notified. If the DBIA indicates a high risk to the rights and freedoms of individuals - then both the authorities and data subjects have to be notified.</p>
     <p>A DBIA is based on the information available at a given time. Therefore, it can be undertaken at any stage in the Data Breach handling process - from preliminary where fewer information is known to final where all information is available. As such, the same DBIA (i.e. addressing the same data breach) can evolve over time in terms of its identified risks and impacts based on the corresponding changes in information.</p>
+    <p>To represent a DBIA, the concept <code>DataBreachImpactAssessment</code> is used. The DCMI metadata terms are available for annotating it with relevant information and descriptions (e.g. title, dates, provenance) as well as to associate it with a specific data breach using <code>dct:subject</code>.</p>
+
+    <aside class="example" title="Describing a Data Breach Impact Assessment">
+        <pre><code>ex:DBIA20230628 a data-breach:DataBreachImpactAssessment ;
+    dct:title "DBIA for Incident2023-2"@en ;
+    # annotations
+    dct:subject ex:Incident2023-2 ; # reference to data breach
+    dct:creator "Anon. Anon." ; # authorship or contributors
+    # temporal
+    dct:created "2023-06-28"^^xsd:date ; # creation date
+    dct:created "2023-06-28"^^xsd:date ; # last modification date
+    dct:dateSubmitted "2023-06-28"^^xsd:date ; # submission for approval
+    dct:dateAccepted "2023-06-28"^^xsd:date ; # approval date
+    # versions 
+    dct:isReplacedBy ex:DBIA20230629 ; # next version
+    dct:replaces ex:DBIA20230627 . # previous version
+</code></pre>
+    </aside>
     
     <h3>Information in a DBIA</h3>
     <p>A Data Breach Impact Assessment (DBIA) typically contains the following information, which here is categorised into three distinct categories:
