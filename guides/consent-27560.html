@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Implementing ISO/IEC TR 27560:2023 Consent Records and Receipts</title>
+    <meta http-equiv='Content-Type' content='text/html;charset=utf-8' />
+    <script src='respec-w3c.js' async class='remove'></script>
+    <script type="text/javascript" class="remove">
+  var respecConfig = {
+    title: "Consent Implementation Guide for ISO/IEC TR 27560:2023",
+    subtitle: "using the Data Privacy Vocabulary (DPV)",
+    shortName: "guide-27560",
+    specStatus: "CG-DRAFT",
+    group: "dpvcg",
+    latestVersion: "https://w3id.org/dpv/guides/consent-27560",
+    canonicalUri: "https://w3id.org/dpv/guides/consent-27560",
+    edDraftURI: "https://w3id.org/dpv/ed/guides/consent-27560",
+    publishDate: "2023-07-17",
+    // isPreview: true,
+    subjectPrefix: "[27560]",
+    doJsonLd: true,
+    maxToclevel: 3,
+    github: "w3c/dpv",
+    editors: [{
+      name: "Harshvardhan J. Pandit",
+      url: "https://harshp.com/",
+      "company": "Harshvardhan J. Pandit"
+    }],
+    authors: [{
+      name: "Harshvardhan J. Pandit",
+      url: "https://harshp.com/",
+      "company": "Harshvardhan J. Pandit"
+    }],
+  };
+  </script>
+  <style type="text/css">
+  /* Table styles, March 2016 */
+  table {border-collapse:collapse}
+  th, td {
+    border:thin solid black;
+    padding: 0.3em;
+  }
+  figure {
+    margin: 2px;
+    padding: 2px;
+    border: 1px solid black;
+  }
+</style>
+  </head>
+<body>
+    <!-- <h1>DPV Data Breach Extension</h1> -->
+    <section id="abstract">
+        <p class="issue" title="expand abstract">
+        <p>This document provides guidance on the implementation of ISO/IEC TR 27560:2023 Consent Records using the Data Privacy Vocabulary (DPV).</p>
+        <p>Additionally, this document also provides guidance on the implementation of [[27560]] in a manner that supports the obligations and requirements of GDPR compliance, also using DPV. The visibility of GDPR specific sections can be controlled: <button><label>GDPR guidance is shown</label></button> (click to change).</p>
+    </section>
+
+    <section id="sotd">
+      <!-- sotd: Status of this document -->
+      <p>This document is published by the <a href="https://www.w3.org/community/dpvcg/">Data Privacy Vocabularies and Controls Community Group (DPVCG)</a> as a deliverable and report of its work in creating and maintaining the Data Privacy Vocabulary (DPV).</p>
+      <div class="note">
+        <p><strong>Contributing to the DPV and its extensions</strong> The DPVCG welcomes participation regarding the DPV, including expansion or refinement of its terms, addressing open issues, and welcomes suggestions on their resolution or mitigation. For further information, please see the <a href="https://github.com/w3c/dpv#contribution--participation">contribution section</a>.</p>
+      </div>
+    </section>
+    <section id="introduction">
+<h2>Introduction</h2>
+<p class="issue" title="expand Introduction"></p>
+<ul>
+    <li>why maintain consent records</li>
+    <li>what determines information in consent records (GDPR)</li>
+    <li>standards for consent record (27560) and notice (29184)</li>
+  <li>Variations in consent records (schema)</li>
+    <li>Difference in terms and requirements (point to next section and optional annotation with GDPR
+  requirements as notes)</li>
+  <li>Introduction to consent receipts, comparison to
+  consent records</li>
+  <li>Specific only to consent, no other legal basis.</li>
+</ul>
+
+<p>This document provides guidance on the implementation of the ISO/IEC TR 27560:2023 Consent Records using the Data Privacy Vocabulary (DPV). It also defines and describes the DPV-based schema for maintaining [[27560]] conformant consent records. More specifically, this document provides guidance on the maintainence of the following information in a structure representation as per the requirements prescribed by [[27560]:</p>
+<ol>
+    <li>metadata about the consent record such as its identifier</li>
+    <li>the individual associated with the consent i.e. data subject</li>
+    <li>the subject of consent i.e. specifics of the processing of personal data</li>
+    <li>entities involved e.g. data controller and third parties</li>
+    <li>relevant contextual information e.g. notice, rights, restrictions</li>
+    <li>provenance of events associated with the consent e.g. given, withdrawn</li>
+</ol>
+<p>In addition to the above, this document also provides guidance on the implementation of [[27560]] to support [[GDPR]] compliance requirements in terms of maintaining information regarding consent. This is described in visually distinct notes within their relevant sections to differentiate between [[27560]] and [[GDPR]] requirements and notes. The GDPR specific content can be hidden through the button provided in abstract.</p>
+
+<p>The following sources were used in the development of this document:</p>
+<ul>
+    <li>ISO/IEC TR 27560:2023</li>
+    <li>General Data Processing Regulation (GDPR)</li>
+    <li>EDPB Guidelines on Consent</li>
+</ul>
+
+<p>The following namespaces are used throughout this document:</p>
+<table>
+    <thead><td>prefix</td><td>URI</td></thead>
+    <tbody>
+        <tr><td>dpv</td> <td><a href="https://w3id.org/dpv">https://w3id.org/dpv#</a></td></tr>
+        <tr><td>dpv-gdpr</td> <td><a href="https://w3id.org/dpv/dpv-gdpr">https://w3id.org/dpv/dpv-gdpr#</a></td></tr>
+        <tr><td>dct</td> <td><a href="http://purl.org/dc/terms">http://purl.org/dc/terms/</a></td></tr>
+        <tr><td>ex</td> <td><a href="https://example.com">https://example.com/</a></td></tr>
+    </tbody>
+</table>
+</section>
+
+<section id="terms">
+    <h2>Comparison of Terms in 27560, GDPR, and DPV</h2>
+    <p>The table below provides a comparison between the term and concepts used in [[27560]], [[GDPR]], and [[DPV]]. It is neither exhaustive nor authoritative, and is provided as an informative resource to better understand and apply the concepts as they are expressed in the two normative documents ([[27560]] and [[GDPR]]). The column <i>req.?</i> reflects whether maintaining information on the concept is mandatory or optional. Where the value of this is expressed as a dash (<tt>-</tt>) it means <i>not applicable</i> to reflect the concept is not present or is covered by another term in the table. Note that for GDPR, the table only reflects the information to be maintained - either directly associated with the consent or elsewhere, and does not cover any specific requirements such as the validity of consent as per Art.4-11 or application of principles in Art.6.</p>
+    <table>
+        <thead>
+            <td style="text-align: center;"><strong>27560 term</strong></td>
+            <td style="text-align: center;"><strong>req.?</strong></td>
+            <td style="text-align: center;"><strong>relevant GDPR clause</strong></td>
+            <td style="text-align: center;"><strong>req.?</strong></td>
+            <td style="text-align: center;"><strong>DPV concept</strong></td>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="100%" style="text-align: center;"><strong>definitions</strong></td>
+            </tr>
+            <tr>
+                <td>consent</td>
+                <td>-</td>
+                <td>4-11 consent</td>
+                <td>-</td>
+                <td>dpv:ExpressedConsent</td>
+            </tr>
+            <tr>
+                <td>consent record</td>
+                <td>-</td>
+                <td>7-1 demonstrate consent</td>
+                <td>-</td>
+                <td>dpv:ConsentRecord</td>
+            </tr>
+            <tr>
+                <td>consent receipt</td>
+                <td>-</td>
+                <td>13 info on legal basis</td>
+                <td>-</td>
+                <td>dpv:ConsentReceipt</td>
+            </tr>
+            <tr>
+                <td>consent type</td>
+                <td>-</td>
+                <td>4-11; 9-2a</td>
+                <td>-</td>
+                <td>dpv:Consent subtypes</td>
+            </tr>
+            <tr>
+                <td>PII Principal</td>
+                <td>-</td>
+                <td>4-1 data subject</td>
+                <td>-</td>
+                <td>dpv:DataSubject</td>
+            </tr>
+            <tr>
+                <td>PII Controller</td>
+                <td>-</td>
+                <td>4-7 controller; 26-1 joint controllers</td>
+                <td>-</td>
+                <td>dpv:DataController, dpv:JointDataControllers</td>
+            </tr>
+            <tr>
+                <td>PII Processor</td>
+                <td>-</td>
+                <td>4-8 processor; 28-2 processor appointed by processor</td>
+                <td>-</td>
+                <td>dpv:DataProcessor, dpv:DataSubProcessor</td>
+            </tr>
+            <tr>
+                <td>Third Party</td>
+                <td>-</td>
+                <td>4-10 third party</td>
+                <td>-</td>
+                <td>dpv:ThirdParty</td>
+            </tr>
+            <tr>
+                <td>Processing of PII</td>
+                <td>-</td>
+                <td>4-2 processing</td>
+                <td>-</td>
+                <td>dpv:Processing</td>
+            </tr>
+            <tr>
+                <td>Sensitive PII</td>
+                <td>-</td>
+                <td>9 special categories of data</td>
+                <td>-</td>
+                <td>dpv:SensitivePersonalData, dpv:SpecialCategoryPersonalData</td>
+            </tr>
+            <tr>
+                <td>PII</td>
+                <td>-</td>
+                <td>4-1 personal data</td>
+                <td>-</td>
+                <td>dpv:PersonalData</td>
+            </tr>
+            <tr>
+                <td colspan="100%" style="text-align: center;"><strong>metadata</strong></td>
+            </tr>
+            <tr>
+                <td>schema version</td>
+                <td>Y</td>
+                <td>N/A</td>
+                <td>-</td>
+                <td>dct:conformsTo</td>
+            </tr>
+            <tr>
+                <td>record id</td>
+                <td>Y</td>
+                <td>N/A</td>
+                <td>-</td>
+                <td>dct:identifier, dpv:hasIdentifier</td>
+            </tr>
+            <tr>
+                <td>receipt id</td>
+                <td>Y</td>
+                <td>N/A</td>
+                <td>-</td>
+                <td>dct:identifier, dpv:hasIdentifier</td>
+            </tr>
+            <tr>
+                <td>pii principal id</td>
+                <td>Y</td>
+                <td>N/A</td>
+                <td>-</td>
+                <td>dpv:DataSubject, or dpv:hasDataSubject with dct:identifier</td>
+            </tr>
+            <tr>
+                <td colspan="100%" style="text-align: center;"><strong>processing fields</strong></td>
+            </tr>
+            <tr>
+                <td>privacy notice</td>
+                <td>Y</td>
+                <td>13, 14 information to be provided</td>
+                <td>Y</td>
+                <td>dpv:PrivacyNotice, dpv:ConsentNotice</td>
+            </tr>
+            <tr>
+                <td>language</td>
+                <td>Y</td>
+                <td>N/A</td>
+                <td>-</td>
+                <td>dct:language</td>
+            </tr>
+            <tr>
+                <td>purpose</td>
+                <td>Y</td>
+                <td>6-1a purpose</td>
+                <td>Y</td>
+                <td>dpv:Purpose</td>
+            </tr>
+            <tr>
+                <td>purpose type</td>
+                <td>N</td>
+                <td>N/A</td>
+                <td>-</td>
+                <td>dpv:Purpose parent in taxonomy</td>
+            </tr>
+            <tr>
+                <td>lawful basis</td>
+                <td>N</td>
+                <td>6 legal basis</td>
+                <td>Y</td>
+                <td>dpv:LegalBasis</td>
+            </tr>
+            <tr>
+                <td>pii information</td>
+                <td>Y</td>
+                <td>N/A</td>
+                <td>-</td>
+                <td>dpv:hasPersonalData (reference to information)</td>
+            </tr>
+            <tr>
+                <td>pii controllers</td>
+                <td>Y</td>
+                <td>N/A</td>
+                <td>-</td>
+                <td>dpv:hasDataController (reference to information)</td>
+            </tr>
+            <tr>
+                <td>collection method</td>
+                <td>N</td>
+                <td>13-1 collected from data subject; 14-2f source</td>
+                <td>Y</td>
+                <td>dpv:DataSource, dpv:Collect</td>
+            </tr>
+            <tr>
+                <td>processing method</td>
+                <td>N</td>
+                <td>4-2 processing; 30-2b processing categories; 13-2f, 14-2g, 151-h automated decision making, logic, consequences; 35-1b large scale processing of special categories; 35-1c large scale of processing</td>
+                <td>Y</td>
+                <td>dpv:Processing and parent in taxonomy, dpv:AutomationOfProcessing, dpv:Profiling, dpv:AlgorithmicLogic, dpv:Consequence; dpv:DataVolume, dpv:ScaleOfProcessing</td>
+            </tr>
+            <tr>
+                <td>storage locations</td>
+                <td>Y</td>
+                <td>15-2 third country</td>
+                <td>Y</td>
+                <td>dpv:StorageLocation. dpv:Jurisdiction</td>
+            </tr>
+            <tr>
+                <td>retention period</td>
+                <td>Y</td>
+                <td>13-2a, 14-2a, 15-1d storage period or criteria; 30-1f erasure time limit</td>
+                <td>Y</td>
+                <td>dpv:StorageCondition, dpv:StorageDuration, dpv:StorageDeletion</td>
+            </tr>
+            <tr>
+                <td>processing location</td>
+                <td>N</td>
+                <td>13-1f, 14-1f, 15-2 transfer to third country</td>
+                <td>Y</td>
+                <td>dpv:Location, dpv:Jurisdiction</td>
+            </tr>
+            <tr>
+                <td>geographic restrictions</td>
+                <td>N</td>
+                <td>13-1f, 14-1f, 15-2, 30-1e, 30-2c, 44, 45, 46, 47, 48, 49-1a transfer to third country</td>
+                <td>Y</td>
+                <td>dpv:Location, dpv:Jurisdiction, dpv:Rule</td>
+            </tr>
+            <tr>
+                <td>service</td>
+                <td>N</td>
+                <td>N/A</td>
+                <td>-</td>
+                <td>dpv:Service (proposed)</td>
+            </tr>
+            <tr>
+                <td>jurisdiction</td>
+                <td>Y</td>
+                <td>N/A</td>
+                <td>-</td>
+                <td>dpv:Jurisdiction</td>
+            </tr>
+            <tr>
+                <td>recipient third parties</td>
+                <td>Y</td>
+                <td>4-9 recipient; 4-10 third party</td>
+                <td>Y</td>
+                <td>dpv:Recipient, dpv:ThirdParty</td>
+            </tr>
+            <tr>
+                <td>withdrawal method</td>
+                <td>Y</td>
+                <td>7-3, 13-2c, 14-2d withdrawing consent</td>
+                <td>Y</td>
+                <td>dpv:ConsetWithdrawalProcess (proposed Organisational measure)</td>
+            </tr>
+            <tr>
+                <td>privacy rights</td>
+                <td>N</td>
+                <td>13-22 rights</td>
+                <td>Y</td>
+                <td>dpv:DataSubjectRight, dpv:RightExerciseNotice</td>
+            </tr>
+            <tr>
+                <td>codes of conduct</td>
+                <td>N</td>
+                <td>24-3, 32-3, 35-8, 40 codes of conduct; 42 certification</td>
+                <td>N</td>
+                <td>dpv:CodeOfConduct, dpv:CertificationSeal</td>
+            </tr>
+            <tr>
+                <td>impact assessment</td>
+                <td>N</td>
+                <td>35 DPIA</td>
+                <td>N</td>
+                <td>dpv:ImpactAssessment</td>
+            </tr>
+            <tr>
+                <td>authority party</td>
+                <td>N</td>
+                <td>13-2d, 14-2e, 15-1f complaint to authority; 51 supervisory authority; 56 lead authority. </td>
+                <td>Y</td>
+                <td>dpv:Authority</td>
+            </tr>
+            <tr>
+                <td colspan="100%" style="text-align: center;"><strong>personal data fields</strong></td>
+            </tr>
+            <tr>
+                <td>pii type</td>
+                <td>Y</td>
+                <td>4-1, 14-1d, 15-1b personal data categories</td>
+                <td>Y</td>
+                <td>dpv:PersonalData</td>
+            </tr>
+            <tr>
+                <td>pii attribute id</td>
+                <td>N</td>
+                <td>N/A</td>
+                <td>-</td>
+                <td>dct:identifier</td>
+            </tr>
+            <tr>
+                <td>pii optional</td>
+                <td>N</td>
+                <td>13-2e, 35 necessity of personal data</td>
+                <td>Y</td>
+                <td>dpv:Necessity</td>
+            </tr>
+            <tr>
+                <td>sensitive pii category</td>
+                <td>N</td>
+                <td>N/A</td>
+                <td>-</td>
+                <td>dpv:SensitivePersonalData</td>
+            </tr>
+            <tr>
+                <td>special pii category</td>
+                <td>N</td>
+                <td>9 special categories of data</td>
+                <td>Y</td>
+                <td>dpv:SpecialCategoryPersonalData</td>
+            </tr>
+            <tr>
+                <td colspan="100%" style="text-align: center;"><strong>party fields</strong></td>
+            </tr>
+            <tr>
+                <td>party id</td>
+                <td>Y</td>
+                <td>N/A</td>
+                <td>-</td>
+                <td>dct:identifier, dpv:hasIdentifier</td>
+            </tr>
+            <tr>
+                <td>party address</td>
+                <td>Y</td>
+                <td>13-1a, 14-1a identity of controller</td>
+                <td>Y</td>
+                <td>dpv:hasAddress</td>
+            </tr>
+            <tr>
+                <td>party email</td>
+                <td>N</td>
+                <td>N/A</td>
+                <td>-</td>
+                <td>dpv:hasContact</td>
+            </tr>
+            <tr>
+                <td>party url</td>
+                <td>N</td>
+                <td>N/A</td>
+                <td>-</td>
+                <td>dpv:hasContact</td>
+            </tr>
+            <tr>
+                <td>party phone</td>
+                <td>N</td>
+                <td>N/A</td>
+                <td>-</td>
+                <td>dpv:hasContact</td>
+            </tr>
+            <tr>
+                <td>party name</td>
+                <td>Y</td>
+                <td>13-1a, 14-1a identity of controller</td>
+                <td>Y</td>
+                <td>dpv:hasName</td>
+            </tr>
+            <tr>
+                <td>party role</td>
+                <td>N</td>
+                <td>4-1 data subject; 4-7 controller; 4-8 processor; 4-9 recipient; 4-10 third party; 4-17 representative; 4-21 supervisory authority</td>
+                <td>Y</td>
+                <td>dpv:DataSubject, dpv:DataController, dpv:DataProcessor, dpv:Recipient, dpv:ThirdParty, dpv:Representative; dpv:Authority</td>
+            </tr>
+            <tr>
+                <td>party contact</td>
+                <td>Y</td>
+                <td>13-1a, 14-1a contact details of controller</td>
+                <td>Y</td>
+                <td>dpv:hasContact</td>
+            </tr>
+            <tr>
+                <td>party type</td>
+                <td>Y</td>
+                <td>4-9 recipient, data importer and data  exporter (external concepts)</td>
+                <td>Y</td>
+                <td>dpv:Recipient, dpv:DataImporter, dpv:DataExporter, dpv:DataSource</td>
+            </tr>
+            <tr>
+                <td colspan="100%" style="text-align: center;"><strong>event fields</strong></td>
+            </tr>
+            <tr>
+                <td>event time</td>
+                <td>Y</td>
+                <td>7-1 demonstrate consent</td>
+                <td>Y</td>
+                <td>dct:date</td>
+            </tr>
+            <tr>
+                <td>validity duration</td>
+                <td>Y</td>
+                <td>N/A (external guidance requires validity)</td>
+                <td>Y</td>
+                <td>dct:valid</td>
+            </tr>
+            <tr>
+                <td>entity id</td>
+                <td>Y</td>
+                <td>N/A (assumed roles, e.g. data subject, controller)</td>
+                <td>Y</td>
+                <td>dpv:isImplementedByEntity</td>
+            </tr>
+            <tr>
+                <td>event type</td>
+                <td>Y</td>
+                <td>4-11 (regular or expressed) consent; 9-2a explicit consent</td>
+                <td>Y</td>
+                <td>dpv:Consent subtype</td>
+            </tr>
+            <tr>
+                <td>event state</td>
+                <td>Y</td>
+                <td>4-11, 9-2a consent given; 7-3 withdrawal of consent; 13, 14 notice for consent; (from derivations) lapsed validity, invalidation authorities, termination by controller</td>
+                <td></td>
+                <td>dpv:ConsentStatus</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section id="overview-27560">
+    <h2>Overview of 27560</h2>
+    <p class="issue" title="write 27560 overview"></p>
+    <section class="gdpr notoc">
+    <h2>Overview of Consent under GDPR</h2>
+    <p class="issue" title="write GDPR consent requirements"></p>
+    </section>
+</section>
+
+<section id="record-fields">
+    <h2>information contents of consent records</h2>
+    <p class="issue" title="summary of 27560 record fields"></p>
+    <h3>header</h3>
+    <h3>processing</h3>
+    <h3>parties</h3>
+    <h3>events</h3>
+</section>
+
+<section id="receipt-fields">
+    <h2>information contents of consent receipts</h2>
+    <p class="issue" title="summary of 27560 receipt fields"></p>
+    <h3>header</h3>
+    <p>additional fields not in 27560 - publisher, recipient, provenance, integrity, etc.</p>
+    <h3>processing</h3>
+    <h3>parties</h3>
+    <h3>events</h3>
+</section>
+
+<section id="conformance">
+    <h2>conformance</h2>
+    <h3>records - table of requirements, SHACL shape, JSON schema</h3>
+    <p class="issue" title="records conformance with 27560"></p>
+    <h3>receipts - table of requirements, SHACL shape, JSON schema</h3>
+    <p class="issue" title="receipts conformance with 27560"></p>
+</section>
+
+<section id="examples">
+    <h2>examples</h2>
+    <p>source - <a href="https://github.com/coolharsh55/dpv-consent-record">github repo</a></p>
+    <h3>simple record + minimal receipt</h3>
+    <p class="issue" title="write simple record+receipt example"></p>
+    <pre><code>{
+  "@context": {
+    "@vocab": "https://w3id.org/dpv#",
+    "dpv": "https://w3id.org/dpv#",
+    "dpv-gdpr": "https://w3id.org/dpv/dpv-gdpr#",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "ex": "https://example.com/"
+  },
+  "@id": "ex:63ded36f-4acd-4f3c-991e-6cb636698523",
+  "@type": "dpv:ConsentRecord",
+  "dct:conformsTo": "27560-CIB",
+  "hasDataSubject": { "@id": "ex:96121fde-199f-4848-8942-4436e270513a" },
+  "hasPersonalDataHandling": {
+    "hasNotice": { "@id": "https://example.com/notice/29184" },
+    "dct:language": "en",
+    "hasAuthority": { "@id": "https://www.dataprotection.ie/" },
+    "hasPurpose": [{
+      "dct:title": "Send Newsletters with Seasonal Offers",
+      "@type": "dpv:Marketing",
+      "hasLegalBasis": { "@id": "dpv:Consent" },
+      "hasPersonalData": [
+        { "@type": "dpv:pd_Email", 
+          "hasContext": "dpv:Optional" },
+        { "@type": "dpv:pd_Passport", 
+          "@type": "dpv:SpecialCategoryPersonalData",
+          "hasContext": "dpv:Required" } 
+      ],
+      "hasDataController": [ { "@id": "ex:C01" }, { "@id": "ex:C02" }],
+      "hasDataSource": [ 
+        { "hasProcessing": "dpv:Collect", 
+          "hasDataSource": "dpv:DataSubject" }, 
+        { "hasProcessing": "dpv:Infer",
+          "hasPersonalData": "ServiceUsage" }
+      ],
+      "hasProcessing": {
+        "@type": [ "dpv:Obtain", "dpv:Store" ],
+        "hasLocation": "IE" },
+      "hasStorageCondition": {
+        "hasLocation": "IE",
+        "hasDuration": 63115200
+      },
+      "hasJurisdiction": "EU",
+      "dct:subject": [ "News Website XYZ Subscription" ],
+      "hasRecipient": [ { "@id": "ex:T01" }, { "@id": "ex:T02" } ],
+      "hasRight": [
+        {
+          "@type": [ "dpv-gdpr:A7-3", "dpv-gdpr:A20" ],
+          "isExercisedAt": "ex:notice"
+        }
+      ],
+      "hasOrganisationalMeasure": [
+        {
+          "@id": "ex:CoC-news-media",
+          "@type": "dpv:CodeOfConduct"
+        }, {
+          "@id": "ex:dpia",
+          "@type": "dpv:DPIA"
+        }
+      ]
+    }]
+  },
+  "hasEntity": [
+    {
+      "@id": "ex:C01",
+      "hasAddress": "Dublin, Ireland",
+      "foaf:mbox": "acme@example.com",
+      "foaf:page": "https://example.com/AcmeInc",
+      "foaf:name": "Acme Inc.",
+      "@type": [ "dpv:DataController", "dpv:ServiceProvider" ],
+      "foaf:OnlineAccount": { 
+        "foaf:name": "SocialMedia", 
+        "foaf:accountName": "@acme" 
+      }
+    },
+    {
+      "@id": "ex:C02",
+      "hasAddress": "Frankfurt, Germany",
+      "foaf:page": "https://example.com/BetaInc",
+      "foaf:name": "Beta Inc.",
+      "@type": [ "dpv:DataController", "dpv:ServiceProvider" ]
+    },
+    {
+      "@id": "ex:T01",
+      "hasAddress": "Paris, France",
+      "foaf:page": "https://example.com/Delta",
+      "foaf:name": "Delta",
+      "@type": [ "dpv:DataProcessor", "dpv:Recipient" ]
+    },
+    {
+      "@id": "ex:T02",
+      "hasAddress": "Dublin, Ireland",
+      "foaf:page": "https://example.com/Epsilon",
+      "foaf:name": "Epsilon Co.",
+      "@type": [ "dpv:ThirdParty", "dpv:Recipient" ]
+    },
+    {
+      "@id": "https://www.dataprotection.ie/",
+      "hasAddress": "Dublin, Ireland",
+      "foaf:page": "https://www.dataprotection.ie/",
+      "foaf:name": "Data Protection Commission",
+      "@type": [ "dpv:DataProtectionAuthority", "dpv-gdpr:LeadSA" ]
+    }
+  ],
+  "dct:hasPart": [
+    {
+      "dct:date": "2021-05-28T12:24:00",
+      "hasDuration": 63115200,
+      "hasEntity": {
+        "@id": "ex:96121fde-199f-4848-8942-4436e270513a",
+        "@type": "dpv:DataSubject"
+      },
+      "@type": "dpv:ExplicitlyExpressedConsent",
+      "hasConsentStatus": "dpv:ConsentGiven"
+    },
+    {
+      "dct:date": "2022-02-21T20:44:00",
+      "hasDuration": 0,
+      "hasEntity": {
+        "@id": "ex:96121fde-199f-4848-8942-4436e270513a",
+        "@type": "dpv:DataSubject"
+      },
+      "@type": "dpv:ExplicitlyExpressedConsent",
+      "hasConsentStatus": "dpv:ConsentWithdrawn"
+    }
+  ]
+}</code></pre>
+<pre><code>{
+  "@context": {
+    "@vocab": "https://w3id.org/dpv#",
+    "dpv": "https://w3id.org/dpv#",
+    "dpv-gdpr": "https://w3id.org/dpv/dpv-gdpr#",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "ex": "https://example.com/"
+  },
+  "@id": "ex:a1368f5d-0d26-453c-bd55-b7abacc286fa",
+  "@type": "dpv:ConsentReceipt",
+  "dct:conformsTo": "27560-CIB",
+  "dct:subject": {
+    "@id": "ex:63ded36f-4acd-4f3c-991e-6cb636698523",
+    "@type": "dpv:ConsentRecord",
+    "hasPersonalDataHandling": {
+      "hasNotice": { "@id": "https://example.com/notice/29184" },
+      "hasAuthority": { "@id": "https://www.dataprotection.ie/" },
+      "hasPurpose": [{
+        "dct:title": "Send Newsletters with Seasonal Offers",
+        "@type": "dpv:Marketing",
+        "hasLegalBasis": { "@id": "dpv:Consent" },
+        "hasPersonalData": [
+          { "@type": "dpv:pd_Email", 
+            "hasContext": "dpv:Optional" },
+          { "@type": "dpv:pd_Passport", 
+            "@type": "dpv:SpecialCategoryPersonalData",
+            "hasContext": "dpv:Required" } 
+        ],
+        "hasDataController": [ { "@id": "ex:C01" }, { "@id": "ex:C02" }],
+        "hasStorageCondition": {
+          "hasLocation": "IE",
+          "hasDuration": 63115200
+        },
+        "hasJurisdiction": "EU",
+        "dct:subject": [ "News Website XYZ Subscription" ],
+        "hasRecipient": [ { "@id": "ex:T01" }, { "@id": "ex:T02" } ],
+        "hasRight": [
+          {
+            "@type": [ "dpv-gdpr:A7-3", "dpv-gdpr:A20" ],
+            "isExercisedAt": "ex:notice"
+          }
+        ],
+        "hasOrganisationalMeasure": [
+          {
+            "@id": "ex:CoC-news-media",
+            "@type": "dpv:CodeOfConduct"
+          }, {
+            "@id": "ex:dpia",
+            "@type": "dpv:DPIA"
+          }
+        ]
+      }]
+    },
+    "hasEntity": [
+      {
+        "@id": "ex:C01",
+        "foaf:mbox": "acme@example.com",
+        "foaf:page": "https://example.com/AcmeInc",
+        "foaf:name": "Acme Inc.",
+        "@type": [ "dpv:DataController", "dpv:ServiceProvider" ],
+        "foaf:OnlineAccount": { 
+          "foaf:name": "SocialMedia", 
+          "foaf:accountName": "@acme" 
+        }
+      },
+      {
+        "@id": "ex:C02",
+        "foaf:page": "https://example.com/BetaInc",
+        "foaf:name": "Beta Inc.",
+        "@type": [ "dpv:DataController", "dpv:ServiceProvider" ]
+      },
+      {
+        "@id": "ex:T01",
+        "foaf:page": "https://example.com/Delta",
+        "foaf:name": "Delta",
+        "@type": [ "dpv:DataProcessor", "dpv:Recipient" ]
+      },
+      {
+        "@id": "ex:T02",
+        "foaf:page": "https://example.com/Epsilon",
+        "foaf:name": "Epsilon Co.",
+        "@type": [ "dpv:ThirdParty", "dpv:Recipient" ]
+      },
+      {
+        "@id": "https://www.dataprotection.ie/",
+        "foaf:page": "https://www.dataprotection.ie/",
+        "foaf:name": "Data Protection Commission",
+        "@type": [ "dpv:DataProtectionAuthority", "dpv-gdpr:LeadSA" ]
+      }
+    ],
+    "dct:hasPart": [
+      {
+        "dct:date": "2021-05-28T12:24:00",
+        "hasDuration": 63115200,
+        "@type": "dpv:ExplicitlyExpressedConsent",
+        "hasConsentStatus": "dpv:ConsentGiven"
+      },
+      {
+        "dct:date": "2022-02-21T20:44:00",
+        "hasDuration": 0,
+        "@type": "dpv:ExplicitlyExpressedConsent",
+        "hasConsentStatus": "dpv:ConsentWithdrawn"
+      }
+    ]
+  }
+}</code></pre>
+    <h3>complex record + minimal receipt</h3>
+    <p class="issue" title="write complex record + simple receipt example"></p>
+    <h3>complex record + full receipt</h3>
+    <p class="issue" title="write complex record+receipt example"></p>
+</section>
+
+<section id="security-considerations" class="appendix">
+    <h2>considerations on security (informative)</h2>
+    <p class="issue" title="write security considerations"></p>
+    <ul>
+    <li>record is personal data - information within a consent record and the record itself also constitutes personal data, therefore appropriate measures are required to safeguard it</li>
+    <li>identification for record/receipt - each consent must be attributed to the data subject it is about, however this does not mean records and receipts require additional identification procedures to get this information. Where no identity or identifier is available, a new identifier should be created for the purposes of record/receipt only e.g. visitors to the website</li>
+    <li>integrity of contents - mechanisms such as using cryptographic hashes to provide integrity checks for information, ensuring storage retains accuracy of information, and any changes to structure of information should be assessed to ensure interpretation of contents of records/receipts is not changed</li>
+    <li>verification of contents - disputes on changes in contents and discrepancies between records or receipts held by two or more entities are possible; mechanisms to cryptopgraphically 'sign' the information using verifiable means can assist in preventing such issues. The current norm within 27560 is Controllers creating records and providing receipts to the data subjects who can then use it to keep their own records. This guide does not presume this is the only possible use-case, and considers any entity</li>
+    <li>transmission / communication - between controllers</li>
+    <li>communication of receipt to data subjects</li>
+    </ul>
+</section>
+
+<section id="modeling-considerations" class="appendix">
+    <h2>consideration on modeling (informative)</h2>
+    <p class="issue" title="write information modeling considerations"></p>
+    <ul>
+    <li>for controllers - storing full records/receipts is not required</li>
+    <li>for controllers - separate records or single records</li>
+    <li>for controllers - updating vs appending</li>
+    <li>for data subjects - creating own records</li>
+    <li>for data subjects - storing and using receipts</li>
+    </ul>
+</section>
+
+<section id="privacy-signals" class="appendix">
+    <h2>recording privacy signals</h2>
+    <p class="issue" title="write recording privacy signals"></p>
+    <ul>
+    <li>recording use of signals</li>
+    <li>DNT, GPC</li>
+    <li>DNT (full), P3P, ADPC</li>
+    </ul>
+</section>
+
+<section id="future-developments" class="appendix">
+    <h2>additional schemas (informative on future developments)</h2>
+    <p class="issue" title="write possible future schemas"></p>
+    <ul>
+    <li>records - GDPR specific, notice only i.e. only mention the notice and record
+    consent events (the notice has to be 27560 conformant) </li>
+    <li>receipts - A13/A14, signals only, full+explicit i.e. mention not applicable
+    in fields instead of blanks</li>
+    </ul>
+</section>
+
+<section class="appendix" id="issue-summary">
+  <!-- A list of issues will magically appear here -->
+</section>
+
+</body>
+</html>
