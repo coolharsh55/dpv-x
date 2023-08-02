@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DPV Data Breach extension</title>
+    <title>Data Breach Guide</title>
     <meta http-equiv='Content-Type' content='text/html;charset=utf-8' />
     <script src='respec-w3c.js' async class='remove'></script>
     <script type="text/javascript" class="remove">
@@ -11,12 +11,12 @@
     shortName: "data-breach",
     specStatus: "CG-DRAFT",
     group: "dpvcg",
-    latestVersion: "https://w3id.org/dpv/data-breach",
-    canonicalUri: "https://w3id.org/dpv/data-breach",
-    edDraftURI: "https://w3id.org/dpv/ed/data-breach",
-    publishDate: "2023-06-16",
+    latestVersion: "https://w3id.org/dpv/guides/data-breach",
+    canonicalUri: "https://w3id.org/dpv/guides/data-breach",
+    edDraftURI: "https://w3id.org/dpv/ed/guides/data-breach",
+    publishDate: "2023-08-02",
     // isPreview: true,
-    subjectPrefix: "[primer]",
+    subjectPrefix: "[data-breach]",
     doJsonLd: true,
     maxToclevel: 3,
     github: "w3c/dpv",
@@ -49,7 +49,7 @@
 <body>
     <!-- <h1>DPV Data Breach Extension</h1> -->
     <section id="abstract">
-        <p>This document details an extension to the Data Privacy Vocabulary (DPV) for representing information associated with data breaches in terms of the breach event, its detection, preliminary and subsequent investigations, notifications and communications, risk and impact assessments, and mitigations.</p>
+        <p>This document provides guidance for representing information associated with data breaches using the [[[DPV]]]. Such information includes details about the breach event, its detection, preliminary and subsequent investigations, notifications and communications, risk and impact assessments, and mitigations.</p>
     </section>
 
     <section id="sotd">
@@ -61,17 +61,24 @@
     </section>
 <h2>Introduction</h2>
 
-<p>A data breach is an event, which therefore has temporal and causal properties to indicate when and why it took place. Some of this information may or may not be known - for example, when a breach is first detected the start and end of this breach may be unknown, while subsequent investigations identify additional information. Therefore, the information about a breach continues to change as the investigations progress. How such changing information should be recorded is outside the scope of this specification since it relates to the organisation's governance practices. For example, the organisation may keep a single record of the data breach and update it as new information is available, or alternatively the organisation may create distinct records of the data breach to represent discrete information available at different stages of investigation. Similarly, the investigation of a breach's impact is also separate to the analysis of the cause of the breach and may be carried out at various points based on the availability of information. For example, availability of new information may trigger an additional requirement to conduct an impact assessment based on the perceived changes in risk and consequences.</p>
+<p>A data breach is an event and has temporal and causal properties to indicate when and why it took place. Some of this information may or may not be known - for example, when a breach is first detected the start and end times may be unknown, with subsequent investigations identifying this information. In addition, information may not be accurate or may be incorrect - for example, a preliminary investigation may state that the affected data was encrypted whereas subsequent investigation may discover that it was unencrypted. Therefore, the information about a breach continues to change as the investigations progress.</p>
+<p>How the changes themselves should be recorded is outside the scope of this guidance since it relates to the organisation's governance practices. For example, the organisation may keep a single record of the data breach and update it as new information is available, or alternatively the organisation may create distinct records of the data breach to represent discrete information available at different stages of investigation. Similarly, the investigation of a breach's impact is also separate to the analysis of the cause of the breach and may be carried out at various points based on the availability of information. For example, availability of new information may trigger an additional requirement to conduct an impact assessment based on the perceived changes in risk and consequences.</p>
 
-<p>This document details an extension to the Data Privacy Vocabulary (DPV) for representing the following information about data breaches:</p>
+<p>This guide therefore is limited to the following information about data breaches:</p>
 <ol>
     <li>Information about the Data Breach itself i.e. when did it occur, who was the cause, etc.</li>
     <li>Investigation of the Data Breach i.e. report specifying when it was detected, what has been affected, who has it been reported to</li>
     <li>Notifications i.e. communication about the breach between entities, e.g. Controller to DPA</li>
-    <li>Impact Assessment that assesses the risks and impacts based on available information</li>
+    <li>Impact Assessment that assesses the risks and impacts (to data subjects) based on available information</li>
     <li>Breach Mitigation assessment which identifies the causes of the breach and specifies what changes were made to prevent further breaches or mitigate consequences of existing breach</li>
-    <li>Details about the organisation, including its establishments and lead authorities for handling the data breach.</li>
+    <li>Details about the involved organisation, including establishments and lead authorities for handling the data breach.</li>
+    <li>Provide requirements and obligations related to GDPR in the above information.</li>
 </ol>
+
+<div class="note" title="Applying this guide to GDPR and NIS2">
+    <p>While the [[DPV]] and this guide are written in a jurisdiction agnostic manner, it is heavily based on the [[GDPR]] and [[NIS2]] definitions and requirements regarding data breaches and incidents. Where relevant, GDPR and NIS2 specific information and requirements are provided separately within the respective sections.</p>
+</div>
+
 
 <p>The following sources were used in the development of this document:</p>
 <ul>
@@ -81,11 +88,7 @@
 </ul>
 
 
-<p class="issue" title="TODO: Move to DPV">
-Note: Security reporting requires strict and clear information i.e. to be explicit in cases where something is or isn't applicable. Due to the open world assumption of semantic web, where if information is not specified then it can mean it is not applicable or not available or something else - this ambiguity is problematic for cases such as data breach reporting. To assist with this, we should add special instances in DPV to assist with explicitly indicating information and to address the ambiguity arising from "open world" assumptions. These are grouped under the status `InformationAvailability` and can be used anywhere:
-1) dpv:UnknownApplicability - a special instance indicating information is unknown i.e. it is not known if the information exists or is applicable and therefore statements about its availability cannot be made (yet)
-2) dpv:NotApplicable - a special instance indicating context is not applicable
-3) dpv:NotAvailable - a special instance indicating the information is applicable but is not yet available
+<p class="issue" data-number="103"></p>
 
 <code>DataBreachHandlingProcedure</code> to add to Organisational Measures.
 <!-- END -->
@@ -99,44 +102,55 @@ Note: Security reporting requires strict and clear information i.e. to be explic
     <tbody>
         <tr><td>base (default)</td> <td><a href="https://w3id.org/dpv/databreach">https://w3id.org/dpv/databreach#</a></td></tr>
         <tr><td>dpv</td> <td><a href="https://w3id.org/dpv">https://w3id.org/dpv#</a></td></tr>
-        <tr><td>dpv-breach</td> <td><a href="https://w3id.org/dpv/databreach">https://w3id.org/dpv/databreach#</a></td></tr>
+        <tr><td>dpv-gdpr</td> <td><a href="https://w3id.org/dpv/dpv-gdpr">https://w3id.org/dpv/dpv-gdpr#</a></td></tr>
+        <tr><td>risk</td> <td><a href="https://w3id.org/dpv/risk">https://w3id.org/dpv/risk#</a></td></tr>
         <tr><td>dct</td> <td><a href="http://purl.org/dc/terms">http://purl.org/dc/terms/</a></td></tr>
         <tr><td>ex</td> <td><a href="https://example.com">https://example.com/</a></td></tr>
     </tbody>
 </table>
 
 <section>
-    <h2>Lifecycle of a Data Breach</h2>
-    <p>A data breach incident starts from when a breach is suspected or detected, and ends with a final report detailing all impacts and mitigation measures taken in connection with it. In addition to these, organisational processes may involve unclear or ambiguous information such as where sufficient information is not available to state whether a breach exists, or where a breach is suspected but not yet confirmed, and so on.</p>
-    <p>In between these stages, there are various stages that correlate with the availability of information, carrying out investigations based on available information, communicating with other entities - including authorities and data subjects - in connection with the breach, and carrying out assessments as part of investigations regarding risk management and impacts on data subjects. Each of these stages may require keeping record-keeping and documentation outlining the facts as they stand at that point in time. To represent this, the DPV's Data Breach extension considers the following lifecycle for data breach related activities:</p>
+    <h2>Data Breach Lifecycle</h2>
+    <p>A data breach incident starts from when a breach is suspected or detected, and ends with a final report detailing all impacts and mitigation measures taken in connection with it. In addition to these, organisational processes may involve unclear or ambiguous information, for example - where sufficient information is not available to state whether a breach exists, or where a breach is suspected but not yet confirmed.</p>
+    <p>Between the suspicion or detection of a breach and the end of handling it, there are various stages that correlate with: the availability of information, carrying out investigations based on available information, communicating with other entities such as authorities and data subjects in connection with the breach, and carrying out assessments as part of investigations regarding risk management and impacts on data subjects. Each of these stages may require record-keeping and documentation outlining the facts at that point in time.</p>
+    <p>To represent these stages and their associated information, the following are the lifecycle stages as modelled within the [[RISK]] extension regarding incidents and data breaches:</p>
     <ol>
-        <li>Detection: a data breach has been detected or is suspected of having occurred.</li>
-        <li>Preliminary investigation: a preliminary investigation is undertaken which reveals some details about the breach. This is the stage at which communications may be associated, for example to report the breach from processor to controller, or from controller to authorities or data subjects.</li>
-        <li>Ongoing investigation: an investigation is currently ongoing, and new information may be available as it progresses. This is the stage at which the scale, scope, and extent of the breach becomes apparent. It enables identifying the risk and impact of the breach, reveal causes and vulnerabilities, and to plan and implementation measures to stop and mitigate the breach as well as its associated impacts. There may be further communications regarding these to stakeholders.</li>
-        <li>Concluded investigation: the investigation has been concluded, and all activities that need to be carried out have been carried out. This is the final activity which represents a cessation of the breach handling process. Any ongoing breach has been stopped, mitigations have been put into place to avoid its recurrence, communications have been completed, and all relevant risk and impact measures have been deployed. This stage represents no further action is needed in connection with the breach.</li>
+        <li><b>Suspected</b>: a data breach is suspected. This stage typically represents processes to discover the validity of this suspicion to confirm a breach detection. It may optionally involve recording the suspicion and communicating it to relevant entities e.g. to the service provider if the suspected breach is for its service.</li>
+        <li><b>Detected</b>: a data breach has been detected. This stage is followed by processes to determine whether the breach has concluded or is ongoing, and to ascertain the cause, nature, and effect of the breach. It requires recording the detection, and may involve communication to relevant entities e.g. to the Data Protection Authority within 72 hours as per GDPR.</li>
+        <li><b>Ongoing</b>: a data breach has been detected and is currently ongoing or is in progress. This stage should have processes already underway to investigate and ascertain mitigations to stop the breach as well as recover from its impacts. Typically, there are no separate records for an ongoing breach, and there may optionally be communications associated with it e.g. to the Data Protection Authority with an update of the situation, or to the Data Subjects with measures to protect against the breach impacts.</li>
+        <li><b>Halted</b>: a data breach has stopped but has a likelihood of being resumed i.e. it cannot be said with certainty that the breach is 'over' or has 'concluded'. There may be records to note the breach halting. A process may be undertaken at this stage to determine whether the breach has merely halted or has concluded, and the possibility of using mitigation measures to ensure the breach does not occur again.</li>
+        <li><b>Concluded</b>: a data breach has stopped of its own accord and does not have a likelihood of being resumed. This typically represents the 'end' of the breach, and there may be processed to identify the root causes and mitigation measures to ensure it does not occur again, as well as to 'recover' from the breach. This stage is recorded and will have documentation to note the stopping of the breach.</li>
+        <li><b>Terminated</b>: a data breach has been stopped through mitigation measures and does not have a likelihood of being resumed. This typically represents the 'end' of the breach, and may have processes to 'recover' from the breach. This stage is recorded and will have documentation to note the stopping of the breach.</li>
+        <li><b>Mitigated</b>: the data breach has been prevented from recurring again through the use of mitigation measures. been concluded, and all activities that need to be carried out have been carried out. This is the final activity which represents a cessation of the breach handling process. This stage is recorded and will have documentation to note the stopping of the breach.</li>
     </ol>
-    <p>In the above, the term <i>investigation</i> can also be substituted with <i>breach handling process</i> or a similar term. We prefer the use of investigation for consistency with earlier and later stages of breach handling procedures, and to denote the exploratory nature of the process in finding new information and determining effectiveness of implemented measures - as a form of investigation. Based on these, the documented activities in connection with a data breach are <i>reports</i> of the following types. These reports also represent information that is communicated to stakeholders to inform them about the data breach.</p>
+    <p>In the above, the breach incident is separated from its investigation or 'breach handling process', which can occur at any stage depending on when the breach has been detected as well as the effectiveness of the response to it. Based on the breach, the following documented reports are typically expected by the [[GDPR]] and [[NIS2]] in connection with a data breach and are used to communicate the breach to entities e.g. to authorities.</p>
     <ol>
-        <li>Data Breach Detection Report</li>
-        <li>Data Breach Preliminary Report</li>
-        <li>Data Breach Ongoing Report</li>
-        <li>Data Breach Concluding Report</li>
+        <li><b>Incident Suspected Report</b>: A report documenting an incident being suspected.</li>
+        <li><b>Incident Detection Report</b>: A report documenting an incident being detected. The report may have information missing regarding the breach, for example whether the breach is still ongoing or what personal data or data subjects have been affected. Under GDPR, this report provides documentation for when the data breach was detected and it essential for the notification to an authority within 72 hours.</li>
+        <li><b>Incident Assessment Report</b>: A report documenting an assessment of an incident in terms of affected personal data, data subjects, systems, and processes. It can be undertaken or revised as new information is made available or to document the assessment in a specific context. For the GDPR, a Data Breach Impact Assessment (DBIA) is a specific type of incident assessment that provides information the impacts of the breach on data subject's rights and freedoms.</li>
+        <li><b>Incident Handling Report</b>: A report documenting the handling or response to an incident. It includes details of what steps the organisation has taken to halt, terminate, or mitigate the incident, as well as to recover from its effects.</li>
+        <li><b>Incident Preliminary Report</b>: A report documenting an incident investigation is in its preliminary stage, typically sent to an authority such as to notify the breach within 72 hours under the GDPR.</li>
+        <li><b>Incident Ongoing Report</b>: A report documenting an incident or its handling as being in progress or ongoing, typically sent to an authority as a follow-up to the preliminary report to update them on the status of the data breach and its effects.</li>
+        <li><b>Incident Concluding Report</b>: A report documenting indicating the conclusion of an incident investigation and handling. It represents the 'end' of the incident handling process and is relevant both to the organisation for its records-keeping as well as in communications to authorities. It typically has a completed assessment in terms of impacts (on organisation as well as data subjects) and its handling (i.e. response, recovery, mitigation).</li>
     </ol> 
-    <p>To represent the communication of information associated with a Data Breach, we reuse the concept <i>Notice</i> based on the relevant phrase <i>Data Breach Notification</i>. The various notifications communicated through the lifecycle of the breach are as follows. In these, we distinguish between notices sent by Processors and Controllers as these will have differences in terms of the information they can communicate and its use in assessments. For example, the processor's data breach assessment may be unaware about the exact nature of data or the extent of data subjects affected, which limits the identification of impact likelihood.</p>
+    <p>In the process of handling a data breach, various information will be communicated - for example to notify the authority or controller about a breach detection, or to indicate to data subjects how they should safeguard themselves. Such communications are termed as <i>Data Breach Notices</i> based on the relevant phrase <i>Data Breach Notification</i>. Categories of notifications communicated throughout the lifecycle of the breach are as below.</p>
     <ol>
-        <li>Notice to Authority: informing an authority about the breach</li>
-        <li>Notice from Processor: a processor informing another processor or controller about a breach</li>
-        <li>Notice from Controller: a controller informing a processor or another controller about a breach</li>
-        <li>Notice to Data Subjects: notice sent to data subjects informing them about a breach</li>
+        <li><b>Notice from Processor</b>: a processor informing another processor or controller about a breach</li>
+        <li><b>Notice from Controller</b>: a controller informing a processor or another controller about a breach</li>
+        <li><b>Notice to Authority</b>: informing an authority about the breach</li>
+        <li><b>Notice to Data Subjects</b>: notice sent to data subjects informing them about a breach</li>
     </ol>
+    <p>The structure and form of information within notices varies based on the actors involved and the availability of information to them. For example, notices sent between Processors and Controllers have differences in terms of the information they communicate and its use in assessments. The processor's data breach assessment may be unaware about the exact nature of data or the extent of data subjects affected, which also limits the identification of impacts. Similarly, notices sent to the data subjects do not have detailed assessments about the breach, but instead will only provide a subset of the total information, and will typically include contextual information such as what measures the data subjects should take in order to safeguard themselves.</p>
 </section>
 
 <section>
-    <h2>Data Breach event</h2>
+    <h2>Data Breach Event</h2>
     
-    <p>The concept <code>DataBreach</code> represents the event of a data breach. It is a subtype of <code>dpv:Risk</code> to denote the common use and reference of referring to "risk of data breach". This allows risk assessment and management concepts to be applied to data breaches, and to associate consequences and impacts arising from it.</p>
+    <p>The concept <a href="https://w3id.org/dpv/risk#DataBreach"><code>risk:DataBreach</code></a> represents the event of a data breach. It is a subtype of <a href="https://w3id.org/dpv/risk#DataBreach"><code>dpv:Risk</code></a> to denote the common use and reference of referring to "risk of data breach". This allows risk assessment and management concepts to be applied to data breaches, and to associate consequences and impacts arising from it.</p>
 
-    <p>The temporal properties associated with a breach include its occurrence i.e. when the breach started and ended - as its duration. This is indicated using the relation <code>dct:temporal</code> to specify the start (if known) and end (if known). If both are not available, then <code>dpv:NotAvailable</code> is used as the value. There can be multiple duration associated for the same breach, for example where data has been accessed on three different non-continuous days. Whether to represent this as a single or three different instances of data breaches is a contextual choice and decision. For example, where the three events accessed different data or systems or need different mitigation measures - it may be sensible to treat them as separate breaches.</p>
+    <p>The temporal properties associated with a breach include its occurrence i.e. when the breach started and ended - as its duration. This is indicated using the relation <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/temporal"><code>dct:temporal</code></a> to specify the start (if known) and end (if known). If both are not available, then <a href="https://w3id.org/dpv#NotAvailable"><code>dpv:NotAvailable</code></a> is used as the value. There can be more than one duration for the same breach, for example to represent three different non-continuous events considered a part of a single data breach incident. Whether to represent this as a single or three different breaches is a contextual choice and decision. For example, where the three events accessed different data or systems or need different mitigation measures - it may be sensible to treat them as separate breaches.</p>
+
+    <p class="issue" data-number="104">The concepts for representing risk assessment in the context of data breach is currently being discussed. Its outcomes need to be integrated in this document in terms of the specified concepts and their usage in examples.</p>
 
     <p>The 'source' of a breach is the event which led to the breach taking place. It is represented using the concept <code>dpv:RiskSource</code> and associated with the breach using <code>dpv:hasRiskSource</code> relation. An example of a source of data breach is where an employee left their office computer unattended without locking it. The lack of security in securing office machines is a vulnerability, represented using the concept <code>risk:Vulnerability</code> and associated using the relation <code>risk:hasVulnerability</code>. Vulnerabilities represent a weakness or limitation that was exploited in order to create the risk source event which then leads to the data breach. Vulnerabilities are not necessary for a risk source to realise, for example an accident can occur without a vulnerability.</p>
 
@@ -586,6 +600,7 @@ ex:ParentController a dpv:DataController ;
     <p>Information about the risk assessment includes the specifics of what risks are applicable, the consequences and impacts arising from it, their severity and likelihood, and the impacted stakeholders. In these, the specific risks and impacts to the rights and freedoms of individuals are an important consideration that must be present. Additionally, specific risks commonly associated with data breaches should also be mentioned. Such risks include (re-)identification of individuals through breached data e.g. because the data contained identifying information, or could be combined with other available data; or the risk of breached data not being safeguarded sufficiently (e.g. weak encryption) which could lead to its potential misuses.</p>
 
     <h3>Risk Assessment</h3>
+    <p class="issue" data-number="104"></p>
     <p>A typical risk assessment undertaken for data breach incidents informs about risks associated with data (e.g. unauthorised access, restoration) and individuals (e.g. identifiability, harms). To represent these, we use [[[RISK]]] concepts. The following examples demonstrate risk assessments based on data breach incidents.</p>
     <p>Examples</p>
 
