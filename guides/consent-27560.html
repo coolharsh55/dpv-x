@@ -14,9 +14,9 @@
     latestVersion: "https://w3id.org/dpv/guides/consent-27560",
     canonicalUri: "https://w3id.org/dpv/guides/consent-27560",
     edDraftURI: "https://w3id.org/dpv/ed/guides/consent-27560",
-    publishDate: "2023-07-17",
+    publishDate: "2023-08-03",
     // isPreview: true,
-    subjectPrefix: "[27560]",
+    subjectPrefix: "[ISO-27560]",
     doJsonLd: true,
     maxToclevel: 3,
     github: "w3c/dpv",
@@ -51,7 +51,9 @@
     <section id="abstract">
         <p class="issue" title="expand abstract">
         <p>This document provides guidance on the implementation of ISO/IEC TR 27560:2023 Consent Records using the Data Privacy Vocabulary (DPV).</p>
-        <p>Additionally, this document also provides guidance on the implementation of [[27560]] in a manner that supports the obligations and requirements of GDPR compliance, also using DPV. The visibility of GDPR specific sections can be controlled: <button><label>GDPR guidance is shown</label></button> (click to change).</p>
+        <p>Additionally, this document also provides guidance on the implementation of [[27560]] in a manner that supports the obligations and requirements of GDPR compliance. 
+            <!-- The visibility of GDPR specific sections can be controlled: <button><label>GDPR guidance is shown</label></button> (click to change). -->
+        </p>
     </section>
 
     <section id="sotd">
@@ -63,6 +65,15 @@
     </section>
     <section id="introduction">
 <h2>Introduction</h2>
+    <h3>Lifecycle of Consent</h3>
+    <p>Processing of personal data utilises <i>Consent</i> as one of the possible legal basis. In the current regulatory environment, such consent has to be <i>valid</i> according to several criterias such as <i>informed</i>, <i>freely given</i>, or <i>unambigious</i>. For consent to be informed, the data subject must have been provided or be aware of information, typically through a <i>Consent Notice</i>, describing the effect of their consent i.e. which processing activities will take place, over which data, and who is involved in terms of entities. Other criterias, such as being unambigious are determined through the manner in which consent is expressed e.g. the clicking of a button or a signature on paper.</p>
+    
+    <h3>Consent Records</h3>
+    <p>[[[ISO-27560]]] defines <i>Consent Record</i> as the documentation of information about a data subject's consent for the processing of their personal data in terms of the details about the processing as well as the interactions related to consent (e.g. giving or withdrawing it). Consent Records are an essential part of keeping records regarding whether consent has been obtained and is valid for processing, and to keep this information for correctly conducting processing relying on it. [[ISO-27560]] as well as regulatory requirements such as GDPR Article 7-1 require maintaining of consent records where consent is used as the legal basis. While GDPR Article 7-1 only states that consent should be demonstrable, [[ISO-27560]] provides an information structure for how this information should be maintained and what processes should exist within an organisation in connection with it.</p>
+    <p>It is important to distinguish between a <i>Consent Record</i> with several relevant but distinct concepts. A consent record only refers to the information recorded regarding consent, whereas a <i>Consent Notice</i> refers to the notice and information provided to the data subject in order to inform them about the processing while requesting consent. While there is a significant overlap between a consent record and a consent notice, there are key differences such as the exact phrasing of information (e.g. description of the purpose) or the manner in which consent was expressed (e.g. clicking a button) - which are not depicted within a consent record. This is as [[[ISO-29184]]] specifies what information should be present in a notice and the manner in which it is presented, which is relied on by [[27560]] to limit its scope for how to represent it as consent records.</p>
+    <p>Therefore a consent record despite containing a link to the notice is not by itself sufficient to determine the <i>validity</i> of consent, and instead acts as the primary record containing information or links to information for conducting such assessments. Its primary purpose is therefore limited to provide an indication of the state of consent (e.g. request, given, terminated) for specific processing activities (e.g. which purpose, what recipients).</p>
+
+    <h3>Consent Receipts</h3>
 <p class="issue" title="expand Introduction"></p>
 <ul>
     <li>why maintain consent records</li>
