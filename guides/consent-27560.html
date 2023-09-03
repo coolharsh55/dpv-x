@@ -30,6 +30,32 @@
       url: "https://harshp.com/",
       "company": "Harshvardhan J. Pandit"
     }],
+    localBiblio: {
+        "ISO-27560": {
+            "href": "https://www.iso.org/standard/80392.html",
+            "title": "ISO/IEC TS 27560:2023 Privacy technologies — Consent record information structure"
+        }, 
+        "DPV-27560": {
+            "href": "https://w3id.org/dpv/guides/DPV-27560",
+            "title": "ISO/IEC TS 27560:2023 Implementation Guide for Consent Records and Receipts using the Data Privacy Vocabulary (DPV)"
+        },
+        "ISO-29184": {
+            "href": "https://www.iso.org/standard/70331.html",
+            "title": "ISO/IEC 29184:2020 Information technology — Online privacy notices and consent"
+        }, 
+        "DPV-29184": {
+            "href": "https://w3id.org/dpv/guides/DPV-29184",
+            "title": "ISO/IEC TS 29184:2020 Implementation Guide for Consent Notice using the Data Privacy Vocabulary (DPV)"
+        },
+        "DPV": {
+            "href": "https://w3id.org/dpv",
+            "title": "Data Privacy Vocabulary (DPV)"
+        },
+        "GDPR": {
+            "href": "http://data.europa.eu/eli/reg/2016/679/oj",
+            "title": "General Data Protection Regulation (GDPR)"
+        }
+    }
   };
   </script>
   <style type="text/css">
@@ -64,6 +90,15 @@
 
   <section id="namespaces">
     <h3>Namespaces</h3>
+    <p>The schemas or profiles defined by DPVCG for the implementation of [[ISO-27560]] are provided under the IRI <a href="https://w3id.org/dpv/schema/iso-27560">https://w3id.org/dpv/schema/iso-27560</a>, prefixed hereafter as <code>dpv-27560</code>:</p>
+    <ol>
+        <li><a href="https://w3id.org/dpv/schema/iso-27560#record">https://w3id.org/dpv/schema/iso-27560#record</a></code> for Consent Records</li>
+        <li><a href="https://w3id.org/dpv/schema/iso-27560#receipt-minimal">https://w3id.org/dpv/schema/iso-27560#receipt-minimal</a></code> for Consent Receipts with minimal information from corresponding consent record(s)</li>
+        <li><a href="https://w3id.org/dpv/schema/iso-27560#receipt-summary">https://w3id.org/dpv/schema/iso-27560#receipt-summary</a></code> for Consent Receipts with summary information from corresponding consent record(s)</li>
+        <li><a href="https://w3id.org/dpv/schema/iso-27560#receipt-full">https://w3id.org/dpv/schema/iso-27560#receipt-full</a></code> for Consent Receipts with full information from corresponding consent record(s)</li>
+        <li><a href="https://w3id.org/dpv/schema/iso-27560#record-GDPR">https://w3id.org/dpv/schema/iso-27560#record-GDPR</a></code> for Consent Records implemented as per GDPR's requirements for information to be maintained regarding processing of personal data</li>
+        <li><a href="https://w3id.org/dpv/schema/iso-27560#receipt-GDPR">https://w3id.org/dpv/schema/iso-27560#receipt-GDPR</a></code> for Consent Receipts implemented as per GDPR's requirements for information to be provided to the data subject</li>
+    </ol>
     <p>The following namespaces and prefixes are used throughout this document:</p>
 <table>
     <thead><td>prefix</td><td>URI</td></thead>
@@ -77,60 +112,95 @@
     </section>
 </section>
     <section id="introduction">
-<h2>Introduction</h2>
-    <p>Introduction - what is a consent record, what is a consent receipt, when are they needed. What is 27560. What is DPV. What does this document provide. What is the scope.</p>
-    <!-- <h3>Lifecycle of Consent</h3>
-    <p>Processing of personal data utilises <i>Consent</i> as one of the possible legal bases. In the current regulatory environment, such consent has to be <i>valid</i> according to several criterion such as <i>being informed</i>, <i>freely given</i>, and <i>being unambiguous</i>. For consent to be informed, the data subject must have been provided or be aware of relevant information regarding the processing of personal data, typically through a <i>Consent Notice</i>, which describes the effect of their decision i.e. if consent is given which processing activities will take place, over which data, and who is involved in terms of entities. Other criterion, such as freely given and being unambiguous is determined through the manner in which this information is presented to request consent and how that consent is expressed.</p>
-    <p>Once a consent has been given by the individual, they may also have the ability to regulate its use by withdrawing it at a later time. Such termination of consent results in the halting of its associated processing activities. Other causes of termination can be the expiry of duration for which the consent would be considered valid, termination by the Controller, or the consent being declared invalid by an authority such as the court.</p>
-    <p>Based on these, a lifecycle can be charted regarding the various states that 'consent' can be stated to be in, which is essential to understand which states can be considered 'valid' for the processing of personal data. In the diagram below, consent states begin with a notice being shown to inform the individual and request their consent. Following this, the individual may make the decision to give or grant their consent, or to refuse it. If consent has been given, it can be re-confirmed or re-affirmed to assert its validity, or it can be terminated for several reasons such as its withdrawal by the individual. In all these, only when consent continues to be in a 'given' state can it be used to justify processing.</p>
-    <figure>
-        <img src="https://github.com/coolharsh55/dpv-consent-record/blob/master/lifecycle.png?raw=true">
-    </figure>
-
-    <p>Therefore, when creating records of consent - such as to demonstrate compliance, it is essential to not only have information regarding the processing activities governed by that consent, but to also have information which relates to determination of it being valid at a given time. This includes how the notice was provided, the <i>type</i> of consent that was expressed, and to associate these with relevant regulatory requirements that dictate the requirements for validity. In addition, changes to consent must also be recorded, whether they relate to an update to information resulting in a new notice, or the confirmation of an existing consent, or the termination of consent for reasons such as being withdrawn.</p>
+    <h2>Introduction</h2>
+    <section>
+    <h3>Consent Records and Receipts</h3>
+    <p><i>(Given) Consent</i> is an important legal basis as it requires an affirmative action from data subjects or users that must fulfil certain conditions to be considered <i>Valid Consent</i>. Such requirements can be defined through regulations such as [[GDPR]] or through use of standards and codes of conduct. <i>Informed Consent</i> is one such requirement that requires information be provided, in the form of a <i>Consent Notice</i>, to inform the data subject about the processing that will occur based on the consent and to enable them to make an <i>informed choice or decision</i>.</p>
     
-    <h3>Consent Records</h3>
-    <p>[[[ISO-27560]]] defines <i>Consent Record</i> as the documentation of information about a data subject's consent for the processing of their personal data in terms of the details about the processing as well as the interactions related to consent (e.g. giving or withdrawing it). Consent Records are an essential part of keeping records regarding whether consent has been obtained and is valid for processing, and to keep this information for correctly conducting processing relying on it. [[ISO-27560]] as well as regulatory requirements such as [[GDPR]] Article 7-1 require maintaining consent records where consent is used as the legal basis. While GDPR Article 7-1 only states that consent should be demonstrable, [[ISO-27560]] provides an information structure for how this information should be maintained and what processes should exist within an organisation in connection with it.</p>
-    <p>It is important to distinguish between a <i>Consent Record</i> with several relevant but distinct concepts. A consent record only refers to the information recorded regarding consent, whereas a <i>Consent Notice</i> refers to the notice and information provided to the data subject in order to inform them about the processing - such as while requesting consent. While there is a significant overlap between a consent record and a consent notice, there are key differences such as notices orienting information for human consumption (e.g. layering of dialogues to provide summaries and detailed descriptions) and dictating the manner in which consent is expressed (e.g. checkboxes for options and confirmation by clicking a button). In contrast, a consent record is not required to accurately reflect the manner in which this information was presented to the user, but to only record it in a manner that enables assessing whether the consent is given and if so for which processing activities.</p>
-    <p>This distinction is evident in [[[ISO-29184]]] being the standard for consent notices - which specifies what information should be present in a notice and the manner in which it is presented. In turn, [[ISO-27560]] only refers to notices to limit its scope to representing information necessary within a consent record. Therefore a consent record, despite containing a link to the notice, is not by itself sufficient to determine the <i>validity</i> of consent, and instead acts as the primary record containing information or links to information for conducting such assessments. Its primary purpose is therefore limited to provide an indication of the state of consent (e.g. request, given, terminated) for specific processing activities (e.g. which purpose, what recipients) and to document where additional information can be found on specific matters such as the notice shown when requesting consent.</p>
-    <p>A [[ISO-27560]] conformant consent record typically has the following sections representing relevant information:</p>
-    <ol>
-        <li>metadata about the consent record such as its identifier</li>
-        <li>the individual associated with the consent i.e. data subject</li>
-        <li>the subject of consent i.e. specifics of the processing of personal data</li>
-        <li>entities involved e.g. data controller and third parties</li>
-        <li>relevant contextual information e.g. notice, rights, restrictions</li>
-        <li>provenance of events associated with the consent e.g. given, withdrawn</li>
-    </ol>
-    <p>Under GDPR, the obligation to maintain records of consent is explicitly stated in Article 7-1 and Recital 42. This information includes, at a minimum, the identity of the Controller and the purposes of processing (Recital 42). Further Articles 13 and 14 dictate the information that must be provided to the data subject which includes recipients, transfers to third countries, data storage periods and conditions, existence of rights (including consent withdrawal), and specific information regarding processing such as the use of automated decision making or profiling.</p>
+    <p>In order to assess whether an instance of given consent is valid thus requires keeping records of information regarding how the consent was obtained i.e. the notice, and how the consent is being utilised i.e. the processing enabled through that consent. This same information is also required for the organisation to determine whether its processing activities should continue, e.g. depending on whether a particular user has given consent, and where different systems require this information, e.g. different processes using their own technologies to store and check consent. Such information that is documented and maintained regarding consent is called a <i>Consent Record</i>.</p>
 
-    <h3>Consent Receipts</h3>
-    <p>[[ISO-27560]] defines a consent receipt as an authoritative document that is used to communicate the existence of a consent record or to provide information contained within it. It is effectively an 'authoritative copy' of a consent record provided by one entity to another, where it may contain all, some, or no information from the consent record regarding the consent and its relevance to processing activities. Such receipts may be useful to communicate the existence of consent decisions, or enable entities to exercise of rights or raise issues and complaint regarding processing activities.</p>
-    <p>Consent receipts are a relatively newer and under-utilised practice, with no legal requirements existing that refer to the concept (or receipts) or state how they should be used. [[ISO-27560]] follows this by leaving it up to the organisations to decide how they want to implement receipts and what information is be provided through it. It defines a minimal structure consisting of some fields representing the receipt metadata, but does not have any requirements on the information within the receipt or its correspondence to fields within the record.</p>
-    <p>A [[ISO-27560]] conformant consent receipt only requires a metadata section providing information about the consent receipt such as its identifier. Deciding on which additional information is to be provided and in what forms and using which structures is left up to implementing entities. In this guide, we presume that the consent receipt is intended for providing a copy of all information within the consent record.</p>
-    <div class="note" title="Can only Controllers maintain Consent Records and provide Consent Receipts?">
-        <p>According to [[ISO-27560]], records are generated and maintained by organisations (Controller, Third Party), and are utilised to provide receipts to a Data Subject. In contrast, the Kantara Consent Receipts specification [ref], upon which [[ISO-27560]] is based, defines Consent Receipts as being provided by a Data Subject to a Controller.</p>
-        <p>For this document and the general use of DPV, we make no presumptions or enact restrictions on the use of records and receipts. Any entity, be it a Controller or a Data Subject, can maintain their own consent record or issue receipts. Though the phrasing of some sections may imply the Controller as the implementing entity, it does not preclude another entity from also implementing [[[ISO-27560]]].<p>
-    </div> -->
+    <p>Where the information is to be communicated to another entity, it can be provided in the form of a <i>Consent Receipt</i>, which is an authoritative copy of the consent record - similar to how a shopping transaction invovles a merchant's copy and a <i>receipt</i> provided to the customer. While consent records have been maintained by organisations for some time now, the issuing of consent receipts is a relatively new activity.</p>
 
+    <p>[[[ISO-27560]]] is a <a href="https://www.iso.org/deliverables-all.html#TS"><i>Technical Specification</i> (TS)</a> that "specifies an interoperable, open and extensible information structure" for recording the data subject's consent to processing of their personal data i.e. as consent records, and to provide this information i.e. as consent receipts. The specification lists <i>information fields</i> that represent specific information associated with consent, and requirements over the form this information can take e.g. format, number of values, and whether it is mandatory or optional to be present. A <i>[[ISO-27560]] conformant</i> implementation is one that fulfils all requirements by either storing information in the form prescribed by [[ISO-27560]], or by storing information in a form that can be converted or transformed to fulfil its requirements.</p>
+
+    <p>[[ISO-27560]] allows for changes to made to the fields, for example to suit and match domain-specific labels or descriptions, or to introduce additional fields or information types that are needed. Such changes, expressed as <i>schemas</i> or <i>profiles</i>, are still required to be compatible with the requirements of [[ISO-27560]], such as by requiring the same fields to be mandatory. This document, referred to as [[DPV-27560]], is a schema or profile of [[ISO-27560]], and is intended to enable the use of [[DPV]] to represent information for the implementation of consent records and receipts.</p>
+
+    </section>
+
+    <section id="objectives">
+        <h3>Objectives</h3>
+        <p>The following are the objectives of this document:</p>
+        <ol>
+            <li>To introduce [[[ISO-27560]]] for [[[DPV]]] audiences.</li>
+            <li>To provide a mapping of [[ISO-27560]] to [[DPV]] concepts.</li>
+            <li>To define [[DPV-27560]] as a schema or profile of [[ISO-27560]] that uses [[DPV]] concepts to represent information.</li>
+            <li>To provide examples and guidance for the use of [[DPV-27560]].</li>
+        </ol>
+    </section>
+
+    <section id="scope">
+        <h3>Scope</h3>
+        <p>The scope of this document is defined as follows:</p>
+        <ul>
+            <li>The implementation of [[DPV-27560]] is limited to information represented within a consent record, and the information on how a notice is provided or matching the contents of a notice to that of a consent record is outside the scope. Those interested in notices should refer to [[[DPV-29184]]].</li>
+            <li>[[DPV-27560]], like [[ISO-27560]] and [[DPV]] is intended to be jurisdiction-agnostic. Use of specific jurisdictional concepts and requirements such as those provided in this document for [[GDPR]] require the use of appropriate DPV extensions such as [[DPV-GDPR]].</li>
+            <li>[[DPV-27560]] is limited to the representation of information as defined by [[ISO-27560]]. The security, communication, and maintainence of this information is outside the scope of this document.</li>
+            <li>[[DPV-27560]], like [[ISO-27560]], is intended to facilitate interoperability of information and to ensure the required information is available in a form that can be used for its verification of conformance and compliance. Information described using [[DPV-27560]] can be maintained in a compatible form by an organisation for purposes such as alignment with internal terminology, processes, and technologies. Describing such compatible implementations beyond the guidance provided is outside the scope of this document.</li>
+        </ul>
+    </section>
+
+    <section id="terminology">
+        <h3>Terminology</h3>
+        <p>The terminology used in [[ISO-27560]], [[GDPR]], and [[DPV]] differ in <i>terms or labels</i> used, but largely represent the same <i>semantic concepts</i>. This guide uses the [[DPV]] terminology unless referring to specific fields or terms used in a particular document. To assist with understanding and applying the terminologies across these three sources, [[[#terms]]] provides a summary table mapping the terms.</p>
+    </section>
+
+</section>
+
+<section id="dpv-consent">
+    <h2>Overview of Consent in DPV</h2>
+    <p>The concepts <a href="https://w3id.org/dpv#ConsentRecord">`Consent Record`</a> and <a href="https://w3id.org/dpv#ConsentReceipt">`Consent Receipt`</a> are defined in [[DPV]] as <a href="https://w3id.org/dpv#OrganisationalMeasure">`Organisational Measures`</a> to indicate using these as a 'good practice' to safeguard processing of personal data following the principles of transparency and accountability.</p>
+    <div class="issue" title="How to express ConsentRecord and associate it?">
+        <p>If Consent Records are a type of `OrganisationalMeasure`, then they can be associated using `hasOrganisationalMeasure`. Should more granular relations of `hasConsentRecord` and `hasConsentReceipt` be defined? Or should abstract relations `hasProcessingRecord` and `hasReceipt` be defined to also be reusable for other records (e.g. ROPA) and receipts (e.g. rights exercise receipts)?</p>
+    </div>
+    <p><a href="https://w3id.org/dpv#Consent">`Consent`</a> is a category of <a href="https://w3id.org/dpv#LegalBasis">`Legal Basis`</a> in [[DPV]], with specialised concepts extending it to describe types of consent, such as <a href="https://w3id.org/dpv#ExpressedConsent">`Expressed Consent`</a> and <a href="https://w3id.org/dpv#ExplicitlyExpressedConsent">`Explicitly Expressed Consent`</a>. To associate consent as a legal basis, the relation <a href="https://w3id.org/dpv#hasLegalBasis">`has Legal Basis`</a> is used with the appropriate consent concept.</p>
+    <p><a href="https://w3id.org/dpv#ConsentStatus">`Consent Status`</a> represents information regarding the stage at which the process of obtaining, using, and maintaining consent is currently at. DPV provides categories of statuses based on practical requirements, for example - <a href="https://w3id.org/dpv#ConsentRequested">`Consent Requested`</a>, <a href="https://w3id.org/dpv#ConsentGiven">`Consent Given`</a>, and <a href="https://w3id.org/dpv#ConsentWithdrawn">`Consent Withdrawn`</a>. To indicate the status of consent, the relation <a href="https://w3id.org/dpv#hasConsentStatus">`has Consent Status`</a> is used with the appropriate consent status concept.</p>
+    <p>To express how consent or an action associated with consent was indicated (or given or obtained), the relation <a href="https://w3id.org/dpv#hasIndicationMethod">`has Indication Method`</a> is used. To express the time, the relation <a href="https://w3id.org/dpv#isIndicationTime">`is Indication Time`</a> is used. To express the entity expressing the action, the relation <a href="https://w3id.org/dpv#isIndicatedBy">`is Indicated By`</a> is used.</p>
+    <p>To indicate details about the consent, such as which data subject it is about, or the processing activities and entities associated with it, the relevant concepts and relations are to be reused. For example, <a href="https://w3id.org/dpv#hasDataSubject">`has Data Subject`</a> relation with <a href="https://w3id.org/dpv#DataSubject">`Data Subject`</a> concept indicates the data subject or individual who is the subject of the consent. Similarly, <a href="https://w3id.org/dpv#hasPurpose">`has Purpose`</a> with <a href="https://w3id.org/dpv#Purpose">`Purpose`</a> indicates the purpose of processing personal data, and <a href="https://w3id.org/dpv#hasDataController">`has Data Controller`</a> with <a href="https://w3id.org/dpv#DataController">`Data Controller`</a> indicates the entity responsible for the processing. Further information on the concepts and relations relevant to [[ISO-27560]] is summarised in [[[#terms]]], and is provided in [[DPV]] specification.</p>
+    <p>
 </section>
 
 <section id="27560-overview">
     <h2>Overview of 27560</h2>
 
-    <h3>Goals</h3>
+    <h3>Goals &amp; Scope</h3>
+    <p>[[[ISO-27560]]] has two broad goals: to guide the recording of information about consent for processing of personal data in a form that is interoperable, open, and extendable, and to provide information to individuals. To supplement this, it defines several requirements (as <i>controls</i> in ISO terminology) for ensuring the required information is maintained and is supported by appropriate processes within the organisation. [[ISO-27560]] is stated as a supplement to the earlier [[[ISO-29184]]], where [[ISO-29184]] defines how information is provided via notices in order to request consent, and [[ISO-27560]] defines how information is recorded for given consent and provided back to the individual (as receipts).</p>
+    <p>The objective of [[ISO-27560]] is to define an information structure for consent record which contains information about: (1) Personal data associated with processing activities; (2) Notices describing the processing activities; (3) Sources of data with methods and timestamps for how it was obtained; and (4) When consent was given. It also defines the information structure for the optional provision of this information or a reference to this information - to the data subject in the form of a consent receipt.</p>
+    <p>Specific implementations and considerations are defined to be out of scope and as 'implementation details'. Annexes in [[ISO-27560]] provide informative guidance on: Performance and efficiency considerations (Annex C), Format and encoding structures (Annex D), Security of records and receipts (Annex E), and application in PIMS or privacy information management systems (Annex G). Further uses of consent records or receipts, such as how data subjects can obtain consent receipts or maintain their own consent records - it not within the scope of [[ISO-27560]].</p>
 
-    <h3>Scope</h3>
+    <h3>Structure</h3>
+    <p>Most of [[ISO-27560]] describes the information and fields in a <i>Consent Record</i>, which are reused in the section for <i>Consent Receipt</i>. A Consent Record contains four sections as described below and depicted visually in the figure:</p>
+    <ol>
+        <li><strong>Header:</strong> metadata about the record e.g. its unique identifier and timestamp of creation.</li>
+        <li><strong>Processing:</strong> information about the processing activities e.g. purposes, personal data.</li>
+        <li><strong>Parties:</strong> information about entities involved in the processing e.g. controllers.</li>
+        <li><strong>Events:</strong> information about <i>consent events</i> e.g. consent given, consent withdrawn.</li>
+    </ol>
+    <figure>
+        <img src="dpv-27560-summary.png">
+        <figcaption>Summary of fields in ISO/IEC TS 27560:2023. The field names have been modified for alignment with DPV concepts. Field names in bold are required to be present.</figcaption>
+    </figure>
+    <p>Each section contains fields which describe the information that must be represented along with the form (e.g. timestamp format) and its necessity (e.g. required or optional). Certain fields are expressed as references to other fields (e.g. controller in Processing is a reference to a value in Parties).</p>
 
-    <h3>Header section</h3>
+    <!-- <h3>Header section</h3> -->
 
-    <h3>Processing section</h3>
+    <!-- <h3>Processing section</h3> -->
 
-    <h3>Parties section</h3>
+    <!-- <h3>Parties section</h3> -->
 
-    <h3>Events section</h3>
+    <!-- <h3>Events section</h3> -->
 
-    <h3>Examples</h3>
+    <h3>Consent Receipt</h3>
+    <p>The Consent Receipt in [[ISO-27560]] contains only two required fields representing a unique identifier for the receipt and the schema version used for the structuring of information. The information and contents are undefined and left to each implementor to specify. A receipt can optionally contain the entirety of the information within a consent record or can also multiple records or contain other information not within a record. Alternatively, a receipt can contain references to information within a record without containing the information itself e.g. as the consent record identifier.</p>
 
 </section>
 
@@ -556,57 +626,180 @@
     </table>
 </section>
 
-<section id="27560-dpv-record">
-    <h2>27560-DPV Records</h2>
-    <p class="issue" title="27560 record fields implemented using DPV"></p>
-    <h3>Overview</h3>
-    <p>A consent record, as defined earlier, is a documentation of information associated with consent. In [[ISO-27560]], a consent record contains four sections: <i>header</i> for specifying metadata regarding the record, <i>processing</i> containing information regarding the processing activities associated with that consent, <i>parties</i> for information on involved entities, and <i>events</i> for provenance of activities associated with that consent.</p>
-    <p class="issue" title="Note on 27560 sections not being present in DPV">
-    <p>In [[DPV]], the concept <code>ConsentRecord</code> represents a consent record. Due to way DPV is utilised and expressed (e.g. RDF graph, JSON) - there is no necessity to replicate the four sections of [[ISO-27560]] as information is linked and expressed as a single graph. Therefore, the DPV implementation using <code>ConsentRecord</code> only requires the existence of mandatory information fields and ignores the structuring into sections.</p>
+<section id="dpv-27560-record">
+    <h2>DPV-27560 Consent Record</h2>
+    <p>The IRI `https://w3id.org/dpv/schema/iso-27560` defines the [[DPV-27560]] as a schema or profile for [[ISO-27560]].</p>
+    <div class="note" title="DPV's modelling of information as graphs and absence of 27560 'sections'">
+        <p>Due to way DPV is utilised and expressed (e.g. RDF graph, JSON) - there is no necessity to replicate the four sections of [[ISO-27560]] as information is linked and expressed as a single graph. Therefore, the DPV implementation ignores the structuring into sections.</p>
+    </div>
 
-    <h3>Header Fields</h3>
+    <h3>Record Metadata</h3>
     <p class="issue" title="Table mapping 27560 header fields to DPV"></p>
-    <p>The header fields represent metadata about the record and includes the following 3 fields:</p>
+    <p>Information representing the metadata in the header field containing information about the record:</p>
         <h4>Schema Version</h4>
-            <p>the schema used to interpret the record and its information. For DPV, this is represented using <code>dct:conformsTo</code> with a reference to the schema ID or IRI. To represent the DPV consent record schema, the value of this field should be <code>https://w3id.org/dpv/schema/27560-record</code>. To represent the DPV GDPR consent record schema, the value of this field should be <code>https://w3id.org/dpv/schema/27560-GDPR-record</code>.</p>
-            <p>This field MUST be present.</p>
+            <p>This field <strong>MUST</strong> be present.</p>
+            <p>The specific version of the schema (`schema_version` in [[ISO-27560]]) used to interpret the record and its information, indicated using <code>dct:conformsTo</code> with the corresponding IRI from [[[#namespaces]]]. Future changes to the schema will result in suffixes to this IRI e.g. `iso-27560-v2`. To indicate conformance with specific requirements such as from GDPR, a separate schema or profile IRI must be utilised, as seen in [[[#namespaces]]].</p>
 
-            <aside class="example" title="schema version">
-                <p>Using schema version</p>
-                <pre><code>schema version</code></pre>
+            <aside class="example" title="Example specifying schema version">
+                <p>Using the 'default' schema version representing conformance with [[ISO-27560]]:</p>
+                <pre><code>{
+    "@id": "https://example.com/UNIQUE-ID",
+    "@type": "dpv:ConsentRecord",
+    "dct:conformsTo": "https://w3id.org/dpv/schema/iso-27560"
+}</code></pre>
+                <p>Using the 'GDPR' schema version representing conformance with [[GDPR]] requirements e.g. information to be maintained as per Article 13 and Article 14:</p>
+                <pre><code>{
+    "@id": "https://example.com/UNIQUE-ID",
+    "@type": "dpv:ConsentRecord",
+    "dct:conformsTo": "https://w3id.org/dpv/schema/iso-27560-GDPR"
+}</code></pre>
             </aside>
 
         <h4>Record Identifier</h4>
-            <p>the unique identifier for this record. For DPV, this is represented using <code>dct:identifier</code> with a UUID-4 string as value. This field MUST be present in both [[27560]] and the DPV implementation.</p>
+            <p>This field <strong>MUST</strong> be present.</p>
+            <p>The unique identifier (`record_id` in [[ISO-27560]]) associated with this record, indicated using <code>dct:identifier</code>. This can be a [[ISO-27560]] recommended UUID-4 string or an IRI.</p>
+            <div class="note" title="Identifier vs IRI">
+                <p>Even if the IRI or `@id` field represents a unique identifier, this information must be specified using `dct:identifier` as the IRI may refer to a copy or alternate location of the same record.</p>
+            </div>
 
-            <aside class="example" title="record identifier">
-                <p>Using schema version</p>
-                <pre><code>schema version</code></pre>
+            <aside class="example" title="Example specifying unique record identifier">
+                <p>Using UUID-4 without IRI:</p>
+                <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dct:identifier": "a6f58318-72e6-46a2-bfd7-f36d795e30cd"
+}</code></pre>
+                <p>Using UUID-4 with IRI:</p>
+                <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dct:identifier": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd"
+}</code></pre>
             </aside>
 
         <h4>Data Subject</h4>
-            <p> the reference to data subject (pii principal id in [[ISO-27560]]) the consent record is about. For DPV, this is represented using <code>dpv:hasDataSubject</code> with an instance of <code>DataSubject</code> or a reference or identifier to an instance. This field MUST be present in both [[27560]] and the DPV implementation.</p>
+            <p>This field <strong>MUST</strong> be present.</p>
+            <p>The data subject (`pii_principal_id` in [[ISO-27560]]) associated with the consent (record), indicated using <code>dpv:hasDataSubject</code>. The data subject can be represented by an instance of <code>dpv:DataSubject</code> or an identifier.</p>
 
-            <aside class="example" title="data subject">
-                <p>Using schema version</p>
-                <pre><code>schema version</code></pre>
+            <aside class="example" title="Example specifying data subject">
+                <p>Using an IRI referring to an instance of `dpv:DataSubject` (this is best practice):</p>
+                <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasDataSubject": "https://example.com/data-subject-id"
+}</code></pre>
+                <p>Using an ad-hoc instance of `dpv:DataSubject` that also specifies the email used to identify the data subject (this is best practice for portable self-contained records). Alternatively, the email may also be directly used as the identifier - though this is not recommended as it does not suit data protection by design:</p>
+                <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasDataSubject": {
+        "@id": "https://example.com/data-subject-id",
+        "@type": "dpv:DataSubject",
+        "dct:identifier": "jane.doe@example.com"
+    }
+}</code></pre>
+                <p>Using an identifier that can be interpreted implicitly as an instance of `dpv:DataSubject`:</p>
+                <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasDataSubject": "a6f58318-72e6-46a2-bfd7-f36d795e30cd"
+}</code></pre>
             </aside>
 
-    <h3>Processing Fields</h3>
-    <p class="issue" title="Table mapping 27560 processing fields to DPV"></p>
-    <p class="issue" title="Should examples be added for each field?"></p>
-    <p>[[ISO-27560]] contains 22 fields related to processing activities, and 5 additional fields regarding personal data involved in processing. The structuring of these fields within [[ISO-27560]] is of the form where the "PII Processing" section contains an array of "purposes" where each "purpose" is expressed with its own fields regarding legal basis, collection method, storage locations, and so on. Within the DPV implementation, this is replicated using <code>PersonalDataHandling</code> instances. Therefore, each of the below specified fields are used through an instance of <code>PersonalDataHandling</code>.</p>
-        <h4>purpose</h4>
+    <section>
+        <h3>Notice Fields</h3>
+        <p>These fields refer to information about the notice that has been shown to request consent. In [[ISO-27560]], these fields are part of the Processing section.</p>
+
+        <h4>Notice</h4>
+        <p>This field <strong>MUST</strong> be present.</p>
+        <p>Reference to the specific version of the notice (`privacy_notice` in [[ISO-27560]]) associated with consent, indicated using `dpv:hasNotice` and a reference to the notice or an instance of `dpv:ConsentNotice`. If there are multiple notices - then each must be indicated separately. Multiple notices can be associated where such notices are part of the same context e.g. shown one after the other, or where they are associated over time, e.g. one notice shown initially when requesting and another when re-confirming it at a later time.</p>
+        <div class="note" title="Distinction between Privacy Notice and Consent Notice">
+            <p>In DPV, the concepts `dpv:PrivacyNotice` and `dpv:ConsentNotice` have different intended meanings - a consent notice is a specific privacy notice associated with consent, most commonly providing information in order to request consent. Whereas, a privacy notice can also refer to other documents providing information, such as what is commonly called as 'privacy policy'. For the purposes of the consent record, both documents can be included, but `dpv:ConsentNotice` MUST be used when referring to the notice used for providing information for consent.</p>
+        </div>
+        <aside class="example" title="Example specifying notice associated with a consent record">
+                <p>Using a UUID-4 reference to the notice:</p>
+                <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasNotice": "a6f58318-72e6-46a2-bfd7-f36d795e30cd"
+}</code></pre>
+                <p>Using an ad-hoc instance of `dpv:ConsentNotice`. This has the benfit of representing other information such as the language used, date of validity for the notice, as well as the interactions performed by the data subject (out of scope for this document). A benefit of providing such information is its use in determining validity of consent e.g. where a notice's temporal coverage has expired and a new notice must be shown to confirm the existing consent (see next example):</p>
+                <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasNotice": {
+        "@id": "https://example.com/notices/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+        "@type": "dpv:ConsentNotice",
+        "dct:date": "2023-01-01",
+        "dct:language": "EN",
+        "dct:coverage": "2023-01-01/P12M"
+    }
+}</code></pre>
+                <p>Multiple instances of notices with different timestamps:</p>
+                <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasNotice": {
+        "@id": "https://example.com/notices/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+        "@type": "dpv:ConsentNotice",
+        "dct:date": "2022-01-01",
+        "dct:language": "EN",
+        "dct:coverage": "2022-01-01/P12M"
+    }, 
+    "dpv:hasNotice": {
+        "@id": "https://example.com/notices/a6f58318-72e6-46a2-bfd7-f36d795e30cd-2",
+        "@type": "dpv:ConsentNotice",
+        "dct:date": "2023-01-01",
+        "dct:language": "EN",
+        "dct:coverage": "2023-01-01/P12M"
+    }
+}</code></pre>
+            <p>Notices declared in the context of consent events (or statuses in DPV). The first status of `dpv:ConsentGiven` states the notice shown when first consent was given. The last status of `dpv:RenewedConsentGiven` states another notice shown when renewing or re-confirming the earlier given consent:</p>
+                <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasStatus": {
+        "@type": "dpv:ConsentGiven"
+        "dct:date": "2022-01-01",
+        "dpv:hasNotice": {
+            "@id": "https://example.com/notices/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+            "@type": "dpv:ConsentNotice",
+            "dct:language": "EN"
+        }
+    }, 
+    "dpv:hasStatus": {
+        "@type": "dpv:RenewedConsentGiven"
+        "dct:date": "2023-01-01",
+        "dpv:hasNotice": {
+            "@id": "https://example.com/notices/a6f58318-72e6-46a2-bfd7-f36d795e30cd-2",
+            "@type": "dpv:ConsentNotice",
+            "dct:language": "EN"
+        }
+    }
+}</code></pre>
+            </aside>
+
+        <h4>Notice Language</h4>
+        <p>This field <strong>MUST</strong> be present.</p>
+        <p>The language used in the communications regarding consent, such as the information provided within a notice. The language is indicated using `dct:language`, and it is recommende to use standardised notations for representing langauges such as the <a href="https://www.iso.org/iso-639-language-codes.html">ISO 639</a>.</p>
+        <p>For examples, please refer to [[[#notice]]] section.</p>
+
+    </section>
+    <h3>Processing Fields</h3> 
+    <p>[[ISO-27560]] contains 22 fields related to processing activities, and 5 additional fields regarding personal data involved in processing. The structuring of these fields within [[ISO-27560]] is of the form where the "PII Processing" section contains an array of "purposes" where each "purpose" is expressed with its own fields regarding legal basis, collection method, storage locations, and so on. Within the DPV implementation, this is replaced with <code>dpv:PersonalDataHandling</code> so that each instance represents a distinct processing activity with its fields e.g. purposes, personal data, recipients.</p>
+
+        <!-- TODO: RESUME HERE -->
+        <h4>Personal Data Handling</h4>
+        <p>This field <strong>MUST</strong> be present.</p>
+
+        <h4>Purpose</h4>
+        <p>This field <strong>MUST</strong> be present.</p>
             <p>the purpose of processing personal data, expressed in DPV using <code>hasPurpose</code> as an instance of <code>Purpose</code>. This field MUST be present in both [[27560]] and the DPV implementation.</p>
-        <h4>purpose type</h4>
+
             <p>the category of stated purpose, expressed in DPV by using concepts from <code>Purpose</code> taxonomy and associated with the purpose using <code>dct:type</code>. The purpose category provides a broad context to the purpose and aids in interoperability by providing a common framing through the taxonomy. This field MAY be present in [[ISO-27560]] implementations but MUST be present in DPV implementations.</p>
-        <h4>legal basis</h4>
-            <p>the legal basis (lawful basis in [[ISO-27560]] for processing of personal data. Though being a consent record, the legal basis field ensures that the processing is justified using consent, and also enables the consent record structure to be reused to other legal bases (e.g. contract) in the future. For the DPV implementation, this is expressed using <code>hasLegalBasis</code> with a concept from the <code>LegalBasis</code> taxonomy. For expressing jurisdiction specific legal basis, the appropriate extension should be used, for e.g. using consent types from [[DPV-GDPR]]. This field MAY be present in both [[ISO-27560]] and DPV implementation.</p>
-        <h4>data controller(s)</h4>
-            <p>the data controllers (pii controllers in [[ISO-27560]]) responsible for the specified processing activities, expressed in DPV by using <code>hasDataController</code> with instances of <code>DataController</code>. This field MUST be present in both [[ISO-27560]] and DPV implementations.</p>
-        <h4>service(s)</h4>
-            <p>the services this processing activities are part of or assist with, expressed in DPV using <code>hasService</code> and an instance of <code>Service</code>.<div class="issue" title="Service is a proposed concept in DPV"></div> This field MAY be present in both [[ISO-27560]] and DPV implementations.</p>
+
         <h4>personal data</h4>
+            <p>This field <strong>MUST</strong> be present.</p>
             <p>the personal data (pii information in [[ISO-27560]]) associated with processing activities, expressed in DPV using <code>hasPersonalData</code> with <code>PersonalData</code>. This field MUST be present in both [[ISO-27560]] and DPV implementations. In [[ISO-27560]], the personal data fields are additionally describe the nature of personal data as follows:</p>
 
             <div class="issue" title="Using dct:type to specify categories instead of rdf:type">
@@ -618,26 +811,45 @@
             <li><b><i>sensitive personal data</i></b>: whether the personal data is considered sensitive (sensitive pii category in [[ISO-27560]]), denoted in DPV by using <code>dct:type</code> with value <code>SensitivePersonalData</code>. This field MAY be present in both [[ISO-27560]] and DPV implementations.</li>
             <li><b><i>special category personal data</i></b>: whether the personal data belongs to one of special categories based on jurisdictional regulations such as GDPR (special pii category in [[ISO-27560]]). It is expressed in DPV implementations by using <code>dct:type</code> with value <code>SpecialCategoryPersonalData</code>. This field MAY be present in both [[ISO-27560]] and DPV implementations.</li>
         </ul>
-        <li><b><i>recipients</i></b>: </li>
-        <li><b><i>withdrawal method</i></b>: </li>
-        <li><b><i>data source(s)</i></b>: </li>
-        <li><b><i>collection method(s)</i></b>: </li>
-        <li><b><i>processing method(s)</i></b>: </li>
-        <li><b><i>retention period(s)</i></b>: </li>
-        <li><b><i>storage location(s)</i></b>: </li>
-        <li><b><i>processing location(s)</i></b>: </li>
-        <li><b><i>geographic restriction(s)</i></b>: </li>
-        <li><b><i>jurisdictions</i></b>: </li>
-        <li><b><i>rights</i></b>: </li>
-        <li><b><i>code of conduct(s)</i></b>: </li>
-        <li><b><i>impact assessment(s)</i></b>: </li>
-        <li><b><i>privacy notice(s)</i></b>: <ol type="a">
-            <li><b><i>type</i></b>: </li>
-            <li><b><i>language</i></b>: </li>
-            <li><b><i>timestamp</i></b>: </li>
-        </ol></li>
-    </ol>
-    <h3>Parties Fields</h3>
+
+        <h4>Processing Operations</h4>
+        <p>This field <strong>MUST</strong> be present.</p>
+        <p>This field <strong>MUST</strong> be present.</p>
+
+        <h4>Data Controller(s)</h4>
+            <p>This field <strong>MUST</strong> be present.</p>
+            <p>the data controllers (pii controllers in [[ISO-27560]]) responsible for the specified processing activities, expressed in DPV by using <code>hasDataController</code> with instances of <code>DataController</code>. This field MUST be present in both [[ISO-27560]] and DPV implementations.</p>
+
+        <h4>Legal Basis</h4>
+            <p>This field <strong>MUST</strong> be present.</p>
+            <p>the legal basis (lawful basis in [[ISO-27560]] for processing of personal data. Though being a consent record, the legal basis field ensures that the processing is justified using consent, and also enables the consent record structure to be reused to other legal bases (e.g. contract) in the future. For the DPV implementation, this is expressed using <code>hasLegalBasis</code> with a concept from the <code>LegalBasis</code> taxonomy. For expressing jurisdiction specific legal basis, the appropriate extension should be used, for e.g. using consent types from [[DPV-GDPR]]. This field MAY be present in both [[ISO-27560]] and DPV implementation.</p>
+        
+        <h4>Recipients</h4>
+            <p>This field <strong>MUST</strong> be present.</p>
+        <h4>Consent Withdrawal</h4>
+            <p>This field <strong>MUST</strong> be present.</p>
+
+        <h4>Jurisdiction(s)</h4>
+            <p>This field <strong>MUST</strong> be present.</p>
+
+        <h4>Rights</h4>
+
+        <h4>Service(s)</h4>
+            <p>the services this processing activities are part of or assist with, expressed in DPV using <code>hasService</code> and an instance of <code>Service</code>.<div class="issue" title="Service is a proposed concept in DPV"></div> This field MAY be present in both [[ISO-27560]] and DPV implementations.</p>
+        <h4>Code of conduct(s)</h4>
+        <h4>Impact assessment(s)</h4>
+
+    <h3>Processing Fields</h3>
+
+        <h4>data source(s)</h4>
+        <h4>collection method(s)</h4>
+        <h4>processing method(s)</h4>
+        <h4>retention period(s)</h4>
+        <h4>storage location(s)</h4>
+        <h4>processing location(s)</h4>
+        <h4>geographic restriction(s)</h4>
+
+    <h3>Entities Fields</h3>
     <ol>
         name
         role
@@ -648,13 +860,12 @@
         phone
 
     </ol>
-    <h3>Events Fields</h3>
-
-    <h3>Examples</h3>
+    <h3>Consent Events Fields</h3>
 
     <h3>Conformance</h3>
 
-    <h3>Profiles</h3>
+    <h3>Examples</h3>
+
 </section>
 
 <section id="27560-dpv-receipt">
@@ -665,9 +876,12 @@
     <h3>Information in Receipt</h3>
     <h3>Examples</h3>
     <h3>Conformance</h3>
-    <h3>Profiles</h3>
 </section>
 
+<section>
+    <h2>Extending with Profiles</h2>
+    
+</section>
 <!-- <section id="examples">
     <h2>examples</h2>
     <p>source - <a href="https://github.com/coolharsh55/dpv-consent-record">github repo</a></p>
@@ -969,3 +1183,37 @@
 
 </body>
 </html>
+
+    <h3>Lifecycle of Consent</h3>
+    <p>Processing of personal data utilises <i>Consent</i> as one of the possible legal bases. In the current regulatory environment, such consent has to be <i>valid</i> according to several criterion such as <i>being informed</i>, <i>freely given</i>, and <i>being unambiguous</i>. For consent to be informed, the data subject must have been provided or be aware of relevant information regarding the processing of personal data, typically through a <i>Consent Notice</i>, which describes the effect of their decision i.e. if consent is given which processing activities will take place, over which data, and who is involved in terms of entities. Other criterion, such as freely given and being unambiguous is determined through the manner in which this information is presented to request consent and how that consent is expressed.</p>
+    <p>Once a consent has been given by the individual, they may also have the ability to regulate its use by withdrawing it at a later time. Such termination of consent results in the halting of its associated processing activities. Other causes of termination can be the expiry of duration for which the consent would be considered valid, termination by the Controller, or the consent being declared invalid by an authority such as the court.</p>
+    <p>Based on these, a lifecycle can be charted regarding the various states that 'consent' can be stated to be in, which is essential to understand which states can be considered 'valid' for the processing of personal data. In the diagram below, consent states begin with a notice being shown to inform the individual and request their consent. Following this, the individual may make the decision to give or grant their consent, or to refuse it. If consent has been given, it can be re-confirmed or re-affirmed to assert its validity, or it can be terminated for several reasons such as its withdrawal by the individual. In all these, only when consent continues to be in a 'given' state can it be used to justify processing.</p>
+    <figure>
+        <img src="https://github.com/coolharsh55/dpv-consent-record/blob/master/lifecycle.png?raw=true">
+    </figure>
+
+    <p>Therefore, when creating records of consent - such as to demonstrate compliance, it is essential to not only have information regarding the processing activities governed by that consent, but to also have information which relates to determination of it being valid at a given time. This includes how the notice was provided, the <i>type</i> of consent that was expressed, and to associate these with relevant regulatory requirements that dictate the requirements for validity. In addition, changes to consent must also be recorded, whether they relate to an update to information resulting in a new notice, or the confirmation of an existing consent, or the termination of consent for reasons such as being withdrawn.</p>
+    
+    <h3>Consent Records</h3>
+    <p>[[[ISO-27560]]] defines <i>Consent Record</i> as the documentation of information about a data subject's consent for the processing of their personal data in terms of the details about the processing as well as the interactions related to consent (e.g. giving or withdrawing it). Consent Records are an essential part of keeping records regarding whether consent has been obtained and is valid for processing, and to keep this information for correctly conducting processing relying on it. [[ISO-27560]] as well as regulatory requirements such as [[GDPR]] Article 7-1 require maintaining consent records where consent is used as the legal basis. While GDPR Article 7-1 only states that consent should be demonstrable, [[ISO-27560]] provides an information structure for how this information should be maintained and what processes should exist within an organisation in connection with it.</p>
+    <p>It is important to distinguish between a <i>Consent Record</i> with several relevant but distinct concepts. A consent record only refers to the information recorded regarding consent, whereas a <i>Consent Notice</i> refers to the notice and information provided to the data subject in order to inform them about the processing - such as while requesting consent. While there is a significant overlap between a consent record and a consent notice, there are key differences such as notices orienting information for human consumption (e.g. layering of dialogues to provide summaries and detailed descriptions) and dictating the manner in which consent is expressed (e.g. checkboxes for options and confirmation by clicking a button). In contrast, a consent record is not required to accurately reflect the manner in which this information was presented to the user, but to only record it in a manner that enables assessing whether the consent is given and if so for which processing activities.</p>
+    <p>This distinction is evident in [[[ISO-29184]]] being the standard for consent notices - which specifies what information should be present in a notice and the manner in which it is presented. In turn, [[ISO-27560]] only refers to notices to limit its scope to representing information necessary within a consent record. Therefore a consent record, despite containing a link to the notice, is not by itself sufficient to determine the <i>validity</i> of consent, and instead acts as the primary record containing information or links to information for conducting such assessments. Its primary purpose is therefore limited to provide an indication of the state of consent (e.g. request, given, terminated) for specific processing activities (e.g. which purpose, what recipients) and to document where additional information can be found on specific matters such as the notice shown when requesting consent.</p>
+    <p>A [[ISO-27560]] conformant consent record typically has the following sections representing relevant information:</p>
+    <ol>
+        <li>metadata about the consent record such as its identifier</li>
+        <li>the individual associated with the consent i.e. data subject</li>
+        <li>the subject of consent i.e. specifics of the processing of personal data</li>
+        <li>entities involved e.g. data controller and third parties</li>
+        <li>relevant contextual information e.g. notice, rights, restrictions</li>
+        <li>provenance of events associated with the consent e.g. given, withdrawn</li>
+    </ol>
+    <p>Under GDPR, the obligation to maintain records of consent is explicitly stated in Article 7-1 and Recital 42. This information includes, at a minimum, the identity of the Controller and the purposes of processing (Recital 42). Further Articles 13 and 14 dictate the information that must be provided to the data subject which includes recipients, transfers to third countries, data storage periods and conditions, existence of rights (including consent withdrawal), and specific information regarding processing such as the use of automated decision making or profiling.</p>
+
+    <h3>Consent Receipts</h3>
+    <p>[[ISO-27560]] defines a consent receipt as an authoritative document that is used to communicate the existence of a consent record or to provide information contained within it. It is effectively an 'authoritative copy' of a consent record provided by one entity to another, where it may contain all, some, or no information from the consent record regarding the consent and its relevance to processing activities. Such receipts may be useful to communicate the existence of consent decisions, or enable entities to exercise of rights or raise issues and complaint regarding processing activities.</p>
+    <p>Consent receipts are a relatively newer and under-utilised practice, with no legal requirements existing that refer to the concept (or receipts) or state how they should be used. [[ISO-27560]] follows this by leaving it up to the organisations to decide how they want to implement receipts and what information is be provided through it. It defines a minimal structure consisting of some fields representing the receipt metadata, but does not have any requirements on the information within the receipt or its correspondence to fields within the record.</p>
+    <p>A [[ISO-27560]] conformant consent receipt only requires a metadata section providing information about the consent receipt such as its identifier. Deciding on which additional information is to be provided and in what forms and using which structures is left up to implementing entities. In this guide, we presume that the consent receipt is intended for providing a copy of all information within the consent record.</p>
+    <div class="note" title="Can only Controllers maintain Consent Records and provide Consent Receipts?">
+        <p>According to [[ISO-27560]], records are generated and maintained by organisations (Controller, Third Party), and are utilised to provide receipts to a Data Subject. In contrast, the Kantara Consent Receipts specification [ref], upon which [[ISO-27560]] is based, defines Consent Receipts as being provided by a Data Subject to a Controller.</p>
+        <p>For this document and the general use of DPV, we make no presumptions or enact restrictions on the use of records and receipts. Any entity, be it a Controller or a Data Subject, can maintain their own consent record or issue receipts. Though the phrasing of some sections may imply the Controller as the implementing entity, it does not preclude another entity from also implementing [[[ISO-27560]]].<p>
+    </div>
