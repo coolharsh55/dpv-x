@@ -788,17 +788,119 @@
     <h3>Processing Fields</h3> 
     <p>[[ISO-27560]] contains 22 fields related to processing activities, and 5 additional fields regarding personal data involved in processing. The structuring of these fields within [[ISO-27560]] is of the form where the "PII Processing" section contains an array of "purposes" where each "purpose" is expressed with its own fields regarding legal basis, collection method, storage locations, and so on. Within the DPV implementation, this is replaced with <code>dpv:PersonalDataHandling</code> so that each instance represents a distinct processing activity with its fields e.g. purposes, personal data, recipients.</p>
 
-        <!-- TODO: RESUME HERE -->
         <h4>Personal Data Handling</h4>
         <p>This field <strong>MUST</strong> be present.</p>
+        <p>`dpv:PersonalDataHandling` is a concept that represents a process or 'unit' for combining relevant details such as purposes, processing, personal data categories, recipients, and so on. Instances of `dpv:PersonalDataHandling` can be used to differentiate between information regarding processing - such as where different purposes are used or that lead to different recipients. Such instances can also be nested within other instances to create a 'modular' structuring of processing activities.</p>
+        <div class="note" title="Benefits of using `dpv:PersonalDataHandling`">
+            <p>Following the [[ISO-27560]] model requires creating a concept called 'purposes' and to utilise an array or a list to hold the associated 'purpose' instances. Given that DPV prefers a strict taxonomy expressed in a graph representation, following the same model would lead to non-intuitive structures. Further, other similar lists such as those for 'pii_type' also require creation of new concepts to represent groups or collections of the actual intended concepts.</p>
+        </div>
+        <div class="issue" title="Create Process as a subtype of PersonalDataHandling">
+            <p>The term 'Personal Data Handling' is non-intuitive and difficult to grasp. By contrast, the term 'Process' is commonly used and is intuitive. Therefore, a new concept called `Process` should be added, and for backwards compatibility be declared as a subtype of `PersonalDataHandling`. The existing relations benefit from this by use of phrasing such as "personal data associated with a process".</p>
+        </div>
+        <aside class="example" title="Example using Personal Data Handling">
+                <p>A single instance of Personal Data Handling:</p>
+                <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": {
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasPurpose": "dpv:Marketing",
+        "dpv:hasPersonalData": "dpv-pd:EmailAddress"
+    }
+}</code></pre>
+                <p>Using multiple instances of Personal Data Handling to separate purposes and associated personal data:</p>
+                <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": {
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasPurpose": "dpv:PaymentManagement",
+        "dpv:hasPersonalData": "dpv-pd:EmailAddress"
+    },
+    "dpv:hasPersonalDataHandling": {
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasPurpose": "dpv:IdentityVerification",
+        "dpv:hasPersonalData": "dpv-pd:OfficialID"
+    }
+}</code></pre>
+                <p>Using nested instances of Personal Data Handling to separate purposes and associated personal data within the larger instance. In this case, the processing activity is for the same purpose, but the personal data are being sent to different recipients. Alternatively, the same information could have been repeated within each instance to avoid nesting:</p>
+                <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": {
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasPurpose": "dpv:PaymentManagement",
+        "dpv:hasPersonalDataHandling": {
+            "@type": "dpv:PersonalDataHandling",
+            "dpv:hasPersonalData": "dpv-pd:EmailAddress",
+            "dpv:hasRecipient": "ex:CompanyA"
+        },
+        "dpv:hasPersonalDataHandling": {
+            "@type": "dpv:PersonalDataHandling",
+            "dpv:hasPurpose": "dpv:IdentityVerification",
+            "dpv:hasPersonalData": "dpv-pd:OfficialID",
+            "dpv:hasRecipient": "ex:CompanyB"
+        }
+    }
+}</code></pre>
+            </aside>
 
         <h4>Purpose</h4>
         <p>This field <strong>MUST</strong> be present.</p>
-            <p>the purpose of processing personal data, expressed in DPV using <code>hasPurpose</code> as an instance of <code>Purpose</code>. This field MUST be present in both [[27560]] and the DPV implementation.</p>
+            <p>The purpose of processing personal data, expressed in DPV using <code>hasPurpose</code> as an instance of <code>Purpose</code>.</p>
+            <p>[[ISO-27560]] has an additional field called 'purpose_type' that describes the category of the purpose. In DPV, this is declared by using concepts from the purpose along with `rdf:type`. For additional information, such as descriptions, relevant DCT relations should be used.</p>
+            <div class="note" title="Interpreting multiple purposes within a single context">
+                <p>Where multiple purposes are present within the same or single context, for example the consent record or a personal data handling instance, the interpretation is that they are all applicable for that context. For example, if a personal data handling instance contains 3 purposes - then it is presumed that the consent is for carrying out each of the 3 purposes.</p>
+                <p>To declare that ALL purposes must occur together i.e. they cannot be carried out independently, the appropriate semantic relations should be used to express this information - for e.g. by declaring the 3 required purposes as the 'type' for a new combined purpose.</p>
+                <p>Caution is advised when modelling consent as jurisdictional requirements such as those from GDPR e.g. Recital 32 states "Consent should cover all processing activities carried out for the same purpose or purposes. When the processing has multiple purposes, consent should be given for all of them.". This means all purposes listed within a record pertaining to a single consent are to be used with that single consent as the legal basis.</p>
+            </div>
+            <aside class="example" title="Example specifying Purpose">
+                <p>Specifying the purpose with type based on the DPV Purpose taxonomy and a description</p>
+                <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": {
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasPurpose": {
+            "@type": "dpv:Marketing",
+            "dct:description": "Sending newsletters to the customer"
+        },
+        "dpv:hasPersonalData": "dpv-pd:EmailAddress"
+    }
+}</code></pre>
+                <p>Specifying multiple purposes with separate types to indicate they both are applicable independently</p>
+                <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": {
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasPurpose": {
+            "@type": "dpv:Marketing",
+            "dct:description": "Sending newsletters to the customer"
+        },
+        "dpv:hasPurpose": {
+            "@type": "dpv:CommunicationManagement"
+        },
+        "dpv:hasPersonalData": "dpv-pd:EmailAddress"
+    }
+}</code></pre>
+                <p>Specifying a combined purpose with multiple types to indicate the purpose is required for all indicated categories:</p>
+                <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": {
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasPurpose": {
+            "@type": [ "dpv:Marketing", "dpv:CommunicationManagement" ],
+            "dct:description": "Sending newsletters to the customer"
+        },
+        "dpv:hasPersonalData": "dpv-pd:EmailAddress"
+    }
+}</code></pre>
+            </aside>
 
-            <p>the category of stated purpose, expressed in DPV by using concepts from <code>Purpose</code> taxonomy and associated with the purpose using <code>dct:type</code>. The purpose category provides a broad context to the purpose and aids in interoperability by providing a common framing through the taxonomy. This field MAY be present in [[ISO-27560]] implementations but MUST be present in DPV implementations.</p>
-
-        <h4>personal data</h4>
+        <!-- TODO: RESUME HERE -->
+        <h4>Personal Data</h4>
             <p>This field <strong>MUST</strong> be present.</p>
             <p>the personal data (pii information in [[ISO-27560]]) associated with processing activities, expressed in DPV using <code>hasPersonalData</code> with <code>PersonalData</code>. This field MUST be present in both [[ISO-27560]] and DPV implementations. In [[ISO-27560]], the personal data fields are additionally describe the nature of personal data as follows:</p>
 
