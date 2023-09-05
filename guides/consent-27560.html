@@ -899,20 +899,123 @@
 }</code></pre>
             </aside>
 
-        <!-- TODO: RESUME HERE -->
         <h4>Personal Data</h4>
             <p>This field <strong>MUST</strong> be present.</p>
-            <p>the personal data (pii information in [[ISO-27560]]) associated with processing activities, expressed in DPV using <code>hasPersonalData</code> with <code>PersonalData</code>. This field MUST be present in both [[ISO-27560]] and DPV implementations. In [[ISO-27560]], the personal data fields are additionally describe the nature of personal data as follows:</p>
-
-            <div class="issue" title="Using dct:type to specify categories instead of rdf:type">
-                <p>In the fields here, <code>dct:type</code> is used to denote types or categories, e.g. for purposes and personal data, instead of the typical RDF semantics which use <code>rdf:type</code>, <code>rdfs:subClassOf</code>, or even <code>skos:broader/skos:narrower</code>. This is because using any of these implies a specific interpretation of categories, which may not be compatible with the rest of the information. For example, expressing category using <code>rdf:type</code> would make it an instance of that category which it may not necessarily be. If a specific DPV profile is being used, then it can opt to use the appropriate semantic relation in addition to the one used here.</p></div>
-            <ul>
-            <li><b><i>type</i></b>: the type or category of personal data (pii type in [[ISO-27560]]), expressed in DPV using <code>dct:type</code>, and optionally using concepts from the [[DPV-PD]] taxonomy. This field MUST be present in both [[ISO-27560]] and DPV implementations.</li>
-            <li><b><i>identifier</i></b>: an identifier representing the data values or instances e.g. within a database, expressed in DPV using <code>dct:identifier</code>. This field MAY be present in both [[ISO-27560]] and DPV implementations.</li>
-            <li><b><i>necessity</i></b>: the necessity or optionality of this data (pii optional in [[ISO-27560]]) for the processing, expressed in DPV using <code>hasNecessity</code> and one of the provided instances of <code>Necessity</code>. This field MAY be present in both [[ISO-27560]] and DPV implementation, and its absence is to be interpreted as meaning the data is necessary.</li>
-            <li><b><i>sensitive personal data</i></b>: whether the personal data is considered sensitive (sensitive pii category in [[ISO-27560]]), denoted in DPV by using <code>dct:type</code> with value <code>SensitivePersonalData</code>. This field MAY be present in both [[ISO-27560]] and DPV implementations.</li>
-            <li><b><i>special category personal data</i></b>: whether the personal data belongs to one of special categories based on jurisdictional regulations such as GDPR (special pii category in [[ISO-27560]]). It is expressed in DPV implementations by using <code>dct:type</code> with value <code>SpecialCategoryPersonalData</code>. This field MAY be present in both [[ISO-27560]] and DPV implementations.</li>
-        </ul>
+            <p>The personal data ('pii information' in [[ISO-27560]]) involved in processing activities, associated using <code>dpv:hasPersonalData</code> and instances of <code>dpv:PersonalData</code>.</p>
+            <p>In [[ISO-27560]], the personal data fields are used to describe aspects of personal data as - type, identifier, optionality, being sensitive and being special category. In the DPV implementation, these are described as annotations or additional relations over the personal data instance.</p>
+            <h5>Personal Data Type</h5>
+            <p>The type or category of personal data ('pii type' in [[ISO-27560]]), expressed in DPV using <code>rdf:type</code>, and optionally using concepts from the [[DPV-PD]] taxonomy. This field <strong>MUST</strong> be present DPV either through an explicit declaration using <code>rdf:type</code> or through an implicit definition through use of [[DPV-PD]] taxonomy. </p>
+            <aside class="example" title="Example specifying personal data and its type">
+                <p>Personal data specified using [[DPV-PD]] concept</p>
+                <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": {
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasPersonalData": "dpv-pd:EmailAddress"
+    }
+}</code></pre>
+                <p>Personal data specified with type explicitly declared using [[DPV-PD]] concept. The benefit of this approach is that it enables additional annotations such as a description of the data, as well as associating identifiers with the data category.</p>
+                <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": {
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasPersonalData": {
+            "@type": "dpv-pd:EmailAddress",
+            "dct:description": "The customer's email address"
+        }
+    }
+}</code></pre>
+            </aside>
+            <h5>Personal Data Identifier</h5>
+            <p>The identifier representing the data values or instances e.g. within a database, expressed in DPV using <code>dct:identifier</code>. This field MAY be present.</p>
+            <aside class="example" title="Example specifying identifier of personal data">
+                <p>Here, the identifier refers to a row ID within some internal database. The use of identifier in this case is to avoid exposing the actual email address within the consent record.</p>
+                <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": {
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasPersonalData": {
+            "@type": "dpv-pd:EmailAddress",
+            "dct:identifier": "MDA5-hashed-email-address"
+        }
+    }
+}</code></pre>
+            </aside>
+            <h5>Personal Data Necessity</h5>
+            <p>The necessity or optionality of this data ('pii optional' in [[ISO-27560]]) for the processing, expressed in DPV using <code>hasNecessity</code> and one of the provided instances of <code>Necessity</code>. This field MAY be present. If this field is absent, it should be inferred as the data being necessary.</p>
+            <aside class="example" title="Example specifying identifier of personal data">
+                <p>Here, the identifier refers to a row ID within some internal database. The use of identifier in this case is to avoid exposing the actual email address within the consent record.</p>
+                <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": {
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasPersonalData": [{
+            "@type": "dpv-pd:EmailAddress",
+            "dpv:hasNecessity": "dpv:Required"
+        }, {
+            "@type": "dpv-pd:Name",
+            "dpv:hasNecessity": "dpv:Optional"
+        }]
+    }
+}</code></pre>
+                <p>Necessity (or Optionality) can also be expressed at broader contexts, such as for the entire personal data handling instance. This has the advantage over [[ISO-27560]] in that some purpose or processing could also be stated to be necessary or optional. In such cases, the expressed necessity is to be applied to ALL concepts within that instance. In the below example, the first instance has both purpose (communication) and personal data (email) as required or necessary, and the second has both (marketing, name) as optional.</p>
+                <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": [{
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasNecessity": "dpv:Required",
+        "dpv:hasPurpose": "dpv:CommunicationManagement",
+        "dpv:hasPersonalData": {"@type": "dpv-pd:EmailAddress"}
+    }, {
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasNecessity": "dpv:Optional",
+        "dpv:hasPurpose": "dpv:Marketing",
+        "dpv:hasPersonalData": {"@type": "dpv-pd:Name"}
+    }]
+}</code></pre>
+                <p>In the absence of a necessity statement, the default interpretation should be that the necessity is <code>dpv:Required</code>. In the below example, both instances have the necessity required even when only one of them explicitly declares it. As good practice, it is always better to specify the necessity explicitly to avoid confusion.</p>
+                <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": [{
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasNecessity": "dpv:Required",
+        "dpv:hasPurpose": "dpv:CommunicationManagement",
+        "dpv:hasPersonalData": {"@type": "dpv-pd:EmailAddress"}
+    }, {
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasPurpose": "dpv:Marketing",
+        "dpv:hasPersonalData": {"@type": "dpv-pd:Name"}
+    }]
+}</code></pre>
+            </aside>
+            <h5>Sensitive and Special Category</h5>
+            <p>Indicates whether the personal data is considered sensitive ('sensitive pii category' in [[ISO-27560]]), and separately whether it is also of special category ('special pii category' in [[ISO-27560]]). Declaring either in DPV is done using <code>rdf:type</code> with value <code>SensitivePersonalData</code> or <code>SpecialCategoryPersonalData</code>. This field MAY be present. Its absence indicates the data does not belong to either sensitive or special categories.</p>
+            <aside class="example" title="Example specifying personal data belonging to sensitive and special categories">
+                <p>Being sensitive or special category is equivalent to defining it as the 'type' of data in DPV. Therefore, the notation for declaring type and sensitive is the same. In the below example, the first instance is sensitive, the second of special category, and the third is neither.</p>
+                <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": {
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasPersonalData": [{
+            "@type": ["dpv-pd:Location","dpv:SensitivePersonalData"],
+            "dct:identifier": "The user's real-time GPS location"
+        }, {
+            "@type": ["dpv-pd:MedicalHealth","dpv:SpecialCategoryPersonalData"],
+            "dct:identifier": "The user's health records from their local GP"
+        }, {
+            "@type": "dpv-pd:Email",
+            "dct:identifier": "The user's provided email address"
+        }]
+    }
+}</code></pre>
+            </aside>
 
         <h4>Processing Operations</h4>
         <p>This field <strong>MUST</strong> be present.</p>
