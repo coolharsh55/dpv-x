@@ -1284,9 +1284,10 @@
 
         <h5>Geographic Restriction(s)</h5>
         <p>This field MAY be present.</p>
-        <p>Geographic restrictions are defined in [[ISO-27560]] as restrictions related to geo-locations or jurisdictions. While DPV prefers a declarative interpretation where, for e.g., if processing location is mentioned as EU then it implies that processing will only take place within EU. If the intention is to explicitly state this as a restriction, it can utilise the <code>dpv:Rule</code> concept which provides (simplified) Permissions, Prohibitions, and Obligations. For further expressivity or complexity, specifications such as [[[odrl-model]]] should be considered.</p>
-        <aside class="example" title="Example specifying conditions regarding storage of data in terms of location, duration, and retention">
-            <p>An example for expressing that processing must take place within EU. Note that DPV's concepts do not support expressing negations i.e. we cannot state processing must <i>not</i> take place within <i>non-EU</i> locations. An alternative to this can be not expressing the information in a machine-readable form - as in the second rule - which is not desirable, or preferably to utilise an appropriate vocabulary such as [[ODRL]].</p>
+        <p>Geographic restrictions are defined in [[ISO-27560]] as restrictions related to geo-locations or jurisdictions. While DPV prefers a declarative interpretation where, for e.g., if processing location is mentioned as EU then it implies that processing will only take place within EU since no other locations are mentioned. If the intention is to explicitly state this as a restriction, it can utilise the <code>dpv:Rule</code> concept which provides (simplified) Permissions, Prohibitions, and Obligations. For further expressivity or complexity, specifications such as [[[odrl-model]]] should be considered.</p>
+        <p>Note that while [[ISO-27560]] only considers restrictions over geographic locations for processing (including storing), DPV (and ODRL)support specifying information and restrictions over a much wider range of concepts. In theory, restrictions can be expressed over any concept or combination of concepts.</p>
+        <aside class="example" title="Example specifying geographic restrictions on the processing of personal data">
+            <p>The below example expresses that data must be stored within EU. Note that DPV's concepts do not support expressing negations i.e. we cannot state data must <i>not</i> be stored within <i>non-EU</i> locations. Also note the ambiguity in interpreting DPV's obligation as meaning either data must only be stored in EU or must at least be stored in EU (in addition to elsewhere). An alternative to this is to utilise an appropriate vocabulary such as [[ODRL]] - as in the second rule below, or as a last resort to use plain text - which is less desirable.</p>
             <pre><code>{
     "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
     "@type": "dpv:ConsentRecord",
@@ -1294,57 +1295,189 @@
         "@type": "dpv:PersonalDataHandling",
         "dpv:hasRule": [{
             "@type": "dpv:Obligation",
-            "dpv:hasLocation": "loc:EU"
-        }, {
-            "@type": "dpv:Prohibition",
-            "dct:description": "Processing in Non-EU locations is not allowed"
+            "dpv:hasLocation": "loc:EU",
+            "dpv:hasProcessing": "dpv:Store",
         }, {
             "@type": ["dpv:Prohibition", "odrl:Prohibition"],
             "rdfs:comment": "Use ODRL concepts here"
+        }, {
+            "@type": "dpv:Prohibition",
+            "dpv:hasProcessing": "dpv:Store"
+            "dct:description": "Storing in Non-EU locations is NOT allowed"
         }]
     }
 }</code></pre>
 </aside>
 
         <h4>Data Controller(s)</h4>
-            <p>This field <strong>MUST</strong> be present.</p>
-            <p>the data controllers (pii controllers in [[ISO-27560]]) responsible for the specified processing activities, expressed in DPV by using <code>hasDataController</code> with instances of <code>DataController</code>. This field MUST be present in both [[ISO-27560]] and DPV implementations.</p>
+        <p>This field <strong>MUST</strong> be present.</p>
+        <p>Indicates the Data Controllers (pii controllers in [[ISO-27560]]) responsible for the specified processing activities, expressed in DPV  using <code>hasDataController</code> with instances of <code>DataController</code>.</p>
+        <p>Note that the notion of a 'Controller' is regarding accountability, and does not necessarily correlate with who performs the processing or has access to data - for example in GDPR. To indicate who performs the processing, DPV provides <code>dpv:isImplementedByEntity</code>.</p>
+        <p>Information about the Data Controller, such as its name or address, is described through the <i>Entity Fields</i> later in the document based on a similar structure in [[ISO-27560]].</p>
+        <aside class="example" title="Example specifying Data Controllers">
+            <p>The below examples show processing where a single entity acts as the data controller for all of the processing (represented using <code>PersonalDataHandling</code>, and extends it to show how  different controllers can be associated for different processing activities.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": [{
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasPurpose": "dpv:IdentityVerification",
+        "dpv:hasDataController": "ex:Acme"
+    }, {
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasPurpose": "dpv:ServiceProvision",
+        "dpv:hasDataController": "ex:Beta"
+    }]
+}</code></pre>
+            <p>In case of multiple controller, these can be stated as a list of controllers, or - in the case of GDPR - be also declared as a joint controller using <code>dpv:JointDataController</code>.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": {
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasPurpose": "dpv:IdentityVerification",
+        "dpv:hasDataController": ["ex:Acme", "ex:Beta"]
+    }
+}</code></pre>
+</aside>
 
         <h4>Legal Basis</h4>
-            <p>This field <strong>MUST</strong> be present.</p>
-            <p>the legal basis (lawful basis in [[ISO-27560]] for processing of personal data. Though being a consent record, the legal basis field ensures that the processing is justified using consent, and also enables the consent record structure to be reused to other legal bases (e.g. contract) in the future. For the DPV implementation, this is expressed using <code>hasLegalBasis</code> with a concept from the <code>LegalBasis</code> taxonomy. For expressing jurisdiction specific legal basis, the appropriate extension should be used, for e.g. using consent types from [[DPV-GDPR]]. This field MAY be present in both [[ISO-27560]] and DPV implementation.</p>
+            <p>This field MAY be present.</p>
+            <p>The legal basis (lawful basis in [[ISO-27560]] for processing of personal data. Though the lawful basis for a consent record would always be consent, the presence of the field enables extensions of the record to other legal bases (e.g. contract) in the future. In DPV, the legal basis is associated using <code>hasLegalBasis</code> with a concept from the <code>LegalBasis</code> taxonomy.</p>
+            <p>In addition to defining consent as a legal basis, DPV also provides a taxonomy to express various categories of consent - such as <code>InformedConsent</code> and <code>ExpressedConsent</code> which provide a more granular and accurate definition of the legal basis being utilised. For expressing specific consent based on specific jurisdictions and regulations, the appropriate extended concept should be used, for e.g. [[DPV-GDPR]] defines consent as a legal basis based on the specific clauses and requirements of the [[GDPR]].</p>
+            <aside class="example" title="Example specifying consent as a legal basis">
+            <p>Consent is directly associated with the first <code>PersonalDataHandling</code> as the legal basis. Such use is commonly interpreted as meaning consent according to some obligations and requirements to be considered valid, for example being informed and expressed rather than assumed. The second <code>PersonalDataHandling</code> uses the specific type of consent required which clearly indicates which requirements it is expected to fulfil to be considered valid.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": [{
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasLegalBasis": "dpv:Consent"
+    }, {
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasLegalBasis": "dpv:ExplicitlyExpressedConsent"
+    }]
+}</code></pre>
+        <p>To indicate that a GDPR-defined consent is being used as the legal basis, the [[DPV-GDPR]] concept is used by itself or in combination with a core consent type to explicitly indicate the level of consent. Note that in the second example, [[DPV-GDPR]] already defines <code>A9-2-a</code> as a subtype of <code>dpv:ExplicitlyExpressedConsent</code>, so the combined use does not lead to contradictions.</p>
+        <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": [{
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasLegalBasis": "dpv-gdpr:A6-1-a"
+    }, {
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasLegalBasis": ["dpv:ExplicitlyExpressedConsent", "dpv-gdpr:A9-2-a"]
+    }]
+}</code></pre>
+</aside>
         
         <h4>Recipients</h4>
-            <p>This field <strong>MUST</strong> be present.</p>
+        <p>This field <strong>MUST</strong> be present.</p>
+        <p>Indicates the recipients of personal data associated with the specific processing activities, expressed as <code>dpv:Recipient</code> and associated using <code>dpv:hasRecipient</code>. In [[ISO-27560]], this field is only limited to Recipients who are Third Parties, which excludes the Data Controllers and Processors. In DPV, recipients can be any of Data Controllers, or Processors, or Third Parties.</p>
+        <p>Note that recipients can be specific entities i.e. their identity is known, or groups or categories of entities - for example as in GDPR's Article 13-1e. However, [[ISO-27560]] only considered explicitly indicated third parties for the recipients field.</p>
+        <p>In [[ISO-27560]], the recipient field is also associated with information regarding the geo-location of data being transferred to the recipient third party's and whether this constitutes a jurisdictional change. To represent this in DPV, the location of the transfer should be indicated within the processing information along with the recipient entity. The jurisdiction can also be represented in the same context - to indicate the transfer to that jurisdiction, or it can be specified in association with the recipient entity.</p>
+        <aside class="example" title="Example specifying recipients of personal data">
+            <p>Recipients can be indicated separately for the entirety of <code>PersonalDataHandling</code> which indicates all data is being received by the specified recipient.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": {
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasPersonalData": ["dpv-pd:Email", "dpv-pd:Name"],
+        "dpv:hasDataController": "ex:Acme",
+        "dpv:hasRecipient": "ex:Beta"
+    }
+}</code></pre>
+            <p>Recipients can be also be indicated contextually within each <code>PersonalDataHandling</code> or <code>Processing</code> to indicate the recipient entity for that specific context - which allows to separate the recipients based on what data and processing they are associated with. In the below example, the first activity has Acme receiving the Email, and the second activity has Beta collecting the Name and transferring it to Gamma.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": [{
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasPersonalData": "dpv-pd:Email",
+        "dpv:hasRecipient": "ex:Acme"
+    }, {
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasPersonalData": "dpv-pd:Name",
+        "dpv:hasProcessing": [{
+            "@type": "dpv:Collect",
+            "dpv:hasRecipient": "ex:Beta"
+        }, {
+            "@type": "dpv:Transfer",
+            "dpv:hasRecipient": "ex:Gamma"
+        }
+    }
+}</code></pre>
+            <p>To specify the locations and jurisdictions of recipients, the appropriate DPV concepts and relations are used. In the below example, the first activity states Acme is a Recipient and also the Data Controller whose location is Ireland, and the second activity states that the transfer to Beta has location France and jurisdiction EU.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": [{
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasPersonalData": "dpv-pd:Email",
+        "dpv:hasDataController": "ex:Acme",
+        "dpv:hasRecipient": {
+            "@type": "dpv:Recipient"
+            "@id": "ex:Acme",
+            "dpv:hasLocation": "loc:IE"
+        }
+    }, {
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasPersonalData": "dpv-pd:Name",
+        "dpv:hasProcessing": {
+            "@type": "dpv:Transfer",
+            "dpv:hasRecipient": "ex:Beta",
+            "dpv:hasLocation": "loc:France",
+            "dpv:hasJurisdiction": "loc:EU"
+        }
+    }]
+}</code></pre>
+</aside>
+        
         <h4>Consent Withdrawal</h4>
             <p>This field <strong>MUST</strong> be present.</p>
+            [[ withdrawal method ]]
+            WithdrawingConsent - isExercisedAt, ConsentNotice
 
         <h4>Jurisdiction(s)</h4>
             <p>This field <strong>MUST</strong> be present.</p>
+            Jurisdiction - regulation e.g. GDPR
 
         <h4>Rights</h4>
+        hasRight - Right
+        isExercisedAt, RightExerciseNotice
 
         <h4>Service(s)</h4>
             <p>the services this processing activities are part of or assist with, expressed in DPV using <code>hasService</code> and an instance of <code>Service</code>.<div class="issue" title="Service is a proposed concept in DPV"></div> This field MAY be present in both [[ISO-27560]] and DPV implementations.</p>
-        <h4>Code of conduct(s)</h4>
-        <h4>Impact assessment(s)</h4>
 
-    <h3>Entities Fields</h3>
+        <h4>Code of conduct(s)</h4>
+        - org measure
+
+        <h4>Impact assessment(s)</h4>
+        - org measure
+
+    <h3>Entity Fields</h3>
     <ol>
-        name
-        role
-        contact
-        address
-        email
-        url
-        phone
+        name - schema:name
+        role - type
+        contact - schema:contactPoint schema:ContactPoint
+        address - schema:address schema:PostalAddress
+        email - schema:email
+        url - schema:url
+        phone - schema:phone
 
     </ol>
-    <h3>Consent Events Fields</h3>
+    <h3>Consent Event Fields</h3>
+    - dpv:hasRecord - consent type, isIndicatedAtTime, isIndicatedBy, hasIndicationMethod, hasStatus - ConsentStatus
+    - duration for expiry, 
+    - parent/guardian - hasJustification for entity different from data subject, or if there are two consents, then express them as parts
 
     <h3>Conformance</h3>
+    - table
 
     <h3>Examples</h3>
+    - full record
 
 </section>
 
@@ -1354,8 +1487,8 @@
     <h3>Header Fields</h3>
     <p>additional fields not in 27560 - publisher, recipient, provenance, integrity, etc.</p>
     <h3>Information in Receipt</h3>
-    <h3>Examples</h3>
     <h3>Conformance</h3>
+    <h3>Examples</h3>
 </section>
 
 <section>
