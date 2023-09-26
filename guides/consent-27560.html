@@ -904,7 +904,8 @@
             <p>The personal data ('pii information' in [[ISO-27560]]) involved in processing activities, associated using <code>dpv:hasPersonalData</code> and instances of <code>dpv:PersonalData</code>.</p>
             <p>In [[ISO-27560]], the personal data fields are used to describe aspects of personal data as - type, identifier, optionality, being sensitive and being special category. In the DPV implementation, these are described as annotations or additional relations over the personal data instance.</p>
             <h5>Personal Data Type</h5>
-            <p>The type or category of personal data ('pii type' in [[ISO-27560]]), expressed in DPV using <code>rdf:type</code>, and optionally using concepts from the [[DPV-PD]] taxonomy. This field <strong>MUST</strong> be present DPV either through an explicit declaration using <code>rdf:type</code> or through an implicit definition through use of [[DPV-PD]] taxonomy. </p>
+            <p>This field <strong>MUST</strong> be present.</p>
+            <p>The type or category of personal data ('pii type' in [[ISO-27560]]), expressed in DPV using <code>rdf:type</code>, and optionally using concepts from the [[DPV-PD]] taxonomy. The value for this field must use a data category from DPV either through an explicit declaration i.e. using <code>rdf:type</code> or through an implicit definition e.g. [[DPV-PD]] taxonomy. </p>
             <aside class="example" title="Example specifying personal data and its type">
                 <p>Personal data specified using [[DPV-PD]] concept</p>
                 <pre><code>{
@@ -929,7 +930,8 @@
 }</code></pre>
             </aside>
             <h5>Personal Data Identifier</h5>
-            <p>The identifier representing the data values or instances e.g. within a database, expressed in DPV using <code>dct:identifier</code>. This field MAY be present.</p>
+            <p>This field MAY be present.</p>
+            <p>The identifier representing the data values or instances e.g. within a database, expressed in DPV using <code>dct:identifier</code>. </p>
             <aside class="example" title="Example specifying identifier of personal data">
                 <p>Here, the identifier refers to a row ID within some internal database. The use of identifier in this case is to avoid exposing the actual email address within the consent record.</p>
                 <pre><code>{
@@ -945,7 +947,8 @@
 }</code></pre>
             </aside>
             <h5>Personal Data Necessity</h5>
-            <p>The necessity or optionality of this data ('pii optional' in [[ISO-27560]]) for the processing, expressed in DPV using <code>hasNecessity</code> and one of the provided instances of <code>Necessity</code>. This field MAY be present. If this field is absent, it should be inferred as the data being necessary.</p>
+            <p>This field MAY be present.</p>
+            <p>The necessity or optionality of this data ('pii optional' in [[ISO-27560]]) for the processing, expressed in DPV using <code>hasNecessity</code> and one of the provided instances of <code>Necessity</code>. If this field is absent, it should be inferred as the data being necessary.</p>
             <aside class="example" title="Example specifying identifier of personal data">
                 <p>Here, the identifier refers to a row ID within some internal database. The use of identifier in this case is to avoid exposing the actual email address within the consent record.</p>
                 <pre><code>{
@@ -995,7 +998,8 @@
 }</code></pre>
             </aside>
             <h5>Sensitive and Special Category</h5>
-            <p>Indicates whether the personal data is considered sensitive ('sensitive pii category' in [[ISO-27560]]), and separately whether it is also of special category ('special pii category' in [[ISO-27560]]). Declaring either in DPV is done using <code>rdf:type</code> with value <code>SensitivePersonalData</code> or <code>SpecialCategoryPersonalData</code>. This field MAY be present. Its absence indicates the data does not belong to either sensitive or special categories.</p>
+            <p>This field MAY be present.</p>
+            <p>Indicates whether the personal data is considered sensitive ('sensitive pii category' in [[ISO-27560]]), and separately whether it is also of special category ('special pii category' in [[ISO-27560]]). Declaring either in DPV is done using <code>rdf:type</code> with value <code>SensitivePersonalData</code> or <code>SpecialCategoryPersonalData</code>. Its absence indicates the data does not belong to either sensitive or special categories.</p>
             <aside class="example" title="Example specifying personal data belonging to sensitive and special categories">
                 <p>Being sensitive or special category is equivalent to defining it as the 'type' of data in DPV. Therefore, the notation for declaring type and sensitive is the same. In the below example, the first instance is sensitive, the second of special category, and the third is neither.</p>
                 <pre><code>{
@@ -1018,8 +1022,16 @@
             </aside>
 
         <h4>Processing Operations</h4>
-        <p>This field <strong>MUST</strong> be present.</p>
-        <p>This field <strong>MUST</strong> be present.</p>
+        <p>This field MAY be present.</p>
+        <p>Indicates the processing operations or activities carried out over the specific personal data, and indicated using <code>dpv:hasProcessing</code> with instances of <code>dpv:Processing</code>.</p>
+
+        <h4>data source(s)</h4>
+        <h4>collection method(s)</h4>
+        <h4>processing method(s)</h4>
+        <h4>retention period(s)</h4>
+        <h4>storage location(s)</h4>
+        <h4>processing location(s)</h4>
+        <h4>geographic restriction(s)</h4>
 
         <h4>Data Controller(s)</h4>
             <p>This field <strong>MUST</strong> be present.</p>
@@ -1043,16 +1055,6 @@
             <p>the services this processing activities are part of or assist with, expressed in DPV using <code>hasService</code> and an instance of <code>Service</code>.<div class="issue" title="Service is a proposed concept in DPV"></div> This field MAY be present in both [[ISO-27560]] and DPV implementations.</p>
         <h4>Code of conduct(s)</h4>
         <h4>Impact assessment(s)</h4>
-
-    <h3>Processing Fields</h3>
-
-        <h4>data source(s)</h4>
-        <h4>collection method(s)</h4>
-        <h4>processing method(s)</h4>
-        <h4>retention period(s)</h4>
-        <h4>storage location(s)</h4>
-        <h4>processing location(s)</h4>
-        <h4>geographic restriction(s)</h4>
 
     <h3>Entities Fields</h3>
     <ol>
