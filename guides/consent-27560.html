@@ -1022,16 +1022,289 @@
             </aside>
 
         <h4>Processing Operations</h4>
-        <p>This field MAY be present.</p>
-        <p>Indicates the processing operations or activities carried out over the specific personal data, and indicated using <code>dpv:hasProcessing</code> with instances of <code>dpv:Processing</code>.</p>
+        <p>This field <strong>MAY</strong> be present.</p>
+        <p>Indicates the processing operations or activities carried out over the specific personal data, and indicated using <code>dpv:hasProcessing</code> with instances of <code>dpv:Processing</code>. In [[ISO-27560]], this field also represents information about automated decision making - which is represented in DPV through the <code>dpv:AutomationOfProcessing</code> concepts and associated with <code>dpv:hasProcessingAutomation</code>, as well as large scale of processing which is represented through <code>dpv:ScaleOfProcessing</code> and associated using <code>dpv:hasScale</code>.</p>
 
-        <h4>data source(s)</h4>
-        <h4>collection method(s)</h4>
-        <h4>processing method(s)</h4>
-        <h4>retention period(s)</h4>
-        <h4>storage location(s)</h4>
-        <h4>processing location(s)</h4>
-        <h4>geographic restriction(s)</h4>
+        <aside class="example" title="Example specifying processing operations over personal data">
+            <p>Processing operations specified by using the DPV taxonomy, and associated with personal data and purposes using <code>PersonalDataHandling</code>. In this example, the email address is collected, stored, and used.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": [{
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasPurpose": "dpv:CommunicationManagement",
+        "dpv:hasPersonalData": {"@type": "dpv-pd:EmailAddress"},
+        "dpv:hasProcessing": ["dpv:Collect", "dpv:Store", "dpv:Use"]
+    }]
+}</code></pre>
+            <p>Processing specified with automated decision making, profiling, and large scale of processing. In DPV, profiling is a processing operation, whereas automated decision making and scale of processing are separate concepts.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": [{
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasPurpose": "dpv:CommunicationManagement",
+        "dpv:hasPersonalData": {"@type": "dpv-pd:EmailAddress"},
+        "dpv:hasProcessing": ["dpv:Collect", "dpv:Store", "dpv:Use"],
+        "dpv:hasProcessingAutomation": "dpv:FullyAutomatedProcessing",
+        "dpv:hasScale": "dpv:LargeScaleProcessing"
+    }]
+}</code></pre>
+            <p>Another similar example to showcase the range of processing context concepts in DPV - here the processing is a semi-automated decision making with human involvement, and involves a small scale of processing for a large scale of data subjects.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": [{
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasPurpose": "dpv:CommunicationManagement",
+        "dpv:hasPersonalData": {"@type": "dpv-pd:EmailAddress"},
+        "dpv:hasProcessing": ["dpv:Collect", "dpv:Store", "dpv:Use", "dpv:Profiling"],
+        "dpv:hasProcessingAutomation": "dpv:SemiAutomatedProcessing",
+        "dpv:hasHumanInvolvement": "dpv:HumanInvolvementForOversight",
+        "dpv:hasScale": ["dpv:SmallScaleProcessing", "dpv:LargeScaleOfDataSubjects"]
+    }]
+}</code></pre>
+            <p>Another similar example with more specific associations between processing operations and contextual information such as full automation, large scale, and no human involvement.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": [{
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasPurpose": "dpv:CommunicationManagement",
+        "dpv:hasPersonalData": {"@type": "dpv-pd:EmailAddress"},
+        "dpv:hasProcessing": [{
+            "@type": "dpv:Use",
+            "dpv:hasScale": ["dpv:LargeScaleProcessing", "dpv:LargeScaleOfDataSubjects"],
+            "dpv:hasProcessingAutomation": "dpv:FullyAutomatedProcessing",
+            "dpv:hasHumanInvolvement": "dpv:NotApplicable"
+        }]
+    }]
+}</code></pre>
+        </aside>
+
+        <h5>Data Source(s)</h5>
+        <p>This field MAY be present.</p>
+        <p>This field represents the source of data being processed. In [[ISO-27560]], this field is called <i>collection method</i> and can be about The data provided by or observed from activities of the data subjects, be inferred from existing data, or be collected from another entity or third party. In DPV, this information is represented using <code>dpv:DataSource</code> and associated using <code>dpv:hasDataSource</code>.</p>
+        <p>Concepts within the DPV taxonomy have an exact meaning - for example data being obtained through observation should not be stated as being <i>collected</i>, but as <i>observed</i> - even if the data source is still the same data subject. Therefore, it is best to separate the data source <i>entity</i> and the <i>processing operation</i>.</p>
+        <aside class="example" title="Example specifying sources of data used in processing operations">
+            <p>The following examples state the data subject as a data source as stated in [[ISO-27560]] for direct data collection, indirect obervation or derivation, and inferred.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": [{
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasPurpose": "dpv:CommunicationManagement",
+        "dpv:hasPersonalData": {"@type": "dpv-pd:Location"},
+        "dpv:hasDataSource": [{
+            "@type": "dpv:DataSubject",
+            "dpv:hasProcessing": "dpv:Collect"
+        }, {
+            "@type": "dpv:DataSubject",
+            "dpv:hasProcessing": "dpv:Observe"
+        }, {
+            "@type": "dpv:DataSubject",
+            "dpv:hasProcessing": ["dpv:Collect", "dpv:Derive"],
+            "dpv:hasPersonalData": "dpv-pd:IPAddress"
+        }, {
+            "@type": "dpv:DataSubject",
+            "dpv:hasProcessing": "dpv:Infer",
+            "dpv:hasPersonalData": "dpv-pd:BrowserBehavior"
+        }
+    }]
+}</code></pre>
+            <p>The following example states non- data subject entities as a data source as stated in [[ISO-27560]], where the entities are of type Processor and Third Party respectively. The example also shows how processing operations can directly specify their data sources.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": [{
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasPurpose": "dpv:CommunicationManagement",
+        "dpv:hasPersonalData": {"@type": "dpv-pd:Location"},
+        "dpv:hasProcessing": [{
+            "@type": "dpv:Transfer",
+            "dpv:hasDataSource": {
+                "@type": "dpv:DataProcessor",
+                "@id": "https://example.com/Acme"
+            }
+        }, {
+            "@type": ["dpv:Collect", "dpv:Acquire"],
+            "dpv:hasDataSource": {
+                "@type": "dpv:ThirdParty",
+                "@id": "https://example.com/Beta"   
+            }
+        }]
+    }]
+}</code></pre>
+            <p>The following example shows how data sources can be specified in terms of devices and technologies using concepts from (work-in-progress) [[DPV-TECH]].</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": [{
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasPurpose": "dpv:CommunicationManagement",
+        "dpv:hasPersonalData": {"@type": "dpv-pd:Location"},
+        "dpv:hasDataSource": {
+            "@type": "dpv:DataSubject",
+            "dpv:hasProcessing": "dpv:Collect",
+            "dpv:isImplementedUsingTechnology": {
+                "@type": "tech:Device",
+                "tech:hasCommunicationMechanism": ["tech:GPS", "tech:WiFi"]
+            }
+        }
+    }]
+}</code></pre>
+</aside>
+
+        <h5>Storage Condition(s)</h5>
+        <p>This field <strong>MUST</strong> be present.</p>
+        <p>Indicates information about the storage of personal data such as regarding its duration, location, and erasure, represented using <code>dpv:StorageCondition</code> and associated using <code>dpv:hasStorageCondition</code>. The existence of Storage Condition implies storing data as a processing operation. In [[ISO-27560]], this information is represented through two fields - <i>storage locations</i> and <i>retention period</i> - both of which are required to be present.</p>
+        <aside class="example" title="Example specifying conditions regarding storage of data in terms of location, duration, and retention">
+            <p>The following example shows how information about storage conditions can be associated using the DPV concepts. It associates three conditions with the personal data handling instance representing location, duration, and retention.</p>
+            <p>The first example shows locations expressed using the DPV-Locations extension (work in progress), and indicate that data will be stored in Ireland, France, and Germany - with another example showing EU as a (jurisdiction-based) location. The other examples show how non-geopolitical locations can be represented using DPV.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": [{
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasPurpose": "dpv:CommunicationManagement",
+        "dpv:hasPersonalData": {"@type": "dpv-pd:Location"},
+        "dpv:hasDataStorageCondition": [{
+            "@type": "dpv:StorageLocation",
+            "dpv:hasLocation": ["loc:IE", "loc:FR", "loc:DE"],
+        }, {
+            "@type": "dpv:StorageLocation",
+            "dpv:hasLocation": "loc:EU"
+        }, {
+            "@type": "dpv:StorageLocation",
+            "dpv:hasLocation": "dpv:WithinDevice"
+        }, {
+            "@type": "dpv:StorageLocation",
+            "dpv:hasLocation": {
+                "@type": ["dpv:FederatedLocation", 
+                    "dpv:WithinDevice", "dpv:CloudLocation"]
+            }
+        }]
+    }]
+}</code></pre>
+            <p>The following example shows the duration associated with storage of data. Duration implies that data will be removed or erased after the duration.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": [{
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasPurpose": "dpv:CommunicationManagement",
+        "dpv:hasPersonalData": {"@type": "dpv-pd:Location"},
+        "dpv:hasStorageCondition": [{
+            "@type": "dpv:StorageDuration",
+            "rdfs:comment": "6 Months using ISO 8601",
+            "dpv:hasDuration": "P6M",
+            "dpv:hasDuration": {
+                "@type": ["dpv:TemporalDuration", "xsd:duration"],
+                "rdf:value": "P6M"
+            }
+        }, {
+            "@type": "dpv:StorageDuration",
+            "rdfs:comment": "duration lapsing at the end of year",
+            "dpv:hasDuration": "2023-12-31",
+            "dpv:hasDuration": {
+                "@type": ["dpv:UntilTimeDuration", "xsd:date"],
+                "rdf:value": "2023-12-31"
+            }
+        }, {
+            "@type": "dpv:StorageDuration",
+            "dpv:hasDuration": {
+                "@type": "dpv:FixedOccurencesDuration",
+                "rdf:value": "12"
+            }
+        }, {
+            "@type": "dpv:StorageDuration",
+            "dpv:hasDuration": {
+                "@type": "dpv:UntilEventDuration",
+                "rdf:value": "Account Closure"
+            }
+        }]
+    }]
+}</code></pre>
+            <p>The following example shows erasure as a distinct condition separate from the storage duration. In [[ISO-27560]], the field for <i>retention period</i> refers to both the retention and erasure of data. In DPV, this is separated as data may get scheduled for deletion and may remain stored for a duration before its actual erasure. In the example, the data is to be stored for 6 months and then deleted by 1 month following this period.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": [{
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasPurpose": "dpv:CommunicationManagement",
+        "dpv:hasPersonalData": {"@type": "dpv-pd:Location"},
+        "dpv:hasStorageCondition": [{
+            "@type": "dpv:StorageDuration",
+            "dpv:hasDuration": "P6M"
+        }, {
+            "@type": "dpv:StorageDeletion",
+            "dpv:hasDuration": "P1M"
+        }]
+    }]
+}</code></pre>
+</aside>
+
+        <h5>Processing Condition(s)</h5>
+        <p>This field MAY be present.</p>
+        <p>Indicates information about conditions regarding the processing operations, such as regarding its duration and location, represented using <code>dpv:ProcessingCondition</code> and associated using <code>dpv:hasProcessingCondition</code>. Given that storing data is a specific type of processing operation, this field is useful for other processing activities such as collection of data. In [[ISO-27560]], the field only relates to <i>processing locations</i>.</p>
+        <aside class="example" title="Example specifying conditions regarding processing data in terms of location and duration">
+            <p>The examples show various combinations of processing location and duration, using the same concepts and patterns as those used in the examples for Storage Condition. In addition, it also shows the possibility to express the <i>frequency</i> of processing using <code>dpv:Frequency</code> and associated using <code>dpv:hasFrequency</code>. To express combinations of duration, location, and frequencies - their respective concepts can be combined as shown explicitly last example.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": [{
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasPurpose": "dpv:CommunicationManagement",
+        "dpv:hasPersonalData": {"@type": "dpv-pd:Location"},
+        "dpv:hasDataProcessingCondition": [{
+            "@type": "dpv:ProcessingLocation",
+            "dpv:hasLocation": "dpv:WithinDevice",
+        }, {
+            "@type": "dpv:ProcessingLocation",
+            "dpv:hasLocation": "loc:EU"
+        }, {
+            "@type": "dpv:ProcessingDuration",
+            "dpv:hasDuration": "P6M"
+        }, {
+            "@type": "dpv:ProcessingFrequency",
+            "dpv:hasFrequency": "dpv:SingularFrequency"
+        }, {
+            "@type": "dpv:ProcessingFrequency",
+            "dpv:hasFrequency": "dpv:ContinousFrequency"
+        }, {
+            "@type": ["dpv:ProcessingLocation", 
+                    "dpv:ProcessingDuration", "dpv:ProcessingFrequency"],
+            "dpv:hasLocation": "dpv:WithinDevice",
+            "dpv:hasDuration": "P1D",
+            "dpv:hasFrequency": "dpv:SporadicFrequency"
+        }]
+    }]
+}</code></pre>
+</aside>
+
+        <h5>Geographic Restriction(s)</h5>
+        <p>This field MAY be present.</p>
+        <p>Geographic restrictions are defined in [[ISO-27560]] as restrictions related to geo-locations or jurisdictions. While DPV prefers a declarative interpretation where, for e.g., if processing location is mentioned as EU then it implies that processing will only take place within EU. If the intention is to explicitly state this as a restriction, it can utilise the <code>dpv:Rule</code> concept which provides (simplified) Permissions, Prohibitions, and Obligations. For further expressivity or complexity, specifications such as [[[odrl-model]]] should be considered.</p>
+        <aside class="example" title="Example specifying conditions regarding storage of data in terms of location, duration, and retention">
+            <p>An example for expressing that processing must take place within EU. Note that DPV's concepts do not support expressing negations i.e. we cannot state processing must <i>not</i> take place within <i>non-EU</i> locations. An alternative to this can be not expressing the information in a machine-readable form - as in the second rule - which is not desirable, or preferably to utilise an appropriate vocabulary such as [[ODRL]].</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": {
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasRule": [{
+            "@type": "dpv:Obligation",
+            "dpv:hasLocation": "loc:EU"
+        }, {
+            "@type": "dpv:Prohibition",
+            "dct:description": "Processing in Non-EU locations is not allowed"
+        }, {
+            "@type": ["dpv:Prohibition", "odrl:Prohibition"],
+            "rdfs:comment": "Use ODRL concepts here"
+        }]
+    }
+}</code></pre>
+</aside>
 
         <h4>Data Controller(s)</h4>
             <p>This field <strong>MUST</strong> be present.</p>
