@@ -1437,8 +1437,12 @@
         
         <h4>Consent Withdrawal</h4>
             <p>This field <strong>MUST</strong> be present.</p>
-            [[ withdrawal method ]]
-            WithdrawingConsent - isExercisedAt, ConsentNotice
+            <div class="issue" title="Missing Concept: Consent Withdrawal that is not a Right">
+                <p>In DPV, there is no concept to specify how consent should be withdrawn by the data subject. We have <code>ConsentWithdrawn</code> as a state/status, and we deprecated the relation <code>hasWithdrawalMethod</code> in favour of using the combination of <code>dpv-gdpr:A7-3</code> (right to withdraw consent) with <code>dpv:hasIndicationMethod</code>. The issue stems from when the use of consent is not a legal basis, or its withdrawal not a right - in which case there is no corresponding concept in DPV to address this.</p>
+                <p>Proposed solution: Create two <i>Organisational Measures</i> representing <code>ObtainingConsent</code> and <code>Withdrawing Consent</code> which will enable representing how they are implemented, any notices associated with them, and can be used to indicate where the data subject is expected to exercise the withdrawal. To indicate how these are enacted by the organsiation, the existing relation <code>hasOrganisationalMeasure</code> is to be used. To associate these for the data subject, the existing relation <code>hasIndicationMethod</code> is to be used.</p>
+            </div>
+            <p>Indicates the information on how the data subject can withdraw the specified consent, expressed using <code>WithdrawingConsent</code> and associated using <code>isExercisedAt</code>. In [[ISO-27560]], this field can contain information on the withdrawal method or a link to the information, and also allows this field to be associated with the Data Controller (in the Party/Entity section) rather than per-processing activity.</p>
+                ConsentNotice
 
         <h4>Jurisdiction(s)</h4>
             <p>This field <strong>MUST</strong> be present.</p>
