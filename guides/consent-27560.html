@@ -1435,46 +1435,256 @@
 }</code></pre>
 </aside>
         
-        <h4>Consent Withdrawal</h4>
+        <h4>Consent Change &amp; Withdrawal</h4>
             <p>This field <strong>MUST</strong> be present.</p>
-            <div class="issue" title="Missing Concept: Consent Withdrawal that is not a Right">
-                <p>In DPV, there is no concept to specify how consent should be withdrawn by the data subject. We have <code>ConsentWithdrawn</code> as a state/status, and we deprecated the relation <code>hasWithdrawalMethod</code> in favour of using the combination of <code>dpv-gdpr:A7-3</code> (right to withdraw consent) with <code>dpv:hasIndicationMethod</code>. The issue stems from when the use of consent is not a legal basis, or its withdrawal not a right - in which case there is no corresponding concept in DPV to address this.</p>
-                <p>Proposed solution: Create two <i>Organisational Measures</i> representing <code>ObtainingConsent</code> and <code>Withdrawing Consent</code> which will enable representing how they are implemented, any notices associated with them, and can be used to indicate where the data subject is expected to exercise the withdrawal. To indicate how these are enacted by the organsiation, the existing relation <code>hasOrganisationalMeasure</code> is to be used. To associate these for the data subject, the existing relation <code>hasIndicationMethod</code> is to be used.</p>
-            </div>
-            <p>Indicates the information on how the data subject can withdraw the specified consent, expressed using <code>WithdrawingConsent</code> and associated using <code>isExercisedAt</code>. In [[ISO-27560]], this field can contain information on the withdrawal method or a link to the information, and also allows this field to be associated with the Data Controller (in the Party/Entity section) rather than per-processing activity.</p>
-                ConsentNotice
+            <div class="issue" data-number="115"></div>
+            <p>Indicates the information on how the data subject can change or withdraw the specified consent, expressed using processes part of <code>ConsentManagement</code> and associated using <code>hasConsentManagement</code>. To indicate how the data subject should take action, the relation <code>isExercisedAt</code> is to be used.</p>
+            <p>In [[ISO-27560]], this field is specific to the withdrawal method or a link to the information on withdrawal. It also allows this field to be associated with the Data Controller (in the Party/Entity section) rather than per-processing activity.</p>
+            
+            <aside class="example" title="Example specifying change and withdrawal of consent">
+            <p>To express how the data subject can withdraw consent.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": {
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasConsentManagement": {
+            "@type": "dpv:WithdrawConsent",
+            "dpv:isExercisedAt": "https://example.com/manage-consent"
+        }
+    }
+}</code></pre>
+            <p>To express how the data subject can change, withdraw, or (re-)confirm their existing consent. Here, <code>ChangeConsent</code> is the broader consent and includes processes to withdraw and reaffirm consent.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": {
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasConsentManagement": {
+            "@type": "dpv:ChangeConsent",
+            "dpv:isExercisedAt": "https://example.com/manage-consent"
+        }
+    }
+}</code></pre>
+            <p>To express how the data subject can provide and change their consent.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": {
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasConsentManagement": [{
+            "@type": "dpv:ProvideConsent",
+            "dpv:isExercisedAt": "https://example.com/manage-consent"
+        }, {
+            "@type": "dpv:ChangeConsent",
+            "dpv:isExercisedAt": "https://example.com/manage-consent"
+        }]
+    }
+}</code></pre>
+</aside>
 
         <h4>Jurisdiction(s)</h4>
             <p>This field <strong>MUST</strong> be present.</p>
-            Jurisdiction - regulation e.g. GDPR
+            <p>Indicates the applicable jurisdiction for the processing indicated within the receipt. The acknolwedgement of jurisdiction(s) is necessary to convey applicable laws and requirements regarding consent validity and applicable rights as well as indicating the obligations on parties involved. To indicate the jurisdiction, the concept <code>Location</code> is to be associated using <code>hasJurisdiction</code>.</p>
+            <p>In [[ISO-27560]], this field can also be associated with the Data Controller (in the Party/Entity section) rather than per-processing activity.</p>
+
+            <aside class="example" title="Example specifying jurisdiction">
+            <p>To express how the data subject can withdraw consent.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": {
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasJurisdiction": "loc:EU"
+    }
+}</code></pre>
+</aside>
 
         <h4>Rights</h4>
-        hasRight - Right
-        isExercisedAt, RightExerciseNotice
+        <p>This field <strong>MUST</strong> be present.</p>
+        <p>Indicates the applicable rights and provides information on how to avail or exercise them. The rights are indicated using <code>DataSubjectRight</code> and associated using <code>hasRight</code>. To indicate how to exercise them, the relation <code>isExercisedAt</code> is to be used. To indicate provision of information regarding rights exercise, the concept <code>RightExerciseNotice</code> is to be used and associated using <code>hasNotice</code>.</p>
+        <p>In [[ISO-27560]], this field is <i>optional</i>, and is used to provide a link to information on how to exercise rights. It also allows this field to allow changes to the consent conditions such as the retention period. In [[ISO-27560]], this field can also be associated with the Data Controller (in the Party/Entity section) rather than per-processing activity.</p>
+        <aside class="example" title="Example specifying rights exercise information">
+            <p>Expressing rights exercise information using DPV is done using the <code>DataSubjectRight</code> instance and associated using <code>hasRight</code>. The contents of this information can include annotations, such as using <code>dct:title</code> to summarise the right, and <code>dpv:isExercisedAt</code> to indicate how/where it is to be exercised.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": {
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasRight": {
+            "@type": "dpv:DataSubjectRight",
+            "dct:title": "Right to Obtain Information",
+            "dct:description": "To obtain information, go to the specified link",
+            "dpv:isExercisedAt": "https://example.com/rights"
+        }
+    }
+}</code></pre>
+            <p>To indicate specific rights under a particular jurisdiction or regulation, the appropriate concepts have to be declared and used. In this example, GDPR's Right to Withdraw Consent (Art.7-3) and Right to Data Portability (Art.20) are described with information on how to exercise them. This can be done with explicit acknolwedgement of GDPR as the regulation using <code>dpv:hasApplicableLaw</code>, and EU as the jurisdiction using <code>hasJurisdiction</code>.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": {
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasRight": [{
+            "@type": ["dpv:DataSubjectRight", "dpv-gdpr:A7-3"],
+            "dct:title": "Right to Withdraw Consent",
+            "dpv:isExercisedAt": "https://example.com/rights",
+            "dpv:hasApplicableLaw": "dpv-gdpr:GDPR",
+            "dpv:hasJurisdiction": "loc:EU"
+        }, {
+            "@type": ["dpv:DataSubjectRight", "dpv-gdpr:A20"],
+            "dct:title": "Right to Data Portability",
+            "dpv:isExercisedAt": "https://example.com/rights",
+            "dpv:hasApplicableLaw": "dpv-gdpr:GDPR",
+            "dpv:hasJurisdiction": "loc:EU"
+        }]
+    }
+}</code></pre>
+            <p>The same or similar right can be applicable under multiple jurisdictions and/or regulations. In this example, the Right to Withdraw Consent is expressed as being applicable under multiple jurisdictions using <code>hasJurisdiction</code>.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": {
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasRight": {
+            "@type": "dpv:DataSubjectRight",
+            "dct:title": "Right to Withdraw Consent",
+            "dpv:isExercisedAt": "https://example.com/rights",
+            "dpv:hasJurisdiction": ["loc:EU", "loc:EEA"]
+        }
+    }
+}</code></pre>
+            <p>To indicate information required for exercise of rights, DPV's existing properties such as <code>hasPersonalData</code> and necessity concepts such as <code>Required</code> can be used. This example shows the right to data portability requires collecting an email for exercising it.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": {
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasRight": {
+            "@type": ["dpv:DataSubjectRight", "dpv-gdpr:A20"],
+            "dct:title": "Right to Data Portability",
+            "dpv:isExercisedAt": "https://example.com/rights",
+            "dpv:hasPersonalDataHandling": {
+                "@type": "dpv:PersonalDataHandling",
+                "dpv:hasPersonalData": "dpv:Email",
+                "dpv:hasProcessing": "dpv:Collect",
+                "dpv:hasPurpose": "dpv:FulfilmentOfObligation",
+                "dpv:hasNecessity": "dpv:Required"
+} } } }</code></pre>
+            <p>To indicate what will be the resulting action from exercising the right, existing concepts and external vocabularies such as schema.org or DCAT can be used. This example shows the resulting obligation from exercising the right to data portability being the provision of a dataset containing collected personal data.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": {
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasRight": {
+            "@type": ["dpv:DataSubjectRight", "dpv-gdpr:A20"],
+            "dct:title": "Right to Data Portability",
+            "dpv:isExercisedAt": "https://example.com/rights",
+            "dpv:hasPersonalDataHandling": {
+                "@type": "dpv:PersonalDataHandling",
+                "dpv:hasPersonalData": "dpv:Email",
+                "dpv:hasProcessing": "dpv:Collect",
+                "dpv:hasPurpose": "dpv:FulfilmentOfObligation",
+                "dpv:hasNecessity": "dpv:Required"
+            },
+            "dpv:hasObligation": {
+                "@type": "schema:SendAction",
+                "schema:recipient": "dpv:DataSubject",
+                "schema:object": {
+                    "@type": "schema:Dataset",
+                    "dpv:hasPersonalData": "dpv:CollectedData",
+                    "schema:distribution": {
+                        "schema:encodingFormat": "iana:CSV",
+
+} } } } } }</code></pre>
+</aside>
 
         <h4>Service(s)</h4>
-            <p>the services this processing activities are part of or assist with, expressed in DPV using <code>hasService</code> and an instance of <code>Service</code>.<div class="issue" title="Service is a proposed concept in DPV"></div> This field MAY be present in both [[ISO-27560]] and DPV implementations.</p>
+            <p>This field <i>MAY</i> be present.
+            <p>Indicates the services the described processing activities are a part of or assist with, expressed as an instance of <code>dpv:Service</code> and associated using <code>dpv:hasService</code>.</p>
+            <p>In [[ISO-27560]], a Service can be as broad or granular as desired. A service is related to a purpose by providing a context through which the specific purpose can be understood within their context, and also to enable related purposes and activities to be associated and explained with a common service being provided.</p>
+            <div class="issue" data-number="124"></div>
+            <aside class="example" title="Example specifying service">
+            <p>To indicate processing activities are associated with a specific service, an instance of <code>dpv:Service</code> is associated using <code>dpv:hasService</code>. In this example, the expression of a service provides important context for the interpretation of the purpose of <code>dpv:ServiceProvision</code>.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": {
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasPurpose": "dpv:ServiceProvision",
+        "dpv:hasService": {
+            "@type": "dpv:Service",
+            "dct:title": "Movie Streaming"
+        }
+    }
+}</code></pre>
+</aside>
 
         <h4>Code of conduct(s)</h4>
-        - org measure
+        <p>This field MAY be present.</p>
+        <p>Indicates the applicability of a <i>Code of Conduct</i> for the specified processing activity. A code of conduct is a voluntary set of rules and responsibilities undertaken by an organisation. It is indicated using an instance of <code>dpv:CodeOfConduct</code> and associated using <code>dpv:hasOrganisationalMeasure</code>.</p>
+        <p>In [[ISO-27560]], this field is described as providing information regarding the name of the code of conduct and a publicly accessible reference to it. A code of conduct can also be associated with the Data Controller (in the Party/Entity section) rather than per-processing activity.</p>
+        <aside class="example" title="Example specifying Code of Conduct">
+            <p>To express the code of conduct applicable to processing.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": {
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasOrganisationalMeasure": {
+            "@type": "dpv:CodeOfConduct",
+            "dct:title": "Code of Conduct on Processing Personal Data",
+            "schema:url": "https://example.com/CoC"
+        }
+    }
+}</code></pre>
+</aside>
 
         <h4>Impact assessment(s)</h4>
-        - org measure
+        <p>This field MAY be present.</p>
+        <p>Indicates the existence of an <i>Impact Assessment</i> for the specified processing activity. An impact assessment in this record refers to the impact of the specified processing activities on the data subject. Impact assessments are indicated using instances of <code>dpv:ImpactAssessment</code> and associated using <code>dpv:hasImpactAssessment</code>. DPV provides concepts for specific types of impact assessments, such as <code>dpv:PIA</code> for Privacy Impact Assessment and <code>dpv:DPIA</code> for Data Protection Impact Assessment.</p>
+        <p>In [[ISO-27560]], this field is limited to assessments of privacy risks and potential impacts of "non-compliance" on the data subjects, whereas in common practice assessments such as PIA and DPIA concern the impact of the processing on the data subject - which is what DPV and this specification considers. Impact assessments can also be associated with the Data Controller (in the Party/Entity section) rather than per-processing activity.</p>
+        <aside class="example" title="Example specifying impact assessment">
+            <p>To express an impact assessment applicable for the processing.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": {
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasImpactAssessment": {
+            "@type": "dpv:DPIA",
+            "schema:url": "https://example.com/DPIA"
+        }
+    }
+}</code></pre>
+</aside>
 
     <h3>Entity Fields</h3>
-    <ol>
-        name - schema:name
-        role - type
-        contact - schema:contactPoint schema:ContactPoint
-        address - schema:address schema:PostalAddress
-        email - schema:email
-        url - schema:url
-        phone - schema:phone
+    <h4>Name</h4>
+    schema:name
+    <h4>Role</h4>
+    type
+    <h4>Contact</h4>
+    schema:contactPoint schema:ContactPoint
+    <h4>Address</h4>
+    schema:address schema:PostalAddress
+    <h4>Email</h4>
+    schema:email
+    <h4>Url</h4>
+    schema:url
+    <h4>Phone</h4>
+    schema:phone
 
     </ol>
     <h3>Consent Event Fields</h3>
+    <h4>Events / States</h4>
+
+    <h4>Duration and Expiry</h4>
     - dpv:hasRecord - consent type, isIndicatedAtTime, isIndicatedBy, hasIndicationMethod, hasStatus - ConsentStatus
     - duration for expiry, 
+
+    <h4>Expression by Agent</h4>
     - parent/guardian - hasJustification for entity different from data subject, or if there are two consents, then express them as parts
 
     <h3>Conformance</h3>
