@@ -634,8 +634,37 @@
     </div>
 
     <h3>Record Metadata</h3>
-    <p class="issue" title="Table mapping 27560 header fields to DPV"></p>
-    <p>Information representing the metadata in the header field containing information about the record:</p>
+    <p>Information representing the metadata in the header field containing information about the record.</p>
+    <table style="font-family: monospace;">
+    <thead>
+        <tr>
+            <th>Field</th>
+            <th>Cardinality</th>
+            <th>DPV Concept</th>
+            <th>DPV Property</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>Schema Version</th>
+            <td>1</td>
+            <td>N/A</td>
+            <td>dct:conformsTo</td>
+        </tr>
+        <tr>
+            <th>Record Identifier</th>
+            <td>1..*</td>
+            <td>N/A</td>
+            <td>dpv:hasIdentifier</td>
+        </tr>
+        <tr>
+            <th>Data Subject</th>
+            <td>1</td>
+            <td>dpv:DataSubject</td>
+            <td>dpv:hasDataSubject</td>
+        </tr>
+    </tbody>
+</table>
         <h4>Schema Version</h4>
             <p>This field <strong>MUST</strong> be present.</p>
             <p>The specific version of the schema (`schema_version` in [[ISO-27560]]) used to interpret the record and its information, indicated using <code>dct:conformsTo</code> with the corresponding IRI from [[[#namespaces]]]. Future changes to the schema will result in suffixes to this IRI e.g. `iso-27560-v2`. To indicate conformance with specific requirements such as from GDPR, a separate schema or profile IRI must be utilised, as seen in [[[#namespaces]]].</p>
@@ -709,7 +738,30 @@
     <section>
         <h3>Notice Fields</h3>
         <p>These fields refer to information about the notice that has been shown to request consent. In [[ISO-27560]], these fields are part of the Processing section.</p>
-
+        <table style="font-family: monospace;">
+    <thead>
+        <tr>
+            <th>Field</th>
+            <th>Cardinality</th>
+            <th>DPV Concept</th>
+            <th>DPV Property</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>Notice</th>
+            <td>1..*</td>
+            <td>dpv:Notice</td>
+            <td>dpv:hasNotice</td>
+        </tr>
+        <tr>
+            <th>Notice Language</th>
+            <td>1..*</td>
+            <td>N/A</td>
+            <td>dct:language</td>
+        </tr>
+    </tbody>
+</table>
         <h4>Notice</h4>
         <p>This field <strong>MUST</strong> be present.</p>
         <p>Reference to the specific version of the notice (`privacy_notice` in [[ISO-27560]]) associated with consent, indicated using `dpv:hasNotice` and a reference to the notice or an instance of `dpv:ConsentNotice`. If there are multiple notices - then each must be indicated separately. Multiple notices can be associated where such notices are part of the same context e.g. shown one after the other, or where they are associated over time, e.g. one notice shown initially when requesting and another when re-confirming it at a later time.</p>
@@ -787,7 +839,144 @@
     </section>
     <h3>Processing Fields</h3> 
     <p>[[ISO-27560]] contains 22 fields related to processing activities, and 5 additional fields regarding personal data involved in processing. The structuring of these fields within [[ISO-27560]] is of the form where the "PII Processing" section contains an array of "purposes" where each "purpose" is expressed with its own fields regarding legal basis, collection method, storage locations, and so on. Within the DPV implementation, this is replaced with <code>dpv:PersonalDataHandling</code> so that each instance represents a distinct processing activity with its fields e.g. purposes, personal data, recipients.</p>
-
+    <table style="font-family: monospace;">
+    <thead>
+        <tr>
+            <th>Field</th>
+            <th>Cardinality</th>
+            <th>DPV Concept</th>
+            <th>DPV Property</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>Personal Data Handling</th>
+            <td>1..*</td>
+            <td>dpv:PersonalDataHandling</td>
+            <td>dpv:hasPersonalDataHandling</td>
+        </tr>
+        <tr>
+            <th>Purpose</th>
+            <td>1..*</td>
+            <td>dpv:Purpose</td>
+            <td>dpv:hasPurpose</td>
+        </tr>
+        <tr>
+            <th>Personal Data</th>
+            <td>1..*</td>
+            <td>dpv:PersonalData</td>
+            <td>dpv:hasPersonalData</td>
+        </tr>
+        <tr>
+            <th>Personal Data Type</th>
+            <td>1..*</td>
+            <td>Personal Data taxonomy</td>
+            <td>rdf:type</td>
+        </tr>
+        <tr>
+            <th>Personal Data Identifier</th>
+            <td>0..*</td>
+            <td>N/A</td>
+            <td>dct:identifier</td>
+        </tr>
+        <tr>
+            <th>Personal Data Necessity</th>
+            <td>0..*</td>
+            <td>dpv:Necessity</td>
+            <td>dpv:hasNecessity</td>
+        </tr>
+        <tr>
+            <th>Sensitive/Special Category</th>
+            <td>0..*</td>
+            <td>dpv:SensitivePersonalData, dpv:SpecialCategoryPersonalData</td>
+            <td>rdf:type</td>
+        </tr>
+        <tr>
+            <th>Processing Operations</th>
+            <td>0..*</td>
+            <td>dpv:Processing</td>
+            <td>dpv:hasProcessing</td>
+        </tr>
+        <tr>
+            <th>Data Source</th>
+            <td>0..*</td>
+            <td>dpv:DataSource</td>
+            <td>dpv:hasDataSource</td>
+        </tr>
+        <tr>
+            <th>Storage Condition</th>
+            <td>1..*</td>
+            <td>dpv:StorageCondition, dpv:StorageLocation, dpv:StorageDuration, dpv:StorageDeletion</td>
+            <td>dpv:hasStorageCondition</td>
+        </tr>
+        <tr>
+            <th>Processing Condition</th>
+            <td>0..*</td>
+            <td>dpv:ProcessingCondition, dpv:ProcessingLocation, dpv:ProcessingDuration</td>
+            <td>dpv:hasProcessingCondition</td>
+        </tr>
+        <tr>
+            <th>Geographic Restriction</th>
+            <td>0..*</td>
+            <td>dpv:Rule</td>
+            <td>dpv:hasRule</td>
+        </tr>
+        <tr>
+            <th>Data Controller</th>
+            <td>1..*</td>
+            <td>dpv:DataController</td>
+            <td>dpv:hasDataController</td>
+        </tr>
+        <tr>
+            <th>Legal Basis</th>
+            <td>0..*</td>
+            <td>dpv:LegalBasis</td>
+            <td>dpv:hasLegalBasis</td>
+        </tr>
+        <tr>
+            <th>Recipients</th>
+            <td>1..*</td>
+            <td>dpv:Recipient</td>
+            <td>dpv:hasRecipient</td>
+        </tr>
+        <tr>
+            <th>Consent Change &amp; Withdrawal</th>
+            <td>1..*</td>
+            <td>dpv:ConsentManagement, dpv:ProvideConsent, dpv:ChangeConsent, dpv:WithdrawConsent</td>
+            <td>dpv:hasConsentManagement</td>
+        </tr>
+        <tr>
+            <th>Jurisdiction</th>
+            <td>1..*</td>
+            <td>dpv:Jurisdiction</td>
+            <td>dpv:hasJurisdiction</td>
+        </tr>
+        <tr>
+            <th>Rights</th>
+            <td>1..*</td>
+            <td>dpv:Right</td>
+            <td>dpv:hasRight</td>
+        </tr>
+        <tr>
+            <th>Services</th>
+            <td>0..*</td>
+            <td>dpv:Service</td>
+            <td>dpv:hasService</td>
+        </tr>
+        <tr>
+            <th>Code of Conduct</th>
+            <td>0..*</td>
+            <td>dpv:CodeOfConduct</td>
+            <td>dpv:hasOrganisationalMeasure</td>
+        </tr>
+        <tr>
+            <th>Impact Assessment</th>
+            <td>0..*</td>
+            <td>dpv:ImpactAssessment</td>
+            <td>dpv:hasAssessment</td>
+        </tr>
+    </tbody>
+</table>
         <h4>Personal Data Handling</h4>
         <p>This field <strong>MUST</strong> be present.</p>
         <p>`dpv:PersonalDataHandling` is a concept that represents a process or 'unit' for combining relevant details such as purposes, processing, personal data categories, recipients, and so on. Instances of `dpv:PersonalDataHandling` can be used to differentiate between information regarding processing - such as where different purposes are used or that lead to different recipients. Such instances can also be nested within other instances to create a 'modular' structuring of processing activities.</p>
@@ -1418,7 +1607,7 @@
         "dpv:hasPersonalData": "dpv-pd:Email",
         "dpv:hasDataController": "ex:Acme",
         "dpv:hasRecipient": {
-            "@type": "dpv:Recipient"
+            "@type": "dpv:Recipient",
             "@id": "ex:Acme",
             "dpv:hasLocation": "loc:IE"
         }
@@ -1643,7 +1832,7 @@
 
         <h4>Impact assessment(s)</h4>
         <p>This field MAY be present.</p>
-        <p>Indicates the existence of an <i>Impact Assessment</i> for the specified processing activity. An impact assessment in this record refers to the impact of the specified processing activities on the data subject. Impact assessments are indicated using instances of <code>dpv:ImpactAssessment</code> and associated using <code>dpv:hasImpactAssessment</code>. DPV provides concepts for specific types of impact assessments, such as <code>dpv:PIA</code> for Privacy Impact Assessment and <code>dpv:DPIA</code> for Data Protection Impact Assessment.</p>
+        <p>Indicates the existence of an <i>Impact Assessment</i> for the specified processing activity. An impact assessment in this record refers to the impact of the specified processing activities on the data subject. Impact assessments are indicated using instances of <code>dpv:ImpactAssessment</code> and associated using <code>dpv:hasAssessment</code>. DPV provides concepts for specific types of impact assessments, such as <code>dpv:PIA</code> for Privacy Impact Assessment and <code>dpv:DPIA</code> for Data Protection Impact Assessment.</p>
         <p>In [[ISO-27560]], this field is limited to assessments of privacy risks and potential impacts of "non-compliance" on the data subjects, whereas in common practice assessments such as PIA and DPIA concern the impact of the processing on the data subject - which is what DPV and this specification considers. Impact assessments can also be associated with the Data Controller (in the Party/Entity section) rather than per-processing activity.</p>
         <aside class="example" title="Example specifying impact assessment">
             <p>To express an impact assessment applicable for the processing.</p>
@@ -1652,7 +1841,7 @@
     "@type": "dpv:ConsentRecord",
     "dpv:hasPersonalDataHandling": {
         "@type": "dpv:PersonalDataHandling",
-        "dpv:hasImpactAssessment": {
+        "dpv:hasAssessment": {
             "@type": "dpv:DPIA",
             "schema:url": "https://example.com/DPIA"
         }
@@ -1663,6 +1852,66 @@
     <h3>Entity Fields</h3>
     <p>[[ISO-27560]] refers to <i>Entity</i> as <i>Party</i>.</p>
     <p>Entities are expressed using instances of <code>dpv:Entity</code> and associated using <code>dpv:hasEntity</code>.</p>
+    <table style="font-family: monospace;">
+    <thead>
+        <tr>
+            <th>Field</th>
+            <th>Cardinality</th>
+            <th>DPV Concept</th>
+            <th>DPV Property</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>Name</th>
+            <td>1..*</td>
+            <td>N/A</td>
+            <td>dpv:hasName</td>
+        </tr>
+        <tr>
+            <th>Identifier</th>
+            <td>1..*</td>
+            <td>N/A</td>
+            <td>dpv:hasIdentifier</td>
+        </tr>
+        <tr>
+            <th>Role</th>
+            <td>1..*</td>
+            <td>dpv:DataController, dpv:DataProcessor, dpv:ThirdParty, dpv:Authority, dpv:DataSubject</td>
+            <td>rdf:type, dpv:hasDataController, dpv:hasDataProcessor, dpv:hasThirdParty, dpv:hasAuthority, dpv:hasDataSubject</td>
+        </tr>
+        <tr>
+            <th>Contact</th>
+            <td>1..*</td>
+            <td>schema:ContactPoint</td>
+            <td>schema:contactPoint</td>
+        </tr>
+        <tr>
+            <th>Postal Address</th>
+            <td>1..*</td>
+            <td>schema:PostalAddress</td>
+            <td>schema:contactPoint</td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>0..*</td>
+            <td>N/A</td>
+            <td>schema:email</td>
+        </tr>
+        <tr>
+            <th>Phone</th>
+            <td>0..*</td>
+            <td>N/A</td>
+            <td>schema:telephone</td>
+        </tr>
+        <tr>
+            <th>URL</th>
+            <td>0..*</td>
+            <td>N/A</td>
+            <td>schema:url</td>
+        </tr>
+    </tbody>
+</table>
     <h4>Name</h4>
     <p>This field MUST be present.</p>
     <p>Indicates the <i>legal name</i> and <i>identity</i> of the Entity, expressed using <code>dpv:hasLegalName</code> and a string.</p>
@@ -1687,26 +1936,28 @@
 </aside>
     <h4>Identifier</h4>
     <p>This field MUST be present.</p>
-    <p>Indicates the <i>unique identifier</i> for the entity within the record. In linked data and semantic web methods of expressing information, the IRI already acts as an unique identifier. To explicitly denote another unique identifier as a reference to the entity, <code>dpv:hasIdentifier</code> can be used.</p>
+    <p>Indicates the <i>unique identifier</i> for the entity within the record. In linked data and semantic web methods of expressing information, the IRI already acts as an unique identifier. To support interoperability, the IRI identifier MUST be declared explicitly using <code>dpv:hasIdentifier</code>. To denote other (unique or otherwise) identifiers as a reference to the entity, <code>dct:identifier</code> should be used.</p>
     <p>In this specification and in [[ISO-27560]], the (IRI) identifier is used to associate the entity with specific processing roles, which is described in the next section.</p>
     <aside class="example" title="Example specifying entity identifier">
-            <p>The IRI of the entity is an identifier through which it can be uniquely identified. In this example, the entity has an <code>id</code> field which specifies its unique identifier.</p>
-            <pre><code>{
-    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
-    "@type": "dpv:ConsentRecord",
-    "dpv:hasEntity": {
-        "@type": "dpv:Entity",
-        "@id": "https://example.com/AcmeInc"
-    }
-}</code></pre>
-            <p>In this example, the entity has another identifier other than its IRI associated with it using <code>dpv:hasIdentifier</code> and is the entity's tax registration number.</p>
+            <p>The IRI of the entity is an identifier through which it can be uniquely identified. In this example, the entity has an <code>id</code> field which specifies its unique identifier, which is explicitly declared also using <code>dpv:hasIdentifier</code> to enable interoperability when converting between formats and schemas.</p>
             <pre><code>{
     "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
     "@type": "dpv:ConsentRecord",
     "dpv:hasEntity": {
         "@type": "dpv:Entity",
         "@id": "https://example.com/AcmeInc",
-        "dpv:hasIdentifier": "IE-0760c9ba"
+        "dpv:hasIdentifier": "https://example.com/AcmeInc"
+    }
+}</code></pre>
+            <p>In this example, the entity has another identifier other than its IRI which should be considered as the unique identifier to identify this entity. It is therefore associated using <code>dpv:hasIdentifier</code> while the IRI is declared as an alternate identifier using <code>dct:identifier</code></p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasEntity": {
+        "@type": "dpv:Entity",
+        "@id": "https://example.com/AcmeInc",
+        "dpv:hasIdentifier": "IE-0760c9ba",
+        "dct:identifier": "https://example.com/AcmeInc"
     }
 }</code></pre>
             <p>In this example, the entity's tax registration number is indicated as an additional identifier, with an explicit declaration of its meaning by using <a href="https://schema.org/PropertyValue"><code>schema:PropertyValue</code></a>. The example also shows the same information expressed using an appropriate domain specific ontology such as <a href="https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Parties/TaxIdentifier"><code>fibo:TaxIdentifier</code></a> - as best practice.</p>
@@ -1806,9 +2057,9 @@
 </aside>
     <h5>Phone</h5>
     <p>This field MAY be present.</p>
-    <p>Indicates the email of the entity, expressed using <code>schema:email</code>.</p>
+    <p>Indicates the telephone of the entity, expressed using <code>schema:telephone</code>.</p>
     <aside class="example" title="Example specifying entity email">
-            <p>The entitie's email expressed using <code>schema:email</code>.</p>
+            <p>The entitie's email expressed using <code>schema:telephone</code>.</p>
             <pre><code>{
     "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
     "@type": "dpv:ConsentRecord",
@@ -1816,7 +2067,7 @@
         "@type": "dpv:Entity",
         "schema:contactPoint": {
             "@type": "schema:ContactPoint",
-            "schema:email": "contact@example.com"
+            "schema:telephone": "+00-000-000"
         }
     }
 }</code></pre>
@@ -1849,6 +2100,54 @@
 </aside>
     <h3>Consent Event Fields</h3>
     <p>[[ISO-27560]] contains 5 fields to describe events associated with consent.</p>
+    <table style="font-family: monospace;">
+    <thead>
+        <tr>
+            <th>Field</th>
+            <th>Cardinality</th>
+            <th>DPV Concept</th>
+            <th>DPV Property</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>Consent Type</th>
+            <td>1..*</td>
+            <td>dpv:Consent taxonomy</td>
+            <td>dpv:hasLegalBasis</td>
+        </tr>
+        <tr>
+            <th>Consent State</th>
+            <td>1..*</td>
+            <td>dpv:ConsentStatus taxonomy</td>
+            <td>dpv:hasConsentStatus</td>
+        </tr>
+        <tr>
+            <th>Event Time</th>
+            <td>1..*</td>
+            <td>N/A</td>
+            <td>dpv:isIndicatedAtTime</td>
+        </tr>
+        <tr>
+            <th>Event Duration</th>
+            <td>1..*</td>
+            <td>dpv:Duration</td>
+            <td>dpv:hasDuration</td>
+        </tr>
+        <tr>
+            <th>Expression by Entity</th>
+            <td>1..*</td>
+            <td>dpv:Entity</td>
+            <td>dpv:isIndicatedBy</td>
+        </tr>
+        <tr>
+            <th>Expression Method</th>
+            <td>0..*</td>
+            <td>N/A</td>
+            <td>dpv:hasIndicationMethod</td>
+        </tr>
+    </tbody>
+</table>
     <h4>Consent Type</h4>
     <p>This field MUST be present.</p>
     <p>Indicates the type of consent (e.g. Implicit, Expressed, Explicit) expressed by the data subject. In [[ISO-27560]], this field is called <i>event type</i>.</p>
@@ -2071,8 +2370,6 @@
     }
 }</code></pre>
 </aside>
-    <h3>Conformance</h3>
-    - table
 
     <h3>Examples</h3>
     - full record
