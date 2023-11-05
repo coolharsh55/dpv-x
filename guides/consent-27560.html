@@ -1661,22 +1661,192 @@
 </aside>
 
     <h3>Entity Fields</h3>
+    <p>[[ISO-27560]] refers to <i>Entity</i> as <i>Party</i>.</p>
+    <p>Entities are expressed using instances of <code>dpv:Entity</code> and associated using <code>dpv:hasEntity</code>.</p>
     <h4>Name</h4>
-    schema:name
+    <p>This field MUST be present.</p>
+    <p>Indicates the <i>legal name</i> and <i>identity</i> of the Entity, expressed using <code>dpv:hasLegalName</code> and a string.</p>
+    <aside class="example" title="Example specifying entity name">
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasEntity": {
+        "@type": "dpv:Entity",
+        "dpv:hasName": "Example Inc."
+    }
+}</code></pre>
+    <p>DPV provides a taxonomy of different entity types, such as organisations, which can also be used to indicate what the entity is. In this example, the entity is declared to be a non-profit organisation.</p>
+    <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasEntity": {
+        "@type": "dpv:NonProfitOrganisation",
+        "dpv:hasName": "Example Inc."
+    }
+}</code></pre>
+</aside>
+    <h4>Identifier</h4>
+    <p>This field MUST be present.</p>
+    <p>Indicates the <i>unique identifier</i> for the entity within the record. In linked data and semantic web methods of expressing information, the IRI already acts as an unique identifier. To explicitly denote another unique identifier as a reference to the entity, <code>dpv:hasIdentifier</code> can be used.</p>
+    <p>In this specification and in [[ISO-27560]], the (IRI) identifier is used to associate the entity with specific processing roles, which is described in the next section.</p>
+    <aside class="example" title="Example specifying entity identifier">
+            <p>The IRI of the entity is an identifier through which it can be uniquely identified. In this example, the entity has an <code>id</code> field which specifies its unique identifier.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasEntity": {
+        "@type": "dpv:Entity",
+        "@id": "https://example.com/AcmeInc"
+    }
+}</code></pre>
+            <p>In this example, the entity has another identifier other than its IRI associated with it using <code>dpv:hasIdentifier</code> and is the entity's tax registration number.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasEntity": {
+        "@type": "dpv:Entity",
+        "@id": "https://example.com/AcmeInc",
+        "dpv:hasIdentifier": "IE-0760c9ba"
+    }
+}</code></pre>
+            <p>In this example, the entity's tax registration number is indicated as an additional identifier, with an explicit declaration of its meaning by using <a href="https://schema.org/PropertyValue"><code>schema:PropertyValue</code></a>. The example also shows the same information expressed using an appropriate domain specific ontology such as <a href="https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Parties/TaxIdentifier"><code>fibo:TaxIdentifier</code></a> - as best practice.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasEntity": {
+        "@type": "dpv:Entity",
+        "@id": "https://example.com/AcmeInc",
+        "dpv:hasIdentifier": [{
+            "@type": "schema:PropertyValue",
+            "name": "Tax Identifier",
+            "value": "IE-0760c9ba"
+        }, {
+            "@type": "fibo:TaxIdentifier",
+            "fibo:hasTextValue": "IE-0760c9ba"
+        }]
+    }
+}</code></pre>
+</aside>
     <h4>Role</h4>
-    type
+    <p>This field MUST be present.</p>
+    <p>Indicates the role of the entity within the process activities, indicated using <code>rdf:type</code> and an appropriate role such as <code>dpv:DataController</code>, <code>dpv:DataProcessor</code>, <code>dpv:ThirdParty</code>, <code>dpv:Authority</code>, and <code>dpv:DataSubject</code>.</p>
+    <p>In [[ISO-27560]], the entity (party) fields are separate from the processing section and therefore the role of the entity is expressed separate from processing. In DPV, the role MUST be expressed contextually within the processing fields by using an appropriate property e.g. <code>dpv:hasDataController</code> and the identifier of the entity. Optionally, the entity description field can also contain an explicit acknowledgement of the role by stating the entity is of type e.g. <code>dpv:DataController</code>.</p>
+    <aside class="example" title="Example specifying entity role">
+            <p>The role of the entity can be declared contextually using properties such as <code>dpv:hasDataController</code> and <code>dpv:hasDataSubject</code> within the processing section, and explicitly using <code>rdf:type</code> within entity section. This example shows both uses for data controller and data subject entities. The (IRI) identifier of the entity is used within the processing section which points to the declared information within the entities section. The identifier for the data subject is a local identifier within the record and known to the data controller to minimise identifying information within the record.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": {
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasDataController": "ex:Acme",
+        "dpv:hasDataSubject": "0760c9ba"
+    },
+    "dpv:hasEntity": [{
+        "@id": "ex:Acme",
+        "@type": "dpv:DataController"
+    }, {
+        "@id": "0760c9ba",
+        "@type": "dpv:DataSubject"
+    }]
+}</code></pre>
+</aside>
     <h4>Contact</h4>
-    schema:contactPoint schema:ContactPoint
-    <h4>Address</h4>
-    schema:address schema:PostalAddress
-    <h4>Email</h4>
-    schema:email
-    <h4>Url</h4>
-    schema:url
-    <h4>Phone</h4>
-    schema:phone
-
-    </ol>
+    <p>This field MUST be present.</p>
+    <p>Indicates the contact for an entity for communication purposes, indicated using <code>schema:contactPoint</code> and an instance of <code>schema:ContactPoint</code>.</p>
+    <p><strong>NOTE:</strong> As in [[ISO-27560]], this field MUST be present for all entities EXCEPT data subjects as in a record it may not be necessary to record the contact for data subjects. This follows best practices regarding data minimisation and purpose limitation.</p>
+    <aside class="example" title="Example specifying entity contact">
+            <p>The entitie's contact point expressed using <code>schema:contactPoint</code> and an instance of <code>schema:ContactPoint</code>. In this example, the contact point is a 'direct message' service for the entity's social media handle.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasEntity": {
+        "@type": "dpv:Entity",
+        "schema:contactPoint": {
+            "@type": "schema:contactPoint",
+            "schema:contactType": "DM",
+            "url": "https://example.com/social-media/DM"
+        }
+    }
+}</code></pre>
+</aside>
+    <h5>Postal Address</h5>
+    <p>This field MUST be present.</p>
+    <p>Indicates the potal address of the entity, expressed using <code>schema:address</code> and an instance of <code>schema:PostalAddress</code>.</p>
+    <p><strong>NOTE:</strong> As in [[ISO-27560]], this field MUST be present for all entities EXCEPT data subjects as in a record it may not be necessary to record the postal address of data subjects. This follows best practices regarding data minimisation and purpose limitation.</p>
+    <aside class="example" title="Example specifying entity postal address">
+            <p>The entitie's postal address expressed using <code>schema:contactPoint</code> and an instance of <code>schema:PostalAddress</code>.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasEntity": {
+        "@type": "dpv:Entity",
+        "schema:contactPoint": {
+            "@type": "schema:PostalAddress",
+            "schema:streetAddress": "Example Avenue, Example, 000-000"
+        }
+    }
+}</code></pre>
+</aside>
+    <h5>Email</h5>
+    <p>This field MAY be present.</p>
+    <p>Indicates the email of the entity, expressed using <code>schema:email</code>.</p>
+    <aside class="example" title="Example specifying entity email">
+            <p>The entitie's email expressed using <code>schema:email</code>.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasEntity": {
+        "@type": "dpv:Entity",
+        "schema:contactPoint": {
+            "@type": "schema:ContactPoint",
+            "schema:email": "contact@example.com"
+        }
+    }
+}</code></pre>
+</aside>
+    <h5>Phone</h5>
+    <p>This field MAY be present.</p>
+    <p>Indicates the email of the entity, expressed using <code>schema:email</code>.</p>
+    <aside class="example" title="Example specifying entity email">
+            <p>The entitie's email expressed using <code>schema:email</code>.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasEntity": {
+        "@type": "dpv:Entity",
+        "schema:contactPoint": {
+            "@type": "schema:ContactPoint",
+            "schema:email": "contact@example.com"
+        }
+    }
+}</code></pre>
+</aside>
+    <h4>URL</h4>
+    <p>This field MAY be present.</p>
+    <p>Indicates the url of the entity, expressed using <code>schema:url</code>. The type of the page can be expressed using appropriate concepts, such as <code>dpv:PrivacyNotice</code>.</p>
+    <aside class="example" title="Example specifying entity url">
+            <p>The entity's url expressed using <code>schema:url</code>.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasEntity": {
+        "@type": "dpv:Entity",
+        "schema:url": "https://example.com/"
+    }
+}</code></pre>
+            <p>The entity's privacy notice expressed using <code>schema:PropertyValue</code> and <code>dpv:PrivacyNotice</code>. While notices can also be associated using <code>dpv:hasNotice</code>, it is suggested to use <code>schema:url</code> in this case for consistency in associating urls.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasEntity": {
+        "@type": "dpv:Entity",
+        "schema:url": {
+            "@type": "schema:PropertyValue",
+            "name": "dpv:PrivacyNotice"
+            "https://example.com/privacy-policy"
+    }
+}</code></pre>
+</aside>
     <h3>Consent Event Fields</h3>
     <h4>Events / States</h4>
 
