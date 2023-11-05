@@ -1848,15 +1848,229 @@
 }</code></pre>
 </aside>
     <h3>Consent Event Fields</h3>
-    <h4>Events / States</h4>
+    <p>[[ISO-27560]] contains 5 fields to describe events associated with consent.</p>
+    <h4>Consent Type</h4>
+    <p>This field MUST be present.</p>
+    <p>Indicates the type of consent (e.g. Implicit, Expressed, Explicit) expressed by the data subject. In [[ISO-27560]], this field is called <i>event type</i>.</p>
+    <p>In DPV, <code>dpv:ConsentType</code> represents consent types to be used as a legal basis (<code>dpv:hasLegalBasis</code>) and has the following different types:
+        <code>dpv:InformedConsent</code> and <code>dpv:UninformedConsent</code> to indicate whether the consent is informed or not. Informed consent is further specialised as: <code>dpv:ImpliedConsent</code> for consent indicated through an implied or indirect action (e.g. merely browsing a website), <code>dpv:ExpressedConsent</code> for consent indicated through a direct expressed action (e.g. a checkbox), and <code>dpv:ExplicitlyExpressedConsent</code> for consent indicated through a direct action concerning solely the consent in context.</p>
+    <p>Consent types are also dependent on jurisdictional requirements, such as GDPR's various consent types. These can be represented by expanding on the relevant DPV concepts. For GDPR, the following consent types are provided in [[DPV-GDPR]]: <code>dpv-gdpr:A6-1-a</code> expressed consent and <code>dpv-gdpr:A9-2-a</code> explicit consent.</p>
+    <p>Best practice for choosing approprite consent types concern expressing the correct legal basis for a specific jurisdiction where possible (e.g. GDPR A.6-1a) or to indicate the type of consent (e.g. Expressed Consent) where the jurisdiction is explicitly provided or is understood from available context. Following this, the most appropriate consent types for most cases would be <code>dpv:ExpressedConsent</code> and <code>dpv:ExplicitlyExpressedConsent</code>.</p>
+    <aside class="example" title="Example specifying consent types">
+            <p>This example shows the consent type <code>dpv:ExplicitlyExpressedConsent</code> used as a legal basis. Since no jurisdiction is specified here, the interpretation of its validity depends on external context, or alternatively it indicates the interpretation of consent validity should be as per the intpretation of "explicitly expressed" in whatever jurisdiction is chosen.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": {
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasLegalBasis": "dpv:ExplicitlyExpressedConsent"
+    }
+}</code></pre>
+            <p>This example shows two uses of consent types both concerning <code>dpv:ExplicitlyExpressedConsent</code>. The first explicitly declares the jurisdiction as EU and the law being applicable as GDPR, and the second uses the GDPR clause Art.9-2a which indicates explicitly expressed consent. The advantage of the first approach is that the same consent type (explicitly expressed consent) can be used with different jurisdictions and laws, and the advantage of the second approach is in explicitly linking to a legal clause which is desirable for compliance evaluation and demonstration processes.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasPersonalDataHandling": [{
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasLegalBasis": "dpv:ExplicitlyExpressedConsent",
+        "dpv:hasJurisdiction": "loc:EU",
+        "dpv:hasApplicableLaw": "dpv-gdpr:GDPR"
+    }, {
+        "@type": "dpv:PersonalDataHandling",
+        "dpv:hasLegalBasis": "dpv-gdpr:A9-2-a"
+    }]
+}</code></pre>
+</aside>
+    <h4>Consent State</h4>
+    <p>This field MUST be present.</p>
+    <p>Indicate the <i>state</i> or <i>status</i> of consent reflecting its applicability or suitability to be used as a legal basis to justify the specified processing. In DPV, it is represented through <code>dpv:ConsentStatus</code> and associated using <code>dpv:hasConsentStatus</code>. Instances of consent states represent specific events concerning the use of consent as a legal basis, e.g. requesting consent, giving consent, withdrawing consent. Each event may have corresponding processes, such as giving consent enables the processing to take place and withdrawing consent stops the processing taking place.</p>
+    <p>DPV provides several states broadly categorised under those valid for processing and those that are not. These are:</p>
+    <ul>
+        <li>The consent states that are considered valid for processing (<code>dpv:ConsentStatusValidForProcessing</code>) are: <code>dpv:ConsentGiven</code>, <code>dpv:RenewedConsentGiven</code>.</li>
+        <li>The consent states that are NOT considered valid for processing (<code>dpv:ConsentStatusInvalidForProcessing</code>) are: <code>dpv:ConsentUnknown</code>, <code>dpv:ConsentRequested</code>, <code>dpv:ConsentRequestDeferred</code>, <code>dpv:ConsentRefused</code>, <code>dpv:ConsentWithdrawn</code>, <code>dpv:ConsentExpired</code>, <code>dpv:ConsentTerminated</code>, <code>dpv:ConsentInvalidated</code>.
+    </ul>
+    <aside class="example" title="Example specifying consent state">
+            <p>This example specifies the association of consent states within the consent record. It shows that consent has been given for processing that had explicitly expressed consent as its legal basis. It can be inferred that the given consent is expected to be of type "explicitly expressed". Note that this example does not show when the consent was given as well as any other contextual information (e.g. expressed where, how).</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasLegalBasis": "dpv:ExplicitlyExpressedConsent",
+    "dpv:hasConsentStatus": "dpv:ConsentGiven"
+}</code></pre>
+            <p>This example shows that consent has been given for processing witha declaration that it is of type explicitly expressed consent (same as its legal basis). Note that this example does not show when the consent was given as well as any other contextual information (e.g. expressed where, how).</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasLegalBasis": "dpv:ExplicitlyExpressedConsent",
+    "dpv:hasConsentStatus": {
+        "@type": ["dpv:ConsentGiven", "dpv:ExplicitlyExpressedConsent"]
+    }
+}</code></pre>
+</aside>
 
-    <h4>Duration and Expiry</h4>
-    - dpv:hasRecord - consent type, isIndicatedAtTime, isIndicatedBy, hasIndicationMethod, hasStatus - ConsentStatus
-    - duration for expiry, 
+    <h4>Event Time</h4>
+    <p>This field MUST be present.</p>
+    <p>The time of the associated event (e.g. giving consent, withdrawing consent), indicated using <code>dpv:isIndicatedAtTime</code>. [[ISO-27560]] defines this field as the time the event was expressed or exercised by the specified entity (e.g. when data subject gave consent), and requires this field use a value as per [[ISO 8601]] UTC time to declare the timestamp associated with the event.</p>
+    <aside class="example" title="Example specifying consent event time">
+            <p>To express how the data subject can withdraw consent.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasConsentStatus": {
+        "@type": "dpv:ConsentGiven",
+        "dpv:isIndicatedAtTime": "2023-11-05T16:08:50"
+    }
+}</code></pre>
+</aside>
 
-    <h4>Expression by Agent</h4>
-    - parent/guardian - hasJustification for entity different from data subject, or if there are two consents, then express them as parts
+    <h4>Event Duration</h4>
+    <p>This field MUST be present.</p>
+    <p>Indicates the duration or the condition for determining validity of the duration for the event. It is indicated using <code>dpv:Duration</code> and associated using <code>dpv:hasDuration</code>. DPV provides the following duration concepts: </p>
+    <ul>
+        <li><code>TemporalDuration</code> for indicating a relative temporal duration, e.g. 6 months from the indicated event date.</li>
+        <li><code>UntilTimeDuration</code> for indicating duration that occurs until the end of specified time, e.g. until 31 DEC 2023.</li>
+        <li><code>UntilEventDuration</code> for indicating duration that occurs until the end of specified event, e.g. until account is closed.</li>
+        <li><code>FixedOccurencesDuration</code> for a duration that is based on number of occurences, e.g. using it 3 times</li>
+        <li><code>EndlessDuration</code> for indicating a duration without an end condition or temporal notation. Note that endless duration is not considered best practice and is considered invalid in several jurisdictions.</li>
+    </ul>
+    <p>[[ISO-27560]] specifies that where the duration relates to the validity of given consent, the duration also indicates that the Data Controller should request the data subject to confirm or 'refresh' their consent without which the consent cannot be valid for processing.</p>
+    <aside class="example" title="Example specifying consent state duration">
+            <p>This example specifies the duration for the given consent is 6 months (expressed using [[ISO 8601]] from the indicated time, after which it can no longer be considered valid.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasConsentStatus": {
+        "@type": "dpv:ConsentGiven",
+        "dpv:isIndicatedAtTime": "2023-11-05T16:18:25",
+        "dpv:hasDuration": {
+            "@type": "dpv:TemporalDuration",
+            "rdf:value": "P6M"
+        }
+    }
+}</code></pre>
+            <p>This example specifies the duration for the given consent is until the end of the 2023 year, which is independent of the time the consent was expressed.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasConsentStatus": {
+        "@type": "dpv:ConsentGiven",
+        "dpv:isIndicatedAtTime": "2023-11-05T16:18:25",
+        "dpv:hasDuration": {
+            "@type": "dpv:UntilTimeDuration",
+            "rdf:value": "2023-12-31T23:59:59"
+        }
+    }
+}</code></pre>
+            <p>This example specifies the duration for the given consent is until the specified event of closing the associated user account.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasConsentStatus": {
+        "@type": "dpv:ConsentGiven",
+        "dpv:isIndicatedAtTime": "2023-11-05T16:18:25",
+        "dpv:hasDuration": {
+            "@type": "dpv:UntilEventDuration",
+            "rdf:value": "Closure of User Account"
+        }
+    }
+}</code></pre>
+            <p>This example specifies the duration for the given consent is limited to its use a single time (number of occurences = 1), after which it can no longer be considered valid. This is relevant for contexts such as when data is being collected and the consent is used to perform such collection and processing a single time. The corresponding DPV concept of <code>dpv:SingularFrequency</code> can be used to depict this explicitly.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasConsentStatus": {
+        "@type": "dpv:ConsentGiven",
+        "dpv:isIndicatedAtTime": "2023-11-05T16:18:25",
+        "dpv:hasDuration": {
+            "@type": "dpv:FixedOccurencesDuration",
+            "rdf:value": "1"
+        }
+    }
+}</code></pre>
+</aside>
 
+    <h4>Expression by Entity</h4>
+    <p>This field MUST be present.</p>
+    <p>Indicates which entity or agent (party in [[ISO-27560]]) exercised or expressed the specified event. For example, if it was the data subject or their guardian who expressed the given consent. In DPV, this is indicated using the appropriate <code>dpv:Entity</code> concept and associated using <code>dpv:isIndicatedBy</code>.</p>
+    <p>In [[ISO-27560]], this field is called <i>entity id</i> and is used to link to the relevant entity through their identifier (e.g. data subject identifier or to an entry in the party section). As this field MUST be present in [[ISO-27560]], the most common value expected here will be a reference to the data subject. In DPV, this can also be indicated using <code>dpv:DataSubject</code> instead of the identifier.</p>
+    <aside class="example" title="Example specifying entity expressing consent">
+            <p>This example specifies that the consent request was expressed by Acme Inc. (as the data controller), while the given consent and its withdrawal were both expressed by the data subject.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasConsentStatus": [{
+        "@type": "dpv:ConsentRequested",
+        "dpv:isIndicatedBy": "ex:AcmeInc"
+    }, {
+        "@type": "dpv:ConsentGiven",
+        "dpv:isIndicatedBy": "dpv:DataSubject"
+    }, {
+        "@type": "dpv:ConsentWithdrawn",
+        "dpv:isIndicatedBy": "dpv:DataSubject"
+    }],
+    "dpv:hasEntity": {
+        "@type": ["dpv:Organisation", "dpv:DataController"],
+        "@id": "ex:AcmeInc"
+    }
+}</code></pre>
+            <p>This example specifies that the consent request was implemented by Beta Inc. (as the data processor) operating on behalf of Acme Inc. (as the data controller)</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasConsentStatus": [{
+        "@type": "dpv:ConsentRequested",
+        "dpv:isIndicatedBy": "ex:AcmeInc",
+        "dpv:isImplementedBy": "ex:BetaInc"
+    }, {
+        "@type": "dpv:ConsentGiven",
+        "dpv:isIndicatedBy": "dpv:DataSubject"
+    }, {
+        "@type": "dpv:ConsentWithdrawn",
+        "dpv:isIndicatedBy": "dpv:DataSubject"
+    }],
+    "dpv:hasEntity": [{
+        "@type": ["dpv:Organisation", "dpv:DataController"],
+        "@id": "ex:AcmeInc"
+    }, {
+        "@type": ["dpv:Organisation", "dpv:DataProcessor"],
+        "@id": "ex:BetaInc"
+    }]
+}</code></pre>
+            <p>This example specifies that the consent concerning the data subject (a child) was expressed by the data subject as well as by their parent. An additional optional annotation is provided using <code>dpv:hasJustification</code> to justify the necessity of parent involvement. Such justifications are useful to indicate relevant context in cases such as where the data subject is not involved or where only the parental or guardian consent is required.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasDataSubject": {
+        "@id": "0760c9ba",
+        "type": "dpv:Child"
+    },
+    "dpv:hasConsentStatus": {
+        "@type": "dpv:ConsentGiven",
+        "dpv:isIndicatedBy": [
+            "dpv:DataSubject",
+            {
+                "@type": "dpv:ParentOfDataSubject",
+                "dpv:hasJustification": "The processing also requires parental consent"
+            }
+        ]
+    }
+}</code></pre>
+</aside>
+    <h4>Expression Method</h4>
+    <p>This field MAY be present.</p>
+    <p>Indicates how the specified entity expressed or exercisde the indicated event, e.g. a data subject clicked the button to give consent. This field is not present in [[ISO-27560]], but is considered best practice to document so as to record information relevant to the assessment of consent validity and legal compliance. In DPV, it is associated using <code>dpv:hasIndicationMethod</code>.</p>
+    <aside class="example" title="Example specifying entity expression method">
+            <p>This example specifies that the consent given by the data subject was expressed by clicking a button within the presented dialogue.</p>
+            <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentRecord",
+    "dpv:hasConsentStatus": {
+        "@type": "dpv:ConsentGiven",
+        "dpv:isIndicatedBy": "dpv:DataSubject",
+        "dpv:hasIndicationMethod": "Agree button in dialogue"
+    }
+}</code></pre>
+</aside>
     <h3>Conformance</h3>
     - table
 
