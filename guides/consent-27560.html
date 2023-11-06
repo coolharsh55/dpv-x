@@ -2482,14 +2482,40 @@
             </aside>
     <h4>Associated Consent Record</h4>
     <p>This field MUST be present.</p>
-    <p>TODO: <code>dpv:hasConsentRecord</code></p>
+    <p>The information to be provided within a consent receipt is in the form of consent records, which are associated using <code>dpv:hasConsentRecord</code>.</p>
+    <aside class="example" title="Example specifying consent receipt with information structured as consent records">
+                <p>In this example, the consent receipt contains two consent records, and demonstrates that the receipt can be used to provide information on more than one instance of consent.</p>
+                <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentReceipt",
+    "dpv:hasIdentifier": "a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "dpv:hasConsentRecord": [{
+        "@type": "dpv:ConsentRecord",
+        "id": "782c2fab-8bca-4ff9-b5c6-52f7d79f4095"
+    }, {
+        "@type": "dpv:ConsentRecord",
+        "id": "38bef3e8-d074-477f-8eca-ef28bf341162"
+    }]
+}</code></pre>
+</aside>
+    <h4>Creation Timestamp</h4>
+    <p>This field MUST be present.</p>
+    <p>Indicates the date/time for when the receipt was generated, indicated using <code>dct:created</code>. NOTE: This field is not present in [[ISO-27560]].</p>
+    <aside class="example" title="Example specifying consent receipt creation timestamp">
+                <p>The timestamp is associated with the consent receipt using <code>dct:created</code> and using the [[ISO 8601]] format.</p>
+                <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentReceipt",
+    "dpv:hasIdentifier": "a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "dct:created": "2023-11-06T10:49:58"
+}</code></pre>
+</aside>
     <h4>Additional Metadata</h4>
         <p>Information such as who maintains or published the receipt, when was it created or modified, and its provenance is not covered by [[ISO-27560]] as it is considered "implementation detail". To assist in maintaining this information, the following fields from [[DC-TERMS]] are suggested for documenting this information in an optional and non-normative manner:</p>
         <ul>
             <li><code>dct:audience</code>: information on entity or entities for whom the receipt is intended or produced for - this will typically be the Data Subject.</li>
             <li><code>dct:accessRights</code>: information on who can access the consent receipt, or to specify information regarding the security measures in place restricting access to information within the receipt.</li>
             <li><code>dct:contributor</code>: entity or entities that have contributed to the information within the consent receipt.</li>
-            <li><code>dct:created</code>: date/time for when the consent receipt was created.</li>
             <li><code>dct:creator</code>: entity that created the consent receipt. NOTE: this entity may be different from the publisher of the consent receipt, e.g. a processor (creator) manages the receipt for a controller (publisher).</li>
             <li><code>dct:hasPart</code> (with inverse <code>dct:isPartOf</code>): to associate with a part of the consent receipt, e.g. where the information in a consent receipt may be maintained separately or partitioned based on common information for efficiency.</li>
             <li><code>dct:hasVersion</code> (with inverse <code>dct:isVersionOf</code>): to associate one consent receipt with its updated version, e.g. where each event in a consent receipt results in a new consent receipt.</li>
@@ -2520,7 +2546,8 @@
 }</code></pre>
     </aside>
     <h3>Examples</h3>
-    <aside class="example" title="Example of a Consent Receipt with only the consent status">
+    <aside class="example" title="Example of a Consent Receipt containing only entities, purposes, and latest consent status">
+        <p style="background-color: RED;">TODO</p>
         <pre><code>{
     "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
     "@type": "dpv:ConsentReceipt",
@@ -2531,7 +2558,20 @@
     }
 }</code></pre>
     </aside>
-    <aside class="example" title="Example of a Consent Receipt with both required and optional fields">
+    <aside class="example" title="Example of a Consent Receipt with information from required fields in a consent record">
+        <p style="background-color: RED;">TODO</p>
+        <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentReceipt",
+    "dpv:hasConsentStatus": {
+        "@type": "dpv:ConsentGiven",
+        "dpv:isIndicatedBy": "dpv:DataSubject",
+        "dpv:hasIndicationMethod": "Agree button in dialogue"
+    }
+}</code></pre>
+    </aside>
+    <aside class="example" title="Example of a Consent Receipt with information from required and optional fields in a consent record">
+        <p style="background-color: RED;">TODO</p>
         <pre><code>{
     "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
     "@type": "dpv:ConsentReceipt",
