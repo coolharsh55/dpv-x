@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DPVCG Status Check</title>
+    <style type="text/css">
+        body {
+            max-width: 800px;
+            margin: auto;
+        }
+        #btn-check {
+            border: 1px solid black;
+            box-shadow: 2px 2px 2px darkgray;
+            padding: 2px;
+            font: 1.5rem;
+        }
+        table {
+            margin-top: 10px;
+            border: 1px solid black;
+        }
+        th, td {
+            border: 1px solid black;
+        }
+        .failed {
+            color: red;
+            font-weight: bold;
+        }
+        .failed:after {
+            content: "\274c";
+        }
+        .passed {
+            color: green;
+        }
+        .passed:after {
+            content: "\2713";
+        }
+    </style>
+</head>
+<body>
+    <h1>DPVCG Status Check</h1>
+    <button id="btn-check" onclick="check_urls()">Check Status</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Vocab</th>
+                <th>purl</th>
+                <th>final url</th>
+                <th>status</th>
+            </tr>
+        </thead>
+        <tbody id="tbl-data">
+        </tbody>
+    </table>
+
+    <h2>Log</h2>
+    <div id="log"></div>
+
+<script type="text/javascript">
+var urls = {
+"dpv": {
+    "purl": "https://w3id.org/dpv",
+    "final": "https://w3c.github.io/dpv/dpv"
+},
+"dpv-owl": {
+    "purl": "https://w3id.org/dpv/owl",
+    "final": "https://w3c.github.io/dpv/dpv/dpv-owl"
+},
+"pd": {
+    "purl": "https://w3id.org/dpv/pd",
+    "final": "https://w3c.github.io/dpv/pd"
+},
+"pd-owl": {
+    "purl": "https://w3id.org/dpv/pd/owl",
+    "final": "https://w3c.github.io/dpv/pd/pd-owl"
+},
+"tech": {
+    "purl": "https://w3id.org/dpv/tech",
+    "final": "https://w3c.github.io/dpv/tech"
+},
+"tech-owl": {
+    "purl": "https://w3id.org/dpv/tech/owl",
+    "final": "https://w3c.github.io/dpv/tech/tech-owl"
+},
+"loc": {
+    "purl": "https://w3id.org/dpv/loc",
+    "final": "https://w3c.github.io/dpv/loc"
+},
+"loc-owl": {
+    "purl": "https://w3id.org/dpv/loc/owl",
+    "final": "https://w3c.github.io/dpv/loc/loc-owl"
+},
+"risk": {
+    "purl": "https://w3id.org/dpv/risk",
+    "final": "https://w3c.github.io/dpv/risk"
+},
+"risk-owl": {
+    "purl": "https://w3id.org/dpv/risk/owl",
+    "final": "https://w3c.github.io/dpv/risk/risk-owl"
+},
+"tech": {
+    "purl": "https://w3id.org/dpv/tech",
+    "final": "https://w3c.github.io/dpv/tech"
+},
+"tech-owl": {
+    "purl": "https://w3id.org/dpv/tech/owl",
+    "final": "https://w3c.github.io/dpv/tech/tech-owl"
+},
+"legal": {
+    "purl": "https://w3id.org/dpv/legal",
+    "final": "https://w3c.github.io/dpv/legal"
+},
+"legal-owl": {
+    "purl": "https://w3id.org/dpv/legal/owl",
+    "final": "https://w3c.github.io/dpv/legal/legal-owl"
+},
+"legal-eu": {
+    "purl": "https://w3id.org/dpv/legal/eu",
+    "final": "https://w3c.github.io/dpv/legal/eu"
+},
+"legal-eu-owl": {
+    "purl": "https://w3id.org/dpv/legal/eu/owl",
+    "final": "https://w3c.github.io/dpv/legal/eu/legal-eu-owl"
+},
+"eu-gdpr": {
+    "purl": "https://w3id.org/dpv/legal/eu/gdpr",
+    "final": "https://w3c.github.io/dpv/legal/eu/gdpr"
+},
+"eu-gdpr-owl": {
+    "purl": "https://w3id.org/dpv/legal/eu/gdpr/owl",
+    "final": "https://w3c.github.io/dpv/legal/eu/gdpr/eu-gdpr-owl"
+},
+"eu-dga": {
+    "purl": "https://w3id.org/dpv/legal/eu/dga",
+    "final": "https://w3c.github.io/dpv/legal/eu/dga"
+},
+"eu-dga-owl": {
+    "purl": "https://w3id.org/dpv/legal/eu/dga/owl",
+    "final": "https://w3c.github.io/dpv/legal/eu/dga-owl"
+},
+"eu-aiact": {
+    "purl": "https://w3id.org/dpv/legal/eu/aiact",
+    "final": "https://w3c.github.io/dpv/legal/eu/aiact"
+},
+"eu-aiact-owl": {
+    "purl": "https://w3id.org/dpv/legal/eu/aiact/owl",
+    "final": "https://w3c.github.io/dpv/legal/eu/aiact-owl"
+},
+"eu-rights": {
+    "purl": "https://w3id.org/dpv/legal/eu/rights",
+    "final": "https://w3c.github.io/dpv/legal/eu/rights"
+},
+"eu-rights-owl": {
+    "purl": "https://w3id.org/dpv/legal/eu/rights/owl",
+    "final": "https://w3c.github.io/dpv/legal/eu/rights-owl"
+},
+"primer": {
+    "purl": "https://w3id.org/dpv/primer",
+    "final": "https://w3c.github.io/dpv/primer"
+},
+"guides": {
+    "purl": "https://w3id.org/dpv/guides",
+    "final": "https://w3c.github.io/dpv/guides"
+},
+"examples": {
+    "purl": "https://w3id.org/dpv/examples",
+    "final": "https://w3c.github.io/dpv/examples"
+},
+"use-cases": {
+    "purl": "https://w3id.org/dpv/use-cases",
+    "final": "https://w3c.github.io/dpv/use-cases"
+},
+"dpv-skos": { 
+    "purl": "https://w3id.org/dpv/dpv-skos",
+    "final": "https://w3c.github.io/dpv/"
+},
+"dpv-pd": { 
+    "purl": "https://w3id.org/dpv/dpv-skos/dpv-pd",
+    "final": "https://w3c.github.io/dpv/pd"
+},
+"dpv-gdpr": { 
+    "purl": "https://w3id.org/dpv/dpv-skos/dpv-gdpr",
+    "final": "https://w3c.github.io/dpv/legal/eu/gdpr"
+},
+"dpv-dga": { 
+    "purl": "https://w3id.org/dpv/dpv-skos/dpv-dga",
+    "final": "https://w3c.github.io/dpv/legal/eu/dga"
+},
+"dpv-tech": { 
+    "purl": "https://w3id.org/dpv/dpv-skos/dpv-tech",
+    "final": "https://w3c.github.io/dpv/tech"
+},
+"dpv-legal": { 
+    "purl": "https://w3id.org/dpv/dpv-skos/dpv-legal",
+    "final": "https://w3c.github.io/dpv/legal"
+},
+"dpv-owl": { 
+    "purl": "https://w3id.org/dpv/dpv-owl",
+    "final": "https://w3c.github.io/dpv/owl"
+},
+"dpv-pd": { 
+    "purl": "https://w3id.org/dpv/dpv-owl/dpv-pd",
+    "final": "https://w3c.github.io/dpv/owl"
+},
+"dpv-gdpr": { 
+    "purl": "https://w3id.org/dpv/dpv-owl/dpv-gdpr",
+    "final": "https://w3c.github.io/dpv/legal/eu/gdpr/owl"
+},
+"dpv-dga": { 
+    "purl": "https://w3id.org/dpv/dpv-owl/dpv-dga",
+    "final": "https://w3c.github.io/dpv/eu/dga/owl"
+},
+"dpv-tech": { 
+    "purl": "https://w3id.org/dpv/dpv-owl/dpv-tech",
+    "final": "https://w3c.github.io/dpv/tech/owl"
+},
+"dpv-legal": { 
+    "purl": "https://w3id.org/dpv/dpv-owl/dpv-legal",
+    "final": "https://w3c.github.io/dpv/loc/owl"
+}
+};
+var tbl_data = document.getElementById('tbl-data');
+
+document.addEventListener("DOMContentLoaded", () => {
+    for(const [vocab, data] of Object.entries(urls)) {
+        var row = tbl_data.insertRow();
+        row.id = "tr-" + vocab;
+        row.innerHTML = "<td>" + vocab + "</td>" +
+                        "<td>" + data.purl  + "</td>" +
+                        "<td>" + data.final + "</td>" +
+                        "<td id='status-" + vocab + "'>" + "</td>";
+    }
+});
+
+function check_urls() {
+    for(const [vocab, data] of Object.entries(urls)) {
+        var response = get_final_url(vocab, data.purl, data.final);
+        // console.log(vocab, data.purl, data.final, response);
+    }
+};
+
+function get_final_url(vocab, purl, expected) {
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function() {
+        if (request.readyState===4) {
+            var status = document.getElementById('status-'+vocab);
+            if (request.responseURL == expected || request.responseURL == expected + '/') {
+                status.innerHTML = "<a href='#log-" + vocab + "'>PASS</a>";
+                document.getElementById('log').insertAdjacentHTML('beforeend', "<p id='log-" + vocab + "'>PASS: ");
+                status.classList.remove('failed');
+                status.classList.add('passed');
+            } else {
+                status.innerHTML = "<a href='#log-" + vocab + "'>FAIL</a>";
+                document.getElementById('log').insertAdjacentHTML('beforeend', "<p id='log-" + vocab + "'><strong>FAIL:</strong> ");
+                status.classList.add('failed');
+                status.classList.remove('passed');
+            }
+            document.getElementById('log').insertAdjacentHTML('beforeend', "expected: " + expected + "<br/>received: " + request.responseURL + "</p>");
+        }
+    }
+    request.open('GET', purl, true);
+    request.send();
+};
+</script>
+</body>
+</html>
