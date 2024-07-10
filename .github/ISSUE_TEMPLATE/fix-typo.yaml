@@ -1,0 +1,38 @@
+name: Fix Typo or Error
+description: Fix typos(s) or error(s) in RDF and HTML documents
+title: "[FIX]: "
+labels: ["todo"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this report!
+  - type: checkboxes
+    id: specs
+    attributes:
+      label: specs
+      description: Please indicate which specification are affected by this
+      options:
+        - DPV
+        - Personal Data (PD)
+        - Technical (TECH)
+        - Locations (LOC)
+        - RISK
+        - AI 
+        - Justifications
+        - LEGAL (e.g. IE, US)
+        - EU-GDPR
+        - EU-DGA
+        - EU-NIS2
+        - EU-AIAct
+        - EU-Rights
+    validations:
+      required: true
+  - type: textarea
+    id: errors
+    attributes:
+      label: errors
+      description: please list all typo(s), error(s), etc. here 
+      placeholder: errors can be typo(s), missing or broken links, missing images, wrong references, incorrect attributions...
+      validations:
+        required: true
