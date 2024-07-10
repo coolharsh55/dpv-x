@@ -35,5 +35,5 @@ body:
       description: please list all typo(s), error(s), etc. here 
       placeholder: errors can be typo(s), missing or broken links, missing images, wrong references, incorrect attributions...
       value: Fix ...
-      validations:
-        required: true
+    validations:
+      required: true
