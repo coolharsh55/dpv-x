@@ -1,5 +1,5 @@
 name: Fix Typo or Error
-description: Fix typos(s) or error(s) in RDF and HTML documents
+description: Fix typo(s) or error(s) in RDF and HTML documents
 title: "[FIX]: "
 labels: ["todo"]
 body:
@@ -10,30 +10,30 @@ body:
   - type: checkboxes
     id: specs
     attributes:
-      label: specs
-      description: Please indicate which specification are affected by this
+      label: Specs
+      description: Please indicate which specification is affected by this
       options:
-        - DPV
-        - Personal Data (PD)
-        - Technical (TECH)
-        - Locations (LOC)
-        - RISK
-        - AI 
-        - Justifications
-        - LEGAL (e.g. IE, US)
-        - EU-GDPR
-        - EU-DGA
-        - EU-NIS2
-        - EU-AIAct
-        - EU-Rights
+        - label: DPV
+        - label: Personal Data (PD)
+        - label: Technical (TECH)
+        - label: Locations (LOC)
+        - label: RISK
+        - label: AI
+        - label: Justifications
+        - label: LEGAL (e.g. IE, US)
+        - label: EU-GDPR
+        - label: EU-DGA
+        - label: EU-NIS2
+        - label: EU-AIAct
+        - label: EU-Rights
     validations:
       required: true
   - type: textarea
     id: errors
     attributes:
-      label: errors
-      description: please list all typo(s), error(s), etc. here 
-      placeholder: errors can be typo(s), missing or broken links, missing images, wrong references, incorrect attributions...
+      label: Errors
+      description: Please list all typo(s), error(s), etc. here
+      placeholder: Errors can be typo(s), missing or broken links, missing images, wrong references, incorrect attributions...
       value: Fix ...
     validations:
       required: true
