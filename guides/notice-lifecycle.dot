@@ -1,0 +1,21 @@
+digraph G {
+    rankdir=LR ; compound=true ; newrank=true ;
+    node [shape=rect,style=filled,fillcolor=yellow] ;
+    start,end [shape=circle,fillcolor=salmon,width=0.1,height=0.1,margin=0.01]
+    start -> NoticeCreated -> NoticeContentSent ;
+    subgraph cluster_T1 {
+        label="Organisation"
+        NoticeCreated, NoticeContentSent, NoticeSent, ProcessingChange, Decision, ConsentRecord ;
+    }
+    subgraph cluster_T2 {
+        label="Individual"
+        NoticeGenerated, NoticeUsed, ProcessingChange, ConsentReceipt ;
+    }
+    ProcessingChange -> NoticeCreated;
+    NoticeUsed -> Decision -> ProcessingChange ;
+    Decision -> ConsentRecord -> ConsentReceipt;
+    NoticeCreated -> NoticeSent ;
+    NoticeContentSent -> NoticeGenerated [label="client-side\ngeneration"] ;
+    NoticeGenerated -> NoticeUsed -> end ;
+    NoticeSent -> NoticeUsed [label="pre-generated\nnotice"] ;
+}
