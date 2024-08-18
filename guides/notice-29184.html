@@ -391,6 +391,7 @@
         <tr><td>eu-gdpr</td> <td><a href="https://w3id.org/dpv/legal/eu/gdpr">https://w3id.org/dpv/legal/eu/gdpr#</a></td></tr>
         <tr><td>dct</td> <td><a href="http://purl.org/dc/terms">http://purl.org/dc/terms/</a></td></tr>
         <tr><td>dcat</td> <td><a href="http://www.w3.org/ns/dcat#">http://www.w3.org/ns/dcat#</a></td></tr>
+        <tr><td>vann</td> <td><a href="http://purl.org/vocab/vann/">http://purl.org/vocab/vann/</a></td></tr>
         <tr><td>ex</td> <td><a href="https://example.com">https://example.com/</a></td></tr>
     </tbody>
 </table>
@@ -968,7 +969,7 @@ should be provided with concepts representing the below</li>
           <td>`dpv:hasNotice`</td>
         </tr>
         <tr>
-          <td>Appropriate expression</td>
+          <td>Expression of Notice</td>
           <td>Mandatory</td>
           <td>7-2</td>
           <td>Mandatory</td>
@@ -990,6 +991,262 @@ should be provided with concepts representing the below</li>
           <td>Mandatory</td>
           <td>N/A</td>
           <td>`dct:language`</td>
+        </tr>
+        <tr>
+          <td>Timing of Notice</td>
+          <td>Mandatory</td>
+          <td>13-1 during collection, 13-3 &amp; 14-4  before further processing, 15-1 after processing</td>
+          <td>Mandatory</td>
+          <td>relevant concepts</td>
+          <td>`dpv:isBefore`, `dpv:isDuring`, `dpv:isAfter`</td>
+        </tr>
+        <tr>
+          <td>Location of Notice</td>
+          <td>Mandatory</td>
+          <td>7-2 easily accessible, 13-1 during collection</td>
+          <td>Mandatory</td>
+          <td>`dpv:Location`</td>
+          <td>`dpv:hasLocation`</td>
+        </tr>
+        <tr>
+          <td>Form of Notice</td>
+          <td>Mandatory</td>
+          <td>7-2 intelligible and easily accessible</td>
+          <td>Mandatory</td>
+          <td>`dpv:NoticeLayer` for layered notice</td>
+          <td>`dpv:hasNoticeLayer`</td>
+        </tr>
+        <tr>
+          <td>Reference to version</td>
+          <td>Mandatory</td>
+          <td>7-1 record of consent requires notice, 13-14 require record</td>
+          <td>Mandatory</td>
+          <td>N/A</td>
+          <td>`dpv:hasIdentifier`</td>
+        </tr>
+        <tr>
+          <td>Accessibility</td>
+          <td>Mandatory</td>
+          <td>7-2 easily accessible</td>
+          <td>Mandatory</td>
+          <td>N/A</td>
+          <td>N/A</td>
+        </tr>
+        <tr>
+          <td>Purpose</td>
+          <td>Mandatory</td>
+          <td>13-1c, 13-3, 14-1c, 14-4, 15-1a, 49-1</td>
+          <td>Mandatory</td>
+          <td>`dpv:Purpose`</td>
+          <td>`dpv:hasPurpose`</td>
+        </tr>
+        <tr>
+          <td>PII (Personal Data) categories</td>
+          <td>Mandatory</td>
+          <td>13-1c, 14-1c, 15-1b</td>
+          <td>Mandatory</td>
+          <td>`dpv:PersonalData`</td>
+          <td>`dpv:hasPersonalData`</td>
+        </tr>
+        <tr>
+          <td>PII (Personal Data) actual value</td>
+          <td>Optional</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>`rdf:value`</td>
+        </tr>
+        <tr>
+          <td>PII (Personal Data) example</td>
+          <td>Optional</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>`vann:example`</td>
+        </tr>
+        <tr>
+          <td>Risk and Impact</td>
+          <td>Mandatory</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>`dpv:Risk`, `dpv:Impact`</td>
+          <td>`dpv:hasRisk`, `dpv:hasImpact`</td>
+        </tr>
+        <tr>
+          <td>Data Controller identity: name, address, contact, number</td>
+          <td>Mandatory</td>
+          <td>13-1a, 14-1a</td>
+          <td>Mandatory</td>
+          <td>`dpv:DataController`</td>
+          <td>`dpv:hasDataController`, `dpv:hasName`, `dpv:hasAddress`, `dpv:hasContact`, `dpv:hasIdentifier`</td>
+        </tr>
+        <tr>
+          <td>Collection Method</td>
+          <td>Mandatory</td>
+          <td>13 - direct, 14-2f indirect, 13-2f &amp; 14-2g profiling</td>
+          <td>Mandatory</td>
+          <td>`dpv:Processing` with `dpv:DataSource`</td>
+          <td>`dpv:hasProcessing` with `dpv:hasDataSource`</td>
+        </tr>
+        <tr>
+          <td>Timing of PII (Personal Data) Collection</td>
+          <td>Mandatory</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>`dpv:Obtain`, `dpv:Duration`, `dpv:Frequency`</td>
+          <td>`dpv:isBefore`, `dpv:isDuring`, `dpv:isAfter`, `dpv:hasDuration`, `dpv:hasFrequency`</td>
+        </tr>
+        <tr>
+          <td>Location of PII (Personal Data) Collection</td>
+          <td>Mandatory</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>`dpv:Obtain`, `dpv:Location`</td>
+          <td>`dpv:hasProcessing`, `dpv:hasLocation`</td>
+        </tr>
+        <tr>
+          <td>Method of Use</td>
+          <td>Mandatory</td>
+          <td>R32, R43, 13-2f, 14-2g</td>
+          <td>Mandatory</td>
+          <td>`dpv:Processing`</td>
+          <td>`dpv:hasProcessing`</td>
+        </tr>
+        <tr>
+          <td>Geo-location and jurisdiction of stored PII (Personal Data)</td>
+          <td>Mandatory</td>
+          <td>15-2 for third country</td>
+          <td>Mandatory</td>
+          <td>`dpv:Location`</td>
+          <td>`dpv:hasJurisdiction`</td>
+        </tr>
+        <tr>
+          <td>Third-party Recipient</td>
+          <td>Mandatory</td>
+          <td>13-1e, 14-1e, 15-1c</td>
+          <td>Mandatory</td>
+          <td>`dpv:ThirdParty`, `dpv:Recipient`</td>
+          <td>`dpv:hasRecipient`</td>
+        </tr>
+        <tr>
+          <td>Safeguard for Third-party transfer</td>
+          <td>Mandatory</td>
+          <td>15-2 for third country</td>
+          <td>Mandatory</td>
+          <td>`dpv:Safeguard`, `dpv:TechnicalMeasure`</td>
+          <td>`dpv:hasTechnicalMeasure`</td>
+        </tr>
+        <tr>
+          <td>Data Retention Period</td>
+          <td>Mandatory</td>
+          <td>13-2a, 14-2a, 15-1d</td>
+          <td>Mandatory</td>
+          <td>`dpv:StorageDuration`</td>
+          <td>`dpv:hasStorageCondition`</td>
+        </tr>
+        <tr>
+          <td>Data Disposal Schedule</td>
+          <td>Mandatory</td>
+          <td>implied 13-2a, 14-2a, 15-1a</td>
+          <td>Mandatory</td>
+          <td>`dpv:StorageDeletion`</td>
+          <td>`dpv:hasStorageCondition`</td>
+        </tr>
+        <tr>
+          <td>Rights of PII Principal (Data Subject)</td>
+          <td>Mandatory</td>
+          <td>13-2b-d, 14-2c-e, 15-1-2, 15-4, 7-3, and generally 12-22</td>
+          <td>Mandatory</td>
+          <td>`dpv:DataSubjectRight`</td>
+          <td>`dpv:hasRight`</td>
+        </tr>
+        <tr>
+          <td>Exercise of Right - timelines, fees</td>
+          <td>Optional</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>`dpv:Duration`, `dpv:Fee`</td>
+          <td>`dpv:hasDuration`, `dpv:hasFee`</td>
+        </tr>
+        <tr>
+          <td>Challenge data accuracy and completeness</td>
+          <td>Optional</td>
+          <td>16</td>
+          <td>Mandatory</td>
+          <td>`dpv:EnableDataRectification`</td>
+          <td>`dpv:hasOrganisationalMeasure`</td>
+        </tr>
+        <tr>
+          <td>Withdrawing Consent</td>
+          <td>Mandatory</td>
+          <td>7-3</td>
+          <td>Mandatory</td>
+          <td>`dpv:WithdrawConsent`</td>
+          <td>`dpv:hasConsentControl`</td>
+        </tr>
+        <tr>
+          <td>Complaint to Authority</td>
+          <td>Mandatory</td>
+          <td>77</td>
+          <td>Mandatory</td>
+          <td>`dpv:ComplaintToAuthority`</td>
+          <td>`dpv:hasOrganisationalMeasure`</td>
+        </tr>
+        <tr>
+          <td>Information about Consent Decisions</td>
+          <td>Mandatory</td>
+          <td>7-1, 15, 20 considering consent decision as personal data</td>
+          <td>Mandatory</td>
+          <td>`dpv:ConsentRecord`, `dpv:ConsentReceipt`</td>
+          <td>`dpv:hasOrganisationalMeasure`</td>
+        </tr>
+        <tr>
+          <td>Legal Basis</td>
+          <td>Mandatory</td>
+          <td>13-1c, 14-1c</td>
+          <td>Mandatory</td>
+          <td>`dpv:LegalBasis`</td>
+          <td>`dpv:LegalBasis`</td>
+        </tr>
+        <tr>
+          <td>Account used by PII Principal (Data Subject)</td>
+          <td>Mandatory</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>`dpv:AccountIdentifier`</td>
+          <td>`dpv:hasIdentifier`</td>
+        </tr>
+        <tr>
+          <td>Necessary and Optional Elements of PII (Personal Data)</td>
+          <td>Mandatory</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>`dpv:Necessity`</td>
+          <td>`dpv:hasNecessity`</td>
+        </tr>
+        <tr>
+          <td>Frequency of Consent</td>
+          <td>Optional</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>`dpv:Duration`, `dpv:Frequency`</td>
+          <td>`dpv:hasDuration`, `dpv:Frequency`</td>
+        </tr>
+        <tr>
+          <td>Update to Notice</td>
+          <td>Mandatory</td>
+          <td>13, 14</td>
+          <td>Mandatory</td>
+          <td>`dpv:NoticeUpdated`, `dpv:Notice`</td>
+          <td>`dpv:hasNoticeStatus`, `dct:isVersionOf`</td>
+        </tr>
+        <tr>
+          <td>Re-consent on change</td>
+          <td>Mandatory</td>
+          <td>7, 13, 14</td>
+          <td>Mandatory</td>
+          <td>`dpv:ReaffirmConsent`</td>
+          <td>`dpv:hasConsentControl`</td>
         </tr>
       </tbody>
     </table>
@@ -1282,6 +1539,12 @@ should be provided with concepts representing the below</li>
     </thead>
     <tbody>
         <tr>
+          <th>Type</th>
+          <td>1..*</td>
+          <td>`dpv:ConsentNotice`</td>
+          <td>`rdf:type`</td>
+        </tr>
+        <tr>
             <th>Schema Version</th>
             <td>1</td>
             <td>N/A</td>
@@ -1299,8 +1562,22 @@ should be provided with concepts representing the below</li>
             <td><a href="https://w3id.org/dpv#DataSubject">dpv:DataSubject</a></td>
             <td><a href="https://w3id.org/dpv#hasDataSubject">dpv:hasDataSubject</a></td>
         </tr>
+        <tr>
+          <th>Language</th>
+          <td>1..*</td>
+          <td><a href="https://www.iso.org/iso-639-language-code">ISO 639</a> code</td>
+          <td>`dct:hasLanguage`</td>
+        </tr>
     </tbody>
 </table>
+
+        <h4>Type</h4>
+        <p>This field <strong>MUST</strong> be present.</p>
+        <p>This field declares the type of notice, with a default value of `dpv:ConsentNotice`. Other specific values can be used, such as `dpv:LayeredNotice` which is a subtype of consent notices to indicate how the notice should be presented.</p>
+        <div class="note" title="Distinction between Privacy Notice and Consent Notice">
+            <p>In DPV, the concepts `dpv:PrivacyNotice` and `dpv:ConsentNotice` have different intended meanings - a consent notice is a specific privacy notice associated with consent, most commonly providing information in order to request consent. Whereas, a privacy notice can also refer to other documents providing information, such as what is commonly called as 'privacy policy'. For the purposes of this document, `dpv:ConsentNotice` MUST be used when referring to the notice used for providing information for consent.</p>
+        </div>
+
         <h4>Schema Version</h4>
             <p>This field <strong>MUST</strong> be present.</p>
             <p>The specific version of the schema used to interpret the machine-readable notice and its information, indicated using <code>dct:conformsTo</code> with the corresponding IRI from [[[#namespaces]]]. Future changes to the schema will result in suffixes to this IRI e.g. `DPV-29184-v2`. To indicate conformance with specific requirements such as from GDPR, a separate schema or profile IRI must be utilised, as seen in [[[#profiles]]].</p>
@@ -1365,128 +1642,62 @@ should be provided with concepts representing the below</li>
 }</code></pre>
             </aside>
 
+        <h4>Notice Language</h4>
+        <p>This field <strong>MUST</strong> be present.</p>
+        <p>The language used in the communications regarding consent, such as the information provided within a notice. The language is indicated using `dct:language`, and it is recommended to use standardised notations for representing languages such as the <a href="https://www.iso.org/iso-639-language-codes.html">ISO 639</a>.</p>
+
+        <aside class="example" title="Example specifying language">
+                <p>Using the ISO 639-1 code for English, French, German, Spanish, and Italian to specify the notice contains information in these specified languages:</p>
+                <pre><code>{
+    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
+    "@type": "dpv:ConsentNotice",
+    "dct:audience": "dpv:Customer",
+    "dct:language": ["en", "fr", "de", "it", "es"]
+}</code></pre>
+        </aside>
+        <aside class="example" title="Example specifying variations of same notice based on language">
+                <p>Where the same notice (in terms of contents) has different variations for languages, each notice should have its identifier and be associated with a canonical 'central' notice from which the language specific notices are derived. In this example, the canonical notice is in english, and the other notices are described as versions of this notice with a different language tag.</p>
+                <pre><code>{
+    "@id": "https://example.com/notice",
+    "@type": "dpv:ConsentNotice",
+    "dct:audience": "dpv:Customer",
+    "dct:language": "en",
+    "dct:hasVersion": ["https://example.com/notice-de", 
+                       "https://example.com/notice-fr", 
+                      "https://example.com/notice-it", 
+                      "https://example.com/notice-es"]
+}
+{
+    "@id": "https://example.com/notice-de",
+    "@type": "dpv:ConsentNotice",
+    "dct:audience": "dpv:Customer",
+    "dct:language": "de",
+    "dct:isVersionOf": "https://example.com/notice",
+}</code></pre>
+            </aside>
+
     <section id="additional-metadata">
         <h4>Additional Metadata</h4>
         <p>Information such as who maintains or published the notice, when was it created or modified, and its provenance is not covered by [[ISO-29184]] as it is considered "implementation detail". To assist in maintaining this information, the following fields from [[DC-TERMS]] are suggested for documenting this information in an optional and non-normative manner:</p>
         <ul>
-            <li><code>dct:accessRights</code>: information on who can access the consent record.</li>
-            <li><code>dct:contributor</code>: entity or entities that have contributed to the information within the consent record.</li>
-            <li><code>dct:created</code>: date/time for when the consent record was created.</li>
-            <li><code>dct:creator</code>: entity that created the consent record. NOTE: this entity may be different from the publisher of the consent record, e.g. a processor (creator) manages the record for a controller (publisher).</li>
-            <li><code>dct:hasPart</code> (with inverse <code>dct:isPartOf</code>): to associate with a part of the consent record, e.g. where the information in a consent record may be maintained separately or partitioned based on common information for efficiency.</li>
-            <li><code>dct:hasVersion</code> (with inverse <code>dct:isVersionOf</code>): to associate one consent record with its updated version, e.g. where each event in a consent record results in a new consent record.</li>
-            <li><code>dct:replaces</code> (with inverse <code>dct:isReplacedBy</code>): to associate the consent record which is being replaced, e.g. where the other consent record is no longer in use and this is a new consent record intended to replace it.</li>
-            <li><code>dct:issued</code>: date/time associated with 'formal issuance' of the consent record, e.g. where <code>dct:created</code> is a timestamp for when the record was generated by a machine agent and where <code>dct:issued</code> captures its formal acceptance as a legally relevant record.</li>
-            <li><code>dct:modified</code>: date/time for when the consent record was modified.</li>
-            <li><code>dct:provenance</code>: information about the provenance of the consent record, e.g. where the record has been transferred between entities.</li>
-            <li><code>dct:publisher</code>: entity or entities that 'publish' the consent record i.e. make it available within some contextual sense, e.g. to produce it within an audit or legal investigation.</li>
-            <li><code>dct:source</code>: information on the sources used within the consent record, e.g. other records or logs that should be associated to record the provenance of information.</li>
-            <li><code>dct:valid</code>: date/time until when this record can be considered valid. NOTE: this refers to assessing validity of the record as a whole and does NOT refer to validity of consent events or the processing specified within the record.</li>
+            <li><code>dct:accessRights</code>: information on who can access the notice.</li>
+            <li><code>dct:contributor</code>: entity or entities that have contributed to the information within the notice.</li>
+            <li><code>dct:created</code>: date/time for when the notice was created.</li>
+            <li><code>dct:creator</code>: entity that created the notice. NOTE: this entity may be different from the publisher of the consent record, e.g. a processor (creator) manages the record for a controller (publisher).</li>
+            <li><code>dct:hasPart</code> (with inverse <code>dct:isPartOf</code>): to associate with a part of the notice, e.g. where the information in a notice may be maintained separately or partitioned based on common information for efficiency - such as in layered notices.</li>
+            <li><code>dct:hasVersion</code> (with inverse <code>dct:isVersionOf</code>): to associate one notice with its updated version.</li>
+            <li><code>dct:replaces</code> (with inverse <code>dct:isReplacedBy</code>): to associate the notice replaces another notice, e.g. where the other notice is no longer in use and this is a notice record intended to replace it.</li>
+            <li><code>dct:issued</code>: date/time associated with 'formal issuance' of the notice, e.g. where <code>dct:created</code> is a timestamp for when the notice was generated and where <code>dct:issued</code> represents its communication to the intended audience.</li>
+            <li><code>dct:modified</code>: date/time for when the notice was modified.</li>
+            <li><code>dct:provenance</code>: information about the provenance of the notice, e.g. where the notice has been transferred between entities.</li>
+            <li><code>dct:publisher</code>: entity or entities that 'publish' the notice i.e. make it available within some contextual sense, e.g. to display it on a website.</li>
+            <li><code>dct:source</code>: information on the sources used within the notice, e.g. records or logs that should be associated to record the provenance of information.</li>
+            <li><code>dct:valid</code>: date/time until when this notice can be considered valid. NOTE: this refers to assessing validity of the notice as a whole and does NOT refer to validity of the processing specified within the record.</li>
         </ul>
-        <p>Further, the use of [[[vocab-dcat-3]]] is also recommended to store consent records and receipts as it assists with metadata fields (see above) as well as expressing relations between collections of records/receipts (i.e. catalogues) and relations between datasets (e.g. latest version). See <a href="#technical-considerations">technical considerations</a>.</p>
+        <p>Further, the use of [[[vocab-dcat-3]]] is also recommended to store notices as it assists with metadata fields (see above) as well as expressing relations between collections of notices (i.e. catalogues) and relations between datasets (e.g. latest version). See <a href="#technical-considerations">technical considerations</a>.</p>
     </section>
+
     <section>
-        <h3>Notice Fields</h3>
-        <p>These fields refer to information about the notice that has been shown to request consent. In [[ISO-29184]], these fields are part of the Processing section.</p>
-        <table style="font-family: monospace;">
-    <thead>
-        <tr>
-            <th>Field</th>
-            <th>Cardinality</th>
-            <th>DPV Concept</th>
-            <th>DPV Property</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th>Notice</th>
-            <td>1..*</td>
-            <td>dpv:Notice</td>
-            <td>dpv:hasNotice</td>
-        </tr>
-        <tr>
-            <th>Notice Language</th>
-            <td>1..*</td>
-            <td>N/A</td>
-            <td><a href="http://purl.org/dc/terms/language">dct:language</a></td>
-        </tr>
-    </tbody>
-</table>
-        <h4>Notice</h4>
-        <p>This field <strong>MUST</strong> be present.</p>
-        <p>Reference to the specific version of the notice (`privacy_notice` in [[ISO-29184]]) associated with consent, indicated using `dpv:hasNotice` and a reference to the notice or an instance of `dpv:ConsentNotice`. If there are multiple notices - then each must be indicated separately. Multiple notices can be associated where such notices are part of the same context e.g. shown one after the other, or where they are associated over time, e.g. one notice shown initially when requesting and another when re-confirming it at a later time.</p>
-        <div class="note" title="Distinction between Privacy Notice and Consent Notice">
-            <p>In DPV, the concepts `dpv:PrivacyNotice` and `dpv:ConsentNotice` have different intended meanings - a consent notice is a specific privacy notice associated with consent, most commonly providing information in order to request consent. Whereas, a privacy notice can also refer to other documents providing information, such as what is commonly called as 'privacy policy'. For the purposes of the consent record, both documents can be included, but `dpv:ConsentNotice` MUST be used when referring to the notice used for providing information for consent.</p>
-        </div>
-        <aside class="example" title="Example specifying notice associated with a consent record">
-                <p>Using a UUID-4 reference to the notice:</p>
-                <pre><code>{
-    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
-    "@type": "dpv:ConsentNotice",
-    "dpv:hasNotice": "a6f58318-72e6-46a2-bfd7-f36d795e30cd"
-}</code></pre>
-                <p>Using an ad-hoc instance of `dpv:ConsentNotice`. This has the benfit of representing other information such as the language used, date of validity for the notice, as well as the interactions performed by the data subject (out of scope for this document). A benefit of providing such information is its use in determining validity of consent e.g. where a notice's temporal coverage has expired and a new notice must be shown to confirm the existing consent (see next example):</p>
-                <pre><code>{
-    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
-    "@type": "dpv:ConsentNotice",
-    "dpv:hasNotice": {
-        "@id": "https://example.com/notices/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
-        "@type": "dpv:ConsentNotice",
-        "dct:date": "2023-01-01",
-        "dct:language": "EN",
-        "dct:coverage": "2023-01-01/P12M"
-    }
-}</code></pre>
-                <p>Multiple instances of notices with different timestamps:</p>
-                <pre><code>{
-    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
-    "@type": "dpv:ConsentNotice",
-    "dpv:hasNotice": {
-        "@id": "https://example.com/notices/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
-        "@type": "dpv:ConsentNotice",
-        "dct:date": "2022-01-01",
-        "dct:language": "EN",
-        "dct:coverage": "2022-01-01/P12M"
-    }, 
-    "dpv:hasNotice": {
-        "@id": "https://example.com/notices/a6f58318-72e6-46a2-bfd7-f36d795e30cd-2",
-        "@type": "dpv:ConsentNotice",
-        "dct:date": "2023-01-01",
-        "dct:language": "EN",
-        "dct:coverage": "2023-01-01/P12M"
-    }
-}</code></pre>
-            <p>Notices declared in the context of consent events (or statuses in DPV). The first status of `dpv:ConsentGiven` states the notice shown when first consent was given. The last status of `dpv:RenewedConsentGiven` states another notice shown when renewing or re-confirming the earlier given consent:</p>
-                <pre><code>{
-    "@id": "https://example.com/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
-    "@type": "dpv:ConsentNotice",
-    "dpv:hasStatus": {
-        "@type": "dpv:ConsentGiven"
-        "dct:date": "2022-01-01",
-        "dpv:hasNotice": {
-            "@id": "https://example.com/notices/a6f58318-72e6-46a2-bfd7-f36d795e30cd",
-            "@type": "dpv:ConsentNotice",
-            "dct:language": "EN"
-        }
-    }, 
-    "dpv:hasStatus": {
-        "@type": "dpv:RenewedConsentGiven"
-        "dct:date": "2023-01-01",
-        "dpv:hasNotice": {
-            "@id": "https://example.com/notices/a6f58318-72e6-46a2-bfd7-f36d795e30cd-2",
-            "@type": "dpv:ConsentNotice",
-            "dct:language": "EN"
-        }
-    }
-}</code></pre>
-            </aside>
-
-        <h4>Notice Language</h4>
-        <p>This field <strong>MUST</strong> be present.</p>
-        <p>The language used in the communications regarding consent, such as the information provided within a notice. The language is indicated using `dct:language`, and it is recommended to use standardised notations for representing languages such as the <a href="https://www.iso.org/iso-639-language-codes.html">ISO 639</a>.</p>
-        <p>For examples, please refer to [[[#notice]]] section.</p>
-
-    </section>
     <h3>Processing Fields</h3> 
     <p>[[ISO-29184]] contains 22 fields related to processing activities, and 5 additional fields regarding personal data involved in processing. The structuring of these fields within [[ISO-29184]] is of the form where the "PII Processing" section contains an array of "purposes" where each "purpose" is expressed with its own fields regarding legal basis, collection method, storage locations, and so on. Within the DPV implementation, this is replaced with <a href="https://w3id.org/dpv#Process">dpv:Process</a> so that each instance represents a distinct processing activity with its fields e.g. purposes, personal data, recipients.</p>
     <table style="font-family: monospace;">
@@ -3226,7 +3437,7 @@ should be provided with concepts representing the below</li>
         <h3>Security &amp; Privacy</h3>
       </section>
 
-      <section>
+      <section id="technical-considerations">
         <h3>Technical Considerations for Notices</h3>
       </section>
 
