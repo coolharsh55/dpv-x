@@ -1,3 +1,0 @@
-ex:PreventTransactionFraud a dpv:Purpose ;
-  skos:broader dpv:FraudPreventionAndDetection ;
-  skos:prefLabel "Prevent Transaction and Payment Frauds" ;

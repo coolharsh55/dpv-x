@@ -1,6 +1,0 @@
-validating with constraints in ./shacl_shapes/shapes.ttl
-command: ['/home/harsh/apps/shacl/bin/shaclvalidate.sh', '-shapesfile', './shacl_shapes/shapes.ttl', '-datafile', '../dpv/dpv.ttl', '-datafile', '../dpv-gdpr/dpv-gdpr.ttl', '-datafile', '../dpv-pd/dpv-pd.ttl', '-datafile', '../dpv-tech/dpv-tech.ttl', '-datafile', '../rights/eu/rights-eu.ttl', '-datafile', '../risk/risk.ttl']
-3 errors found
-dcat:Resource :: Terms must have a description
-dcat:Resource :: Terms must have a creation date and in xsd:date format
-dcat:Resource :: Terms must have exactly 1 status indicating acceptance, proposed, etc.
