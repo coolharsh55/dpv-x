@@ -5,8 +5,8 @@ import sys
 import os
 
 def comment_on_issue(issue_number, date, comment=None):
-    # repo = "w3c/dpv"
-    repo = "coolharsh55/dpv-x"
+    repo = "w3c/dpv"
+    # repo = "coolharsh55/dpv-x"
     url = f"https://api.github.com/repos/{repo}/issues/{issue_number}/comments"
     meeting_url = f"https://w3id.org/dpv/meetings/meeting-{date}.html"
     comment_text = f"(using [dpvbot](https://github.com/coolharsh55/dpv-x/tree/master/dpvbot):) This was discussed in [Meeting {date}]({meeting_url})"

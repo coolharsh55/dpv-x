@@ -60,7 +60,7 @@ def generate_html(file_name):
         """
         
         # Add each issue to the table
-        for issue in reversed(issues):
+        for issue in issues:
             issue_number = issue['number']
             issue_title = issue['title']
             issue_author = issue['author']['login']
@@ -69,7 +69,7 @@ def generate_html(file_name):
             
             html_content += f"""
             <tr>
-                <td>{issue_number}</td>
+                <td><a href="https://github.com/w3c/dpv/issues/{issue_number}">#{issue_number}</a></td>
                 <td>{issue_title}</td>
                 <td><button class="copy-btn" onclick="copyToClipboard('{copy_string}')">Copy</button></td>
             </tr>
@@ -105,7 +105,7 @@ def main():
     html_content = generate_html(file_name)
     
     # Save the HTML content to a file
-    output_file = 'issues.html'
+    output_file = 'index.html'
     with open(output_file, 'w') as f:
         f.write(html_content)
     
