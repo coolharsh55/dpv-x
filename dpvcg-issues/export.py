@@ -21,6 +21,8 @@ def generate_html(file_name):
                 body {
                     font-family: Arial, sans-serif;
                     margin: 20px;
+                    max-width: 800px;
+                    margin: auto;
                 }
                 table {
                     width: 100%;
@@ -47,7 +49,7 @@ def generate_html(file_name):
             </style>
         </head>
         <body>
-            <h1>GitHub Issues</h1>
+            <h1>DPVCG GitHub Issues</h1>
             <table>
                 <thead>
                     <tr>
