@@ -6,6 +6,6 @@ if [ "$1" == "-D" ] || [ "$1" == "--download" ]; then
   ./export.py
 elif [ "$1" == "-E" ] || [ "$1" == "--export" ]; then
   ./export.py
-elif [ "$1" == "-X" || "$1" == "--extract" ]; then
+elif [ "$1" == "-X" ] || [ "$1" == "--extract" ]; then
   ./extract.py
 fi
