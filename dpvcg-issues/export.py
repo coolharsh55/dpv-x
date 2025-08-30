@@ -64,7 +64,7 @@ def generate_html(file_name):
         # Add each issue to the table
         for issue in issues:
             issue_number = issue['number']
-            issue_title = issue['title']
+            issue_title = issue['title'].replace('"', "")
             issue_author = issue['author']['login']
             issue_url = f"https://github.com/w3c/dpv/issues/{issue_number}"
             copy_string = f"20:10:04 <ghurlbot> {issue_url} -> Issue {issue_number} {issue_title} (by {issue_author})"
