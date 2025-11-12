@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_6498abab">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">a field of study in artificial intelligence concerned with the development and study of statistical algorithms that can learn from data and generalize to unseen data, and thus perform tasks without explicit instructions</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+	<source xmlns="http://purl.org/dc/terms/">Koza, J.R., Bennett, F.H., Andre, D., Keane, M.A. (1996). Automated Design of Both the Topology and Sizing of Analog Electrical Circuits Using Genetic Programming. In: Gero, J.S., Sudweeks, F. (eds) Artificial Intelligence in Design ’96. Springer, Dordrecht. https://doi.org/10.1007/978-94-009-0279-4_9</source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_4ba6b14e">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/c_395833e7"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_9d057c74"/>
+	<exactMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8mn/euroscivoc/537a6e3e-cb77-49f8-b946-e4ed9bee9954"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Facial Recognition</prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_4ba6b14e</identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_395833e7">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/c_dcd02f35"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_1c315607"/>
+	<exactMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8mn/euroscivoc/c3f7741c-652b-44cc-9062-491fc41aed2f"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Computer Vision</prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_395833e7</identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_9d057c74">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">computer vision technology employing biometric analysis and mapping of facial characteristics for facial identification purposes, recognising and verifying an individual's identity</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+	<source xmlns="http://purl.org/dc/terms/">Based on https://iate.europa.eu/entry/result/931447/</source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/ai-taxonomy">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">AI Taxonomy</prefLabel>
+	<issued xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-10-22</issued>
+	<identifier xmlns="http://purl.org/dc/terms/">http://data.europa.eu/8s8/ai-taxonomy</identifier>
+	<versionInfo xmlns="http://www.w3.org/2002/07/owl#">1.0</versionInfo>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_dcd02f35">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/c_6b5fae51"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_828498e7"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Perception-based AI</prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_dcd02f35</identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_1c315607">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">interdisciplinary scientific field that enables computers to analyze and understand visual data from images and videos, automatically extracting meaningful information to identify patterns, defects, or make decisions</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+	<source xmlns="http://purl.org/dc/terms/">Based on https://www.ibm.com/think/topics/computer-vision and https://iate.europa.eu/entry/result/1757145/</source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_6b5fae51">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_c790f904"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Artificial Intelligence Approaches</prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_6b5fae51</identifier>
+	<topConceptOf xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<involves xmlns="http://lexvo.org/ontology#" rdf:resource="http://data.europa.eu/8s8/c_07614cb8"/>
+	<involves xmlns="http://lexvo.org/ontology#" rdf:resource="http://data.europa.eu/8s8/c_2333c3af"/>
+	<involves xmlns="http://lexvo.org/ontology#" rdf:resource="http://data.europa.eu/8s8/c_98525aa1"/>
+	<closeMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.jrc.ec.europa.eu/ontology/cybersecurity/artificial_intelligence"/>
+	<closeMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8mn/euroscivoc/4c8f4b46-6f5c-41d9-9079-7de85c16431d"/>
+	<closeMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://eurovoc.europa.eu/3030"/>
+	<closeMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/uxp/3030"/>
+	<editorialNote xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">the ability of machines to think, learn and adapt.  Based on https://www.iso.org/artificial-intelligence/what-is-ai.</editorialNote>
+	<editorialNote xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">The scopeNote has been adapted to better reflect the new prefLabel. </editorialNote>
+	<editorialNote xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">add an adjective: approaches</editorialNote>
+	<editorialNote xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en"> the scientific understanding of the mechanisms underlying thought and intelligent behavior and their embodiment in machines.  Based on  http://www.aaai.org/; José Hernández-Orallo, Fernando Martínez-Plumed, Ute Schmid, Michael Siebers, David L. Dowe, Computer models solving intelligence test problems: Progress and implications, Artificial Intelligence, Volume 230, 2016, Pages 74-107.</editorialNote>
+	<editorialNote xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">technology that enables computers and machines to simulate human learning, comprehension, problem solving, decision making, creativity and autonomy.  Based on  https://www.ibm.com/think/topics/artificial-intelligence.   </editorialNote>
+	<scopeNote xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">"AI Approaches" involve "purposes" (i.e., "Generation" vs. "Classification"),  "Paradigms" (i.e.,  "Knowledge-based AI")  and "Applications" (i.e., "NLP" and "Perception-based AI"). "AI systems", as "AI frameworks", and "Machine Learning", pertaining to "AI models and techniques", deserve a place on their own as top-concepts.</scopeNote>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_828498e7">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">artificial intelligence field that uses agents to interpret and understand information from their environment through sensory inputs</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+	<source xmlns="http://purl.org/dc/terms/">Based on https://www.geeksforgeeks.org/artificial-intelligence/perception-in-ai-agents-artificial-intelligence/</source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_c790f904">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">purposes, paradigms and applications of Artificial Intelligence, a technology capable of performing tasks that typically require human intelligence</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+	<source xmlns="http://purl.org/dc/terms/">Based on https://iate.europa.eu/entry/result/3571274/</source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_07614cb8">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_75acf4fb"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Artificial Intelligence Systems</prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_07614cb8</identifier>
+	<topConceptOf xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_2333c3af">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/c_6b5fae51"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_a1fe8a68"/>
+	<exactMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/uxp/c_67092197"/>
+	<exactMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8mn/euroscivoc/6de6dbeb-f200-40fc-b01c-09b01d153180"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Natural Language Processing (NLP)</prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_2333c3af</identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_98525aa1">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_6498abab"/>
+	<exactMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://eurovoc.europa.eu/c_3dfe52ca"/>
+	<exactMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/uxp/det_69"/>
+	<exactMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8mn/euroscivoc/527ab165-56f2-4020-8975-e7cd3f21d01d"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Machine Learning</prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_98525aa1</identifier>
+	<topConceptOf xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_75acf4fb">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">machine-based system demonstrating varying degrees of autonomy and adaptiveness after deployment, generating outputs such as predictions, content, recommendations, or decisions to influence physical or virtual environments</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+	<source xmlns="http://purl.org/dc/terms/">https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng</source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_a1fe8a68">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">a subfield of computer science and artificial intelligence focused on enabling computers to understand and communicate with human language</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+	<source xmlns="http://purl.org/dc/terms/">https://www.ibm.com/think/topics/natural-language-processing</source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_bdaec72d">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/c_07614cb8"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_00b8ac9c"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Reasoning System</prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_bdaec72d</identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_00b8ac9c">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">artificial intelligence systems that uses available information to generate predictions, make inferences and draw conclusions, involving the representation of data in machine-processable form and application of logic to arrive at decisions</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+	<source xmlns="http://purl.org/dc/terms/">https://www.ibm.com/think/topics/ai-reasoning</source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_474174eb">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">process of categorising and labelling groups of pixels or vectors within an image based on particular rules, involving the assignment of images to predefined classes or categories</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_baa0ea18">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">the science of designing, engineering and using robots, i.e. machines controlled by computers which perform jobs automatically</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+	<source xmlns="http://purl.org/dc/terms/">Based on https://dictionary.cambridge.org/dictionary/english/robotics</source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_47a7a8d4">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">engineered system built from, and depending upon, the seamless integration of computation and physical components</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+	<source xmlns="http://purl.org/dc/terms/">https://www.nsf.gov/funding/opportunities/cps-cyber-physical-systems</source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_ed2b1eb5">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/c_07614cb8"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_c5f06951"/>
+	<exactMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8mn/euroscivoc/effbda5e-4bd7-4256-b0ff-73a5934f0936"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Edge AI</prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_ed2b1eb5</identifier>
+	<relatedMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.jrc.ec.europa.eu/ontology/cybersecurity/cloud_edge_virtualisation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_c5f06951">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">the deployment and execution of AI and ML models on Edge devices, including smartphones, IoT sensors, industrial controllers, and other resource-constrained devices located at the Edge of the network and closer to the data sources</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+	<source xmlns="http://purl.org/dc/terms/">https://link.springer.com/chapter/10.1007/978-3-031-78272-5_6</source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_a4a96537">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">technology focused on automation of repetitive, routine, rule-based human tasks</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+	<source xmlns="http://purl.org/dc/terms/">Ivančić, L., Suša Vugec, D., Bosilj Vukšić, V. (2019). Robotic Process Automation: Systematic Literature Review. In: Di Ciccio, C., et al. Business Process Management: Blockchain and Central and Eastern Europe Forum. BPM 2019. Lecture Notes in Business Information Processing, vol 361. Springer, Cham. https://doi.org/10.1007/978-3-030-30429-4_19</source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_481aa73b">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">artificial intelligence model that can learn from and mimic large amounts of data to create content such as text, images, music, videos, code, and more, based on inputs or prompts</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+	<source xmlns="http://purl.org/dc/terms/">Based on https://www.huit.harvard.edu/ai</source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_364c8345">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/c_e7a53d5c"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_a8cb9769"/>
+	<exactMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8mn/euroscivoc/179b5ccd-b066-4a3d-a60f-5d8dae645788"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Heuristic programming</prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_364c8345</identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_e7a53d5c">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/c_414eac43"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_c2cb350d"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Rule-based AI</prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_e7a53d5c</identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_a8cb9769">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">programming approach designed to tackle problems for which there lacks a systematic or optimized approach, frequently used in expert systems</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+	<source xmlns="http://purl.org/dc/terms/">Based on https://www.devx.com/terms/heuristic-programming/</source>
+	<creator xmlns="http://purl.org/dc/terms/">Cosimo Palma</creator>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_414eac43">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/c_6b5fae51"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_e5b130f6"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Knowledge-based AI</prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_414eac43</identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_c2cb350d">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">artificial intelligence approach governed by human-defined rules that explicitly dictate behaviour, relying on logical statements (rules) to determine actions in specific situations</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+	<source xmlns="http://purl.org/dc/terms/">Based on https://deepgram.com/ai-glossary/rule-based-ai</source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_e5b130f6">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">artificial intelligence paradigm that combines a knowledge base representing knowledge explicitly and an inference engine generating outputs through logical reasoning on the knowledge base, to solve application problems</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+	<source xmlns="http://purl.org/dc/terms/">Based on Estevez Almenzar, M., Fernandez Llorca, D., Gomez Gutierrez, E. and Martinez Plumed, F., Glossary of human-centric artificial intelligence, EUR 31113 EN, Publications Office of the European Union, Luxembourg, 2022, ISBN 978-92-76-53432-7, doi:10.2760/860665, JRC129614</source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_92604781">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">process of assigning predefined labels to text data in order to automatically categorise it into groups</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+	<source xmlns="http://purl.org/dc/terms/">Based on https://www.ibm.com/think/topics/text-classification</source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_c4dcd92d">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/c_07614cb8"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_bda586ee"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">General-purpose AI System</prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_c4dcd92d</identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_bda586ee">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">artificial intelligence system based on a general-purpose model and capable of serving a variety of purposes, either in direct use or integrated with other AI systems</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+	<source xmlns="http://purl.org/dc/terms/">https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng</source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_009ae78d">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/c_2333c3af"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_a3336cd1"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Chatbots</prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_009ae78d</identifier>
+	<involves xmlns="http://lexvo.org/ontology#" rdf:resource="http://data.europa.eu/8s8/c_7282fc01"/>
+	<usedIn xmlns="http://lexvo.org/ontology#" rdf:resource="http://data.europa.eu/8s8/c_bf802b85"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_a3336cd1">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">software or program designed to simulate human-like conversation with a user through messaging platforms, websites, mobile apps, or telephone systems, often employing natural language processing and machine learning to engage in conversation mimicking human interaction</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+	<source xmlns="http://purl.org/dc/terms/">Based on https://iate.europa.eu/entry/result/314843/ and ttps://www.ibm.com/think/topics/chatbots</source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_7282fc01">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/c_6b5fae51"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_481aa73b"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Generative AI</prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_7282fc01</identifier>
+	<involves xmlns="http://lexvo.org/ontology#" rdf:resource="http://data.europa.eu/8s8/c_2333c3af"/>
+	<involves xmlns="http://lexvo.org/ontology#" rdf:resource="http://data.europa.eu/8s8/c_a91e18fd"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_bf802b85">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/c_07614cb8"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_a4a96537"/>
+	<exactMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/uxp/det_107"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Robotic Process Automation</prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_bf802b85</identifier>
+	<altLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Software Robotics</altLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_a91e18fd">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/c_98525aa1"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_0a73c3a4"/>
+	<exactMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8mn/euroscivoc/dbe8c8c7-29d5-428b-8210-05bf4d427497"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Deep Learning</prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_a91e18fd</identifier>
+	<usedIn xmlns="http://lexvo.org/ontology#" rdf:resource="http://data.europa.eu/8s8/c_dcd02f35"/>
+	<usedIn xmlns="http://lexvo.org/ontology#" rdf:resource="http://data.europa.eu/8s8/c_07614cb8"/>
+	<usedIn xmlns="http://lexvo.org/ontology#" rdf:resource="http://data.europa.eu/8s8/c_2333c3af"/>
+	<usedIn xmlns="http://lexvo.org/ontology#" rdf:resource="http://data.europa.eu/8s8/c_7282fc01"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_0a73c3a4">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">machine learning subfield that uses multi-layer neural networks (deep neural networks) to learn data representations at different levels of abstraction, facilitating progressive learning and improvement of the representation and transformation of input data</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+	<source xmlns="http://purl.org/dc/terms/">Based on https://www.ibm.com/think/topics/deep-learning.</source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_1a005b5c">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/c_395833e7"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_169698d9"/>
+	<exactMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8mn/euroscivoc/03ba2800-ce81-400c-b0b4-c9d84c9f9976"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Object Detection</prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_1a005b5c</identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_169698d9">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">computer vision technology that detects instances of semantic objects in digital images and videos, covering domains like face detection and pedestrian detection, with applications spanning image retrieval and video surveillance</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+	<source xmlns="http://purl.org/dc/terms/">Based on https://iate.europa.eu/entry/result/1549662/</source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_755607b9">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/c_98525aa1"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_9d2ef576"/>
+	<exactMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8mn/euroscivoc/cbe8013b-7afd-4aa7-9fa8-6eb932965f0a"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Reinforcement Learning</prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_755607b9</identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_9d2ef576">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">machine learning approach that focuses on decision making by autonomous agents capable of making independent decisions and responding to their environment without direct human instruction, addressing sequential decision problems in uncertain environments</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+	<source xmlns="http://purl.org/dc/terms/">Based on https://www.ibm.com/think/topics/reinforcement-learning</source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_e7912406">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">automated process of selecting and analysing large amounts of text or data resources to discover patterns, relationships, and semantic insights that provide valuable information for research and decision-making</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+	<source xmlns="http://purl.org/dc/terms/">Based on https://www.springernature.com/gp/researchers/text-and-data-mining</source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_18019ee8">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">deep learning model that uses artificial neural networks trained on vast amounts of data to understand and generate natural language and other types of content to perform a wide range of tasks</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+	<source xmlns="http://purl.org/dc/terms/">Based on https://en.wikipedia.org/wiki/Large_language_model and https://www.ibm.com/think/topics/large-language-models</source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_5d2a5847">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/c_2333c3af"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_92604781"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Text Classification</prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_5d2a5847</identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_c79c0cf4">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">process of deriving meaningful information about motion from visual data, including tracking objects across frames, analysing trajectories, estimating velocity and acceleration, and interpreting the meaning of motion patterns</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_09156b78">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/c_2333c3af"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_4e6798a7"/>
+	<exactMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/uxp/5200"/>
+	<exactMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://eurovoc.europa.eu/5200"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Machine Translation</prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_09156b78</identifier>
+	<involves xmlns="http://lexvo.org/ontology#" rdf:resource="http://data.europa.eu/8s8/c_a91e18fd"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_4e6798a7">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">automated process of converting text or speech from one language (source language) to another (target language) using computational models and algorithms for accurate and contextually appropriate translations</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+	<source xmlns="http://purl.org/dc/terms/">Based on https://www.sciencedirect.com/science/article/pii/S2589004224021035</source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_c59024d8">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">machine learning approach based on Bayesian networks, probabilistic models based on directed acyclic graphs, enabling a direct representation of causal relations between variables</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+	<source xmlns="http://purl.org/dc/terms/">Based on Ruggeri, Fabrizio; Kenett, Ron S.; Faltin, Frederick W., eds. (2007-12-14). Encyclopedia of Statistics in Quality and Reliability (1 ed.). Wiley. p. 1.</source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_648877fe">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">acquisition of information about an object or phenomenon without physical contact, typically using aerial sensor technologies</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+	<source xmlns="http://purl.org/dc/terms/">Based on https://en.wikipedia.org/wiki/Remote_sensing</source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_f6a2d280">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/c_414eac43"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_042682a5"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Knowledge Representation</prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_f6a2d280</identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_042682a5">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">sub-field of AI dealing with the encoding of
+knowledge in a form that can be used for computer-based problem solving</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+	<source xmlns="http://purl.org/dc/terms/">Based on Amit Das, Knowledge Representation, Editor(s): Hossein Bidgoli, Encyclopedia of Information Systems,
+Elsevier,
+2003,
+Pages 33-41,
+ISBN 9780122272400, https://doi.org/10.1016/B0-12-227240-4/00102-.
+(https://www.sciencedirect.com/science/article/pii/B0122272404001027)</source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_52f982c5">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/c_6b5fae51"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_8276dcb3"/>
+	<exactMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8mn/euroscivoc/eff67eba-9af6-484f-9455-996c6e0e3e2e"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Frugal Artificial Intelligence (Frugal machine learning - FML)</prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_52f982c5</identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_8276dcb3">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">machine learning techniques that aim to make models more efficient, cost-effective, and accessible while maintaining or even improving their performance</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+	<source xmlns="http://purl.org/dc/terms/">Based on https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5012869#</source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_1a1f5d24">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/c_395833e7"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_57a2df14"/>
+	<exactMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8mn/euroscivoc/cdeba421-3731-4be8-a49d-6616fb3a1c85"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Pattern Recognition</prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_1a1f5d24</identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_57a2df14">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">automated identification of patterns and regularities in data, utilising algorithms to detect patterns or regularities for categorising data into distinct groups, encompassing diverse applications such as image analysis, speech processing, and biometric authentication</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_713bdfe1">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/c_a91e18fd"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_d94c16d2"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Transfer learning</prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_713bdfe1</identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_d94c16d2">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">a technique in machine learning in which knowledge learned from a task is re-used in order to boost performance on a related task</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+	<source xmlns="http://purl.org/dc/terms/">West, Jeremy; Ventura, Dan; Warnick, Sean (2007). "Spring Research Presentation: A Theoretical Foundation for Inductive Transfer". Brigham Young University, College of Physical and Mathematical Sciences.</source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_6a0be7ae">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/c_7282fc01"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_18019ee8"/>
+	<exactMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/uxp/det_132"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Large Language Model (LLM) </prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_6a0be7ae</identifier>
+	<involves xmlns="http://lexvo.org/ontology#" rdf:resource="http://data.europa.eu/8s8/c_2333c3af"/>
+	<involves xmlns="http://lexvo.org/ontology#" rdf:resource="http://data.europa.eu/8s8/c_a91e18fd"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_5c87414b">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/c_395833e7"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_7fc8ffb5"/>
+	<exactMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8mn/euroscivoc/ea09ce79-b78c-45dd-8fb1-767de5ad3162"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Image Recognition</prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_5c87414b</identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_7fc8ffb5">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">computer vision technology that identifies, categorises and recognises objects, places, people, text and actions in digital images</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+	<source xmlns="http://purl.org/dc/terms/">Based on https://iate.europa.eu/entry/result/1757157/</source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_056a9ab2">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">machine learning approach that uses unlabelled data to analyse and cluster data without human intervention to reveal hidden patterns or groupings, often used in statistics, data mining and related fields</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+	<source xmlns="http://purl.org/dc/terms/">Based on https://www.ibm.com/think/topics/unsupervised-learning and https://cloud.google.com/discover/what-is-unsupervised-learning</source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_20e6aa53">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/c_a91e18fd"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_3b49c618"/>
+	<exactMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://eurovoc.europa.eu/c_65b9cd79"/>
+	<exactMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/uxp/c_65b9cd79"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Artificial Neural Network (ANN) </prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_20e6aa53</identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_3b49c618">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">computational model consisting of units called 'artificial neurons' interconnected by weighted edges, which loosely model the neurons and synapses in the brain. Each artificial neuron receives weighted input signals from connected neurons, processes them by computing a weighted sum, and then applies an activation function to produce an output signal that is sent to other connected neurons</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+	<source xmlns="http://purl.org/dc/terms/">Based on https://en.wikipedia.org/wiki/Neural_network_(machine_learning)</source>
+	<creator xmlns="http://purl.org/dc/terms/">Publication Office of the European Union</creator>
+	<startDate xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-14</startDate>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_12900a60">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/c_dcd02f35"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_648877fe"/>
+	<exactMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/uxp/4426"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Remote Sensing </prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_12900a60</identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_c189a550">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/c_5e13a29f"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_d8f4895c"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Decision Trees</prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_c189a550</identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_5e13a29f">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/c_98525aa1"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_dfba92c1"/>
+	<exactMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8mn/euroscivoc/c785fbd6-7242-4926-8c84-d6f82b14cb75"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Supervised Learning</prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_5e13a29f</identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_d8f4895c">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">supervised learning approach, applicable to classification and regression tasks, featuring a hierarchical, tree-like structure with root, branch, internal- and leaf-nodes, employed in statistics, data mining, and machine learning as a predictive model to infer conclusions about observations</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+	<source xmlns="http://purl.org/dc/terms/">Based on https://www.ibm.com/think/topics/decision-trees and https://en.wikipedia.org/wiki/Decision_tree_learning</source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_dfba92c1">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">machine learning approach that uses labelled datasets to train artificial intelligence algorithms to recognise patterns and correlations between input features and outputs, with the aim of developing a model that can accurately predict outcomes for unseen real-world data</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+	<source xmlns="http://purl.org/dc/terms/">Based on https://www.ibm.com/think/topics/supervised-learning</source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_b0191c89">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/c_7282fc01"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_1421cd10"/>
+	<exactMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8mn/euroscivoc/0e418e64-f616-451c-8c10-9b149724b841"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Computational Creativity</prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_b0191c89</identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_1421cd10">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">computer systems that emulate human creative processes and produce artistic, design output that simulates innovation and originality</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+	<source xmlns="http://purl.org/dc/terms/">Based on https://en.wikipedia.org/wiki/Computational_creativity</source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_6b807cf0">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/c_98525aa1"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_c59024d8"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Bayesian Learning</prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_6b807cf0</identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_2610a020">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/c_07614cb8"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_d05a43c8"/>
+	<exactMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8mn/euroscivoc/f066fc3b-3bbb-4137-8b49-b13f8f664dc7"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Expert System</prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_2610a020</identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_d05a43c8">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">artificial intelligence system emulating human expert decision-making abilities, addressing complex problems through reasoning across knowledge bases primarily represented as if-then rules, and comprising two sub-systems: an inference engine for applying rules to known facts and deducing new facts, and a knowledge base containing facts and rules; potentially featuring explanation and debugging capabilities</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+	<source xmlns="http://purl.org/dc/terms/">based on Jackson, Peter (1998). Introduction To Expert Systems (3 ed.). Addison Wesley. p. 2. ISBN 978-0-201-87686-4.</source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_30f84327">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/c_2333c3af"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_e7912406"/>
+	<exactMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://eurovoc.europa.eu/c_df93fd35"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Text and Data Mining</prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_30f84327</identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_d1e10213">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/c_5e13a29f"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_987d82ef"/>
+	<exactMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8mn/euroscivoc/c0a6a797-90c8-491e-b096-97d77cfbe561"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Semi-supervised Learning</prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_d1e10213</identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_987d82ef">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">machine learning approach that combines supervised and unsupervised learning by using both labeled and unlabeled data to train artificial intelligence models for classification and regression tasks</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+	<source xmlns="http://purl.org/dc/terms/">Based on https://www.ibm.com/think/topics/semi-supervised-learning</source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_eb820ae5">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/c_395833e7"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_76ec8012"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Visual Recognition</prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_eb820ae5</identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_76ec8012">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">computer vision technology that identifies and categorises objects, scenes, activities, and other visual elements in images or video, and includes image classification, object detection, scene understanding, and visual pattern recognition</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_0716079e">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/c_98525aa1"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_35d05ecb"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Self-supervised Learning </prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_0716079e</identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/note_35d05ecb">
+	<rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+	<rdf:value xml:lang="en">machine learning approach that uses unsupervised learning for tasks that typically require supervision, generating implicit labels from unstructured data, where models are trained on a task using the data itself to provide supervisory signals, often used in neural networks to exploit inherent structures or relationships within input data to generate training signals</rdf:value>
+	<corrStatus xmlns="http://publications.europa.eu/ontology/euvoc#" rdf:resource="http://publications.europa.eu/resource/authority/correction-status/NOT_CORR"/>
+	<source xmlns="http://purl.org/dc/terms/">Based on https://www.ibm.com/think/topics/self-supervised-learning and https://en.wikipedia.org/wiki/Self-supervised_learning</source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_eb540d6c">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/c_07b3c97d"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_47a7a8d4"/>
+	<exactMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/uxp/5862"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Cyber-physical System</prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_eb540d6c</identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_07b3c97d">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/c_07614cb8"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_baa0ea18"/>
+	<exactMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://eurovoc.europa.eu/3740"/>
+	<exactMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/uxp/3740"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Robotics</prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_07b3c97d</identifier>
+	<involves xmlns="http://lexvo.org/ontology#" rdf:resource="http://data.europa.eu/8s8/c_dcd02f35"/>
+	<involves xmlns="http://lexvo.org/ontology#" rdf:resource="http://data.europa.eu/8s8/c_2333c3af"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_ae471bf8">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/c_98525aa1"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_056a9ab2"/>
+	<exactMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8mn/euroscivoc/1076b605-d9f3-4961-8dbe-dc9abc72b42b"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Unsupervised Learning</prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_ae471bf8</identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_6d9bb3b4">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/c_395833e7"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_474174eb"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Image Classification</prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_6d9bb3b4</identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/8s8/c_ae65e23e">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/c_395833e7"/>
+	<definition xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/note_c79c0cf4"/>
+	<exactMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8mn/euroscivoc/a52ebc52-96e4-473c-9856-c510be5e797f"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://data.europa.eu/8s8/ai-taxonomy"/>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Motion Analysis</prefLabel>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/">c_ae65e23e</identifier>
+</rdf:Description>
+
+</rdf:RDF>

@@ -1,0 +1,67 @@
+http://data.europa.eu/8s8/c_98525aa1	Machine Learning	
+http://data.europa.eu/8s8/c_a91e18fd	Deep Learning	Machine Learning
+http://data.europa.eu/8s8/c_20e6aa53	Artificial Neural Network (ANN) 	Deep Learning
+http://data.europa.eu/8s8/c_713bdfe1	Transfer learning	Deep Learning
+http://data.europa.eu/8s8/c_5e13a29f	Supervised Learning	Machine Learning
+http://data.europa.eu/8s8/c_d1e10213	Semi-supervised Learning	Supervised Learning
+http://data.europa.eu/8s8/c_c189a550	Decision Trees	Supervised Learning
+http://data.europa.eu/8s8/c_ae471bf8	Unsupervised Learning	Machine Learning
+http://data.europa.eu/8s8/c_6b807cf0	Bayesian Learning	Machine Learning
+http://data.europa.eu/8s8/c_0716079e	Self-supervised Learning 	Machine Learning
+http://data.europa.eu/8s8/c_755607b9	Reinforcement Learning	Machine Learning
+		
+http://data.europa.eu/8s8/c_07614cb8	Artificial Intelligence Systems	
+http://data.europa.eu/8s8/c_c4dcd92d	General-purpose AI System	Artificial Intelligence Systems
+http://data.europa.eu/8s8/c_bdaec72d	Reasoning System	Artificial Intelligence Systems
+http://data.europa.eu/8s8/c_2610a020	Expert System	Artificial Intelligence Systems
+http://data.europa.eu/8s8/c_bf802b85	Robotic Process Automation	Artificial Intelligence Systems
+http://data.europa.eu/8s8/c_07b3c97d	Robotics	Artificial Intelligence Systems
+http://data.europa.eu/8s8/c_ed2b1eb5	Edge AI	Artificial Intelligence Systems
+http://data.europa.eu/8s8/c_eb540d6c	Cyber-physical System	Robotics
+		
+https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/ai-taxonomy		
+https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://data.europa.eu/8s8/ai-taxonomy		
+concept	label	parent
+http://data.europa.eu/8s8/c_009ae78d	Chatbots	Natural Language Processing (NLP)
+http://data.europa.eu/8s8/c_0716079e	Self-supervised Learning	Machine Learning
+http://data.europa.eu/8s8/c_07614cb8	Artificial Intelligence Systems	
+http://data.europa.eu/8s8/c_07b3c97d	Robotics	Artificial Intelligence Systems
+http://data.europa.eu/8s8/c_09156b78	Machine Translation	Natural Language Processing (NLP)
+http://data.europa.eu/8s8/c_12900a60	Remote Sensing	Perception-based AI
+http://data.europa.eu/8s8/c_1a005b5c	Object Detection	Computer Vision
+http://data.europa.eu/8s8/c_1a1f5d24	Pattern Recognition	Computer Vision
+http://data.europa.eu/8s8/c_20e6aa53	Artificial Neural Network (ANN)	Deep Learning
+http://data.europa.eu/8s8/c_2333c3af	Natural Language Processing (NLP)	Artificial Intelligence Approaches
+http://data.europa.eu/8s8/c_2610a020	Expert System	Artificial Intelligence Systems
+http://data.europa.eu/8s8/c_30f84327	Text and Data Mining	Natural Language Processing (NLP)
+http://data.europa.eu/8s8/c_364c8345	Heuristic programming	Rule-based AI
+http://data.europa.eu/8s8/c_395833e7	Computer Vision	Perception-based AI
+http://data.europa.eu/8s8/c_414eac43	Knowledge-based AI	Artificial Intelligence Approaches
+http://data.europa.eu/8s8/c_4ba6b14e	Facial Recognition	Computer Vision
+http://data.europa.eu/8s8/c_52f982c5	Frugal Artificial Intelligence (Frugal machine learning - FML)	Artificial Intelligence Approaches
+http://data.europa.eu/8s8/c_5c87414b	Image Recognition	Computer Vision
+http://data.europa.eu/8s8/c_5d2a5847	Text Classification	Natural Language Processing (NLP)
+http://data.europa.eu/8s8/c_5e13a29f	Supervised Learning	Machine Learning
+http://data.europa.eu/8s8/c_6a0be7ae	Large Language Model (LLM)	Generative AI
+http://data.europa.eu/8s8/c_6b5fae51	Artificial Intelligence Approaches	
+http://data.europa.eu/8s8/c_6b807cf0	Bayesian Learning	Machine Learning
+http://data.europa.eu/8s8/c_6d9bb3b4	Image Classification	Computer Vision
+http://data.europa.eu/8s8/c_713bdfe1	Transfer learning	Deep Learning
+http://data.europa.eu/8s8/c_7282fc01	Generative AI	Artificial Intelligence Approaches
+http://data.europa.eu/8s8/c_755607b9	Reinforcement Learning	Machine Learning
+http://data.europa.eu/8s8/c_98525aa1	Machine Learning	
+http://data.europa.eu/8s8/c_a91e18fd	Deep Learning	Machine Learning
+http://data.europa.eu/8s8/c_ae471bf8	Unsupervised Learning	Machine Learning
+http://data.europa.eu/8s8/c_ae65e23e	Motion Analysis	Computer Vision
+http://data.europa.eu/8s8/c_b0191c89	Computational Creativity	Generative AI
+http://data.europa.eu/8s8/c_bdaec72d	Reasoning System	Artificial Intelligence Systems
+http://data.europa.eu/8s8/c_bf802b85	Robotic Process Automation	Artificial Intelligence Systems
+http://data.europa.eu/8s8/c_c189a550	Decision Trees	Supervised Learning
+http://data.europa.eu/8s8/c_c4dcd92d	General-purpose AI System	Artificial Intelligence Systems
+http://data.europa.eu/8s8/c_d1e10213	Semi-supervised Learning	Supervised Learning
+http://data.europa.eu/8s8/c_dcd02f35	Perception-based AI	Artificial Intelligence Approaches
+http://data.europa.eu/8s8/c_e7a53d5c	Rule-based AI	Knowledge-based AI
+http://data.europa.eu/8s8/c_eb540d6c	Cyber-physical System	Robotics
+http://data.europa.eu/8s8/c_eb820ae5	Visual Recognition	Computer Vision
+http://data.europa.eu/8s8/c_ed2b1eb5	Edge AI	Artificial Intelligence Systems
+http://data.europa.eu/8s8/c_f6a2d280	Knowledge Representation	Knowledge-based AI

@@ -1,0 +1,43 @@
+Artificial Intelligence Approaches
+Frugal Artificial Intelligence (Frugal machine learning - FML)
+Knowledge-based AI
+Rule-based AI
+Heuristic programming
+Knowledge Representation
+Natural Language Processing (NLP)
+Text and Data Mining
+Machine Translation
+Text Classification
+Chatbots
+Perception-based AI
+Remote Sensing 
+Computer Vision
+Object Detection
+Facial Recognition
+Image Recognition
+Pattern Recognition
+Visual Recognition
+Motion Analysis
+Image Classification
+Generative AI
+Large Language Model (LLM) 
+Computational Creativity
+Machine Learning
+Deep Learning
+Artificial Neural Network (ANN) 
+Transfer learning
+Supervised Learning
+Semi-supervised Learning
+Decision Trees
+Unsupervised Learning
+Bayesian Learning
+Self-supervised Learning 
+Reinforcement Learning
+Artificial Intelligence Systems
+General-purpose AI System
+Reasoning System
+Expert System
+Robotic Process Automation
+Robotics
+Edge AI
+Cyber-physical System
