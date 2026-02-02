@@ -9,7 +9,8 @@ with open('query_results.csv') as fd:
         data[row.label.strip()] = Row(
             row.concept.strip(),
             row.label.strip(),
-            row.parent.strip())
+            row.parent.strip(),
+            row.definition.strip())
 
 with open('list1.txt') as fd:
     concepts = [line.strip() for line in fd.readlines()]
